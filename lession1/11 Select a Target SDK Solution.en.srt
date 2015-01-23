@@ -1,0 +1,16 @@
+1
+00:00:00,240 --> 00:00:05,370
+That's right. While setting Froyo as a minimum SDK, would allow us to support
+
+2
+00:00:05,370 --> 00:00:09,490
+100% of devices, it's the wrong choice for our target SDK. To ensure the best
+
+3
+00:00:09,490 --> 00:00:13,630
+experience for users on all phones including the newest KitKat releases,
+
+4
+00:00:13,630 --> 00:00:16,830
+we need to set our target SDK to the latest build, which is KitKat.
+

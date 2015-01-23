@@ -1,0 +1,208 @@
+1
+00:00:00,770 --> 00:00:02,780
+While it's great that we can query our database
+
+2
+00:00:02,780 --> 00:00:05,160
+through the content provider, it would be nice if
+
+3
+00:00:05,160 --> 00:00:07,200
+we could also use the content provider to put
+
+4
+00:00:07,200 --> 00:00:12,010
+data in. We'll begin with the insert function. Let's fill
+
+5
+00:00:12,010 --> 00:00:14,710
+the insert function with the same URI matcher code
+
+6
+00:00:14,710 --> 00:00:18,200
+we had in the other content provider functions but with
+
+7
+00:00:18,200 --> 00:00:21,080
+one change. We're only going to match the base
+
+8
+00:00:21,080 --> 00:00:25,770
+URIs. There's a good reason for this. When we insert
+
+9
+00:00:25,770 --> 00:00:28,820
+into our database, we want it to notify every
+
+10
+00:00:28,820 --> 00:00:31,630
+content observer that might have data modified by our
+
+11
+00:00:31,630 --> 00:00:35,370
+insert. It turns out that cursors register themselves as
+
+12
+00:00:35,370 --> 00:00:39,370
+notify for descendents which means that notifying the root
+
+13
+00:00:39,370 --> 00:00:42,760
+URI. We'll also notify all descendents of that URI.
+
+14
+00:00:43,770 --> 00:00:45,830
+If we were to notify based on anything else
+
+15
+00:00:45,830 --> 00:00:48,730
+other than the root URI. Then a cursor listening
+
+16
+00:00:48,730 --> 00:00:50,780
+on the root URI will not get notified of a
+
+17
+00:00:50,780 --> 00:00:53,690
+change that would certainly impact it. So we have to
+
+18
+00:00:53,690 --> 00:00:57,060
+be very careful when doing that. For this reason it makes
+
+19
+00:00:57,060 --> 00:00:59,780
+a lot of sense to only allow insertions at our
+
+20
+00:00:59,780 --> 00:01:04,390
+root URI into our database. That way, it's very, very easy
+
+21
+00:01:04,390 --> 00:01:07,000
+to handle notifications. It means that we also don't have
+
+22
+00:01:07,000 --> 00:01:10,420
+to build a combination query for our insert. Containing a parameter
+
+23
+00:01:10,420 --> 00:01:12,880
+coming from the URI. With the rest of the parameters
+
+24
+00:01:12,880 --> 00:01:15,850
+coming from a function. So for weather we just pass the
+
+25
+00:01:15,850 --> 00:01:19,760
+parameters into a database insert call. We should
+
+26
+00:01:19,760 --> 00:01:22,810
+throw an exception if the insert fails. The
+
+27
+00:01:22,810 --> 00:01:24,370
+only trick here is to make sure we
+
+28
+00:01:24,370 --> 00:01:28,470
+return the correct value, which is a URI. Fortunately
+
+29
+00:01:28,470 --> 00:01:30,700
+we made a function to build these URIs
+
+30
+00:01:30,700 --> 00:01:32,950
+which contain the weather path followed by an
+
+31
+00:01:32,950 --> 00:01:37,480
+ID. Let's go task this. Once again, we
+
+32
+00:01:37,480 --> 00:01:41,190
+go to test provider and we modify our test.
+
+33
+00:01:41,190 --> 00:01:43,520
+Because after all it's supposed to be test insert
+
+34
+00:01:43,520 --> 00:01:48,390
+read provider. Here's our insert statement. Obviously it's still talking
+
+35
+00:01:48,390 --> 00:01:50,280
+to the database. We're going to want to make it
+
+36
+00:01:50,280 --> 00:01:54,220
+talk to the provider. As always, that's pretty straight forward.
+
+37
+00:01:54,220 --> 00:01:56,170
+We always get our provider by using our content
+
+38
+00:01:56,170 --> 00:01:59,540
+resolver so we can replace this insert statement with the
+
+39
+00:01:59,540 --> 00:02:03,340
+db with a content resolver instead. And of course
+
+40
+00:02:03,340 --> 00:02:06,260
+we don't use a content resolver against a table name.
+
+41
+00:02:06,260 --> 00:02:10,120
+Instead we do it against the WeatherEntry.content URI.
+
+42
+00:02:11,250 --> 00:02:13,940
+But there's still something wrong. Of course, we
+
+43
+00:02:13,940 --> 00:02:16,600
+don't actually return the weather row ID, we
+
+44
+00:02:16,600 --> 00:02:19,440
+return the URI. But we can still get a
+
+45
+00:02:19,440 --> 00:02:22,390
+weather row ID. How do we do that?
+
+46
+00:02:22,390 --> 00:02:25,850
+Quite simply. Using a helper function in content
+
+47
+00:02:25,850 --> 00:02:29,240
+URI's, and we don't really need that insert.
+
+48
+00:02:29,240 --> 00:02:31,520
+After all, we know that this content resolver function
+
+49
+00:02:31,520 --> 00:02:35,052
+isn't actually going to return unless the value is true. Now that we
+
+50
+00:02:35,052 --> 00:02:38,052
+finished that, let's run the test. And make sure that we can actually
+
+51
+00:02:38,052 --> 00:02:43,783
+insert using our content provider. And our test passed. Well, you know what
+
+52
+00:02:43,783 --> 00:02:46,680
+time it is. Time for you to write some of this as well.
+

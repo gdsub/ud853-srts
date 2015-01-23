@@ -1,0 +1,48 @@
+1
+00:00:00,450 --> 00:00:03,660
+In the fragment detailed layout, a text view
+
+2
+00:00:03,660 --> 00:00:06,160
+is already defined. We have to assign it an
+
+3
+00:00:06,160 --> 00:00:09,200
+ID so that within the detail fragment of detail
+
+4
+00:00:09,200 --> 00:00:12,120
+activity we can use find view by ID to
+
+5
+00:00:12,120 --> 00:00:15,180
+find the text view. To determine the forecast
+
+6
+00:00:15,180 --> 00:00:18,150
+info that the text view should display. We can
+
+7
+00:00:18,150 --> 00:00:20,770
+access the intent that the detail activity was launched
+
+8
+00:00:20,770 --> 00:00:25,255
+by. We're going to use this inside of onCreateView.
+
+9
+00:00:25,255 --> 00:00:30,565
+[SOUND] Since we added an intent extra with the forecast
+
+10
+00:00:30,565 --> 00:00:35,461
+data there. We can read that intent extra back to display in the text
+
+11
+00:00:35,461 --> 00:00:39,289
+view, as you can see we pulled the forecast string from the
+
+12
+00:00:39,289 --> 00:00:43,840
+intent find our rootView and then set the text to that forecast string
+

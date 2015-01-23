@@ -1,0 +1,116 @@
+1
+00:00:00,090 --> 00:00:03,670
+Once the adapter is initialized, let's bind it to the list view. But
+
+2
+00:00:03,670 --> 00:00:06,980
+you may notice that we don't have a reference to the list view in our fragment.
+
+3
+00:00:06,980 --> 00:00:10,360
+It was only defined in the layout XML. The system takes and
+
+4
+00:00:10,360 --> 00:00:12,370
+inflates layout XML files. And
+
+5
+00:00:12,370 --> 00:00:17,000
+turns them into a full view hierarchy with a root layout of the main activity at
+
+6
+00:00:17,000 --> 00:00:21,750
+the very top of the view tree. We can also assign IDs to each view in the tree,
+
+7
+00:00:21,750 --> 00:00:26,320
+but it's not required if you don't need a reference to an individual view.
+
+8
+00:00:26,320 --> 00:00:29,790
+For example, this image view doesn't have an ID associated with it and
+
+9
+00:00:29,790 --> 00:00:33,640
+that's okay. Within the Java code of the associated activity or
+
+10
+00:00:33,640 --> 00:00:38,660
+fragment. If we need a reference to the button, we can simply call findViewById,
+
+11
+00:00:38,660 --> 00:00:43,370
+which will traverse down the hierarchy until it finds a view with the ID button.
+
+12
+00:00:43,370 --> 00:00:48,050
+And then it will return that. Similarly, we can traverse down the view
+
+13
+00:00:48,050 --> 00:00:53,620
+hierarchy to find the linear layout with the ID container, and then return that.
+
+14
+00:00:53,620 --> 00:00:57,030
+We could do the same to find a reference to this TextView by traversing down
+
+15
+00:00:57,030 --> 00:01:00,830
+the view hierarchy. But you'll notice that we already have a reference to
+
+16
+00:01:00,830 --> 00:01:06,055
+the container which is a direct parent of this TextView. Hence, we can just call
+
+17
+00:01:06,055 --> 00:01:12,420
+container.findViewById to search this subtree to find the TextView with this ID,
+
+18
+00:01:12,420 --> 00:01:17,480
+and then return it. With this method, we have a smaller sub-tree to search for
+
+19
+00:01:17,480 --> 00:01:22,060
+a given view, as opposed to searching the entire view hierarchy.
+
+20
+00:01:22,060 --> 00:01:25,890
+In the Android Java doc for the View class, which is linked below if you want to
+
+21
+00:01:25,890 --> 00:01:30,020
+follow along, it contains an example where the button with Define in Layout XML.
+
+22
+00:01:30,020 --> 00:01:36,350
+It was assigned an ID My Button. Then in the Activity, we can use the find
+
+23
+00:01:36,350 --> 00:01:40,990
+view by ID method, with that ID, so that we can get a reference to the button.
+
+24
+00:01:40,990 --> 00:01:45,510
+Then we can change it dynamically, such as by adding a click listener to it.
+
+25
+00:01:46,770 --> 00:01:50,560
+Now in the placeholder fragment class, bind the adapter to the list view.
+
+26
+00:01:50,560 --> 00:01:54,230
+Luckily, we did assign an ID to the list view earlier. So, we can find it
+
+27
+00:01:54,230 --> 00:01:58,430
+easily now. Think about the smallest sub-tree in the view hierarchy that you
+
+28
+00:01:58,430 --> 00:02:03,640
+can call find view by ID on. Then set the adapter on it. If you want an example,
+
+29
+00:02:03,640 --> 00:02:07,430
+you can see one in the link below. Check the boxes when you're done.
+

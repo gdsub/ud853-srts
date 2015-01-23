@@ -1,0 +1,32 @@
+1
+00:00:00,590 --> 00:00:02,340
+Some good examples of answers include,
+
+2
+00:00:02,340 --> 00:00:06,990
+sensor listeners, location updates, dynamic broadcast receivers. Or
+
+3
+00:00:06,990 --> 00:00:11,940
+games physics engines. Any task that your application needs to keep happening,
+
+4
+00:00:11,940 --> 00:00:15,580
+even when your activity is paused. Shouldn't really happen within an activity at
+
+5
+00:00:15,580 --> 00:00:20,680
+all. We'll have a look at some solutions to that problem in lesson six.
+
+6
+00:00:20,680 --> 00:00:22,700
+Keep in mind that when you're activity is paused,
+
+7
+00:00:22,700 --> 00:00:28,140
+it's still visible. It's just obscured by something else, usually a dialog box.
+
+8
+00:00:28,140 --> 00:00:32,990
+But it's not stopped. So, don't stop drawing your UI when you receive on pause
+

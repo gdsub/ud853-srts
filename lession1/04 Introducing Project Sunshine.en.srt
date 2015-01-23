@@ -1,0 +1,64 @@
+1
+00:00:00,630 --> 00:00:04,770
+In the course, we're going to build a weather app called Sunshine. The main
+
+2
+00:00:04,770 --> 00:00:09,800
+screen is a list of this week's forecast, with an emphasized presentation for
+
+3
+00:00:09,800 --> 00:00:14,870
+today's weather. With just a quick glance, I can decide if,
+
+4
+00:00:14,870 --> 00:00:20,560
+today is a stay inside, in code day. Or if I should code from the park,
+
+5
+00:00:20,560 --> 00:00:26,256
+instead. We have icons to indicate conditions, like snow,
+
+6
+00:00:26,256 --> 00:00:30,790
+rain, fog or sunshine. We can scroll through the list,
+
+7
+00:00:30,790 --> 00:00:34,730
+to see a long range forecast. With a click on one of the forecasts,
+
+8
+00:00:34,730 --> 00:00:38,900
+will bring up a detailed view containing the rest of the weathery goodness,
+
+9
+00:00:38,900 --> 00:00:43,390
+which also gives us the ability to share the weather with our friends.
+
+10
+00:00:43,390 --> 00:00:48,940
+We can go to Settings and change the unit of measure, as well as the location.
+
+11
+00:00:48,940 --> 00:00:53,500
+The app can even post system wide notifications, to let us know about weather
+
+12
+00:00:53,500 --> 00:00:58,930
+conditions without even entering the app. So, you might ask, why are we
+
+13
+00:00:58,930 --> 00:01:03,120
+building a weather app? We chose the weather app because it's a simple concept,
+
+14
+00:01:03,120 --> 00:01:07,590
+which touches most of the core APIs we want to teach and everyone can relate to
+
+15
+00:01:07,590 --> 00:01:12,090
+weather, unless you're in a bunker. By the end of the course, you'll be able
+
+16
+00:01:12,090 --> 00:01:16,110
+to use those APIs and concepts to build your own app for your final project.
+

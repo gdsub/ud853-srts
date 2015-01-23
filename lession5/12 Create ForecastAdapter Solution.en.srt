@@ -1,0 +1,48 @@
+1
+00:00:00,130 --> 00:00:03,210
+Here's the solution. In the utility class, we add the
+
+2
+00:00:03,210 --> 00:00:06,260
+helper methods that were provide in the gist. We also
+
+3
+00:00:06,260 --> 00:00:09,970
+declared these strings in the strings.xml file. In the Forecast
+
+4
+00:00:09,970 --> 00:00:13,000
+Adapter Class, in the bind view method, we finish off the
+
+5
+00:00:13,000 --> 00:00:16,210
+remaining to do's. After we read the high temperature value
+
+6
+00:00:16,210 --> 00:00:18,420
+from the cursor, we go and try to find the
+
+7
+00:00:18,420 --> 00:00:21,950
+text view, represented by the ID, list item high text
+
+8
+00:00:21,950 --> 00:00:25,970
+view. Then we use a utility function to format the temperature
+
+9
+00:00:25,970 --> 00:00:28,960
+so that it can be displayed in the text view. Then we do the
+
+10
+00:00:28,960 --> 00:00:32,820
+same for the low temperature value. In the forecast fragment class, in the on
+
+11
+00:00:32,820 --> 00:00:38,230
+create view method, we remove the use of the simple cursor adapter. Instead, we
+
+12
+00:00:38,230 --> 00:00:41,420
+use the new forecast adapter and then we set it on the list view.
+

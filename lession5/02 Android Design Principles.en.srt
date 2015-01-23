@@ -1,0 +1,176 @@
+1
+00:00:00,760 --> 00:00:05,044
+Enchant me. Simplify my life. Make me amazing. They're
+
+2
+00:00:05,044 --> 00:00:09,530
+incredibly one-sided wedding vows, and the three key principles
+
+3
+00:00:09,530 --> 00:00:12,380
+underlying the Android team's creative vision for the platform
+
+4
+00:00:12,380 --> 00:00:14,840
+and the apps that run on it. As engineers,
+
+5
+00:00:14,840 --> 00:00:16,860
+it can sometimes be difficult to see past our
+
+6
+00:00:16,860 --> 00:00:19,710
+own delight at harnessing the power of an sdk
+
+7
+00:00:19,710 --> 00:00:22,960
+to bend a machine to our will, but ultimately,
+
+8
+00:00:22,960 --> 00:00:26,430
+our goal must be to create that same empowering experience
+
+9
+00:00:26,430 --> 00:00:29,660
+for our users. And we do that by creating apps
+
+10
+00:00:29,660 --> 00:00:32,320
+that are as esthetically pleasing as they are functional and
+
+11
+00:00:32,320 --> 00:00:35,240
+easy to use. Users judge the quality of your app
+
+12
+00:00:35,240 --> 00:00:38,390
+within the first 30 seconds. It may not be fair,
+
+13
+00:00:38,390 --> 00:00:41,480
+but a disproportionate amount of that judgement will be based
+
+14
+00:00:41,480 --> 00:00:44,533
+not on the functionality, but on the visual aesthetics. Does
+
+15
+00:00:44,533 --> 00:00:48,330
+it look polished? Does it look professional? How easy is
+
+16
+00:00:48,330 --> 00:00:51,800
+it to use? More than just looking pretty, the entire user
+
+17
+00:00:51,800 --> 00:00:55,490
+experience is critically important. With 30 seconds to
+
+18
+00:00:55,490 --> 00:00:58,505
+win users over, it's critical that that onboarding process
+
+19
+00:00:58,505 --> 00:01:01,520
+the time and effort required to go from downloading
+
+20
+00:01:01,520 --> 00:01:04,420
+your app to performing it's main function should be
+
+21
+00:01:04,420 --> 00:01:07,800
+as short and frictionless as possible. Not only
+
+22
+00:01:07,800 --> 00:01:10,390
+that, but a well designed app should evoke a
+
+23
+00:01:10,390 --> 00:01:14,530
+visceral reaction that speaks to the subconscious. It should
+
+24
+00:01:14,530 --> 00:01:17,020
+be fun to use. It should surprise in delightful
+
+25
+00:01:17,020 --> 00:01:20,590
+ways through subtle animations and smooth transitions that contribute
+
+26
+00:01:20,590 --> 00:01:23,890
+to a feeling of power and effortlessness. It should
+
+27
+00:01:23,890 --> 00:01:27,000
+let users touch and interact with objects directly rather
+
+28
+00:01:27,000 --> 00:01:29,490
+than having to use buttons and menus. And it should
+
+29
+00:01:29,490 --> 00:01:31,660
+use rich imagery and pictures in place of lots
+
+30
+00:01:31,660 --> 00:01:34,370
+of words and long sentences. It allows users to
+
+31
+00:01:34,370 --> 00:01:37,440
+customize your app, to make it theirs while providing
+
+32
+00:01:37,440 --> 00:01:41,805
+beautiful and sensible defaults. Create something that works like magic,
+
+33
+00:01:41,805 --> 00:01:44,430
+learning your preference in the context provided by
+
+34
+00:01:44,430 --> 00:01:47,260
+the device so it never asks users for information
+
+35
+00:01:47,260 --> 00:01:51,300
+that they've already provided. Provide simple shortcuts to complete
+
+36
+00:01:51,300 --> 00:01:55,460
+complex tasks, and remember data settings and customizations making
+
+37
+00:01:55,460 --> 00:01:58,750
+them available across every device. While it's good practice
+
+38
+00:01:58,750 --> 00:02:01,320
+to create a familiar and welcoming experience by creating
+
+39
+00:02:01,320 --> 00:02:03,630
+a look and feel that's consistent with the platforms
+
+40
+00:02:03,630 --> 00:02:06,810
+styles and themes, it's just as important to remember
+
+41
+00:02:06,810 --> 00:02:09,710
+that this, and all the other principles I've discussed
+
+42
+00:02:09,710 --> 00:02:12,270
+here, are really just a starting point for your
+
+43
+00:02:12,270 --> 00:02:16,190
+own creative vision. Deviation from the guidelines is encouraged,
+
+44
+00:02:16,190 --> 00:02:19,500
+but when you do do so, deviate with purpose.
+

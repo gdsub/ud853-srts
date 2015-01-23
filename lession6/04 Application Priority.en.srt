@@ -1,0 +1,116 @@
+1
+00:00:00,540 --> 00:00:02,455
+So now that we understand how services work,
+
+2
+00:00:02,455 --> 00:00:06,630
+let's review how Android determines your app's priority. App
+
+3
+00:00:06,630 --> 00:00:11,320
+priority is divided into three general buckets. Critical,
+
+4
+00:00:11,320 --> 00:00:14,370
+high, and low. Within each bucket the apps are
+
+5
+00:00:14,370 --> 00:00:16,690
+prioritized in a queue. With the app that's
+
+6
+00:00:16,690 --> 00:00:19,300
+been at the lowest priority for the longest, the
+
+7
+00:00:19,300 --> 00:00:22,450
+first to be executed. Critical apps are those that
+
+8
+00:00:22,450 --> 00:00:25,780
+are active. They're in the foreground, interacting with users.
+
+9
+00:00:25,780 --> 00:00:28,200
+That includes activities in the foreground and apps
+
+10
+00:00:28,200 --> 00:00:32,570
+running foreground services. High priority apps, include any visible
+
+11
+00:00:32,570 --> 00:00:35,620
+activities and any application with a running service.
+
+12
+00:00:35,620 --> 00:00:38,760
+While less impactful than killing a foreground app, destroying
+
+13
+00:00:38,760 --> 00:00:41,720
+visible activities or cancelling services running tasks like
+
+14
+00:00:41,720 --> 00:00:45,410
+background updates it's still going to be noticeable to users.
+
+15
+00:00:45,410 --> 00:00:46,960
+So, the system will only kill them in
+
+16
+00:00:46,960 --> 00:00:50,520
+an extreme resource crunch. Apps in the background though,
+
+17
+00:00:50,520 --> 00:00:52,750
+they're the red shirted ensigns of the app priority
+
+18
+00:00:52,750 --> 00:00:55,550
+landing party. Any background app will be killed as
+
+19
+00:00:55,550 --> 00:00:59,370
+needed, in a last seen, first killed order, in
+
+20
+00:00:59,370 --> 00:01:02,610
+order to help support the higher priority apps. I like
+
+21
+00:01:02,610 --> 00:01:04,769
+to think of this as the three laws of
+
+22
+00:01:04,769 --> 00:01:09,250
+Android resource management. Law one, Android will keep all apps
+
+23
+00:01:09,250 --> 00:01:12,480
+that interact with the user running smoothly. Android will
+
+24
+00:01:12,480 --> 00:01:16,190
+keep all apps with visible activities or running services running.
+
+25
+00:01:16,190 --> 00:01:21,260
+Unless doing so violates the first law. And third, Android will keep all
+
+26
+00:01:21,260 --> 00:01:23,340
+apps in the background running, unless this
+
+27
+00:01:23,340 --> 00:01:25,990
+violates the first or second laws. So
+
+28
+00:01:25,990 --> 00:01:29,930
+with all of that in mind, consider these four apps. What do you
+
+29
+00:01:29,930 --> 00:01:33,260
+think is the priority order of each of these apps, according to the system.
+

@@ -1,0 +1,168 @@
+1
+00:00:00,150 --> 00:00:02,170
+We'll start by adding our call back functions
+
+2
+00:00:02,170 --> 00:00:05,040
+to our forecast fragment. Now know we have two
+
+3
+00:00:05,040 --> 00:00:07,230
+different options here for loader call backs. We want to
+
+4
+00:00:07,230 --> 00:00:11,260
+make sure that we're choosing the android.support.v4 callback so
+
+5
+00:00:11,260 --> 00:00:13,780
+we're compatible with Gingerbread. These take a generic
+
+6
+00:00:13,780 --> 00:00:17,402
+type. We're going to want to use cursor. And yes that
+
+7
+00:00:17,402 --> 00:00:22,370
+is Andriod.database.cursor. Now, let's move down to where we
+
+8
+00:00:22,370 --> 00:00:25,380
+want to actually insert this code. Here at the bottom
+
+9
+00:00:25,380 --> 00:00:28,390
+and, of course, we use control I to actually insert.
+
+10
+00:00:28,390 --> 00:00:32,250
+And there we have it beautifully, our loader pattern with cursor.
+
+11
+00:00:32,250 --> 00:00:35,256
+Now let's do some work that will help us out. First
+
+12
+00:00:35,256 --> 00:00:38,270
+we're [INAUDIBLE] of columns to the top of our forecast fragment.
+
+13
+00:00:38,270 --> 00:00:40,590
+These are the columns that are going to be used in our
+
+14
+00:00:40,590 --> 00:00:44,490
+query. Note, that since both weather entry and location entry have
+
+15
+00:00:44,490 --> 00:00:47,720
+the underscore ID field, we must fully qualify, which ID we
+
+16
+00:00:47,720 --> 00:00:50,460
+want in our projection for this query to work. And in
+
+17
+00:00:50,460 --> 00:00:53,110
+fact, this query requires a projection to work at
+
+18
+00:00:53,110 --> 00:00:58,190
+all, otherwise [UNKNOWN] ambiguous. Next, here are indexes that
+
+19
+00:00:58,190 --> 00:01:00,710
+are tied to these columns. This'll make some of
+
+20
+00:01:00,710 --> 00:01:04,200
+our work easier, later on. Note, that these actually must
+
+21
+00:01:04,200 --> 00:01:07,420
+match. Then we create some public indexes to use,
+
+22
+00:01:07,420 --> 00:01:09,730
+in our adapter. This allows us to make our
+
+23
+00:01:09,730 --> 00:01:12,190
+code tiny and efficient, in the adapter. But it
+
+24
+00:01:12,190 --> 00:01:15,950
+means, we must maintain the relationship between these column indexes.
+
+25
+00:01:15,950 --> 00:01:19,530
+And the projection. Each loader has an ID. It
+
+26
+00:01:19,530 --> 00:01:21,750
+allows a fragment to have multiple loaders active at
+
+27
+00:01:21,750 --> 00:01:25,080
+once. We're [INAUDIBLE] place this along with an instance
+
+28
+00:01:25,080 --> 00:01:26,820
+variable to save off our location here at the
+
+29
+00:01:26,820 --> 00:01:29,535
+top of our class. Next we're going to override
+
+30
+00:01:29,535 --> 00:01:33,310
+onActivityCreated. Loaders are initialized
+
+31
+00:01:33,310 --> 00:01:34,980
+in onActivityCreated because their life
+
+32
+00:01:34,980 --> 00:01:37,800
+cycle is actually bound to the activity. Not the
+
+33
+00:01:37,800 --> 00:01:42,350
+fragment. Note the use of the loader ID. FORECAST_LOADER.
+
+34
+00:01:42,350 --> 00:01:45,420
+Then we return to the onCreateLoader function.
+
+35
+00:01:45,420 --> 00:01:49,570
+We add a new CursorLoader. This CursorLoader has
+
+36
+00:01:49,570 --> 00:01:53,350
+our query, including start date, columns, and sort
+
+37
+00:01:53,350 --> 00:01:56,420
+order. Our start date is actually in our
+
+38
+00:01:56,420 --> 00:02:01,490
+URI. Our columns are the ones we defined earlier, and our sort order is going
+
+39
+00:02:01,490 --> 00:02:05,250
+to be based upon COLUMN_DATETEXT ascending. Let's do
+
+40
+00:02:05,250 --> 00:02:07,430
+one last check. We want to make sure we're
+
+41
+00:02:07,430 --> 00:02:09,150
+using the support library version of all of
+
+42
+00:02:09,150 --> 00:02:13,240
+these classes, otherwise we won't get Android 2.3 compatibility.
+

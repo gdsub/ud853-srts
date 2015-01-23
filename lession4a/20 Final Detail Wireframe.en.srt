@@ -1,0 +1,24 @@
+1
+00:00:00,120 --> 00:00:04,110
+This is a good time to revisit our final detailed wire frame.
+
+2
+00:00:04,110 --> 00:00:08,160
+For each weather forecast, we're going to need to store at least the date,
+
+3
+00:00:08,160 --> 00:00:11,710
+the condition, the high and low temperature,
+
+4
+00:00:11,710 --> 00:00:17,130
+the humidity. The wind speed and direction, and the barometric pressure.
+
+5
+00:00:17,130 --> 00:00:22,380
+Since our database will use row to represent each forecast day, we'll store
+
+6
+00:00:22,380 --> 00:00:26,100
+each piece of data associated with the forecast in a separate column.
+

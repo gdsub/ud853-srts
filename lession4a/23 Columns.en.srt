@@ -1,0 +1,20 @@
+1
+00:00:00,300 --> 00:00:05,560
+We need to create a contract for our other table that contains location entries.
+
+2
+00:00:05,560 --> 00:00:09,790
+Location entries must contain a city name. This innerclass will be
+
+3
+00:00:09,790 --> 00:00:15,450
+created in much the same way as weatherentry. It will implement base columns.
+
+4
+00:00:15,450 --> 00:00:20,720
+Contain the table name and contain the names of each column. Note: the idea of
+
+5
+00:00:20,720 --> 00:00:24,660
+each row in the location entry class, will be stored in WeatherEntry.
+

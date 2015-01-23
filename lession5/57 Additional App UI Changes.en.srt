@@ -1,0 +1,48 @@
+1
+00:00:00,450 --> 00:00:03,380
+As you know, there's always more changes that we wish
+
+2
+00:00:03,380 --> 00:00:05,873
+we could do, if we just had a little more time.
+
+3
+00:00:05,873 --> 00:00:08,458
+We're going to leave those as exercises to you, if you want to
+
+4
+00:00:08,458 --> 00:00:12,200
+keep polishing up. For example, for simplicity, we had all tablet
+
+5
+00:00:12,200 --> 00:00:16,434
+sizes and orientations use the same layout. However, 7 inch portrait
+
+6
+00:00:16,434 --> 00:00:19,273
+would actually look better as a one pin UI. So you
+
+7
+00:00:19,273 --> 00:00:22,768
+can modify your resource folders to make 7 inch portrait use
+
+8
+00:00:22,768 --> 00:00:26,220
+the phone layout. You can also tweak the two pane behavior
+
+9
+00:00:26,220 --> 00:00:29,200
+so that the today layout is auto selected when you first launch the
+
+10
+00:00:29,200 --> 00:00:33,420
+app. Also, this should just say today instead of having the full date. That
+
+11
+00:00:33,420 --> 00:00:36,880
+way, it'll look more like the other items. As you play around with the
+
+12
+00:00:36,880 --> 00:00:40,480
+app, feel free to make changes you think would help improve the user experience.
+

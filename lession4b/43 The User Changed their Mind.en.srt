@@ -1,0 +1,172 @@
+1
+00:00:00,370 --> 00:00:02,710
+All right, I get the hint. You actually want
+
+2
+00:00:02,710 --> 00:00:05,140
+this class to be finished sometime before the next
+
+3
+00:00:05,140 --> 00:00:09,458
+Android release happens. We're almost done. So we look
+
+4
+00:00:09,458 --> 00:00:13,780
+in ForecastFragment in onStart. We've actually been cheating a
+
+5
+00:00:13,780 --> 00:00:16,190
+bit. Every single time we get to onStart, we
+
+6
+00:00:16,190 --> 00:00:20,150
+actually update the weather. Let's get rid of that.
+
+7
+00:00:20,150 --> 00:00:21,890
+It'll force us to actually have to use the
+
+8
+00:00:21,890 --> 00:00:25,650
+refresh function to get new weather, but it'll help illustrate
+
+9
+00:00:25,650 --> 00:00:27,320
+the cool stuff we're about to do with preferences.
+
+10
+00:00:27,320 --> 00:00:30,930
+We're going to stop cheating here. In onPreferenceChange, if we're
+
+11
+00:00:30,930 --> 00:00:34,065
+not actually binding preferences, we're going to execute a new
+
+12
+00:00:34,065 --> 00:00:37,710
+FetchWeatherTask if there's a change in location. Otherwise, we'll just
+
+13
+00:00:37,710 --> 00:00:41,450
+notify our CONTENT_URI to allow our cursor to update.
+
+14
+00:00:41,450 --> 00:00:45,060
+We still have to do one more thing. In ForecastFragment
+
+15
+00:00:45,060 --> 00:00:48,320
+we've been using an instance variable, mLocation, to save the
+
+16
+00:00:48,320 --> 00:00:52,330
+preferred location we get when we're actually an onCreate loader.
+
+17
+00:00:52,330 --> 00:00:54,110
+We've been doing that because we've been planning to
+
+18
+00:00:54,110 --> 00:00:58,040
+use this for a while. Let's override another function. In
+
+19
+00:00:58,040 --> 00:01:00,140
+onResume we need to check to see whether or not
+
+20
+00:01:00,140 --> 00:01:04,400
+our location has changed. So if our location is not
+
+21
+00:01:04,400 --> 00:01:08,470
+equal to null and Utility.getPreferred location does not equal
+
+22
+00:01:08,470 --> 00:01:11,870
+location, well, then we can call update weather. Let's see
+
+23
+00:01:11,870 --> 00:01:15,010
+what happens. You see it immediately changed back. You didn't
+
+24
+00:01:15,010 --> 00:01:16,982
+see that loading because it didn't have to load anything.
+
+25
+00:01:16,982 --> 00:01:21,700
+However, if we change settings to something else,
+
+26
+00:01:21,700 --> 00:01:24,210
+it's refreshing the background. Well, it turns out
+
+27
+00:01:24,210 --> 00:01:28,250
+updating weather doesn't actually help us here. Why?
+
+28
+00:01:28,250 --> 00:01:30,900
+Because our URI hasn't changed. Remember, we're doing
+
+29
+00:01:30,900 --> 00:01:33,720
+everything based upon URI. What we really need
+
+30
+00:01:33,720 --> 00:01:35,800
+to do is reset our loader. So, how
+
+31
+00:01:35,800 --> 00:01:39,420
+do we do that? Well, it's pretty straightforward.
+
+32
+00:01:39,420 --> 00:01:42,020
+Just like we did in onActivityCreated, we have to
+
+33
+00:01:42,020 --> 00:01:45,360
+use LoaderManager. So instead of calling updateWeather, what
+
+34
+00:01:45,360 --> 00:01:48,270
+we're actually going to do is call something else.
+
+35
+00:01:48,270 --> 00:01:52,070
+In this case, not an initLoader, but restartLoader.
+
+36
+00:01:52,070 --> 00:01:54,480
+It takes the same parameters as an initLoader. Now
+
+37
+00:01:54,480 --> 00:01:58,040
+let's try this again. That already looks better.
+
+38
+00:01:58,040 --> 00:01:59,860
+All right, let's change back to our own weather
+
+39
+00:01:59,860 --> 00:02:03,810
+again. And there we are. As you can see,
+
+40
+00:02:05,180 --> 00:02:07,270
+the weather is changing as we go from location
+
+41
+00:02:07,270 --> 00:02:09,400
+to location, but we still have this
+
+42
+00:02:09,400 --> 00:02:12,030
+problem. Obviously when we change settings here,
+
+43
+00:02:12,030 --> 00:02:17,130
+it doesn't affect anything, so we need to fix that. That's where you come in.
+

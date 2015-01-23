@@ -1,0 +1,36 @@
+1
+00:00:00,300 --> 00:00:02,680
+Now that we have the menu XML, add the code in
+
+2
+00:00:02,680 --> 00:00:05,590
+the fragment to inflate it. You can leave a placeholder for
+
+3
+00:00:05,590 --> 00:00:09,020
+when the Refresh button is selected. This is what it should
+
+4
+00:00:09,020 --> 00:00:11,740
+look when you're done. You should see the Refresh menu item there,
+
+5
+00:00:11,740 --> 00:00:14,730
+but tapping on it doesn't do anything. That's fine for now.
+
+6
+00:00:14,730 --> 00:00:18,600
+If needed, you can look at mainactivity.java for reference. If you get
+
+7
+00:00:18,600 --> 00:00:21,570
+stuck and don't see the menu item appear, try to answer
+
+8
+00:00:21,570 --> 00:00:25,630
+this question first: what fragment method do you need to call in
+
+9
+00:00:25,630 --> 00:00:28,430
+order to report that it has menu options to display?
+

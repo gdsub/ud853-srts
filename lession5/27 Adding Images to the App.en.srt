@@ -1,0 +1,188 @@
+1
+00:00:00,090 --> 00:00:02,540
+We're providing you with an asset drop, view the link below,
+
+2
+00:00:02,540 --> 00:00:05,130
+so that you can download the images and include them in
+
+3
+00:00:05,130 --> 00:00:08,280
+the app. When we open up the assets ZIP file, we
+
+4
+00:00:08,280 --> 00:00:11,190
+see that the same icon is provided at different sizes for
+
+5
+00:00:11,190 --> 00:00:15,800
+different resolutions. In the drawable MDPI folder, we see the assets
+
+6
+00:00:15,800 --> 00:00:19,710
+that will be used on an MDPI device. In the drawable
+
+7
+00:00:19,710 --> 00:00:22,040
+HDPI folder, we see the assets that will be used on
+
+8
+00:00:22,040 --> 00:00:25,260
+an HDPI device. And the same goes for the other folders.
+
+9
+00:00:26,380 --> 00:00:29,000
+Under the res directory copy over all the asset
+
+10
+00:00:29,000 --> 00:00:32,580
+folders provided in the download. Clicking on an image shows
+
+11
+00:00:32,580 --> 00:00:34,770
+a preview of it and the size and pixels
+
+12
+00:00:34,770 --> 00:00:37,580
+is also shown. At this time you can also remove
+
+13
+00:00:37,580 --> 00:00:41,500
+the old placeholder ic launcher icons. Our new launcher
+
+14
+00:00:41,500 --> 00:00:45,220
+icons are located in mipmap folders. These are distinct folders
+
+15
+00:00:45,220 --> 00:00:48,130
+from the drawable folders. If you build an APK
+
+16
+00:00:48,130 --> 00:00:51,690
+for a target screen resolution like HDPI, the Android asset
+
+17
+00:00:51,690 --> 00:00:55,730
+packaging tool, AAPT, can strip out the drawables for other resolutions
+
+18
+00:00:55,730 --> 00:00:58,330
+that you don't need. But if it's in the mipmap folders,
+
+19
+00:00:58,330 --> 00:01:01,261
+then these assets will stay in the APK regardless of the
+
+20
+00:01:01,261 --> 00:01:04,190
+target resolution. But when would you need an image at a
+
+21
+00:01:04,190 --> 00:01:07,700
+resolution different than the resolution of the device? Well, one example
+
+22
+00:01:07,700 --> 00:01:11,080
+is the Android launcher app, which controls the home screen as
+
+23
+00:01:11,080 --> 00:01:13,830
+well as the All App store. The launcher app won't use
+
+24
+00:01:13,830 --> 00:01:16,741
+the icon at the current density of the device, but rather
+
+25
+00:01:16,741 --> 00:01:22,560
+pulls a icon for the next highest resolution up. For an XXHDPI device like the
+
+26
+00:01:22,560 --> 00:01:24,950
+Nexus 5, normally the assets will be pulled
+
+27
+00:01:24,950 --> 00:01:28,850
+from the drawable XXHDPI folder. However, in this
+
+28
+00:01:28,850 --> 00:01:32,620
+case the launcher icon will pull the XXXHDPI
+
+29
+00:01:32,620 --> 00:01:35,320
+version of the launcher icon. That will make
+
+30
+00:01:35,320 --> 00:01:37,860
+the larger app icons appear sharper on the
+
+31
+00:01:37,860 --> 00:01:42,715
+all apps screen. In the code replace @drawable/ic_launcher
+
+32
+00:01:42,715 --> 00:01:47,070
+with @mipmap/ic_launcher because of the new location of the icons.
+
+33
+00:01:47,070 --> 00:01:49,980
+For the rest of the icons modify the forecast list
+
+34
+00:01:49,980 --> 00:01:53,160
+and the details screen to display the right weather icon
+
+35
+00:01:53,160 --> 00:01:56,110
+instead of the placeholder one. See the hints below in
+
+36
+00:01:56,110 --> 00:01:59,470
+the instructor notes. Using the helper functions we've provided in
+
+37
+00:01:59,470 --> 00:02:02,260
+the gist below, you can map the weather condition code
+
+38
+00:02:02,260 --> 00:02:04,860
+to the icon that you'll need. This is what the
+
+39
+00:02:04,860 --> 00:02:07,590
+app should look like when you're done with this step.
+
+40
+00:02:07,590 --> 00:02:09,400
+Note that there are two types of each weather
+
+41
+00:02:09,400 --> 00:02:12,350
+icon, a gray icon and a colored art image.
+
+42
+00:02:12,350 --> 00:02:15,040
+In the main forecast list we'll be using the
+
+43
+00:02:15,040 --> 00:02:18,630
+gray icon. However, for the today layout, we'll use the
+
+44
+00:02:18,630 --> 00:02:21,650
+colored icon. When you go inside the detail activity,
+
+45
+00:02:21,650 --> 00:02:24,930
+you'll also use the colored icon. At this time,
+
+46
+00:02:24,930 --> 00:02:27,160
+you can also remove any images you hard coded
+
+47
+00:02:27,160 --> 00:02:30,570
+into the layout XML, because they'll be populated dynamically now.
+

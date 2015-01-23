@@ -1,0 +1,208 @@
+1
+00:00:00,520 --> 00:00:04,200
+Andy Rubin, head of Google's Android team in 2013,
+
+2
+00:00:04,200 --> 00:00:07,540
+famously defined Android's openness with this Tweet, offering the
+
+3
+00:00:07,540 --> 00:00:10,500
+instructions for downloading and building the Android source code.
+
+4
+00:00:11,840 --> 00:00:14,020
+As app developers, it's handy to be able to peep
+
+5
+00:00:14,020 --> 00:00:16,530
+behind the curtains and see how the framework actually
+
+6
+00:00:16,530 --> 00:00:19,070
+works. And it's an excellent way to find answers to
+
+7
+00:00:19,070 --> 00:00:22,230
+tricky, Stack Overflow questions. But the Android Open Source
+
+8
+00:00:22,230 --> 00:00:25,580
+Project, or AOSP as its commonly known, is much more
+
+9
+00:00:25,580 --> 00:00:28,170
+than that. The source code is available under the
+
+10
+00:00:28,170 --> 00:00:31,000
+Apache 2 license, so anyone can take it and do
+
+11
+00:00:31,000 --> 00:00:34,290
+anything they want with it, including modifying it and redistributing
+
+12
+00:00:34,290 --> 00:00:37,830
+it. And they have. Android has always had a passionate
+
+13
+00:00:37,830 --> 00:00:40,945
+community of modders, from Steve Kondik and the Cyanogen community
+
+14
+00:00:40,945 --> 00:00:44,240
+to XDA and many others who have been distributing modified
+
+15
+00:00:44,240 --> 00:00:47,100
+images of Android for phone owners brave enough to try
+
+16
+00:00:47,100 --> 00:00:50,580
+them. Even big companies like Amazon have taken the Android
+
+17
+00:00:50,580 --> 00:00:52,500
+source code and modified it for use in their own
+
+18
+00:00:52,500 --> 00:00:56,420
+line of products. That openness extends to the apps themselves, the
+
+19
+00:00:56,420 --> 00:00:59,790
+AOSP includes key mobile apps like the dialer, app launcher,
+
+20
+00:00:59,790 --> 00:01:03,170
+calendar, and email. And Google offers it own versions of each
+
+21
+00:01:03,170 --> 00:01:06,000
+as well. In the early days those native apps were
+
+22
+00:01:06,000 --> 00:01:08,870
+tightly bound to the framework and could only get updated along
+
+23
+00:01:08,870 --> 00:01:12,170
+with the platform. Which admittedly in the early days seemed like
+
+24
+00:01:12,170 --> 00:01:16,230
+every few weeks. But as the time between platform releases grew,
+
+25
+00:01:16,230 --> 00:01:18,860
+so did the efforts to unbundle those apps, allowing
+
+26
+00:01:18,860 --> 00:01:21,840
+them to be updated through Google Play. That was great
+
+27
+00:01:21,840 --> 00:01:23,670
+news for users, but it had an even better
+
+28
+00:01:23,670 --> 00:01:27,140
+side effect for us developers. Because apps like Gmail and
+
+29
+00:01:27,140 --> 00:01:30,170
+Maps depend on a number of proprietary Google APIs,
+
+30
+00:01:30,170 --> 00:01:34,140
+Google released Google Play Services. Also code named after food
+
+31
+00:01:34,140 --> 00:01:36,920
+to support the Google apps, while also giving us
+
+32
+00:01:36,920 --> 00:01:41,850
+developers Google specific APIs, like Maps, Wallet, Drive, and YouTube.
+
+33
+00:01:41,850 --> 00:01:44,480
+So now we get the latest and greatest Google specific APIs
+
+34
+00:01:44,480 --> 00:01:47,110
+every six weeks or so. And rather than being tied to
+
+35
+00:01:47,110 --> 00:01:51,540
+a specific platform, they're available on every device, back to Gingerbread.
+
+36
+00:01:51,540 --> 00:01:55,580
+Oh, and of course every native app is also entirely replaceable.
+
+37
+00:01:55,580 --> 00:01:57,830
+So you can publish apps to replace any of the apps
+
+38
+00:01:57,830 --> 00:02:00,490
+shipped with the device. And we can build our own SMS
+
+39
+00:02:00,490 --> 00:02:03,910
+apps, homescreens or maps apps, publish it on Play and give
+
+40
+00:02:03,910 --> 00:02:07,070
+users the choice to make it their default. When Android was first
+
+41
+00:02:07,070 --> 00:02:10,550
+announced, Andy Rubin described the AOSP as, all the software
+
+42
+00:02:10,550 --> 00:02:13,340
+to run a mobile phone but without the proprietary obstacles
+
+43
+00:02:13,340 --> 00:02:16,860
+that have hindered mobile innovation. Today, Android runs on more
+
+44
+00:02:16,860 --> 00:02:19,580
+than just mobiles, but the core of its purpose remains
+
+45
+00:02:19,580 --> 00:02:23,383
+the same. A platform and ecosystem that allows models, carriers,
+
+46
+00:02:23,383 --> 00:02:26,470
+OEMs and app developers to innovate and compete. So, armed
+
+47
+00:02:26,470 --> 00:02:29,560
+with an open, evolving platform enriched by a growing set
+
+48
+00:02:29,560 --> 00:02:32,380
+of Google API's and the ability to create great apps
+
+49
+00:02:32,380 --> 00:02:34,470
+that let users customize every aspect of
+
+50
+00:02:34,470 --> 00:02:37,270
+their user experience, you can use other people's
+
+51
+00:02:37,270 --> 00:02:39,640
+work to help define the computing platform of
+
+52
+00:02:39,640 --> 00:02:42,870
+the future. And that's my definition of open.
+

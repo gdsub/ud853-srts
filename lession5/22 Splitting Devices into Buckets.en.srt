@@ -1,0 +1,112 @@
+1
+00:00:00,110 --> 00:00:02,160
+So, we need to build an app that adapts well to
+
+2
+00:00:02,160 --> 00:00:05,360
+all different devices. But there's so many types of devices. So,
+
+3
+00:00:05,360 --> 00:00:07,680
+where do we begin? Well, we can start by grouping them
+
+4
+00:00:07,680 --> 00:00:10,930
+into buckets based on physical size. We can have a bucket for
+
+5
+00:00:10,930 --> 00:00:15,390
+phones and a bucket for seven inch tablets. And a bucket
+
+6
+00:00:15,390 --> 00:00:19,320
+for ten inch tablets as well. You can go even more granular
+
+7
+00:00:19,320 --> 00:00:22,060
+based on screen width. But these are the most common buckets
+
+8
+00:00:22,060 --> 00:00:26,260
+that you'll need. Now, classifying based on size alone is not enough.
+
+9
+00:00:26,260 --> 00:00:28,950
+Even among devices of the same size, there's still
+
+10
+00:00:28,950 --> 00:00:32,870
+a wide range of screen densities. Screen density is calculated
+
+11
+00:00:32,870 --> 00:00:35,270
+from the number of dots per inch on the device
+
+12
+00:00:35,270 --> 00:00:38,990
+or DPI. Scale starts off with low density devices, also
+
+13
+00:00:38,990 --> 00:00:42,120
+known as LDPI devices. It has about 120 dots
+
+14
+00:00:42,120 --> 00:00:45,870
+per inch, then it increases to medium density, high density
+
+15
+00:00:45,870 --> 00:00:48,960
+all the way to extra, extra, extra high density devices
+
+16
+00:00:48,960 --> 00:00:51,400
+were the number of dots per inch is much higher.
+
+17
+00:00:51,400 --> 00:00:53,260
+So, how do we build an app that accounts for
+
+18
+00:00:53,260 --> 00:00:57,390
+all these different screen densities? Well, when we specify layout dimensions,
+
+19
+00:00:57,390 --> 00:01:01,590
+we quickly realize that we can't use pixels. For example,
+
+20
+00:01:01,590 --> 00:01:04,360
+a 48 pixel button that looks fine on an MDPI device
+
+21
+00:01:04,360 --> 00:01:07,810
+will look much smaller on a higher density device where
+
+22
+00:01:07,810 --> 00:01:11,180
+the pixels are more compacted and the physical size of 48
+
+23
+00:01:11,180 --> 00:01:13,870
+pixels is much smaller. The user wants a button to be
+
+24
+00:01:13,870 --> 00:01:17,220
+easily tappable, and so it shouldn't change based on screen density.
+
+25
+00:01:17,220 --> 00:01:19,970
+So we need a consistent unit of measure to define physical
+
+26
+00:01:19,970 --> 00:01:24,610
+size, and in Android we call that density-independent pixels or dips
+
+27
+00:01:24,610 --> 00:01:28,460
+or dp for short. That way, a 48 dp button will
+
+28
+00:01:28,460 --> 00:01:31,750
+be the same physical size across all these different screen densities.
+

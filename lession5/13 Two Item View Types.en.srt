@@ -1,0 +1,112 @@
+1
+00:00:00,110 --> 00:00:03,070
+Once a forecast adapter works, we want to modify it so
+
+2
+00:00:03,070 --> 00:00:05,420
+that it can return a second item view type for the
+
+3
+00:00:05,420 --> 00:00:09,377
+today list item. Normally in the sub class, getViewTypeCount return to
+
+4
+00:00:09,377 --> 00:00:12,033
+one, but we're going to override it so it returns two for
+
+5
+00:00:12,033 --> 00:00:14,930
+the two different layouts. But how does it know when to
+
+6
+00:00:14,930 --> 00:00:19,180
+use one there or the other? Well, we override getItemViewType so
+
+7
+00:00:19,180 --> 00:00:21,530
+that when the position in the list is zero, then we
+
+8
+00:00:21,530 --> 00:00:25,790
+say that it's the TODAY view type. Otherwise, it's the FUTURE_DAY
+
+9
+00:00:25,790 --> 00:00:28,430
+view type. These two view types are declared up
+
+10
+00:00:28,430 --> 00:00:32,659
+above. These are just integer representations of the view type.
+
+11
+00:00:32,659 --> 00:00:35,320
+The numbering has to start at zero because these values
+
+12
+00:00:35,320 --> 00:00:38,880
+can not be greater than or equal to getViewTypeCount. So,
+
+13
+00:00:38,880 --> 00:00:40,870
+the possible values for us are zero and one,
+
+14
+00:00:40,870 --> 00:00:43,435
+so that we know that zero always maps to the
+
+15
+00:00:43,435 --> 00:00:47,780
+view_type_today and that one always maps to view_type_future_day. We're going to
+
+16
+00:00:47,780 --> 00:00:50,790
+use this information in the new View method. Remember that
+
+17
+00:00:50,790 --> 00:00:55,670
+previously we inflated the list_item_forecast.xml. Now, we're going to use
+
+18
+00:00:55,670 --> 00:00:58,280
+the getItemViewType to determine whether we should use one
+
+19
+00:00:58,280 --> 00:01:00,210
+layout or the other. Fill in the to do
+
+20
+00:01:00,210 --> 00:01:04,170
+to address this behavior. LayoutId refers to resource ID,
+
+21
+00:01:04,170 --> 00:01:07,890
+which is in the form of r.layout.something. We don't
+
+22
+00:01:07,890 --> 00:01:09,780
+have to reform the bindView method because it will
+
+23
+00:01:09,780 --> 00:01:12,580
+continue to work. That's because the IDs are the
+
+24
+00:01:12,580 --> 00:01:16,040
+same between the today layout and the future day layout.
+
+25
+00:01:16,040 --> 00:01:17,490
+This is what your app should look like when you're
+
+26
+00:01:17,490 --> 00:01:20,020
+done. The today layout is different from the rest of the
+
+27
+00:01:20,020 --> 00:01:22,760
+days. Go ahead and make these changes in your app and
+
+28
+00:01:22,760 --> 00:01:25,400
+then finish the To Do. Check this box when you're done.
+

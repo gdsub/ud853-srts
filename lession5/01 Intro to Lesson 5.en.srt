@@ -1,0 +1,32 @@
+1
+00:00:00,360 --> 00:00:02,310
+Now that we're storing the data we downloaded in
+
+2
+00:00:02,310 --> 00:00:05,300
+a sensible fashion, we're ready to build rich UIs
+
+3
+00:00:05,300 --> 00:00:08,210
+for each of our activities. That means learning about
+
+4
+00:00:08,210 --> 00:00:10,180
+fragments and how we can use them to create
+
+5
+00:00:10,180 --> 00:00:13,370
+complex user interfaces that can easily be adapted to
+
+6
+00:00:13,370 --> 00:00:15,850
+work seamlessly on a range of different devices and
+
+7
+00:00:15,850 --> 00:00:18,440
+screens. But first I'd like to tell you a
+
+8
+00:00:18,440 --> 00:00:21,190
+little more about the principles behind great Android design.
+

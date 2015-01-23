@@ -1,0 +1,100 @@
+1
+00:00:00,090 --> 00:00:02,840
+You've implemented the main activity wireframe. So, now, we can move
+
+2
+00:00:02,840 --> 00:00:05,800
+on to the detail activity wireframe. This is what it looks
+
+3
+00:00:05,800 --> 00:00:08,440
+like. We have the date, the high and low temperatures, and
+
+4
+00:00:08,440 --> 00:00:11,690
+then additional weather information. We also have the weather icon and
+
+5
+00:00:11,690 --> 00:00:14,870
+the weather forecast. And these line up horizontally. Build up the
+
+6
+00:00:14,870 --> 00:00:19,020
+layout XML for this wireframe. Then modify the detail fragments that
+
+7
+00:00:19,020 --> 00:00:22,640
+you can populate all this information, including these new views. While
+
+8
+00:00:22,640 --> 00:00:25,220
+you're doing that, you might as well move the detail fragment
+
+9
+00:00:25,220 --> 00:00:28,550
+into its own file, so it's separate from the detail activity. At
+
+10
+00:00:28,550 --> 00:00:31,380
+this point the detail fragment class is getting pretty long so you can
+
+11
+00:00:31,380 --> 00:00:34,450
+move that into it its own file. Before you get started, I want
+
+12
+00:00:34,450 --> 00:00:37,530
+to point out that this layout has information taking up a lot of
+
+13
+00:00:37,530 --> 00:00:41,270
+vertical space. If you rotate your device into landscape mode, or you have
+
+14
+00:00:41,270 --> 00:00:44,350
+a smaller height device, some of the content could get cut off. So
+
+15
+00:00:44,350 --> 00:00:47,720
+think about how you can make this layout be vertically scrollable. To show
+
+16
+00:00:47,720 --> 00:00:50,280
+you what I mean, I added a couple more lines of text at
+
+17
+00:00:50,280 --> 00:00:53,240
+the bottom of the layout. Then I made the content vertically scrollable
+
+18
+00:00:53,240 --> 00:00:55,930
+so you can see all the information. So go ahead and make that
+
+19
+00:00:55,930 --> 00:00:58,340
+change to your layout as well. When you're done with all these
+
+20
+00:00:58,340 --> 00:01:00,910
+steps, this is what the app should look like. We don't care about
+
+21
+00:01:00,910 --> 00:01:04,000
+the visual details now. We just want to make sure the functionality is
+
+22
+00:01:04,000 --> 00:01:07,210
+hooked up, so all the right information is displayed on screen. You can
+
+23
+00:01:07,210 --> 00:01:08,930
+use the code snippets provided below
+
+24
+00:01:08,930 --> 00:01:10,860
+for helper functions and strings that you're
+
+25
+00:01:10,860 --> 00:01:14,520
+going to need. And again, leaving a placeholder image is fine for now
+

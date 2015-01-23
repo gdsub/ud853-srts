@@ -1,0 +1,152 @@
+1
+00:00:00,190 --> 00:00:02,450
+Earlier, we learned about styles and how you can apply them
+
+2
+00:00:02,450 --> 00:00:05,420
+to an individual View. If you want to apply it to
+
+3
+00:00:05,420 --> 00:00:08,270
+all of the views in an activity or application, you can
+
+4
+00:00:08,270 --> 00:00:11,330
+do it by specifying a theme attribute on the activity or
+
+5
+00:00:11,330 --> 00:00:15,620
+application tag in the Android manifest. Now we style the action
+
+6
+00:00:15,620 --> 00:00:18,820
+bar to look like these visual mocks. This is the settings,
+
+7
+00:00:18,820 --> 00:00:22,040
+detail and main activity. For all cases, we want the background
+
+8
+00:00:22,040 --> 00:00:25,220
+color to be this blue hex color. Then we notice that the
+
+9
+00:00:25,220 --> 00:00:28,300
+styling of the settings and detail activities look very similar.
+
+10
+00:00:28,300 --> 00:00:31,070
+They both have the app icon and the activity title. On
+
+11
+00:00:31,070 --> 00:00:33,670
+the other hand, main activity just shows the logo. It's a
+
+12
+00:00:33,670 --> 00:00:36,740
+different attribute than the app icon, and this was provided in
+
+13
+00:00:36,740 --> 00:00:41,840
+asset drop earlier and it's called ic_logo. Because of these similarities,
+
+14
+00:00:41,840 --> 00:00:44,530
+we can use the same theme for these two activities and
+
+15
+00:00:44,530 --> 00:00:47,700
+we can create a new theme for the main activity. In
+
+16
+00:00:47,700 --> 00:00:50,450
+the case of our app, we use app theme here and
+
+17
+00:00:50,450 --> 00:00:54,050
+we use forecast theme here. We customize the themes in
+
+18
+00:00:54,050 --> 00:00:57,480
+the styles file in the base values folder. The app
+
+19
+00:00:57,480 --> 00:01:01,140
+theme inherits from the dark action bar system theme but
+
+20
+00:01:01,140 --> 00:01:04,040
+we override the action bar style to be our own.
+
+21
+00:01:04,040 --> 00:01:06,480
+This is defined here. We give it a parent ActionBar
+
+22
+00:01:06,480 --> 00:01:09,135
+style, and then we specify the background to be the
+
+23
+00:01:09,135 --> 00:01:11,970
+sunshine_blue color. Remember that this will be used in the
+
+24
+00:01:11,970 --> 00:01:15,480
+settings activity and the detail activity. Then for the main
+
+25
+00:01:15,480 --> 00:01:19,500
+activity, we declare the ForecastTheme. We inherit from the AppTheme, in
+
+26
+00:01:19,500 --> 00:01:22,370
+case there's more attributes that got added here, and then we'll be
+
+27
+00:01:22,370 --> 00:01:24,990
+able to inherit it for free. But we override the action bar
+
+28
+00:01:24,990 --> 00:01:28,110
+style to be this one. We set the logo because that's displayed
+
+29
+00:01:28,110 --> 00:01:31,220
+in the main activity, and we set the display options so
+
+30
+00:01:31,220 --> 00:01:33,880
+that we can show the logo. For more information on the action
+
+31
+00:01:33,880 --> 00:01:37,790
+bar display options, you can see the list here. For backward compatibility,
+
+32
+00:01:37,790 --> 00:01:40,680
+we needed to find these action bar styles in the base values
+
+33
+00:01:40,680 --> 00:01:45,220
+folder as well in the values V14 folder. The action bar compact class in the
+
+34
+00:01:45,220 --> 00:01:47,570
+support library handles action bar behavior up
+
+35
+00:01:47,570 --> 00:01:50,070
+through honeycomb. And then for ice cream sandwich
+
+36
+00:01:50,070 --> 00:01:51,760
+and above, it goes through the framework
+
+37
+00:01:51,760 --> 00:01:54,150
+implementation of the action bar. You can see
+
+38
+00:01:54,150 --> 00:01:57,610
+the code for the two files below. Go ahead and make these two changes now.
+

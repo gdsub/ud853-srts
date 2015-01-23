@@ -1,0 +1,52 @@
+1
+00:00:00,200 --> 00:00:03,330
+All right, you're done. Lets look at the
+
+2
+00:00:03,330 --> 00:00:06,490
+solution. We'll begin by adding a log tag
+
+3
+00:00:06,490 --> 00:00:10,160
+into our abstract threaded SyncAdapter. Since this stuff
+
+4
+00:00:10,160 --> 00:00:12,880
+runs in the background, it's really helpful to have
+
+5
+00:00:12,880 --> 00:00:15,550
+some logging. Since we ultimately want to run
+
+6
+00:00:15,550 --> 00:00:19,330
+the SyncAdapter in undetected mode. Let's pull the location
+
+7
+00:00:19,330 --> 00:00:22,610
+query from our utility class. And then we
+
+8
+00:00:22,610 --> 00:00:26,140
+paste in the code from our existing sunshine service.
+
+9
+00:00:26,140 --> 00:00:30,050
+We'll have to patch a few things up. We'll have to call getContext to
+
+10
+00:00:30,050 --> 00:00:34,590
+get the current context, for example. Note that I copied over ad location at
+
+11
+00:00:34,590 --> 00:00:39,770
+the same time I copied over the primary function. And then finally, we'll fix
+
+12
+00:00:39,770 --> 00:00:42,210
+update weather to use the new helper
+
+13
+00:00:42,210 --> 00:00:45,040
+function in our SyncAdapter. Let's run this.
+

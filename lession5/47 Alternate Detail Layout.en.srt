@@ -1,0 +1,36 @@
+1
+00:00:00,220 --> 00:00:02,820
+We're not quite done yet, with implementing the tablet UI wire
+
+2
+00:00:02,820 --> 00:00:06,020
+frames. The detail fragment should look like this, but instead it
+
+3
+00:00:06,020 --> 00:00:09,110
+looks more like this. For the tablet UI, we try to
+
+4
+00:00:09,110 --> 00:00:12,880
+optimize it more, for wider screens like tablet landscape mode. Another
+
+5
+00:00:12,880 --> 00:00:15,340
+good place for this layout, is in the phone landscape view,
+
+6
+00:00:15,340 --> 00:00:19,120
+where there's more horizontal space, than vertical space. For this quiz,
+
+7
+00:00:19,120 --> 00:00:21,820
+figure out which layout folders, we would need to define the
+
+8
+00:00:21,820 --> 00:00:25,350
+fragment detail layout in. In order to achieve this layout on phone
+
+9
+00:00:25,350 --> 00:00:28,010
+portrait, and this layout for phone landscape and tablet.
+

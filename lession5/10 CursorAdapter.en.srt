@@ -1,0 +1,72 @@
+1
+00:00:00,160 --> 00:00:02,250
+We created the today layout so why doesn't it show
+
+2
+00:00:02,250 --> 00:00:06,910
+up? The reason is because we're using a simple CursorAdapter. Remember
+
+3
+00:00:06,910 --> 00:00:08,960
+that it creates a list item for every row in the
+
+4
+00:00:08,960 --> 00:00:12,740
+cursor but it only supports one item view type. That means
+
+5
+00:00:12,740 --> 00:00:15,970
+that all list items must use the same layout. If
+
+6
+00:00:15,970 --> 00:00:18,640
+we want today's forecast to look differently we're going to need
+
+7
+00:00:18,640 --> 00:00:22,120
+to create a custom CursorAdapter. That way we can have multiple
+
+8
+00:00:22,120 --> 00:00:25,540
+item view types. Then we can have different list item layouts
+
+9
+00:00:25,540 --> 00:00:28,130
+based on what row of the cursor we're looking at.
+
+10
+00:00:28,130 --> 00:00:30,530
+Note that the concept of item view types applies to
+
+11
+00:00:30,530 --> 00:00:34,280
+adapters in general, not just the CursorAdapter. If you open
+
+12
+00:00:34,280 --> 00:00:37,730
+up the documentation for CursorAdapter, you'll see that it's an abstract
+
+13
+00:00:37,730 --> 00:00:40,640
+class. It contains two abstract methods that you'll need to
+
+14
+00:00:40,640 --> 00:00:45,052
+override. The bindView method as well as the newView method.
+
+15
+00:00:45,052 --> 00:00:47,260
+The newView method knows how to return a new list
+
+16
+00:00:47,260 --> 00:00:50,560
+item layout, but doesn't contain data yet. The bindView method knows
+
+17
+00:00:50,560 --> 00:00:52,670
+how to take an existing layout and update
+
+18
+00:00:52,670 --> 00:00:54,660
+it with the data pointed to by the cursor
+

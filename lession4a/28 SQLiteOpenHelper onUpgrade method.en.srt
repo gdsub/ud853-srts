@@ -1,0 +1,48 @@
+1
+00:00:00,260 --> 00:00:05,120
+Well now we're getting somewhere. All we have to do is run those table creation
+
+2
+00:00:05,120 --> 00:00:10,274
+queries by calling exact sequel at the end of our on create function. But wait,
+
+3
+00:00:10,274 --> 00:00:15,220
+there's another function in our SQliteOpenHelper, onUpgrade. You might think,
+
+4
+00:00:15,220 --> 00:00:16,830
+why should I care about those?
+
+5
+00:00:16,830 --> 00:00:21,040
+I'm not upgrading anything yet. To make our development lives easier we're
+
+6
+00:00:21,040 --> 00:00:24,270
+going to implement the most standard kind of onUpgrade there is.
+
+7
+00:00:24,270 --> 00:00:29,265
+You see onUpgrade only fires if you change the version of your database.
+
+8
+00:00:29,265 --> 00:00:34,480
+Now remember, we passed that version into the SQliteOpenHelper base constructor,
+
+9
+00:00:34,480 --> 00:00:39,110
+ages ago. Since we are going to be using our database as a cache for web data
+
+10
+00:00:39,110 --> 00:00:44,360
+and not for user generated content, we'll drop the tables. This is helpful if we
+
+11
+00:00:44,360 --> 00:00:48,500
+want to change the database in the future. If we were using user data, we'd do
+
+12
+00:00:48,500 --> 00:00:53,610
+something like use alter table to add new columns. So, now we have a database.
+

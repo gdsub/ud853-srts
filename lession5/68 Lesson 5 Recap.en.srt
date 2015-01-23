@@ -1,0 +1,36 @@
+1
+00:00:00,480 --> 00:00:03,070
+In this lesson, we learned how to create rich, responsive
+
+2
+00:00:03,070 --> 00:00:06,030
+user interfaces that work across a variety of different hardware
+
+3
+00:00:06,030 --> 00:00:09,180
+types and screen sizes. We also learned more details on
+
+4
+00:00:09,180 --> 00:00:12,020
+the Android layout managers and screen widgets and even had to
+
+5
+00:00:12,020 --> 00:00:15,500
+create our own views from scratch. Join us for lesson
+
+6
+00:00:15,500 --> 00:00:18,900
+six where we take our foreground-only app and discover how to
+
+7
+00:00:18,900 --> 00:00:22,100
+make it update and trigger notifications from the background, all
+
+8
+00:00:22,100 --> 00:00:25,650
+without draining your battery. But first, join me back at Google
+
+9
+00:00:25,650 --> 00:00:28,110
+for another story from the Android history books.
+

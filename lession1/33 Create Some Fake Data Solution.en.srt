@@ -1,0 +1,12 @@
+1
+00:00:00,300 --> 00:00:03,910
+At this point, we should have created some fake data to display in our list.
+
+2
+00:00:03,910 --> 00:00:08,350
+We created an array of stings to represent each weather forecast item and
+
+3
+00:00:08,350 --> 00:00:09,880
+then returned it into an array list.
+

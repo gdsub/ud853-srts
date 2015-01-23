@@ -1,0 +1,112 @@
+1
+00:00:00,830 --> 00:00:03,070
+One of the most used implicit intents
+
+2
+00:00:03,070 --> 00:00:05,490
+in Android is the share intent. It's [LAUGH]
+
+3
+00:00:05,490 --> 00:00:07,560
+awesome. It's a great way to waste time
+
+4
+00:00:07,560 --> 00:00:11,356
+for both you and your friends. [SOUND] [LAUGH].
+
+5
+00:00:11,356 --> 00:00:12,720
+>> Dan!
+
+6
+00:00:12,720 --> 00:00:15,780
+>> You can leverage your favorite apps to share photos, texts,
+
+7
+00:00:15,780 --> 00:00:18,910
+videos and general links. And the best part is you don't have
+
+8
+00:00:18,910 --> 00:00:21,990
+to even know what the user's favorite apps are. Just tell
+
+9
+00:00:21,990 --> 00:00:25,840
+Android what data you want to share and it shows your users
+
+10
+00:00:25,840 --> 00:00:28,050
+a list of apps that will share it. Apps that
+
+11
+00:00:28,050 --> 00:00:30,680
+may not have existed when you app was written. To
+
+12
+00:00:30,680 --> 00:00:33,660
+make it even easier to share Android 4.0 added the
+
+13
+00:00:33,660 --> 00:00:37,070
+share action provider and we have it for previous releases of
+
+14
+00:00:37,070 --> 00:00:40,270
+Android as part of a support library. It operates using
+
+15
+00:00:40,270 --> 00:00:44,890
+the action send intent. If we use Raytoe's glorious envelope metaphor,
+
+16
+00:00:44,890 --> 00:00:47,510
+it would be addressed to anyone who could perform action
+
+17
+00:00:47,510 --> 00:00:51,490
+send. The data descend would be included with it as extras
+
+18
+00:00:51,490 --> 00:00:55,060
+either as text, or URI to the binary data. And
+
+19
+00:00:55,060 --> 00:00:57,600
+the MIME type would indicate what the URI points to.
+
+20
+00:01:01,220 --> 00:01:03,470
+Here's what the share action provider will bring to
+
+21
+00:01:03,470 --> 00:01:06,850
+our app: the glorious wire frame. There will be
+
+22
+00:01:06,850 --> 00:01:09,270
+an additional icon in the action bar which will
+
+23
+00:01:09,270 --> 00:01:11,980
+drop down a menu when clicked to reveal potential
+
+24
+00:01:11,980 --> 00:01:15,150
+share actions. Another icon will be added to the
+
+25
+00:01:15,150 --> 00:01:17,640
+right of this one that contains the last application
+
+26
+00:01:17,640 --> 00:01:22,450
+shared to. Add a ShareActionProvider to the fragment within
+
+27
+00:01:22,450 --> 00:01:27,000
+DetailActivity. It will share weather in the following format.
+
+28
+00:01:27,000 --> 00:01:32,844
+Yes, it's just the string we passed into the view plus #SunshineApp.
+

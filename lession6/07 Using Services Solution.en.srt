@@ -1,0 +1,84 @@
+1
+00:00:00,350 --> 00:00:02,900
+All right, you're done. Let's talk about how I
+
+2
+00:00:02,900 --> 00:00:06,280
+solved this one. First, let's take all our code, and
+
+3
+00:00:06,280 --> 00:00:09,560
+copy it from the fetch weather task. The intent
+
+4
+00:00:09,560 --> 00:00:12,010
+service actually creates a helper thread for us to run
+
+5
+00:00:12,010 --> 00:00:15,300
+on. Similar to what async task does. So we
+
+6
+00:00:15,300 --> 00:00:18,080
+can just copy this stuff from doing background to on
+
+7
+00:00:18,080 --> 00:00:22,240
+handle intent. Let's add a few helpful constants, such as
+
+8
+00:00:22,240 --> 00:00:25,550
+log tag and an Intent Extra, so we can pass
+
+9
+00:00:25,550 --> 00:00:28,430
+in the location query. Now, we're just going to
+
+10
+00:00:28,430 --> 00:00:30,590
+go through and clean up some of the errors.
+
+11
+00:00:30,590 --> 00:00:34,110
+After all, Intent Service doesn't return a value. And
+
+12
+00:00:34,110 --> 00:00:36,790
+since it's a service, it has its own context.
+
+13
+00:00:36,790 --> 00:00:40,933
+And that's it. We've turned out fetch weather task
+
+14
+00:00:40,933 --> 00:00:44,750
+into an intents service, pretty straightforward. Now we just
+
+15
+00:00:44,750 --> 00:00:47,200
+need to call it. So, now in the update
+
+16
+00:00:47,200 --> 00:00:50,830
+weather function from within forecast fragment, we can call
+
+17
+00:00:50,830 --> 00:00:53,430
+the service using an explicit intent,
+
+18
+00:00:53,430 --> 00:00:56,620
+putting the parameter into an intent extra.
+
+19
+00:00:56,620 --> 00:00:59,640
+All right, let's take a look at how that runs. And when we
+
+20
+00:00:59,640 --> 00:01:03,440
+hit the refresh button, it'll use our new service. Pretty nice. And we
+
+21
+00:01:03,440 --> 00:01:06,330
+really can't tell any difference, which is how we'd expect things to be.
+

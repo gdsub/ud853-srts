@@ -1,0 +1,96 @@
+1
+00:00:00,370 --> 00:00:02,800
+Going back to the wire frames. In the phone layout, we
+
+2
+00:00:02,800 --> 00:00:05,570
+wanted the today item to be a little bit bigger. But on
+
+3
+00:00:05,570 --> 00:00:07,410
+the tablets, we just want it to look like all the
+
+4
+00:00:07,410 --> 00:00:11,970
+other items, because we have an expanded detail pane here. To do
+
+5
+00:00:11,970 --> 00:00:15,320
+this in the forecast adapter new view method, we should return
+
+6
+00:00:15,320 --> 00:00:19,060
+the layout for a list item forecast not for the today layout.
+
+7
+00:00:19,060 --> 00:00:21,760
+Then in the bind view method, for the today item, we
+
+8
+00:00:21,760 --> 00:00:25,470
+should use the gray icon instead of the colored icon. These decisions
+
+9
+00:00:25,470 --> 00:00:29,140
+get controlled by the return value of the getItemViewType method. Therefore,
+
+10
+00:00:29,140 --> 00:00:32,830
+we modify the getItemViewType method so that at the zero position,
+
+11
+00:00:32,830 --> 00:00:35,080
+if we have to use the special today layout, then we
+
+12
+00:00:35,080 --> 00:00:38,240
+return view type today. Otherwise, if we shouldn't use the special
+
+13
+00:00:38,240 --> 00:00:40,620
+today layout, then we should just return the view type for
+
+14
+00:00:40,620 --> 00:00:43,800
+all future days. This Boolean is controlled by the setter method.
+
+15
+00:00:43,800 --> 00:00:46,790
+To access this Boolean, we created a public setter method on
+
+16
+00:00:46,790 --> 00:00:50,620
+the forecast adapter. But who knows how to set this value properly?
+
+17
+00:00:50,620 --> 00:00:52,380
+Well the main activity knows whether it's one pane,
+
+18
+00:00:52,380 --> 00:00:54,730
+or two pane UI. So, it can decide whether
+
+19
+00:00:54,730 --> 00:00:56,650
+we should use the special today layout or not.
+
+20
+00:00:57,670 --> 00:01:00,040
+We don't have access to the forecast adapter here, but
+
+21
+00:01:00,040 --> 00:01:03,020
+we can plumb the value through the forecast fragment.
+
+22
+00:01:03,020 --> 00:01:05,319
+To get access to the forecast fragment, we can ask
+
+23
+00:01:05,319 --> 00:01:07,350
+the fragment manager and pass it the fragment ID.
+
+24
+00:01:08,600 --> 00:01:10,710
+Finish changing the code so the app looks like this.
+

@@ -1,0 +1,68 @@
+1
+00:00:00,700 --> 00:00:04,990
+As app developers, it's our job to maintain the illusion that once started,
+
+2
+00:00:04,990 --> 00:00:07,680
+every app is waiting patiently in the background looking for
+
+3
+00:00:07,680 --> 00:00:11,670
+its chance to be the star when called on. So whenever the user switches back to
+
+4
+00:00:11,670 --> 00:00:14,700
+your app, whether or not the system is kilted in the interim,
+
+5
+00:00:14,700 --> 00:00:18,780
+they should be presented with the same UI they had when they left. To help,
+
+6
+00:00:18,780 --> 00:00:22,540
+Android has a pair of handles specifically for persisting state in these
+
+7
+00:00:22,540 --> 00:00:27,030
+circumstances. On save instance data is called immediately before on pause. So
+
+8
+00:00:27,030 --> 00:00:33,450
+as soon as your app is no longer active, an on
+
+9
+00:00:33,450 --> 00:00:37,630
+restore instance data is called immediately after on create, but
+
+10
+00:00:37,630 --> 00:00:41,220
+only if the app is being restarted after having been terminated by the system.
+
+11
+00:00:42,290 --> 00:00:45,880
+That means you can read the bundle of state information saved the last time your
+
+12
+00:00:45,880 --> 00:00:49,870
+app was moved to the foreground here. The next time,
+
+13
+00:00:49,870 --> 00:00:52,940
+you'll use the switches to your app even if it was killed by the system in
+
+14
+00:00:52,940 --> 00:00:57,520
+the mean time. Using that bundle you can return your ui to the same state it
+
+15
+00:00:57,520 --> 00:01:01,040
+was the last time the user saw it creating a seamless transition that hides
+
+16
+00:01:01,040 --> 00:01:05,880
+the resource management happening under the covers. That's enough of the why,
+
+17
+00:01:05,880 --> 00:01:08,910
+let's go back to Dan and see how to put this theory into practice.
+

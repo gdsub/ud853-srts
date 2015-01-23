@@ -1,0 +1,20 @@
+1
+00:00:00,500 --> 00:00:04,490
+It will actually return a single row containing the max high temperature.
+
+2
+00:00:06,070 --> 00:00:09,900
+We're using a descending order for this column, which will place the largest
+
+3
+00:00:09,900 --> 00:00:14,730
+value at the beginning of the query. The limit statement tells SQLite to
+
+4
+00:00:14,730 --> 00:00:19,920
+only return a single row. We return a row that has the largest value.
+
+5
+00:00:19,920 --> 00:00:25,610
+If we wanted to get the most recent high, we could order by max desc, date desc.
+

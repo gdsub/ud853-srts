@@ -1,0 +1,20 @@
+1
+00:00:00,190 --> 00:00:04,270
+Another thing that I wanted to mention before we dive into the code is that it's
+
+2
+00:00:04,270 --> 00:00:09,130
+important to be a good Android citizen. This means adhering to the principle of
+
+3
+00:00:09,130 --> 00:00:13,190
+minimizing network activity and having an app that works seamlessly between
+
+4
+00:00:13,190 --> 00:00:18,330
+offline and online states. We're going to make that happen by creating a cache
+
+5
+00:00:18,330 --> 00:00:21,830
+data model that is shared between the various activities of Sunshine.
+

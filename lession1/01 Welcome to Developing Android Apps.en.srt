@@ -1,0 +1,96 @@
+1
+00:00:00,025 --> 00:00:03,070
+>> Welcome to Android Fundamentals.
+
+2
+00:00:03,070 --> 00:00:05,720
+Getting started on Android is straightforward.
+
+3
+00:00:05,720 --> 00:00:09,210
+Simply installing Android Studio and creating a new project is enough to
+
+4
+00:00:09,210 --> 00:00:11,910
+have ticked the, hello world, box on your Android resume.
+
+5
+00:00:11,910 --> 00:00:13,830
+>> But that's not why we're here.
+
+6
+00:00:13,830 --> 00:00:15,650
+We're also not here to teach you Java and
+
+7
+00:00:15,650 --> 00:00:18,792
+we're not going to walk you through every API in the Android SDK.
+
+8
+00:00:18,792 --> 00:00:22,390
+>> But what we will do is to help you build a real app.
+
+9
+00:00:22,390 --> 00:00:24,935
+We'll dig into the fundamentals of how Android works.
+
+10
+00:00:24,935 --> 00:00:27,210
+Its patterns and best practices.
+
+11
+00:00:27,210 --> 00:00:31,580
+>> Our course is deeply rooted in code, but this isn't a copy, paste code lab.
+
+12
+00:00:31,580 --> 00:00:33,590
+We'll teach you the principles you need.
+
+13
+00:00:33,590 --> 00:00:37,850
+And help you navigate the hundreds of resources like sample code, documentation
+
+14
+00:00:37,850 --> 00:00:42,170
+and stack overflow that you'll be using in your career as an Android developer.
+
+15
+00:00:42,170 --> 00:00:45,610
+>> Getting started is easy, but building something great is harder.
+
+16
+00:00:45,610 --> 00:00:47,410
+Which is why we're here.
+
+17
+00:00:47,410 --> 00:00:49,320
+>> We'll work right alongside you.
+
+18
+00:00:49,320 --> 00:00:50,310
+And by the end of this course,
+
+19
+00:00:50,310 --> 00:00:53,530
+you'll be able to turn your app vision into reality.
+
+20
+00:00:53,530 --> 00:00:55,230
+And you'll build it the right way.
+
+21
+00:00:55,230 --> 00:00:58,160
+So, in that spirit of collaboration, we'll begin by telling you a little bit
+
+22
+00:00:58,160 --> 00:01:01,300
+about us, and where you'll be seeing us throughout the course.
+
+23
+00:01:01,300 --> 00:01:03,270
+Katherine, why don't you get us started.
+
+24
+00:01:03,270 --> 00:01:03,770
+>> Sure.
+

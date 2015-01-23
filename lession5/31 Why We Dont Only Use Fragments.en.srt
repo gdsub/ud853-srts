@@ -1,0 +1,8 @@
+1
+00:00:00,330 --> 00:00:03,300
+Think about how that might work. What are some of the reasons
+
+2
+00:00:03,300 --> 00:00:06,860
+you may not want to create only a single activity within your application?
+

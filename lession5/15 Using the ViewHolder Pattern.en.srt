@@ -1,0 +1,112 @@
+1
+00:00:00,160 --> 00:00:03,030
+In the adaptor bindView method, we have to traverse the view
+
+2
+00:00:03,030 --> 00:00:05,990
+hierarchy to find all these different views to set data onto
+
+3
+00:00:05,990 --> 00:00:09,090
+them. If it's a recycled view, meaning that it was used
+
+4
+00:00:09,090 --> 00:00:12,030
+in the list previously to display other data, we still have
+
+5
+00:00:12,030 --> 00:00:15,252
+to traverse and find all the views. To remove unnecessary find
+
+6
+00:00:15,252 --> 00:00:18,520
+View By ID calls, we can use the View Holder pattern.
+
+7
+00:00:18,520 --> 00:00:21,280
+For a list item layout that contains different views, we can
+
+8
+00:00:21,280 --> 00:00:25,350
+create a View Holder object. It contains member variables that reference each
+
+9
+00:00:25,350 --> 00:00:28,040
+view in the layout. The View Holder object is stored in
+
+10
+00:00:28,040 --> 00:00:31,030
+the tag field of the view. The next time that the view
+
+11
+00:00:31,030 --> 00:00:34,960
+is recycled and used again. We can just immediately set the data
+
+12
+00:00:34,960 --> 00:00:38,180
+onto these fields. You don't have to go find all the views
+
+13
+00:00:38,180 --> 00:00:41,130
+again. This is our View Holder class. You can name it anything
+
+14
+00:00:41,130 --> 00:00:45,046
+you want, it's just a Java class. Given the list item layout,
+
+15
+00:00:45,046 --> 00:00:47,220
+we do all the find view by ID calls. That way, we
+
+16
+00:00:47,220 --> 00:00:50,705
+can hold references to all the child views. In the newView method,
+
+17
+00:00:50,705 --> 00:00:54,080
+after we've inflated the view, we create a new View Holder object
+
+18
+00:00:54,080 --> 00:00:57,340
+from that view. Then we set the View Holder as the tag of
+
+19
+00:00:57,340 --> 00:01:00,100
+the view. The tag can be used to store any object. But
+
+20
+00:01:00,100 --> 00:01:02,530
+don't abuse it, because when you read it back, you have to know
+
+21
+00:01:02,530 --> 00:01:04,858
+what you stored in there. A View Holder is a good use
+
+22
+00:01:04,858 --> 00:01:08,470
+case for it. Then in the bindView method. We read from the tag,
+
+23
+00:01:08,470 --> 00:01:12,670
+to get back the View Holder object. And we immediately have references, to
+
+24
+00:01:12,670 --> 00:01:16,260
+all the individual views we need to update, such as the Icon View,
+
+25
+00:01:16,260 --> 00:01:19,670
+the Date View, the Description View etc. Go ahead and define a View
+
+26
+00:01:19,670 --> 00:01:23,030
+Holder class and update your adapter to use it. When you compile and
+
+27
+00:01:23,030 --> 00:01:25,780
+run, you may not see that noticeable of a difference. But now your
+
+28
+00:01:25,780 --> 00:01:28,780
+list will perform better when it scales to hundreds or thousands of items.
+

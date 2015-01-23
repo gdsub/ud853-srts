@@ -1,0 +1,116 @@
+1
+00:00:00,140 --> 00:00:03,840
+Remember back in lesson two when Katherine used a
+
+2
+00:00:03,840 --> 00:00:07,030
+AsyncTask hooked up to a refresh button to update
+
+3
+00:00:07,030 --> 00:00:09,310
+our data? Rato talked about how that was a
+
+4
+00:00:09,310 --> 00:00:13,290
+bad idea, because the AsyncTask is not tied to
+
+5
+00:00:13,290 --> 00:00:16,610
+the activity life cycle. The virtual machine will hold
+
+6
+00:00:16,610 --> 00:00:18,960
+on to the activity object as long as the
+
+7
+00:00:18,960 --> 00:00:23,190
+AsyncTask is running, even after Android has called onDestroy
+
+8
+00:00:23,190 --> 00:00:26,130
+for the activity and expect it to be discarded.
+
+9
+00:00:26,130 --> 00:00:28,380
+If you rotate your phone, the behavior is to
+
+10
+00:00:28,380 --> 00:00:31,810
+destroy your activity and instantiate a new one. The
+
+11
+00:00:31,810 --> 00:00:35,400
+naive AsyncTask implementation now has two threads trying to
+
+12
+00:00:35,400 --> 00:00:39,290
+perform the same update, and so forth. The point is,
+
+13
+00:00:39,290 --> 00:00:41,910
+it's not the best pattern for a potentially very
+
+14
+00:00:41,910 --> 00:00:45,680
+long background operation, such as fetching from web services. If
+
+15
+00:00:45,680 --> 00:00:48,410
+you leave the app, the asynctask will continue to
+
+16
+00:00:48,410 --> 00:00:51,340
+run for as long as your process is kept alive,
+
+17
+00:00:51,340 --> 00:00:53,750
+but will run at a low priority, and your process
+
+18
+00:00:53,750 --> 00:00:55,900
+will be the first thing to be killed if the device
+
+19
+00:00:55,900 --> 00:00:59,760
+needs more resources. And there's a bigger problem. Your app
+
+20
+00:00:59,760 --> 00:01:02,660
+has to be visible and running in the foreground to instantiate
+
+21
+00:01:02,660 --> 00:01:05,590
+the task in the first place. Because we started a
+
+22
+00:01:05,590 --> 00:01:09,000
+task, to update the weather when we started the app, this
+
+23
+00:01:09,000 --> 00:01:13,070
+can have undesirable behavior if the weather changes rapidly. So
+
+24
+00:01:13,070 --> 00:01:16,110
+now we're going to learn the right way to perform updates.
+
+25
+00:01:16,110 --> 00:01:18,700
+We'll want to automate the process while the app is in
+
+26
+00:01:18,700 --> 00:01:22,690
+the foreground. But even more importantly, we want the app to get
+
+27
+00:01:22,690 --> 00:01:26,690
+regular updates in the background with minimal battery drain. That will
+
+28
+00:01:26,690 --> 00:01:28,660
+be especially important later in this
+
+29
+00:01:28,660 --> 00:01:31,010
+lesson when we introduce weather notifications.
+

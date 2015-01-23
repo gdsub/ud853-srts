@@ -1,0 +1,240 @@
+1
+00:00:00,320 --> 00:00:03,420
+So how did you break up the UI into smaller components?
+
+2
+00:00:03,420 --> 00:00:06,730
+Well, you might have thought that this could be two columns, but
+
+3
+00:00:06,730 --> 00:00:09,080
+then it would be hard to position the elements here. You
+
+4
+00:00:09,080 --> 00:00:12,140
+could center them vertically within the height of the screen, but it
+
+5
+00:00:12,140 --> 00:00:14,820
+wouldn't necessarily line up with the temperature views on the left-hand
+
+6
+00:00:14,820 --> 00:00:18,980
+side. Instead, this looks more like a horizontal linear layout. Then, the
+
+7
+00:00:18,980 --> 00:00:21,660
+rest of the elements could be laid out by using a vertical
+
+8
+00:00:21,660 --> 00:00:25,410
+linear layout. The vertical linear layout would have six children. The third
+
+9
+00:00:25,410 --> 00:00:29,460
+element would be a horizontal linear layout, composed of two children.
+
+10
+00:00:29,460 --> 00:00:32,685
+The first would be another vertical linear layout with these two texts
+
+11
+00:00:32,685 --> 00:00:35,680
+views, and the second element would be another vertical linear layout
+
+12
+00:00:35,680 --> 00:00:38,540
+composed of these two 2 elements. To make the contents of the
+
+13
+00:00:38,540 --> 00:00:42,520
+screen vertically scrollable, we put it inside a scroll view. Using
+
+14
+00:00:42,520 --> 00:00:45,090
+a list view here would be overkill, because we don't need to
+
+15
+00:00:45,090 --> 00:00:48,310
+scale to an infinite number of item and we don't need recycling.
+
+16
+00:00:48,310 --> 00:00:50,730
+There's a fixed number of fields on the screen, so a scroll
+
+17
+00:00:50,730 --> 00:00:53,800
+view is the perfect choice. I can show you our implementation for
+
+18
+00:00:53,800 --> 00:00:57,165
+the fragment detail XML layout. We hard coded some data in the
+
+19
+00:00:57,165 --> 00:00:59,270
+layout, so that it would show up as a preview in the
+
+20
+00:00:59,270 --> 00:01:02,160
+Design Pane. At the root of the View hierarchy, we have a Scroll
+
+21
+00:01:02,160 --> 00:01:05,680
+View. Scroll Views can only have max one child. So we set
+
+22
+00:01:05,680 --> 00:01:09,050
+that to be the vertical linear layout. Inside of this layout, we have
+
+23
+00:01:09,050 --> 00:01:11,960
+a text view for the day of the week, the calendar date,
+
+24
+00:01:11,960 --> 00:01:16,000
+and then a horizontal linear layout. This is followed by the humidity text
+
+25
+00:01:16,000 --> 00:01:19,320
+view, wind text view and pressure text view. In the XML
+
+26
+00:01:19,320 --> 00:01:22,200
+code, we see the scroll view with the trial linear layout. We
+
+27
+00:01:22,200 --> 00:01:24,830
+give it some padding of 16dp, so that the content does
+
+28
+00:01:24,830 --> 00:01:27,660
+not flush up against the edge of the screen. Then we see
+
+29
+00:01:27,660 --> 00:01:31,510
+the text views followed by the horizontal linear layout. We specify
+
+30
+00:01:31,510 --> 00:01:35,050
+layout margin top of 16dp to give it some more space from
+
+31
+00:01:35,050 --> 00:01:38,090
+the bottom of this text view. Within this horizontal linear layout, we
+
+32
+00:01:38,090 --> 00:01:41,290
+have one vertical linear layout which has a width of zero and
+
+33
+00:01:41,290 --> 00:01:43,980
+a weight of one. And another linear layout with the
+
+34
+00:01:43,980 --> 00:01:46,170
+width at zero and a weight of one. That means that
+
+35
+00:01:46,170 --> 00:01:49,690
+both of these children have equal width. For this linear layout,
+
+36
+00:01:49,690 --> 00:01:52,980
+we specified gravity to be center horizontal. That means that the
+
+37
+00:01:52,980 --> 00:01:56,670
+contents inside of it will be centered horizontally, which includes
+
+38
+00:01:56,670 --> 00:01:59,850
+the icon, as well as the forecast text view. Lastly, we
+
+39
+00:01:59,850 --> 00:02:03,180
+have the remaining text views for the other weather details. When
+
+40
+00:02:03,180 --> 00:02:06,330
+the layout looks good, we update the detail fragment. At this
+
+41
+00:02:06,330 --> 00:02:09,184
+point, we also move it into its own file. In the
+
+42
+00:02:09,184 --> 00:02:11,950
+onload finish method, we used to have a lot of Find You
+
+43
+00:02:11,950 --> 00:02:15,770
+by ID calls. However, we can cash those views earlier so that
+
+44
+00:02:15,770 --> 00:02:19,230
+we only have to fetch them once. In the onCreateView method, once
+
+45
+00:02:19,230 --> 00:02:21,560
+the view is inflated, we can go and find a reference
+
+46
+00:02:21,560 --> 00:02:24,420
+to all the views we'll need later. We store these views as
+
+47
+00:02:24,420 --> 00:02:27,640
+member variables in a class. Which is why they start with the
+
+48
+00:02:27,640 --> 00:02:31,450
+letter M. In the onCreateLoaded method, we make sure that the projection
+
+49
+00:02:31,450 --> 00:02:34,930
+that we're requesting from the content provider contains all the information
+
+50
+00:02:34,930 --> 00:02:38,200
+that we need. Especially the new fields that we just added views
+
+51
+00:02:38,200 --> 00:02:40,960
+for. Then in the onload Finish method, we get the cursor
+
+52
+00:02:40,960 --> 00:02:43,920
+back with the data we need. We read the weather condition ID
+
+53
+00:02:43,920 --> 00:02:46,610
+from the cursor. And we're going to need this later to determine
+
+54
+00:02:46,610 --> 00:02:49,500
+the right icon. But for now, we can just use a placeholder
+
+55
+00:02:49,500 --> 00:02:52,990
+icon. We continue reading from the cursor and updating the views such
+
+56
+00:02:52,990 --> 00:02:56,670
+as for the date and description and temperatures. For the new views
+
+57
+00:02:56,670 --> 00:02:59,360
+for humidity, wind, and pressure, we read the
+
+58
+00:02:59,360 --> 00:03:01,860
+information from the cursor, and then we format it
+
+59
+00:03:01,860 --> 00:03:04,680
+properly for the UI. This involved copying over
+
+60
+00:03:04,680 --> 00:03:07,520
+the strings and the utility method from the gist.
+

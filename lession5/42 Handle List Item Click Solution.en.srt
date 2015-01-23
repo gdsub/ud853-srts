@@ -1,0 +1,208 @@
+1
+00:00:00,170 --> 00:00:02,516
+In the Forecast Fragment class, we add the callback
+
+2
+00:00:02,516 --> 00:00:06,020
+that was provided in the gist. Then in the onCreateView
+
+3
+00:00:06,020 --> 00:00:09,200
+method, we modify the item click behavior. When an
+
+4
+00:00:09,200 --> 00:00:11,660
+item is clicked, we move the cursor to that position
+
+5
+00:00:11,660 --> 00:00:14,060
+and then we read out the date string. We
+
+6
+00:00:14,060 --> 00:00:17,300
+call getActivity and then we cast it to a Callback
+
+7
+00:00:17,300 --> 00:00:20,410
+object. And then we call onItemSelected, with that date
+
+8
+00:00:20,410 --> 00:00:25,450
+string. Then in the MainActivity, we implement this Callback interface.
+
+9
+00:00:25,450 --> 00:00:28,700
+In the onItemSelected method, we fork behavior based on
+
+10
+00:00:28,700 --> 00:00:31,530
+the TwoPane variable that we defined earlier. If we're
+
+11
+00:00:31,530 --> 00:00:34,650
+in TwoPane mode, then we create a new DetailFragment
+
+12
+00:00:34,650 --> 00:00:37,180
+using the date in the arguments bundle. And then
+
+13
+00:00:37,180 --> 00:00:41,420
+we replace the existing fragment in the weather_detail_container. Otherwise,
+
+14
+00:00:41,420 --> 00:00:43,900
+in OnePane mode, we create a new intent to
+
+15
+00:00:43,900 --> 00:00:46,500
+launch the detail activity setting the date as an
+
+16
+00:00:46,500 --> 00:00:50,720
+intent extra. In the detail activity, we modify the onCreate
+
+17
+00:00:50,720 --> 00:00:53,950
+method to read the intent extras from the intent that
+
+18
+00:00:53,950 --> 00:00:56,840
+came from the main activity. We take this date and set
+
+19
+00:00:56,840 --> 00:00:59,700
+it in the arguments bundle to initialize the detail fragment.
+
+20
+00:00:59,700 --> 00:01:03,500
+And we dynamically add the detail fragment to this container. In
+
+21
+00:01:03,500 --> 00:01:06,730
+the detail fragment, we modify the on create loader method
+
+22
+00:01:06,730 --> 00:01:09,710
+to read from the arguments that were passed in. We get
+
+23
+00:01:09,710 --> 00:01:12,270
+the date string out and use it with the location
+
+24
+00:01:12,270 --> 00:01:15,760
+string to build up the Uri to query the content provider.
+
+25
+00:01:15,760 --> 00:01:18,790
+We also remove any reliance on the incoming intent.
+
+26
+00:01:18,790 --> 00:01:21,480
+We switch it to use the arguments bundle, instead. For
+
+27
+00:01:21,480 --> 00:01:25,220
+example, in the onActivityCreated method, we only initialize the loader
+
+28
+00:01:25,220 --> 00:01:28,620
+if the arguments is not null. In the onResume method,
+
+29
+00:01:28,620 --> 00:01:31,060
+we also modify the condition so that it checks that
+
+30
+00:01:31,060 --> 00:01:34,520
+the arguments bundle is not null. When you try it
+
+31
+00:01:34,520 --> 00:01:36,990
+out on the tablet, there is one bug related to
+
+32
+00:01:36,990 --> 00:01:40,810
+navigation that we should fix. Say we select tomorrows date.
+
+33
+00:01:40,810 --> 00:01:43,210
+If you navigate to the settings activity and then hit
+
+34
+00:01:43,210 --> 00:01:46,980
+the up button, the detail fragment is blank. That's because
+
+35
+00:01:46,980 --> 00:01:49,840
+a brand new instance of main activity got launched and
+
+36
+00:01:49,840 --> 00:01:52,880
+for a brand new instance, nothing is selected yet. To fix
+
+37
+00:01:52,880 --> 00:01:56,170
+this, when the settings activity up button is pressed, we
+
+38
+00:01:56,170 --> 00:01:58,690
+want to navigate to the previous running instance of the
+
+39
+00:01:58,690 --> 00:02:02,370
+main activity, where the tomorrow item is selected. And not
+
+40
+00:02:02,370 --> 00:02:06,600
+create a new instance of main activity. In the settings activity,
+
+41
+00:02:06,600 --> 00:02:09,620
+overwrite this method. Which the system will call in
+
+42
+00:02:09,620 --> 00:02:12,430
+order to get the parent activity intent for the up
+
+43
+00:02:12,430 --> 00:02:15,310
+button behaviour. Get the parent activity intent from the
+
+44
+00:02:15,310 --> 00:02:18,160
+super class, this should create a new intent to main
+
+45
+00:02:18,160 --> 00:02:23,500
+activity. Then add the intent flag, called FLAG_ACTIVITY_CLEAR_TOP. This
+
+46
+00:02:23,500 --> 00:02:26,080
+flag indicates that we should check if the main activity
+
+47
+00:02:26,080 --> 00:02:28,400
+is already running in our task. And to use
+
+48
+00:02:28,400 --> 00:02:31,890
+that one, instead of creating a new main activity instance.
+
+49
+00:02:31,890 --> 00:02:34,730
+Also, this method didn't exist prior to jelly bean, so we need
+
+50
+00:02:34,730 --> 00:02:39,120
+to add this at target API annotation. If you check the documentation
+
+51
+00:02:39,120 --> 00:02:44,240
+for the activity class, the getParentActivityIntent method was only added in API
+
+52
+00:02:44,240 --> 00:02:48,110
+level 16. And you can check that version 16 maps to jelly bean.
+

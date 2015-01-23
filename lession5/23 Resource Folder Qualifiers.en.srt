@@ -1,0 +1,200 @@
+1
+00:00:00,310 --> 00:00:01,870
+So, we know we need to create layouts
+
+2
+00:00:01,870 --> 00:00:04,770
+and assets optimized for different screen pixel densities
+
+3
+00:00:04,770 --> 00:00:07,320
+and sizes. So, now's a great time to
+
+4
+00:00:07,320 --> 00:00:12,130
+introduce you to the Android resource framework. All externalized
+
+5
+00:00:12,130 --> 00:00:15,660
+Android resources, everything from strings to layouts to
+
+6
+00:00:15,660 --> 00:00:19,200
+drawables and animations are all stored within your project's
+
+7
+00:00:19,200 --> 00:00:22,490
+res folder. You've already been putting your strings
+
+8
+00:00:22,490 --> 00:00:25,500
+in the strings.xml file stored in the values folder.
+
+9
+00:00:25,500 --> 00:00:27,550
+And you've been putting your layouts into the layout
+
+10
+00:00:27,550 --> 00:00:31,320
+folder. And you know to reference your resources using
+
+11
+00:00:31,320 --> 00:00:34,450
+at notation within both your xml or within the
+
+12
+00:00:34,450 --> 00:00:36,617
+code. And then at runtime, Android will insert the
+
+13
+00:00:36,617 --> 00:00:40,520
+appropriate resource for you. So far, so good. And
+
+14
+00:00:40,520 --> 00:00:43,475
+here's where things get a little more interesting. Android
+
+15
+00:00:43,475 --> 00:00:46,740
+allows you to create alternative versions of every resource
+
+16
+00:00:46,740 --> 00:00:51,040
+by placing them into folders with different qualifiers. We separate
+
+17
+00:00:51,040 --> 00:00:54,130
+each of those using a hyphen. And we can
+
+18
+00:00:54,130 --> 00:00:57,320
+add those qualifiers based on anything from language and
+
+19
+00:00:57,320 --> 00:01:00,640
+or dialect to whether the device is docked, the
+
+20
+00:01:00,640 --> 00:01:02,930
+type of touch screen, the pixel density of the
+
+21
+00:01:02,930 --> 00:01:06,820
+display, the orientation of the screen, and most importantly
+
+22
+00:01:06,820 --> 00:01:09,830
+for a responsive design in particular, the smallest available
+
+23
+00:01:09,830 --> 00:01:12,055
+screen width which you can support with that layout.
+
+24
+00:01:12,055 --> 00:01:16,270
+At runtime, Android will check the count device configuration,
+
+25
+00:01:16,270 --> 00:01:20,030
+it's language, it's screen size, pixel density, everything,
+
+26
+00:01:20,030 --> 00:01:22,790
+and then load the right layout strings and drawables
+
+27
+00:01:22,790 --> 00:01:26,410
+accordingly. You can even chain these qualifiers together. For
+
+28
+00:01:26,410 --> 00:01:29,460
+example, to create a different layout for German language
+
+29
+00:01:29,460 --> 00:01:31,660
+users to account for all of those really long
+
+30
+00:01:31,660 --> 00:01:34,960
+German words, or more typically for a combination of
+
+31
+00:01:34,960 --> 00:01:38,660
+screen size and device configuration. Now, keep in mind
+
+32
+00:01:38,660 --> 00:01:41,610
+that many of these values can change at runtime.
+
+33
+00:01:41,610 --> 00:01:44,630
+The most common change being that of orientation. And
+
+34
+00:01:44,630 --> 00:01:47,190
+it's for this reason that Android activities are destroyed
+
+35
+00:01:47,190 --> 00:01:51,360
+and recreated whenever the device configuration changes. And that's
+
+36
+00:01:51,360 --> 00:01:53,940
+because the layout and all of the resources within it
+
+37
+00:01:53,940 --> 00:01:56,880
+could be completely different based on something as simple
+
+38
+00:01:56,880 --> 00:02:00,640
+as screen orientation change. Now it's good practice, as
+
+39
+00:02:00,640 --> 00:02:03,660
+well, to localize your apps and provide translated strings
+
+40
+00:02:03,660 --> 00:02:06,720
+for all of your users using this mechanism. And that's
+
+41
+00:02:06,720 --> 00:02:08,530
+a task made a lot easier. Thanks to Google
+
+42
+00:02:08,530 --> 00:02:12,270
+Play Publisher site that can offer you this service. It's
+
+43
+00:02:12,270 --> 00:02:15,230
+also a really good idea to provide different drawables
+
+44
+00:02:15,230 --> 00:02:17,800
+at the appropriate pixel density, so you can get a
+
+45
+00:02:17,800 --> 00:02:21,440
+nice crisp image on every device. And when it
+
+46
+00:02:21,440 --> 00:02:24,480
+comes to providing alternative layouts, Android has gone through a
+
+47
+00:02:24,480 --> 00:02:28,130
+few alternative models. Starting in the early days, with this
+
+48
+00:02:28,130 --> 00:02:32,110
+screen buckets idea of small, normal large, and extra large.
+
+49
+00:02:32,110 --> 00:02:36,130
+But, since Android 3.2, the new smallest width qualifier has
+
+50
+00:02:36,130 --> 00:02:39,830
+given us much more fine grain control over our layouts.
+

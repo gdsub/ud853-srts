@@ -1,0 +1,16 @@
+1
+00:00:00,360 --> 00:00:04,650
+Once the Detail Activity is launched, it shows Hello World. Instead,
+
+2
+00:00:04,650 --> 00:00:08,670
+we want to read the forecast data from the Intent, and display
+
+3
+00:00:08,670 --> 00:00:12,171
+it. Make the appropriate changes in the app, so it matches
+
+4
+00:00:12,171 --> 00:00:16,500
+the mocks. Then, verify the behavior by compiling and running the app.
+

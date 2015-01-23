@@ -1,0 +1,80 @@
+1
+00:00:00,150 --> 00:00:04,230
+Let's talk about this. Honestly, it really depends on
+
+2
+00:00:04,230 --> 00:00:07,210
+the size of your data. For small amounts of
+
+3
+00:00:07,210 --> 00:00:11,310
+binary data, very, very small amounts of binary data,
+
+4
+00:00:11,310 --> 00:00:13,070
+you could actually put the raw data in the
+
+5
+00:00:13,070 --> 00:00:15,770
+database. There are blob types and those are supported
+
+6
+00:00:15,770 --> 00:00:18,900
+and work pretty well. However, as you start putting
+
+7
+00:00:18,900 --> 00:00:22,230
+larger data into the database, it gets pretty inefficient.
+
+8
+00:00:22,230 --> 00:00:23,860
+And you end up writing a lot more code.
+
+9
+00:00:25,320 --> 00:00:27,430
+Well, as far as storing the files in a public folder
+
+10
+00:00:27,430 --> 00:00:30,420
+on the device is concerned, well, that might work if you
+
+11
+00:00:30,420 --> 00:00:33,640
+actually wanted to share those files. But, typically, you don't want to
+
+12
+00:00:33,640 --> 00:00:36,360
+share those files with other applications. So, storing them in a
+
+13
+00:00:36,360 --> 00:00:40,580
+public folder on the device isn't a very good idea. But
+
+14
+00:00:40,580 --> 00:00:43,580
+the third option is pretty good. Storing the files in a
+
+15
+00:00:43,580 --> 00:00:47,950
+private folder and then referencing the location in the database. Now,
+
+16
+00:00:47,950 --> 00:00:50,720
+admittedly, you might not even need to put them into the database
+
+17
+00:00:50,720 --> 00:00:53,510
+at all. But it's often nice to do this if
+
+18
+00:00:53,510 --> 00:00:55,520
+you need to do any kind of queries on them. You
+
+19
+00:00:55,520 --> 00:00:58,140
+can store metadata in the database and store files in
+
+20
+00:00:58,140 --> 00:01:01,850
+a private folder. This is what Android does in the gallery.
+

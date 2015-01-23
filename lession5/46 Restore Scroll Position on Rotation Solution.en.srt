@@ -1,0 +1,36 @@
+1
+00:00:00,290 --> 00:00:03,790
+In the forecast fragment, we create a position variable. Whenever an item
+
+2
+00:00:03,790 --> 00:00:07,234
+is clicked, we update the position. Then, in the on save instance
+
+3
+00:00:07,234 --> 00:00:10,230
+state method, we store the position in the bundle. If the app
+
+4
+00:00:10,230 --> 00:00:13,620
+gets killed, then we can restore the position from the save state bundle.
+
+5
+00:00:13,620 --> 00:00:16,598
+This is on the onCreate view method. The reason we store in
+
+6
+00:00:16,598 --> 00:00:19,573
+a global variable is because the list view probably hasn't been populated
+
+7
+00:00:19,573 --> 00:00:22,570
+yet. We wait for the onload finish callback to happen when the
+
+8
+00:00:22,570 --> 00:00:25,510
+cursor is swapped. Then, we can tell the list view to set selection
+
+9
+00:00:25,510 --> 00:00:28,020
+on that position, and that position will be scrolled into view.
+

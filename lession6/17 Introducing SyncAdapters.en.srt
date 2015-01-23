@@ -1,0 +1,136 @@
+1
+00:00:00,350 --> 00:00:02,410
+There's a lot to learn with making background
+
+2
+00:00:02,410 --> 00:00:05,610
+transactions efficient. But the good news is that Android
+
+3
+00:00:05,610 --> 00:00:08,070
+gives you the Sync Manager framework that implements
+
+4
+00:00:08,070 --> 00:00:11,190
+many of these best practices. You utilize that framework
+
+5
+00:00:11,190 --> 00:00:14,480
+by implementing a sync adapter. The framework, originally
+
+6
+00:00:14,480 --> 00:00:18,235
+introduced in Android 2.0 Eclair or Android API level
+
+7
+00:00:18,235 --> 00:00:21,880
+5, allows Android applications to leverage the same
+
+8
+00:00:21,880 --> 00:00:25,610
+basic framework that Google apps use for efficient synchronization.
+
+9
+00:00:25,610 --> 00:00:27,990
+Ultimately, it's a centralized place to put all
+
+10
+00:00:27,990 --> 00:00:31,060
+of the device data transfers in one place.
+
+11
+00:00:31,060 --> 00:00:33,310
+So that they all be scheduled intelligently by
+
+12
+00:00:33,310 --> 00:00:38,460
+the OS. In other words, that's one big cookie.
+
+13
+00:00:38,460 --> 00:00:42,250
+Android Sync Manager handles synchronization requests using sync
+
+14
+00:00:42,250 --> 00:00:45,100
+adapters. The Sync Manager batches and time shifts
+
+15
+00:00:45,100 --> 00:00:47,480
+these requests when possible to allow your data
+
+16
+00:00:47,480 --> 00:00:50,770
+transfers to be scheduled with transfers from other apps,
+
+17
+00:00:50,770 --> 00:00:52,930
+all working towards the goal of reducing the
+
+18
+00:00:52,930 --> 00:00:55,040
+number of times the system has to switch on
+
+19
+00:00:55,040 --> 00:00:58,100
+the radio. If your device has less memory,
+
+20
+00:00:58,100 --> 00:01:01,890
+it will schedule fewer simultaneous synchs. The Synch Manager
+
+21
+00:01:01,890 --> 00:01:03,950
+also takes care of things like checking for
+
+22
+00:01:03,950 --> 00:01:07,980
+network connectivity before initiating transfers and retrying downloads when
+
+23
+00:01:07,980 --> 00:01:12,520
+connectivity is dropped. The synchronization framework works with content
+
+24
+00:01:12,520 --> 00:01:16,020
+providers for two way synchronization and leverages the Android
+
+25
+00:01:16,020 --> 00:01:18,500
+account manager to provide synchronization services that are
+
+26
+00:01:18,500 --> 00:01:21,290
+tied to accounts. Our application will do neither
+
+27
+00:01:21,290 --> 00:01:23,110
+of these things, but we'll still have to
+
+28
+00:01:23,110 --> 00:01:25,710
+deal with some of the complexity of these features.
+
+29
+00:01:25,710 --> 00:01:29,170
+This can make SyncAdapter seem daunting at first.
+
+30
+00:01:29,170 --> 00:01:32,680
+What does the SyncManager do to help you fetch
+
+31
+00:01:32,680 --> 00:01:36,480
+data from the network? Does it schedule your
+
+32
+00:01:36,480 --> 00:01:42,410
+network jobs with other apps, implement a synchronization protocol,
+
+33
+00:01:42,410 --> 00:01:46,550
+store account information, or has logic to retry
+
+34
+00:01:46,550 --> 00:01:49,650
+your request? Select all of these that match.
+

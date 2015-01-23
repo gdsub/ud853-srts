@@ -1,0 +1,8 @@
+1
+00:00:00,520 --> 00:00:04,900
+And now we have this beautiful list of weather data in our app. Great job.
+
+2
+00:00:04,900 --> 00:00:05,400
+High five. [SOUND]
+

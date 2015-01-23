@@ -1,0 +1,24 @@
+1
+00:00:00,148 --> 00:00:05,400
+Thanks Raydo. But let's start thinking about Sunshine, meaning our app. I'm not
+
+2
+00:00:05,400 --> 00:00:09,430
+convinced I'm ever going to tire of the obvious puns our app name allows.
+
+3
+00:00:09,430 --> 00:00:13,050
+Remember, as we progress through this course and build this app together, you
+
+4
+00:00:13,050 --> 00:00:16,600
+should be thinking about the app you want to create. There are too many weather
+
+5
+00:00:16,600 --> 00:00:20,310
+apps already after all. By the end of the course, you could be ready to tackle
+
+6
+00:00:20,310 --> 00:00:24,430
+the final project. Using all your new Android know how to build your own app.
+

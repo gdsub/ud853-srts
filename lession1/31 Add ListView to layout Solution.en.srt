@@ -1,0 +1,48 @@
+1
+00:00:00,280 --> 00:00:03,960
+You should have changed the TextView into a ListView element.
+
+2
+00:00:03,960 --> 00:00:06,860
+Then you can remove this text attribute because you don't need it anymore.
+
+3
+00:00:07,920 --> 00:00:11,900
+Now from the UX mocks, you'll remember that the list takes up the whole screen,
+
+4
+00:00:11,900 --> 00:00:16,160
+so we want to set the width and height to be match_parent. That will make
+
+5
+00:00:16,160 --> 00:00:20,460
+the ListView match the dimensions of its parent, which is this RelativeLayout.
+
+6
+00:00:20,460 --> 00:00:23,895
+And to find out the parent of this RelativeLayout, it's actually in this
+
+7
+00:00:23,895 --> 00:00:29,530
+activity_main XML file because the fragment is contained within the activity.
+
+8
+00:00:29,530 --> 00:00:33,860
+Within this file, we see that this view is also match_parent for height and
+
+9
+00:00:33,860 --> 00:00:37,380
+width. So now we can confirm that the ListView actually will take up
+
+10
+00:00:37,380 --> 00:00:42,116
+the full screen. Going back to the fragment_main file, we can add the id,
+
+11
+00:00:42,116 --> 00:00:47,190
+listview_forecast, onto the ListView. And then, since this layout only contains
+
+12
+00:00:47,190 --> 00:00:51,255
+one child, we can simplify the layout by changing this into a FrameLayout.
+

@@ -1,0 +1,24 @@
+1
+00:00:00,160 --> 00:00:03,460
+First, we create our settings activity, and this is the code that we got
+
+2
+00:00:03,460 --> 00:00:07,870
+from the gist. Then, in the Android Manifest, we declare the settings activity.
+
+3
+00:00:07,870 --> 00:00:11,520
+We give it an activity named Settings, which is declared in the Strings file.
+
+4
+00:00:13,080 --> 00:00:17,080
+We also declare the main activity as the parent activity. That way,
+
+5
+00:00:17,080 --> 00:00:19,340
+when you hit the up button in the settings activity,
+
+6
+00:00:19,340 --> 00:00:21,670
+it will return back to the main activity.
+

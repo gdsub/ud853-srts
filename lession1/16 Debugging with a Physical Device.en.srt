@@ -1,0 +1,52 @@
+1
+00:00:00,210 --> 00:00:04,640
+Thanks Veto. And now it's time to install the Sunshine app on our phones.
+
+2
+00:00:04,640 --> 00:00:10,230
+So to get started, let's grab a USB cable. We'll plug in our device and
+
+3
+00:00:10,230 --> 00:00:14,680
+then we'll need to enable USB debugging. This can be found in Developer options
+
+4
+00:00:14,680 --> 00:00:20,090
+in the Settings app. But note that on Android devices 4.2 and above,
+
+5
+00:00:20,090 --> 00:00:27,270
+the option is actually hidden by default. To find the secret menu,
+
+6
+00:00:27,270 --> 00:00:31,650
+go to the Settings app. Scroll down to About phone.
+
+7
+00:00:32,850 --> 00:00:37,066
+Then go down to Build number and
+
+8
+00:00:37,066 --> 00:00:41,627
+tap on that seven times [SOUND]. Then,
+
+9
+00:00:41,627 --> 00:00:45,350
+when you go back to Settings, you'll see the Developer options menu appear.
+
+10
+00:00:46,520 --> 00:00:50,260
+Also, set up your computer to detect your device. Check the instructor notes for
+
+11
+00:00:50,260 --> 00:00:54,680
+more details. We're going to continue using a device because it's faster and
+
+12
+00:00:54,680 --> 00:00:57,270
+smoother for development. But if you don't have one,
+
+13
+00:00:57,270 --> 00:01:00,900
+that's okay. You can continue using the emulator that we created previously.
+

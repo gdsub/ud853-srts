@@ -1,0 +1,112 @@
+1
+00:00:01,120 --> 00:00:05,340
+I'm Katherine Kwan, and I'm a developer advocate at Google. I started off by
+
+2
+00:00:05,340 --> 00:00:09,000
+working as an engineer on the Android apps team. I worked there for
+
+3
+00:00:09,000 --> 00:00:13,740
+three years on products like Google Play and Google Keep, the note taking app.
+
+4
+00:00:15,570 --> 00:00:19,244
+I'm continually blown away by what you can build on this platform, and
+
+5
+00:00:19,244 --> 00:00:24,590
+I'm particularly inspired by those apps that can truly improve people's lives.
+
+6
+00:00:24,590 --> 00:00:28,470
+When I meet people, they often tell me about their great app ideas. But
+
+7
+00:00:28,470 --> 00:00:31,420
+then they feel like they don't have the technical skills to actually build it.
+
+8
+00:00:31,420 --> 00:00:35,150
+And that's why I shifted over to developer relations so
+
+9
+00:00:35,150 --> 00:00:40,508
+I can help people like you really build something great. Throughout this course,
+
+10
+00:00:40,508 --> 00:00:42,868
+I'll be helping you implement your very first app.
+
+11
+00:00:42,868 --> 00:00:48,544
+[BLANK_AUDIO]
+
+12
+00:00:48,544 --> 00:00:52,170
+>> My name is Dan Gauthan. I've been a developer advocate at Google for
+
+13
+00:00:52,170 --> 00:00:56,580
+four years and I've worn a lot of hats here. My goal is to keep us on track to
+
+14
+00:00:56,580 --> 00:01:00,730
+make Sunshine, something that had some resemblance to a production quality app.
+
+15
+00:01:00,730 --> 00:01:04,310
+I'll introduce Android design patterns and principles. Many of which are often
+
+16
+00:01:04,310 --> 00:01:08,181
+missed by new Android developers. You'll learn to lean on the framework,
+
+17
+00:01:08,181 --> 00:01:11,565
+focusing on what makes your app unique instead of reinventing the wheel.
+
+18
+00:01:11,565 --> 00:01:17,092
+[BLANK_AUDIO]
+
+19
+00:01:17,092 --> 00:01:22,820
+>> I'm Rado Mya, and I've been a developer advocate at Google for five years.
+
+20
+00:01:22,820 --> 00:01:27,700
+I started working on Androids so long ago that back then there were no devices.
+
+21
+00:01:27,700 --> 00:01:30,940
+All we had to work with were an emulator, a beater SDK, and
+
+22
+00:01:30,940 --> 00:01:35,790
+an almost fanatical devotion to the platform. I'll be joining you from here,
+
+23
+00:01:35,790 --> 00:01:39,500
+my underground Android developer bunker, and my goal isn't to get you
+
+24
+00:01:39,500 --> 00:01:42,993
+up an running as quickly as possible. It's to teach you the context behind
+
+25
+00:01:42,993 --> 00:01:47,025
+the choices we'll make. And the best practices you need, to really understand
+
+26
+00:01:47,025 --> 00:01:52,000
+how to create great experiences specifically tailored to mobile devices. By
+
+27
+00:01:52,000 --> 00:01:54,630
+the time you finished this course you'll know more than just how to create yet
+
+28
+00:01:54,630 --> 00:01:58,900
+another app. You'll know how to build great apps that focus on the user.
+

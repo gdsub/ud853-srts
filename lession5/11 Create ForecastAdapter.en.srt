@@ -1,0 +1,136 @@
+1
+00:00:00,270 --> 00:00:02,310
+Open up the Sunshine app. And we'll create a
+
+2
+00:00:02,310 --> 00:00:06,400
+new file for our ForecastAdapter, which extends cursor adapter. We
+
+3
+00:00:06,400 --> 00:00:08,690
+provided you with a gist of code to get started
+
+4
+00:00:08,690 --> 00:00:12,450
+below. The code overrides the newView method, where it inflates
+
+5
+00:00:12,450 --> 00:00:15,690
+the list item forecast layout XML. It also provides
+
+6
+00:00:15,690 --> 00:00:18,380
+an implementation for bindView, where it reads from the cursor,
+
+7
+00:00:18,380 --> 00:00:21,770
+and updates the layout. For example, from the cursor, we
+
+8
+00:00:21,770 --> 00:00:25,470
+read the weather forecast description. Then we go and find
+
+9
+00:00:25,470 --> 00:00:28,430
+the text view for that within the view hierarchy of the
+
+10
+00:00:28,430 --> 00:00:30,975
+list item layout. We look for the text view with the id
+
+11
+00:00:30,975 --> 00:00:33,690
+list_item_forecast_textview. Then we update the
+
+12
+00:00:33,690 --> 00:00:35,990
+textview with the right description. We
+
+13
+00:00:35,990 --> 00:00:38,630
+also left some to dos in the code. So, go ahead and
+
+14
+00:00:38,630 --> 00:00:41,420
+copy over the file and then finish the to dos. In
+
+15
+00:00:41,420 --> 00:00:44,928
+the current implementation of the app, all dates are displayed the same.
+
+16
+00:00:44,928 --> 00:00:47,340
+In the wireframes though, you'll notice that we have a more friendly
+
+17
+00:00:47,340 --> 00:00:50,670
+date format. In the gist we also included some helper methods and
+
+18
+00:00:50,670 --> 00:00:54,090
+strings for date formatting. That's because in our current
+
+19
+00:00:54,090 --> 00:00:56,830
+implementation, all the dates are displayed in the same way.
+
+20
+00:00:56,830 --> 00:01:00,036
+In the wireframes though, we have a more friendly date
+
+21
+00:01:00,036 --> 00:01:05,620
+format. Such as today, tomorrow, Wednesday, Thursday, etc. Here's that
+
+22
+00:01:05,620 --> 00:01:07,680
+logic for what the helper method does to get the
+
+23
+00:01:07,680 --> 00:01:11,300
+friendly date string. If it's this week it says today,
+
+24
+00:01:11,300 --> 00:01:13,770
+or tomorrow, or the day of the week. If it's
+
+25
+00:01:13,770 --> 00:01:15,900
+more than a week out then we use the format
+
+26
+00:01:15,900 --> 00:01:19,220
+Monday, June 8th and so on. Once you finish the
+
+27
+00:01:19,220 --> 00:01:22,280
+to dos and you added the helper methods and strings,
+
+28
+00:01:22,280 --> 00:01:25,110
+then go ahead and replace the simple cursor adapter with
+
+29
+00:01:25,110 --> 00:01:28,660
+a forecast adapter. After you compile and run the app it'll
+
+30
+00:01:28,660 --> 00:01:31,250
+look the same as before with only one list item
+
+31
+00:01:31,250 --> 00:01:34,870
+view type shown, except now it's using a ForecastAdapter and
+
+32
+00:01:34,870 --> 00:01:37,220
+now it has better date descriptions. I know that I
+
+33
+00:01:37,220 --> 00:01:40,860
+promised you that cursor adapters could handle multiple item view types,
+
+34
+00:01:40,860 --> 00:01:42,170
+so we'll do that in the next step.
+

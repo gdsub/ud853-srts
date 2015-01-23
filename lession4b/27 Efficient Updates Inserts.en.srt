@@ -1,0 +1,80 @@
+1
+00:00:00,240 --> 00:00:02,450
+Well we're done with the core of our content provider,
+
+2
+00:00:02,450 --> 00:00:04,990
+but there's still one more optional method that'll make things
+
+3
+00:00:04,990 --> 00:00:09,250
+much more efficient. We'll start by hitting Ctrl+O to look
+
+4
+00:00:09,250 --> 00:00:11,940
+at the functions we can override. It turns out there's
+
+5
+00:00:11,940 --> 00:00:15,780
+a function called bulkInsert. Anyone out there who has done
+
+6
+00:00:15,780 --> 00:00:18,210
+database work knows that putting a bunch of inserts into
+
+7
+00:00:18,210 --> 00:00:21,610
+a single transaction is usually much faster than inserting them
+
+8
+00:00:21,610 --> 00:00:25,860
+individually. Bulk insert allows us to do just that. The default
+
+9
+00:00:25,860 --> 00:00:28,500
+implementation just calls insert a bunch of times, but
+
+10
+00:00:28,500 --> 00:00:30,610
+we can wrap it in a transaction if we implement
+
+11
+00:00:30,610 --> 00:00:33,250
+it ourselves. We're only going to add support for
+
+12
+00:00:33,250 --> 00:00:36,520
+weather forecast transactions here, since they're the only we insert
+
+13
+00:00:36,520 --> 00:00:41,150
+in bulk. We start by calling db.beginTransaction. For each
+
+14
+00:00:41,150 --> 00:00:44,340
+ContentValues passed in, we insert and update the number of
+
+15
+00:00:44,340 --> 00:00:47,890
+records inserted. When we're done, we set the transaction
+
+16
+00:00:47,890 --> 00:00:50,840
+to be successful. Otherwise our records will not be committed,
+
+17
+00:00:50,840 --> 00:00:53,020
+and then rely on the finally statement to end the
+
+18
+00:00:53,020 --> 00:00:56,500
+transaction. In the default case, we just call the super
+
+19
+00:00:56,500 --> 00:01:00,640
+class. Remember, it does the insert, just not optimally. And
+
+20
+00:01:00,640 --> 00:01:03,135
+that's it, that's all we have to do to implement bulkInsert.
+

@@ -1,0 +1,44 @@
+1
+00:00:00,450 --> 00:00:03,340
+Adding support for the location insert, looks almost
+
+2
+00:00:03,340 --> 00:00:06,520
+identical to adding support for weather. We just have
+
+3
+00:00:06,520 --> 00:00:09,030
+to select the right table name, and return
+
+4
+00:00:09,030 --> 00:00:12,460
+the right location URI. But there's one more thing
+
+5
+00:00:12,460 --> 00:00:14,140
+to do. All we have to do is
+
+6
+00:00:14,140 --> 00:00:17,570
+call getContext().getContentResolver().notifyChange on the
+
+7
+00:00:17,570 --> 00:00:19,120
+URI that was actually passed
+
+8
+00:00:19,120 --> 00:00:22,370
+into our function. To notify any observers that need
+
+9
+00:00:22,370 --> 00:00:25,350
+to know that UI has changed. And that's it.
+
+10
+00:00:25,350 --> 00:00:28,510
+We've now finished insert. However, of course,
+
+11
+00:00:28,510 --> 00:00:30,510
+we're never done without also adding a test.
+

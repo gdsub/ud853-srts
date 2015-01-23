@@ -1,0 +1,92 @@
+1
+00:00:00,008 --> 00:00:06,010
+Alright, you're done. Let's start by uncommenting out that text.
+
+2
+00:00:06,010 --> 00:00:07,860
+As you can see, you need that four cast string
+
+3
+00:00:07,860 --> 00:00:10,550
+to pass on to our detail activity. So what do
+
+4
+00:00:10,550 --> 00:00:13,920
+we use to get that four cast string? Well we're lucky
+
+5
+00:00:13,920 --> 00:00:16,520
+here, because we actually get the adapter view cast in.
+
+6
+00:00:17,580 --> 00:00:19,100
+All we have to do is cast it at simple
+
+7
+00:00:19,100 --> 00:00:22,190
+cursor adaptor and then we can get the cursor. We
+
+8
+00:00:22,190 --> 00:00:25,650
+can move it to our position. Then, we can use string.format
+
+9
+00:00:25,650 --> 00:00:27,870
+to get a formatted string based on the values
+
+10
+00:00:27,870 --> 00:00:30,460
+of our columns. Note, once again the nice use
+
+11
+00:00:30,460 --> 00:00:34,800
+of our column intendacies. One ending curly brace and
+
+12
+00:00:34,800 --> 00:00:38,640
+let's move that intend stuff into there. And that's it.
+
+13
+00:00:39,990 --> 00:00:41,860
+Now we'll be able to click on it again
+
+14
+00:00:41,860 --> 00:00:44,490
+and it'll actually go to our normal detail view.
+
+15
+00:00:44,490 --> 00:00:47,990
+Let's try it out. So here we are, there's
+
+16
+00:00:47,990 --> 00:00:51,542
+our list view and we go right into details. Pretty
+
+17
+00:00:51,542 --> 00:00:56,180
+cool. However, if we change our temperature units to imperial here
+
+18
+00:00:57,280 --> 00:01:00,560
+doesn't actually update. It would be nice if that, it was
+
+19
+00:01:00,560 --> 00:01:03,480
+based on the same kind of cursor model we have here.
+
+20
+00:01:03,480 --> 00:01:04,837
+Something that was observing with the
+
+21
+00:01:04,837 --> 00:01:06,501
+content observer and would actually update.
+
+22
+00:01:06,501 --> 00:01:09,567
+[BLANK_AUDIO]
+
+23
+00:01:09,567 --> 00:01:10,620
+When we changed our setting.
+

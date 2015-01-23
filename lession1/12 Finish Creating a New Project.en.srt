@@ -1,0 +1,124 @@
+1
+00:00:00,410 --> 00:00:04,410
+Thanks Rado, for telling us about the importance of proper dessert selection.
+
+2
+00:00:04,410 --> 00:00:06,950
+Let's choose our dessert now. At the current time,
+
+3
+00:00:06,950 --> 00:00:12,190
+choosing Gingerbread covers 99% of the devices active on the Google Play store.
+
+4
+00:00:12,190 --> 00:00:15,920
+It's also the cutout for using Google Play services, for things like maps and
+
+5
+00:00:15,920 --> 00:00:19,830
+location, and the Android support library. The support library package
+
+6
+00:00:19,830 --> 00:00:24,230
+offers an implementation of UI features that were added in later releases. But
+
+7
+00:00:24,230 --> 00:00:27,230
+now can be used on older versions of the platform, like Gingerbread.
+
+8
+00:00:27,230 --> 00:00:31,728
+We pick the latest version of Gingerbread at API level 10, because it contains
+
+9
+00:00:31,728 --> 00:00:36,540
+bug fixes that API level 9 doesn't have. Then we go ahead and click Next. We're
+
+10
+00:00:36,540 --> 00:00:40,020
+presented with a list of templates that we can choose from in order to create
+
+11
+00:00:40,020 --> 00:00:44,440
+our new app. We're going to pick the Blank Activity with Fragment Template.
+
+12
+00:00:45,470 --> 00:00:50,630
+For background context, an activity serves as the presentation layer for our UI.
+
+13
+00:00:50,630 --> 00:00:54,620
+And the fragment within it represents a behavior or portion of the screen.
+
+14
+00:00:54,620 --> 00:00:59,221
+Go ahead and click Next. We call our activity main activity. And the layout
+
+15
+00:00:59,221 --> 00:01:04,519
+comes from the activity_main XML file. In similar fashion, the Fragments layout
+
+16
+00:01:04,519 --> 00:01:09,060
+comes from the fragment_main XML file. Then we go ahead and hit Finish.
+
+17
+00:01:09,060 --> 00:01:12,680
+You should have your newly created Sunshine app with the files on the left here.
+
+18
+00:01:12,680 --> 00:01:16,170
+Make sure you wait for the Gradel Build to finish. If you still see errors,
+
+19
+00:01:16,170 --> 00:01:19,450
+you can check the Guide and Instructor notes below on how to troubleshoot.
+
+20
+00:01:19,450 --> 00:01:23,620
+As a tip, you can check your Min and Target SDK versions in the build out Gradle
+
+21
+00:01:23,620 --> 00:01:28,030
+file located under the app Source folder. We want the compile SDK version and
+
+22
+00:01:28,030 --> 00:01:32,130
+the target SDK version to point to the latest table version of the platform.
+
+23
+00:01:32,130 --> 00:01:36,040
+In this case, it's 19 and not L. Once you have no errors,
+
+24
+00:01:36,040 --> 00:01:38,960
+we can add a custom app icon that'll be more fitting for
+
+25
+00:01:38,960 --> 00:01:42,610
+our weather app. Right-click on the app folder and go to New Image Asset.
+
+26
+00:01:42,610 --> 00:01:45,640
+Download the icon that we provide in the link below, then go ahead and
+
+27
+00:01:45,640 --> 00:01:50,592
+find that icon. And here you can see a preview of our temporary app icon.
+
+28
+00:01:50,592 --> 00:01:53,240
+We're going to get a better one in less than five. Then go ahead and
+
+29
+00:01:53,240 --> 00:01:57,450
+click Next and Finish. And the new icon shows up in the Drawable folders.
+
+30
+00:01:57,450 --> 00:02:00,700
+Go ahead and try it yourself. Make sure you're using the same settings as we
+
+31
+00:02:00,700 --> 00:02:03,520
+have by checking the link below. Click here when you're done.
+

@@ -1,0 +1,28 @@
+1
+00:00:00,090 --> 00:00:01,730
+Great. So, let's apply what we learned about
+
+2
+00:00:01,730 --> 00:00:05,140
+fragments and resource folder qualifiers to update our Sunshine
+
+3
+00:00:05,140 --> 00:00:07,800
+app. Figure out which layout folders should contain an
+
+4
+00:00:07,800 --> 00:00:10,410
+activity main layout file, so that we can accomplish
+
+5
+00:00:10,410 --> 00:00:15,220
+a one pane UI on phones, and a 2 pane UI on tablets. You can select from
+
+6
+00:00:15,220 --> 00:00:17,660
+these options for this quiz. You can use the
+
+7
+00:00:17,660 --> 00:00:19,750
+link provided below to help you answer the question.
+

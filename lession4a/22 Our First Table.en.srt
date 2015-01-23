@@ -1,0 +1,48 @@
+1
+00:00:00,350 --> 00:00:04,800
+Our database will contain weather forecast entries. Out data model will use
+
+2
+00:00:04,800 --> 00:00:09,520
+two tables. One table will be used to contain information about the location,
+
+3
+00:00:09,520 --> 00:00:13,480
+while the other will contain the forecast data keyed the locations.
+
+4
+00:00:13,480 --> 00:00:17,730
+These will ultimately be tied back to our view through the contract, and
+
+5
+00:00:17,730 --> 00:00:21,890
+the content provider. We can use an inner join, pull the complete data for
+
+6
+00:00:21,890 --> 00:00:27,630
+each forecast today. Including all information about the location. This,
+
+7
+00:00:27,630 --> 00:00:33,230
+is a big contract. Note that we store the location id, which will be a foreign
+
+8
+00:00:33,230 --> 00:00:39,140
+key from the location table in COLUMN_LOC_KEY. Note that the units aren't stored
+
+9
+00:00:39,140 --> 00:00:43,440
+in the database. We expect all weather entries to be stored in metric units, and
+
+10
+00:00:43,440 --> 00:00:48,330
+converted when needed by the UI, into imperial units. Since the column names
+
+11
+00:00:48,330 --> 00:00:52,260
+don't actually contain data types, it's useful to annotate that in
+
+12
+00:00:52,260 --> 00:00:56,860
+the variable names and/or the comments to make our contract more explicit.
+

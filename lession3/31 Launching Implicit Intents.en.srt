@@ -1,0 +1,60 @@
+1
+00:00:00,560 --> 00:00:04,140
+Hey Dan, we finished the settings. Do you want to check it out?
+
+2
+00:00:04,140 --> 00:00:05,120
+>> Oh, great.
+
+3
+00:00:05,120 --> 00:00:07,180
+>> Wait. What's with all this stuff right here?
+
+4
+00:00:07,180 --> 00:00:10,790
+>> I'm glad you asked. All this stuff will help me demonstrate the
+
+5
+00:00:10,790 --> 00:00:13,150
+power of implicit intents. Leveraging other
+
+6
+00:00:13,150 --> 00:00:15,080
+apps to get functionality for your app
+
+7
+00:00:15,080 --> 00:00:20,330
+for fee. For example, why would you write a bar code scanning app,
+
+8
+00:00:20,330 --> 00:00:23,282
+when you can just launch an intent to do it for you. [SOUND].
+
+9
+00:00:23,282 --> 00:00:25,748
+>> Or a camera app, where you can just launch
+
+10
+00:00:25,748 --> 00:00:29,839
+an intent to fire a photo. [SOUND] And of course, it would make no sense to
+
+11
+00:00:29,839 --> 00:00:34,181
+write a phone app just to dial a phone number, you would just call the intent.
+
+12
+00:00:34,181 --> 00:00:36,124
+>> Wait, I need that.
+
+13
+00:00:36,124 --> 00:00:40,280
+>> In other words, don't reinvent the wheel. Lazy programmers make fewer
+
+14
+00:00:40,280 --> 00:00:42,620
+mistakes. Now, let's go implement an
+
+15
+00:00:42,620 --> 00:00:47,450
+implicit intent. Raydo? Dan's being implicit again.
+

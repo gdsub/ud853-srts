@@ -1,0 +1,164 @@
+1
+00:00:00,240 --> 00:00:04,900
+Before we dive into the session material, let's talk a bit about storing or
+
+2
+00:00:04,900 --> 00:00:10,340
+persisting data in Android. First of all, why do we bother to persist things
+
+3
+00:00:10,340 --> 00:00:15,290
+at all? This is the era of the connected cloud. Why don't we always fetch from
+
+4
+00:00:15,290 --> 00:00:20,220
+there? It's really nice to not start the app and see, Loading, or, even worse,
+
+5
+00:00:20,220 --> 00:00:24,850
+like this, a blank screen. The faster people can use an app, the more it will be
+
+6
+00:00:24,850 --> 00:00:30,020
+used. Obviously, if one has to select Refresh, to get it to display anything,
+
+7
+00:00:30,020 --> 00:00:34,230
+that would be particularly bad. Another reason to persist our data,
+
+8
+00:00:34,230 --> 00:00:38,440
+is that using any radio is detrimental to the battery life of the device,
+
+9
+00:00:38,440 --> 00:00:43,622
+especially the cellular radio. Many users aren't on meter data plans or
+
+10
+00:00:43,622 --> 00:00:48,090
+may be roaming when they want to use your app. All those unnecessary data
+
+11
+00:00:48,090 --> 00:00:52,460
+fetches can add up. There are still lots of places that don't have a network
+
+12
+00:00:52,460 --> 00:00:56,910
+connection available. One of the prime advantages of having a mobile app is
+
+13
+00:00:56,910 --> 00:01:02,310
+being resistant to bad or non-existent network conditions. After all,
+
+14
+00:01:02,310 --> 00:01:08,720
+you never know where the user will want to use your app. As you might expect,
+
+15
+00:01:08,720 --> 00:01:11,590
+Android stores your persistent data in the file system.
+
+16
+00:01:12,600 --> 00:01:17,360
+These files can be stored in internal storage that is private to your app.
+
+17
+00:01:17,360 --> 00:01:21,610
+They can also be stored in shared or external storage. On older
+
+18
+00:01:21,610 --> 00:01:26,560
+Android devices this shared storage was actually on an external memory card.
+
+19
+00:01:26,560 --> 00:01:30,620
+Today, most Android devices only emulate this card so that there is
+
+20
+00:01:30,620 --> 00:01:35,520
+the shared external storage apps need available on the device. Some Android
+
+21
+00:01:35,520 --> 00:01:39,948
+devices have emulated shared storage and secondary external storage.
+
+22
+00:01:39,948 --> 00:01:45,763
+Android 4.4 Kit Kat added an API to allow developers to access this secondary
+
+23
+00:01:45,763 --> 00:01:51,280
+external storage. We're going to focus on internal storage in this class.
+
+24
+00:01:51,280 --> 00:01:55,140
+Check the instructor notes to learn more about Android storage locations.
+
+25
+00:01:56,200 --> 00:02:01,010
+As I mentioned before, Android persists data into the file system.
+
+26
+00:02:01,010 --> 00:02:05,060
+It does provide two functional layers on top of the file system in the form of
+
+27
+00:02:05,060 --> 00:02:10,350
+shared preferences and SQLite. The Shared Preferences class provides a general
+
+28
+00:02:10,350 --> 00:02:14,440
+framework that allows you to save and retrieve persistent key value pairs of
+
+29
+00:02:14,440 --> 00:02:19,080
+primitive data types, such as booleans, floats, ints, longs and
+
+30
+00:02:19,080 --> 00:02:23,570
+strings. Shared Preferences is used by the Android preference activity to store
+
+31
+00:02:23,570 --> 00:02:29,740
+our settings data such as the location. Why store things in a SQLite database?
+
+32
+00:02:29,740 --> 00:02:35,730
+After all, Android supports both RAW files and Shared Preferences. For
+
+33
+00:02:35,730 --> 00:02:39,410
+the same reason that it's inefficient to find things if you throw your
+
+34
+00:02:39,410 --> 00:02:44,590
+clothes in a pile on the floor. Storing things in an SQLite database helps
+
+35
+00:02:44,590 --> 00:02:49,730
+you organize and find data easily, thanks to the power of indexing in tables.
+
+36
+00:02:49,730 --> 00:02:54,410
+An SQLite database looks something like this fragment from our weather database.
+
+37
+00:02:54,410 --> 00:02:59,090
+Note that not all fields are represented. We can perform queries using
+
+38
+00:02:59,090 --> 00:03:04,080
+SQL against this database, such as the SELECT statement here, which returns
+
+39
+00:03:04,080 --> 00:03:07,650
+the weather on the specified date, similar to what we'll want to do for
+
+40
+00:03:07,650 --> 00:03:12,670
+the Detail view. We can use a slightly more complex query to return a range of
+
+41
+00:03:12,670 --> 00:03:16,730
+dates, which is similar to what we do on the main forecast ListView.
+

@@ -1,0 +1,104 @@
+1
+00:00:00,375 --> 00:00:04,120
+ListView starts by requesting a view for every visible item, however many you
+
+2
+00:00:04,120 --> 00:00:08,770
+can fit onto the screen. It'll also create a couple in either direction to make
+
+3
+00:00:08,770 --> 00:00:11,830
+sure we can scroll without seeing a flicker as a new view is created and
+
+4
+00:00:11,830 --> 00:00:16,470
+populated. Then it creates new items just in time. So it's next in line to
+
+5
+00:00:16,470 --> 00:00:20,550
+be visible to the user. So if the user never scrolls to the bottom of the list,
+
+6
+00:00:20,550 --> 00:00:24,220
+the ListView will never request that view from the adapter. But this is really
+
+7
+00:00:24,220 --> 00:00:27,780
+just a half measure. As you can see, if the user keeps scrolling, we could
+
+8
+00:00:27,780 --> 00:00:31,430
+potentially just keep adding new views, even if they disappear off the top of
+
+9
+00:00:31,430 --> 00:00:35,080
+the screen. Eventually that's going to lead to the same impact in memory use and
+
+10
+00:00:35,080 --> 00:00:38,230
+performance as if we had just created all of these views directly at
+
+11
+00:00:38,230 --> 00:00:42,980
+the beginning. The solution is recycling each view as it scrolls off the screen,
+
+12
+00:00:42,980 --> 00:00:46,270
+allowing it to be reused when we need to show another item as it
+
+13
+00:00:46,270 --> 00:00:50,080
+moves into view at the top or bottom. So rather than having to create and
+
+14
+00:00:50,080 --> 00:00:53,710
+then hold in memory each item of the list as it comes in to view,
+
+15
+00:00:53,710 --> 00:00:57,400
+we only need to do the creation step for the number of visible items and
+
+16
+00:00:57,400 --> 00:01:01,850
+couple on either side. Then whenever a new list item comes into view,
+
+17
+00:01:01,850 --> 00:01:06,130
+we just update the data displayed in one of our items in our recycle bin.
+
+18
+00:01:06,130 --> 00:01:09,200
+The result? Less memory overhead, smoother scrolling and
+
+19
+00:01:09,200 --> 00:01:13,680
+less view management you have to do yourself. This same recycling behavior is
+
+20
+00:01:13,680 --> 00:01:18,420
+implemented across all AdapterView descended classes, such as GridView and
+
+21
+00:01:18,420 --> 00:01:21,830
+ListView, which also introduces the reason that the adapter isn't built
+
+22
+00:01:21,830 --> 00:01:25,960
+directly into these controls themself. By keeping them separate,
+
+23
+00:01:25,960 --> 00:01:30,050
+your adapter defines how to display each element of the underlying data,
+
+24
+00:01:30,050 --> 00:01:33,480
+while the adapter view implementation itself is responsible for
+
+25
+00:01:33,480 --> 00:01:37,800
+controlling how each of these elements is laid out. Be it a list or
+
+26
+00:01:37,800 --> 00:01:39,880
+a grid in these particular instances.
+

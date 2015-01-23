@@ -1,0 +1,52 @@
+1
+00:00:00,300 --> 00:00:03,520
+All right, you're done. I hope you don't mind that I gave you
+
+2
+00:00:03,520 --> 00:00:07,010
+the larger table this time. But it depends on the first one, so it would've been
+
+3
+00:00:07,010 --> 00:00:11,510
+hard to give you in any other order. I gave you the content value structure, so
+
+4
+00:00:11,510 --> 00:00:15,820
+it's pretty easy to just insert the data. Then, we query the data back out.
+
+5
+00:00:16,820 --> 00:00:19,811
+[SOUND] If move to first fails, the cursor is empty, and
+
+6
+00:00:19,811 --> 00:00:24,258
+the query failed. [LAUGH] Lots of cut and paste here. It is nice to fetch the dv
+
+7
+00:00:24,258 --> 00:00:28,606
+values using the helper for the data type, although its not strictly necessary,
+
+8
+00:00:28,606 --> 00:00:32,759
+since we know our test data is actually going to match our constrains. And
+
+9
+00:00:32,759 --> 00:00:36,430
+there is one more failure case we need to add here, if our query doesn't return
+
+10
+00:00:36,430 --> 00:00:41,920
+any rows. And that's it. All that just to get a database and
+
+11
+00:00:41,920 --> 00:00:45,790
+a way to test it. Now let's run the test again. Well, at
+
+12
+00:00:45,790 --> 00:00:51,140
+least we know all the basic stuff works, and just remember, without these tests,
+
+13
+00:00:51,140 --> 00:00:54,440
+you wouldn't have been able to run this code for a very, very long time.
+

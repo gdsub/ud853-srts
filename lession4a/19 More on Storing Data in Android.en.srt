@@ -1,0 +1,60 @@
+1
+00:00:00,370 --> 00:00:05,380
+Using SQLI makes it easy to delete, update, and insert rows using highly
+
+2
+00:00:05,380 --> 00:00:11,600
+expressive queries. One can even add new columns as you revision your database.
+
+3
+00:00:11,600 --> 00:00:16,020
+It's not a surprise that just about popular app makes some use of SQLI to
+
+4
+00:00:16,020 --> 00:00:20,980
+Android. It's a very popular and important component of the Android solution.
+
+5
+00:00:20,980 --> 00:00:24,620
+Android also provides a huge set of helper functions to make working with
+
+6
+00:00:24,620 --> 00:00:28,530
+databases easy, including functions to automate query building.
+
+7
+00:00:28,530 --> 00:00:33,180
+Display ListView is populated by queries and even compile statements. For
+
+8
+00:00:33,180 --> 00:00:38,780
+more information about databases in Android, see the instructor nodes. One thing
+
+9
+00:00:38,780 --> 00:00:42,100
+that I wanted to mention is that we're teaching you the fundamentals of how to
+
+10
+00:00:42,100 --> 00:00:46,740
+build database in a content provider on Android. The idea is that once you
+
+11
+00:00:46,740 --> 00:00:50,530
+are done with this class, you'll have a good understanding of how it all works,
+
+12
+00:00:50,530 --> 00:00:53,720
+even if you end up using a library to help build your database and
+
+13
+00:00:53,720 --> 00:00:57,100
+content provider in your future applications. That's it for
+
+14
+00:00:57,100 --> 00:01:00,840
+a brief intro into storage on Android. If you want to learn more,
+
+15
+00:01:00,840 --> 00:01:04,500
+go to developer.android.com and search on Data Storage.
+

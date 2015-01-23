@@ -1,0 +1,184 @@
+1
+00:00:00,480 --> 00:00:03,540
+Alright, you're done. Lets take a look at the solution.
+
+2
+00:00:03,540 --> 00:00:06,380
+Now we're going to need some text views. First of all lets
+
+3
+00:00:06,380 --> 00:00:09,430
+look at our linear layout. It's vertical. We're going to want it
+
+4
+00:00:09,430 --> 00:00:11,930
+to be horizontal. The next thing we're going to want are a
+
+5
+00:00:11,930 --> 00:00:15,580
+bunch of text views. Lets just drag them in. Now
+
+6
+00:00:15,580 --> 00:00:18,330
+remember we had all those ID's that were given to us
+
+7
+00:00:18,330 --> 00:00:22,980
+in the last quiz. The first one is the list item
+
+8
+00:00:22,980 --> 00:00:25,730
+date text view. And we'll give it some text that makes
+
+9
+00:00:25,730 --> 00:00:28,350
+sense when we help to layout the layout. We'll remove
+
+10
+00:00:28,350 --> 00:00:31,890
+this before we actually submit it to our project. And
+
+11
+00:00:31,890 --> 00:00:35,960
+for fun let's switch to landscape. It'll make things a
+
+12
+00:00:35,960 --> 00:00:39,910
+little more legible. Also let's just zoom in a little bit.
+
+13
+00:00:41,950 --> 00:00:46,490
+All right. So that's our list item date text view. Now
+
+14
+00:00:47,700 --> 00:00:52,490
+right next to that, we want another text view. Since we want the design to be
+
+15
+00:00:52,490 --> 00:00:57,550
+the same, this one doesn't need to have an ID. If you remember our
+
+16
+00:00:57,550 --> 00:01:02,880
+design had the date. Followed by a dash, followed
+
+17
+00:01:02,880 --> 00:01:07,530
+by the forecast, followed by a dash, followed by the high,
+
+18
+00:01:07,530 --> 00:01:11,860
+followed by a slash, followed by low. So this is just going to be a view that
+
+19
+00:01:11,860 --> 00:01:19,900
+contains a dash. And we can even hardcode this in. For now, then we're going to
+
+20
+00:01:19,900 --> 00:01:22,400
+create another text view next to that. Our
+
+21
+00:01:22,400 --> 00:01:25,560
+placeholder text will be a forecast, like clear.
+
+22
+00:01:25,560 --> 00:01:27,888
+The ID for this will be list item
+
+23
+00:01:27,888 --> 00:01:33,820
+forecast text view. Now we need another text view.
+
+24
+00:01:33,820 --> 00:01:37,740
+Once again this one's not going to have an ID, because we don't need it. And
+
+25
+00:01:37,740 --> 00:01:41,040
+we'll add another dash. Now we're actually getting
+
+26
+00:01:41,040 --> 00:01:45,060
+to the high and low forecasts. Let's say
+
+27
+00:01:45,060 --> 00:01:49,520
+a high of 23. One more plain text view, this one with a slash and, once
+
+28
+00:01:49,520 --> 00:01:52,660
+again, with no ID. And for our high
+
+29
+00:01:52,660 --> 00:01:58,960
+forecast, it better be list_item_high_text_view. Finally, we'll add one
+
+30
+00:01:58,960 --> 00:02:01,060
+more plain text view. This one will be for
+
+31
+00:02:01,060 --> 00:02:04,360
+our low, and of course, that means it's going to
+
+32
+00:02:04,360 --> 00:02:10,639
+be list_item_low_text_view. And there we have it. Our multiple text
+
+33
+00:02:10,639 --> 00:02:13,180
+view layout. Now we might want to make this prettier.
+
+34
+00:02:13,180 --> 00:02:15,600
+But this is a good start and it just plays
+
+35
+00:02:15,600 --> 00:02:17,730
+the four fields that we asked for. They are all
+
+36
+00:02:17,730 --> 00:02:20,920
+part of a linear layout. Before we actually would submit
+
+37
+00:02:20,920 --> 00:02:24,470
+this, lets remove the placeholder tabs for everything except for,
+
+38
+00:02:24,470 --> 00:02:27,900
+the static fields. We'll also have to remove these empty IDs, its
+
+39
+00:02:27,900 --> 00:02:31,440
+actually important to understand whats going on in these text views. And there
+
+40
+00:02:31,440 --> 00:02:35,430
+we have it, that's what your should look like, At least if you
+
+41
+00:02:35,430 --> 00:02:38,150
+want to make it look almost identical to the layout we started out
+
+42
+00:02:38,150 --> 00:02:40,680
+with. Of course you can go wild with these designs, and there's
+
+43
+00:02:40,680 --> 00:02:42,810
+a lot you can do with the layout editor and with different kinds
+
+44
+00:02:42,810 --> 00:02:46,740
+of layouts. We'll be learning more about that in the next lesson. Alright,
+
+45
+00:02:46,740 --> 00:02:49,540
+we finally get to start hooking this up to our UX. Let's go
+
+46
+00:02:49,540 --> 00:02:50,800
+back to forecast fragment.
+

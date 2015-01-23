@@ -1,0 +1,72 @@
+1
+00:00:00,180 --> 00:00:02,700
+So you've got a pretty sweet looking control, but what about
+
+2
+00:00:02,700 --> 00:00:07,160
+users who can't see the shiny hotness? Accessibility is a key consideration
+
+3
+00:00:07,160 --> 00:00:10,560
+when building apps and particularly when you're creating new views. You
+
+4
+00:00:10,560 --> 00:00:13,850
+can start by adding a content description, as you would for every
+
+5
+00:00:13,850 --> 00:00:16,360
+other view in your layout, to ensure that they are all
+
+6
+00:00:16,360 --> 00:00:19,820
+accessible. But what about views like our wind speed, and direction gauge,
+
+7
+00:00:19,820 --> 00:00:23,250
+where the content isn't static? Knowing you're looking at a wind
+
+8
+00:00:23,250 --> 00:00:25,630
+gauge isn't very useful if you don't know what the speed and
+
+9
+00:00:25,630 --> 00:00:28,640
+direction it's displaying are. Well, there are couple
+
+10
+00:00:28,640 --> 00:00:32,020
+of options here. For generic views, which don't control
+
+11
+00:00:32,020 --> 00:00:34,890
+their own values, this simplest alternative is to
+
+12
+00:00:34,890 --> 00:00:38,485
+set the content description within your app at runtime.
+
+13
+00:00:38,485 --> 00:00:40,280
+An even more robust solution is to send
+
+14
+00:00:40,280 --> 00:00:43,480
+an accessibility event from within your view. Whenever the
+
+15
+00:00:43,480 --> 00:00:46,990
+visual content has been modified. Then override the dispatch
+
+16
+00:00:46,990 --> 00:00:50,830
+populate accessibility event, and then the current control's visual
+
+17
+00:00:50,830 --> 00:00:54,534
+value, the accessibility event. Go ahead and add accessibility handlers
+
+18
+00:00:54,534 --> 00:00:56,730
+to your view and then click here when you're done.
+

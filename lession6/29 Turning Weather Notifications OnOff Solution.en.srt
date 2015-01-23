@@ -1,0 +1,40 @@
+1
+00:00:00,290 --> 00:00:03,010
+Alright, you're done. Let's start by adding all of
+
+2
+00:00:03,010 --> 00:00:06,130
+the strings we're going to need for our new preference.
+
+3
+00:00:06,130 --> 00:00:10,278
+Key, label, and something like true, false, and default.
+
+4
+00:00:10,278 --> 00:00:14,010
+Then we'll additional preference into pref general xnl, a check
+
+5
+00:00:14,010 --> 00:00:17,560
+box preference that uses those strings we just defined.
+
+6
+00:00:17,560 --> 00:00:20,730
+Let's go over to our sync adaptor. In the notify
+
+7
+00:00:20,730 --> 00:00:22,820
+function, we add the code to fetch the preference
+
+8
+00:00:22,820 --> 00:00:25,480
+and make use of it. And there we have it.
+
+9
+00:00:25,480 --> 00:00:28,560
+Now we won't display notifications if the user doesn't want us
+
+10
+00:00:28,560 --> 00:00:30,810
+to, which is a great thing for an app to do.
+

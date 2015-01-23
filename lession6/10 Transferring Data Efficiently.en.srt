@@ -1,0 +1,80 @@
+1
+00:00:00,260 --> 00:00:03,510
+Typically when we talk about data transfer efficiency, we're talking
+
+2
+00:00:03,510 --> 00:00:06,590
+about limiting the amount of data being transferred. That reduces
+
+3
+00:00:06,590 --> 00:00:08,990
+the bandwidth and the cost and is generally a pretty
+
+4
+00:00:08,990 --> 00:00:13,020
+good idea. But on mobile there's an extra factor. As you
+
+5
+00:00:13,020 --> 00:00:15,500
+can see, it turns out that the cell radio is
+
+6
+00:00:15,500 --> 00:00:18,430
+one of the biggest battery drainers on the device. So making
+
+7
+00:00:18,430 --> 00:00:21,840
+your data transfers more efficient. Will also result in improved
+
+8
+00:00:21,840 --> 00:00:25,430
+battery life. Now, the basic level being more efficient means spending
+
+9
+00:00:25,430 --> 00:00:29,320
+less time transferring less data, reducing your payloads, and updating
+
+10
+00:00:29,320 --> 00:00:31,560
+less often can take you some of the way there,
+
+11
+00:00:31,560 --> 00:00:34,650
+but then what? Can timing make a difference? It turns
+
+12
+00:00:34,650 --> 00:00:36,890
+out that it can, and it's a situation I like
+
+13
+00:00:36,890 --> 00:00:39,700
+to think of as the cookie Droid conundrum. Do we
+
+14
+00:00:39,700 --> 00:00:44,190
+perform fewer downloads with larger payloads? Or do we perform
+
+15
+00:00:44,190 --> 00:00:46,830
+lots of small transfers just in time for when we
+
+16
+00:00:46,830 --> 00:00:50,000
+need them? One big cookie or lots of little cookies?
+
+17
+00:00:51,200 --> 00:00:52,750
+So, what do you think? Should we have
+
+18
+00:00:52,750 --> 00:00:55,620
+a smaller number of large downloads illustrated by
+
+19
+00:00:55,620 --> 00:00:57,870
+this big cookie? Or a large number of
+
+20
+00:00:57,870 --> 00:01:01,880
+small downloads, as illustrated by lots of little cookies.
+

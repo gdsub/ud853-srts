@@ -1,0 +1,60 @@
+1
+00:00:00,900 --> 00:00:04,400
+As you are moving around between apps, you probably notice that from a user
+
+2
+00:00:04,400 --> 00:00:08,670
+perspective, Android doesn't announce changes in app state. It doesn't announce,
+
+3
+00:00:08,670 --> 00:00:12,890
+that it's low in memory or ask users to close apps, to free up resources. In
+
+4
+00:00:12,890 --> 00:00:17,010
+fact, it does everything it can, to make the resource limitation to the device,
+
+5
+00:00:17,010 --> 00:00:21,800
+invisible to the user. That means keeping the foreground app running smoothly,
+
+6
+00:00:21,800 --> 00:00:25,100
+and switching between apps seamless, and that means killing apps in
+
+7
+00:00:25,100 --> 00:00:30,420
+the background. And it does that if it
+
+8
+00:00:30,420 --> 00:00:34,690
+needs their resources to make sure that the foreground apps can continue to run.
+
+9
+00:00:34,690 --> 00:00:38,080
+So we know that as soon as your app isn't visible, its lifetime is as
+
+10
+00:00:38,080 --> 00:00:41,810
+perilous as that of a Stark at the Red Wedding. Likely to die without notice,
+
+11
+00:00:41,810 --> 00:00:46,670
+but ready to return from the dead. That tells us some very important things
+
+12
+00:00:46,670 --> 00:00:50,140
+about how our app should behave to be good citizens and provide a great user
+
+13
+00:00:50,140 --> 00:00:54,600
+experience. From a system perspective, on pause and on stop are signals that our
+
+14
+00:00:54,600 --> 00:00:57,990
+app may be killed eminently. So we need to clean up any resources that
+
+15
+00:00:57,990 --> 00:01:01,990
+need an orderly tear down such as closing any open connections or sockets.
+

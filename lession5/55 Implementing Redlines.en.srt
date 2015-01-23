@@ -1,0 +1,212 @@
+1
+00:00:00,220 --> 00:00:02,670
+It's time to implement the red lines for the main activity. We
+
+2
+00:00:02,670 --> 00:00:04,939
+can do one part together so that you get the hang of it.
+
+3
+00:00:04,939 --> 00:00:09,640
+We begin by styling the list item Forecast Layout. The red line specifies
+
+4
+00:00:09,640 --> 00:00:12,240
+that the image should be 32 dp by 32 dp. We could hard
+
+5
+00:00:12,240 --> 00:00:15,100
+code the image view to be 32 by 32 dp, but it's actually
+
+6
+00:00:15,100 --> 00:00:18,330
+the same as leaving it as wrapped content for height and width. To
+
+7
+00:00:18,330 --> 00:00:21,970
+know what the icon size would be if we wrap content, we open
+
+8
+00:00:21,970 --> 00:00:25,370
+up the MDPI version of the icon and we do verify that it
+
+9
+00:00:25,370 --> 00:00:28,450
+is 32 pixels by 32 pixels. Whether we hard code it
+
+10
+00:00:28,450 --> 00:00:31,400
+or just add wrap content, visually, the imagine will still look
+
+11
+00:00:31,400 --> 00:00:34,310
+the same, but in the future it will be more flexible
+
+12
+00:00:34,310 --> 00:00:38,210
+if we just specify wrap content in case the image size changes.
+
+13
+00:00:38,210 --> 00:00:41,150
+Next we style the text. On ice cream sandwich and above,
+
+14
+00:00:41,150 --> 00:00:44,060
+Roboto is the default font for text views. It is created
+
+15
+00:00:44,060 --> 00:00:47,310
+specifically to satisfy the requirements of UI and to optimize for
+
+16
+00:00:47,310 --> 00:00:50,510
+high density screens. The red line indicates that the font family is
+
+17
+00:00:50,510 --> 00:00:53,130
+Roboto sans serif condensed, so we add that to the
+
+18
+00:00:53,130 --> 00:00:56,240
+code. On the topic of font sizes, having too many font
+
+19
+00:00:56,240 --> 00:00:58,820
+sizes in your app can confuse your user about the visual
+
+20
+00:00:58,820 --> 00:01:01,540
+hierarchy of your app, as to what's important and what's not
+
+21
+00:01:01,540 --> 00:01:05,110
+important. The Android design guide recommends these four type sizes
+
+22
+00:01:05,110 --> 00:01:08,800
+for consistency with a platform and for user experience. In our
+
+23
+00:01:08,800 --> 00:01:11,710
+app, we stick to the standard type sizes. And that's an
+
+24
+00:01:11,710 --> 00:01:15,540
+intentional part of the design, such as the large temperature values.
+
+25
+00:01:15,540 --> 00:01:17,750
+Hence, when the red line say that the date text
+
+26
+00:01:17,750 --> 00:01:21,100
+should be 22sp for font size, we could specify Android
+
+27
+00:01:21,100 --> 00:01:24,420
+text size to be 22sp, but the text appearance large
+
+28
+00:01:24,420 --> 00:01:27,210
+attribute already maps to that value. Note that the font
+
+29
+00:01:27,210 --> 00:01:30,520
+sizes are specified in S-P, not dips. S-P stands for
+
+30
+00:01:30,520 --> 00:01:33,130
+scaled pixels, so you can scale with the device font
+
+31
+00:01:33,130 --> 00:01:36,771
+size. In our app, we specify text appearance large and
+
+32
+00:01:36,771 --> 00:01:41,090
+text appearance small, which will give up 22spand 14sp respectively.
+
+33
+00:01:41,090 --> 00:01:43,880
+The default font color is black, so we don't need to specify
+
+34
+00:01:43,880 --> 00:01:47,110
+the android text color attribute on our text views. Let's look at the
+
+35
+00:01:47,110 --> 00:01:50,790
+spacing for the elements within the list item now. We have three children.
+
+36
+00:01:50,790 --> 00:01:53,680
+The first one is 60 dp wide, with the image centered inside of
+
+37
+00:01:53,680 --> 00:01:56,124
+it. So we can add a frame layout around the image view
+
+38
+00:01:56,124 --> 00:01:58,601
+and set the gravity to be center on the image, that way the
+
+39
+00:01:58,601 --> 00:02:02,695
+image centers itself within the parent. For the other two columns, we shouldn't
+
+40
+00:02:02,695 --> 00:02:06,150
+hard code such high dp values. Because otherwise the layout won't scale across
+
+41
+00:02:06,150 --> 00:02:09,650
+other devices. Instead, we can use linear layout weights, the weight of
+
+42
+00:02:09,650 --> 00:02:12,610
+seven here, and the weight of five. We just tried different values
+
+43
+00:02:12,610 --> 00:02:16,390
+until we got approximately equal to these values. The trick in doing
+
+44
+00:02:16,390 --> 00:02:19,490
+red lines is that you want to match the visual specs, but
+
+45
+00:02:19,490 --> 00:02:21,910
+you also want to be flexible in the code, so that it
+
+46
+00:02:21,910 --> 00:02:24,840
+adapts to different screen sizes. And this is what the code looks
+
+47
+00:02:24,840 --> 00:02:26,770
+like for the list_items_forecast layout. We
+
+48
+00:02:26,770 --> 00:02:28,930
+have a horizontal linear layout, containing
+
+49
+00:02:28,930 --> 00:02:31,530
+the frame layout with the image view. Then we have a vertical
+
+50
+00:02:31,530 --> 00:02:35,050
+linear layout with weight seven. And then we have another vertical layout
+
+51
+00:02:35,050 --> 00:02:37,620
+with weight five. We can check the link below for the full
+
+52
+00:02:37,620 --> 00:02:40,650
+code file. This is what is looks like when you're done. These
+
+53
+00:02:40,650 --> 00:02:43,110
+items looks polished, but we haven't gotten to the today item yet.
+

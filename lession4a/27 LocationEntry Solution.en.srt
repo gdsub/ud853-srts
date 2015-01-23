@@ -1,0 +1,16 @@
+1
+00:00:01,340 --> 00:00:06,510
+A much simpler table. Just a standard primary key, a few values, and
+
+2
+00:00:06,510 --> 00:00:11,860
+a few constraints. Note that we use ON CONFLICT IGNORE. This means in insert
+
+3
+00:00:11,860 --> 00:00:15,430
+into the database with the same key will not actually update the database at
+
+4
+00:00:15,430 --> 00:00:20,190
+all. And therefore will also not return an ID in the Android helper functions.
+

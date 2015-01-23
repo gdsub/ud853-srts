@@ -1,0 +1,80 @@
+1
+00:00:00,410 --> 00:00:02,650
+To make the preferences appear on the phone, we
+
+2
+00:00:02,650 --> 00:00:05,730
+need to modify settings activity. In the on-create method
+
+3
+00:00:05,730 --> 00:00:08,270
+we're going to replace this to do with some code.
+
+4
+00:00:09,290 --> 00:00:14,111
+We're going to call addPreferencesFromResource with the pref_general xml
+
+5
+00:00:14,111 --> 00:00:16,700
+that we defined. Then we need to bind the
+
+6
+00:00:16,700 --> 00:00:20,780
+preference summary to the value of the location preference.
+
+7
+00:00:20,780 --> 00:00:23,320
+This means that when the user changes the preference,
+
+8
+00:00:23,320 --> 00:00:26,820
+the summary value underneath the label will be updated.
+
+9
+00:00:26,820 --> 00:00:29,090
+If you look at the declaration of this method,
+
+10
+00:00:29,090 --> 00:00:31,640
+we see that for a given preference, it sets a
+
+11
+00:00:31,640 --> 00:00:34,590
+preference change listener on it. If you scroll to
+
+12
+00:00:34,590 --> 00:00:37,870
+the top, you see that the settings activity actually implements
+
+13
+00:00:37,870 --> 00:00:41,580
+the interface on preference change listener. That method is
+
+14
+00:00:41,580 --> 00:00:44,990
+found down below, where we override the on preference change
+
+15
+00:00:44,990 --> 00:00:48,380
+method. Remember that our location preference is actually an
+
+16
+00:00:48,380 --> 00:00:52,010
+edit text preference. So, it won't fall into this case,
+
+17
+00:00:52,010 --> 00:00:54,940
+but it will fall in this case down here. Then,
+
+18
+00:00:54,940 --> 00:00:56,970
+in the settings UI you can see that the summary
+
+19
+00:00:56,970 --> 00:01:00,240
+is now this value. Make these changes in your app.
+
+20
+00:01:00,240 --> 00:01:02,680
+See the instructor notes for the lines of code you need.
+

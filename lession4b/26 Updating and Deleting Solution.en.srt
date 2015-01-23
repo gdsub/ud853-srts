@@ -1,0 +1,252 @@
+1
+00:00:00,850 --> 00:00:03,360
+All right, you're done. Let's take a look
+
+2
+00:00:03,360 --> 00:00:07,870
+at the solution. Delete is actually pretty straight forward.
+
+3
+00:00:07,870 --> 00:00:10,140
+Note that once again we have almost useless
+
+4
+00:00:10,140 --> 00:00:13,370
+parameters. S actually refers to our selection while our
+
+5
+00:00:13,370 --> 00:00:16,400
+strings here are actually our selection Rs. One
+
+6
+00:00:16,400 --> 00:00:19,180
+little trickiness in delete is that if you actually
+
+7
+00:00:19,180 --> 00:00:22,840
+put no selection in, it'll delete all the rows.
+
+8
+00:00:22,840 --> 00:00:25,710
+I still want to make sure we notify the change.
+
+9
+00:00:25,710 --> 00:00:28,090
+I've done the slide optimization here. It would be
+
+10
+00:00:28,090 --> 00:00:31,560
+fine to just notify the change always, but I've decided
+
+11
+00:00:31,560 --> 00:00:34,140
+if no rows have been deleted, then we should
+
+12
+00:00:34,140 --> 00:00:38,280
+bother not notifying. Unless the selection is null, in which
+
+13
+00:00:38,280 --> 00:00:40,940
+case we deleted all the rows, but again, it
+
+14
+00:00:40,940 --> 00:00:43,780
+would be fine just to use notify change here even
+
+15
+00:00:43,780 --> 00:00:47,380
+if no rows are actually deleted. After all, the intention
+
+16
+00:00:47,380 --> 00:00:50,730
+was that rows would be deleted. Once again, let's take
+
+17
+00:00:50,730 --> 00:00:53,910
+pity on someone who might have to maintain your code, and change
+
+18
+00:00:53,910 --> 00:00:55,560
+these default parameter names to something
+
+19
+00:00:55,560 --> 00:00:59,670
+more useful like selection and selectionargs.
+
+20
+00:01:03,770 --> 00:01:07,090
+Other than that, update looks almost exactly like delete. Once
+
+21
+00:01:07,090 --> 00:01:10,080
+again, we are returning the number of rows impacted by
+
+22
+00:01:10,080 --> 00:01:13,100
+the update, and we don't bother notifying if no rows
+
+23
+00:01:13,100 --> 00:01:16,530
+were impacted. Now that we've finished writing update and delete, we
+
+24
+00:01:16,530 --> 00:01:19,080
+can go back to test provider and add some tests.
+
+25
+00:01:19,080 --> 00:01:23,120
+First, let's remove test delete.db, the last test that doesn't depend
+
+26
+00:01:23,120 --> 00:01:26,930
+on the provider. Instead, let's have a test that deletes
+
+27
+00:01:26,930 --> 00:01:30,100
+all the records and checks to make sure they're actually deleted.
+
+28
+00:01:30,100 --> 00:01:32,970
+Remember, passing a null query actually deletes all of the
+
+29
+00:01:32,970 --> 00:01:36,340
+records in a table. So this is really straight-forward, just passing
+
+30
+00:01:36,340 --> 00:01:39,850
+nulls. Since we're depending on the database for our deletes, it's
+
+31
+00:01:39,850 --> 00:01:42,770
+not all that particularly important that we actually test the delete
+
+32
+00:01:42,770 --> 00:01:46,190
+functions, although it would be nice to add that later on.
+
+33
+00:01:46,190 --> 00:01:48,020
+The reason we'd want to add it is to make sure that
+
+34
+00:01:48,020 --> 00:01:51,780
+our constraints are valid. And once we're done doing the deletes,
+
+35
+00:01:51,780 --> 00:01:53,860
+we check to make sure that there are no rows left.
+
+36
+00:01:55,140 --> 00:01:58,040
+Note that we have to delete weather entry before we delete location
+
+37
+00:01:58,040 --> 00:02:01,620
+entry, because you've got constraints in the database that prevent weather entry
+
+38
+00:02:01,620 --> 00:02:04,740
+from existing if location entries do not also exist and would also
+
+39
+00:02:04,740 --> 00:02:07,640
+prevent the deletion of those entries. So let's check to see whether
+
+40
+00:02:07,640 --> 00:02:12,610
+that actually works. All right, that passes. Good news. Now we can
+
+41
+00:02:12,610 --> 00:02:14,770
+add the same test to the end to make sure we can
+
+42
+00:02:14,770 --> 00:02:17,700
+delete all of the rows at the end and it still works.
+
+43
+00:02:17,700 --> 00:02:20,240
+And as you can see, they still pass. So now we know we've
+
+44
+00:02:20,240 --> 00:02:23,810
+deleted records before and after running tests. Now, let's try
+
+45
+00:02:23,810 --> 00:02:27,170
+that update. We'll do just an update of the location.
+
+46
+00:02:28,350 --> 00:02:31,340
+Again, let's start by deleting all records and inserting a
+
+47
+00:02:31,340 --> 00:02:34,030
+record that we want to update. One of the nice things about
+
+48
+00:02:34,030 --> 00:02:36,240
+content values is you can actually copy them using a
+
+49
+00:02:36,240 --> 00:02:40,230
+copy constructor. After that, we can add the ID we
+
+50
+00:02:40,230 --> 00:02:42,660
+want to update and then put the name of the city
+
+51
+00:02:42,660 --> 00:02:45,440
+we want to update it to. In this case, from North Pole
+
+52
+00:02:45,440 --> 00:02:48,420
+to Santa's Village. And then, finally, we call update.
+
+53
+00:02:49,600 --> 00:02:52,175
+Assert that we've actually updated exactly one record as
+
+54
+00:02:52,175 --> 00:02:55,600
+we'd expect, and then do a query on that,
+
+55
+00:02:55,600 --> 00:02:58,980
+validating our cursor, making sure that our update actually works.
+
+56
+00:02:58,980 --> 00:03:01,700
+And then finally, we close our cursor. It all
+
+57
+00:03:01,700 --> 00:03:04,370
+looks pretty good. And let's see that it actually runs,
+
+58
+00:03:04,370 --> 00:03:07,910
+and does the right thing. And our tests pass.
+
+59
+00:03:07,910 --> 00:03:11,550
+So, we've now proved that we can update, delete, insert,
+
+60
+00:03:11,550 --> 00:03:14,250
+and query and all this is fully tested.
+
+61
+00:03:14,250 --> 00:03:16,280
+In other words, the bones of our application
+
+62
+00:03:16,280 --> 00:03:19,850
+are finished, just waiting to attach our UI.
+
+63
+00:03:19,850 --> 00:03:21,510
+Let's go through and attach some of our UI.
+

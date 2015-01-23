@@ -1,0 +1,32 @@
+1
+00:00:00,570 --> 00:00:03,040
+That's right. Maps isn't visible or running any
+
+2
+00:00:03,040 --> 00:00:05,625
+services, so it's the most likely to be killed.
+
+3
+00:00:05,625 --> 00:00:08,290
+G-mail is running a service, but it's not interacting
+
+4
+00:00:08,290 --> 00:00:10,790
+directly with the user while Google Music and the
+
+5
+00:00:10,790 --> 00:00:13,870
+camera app are. Of those two, the Music app
+
+6
+00:00:13,870 --> 00:00:15,690
+must have been in the foreground for longer than
+
+7
+00:00:15,690 --> 00:00:18,980
+the camera. So it's got a slightly lower priority,
+
+8
+00:00:18,980 --> 00:00:21,310
+though neither are in any danger of being killed.
+

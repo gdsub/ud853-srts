@@ -1,0 +1,36 @@
+1
+00:00:00,130 --> 00:00:03,630
+Next, we'll create the Today List Item. Since this layer is different from
+
+2
+00:00:03,630 --> 00:00:07,790
+the other list items, we're going to need to create a new XML file under
+
+3
+00:00:07,790 --> 00:00:12,730
+the resources layout folder. Use the same place holder image as you did before.
+
+4
+00:00:12,730 --> 00:00:18,250
+Also use the same IDs that you declared in the list_ item_forecas_xml file.
+
+5
+00:00:18,250 --> 00:00:21,152
+For example, in our code we called this list item icon, and
+
+6
+00:00:21,152 --> 00:00:25,110
+we callled this list item date text view. So we use those same ID's for
+
+7
+00:00:25,110 --> 00:00:29,390
+the elements in this XML file. You'll see why when we introduce view holders
+
+8
+00:00:29,390 --> 00:00:33,180
+later. After you've finished adding it, make sure the app still compiles.
+
+9
+00:00:33,180 --> 00:00:35,410
+You won't see any visual difference until the next step.
+

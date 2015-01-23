@@ -1,0 +1,24 @@
+1
+00:00:00,230 --> 00:00:03,910
+All right. We're just going to add a few more details to the app.
+
+2
+00:00:03,910 --> 00:00:05,860
+We're going to implement a weather notification
+
+3
+00:00:05,860 --> 00:00:07,760
+preference. We'll do this by adding a
+
+4
+00:00:07,760 --> 00:00:12,240
+new preference to the app settings to turn off notifications. And then, use
+
+5
+00:00:12,240 --> 00:00:14,640
+that preference to turn off the notification.
+
+6
+00:00:14,640 --> 00:00:17,650
+Hint, you're going to want to use a CheckBoxPreference
+

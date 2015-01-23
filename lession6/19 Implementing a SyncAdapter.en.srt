@@ -1,0 +1,404 @@
+1
+00:00:00,240 --> 00:00:01,350
+Let's take a look at what it will
+
+2
+00:00:01,350 --> 00:00:05,630
+take to implement a very basic SyncAdapter. We're going
+
+3
+00:00:05,630 --> 00:00:09,430
+to write two services. Each service serves the primary
+
+4
+00:00:09,430 --> 00:00:12,530
+purpose of delivering an object that represents an Android
+
+5
+00:00:12,530 --> 00:00:15,780
+Binder interface to one of the system frameworks.
+
+6
+00:00:15,780 --> 00:00:19,400
+A Binder is actually the low-level glue that implements
+
+7
+00:00:19,400 --> 00:00:23,400
+cross process communication in Android. You've been using Binders
+
+8
+00:00:23,400 --> 00:00:26,750
+every time you talk to an Android system service.
+
+9
+00:00:26,750 --> 00:00:30,520
+Intents and content providers are just high-level abstractions on
+
+10
+00:00:30,520 --> 00:00:33,600
+top of the Binder interface. There's a whole language known
+
+11
+00:00:33,600 --> 00:00:37,290
+as AIDL to help define these interfaces. We're not
+
+12
+00:00:37,290 --> 00:00:39,710
+going to cover all this here, but there's a lot
+
+13
+00:00:39,710 --> 00:00:42,620
+more you can do with services and Binders. One
+
+14
+00:00:42,620 --> 00:00:45,370
+more thing before we start, we're going to define an
+
+15
+00:00:45,370 --> 00:00:48,960
+Authenticator Service and an Authenticator. But it will only
+
+16
+00:00:48,960 --> 00:00:51,780
+be used by the Android accounts framework to allow us
+
+17
+00:00:51,780 --> 00:00:55,320
+to create an account. SyncAdaptor's need an account.
+
+18
+00:00:55,320 --> 00:00:57,300
+And the account framework requires that there be
+
+19
+00:00:57,300 --> 00:01:00,780
+an authenticator delivered by an authenticator Service. You'll
+
+20
+00:01:00,780 --> 00:01:02,890
+see that our authenticator is just a series
+
+21
+00:01:02,890 --> 00:01:05,250
+of stubs, with exceptions that get thrown for
+
+22
+00:01:05,250 --> 00:01:07,290
+each call just to prove that it isn't
+
+23
+00:01:07,290 --> 00:01:12,210
+really used. One final note. This section approximately
+
+24
+00:01:12,210 --> 00:01:18,060
+follows the online training at developer.android.com around sync adapters.
+
+25
+00:01:18,060 --> 00:01:19,860
+Feel free to look there if you have
+
+26
+00:01:19,860 --> 00:01:22,680
+any more questions. We're going to create a new
+
+27
+00:01:22,680 --> 00:01:27,550
+package, sync, to house all of this goodness.
+
+28
+00:01:27,550 --> 00:01:31,210
+And a new class file for our authenticator. This
+
+29
+00:01:31,210 --> 00:01:33,200
+code that we're about to paste in really
+
+30
+00:01:33,200 --> 00:01:36,920
+just comes from the developer.android.com website, and as I
+
+31
+00:01:36,920 --> 00:01:40,660
+mentioned earlier it's just a stub. You can tell
+
+32
+00:01:40,660 --> 00:01:43,100
+because we throw exceptions for calling any of the
+
+33
+00:01:43,100 --> 00:01:46,970
+functions except for the constructor. And one
+
+34
+00:01:46,970 --> 00:01:51,830
+more file. Create SunshineAuthenticatorService. This is more code
+
+35
+00:01:51,830 --> 00:01:54,170
+that is written for us. It allows
+
+36
+00:01:54,170 --> 00:01:57,260
+the account manager to access the empty authenticator
+
+37
+00:01:57,260 --> 00:02:03,430
+that we just pasted in. Now we add the account type in our strings.xml. The
+
+38
+00:02:03,430 --> 00:02:05,920
+account type string suggests that it is specific
+
+39
+00:02:05,920 --> 00:02:08,820
+to our app. If we had many applications
+
+40
+00:02:08,820 --> 00:02:11,400
+using the same account, we might want
+
+41
+00:02:11,400 --> 00:02:14,610
+to create just an example.com account. We'll also
+
+42
+00:02:14,610 --> 00:02:16,140
+begin to clean things up and add
+
+43
+00:02:16,140 --> 00:02:19,370
+a content authority string. Note that this matches
+
+44
+00:02:19,370 --> 00:02:24,390
+our content provider string. We'll fix the XML file later so they both use
+
+45
+00:02:24,390 --> 00:02:29,081
+this same string. We create a new XML resource file, filename
+
+46
+00:02:29,081 --> 00:02:34,950
+authenticator.xml, with root element account-authenticator.
+
+47
+00:02:34,950 --> 00:02:38,620
+And you probably noticed that SunshineAuthenticatorService is
+
+48
+00:02:38,620 --> 00:02:40,680
+actually a service that needs to be registered
+
+49
+00:02:40,680 --> 00:02:44,810
+with a package manager in AndroidManifest.xml. Here's
+
+50
+00:02:44,810 --> 00:02:47,940
+some more pasty goodness that does just that.
+
+51
+00:02:47,940 --> 00:02:50,770
+Now be very, very careful. These strings
+
+52
+00:02:50,770 --> 00:02:53,790
+all have to match precisely. The error messages
+
+53
+00:02:53,790 --> 00:02:56,610
+that the system gives for having incorrect accounts
+
+54
+00:02:56,610 --> 00:02:59,960
+are not necessarily intuitive. And with that you
+
+55
+00:02:59,960 --> 00:03:03,120
+should be able to create valid accounts. Once again,
+
+56
+00:03:03,120 --> 00:03:05,530
+this is all just so that the SyncAdapter can be
+
+57
+00:03:05,530 --> 00:03:08,350
+tied to an account. You don't actually use this
+
+58
+00:03:08,350 --> 00:03:12,052
+at all. All right, let's tweak our provider tag in
+
+59
+00:03:12,052 --> 00:03:15,410
+the manifest. We're going to add the syncable attribute.
+
+60
+00:03:15,410 --> 00:03:17,720
+This just lets Android know that we're planning to synchronize
+
+61
+00:03:17,720 --> 00:03:20,799
+the content provider with the server. Also, we'll set
+
+62
+00:03:20,799 --> 00:03:25,220
+android:exported equals false. We had it at the default setting.
+
+63
+00:03:25,220 --> 00:03:28,750
+Which means that other apps could see our content. Finally,
+
+64
+00:03:28,750 --> 00:03:31,530
+let's change the authority to use our new string. Now
+
+65
+00:03:31,530 --> 00:03:34,930
+for some additional permissions. We need to be able to
+
+66
+00:03:34,930 --> 00:03:38,790
+read and write sync settings. That makes sense. We also
+
+67
+00:03:38,790 --> 00:03:41,810
+have to authenticate accounts, even though we're not really using
+
+68
+00:03:41,810 --> 00:03:45,420
+them for anything. None of these permissions are ones users
+
+69
+00:03:45,420 --> 00:03:48,530
+should be concerned about. But as developers, we always want
+
+70
+00:03:48,530 --> 00:03:51,780
+to be careful when we have to add new permissions.
+
+71
+00:03:51,780 --> 00:03:54,780
+Let's create the SunshineSyncAdapter file itself inside
+
+72
+00:03:54,780 --> 00:03:57,610
+of sync, which extends the abstract threaded sync
+
+73
+00:03:57,610 --> 00:04:00,683
+adapter class. Hit Ctrl+I and then Ctrl+O
+
+74
+00:04:00,683 --> 00:04:04,900
+to implement the necessary abstract methods in constructor.
+
+75
+00:04:04,900 --> 00:04:07,170
+We'll use the first constructor. We'll fill
+
+76
+00:04:07,170 --> 00:04:09,330
+this out later. As you may recall, the
+
+77
+00:04:09,330 --> 00:04:12,650
+sync adaptor pattern requires yet another service. So
+
+78
+00:04:12,650 --> 00:04:15,645
+we're going to create another Java class called SunshineSyncService.
+
+79
+00:04:16,730 --> 00:04:20,670
+This class is used to deliver the sync adapter Binder to the sync manager.
+
+80
+00:04:21,860 --> 00:04:24,690
+The Binder is implemented for us by
+
+81
+00:04:24,690 --> 00:04:28,520
+the abstract threaded sync adapter class. And returned
+
+82
+00:04:28,520 --> 00:04:31,560
+in the getSyncAdapterBinder method. And now, we
+
+83
+00:04:31,560 --> 00:04:35,750
+need one more XML file. Create syncadapter.xml with
+
+84
+00:04:35,750 --> 00:04:39,120
+root element sync-adapter. Once again, this XML
+
+85
+00:04:39,120 --> 00:04:42,590
+file defines the settings associated with our sync-adapter.
+
+86
+00:04:42,590 --> 00:04:45,290
+Including it's content authority. The account type that it
+
+87
+00:04:45,290 --> 00:04:48,890
+syncs. Whether or not it's user visible. Whether it
+
+88
+00:04:48,890 --> 00:04:52,180
+supports uploading, which changes the way the content provider
+
+89
+00:04:52,180 --> 00:04:56,280
+interacts with the sync adapter. Allowing parallel syncs and is
+
+90
+00:04:56,280 --> 00:04:59,400
+always syncable. These settings make sense for this particular
+
+91
+00:04:59,400 --> 00:05:02,350
+application, and I bet you know what comes next. You're
+
+92
+00:05:02,350 --> 00:05:05,100
+right. You have to register the sync adapter service
+
+93
+00:05:05,100 --> 00:05:08,140
+with the package manager. And therefore we have to create
+
+94
+00:05:08,140 --> 00:05:12,540
+more manifest entries, containing some important metadata. Most
+
+95
+00:05:12,540 --> 00:05:15,602
+importantly, links to the file we just created. All
+
+96
+00:05:15,602 --> 00:05:19,040
+right, now we're getting close. Let's start working
+
+97
+00:05:19,040 --> 00:05:21,690
+on the sync adapter, itself. We'll start with a
+
+98
+00:05:21,690 --> 00:05:24,820
+helper function to get the dummy sync account
+
+99
+00:05:24,820 --> 00:05:27,760
+and make sure that it has been created. Then,
+
+100
+00:05:27,760 --> 00:05:30,560
+we'll add another helper function to our sync adaptor,
+
+101
+00:05:30,560 --> 00:05:32,510
+to make it easier to test our sync adaptor.
+

@@ -1,0 +1,128 @@
+1
+00:00:00,090 --> 00:00:02,130
+We mentioned this several times. Put the SW in
+
+2
+00:00:02,130 --> 00:00:06,190
+the resource folder name stands for smallest width. To drive
+
+3
+00:00:06,190 --> 00:00:09,280
+home that point, let's walk through a hypothetical situation. Say
+
+4
+00:00:09,280 --> 00:00:11,760
+you have an app directory structure like this. We have
+
+5
+00:00:11,760 --> 00:00:14,140
+some layouts defined in the base layout folder and
+
+6
+00:00:14,140 --> 00:00:18,070
+we override some of those in the layout-sw600dp folder. We
+
+7
+00:00:18,070 --> 00:00:22,790
+also override one of these in the layout-sw720dp folder. Let's
+
+8
+00:00:22,790 --> 00:00:25,320
+look at which layouts would be applied on which device.
+
+9
+00:00:25,320 --> 00:00:27,740
+Say your app is running on a Nexxus five.
+
+10
+00:00:27,740 --> 00:00:30,510
+The Nexxus five has dimensions 360 dp by six 640
+
+11
+00:00:30,510 --> 00:00:33,610
+dp. Of the two, the smallest width is 360 dp.
+
+12
+00:00:33,610 --> 00:00:36,350
+So we use this number to compare it against the
+
+13
+00:00:36,350 --> 00:00:39,950
+folder names. 360 dp is less than 600 and
+
+14
+00:00:39,950 --> 00:00:43,020
+is less than, 720 so all the layouts will come
+
+15
+00:00:43,020 --> 00:00:47,420
+from the space layout folder. For the Nexus 72012 version,
+
+16
+00:00:47,420 --> 00:00:50,950
+the dimensions are 600 dp by 960 dp. Of the
+
+17
+00:00:50,950 --> 00:00:54,470
+two sides 600 dp is the smaller width. So you compare
+
+18
+00:00:54,470 --> 00:00:57,830
+this against the folder names. It turns out that the smallest width
+
+19
+00:00:57,830 --> 00:01:00,710
+is greater than or equal to 600 dp, so for the
+
+20
+00:01:00,710 --> 00:01:03,800
+detail and the item layout, we pull it from this folder. Now
+
+21
+00:01:03,800 --> 00:01:06,370
+the main .xml file is not declared in this folder, so
+
+22
+00:01:06,370 --> 00:01:09,020
+we fall back to a less specific folder, which turns out to
+
+23
+00:01:09,020 --> 00:01:11,968
+be this one in the base layout folder. For the Nexus ten,
+
+24
+00:01:11,968 --> 00:01:15,920
+the dimensions are 800 dp by 1280 dp. Of the two sides,
+
+25
+00:01:15,920 --> 00:01:19,220
+800 dp is the smallest width. Now this device satisfies
+
+26
+00:01:19,220 --> 00:01:22,100
+the categories for all of these because 800 is greater than
+
+27
+00:01:22,100 --> 00:01:24,990
+720 and greater than 600. However, the system chooses the
+
+28
+00:01:24,990 --> 00:01:28,550
+most specific folder first. So it will choose this item layout
+
+29
+00:01:28,550 --> 00:01:31,050
+over these two. Since the detail layout is not defined
+
+30
+00:01:31,050 --> 00:01:33,820
+here, it will fall back to a less specific folder, which
+
+31
+00:01:33,820 --> 00:01:36,810
+is this one. Then for the main.xml file, it's not declared
+
+32
+00:01:36,810 --> 00:01:38,930
+in either of these, so it falls back to this one.
+

@@ -1,0 +1,12 @@
+1
+00:00:00,200 --> 00:00:05,860
+Okay. Here's a slightly more complicated SQL query. See the instructor notes for
+
+2
+00:00:05,860 --> 00:00:11,160
+some resources that you can use to help parse the SQL statement. One note,
+
+3
+00:00:11,160 --> 00:00:14,940
+max is the name of the column that stores the high temperature for the day.
+

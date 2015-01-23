@@ -1,0 +1,40 @@
+1
+00:00:00,210 --> 00:00:02,969
+Once the user's location preference has been stored. When do
+
+2
+00:00:02,969 --> 00:00:06,340
+we make use of it? We need the preferred location on
+
+3
+00:00:06,340 --> 00:00:10,380
+we query the weather service. Luckily, in lesson 2, we
+
+4
+00:00:10,380 --> 00:00:14,390
+modified fetch weather task to accept a location parameter. We hard
+
+5
+00:00:14,390 --> 00:00:16,550
+coded it to be the Mountain View zip code. But
+
+6
+00:00:16,550 --> 00:00:19,960
+now we should use the location stored in shared preferences. We
+
+7
+00:00:19,960 --> 00:00:22,570
+haven't explicitly shown you how to do this. So you might
+
+8
+00:00:22,570 --> 00:00:25,210
+need to do some digging around. On the Ander developer site
+
+9
+00:00:25,210 --> 00:00:27,550
+to figure out how to do it. Once
+
+10
+00:00:27,550 --> 00:00:29,790
+you've made the change, check the box to continue.
+

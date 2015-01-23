@@ -1,0 +1,32 @@
+1
+00:00:00,420 --> 00:00:03,070
+Now let's take this opportunity to go ahead and create our
+
+2
+00:00:03,070 --> 00:00:05,960
+own custom view. And we don't need one in particular for
+
+3
+00:00:05,960 --> 00:00:09,320
+sunshine, so you can go ahead and choose anything. Personally, I'm
+
+4
+00:00:09,320 --> 00:00:12,240
+a fan of compass control, so that's what I've been building. You'll
+
+5
+00:00:12,240 --> 00:00:15,820
+need to include three constructors to support your view being created
+
+6
+00:00:15,820 --> 00:00:19,660
+in code through a resource or through inflation, then simply override the
+
+7
+00:00:19,660 --> 00:00:23,550
+onMeasure method and set your dimensions. Click here when you're done,
+
+8
+00:00:23,550 --> 00:00:26,280
+and, you're ready to get started drawing the contents of your gear.
+

@@ -1,0 +1,88 @@
+1
+00:00:00,110 --> 00:00:04,250
+Open up the Developer API Guide for Settings, if you want to follow along.
+
+2
+00:00:04,250 --> 00:00:07,000
+If you've pondered it carefully and you've decided you really want this to
+
+3
+00:00:07,000 --> 00:00:11,290
+be a setting, this is what you do next. Android provides a way to display
+
+4
+00:00:11,290 --> 00:00:16,450
+a hierarchy of preferences, including headers, such as the ones shown here.
+
+5
+00:00:16,450 --> 00:00:20,210
+The value of the preference is called the preference summary, and that's seen
+
+6
+00:00:20,210 --> 00:00:25,740
+here. It looks almost like the subtitle text. The preference also provides UI.
+
+7
+00:00:25,740 --> 00:00:30,330
+To allow users to modify that setting. You just need to supply the strings, but
+
+8
+00:00:30,330 --> 00:00:33,470
+you don't have to implement the UI like the spinner here.
+
+9
+00:00:33,470 --> 00:00:36,770
+Common preference types are the check box preference, list preference,
+
+10
+00:00:36,770 --> 00:00:40,460
+edit text preference. We can see some examples in the settings app under
+
+11
+00:00:40,460 --> 00:00:44,670
+developer options. Here's a bunch of preferences. This is an example of
+
+12
+00:00:44,670 --> 00:00:49,380
+a check box preference. This is an example of a list preference where you
+
+13
+00:00:49,380 --> 00:00:54,570
+have different radio button options here. Once the user changes the setting,
+
+14
+00:00:54,570 --> 00:00:58,890
+it gets saved in the default share preferences file. This stores a bunch of key
+
+15
+00:00:58,890 --> 00:01:04,390
+value pairs of primitive data. An example integer preference could be how many
+
+16
+00:01:04,390 --> 00:01:08,550
+days of e-mail history should be saved locally on the device. You could have
+
+17
+00:01:08,550 --> 00:01:13,000
+a string stored integer preferences for what the currently selected account and
+
+18
+00:01:13,000 --> 00:01:17,620
+device is. Then at any time you can fetch the value of this shared preferences,
+
+19
+00:01:17,620 --> 00:01:19,540
+as long as you pass in the name of the key that you want.
+
+20
+00:01:19,540 --> 00:01:24,060
+You can also use shared preferences outside the context of settings as well.
+
+21
+00:01:24,060 --> 00:01:27,080
+This information is located in the developer API guide, for
+
+22
+00:01:27,080 --> 00:01:29,530
+storage options, which is also linked below.
+

@@ -1,0 +1,12 @@
+1
+00:00:00,340 --> 00:00:03,670
+The distribution and latest version of Android changes frequently. But
+
+2
+00:00:03,670 --> 00:00:08,410
+based on this graph, which version of Android should be the target SDK to
+
+3
+00:00:08,410 --> 00:00:11,750
+provide the best experience on the largest number of devices.
+

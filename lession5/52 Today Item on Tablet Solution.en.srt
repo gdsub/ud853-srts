@@ -1,0 +1,36 @@
+1
+00:00:00,780 --> 00:00:03,490
+In the main activity, we tell the forecast fragment to use a
+
+2
+00:00:03,490 --> 00:00:07,030
+special today layout if it's one pane mode. In the fragment, we
+
+3
+00:00:07,030 --> 00:00:10,320
+pass on this value to the forecast adapter, if it's not null.
+
+4
+00:00:10,320 --> 00:00:13,430
+The reason it could be null is because the activity on Create method
+
+5
+00:00:13,430 --> 00:00:16,900
+will happen before the fragment on Create View method. And this is
+
+6
+00:00:16,900 --> 00:00:20,580
+where the forecast adapter is initialized. So we set the Boolean here,
+
+7
+00:00:20,580 --> 00:00:23,200
+as well. The reason we have this code here is because it's
+
+8
+00:00:23,200 --> 00:00:26,180
+a public method. So, in the future, it could be called before or
+
+9
+00:00:26,180 --> 00:00:27,230
+after this method.
+

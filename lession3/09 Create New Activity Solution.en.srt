@@ -1,0 +1,32 @@
+1
+00:00:00,370 --> 00:00:04,070
+We start by right-clicking on our package name to create the new activity from
+
+2
+00:00:04,070 --> 00:00:07,620
+the Blank Activity with Fragment template. So
+
+3
+00:00:07,620 --> 00:00:11,950
+for name, we use DetailActivity, and again, the
+
+4
+00:00:11,950 --> 00:00:17,930
+hierarchical parent of this class is going to be our main activity. So as you
+
+5
+00:00:17,930 --> 00:00:19,840
+can see, we now have a new
+
+6
+00:00:19,840 --> 00:00:25,380
+DetailActivity along with the XML for activity_detail and
+
+7
+00:00:25,380 --> 00:00:29,070
+a fragment associated with that activity. Great! You're
+
+8
+00:00:29,070 --> 00:00:32,240
+done. But we still aren't launching our new activity.
+

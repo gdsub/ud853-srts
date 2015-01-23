@@ -1,0 +1,24 @@
+1
+00:00:00,140 --> 00:00:04,161
+All right. Now we're back to interacting with our ContentProvider, so it's time
+
+2
+00:00:04,161 --> 00:00:05,881
+to have another exercise. Use the
+
+3
+00:00:05,881 --> 00:00:08,956
+ContentProvider to insert the vector of content
+
+4
+00:00:08,956 --> 00:00:11,330
+value objects into the database. [LAUGH]
+
+5
+00:00:11,330 --> 00:00:12,863
+Don't worry, we're really almost done with
+
+6
+00:00:12,863 --> 00:00:16,420
+inserting data. Next is the fun part that makes this all worth it.
+

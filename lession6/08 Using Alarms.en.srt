@@ -1,0 +1,104 @@
+1
+00:00:00,640 --> 00:00:04,350
+So, now, we have a simple service. Wasn't that easy?
+
+2
+00:00:04,350 --> 00:00:08,140
+But it still doesn't wake itself up. Fortunately, there's a system
+
+3
+00:00:08,140 --> 00:00:11,430
+service for that. This is a good opportunity to introduce
+
+4
+00:00:11,430 --> 00:00:15,020
+the AlarmManager. The AlarmManager allows you to tell the system that
+
+5
+00:00:15,020 --> 00:00:17,220
+you want it to wake a component of your application
+
+6
+00:00:17,220 --> 00:00:19,690
+up after a period of time and do some processing in
+
+7
+00:00:19,690 --> 00:00:22,370
+the background. You can even have it wake up your
+
+8
+00:00:22,370 --> 00:00:26,780
+application periodically but, what do we wake up in the background?
+
+9
+00:00:26,780 --> 00:00:28,810
+That would be an Android component we haven't
+
+10
+00:00:28,810 --> 00:00:32,940
+seen before called a Broadcast Receiver. A Broadcast Receiver
+
+11
+00:00:32,940 --> 00:00:34,770
+is a special class, that is used to
+
+12
+00:00:34,770 --> 00:00:39,270
+receive intent broadcast often from other applications. Typically a
+
+13
+00:00:39,270 --> 00:00:42,020
+broadcast receiver will register an intent filter for
+
+14
+00:00:42,020 --> 00:00:45,690
+these broadcasts. It's also one way the application will
+
+15
+00:00:45,690 --> 00:00:48,980
+listen in on alarms. So let's add some alarm
+
+16
+00:00:48,980 --> 00:00:52,530
+stuff. First, I'm going to add a Broadcast Receiver
+
+17
+00:00:52,530 --> 00:00:56,100
+as a static inner class of Sunshine Service.
+
+18
+00:00:56,100 --> 00:00:58,760
+Since this is an Android component, I'll register
+
+19
+00:00:58,760 --> 00:01:02,540
+this Broadcast Receiver in the manifest. Note the
+
+20
+00:01:02,540 --> 00:01:06,770
+way a static inner class is notated. Okay, I've
+
+21
+00:01:06,770 --> 00:01:09,080
+given you the bones of a broadcast receiver
+
+22
+00:01:09,080 --> 00:01:11,180
+that can handle an alarm, but now it's
+
+23
+00:01:11,180 --> 00:01:14,770
+your turn. You can create a PendingIntent from
+
+24
+00:01:14,770 --> 00:01:17,840
+an explicit intent to have the alarm manager activate
+
+25
+00:01:17,840 --> 00:01:22,390
+your broadcast receiver. I recommend setting the alarm to something absurdly
+
+26
+00:01:22,390 --> 00:01:26,030
+short, like five seconds, so you can easily test that it's working.
+

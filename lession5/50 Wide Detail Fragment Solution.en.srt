@@ -1,0 +1,32 @@
+1
+00:00:00,130 --> 00:00:02,250
+We build a wider detail fragment layout, using a
+
+2
+00:00:02,250 --> 00:00:06,310
+horizontal linear layout composed of three vertical linear layouts. This
+
+3
+00:00:06,310 --> 00:00:08,280
+is what the XML code looks like. And you
+
+4
+00:00:08,280 --> 00:00:11,020
+can see it linked below. Then we use layout aliasing
+
+5
+00:00:11,020 --> 00:00:14,232
+to override the fragment detail layout. In the values-land
+
+6
+00:00:14,232 --> 00:00:20,100
+and values-sw600dp folders, we create res.xml files. In both files,
+
+7
+00:00:20,100 --> 00:00:23,200
+we alias fragment detail through fragment detail wide. And
+
+8
+00:00:23,200 --> 00:00:25,550
+now we have a more responsive layout to wider screens.
+

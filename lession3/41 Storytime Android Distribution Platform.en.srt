@@ -1,0 +1,196 @@
+1
+00:00:00,000 --> 00:00:03,320
+50. That's how many apps were available in
+
+2
+00:00:03,320 --> 00:00:05,680
+Android Market as Google Play was named when
+
+3
+00:00:05,680 --> 00:00:08,750
+it first launched alongside the first Android device
+
+4
+00:00:08,750 --> 00:00:11,800
+in 2008. A few days later, Android Market
+
+5
+00:00:11,800 --> 00:00:14,200
+opened for all app developers to register and
+
+6
+00:00:14,200 --> 00:00:17,150
+start publishing their apps without any review or
+
+7
+00:00:17,150 --> 00:00:21,910
+validation requirements from Google, OEMs, or carriers. For
+
+8
+00:00:21,910 --> 00:00:25,065
+us as developers, the ability to distribute apps and
+
+9
+00:00:25,065 --> 00:00:28,300
+the possibility of monetizing them through up front payments
+
+10
+00:00:28,300 --> 00:00:31,320
+in app billing and advertising directly to the owners of
+
+11
+00:00:31,320 --> 00:00:33,920
+over a billion android devices is one of the
+
+12
+00:00:33,920 --> 00:00:38,860
+most exciting opportunities made possible by the android ecosystem. Growing
+
+13
+00:00:38,860 --> 00:00:41,830
+up the dark days before smartphones and the internet,
+
+14
+00:00:41,830 --> 00:00:43,770
+if I wanted a new game or app I had
+
+15
+00:00:43,770 --> 00:00:45,860
+to go to a physical store and pay for a
+
+16
+00:00:45,860 --> 00:00:50,650
+cardboard box filled with floppy disks or CDROMs. As developers
+
+17
+00:00:50,650 --> 00:00:52,680
+a big part of our business plan back then
+
+18
+00:00:52,680 --> 00:00:55,830
+was how to get those boxes of our software onto
+
+19
+00:00:55,830 --> 00:00:58,900
+those shelves. Or in the world of mobile, how
+
+20
+00:00:58,900 --> 00:01:01,350
+to secure a carrier or OEM deal to get our
+
+21
+00:01:01,350 --> 00:01:05,500
+apps preloaded onto the devices. Today I can install
+
+22
+00:01:05,500 --> 00:01:07,992
+over a million apps of games created by tens if
+
+23
+00:01:07,992 --> 00:01:12,400
+not hundreds and thousands of developers via Google Play, all
+
+24
+00:01:12,400 --> 00:01:16,010
+with a click of a button. That's translated into tens
+
+25
+00:01:16,010 --> 00:01:19,070
+of billions of app installs. An incredible opportunity to
+
+26
+00:01:19,070 --> 00:01:23,000
+distribute apps to Android users in hundreds of countries.
+
+27
+00:01:23,000 --> 00:01:25,650
+Now, in the early days of Android, being fast
+
+28
+00:01:25,650 --> 00:01:28,840
+and launching first was a pretty solid strategy for success,
+
+29
+00:01:28,840 --> 00:01:31,910
+but as those first 50 apps quickly grew to
+
+30
+00:01:31,910 --> 00:01:35,300
+hundreds, thousands, and now over a million apps, it takes
+
+31
+00:01:35,300 --> 00:01:37,710
+a lot more than speed to stand out in
+
+32
+00:01:37,710 --> 00:01:41,320
+the crowd. These days the tables stakes are a base
+
+33
+00:01:41,320 --> 00:01:44,830
+line of quality and willingness to create great experiences
+
+34
+00:01:44,830 --> 00:01:48,500
+for all your users. Of course app quality can
+
+35
+00:01:48,500 --> 00:01:52,360
+be somewhat subjective, but over the years we've identified
+
+36
+00:01:52,360 --> 00:01:55,200
+the core criteria that users identify with apps of
+
+37
+00:01:55,200 --> 00:01:58,130
+high quality. And to make your life easier, they're
+
+38
+00:01:58,130 --> 00:02:00,940
+all available on the Android developer site for you
+
+39
+00:02:00,940 --> 00:02:03,440
+to review. This is the same checklist that the
+
+40
+00:02:03,440 --> 00:02:06,590
+merchandising team for Google Play used to ensure only apps
+
+41
+00:02:06,590 --> 00:02:09,130
+of quality are featured in their promotions and
+
+42
+00:02:09,130 --> 00:02:12,800
+editor's choice categories. And they include everything, from following
+
+43
+00:02:12,800 --> 00:02:16,130
+the app design guidelines to supporting different screen orientations,
+
+44
+00:02:16,130 --> 00:02:19,410
+tablets, and other devices. And of course ensuring that
+
+45
+00:02:19,410 --> 00:02:22,860
+your app is stable and performant. So, with over
+
+46
+00:02:22,860 --> 00:02:25,780
+a million apps already available in Google Play it's
+
+47
+00:02:25,780 --> 00:02:28,680
+no longer just a numbers game. We don't need
+
+48
+00:02:28,680 --> 00:02:32,570
+just more apps or games, or even more developers.
+
+49
+00:02:32,570 --> 00:02:36,770
+What we want is high quality apps from great developers, like you.
+

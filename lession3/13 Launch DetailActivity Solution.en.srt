@@ -1,0 +1,48 @@
+1
+00:00:00,300 --> 00:00:03,360
+The solution is to lauch an explicit intent to
+
+2
+00:00:03,360 --> 00:00:07,750
+the Detail Activity Class. We'll go to On Create View,
+
+3
+00:00:07,750 --> 00:00:10,610
+where our On Item click listener is defined. To
+
+4
+00:00:10,610 --> 00:00:13,460
+pass in the Weather Forecast information, we can use an
+
+5
+00:00:13,460 --> 00:00:16,000
+intent extra, which is a key value pair in
+
+6
+00:00:16,000 --> 00:00:20,090
+the Intent. We use the key name, Intent.extratext, but we
+
+7
+00:00:20,090 --> 00:00:22,800
+can use any string for the key. As long as
+
+8
+00:00:22,800 --> 00:00:26,110
+we use the same key when reading the information out.
+
+9
+00:00:26,110 --> 00:00:29,150
+Just as in the toast, we obtain the forecast
+
+10
+00:00:29,150 --> 00:00:31,850
+data from the current list item, by calling get
+
+11
+00:00:31,850 --> 00:00:34,600
+item on the adapter at the given position. Once
+
+12
+00:00:34,600 --> 00:00:37,320
+we've added the intent, we just start the activity.
+

@@ -1,0 +1,48 @@
+1
+00:00:00,160 --> 00:00:02,270
+There's a number of reasons you'd be potentially better
+
+2
+00:00:02,270 --> 00:00:05,180
+off breaking your app into different activities. Having a
+
+3
+00:00:05,180 --> 00:00:09,760
+single monolithic activity increases the complexity of your code,
+
+4
+00:00:09,760 --> 00:00:12,370
+making the creation and management of intent filters much
+
+5
+00:00:12,370 --> 00:00:15,470
+harder and making it more difficult to maintain, test,
+
+6
+00:00:15,470 --> 00:00:18,740
+and read your activity code. It also increases the
+
+7
+00:00:18,740 --> 00:00:22,660
+risk of tightly coupling independent components and makes it
+
+8
+00:00:22,660 --> 00:00:25,190
+much more likely to introduce security risks if the
+
+9
+00:00:25,190 --> 00:00:29,150
+single activity includes both sensitive information and information that's safe
+
+10
+00:00:29,150 --> 00:00:31,650
+to share. A good rule of thumb is to create a
+
+11
+00:00:31,650 --> 00:00:35,260
+new activity whenever the context changes. For example, displaying a
+
+12
+00:00:35,260 --> 00:00:38,530
+different kind of data, while switching from viewing to entering data.
+

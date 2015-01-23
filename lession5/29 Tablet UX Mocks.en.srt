@@ -1,0 +1,128 @@
+1
+00:00:00,120 --> 00:00:02,600
+When we were learning that response in design, we saw that
+
+2
+00:00:02,600 --> 00:00:05,360
+a common pattern was to use the master detail flow, which
+
+3
+00:00:05,360 --> 00:00:08,410
+is what were going to use for sunshine. Here are the
+
+4
+00:00:08,410 --> 00:00:11,580
+tablet mocks. We have a list of forecasts on the left, and
+
+5
+00:00:11,580 --> 00:00:14,220
+then for the selected item, we see the detail pane on
+
+6
+00:00:14,220 --> 00:00:18,080
+the right. This applies for a seven inch and ten inch tablets.
+
+7
+00:00:18,080 --> 00:00:22,380
+Both portrait and landscape orientations. In portrait mode, the columns are
+
+8
+00:00:22,380 --> 00:00:25,670
+just a little bit narrower, but it's still a two pane UI.
+
+9
+00:00:25,670 --> 00:00:28,220
+In terms of implementation, all of this will be under the
+
+10
+00:00:28,220 --> 00:00:31,020
+main activity. Then on the left, we have the forecast fragment.
+
+11
+00:00:31,020 --> 00:00:34,070
+And then on the right, we have the detail fragment. On
+
+12
+00:00:34,070 --> 00:00:36,846
+the phone, we would still have the main activity with the list
+
+13
+00:00:36,846 --> 00:00:39,580
+of forecast. And then selecting an item would still launch the
+
+14
+00:00:39,580 --> 00:00:44,480
+detail activity. Here's another way to visualize it. On the tablet, we
+
+15
+00:00:44,480 --> 00:00:47,630
+have two fragments side by side under one activity. And then
+
+16
+00:00:47,630 --> 00:00:51,030
+on the phone, we have the first activity containing the first fragment.
+
+17
+00:00:51,030 --> 00:00:54,080
+Selecting an item will launch the second activity containing the second
+
+18
+00:00:54,080 --> 00:00:57,640
+fragment. We're going to break this up into multiple coding tasks until
+
+19
+00:00:57,640 --> 00:01:00,140
+we build up the final layout. First we'll build up the
+
+20
+00:01:00,140 --> 00:01:03,460
+two pane UI for tablets. Then we'll hook up the communication
+
+21
+00:01:03,460 --> 00:01:07,070
+between the two fragments, so that's selecting an item replaces the
+
+22
+00:01:07,070 --> 00:01:09,530
+detail pane on the right. Then we'll learn how to show
+
+23
+00:01:09,530 --> 00:01:12,590
+an activated state on the currently selected item, so we know
+
+24
+00:01:12,590 --> 00:01:16,100
+what the details pane corresponds to. We'll also need to make
+
+25
+00:01:16,100 --> 00:01:18,630
+sure that the scroll position is maintained across
+
+26
+00:01:18,630 --> 00:01:22,430
+orientation changes. After that, we'll update the detail layout
+
+27
+00:01:22,430 --> 00:01:24,730
+so it's optimized for these wider screens. And
+
+28
+00:01:24,730 --> 00:01:27,370
+then we'll modify the adapter so that today's layout
+
+29
+00:01:27,370 --> 00:01:29,340
+looks like the other days. There's no special
+
+30
+00:01:29,340 --> 00:01:31,980
+today layout on the tablet. So hopefully it's clear
+
+31
+00:01:31,980 --> 00:01:34,930
+how we're going to approach implementing this tablet behavior and
+
+32
+00:01:34,930 --> 00:01:36,660
+we're going to step through it slowly, one by one
+

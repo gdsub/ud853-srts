@@ -1,0 +1,8 @@
+1
+00:00:36,300 --> 00:00:39,850
+>> The goal is to ensure your app provides a seamless, efficient experience for
+
+2
+00:00:39,850 --> 00:00:42,890
+your users, even when networks may be slow or unavailable
+

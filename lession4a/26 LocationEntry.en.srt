@@ -1,0 +1,12 @@
+1
+00:00:00,490 --> 00:00:05,280
+Create a matching location entry table-creating query from the location entry
+
+2
+00:00:05,280 --> 00:00:09,910
+contract, using the weather entry one as a model. The good news is that this
+
+3
+00:00:09,910 --> 00:00:14,820
+is a simpler query. And if you really hate databases, just move to the solution.
+

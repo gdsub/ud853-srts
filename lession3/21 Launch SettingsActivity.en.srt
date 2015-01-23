@@ -1,0 +1,36 @@
+1
+00:00:00,390 --> 00:00:04,430
+Now it's time to launch the SettingsAactivity from the menu item.
+
+2
+00:00:04,430 --> 00:00:07,950
+We need to launch it from two places, the MainActivity and the DetailActivity.
+
+3
+00:00:09,150 --> 00:00:13,000
+Afterwards, compile and run the app to make sure that it works. This is what it
+
+4
+00:00:13,000 --> 00:00:16,883
+should look like. From the MainActivity, if you tap on Settings menu,
+
+5
+00:00:16,883 --> 00:00:22,030
+it should bring you to the SettingsActivity. It is expected for it to be blank,
+
+6
+00:00:22,030 --> 00:00:26,320
+because we haven't populated it yet. Now let's try the DetailActivity.
+
+7
+00:00:26,320 --> 00:00:29,940
+If you tap on the Forecast, you can go into the DetailActivity and
+
+8
+00:00:29,940 --> 00:00:33,710
+then, you can go into the SettingsActivity. Complete the task and
+
+9
+00:00:33,710 --> 00:00:35,710
+then verify that your app behavior is like this.
+

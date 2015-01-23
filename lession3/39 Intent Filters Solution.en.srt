@@ -1,0 +1,32 @@
+1
+00:00:00,260 --> 00:00:03,220
+You could register a listener for the action power connected
+
+2
+00:00:03,220 --> 00:00:06,630
+event and you should do that within your manifest. That
+
+3
+00:00:06,630 --> 00:00:08,420
+way, it can be called to start your app once
+
+4
+00:00:08,420 --> 00:00:11,190
+the device is getting charged, even if it's been terminated since
+
+5
+00:00:11,190 --> 00:00:13,200
+the last time you were using it. You can use
+
+6
+00:00:13,200 --> 00:00:15,830
+a similar approach to delay trying to send data until the
+
+7
+00:00:15,830 --> 00:00:19,270
+device has internet connectivity. Would it change behavior of the
+
+8
+00:00:19,270 --> 00:00:21,950
+user experience when you're connected to a car or desk dock?
+

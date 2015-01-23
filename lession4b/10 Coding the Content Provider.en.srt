@@ -1,0 +1,88 @@
+1
+00:00:00,390 --> 00:00:04,260
+Before we start coding our content provider, let's
+
+2
+00:00:04,260 --> 00:00:07,000
+make sure the manifest is set up correctly.
+
+3
+00:00:07,000 --> 00:00:09,760
+You need to update the androidmanifest.xml file within
+
+4
+00:00:09,760 --> 00:00:12,550
+the application tag to add the content provider. So
+
+5
+00:00:12,550 --> 00:00:16,140
+that android's content resolver can see it. The
+
+6
+00:00:16,140 --> 00:00:19,030
+authority really should match your package name. While
+
+7
+00:00:19,030 --> 00:00:21,860
+the name indicates which file your content provider
+
+8
+00:00:21,860 --> 00:00:25,730
+class is in. Next, let's code up on create.
+
+9
+00:00:25,730 --> 00:00:28,380
+We'll begin by creating an instance variable for our
+
+10
+00:00:28,380 --> 00:00:33,650
+database helper. In on create, we initiate our instance variable.
+
+11
+00:00:33,650 --> 00:00:36,490
+We return true, which is how we tell Android that
+
+12
+00:00:36,490 --> 00:00:40,150
+the content provider has been created successfully. It turns out
+
+13
+00:00:40,150 --> 00:00:42,060
+that we can repurpose the same test we did
+
+14
+00:00:42,060 --> 00:00:45,200
+for the database to test our new content provider. This
+
+15
+00:00:45,200 --> 00:00:47,920
+will allow you to both test your content provider code
+
+16
+00:00:47,920 --> 00:00:51,060
+and see how the content provider calls replace the SQLI
+
+17
+00:00:51,060 --> 00:00:54,240
+database calls. Let's start by using Android
+
+18
+00:00:54,240 --> 00:00:57,730
+Studio to copy TestDB to test provider.
+
+19
+00:01:01,690 --> 00:01:06,050
+Let's rename test create DB, to test delete DB.
+
+20
+00:01:08,330 --> 00:01:12,740
+So we can start with a clean slate. We'll just leave the M context dot delete
+
+21
+00:01:12,740 --> 00:01:15,850
+database line in there. We'll leave the other
+
+22
+00:01:15,850 --> 00:01:18,260
+test the same, we'll get to it soon.
+

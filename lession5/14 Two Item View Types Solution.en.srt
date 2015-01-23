@@ -1,0 +1,32 @@
+1
+00:00:00,008 --> 00:00:02,530
+To finish [INAUDIBLE] to do we modify the
+
+2
+00:00:02,530 --> 00:00:05,350
+new view method to choose layout ID based on
+
+3
+00:00:05,350 --> 00:00:08,080
+view type. If the view type is today then
+
+4
+00:00:08,080 --> 00:00:10,880
+we use this resource ID. This points to the
+
+5
+00:00:10,880 --> 00:00:14,430
+layout xml file list item forecast today. If the
+
+6
+00:00:14,430 --> 00:00:16,350
+list type is for a future day, then we
+
+7
+00:00:16,350 --> 00:00:19,380
+use this resource ID. This points to the list
+
+8
+00:00:19,380 --> 00:00:22,680
+item forecast layout xml. Then we inflate that layout.
+

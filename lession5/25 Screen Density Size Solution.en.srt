@@ -1,0 +1,28 @@
+1
+00:00:00,600 --> 00:00:05,640
+The Nexus One has a 3.7 inch screen, and the Nexus 5, a 4.9 inch display, so
+
+2
+00:00:05,640 --> 00:00:07,560
+they both fall comfortably within the normal range
+
+3
+00:00:07,560 --> 00:00:10,190
+for screen size. The Nexus One has a screen
+
+4
+00:00:10,190 --> 00:00:15,110
+density of 252 dpi, which is hdpi, whereas
+
+5
+00:00:15,110 --> 00:00:17,370
+the Nexus 5, which was released three years after
+
+6
+00:00:17,370 --> 00:00:19,880
+the Nexus One, has a much higher screen
+
+7
+00:00:19,880 --> 00:00:24,910
+density, 445 dots per inch. That makes it xxhdpi.
+

@@ -1,0 +1,76 @@
+1
+00:00:00,520 --> 00:00:03,070
+So, how would we use a service to
+
+2
+00:00:03,070 --> 00:00:07,190
+implement our application? Fortunately, we've already done most
+
+3
+00:00:07,190 --> 00:00:09,880
+of the work. We have a content provider
+
+4
+00:00:09,880 --> 00:00:12,160
+with a content notifier that will notify our
+
+5
+00:00:12,160 --> 00:00:17,370
+content observers. Our FetchWeatherTask already runs completely independently
+
+6
+00:00:17,370 --> 00:00:20,460
+of our UI. Good on us. Now, we
+
+7
+00:00:20,460 --> 00:00:22,790
+can make use of that Intent Service that
+
+8
+00:00:22,790 --> 00:00:25,780
+Rato mentioned earlier. With just a few small
+
+9
+00:00:25,780 --> 00:00:28,230
+changes, we can get our code working,
+
+10
+00:00:28,230 --> 00:00:30,630
+with an Intent Service, instead of with our
+
+11
+00:00:30,630 --> 00:00:34,280
+Fetch Weather task. To start, let's create a
+
+12
+00:00:34,280 --> 00:00:37,660
+new package for our service. [SOUND] Then we'll
+
+13
+00:00:37,660 --> 00:00:44,476
+add a new Java class in that package that extends inside Service. We hit Ctrl+I
+
+14
+00:00:44,476 --> 00:00:47,270
+to once again, add the required abstract method.
+
+15
+00:00:48,830 --> 00:00:51,780
+And Ctrl+O in order to add the constructor.
+
+16
+00:00:51,780 --> 00:00:57,420
+Since the service is an Android component, you guessed it, it needs to be in the
+
+17
+00:00:57,420 --> 00:01:04,200
+manifest. Okay, let's do this. Let's finish implementing the SunshineService
+
+18
+00:01:04,200 --> 00:01:09,490
+and call it from ForecastFragment. You can start a service using an intent with
+
+19
+00:01:09,490 --> 00:01:14,830
+the StartService method. It will help to remember how to use explicit intents.
+

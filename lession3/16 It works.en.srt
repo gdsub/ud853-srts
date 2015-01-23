@@ -1,0 +1,28 @@
+1
+00:00:00,400 --> 00:00:03,320
+Woo Hoo. Clicking our list items works.
+
+2
+00:00:03,320 --> 00:00:03,920
+>> Woo Hoo. [CLAP]
+
+3
+00:00:03,920 --> 00:00:05,730
+>> Our app is awesome.
+
+4
+00:00:05,730 --> 00:00:05,900
+>> Yeah.
+
+5
+00:00:05,900 --> 00:00:15,070
+>> But clicking on the settings menu does nothing. Whomp whomp. #sadtrombone.
+
+6
+00:00:15,070 --> 00:00:19,990
+>> Mm, don't do that again. Let me save
+
+7
+00:00:19,990 --> 00:00:22,350
+you from Dan. And let's go build the settings now.
+

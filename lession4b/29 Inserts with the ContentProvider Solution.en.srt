@@ -1,0 +1,44 @@
+1
+00:00:00,940 --> 00:00:07,092
+All right. You're done. Let's take a look at my solution. All right. So, here's
+
+2
+00:00:07,092 --> 00:00:10,657
+what our addLocation function looks like, locationSetting, cityName,
+
+3
+00:00:10,657 --> 00:00:14,630
+latitude and longitude. Just like in our content
+
+4
+00:00:14,630 --> 00:00:17,230
+provider test, we can use getContentResolver to query
+
+5
+00:00:17,230 --> 00:00:20,410
+based upon the content URI. Remember that the
+
+6
+00:00:20,410 --> 00:00:23,390
+default location entry CONTENT_URI passes all of the
+
+7
+00:00:23,390 --> 00:00:26,240
+parameters into the database. So we can easily
+
+8
+00:00:26,240 --> 00:00:29,030
+construct a query containing the location setting to see if
+
+9
+00:00:29,030 --> 00:00:32,020
+it's in the database yet. If it's not, then the query
+
+10
+00:00:32,020 --> 00:00:34,710
+will return an empty set and we should insert the new
+
+11
+00:00:34,710 --> 00:00:38,850
+city name, location setting, latitude, and longitude into the database together.
+

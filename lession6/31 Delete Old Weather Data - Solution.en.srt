@@ -1,0 +1,40 @@
+1
+00:00:00,160 --> 00:00:03,350
+All right, you're done. Let's look at the solution. If you
+
+2
+00:00:03,350 --> 00:00:06,570
+guessed that we were going add this code to Sunshine sync adapter,
+
+3
+00:00:06,570 --> 00:00:09,570
+you would've been right. We're actually going to place the code right
+
+4
+00:00:09,570 --> 00:00:12,720
+here, because this is where we know we've done a successful insert.
+
+5
+00:00:12,720 --> 00:00:14,840
+So what do we do? So we start off with the
+
+6
+00:00:14,840 --> 00:00:18,370
+calendar object, for the current day. Then we add negative 1 to
+
+7
+00:00:18,370 --> 00:00:21,770
+the date which means it points to yesterday. Finally, we convert
+
+8
+00:00:21,770 --> 00:00:25,480
+that into a database-friendly string. And then we do a query to
+
+9
+00:00:25,480 --> 00:00:28,270
+delete everything less than or equal to that day.
+
+10
+00:00:28,270 --> 00:00:30,830
+Done. It's always good to clean up after yourself.
+

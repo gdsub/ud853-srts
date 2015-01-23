@@ -1,0 +1,156 @@
+1
+00:00:00,590 --> 00:00:03,070
+One of the most powerful features of Android, since the
+
+2
+00:00:03,070 --> 00:00:05,550
+start of the platform has been the ability to deliver
+
+3
+00:00:05,550 --> 00:00:09,100
+timely notifications to users. We're going to add a simple
+
+4
+00:00:09,100 --> 00:00:12,480
+one to our weather app. This simple notification will show the
+
+5
+00:00:12,480 --> 00:00:16,730
+weather icon for the forecast, the forecast text, and the
+
+6
+00:00:16,730 --> 00:00:19,420
+high and low temperature for the day. One of the key
+
+7
+00:00:19,420 --> 00:00:21,870
+things we wanted to point out is how not to
+
+8
+00:00:21,870 --> 00:00:25,920
+be spammy with our notification. Our app will display at most
+
+9
+00:00:25,920 --> 00:00:29,080
+a single notification. It really wouldn't make sense if these
+
+10
+00:00:29,080 --> 00:00:33,120
+notifications stacked up anyhow. They don't display enough information to
+
+11
+00:00:33,120 --> 00:00:36,250
+give context. The key thing with notifications is to deliver
+
+12
+00:00:36,250 --> 00:00:39,970
+a useful morsel of information, formatted in a standard way, so
+
+13
+00:00:39,970 --> 00:00:42,760
+that it harmonizes with the rest of the system. We'll
+
+14
+00:00:42,760 --> 00:00:45,440
+start by adding a string for the preference for the
+
+15
+00:00:45,440 --> 00:00:48,140
+last time we sent a notification to the user. As
+
+16
+00:00:48,140 --> 00:00:51,210
+well as a format string for the body of the notification.
+
+17
+00:00:51,210 --> 00:00:54,610
+Let's implement the notification inside of our sync adapter.
+
+18
+00:00:54,610 --> 00:00:56,670
+Our notification will be based upon what is in
+
+19
+00:00:56,670 --> 00:01:00,100
+the database. So, we'll create projection and column indices
+
+20
+00:01:00,100 --> 00:01:04,110
+value in our sync adapter, for the weather id. Description,
+
+21
+00:01:04,110 --> 00:01:07,320
+max and then temperature, let's add a function to
+
+22
+00:01:07,320 --> 00:01:10,020
+notify us of the weather. We'll add some additional
+
+23
+00:01:10,020 --> 00:01:13,430
+constants up here. One for day in mili's and
+
+24
+00:01:13,430 --> 00:01:16,220
+one so that we an use the same notification ID.
+
+25
+00:01:16,220 --> 00:01:19,060
+Reusing the notification ID means that our application will only
+
+26
+00:01:19,060 --> 00:01:23,260
+post at most one notification. And then finally, we'll call
+
+27
+00:01:23,260 --> 00:01:25,750
+this function at a reasonable place within our on perform
+
+28
+00:01:25,750 --> 00:01:29,540
+sync function within our sync adapter. Inside of notify weather, we'll
+
+29
+00:01:29,540 --> 00:01:31,761
+check to see whether or not, we've actually shown notification
+
+30
+00:01:31,761 --> 00:01:36,010
+that day. If we haven't, then we'll talk to the database.
+
+31
+00:01:36,010 --> 00:01:38,140
+Get a cursor for the current resolver for the current
+
+32
+00:01:38,140 --> 00:01:41,320
+day, and then fetch the data, but one thing were not
+
+33
+00:01:41,320 --> 00:01:45,770
+doing is actually showing the notification. Now all right, were getting near
+
+34
+00:01:45,770 --> 00:01:48,970
+the end. Implement a weather notification,
+
+35
+00:01:48,970 --> 00:01:53,380
+build our notification using Notification Compat.builder
+
+36
+00:01:53,380 --> 00:01:59,910
+pointing to a Pending Intent built by the v4 compatible. TaskStackBuilder and
+
+37
+00:01:59,910 --> 00:02:03,770
+sent with the NotificationManager. Hint: an
+
+38
+00:02:03,770 --> 00:02:06,860
+explicit intent to our main activity is
+
+39
+00:02:06,860 --> 00:02:11,280
+a good idea here. There's lots of documentation on this you'll want to read.
+

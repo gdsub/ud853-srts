@@ -1,0 +1,204 @@
+1
+00:00:00,070 --> 00:00:02,270
+Once the two panes are showing up on a tablet, let's
+
+2
+00:00:02,270 --> 00:00:05,390
+modify our code to handle the list item click. On the phone,
+
+3
+00:00:05,390 --> 00:00:08,050
+if an item is clicked in the forecast fragment, then we
+
+4
+00:00:08,050 --> 00:00:11,430
+must launch the detail activity. On the tablet UI, once an item
+
+5
+00:00:11,430 --> 00:00:14,720
+in the forecast fragment is clicked, we notify the main activity,
+
+6
+00:00:14,720 --> 00:00:18,360
+which goes and replaces the detail fragment. The reason the two fragments
+
+7
+00:00:18,360 --> 00:00:21,730
+don't talk to each other is because we want to maintain abstraction from
+
+8
+00:00:21,730 --> 00:00:25,100
+each other. If the forecast list fragment started assuming that the detail
+
+9
+00:00:25,100 --> 00:00:28,360
+fragment was always right next to it, then the assumption would break.
+
+10
+00:00:28,360 --> 00:00:31,360
+For example, on the phone where the detail fragment is not inside
+
+11
+00:00:31,360 --> 00:00:35,170
+the main activity. Therefore our fragment must go through its activity and
+
+12
+00:00:35,170 --> 00:00:37,990
+the activity must know how to dispatch the event to the other
+
+13
+00:00:37,990 --> 00:00:41,000
+fragments. Keep in mind that our fragment doesn't always have to be
+
+14
+00:00:41,000 --> 00:00:43,860
+used in the same activity, in order for the forecast fragment to
+
+15
+00:00:43,860 --> 00:00:47,280
+talk to the main activity we should create a callback interface. It's
+
+16
+00:00:47,280 --> 00:00:50,390
+a better assumption to say that the fragment will always be within
+
+17
+00:00:50,390 --> 00:00:53,730
+an activity that implements this callback than to say that
+
+18
+00:00:53,730 --> 00:00:56,980
+the forecast fragment will always be inside the main activity. The
+
+19
+00:00:56,980 --> 00:00:59,660
+detail fragment is a good example of how a fragment can
+
+20
+00:00:59,660 --> 00:01:02,170
+be used in two different activities. The main activity and the
+
+21
+00:01:02,170 --> 00:01:05,120
+detail activity. So don't rely on get activity returning a
+
+22
+00:01:05,120 --> 00:01:08,830
+specific activity class. Using the gist that we provided, use a
+
+23
+00:01:08,830 --> 00:01:11,750
+callback class to notify the activity that a list item has
+
+24
+00:01:11,750 --> 00:01:15,310
+been selected. See the hint below on the item click listener.
+
+25
+00:01:15,310 --> 00:01:18,622
+Then the activity can either launch the detail activity or
+
+26
+00:01:18,622 --> 00:01:21,230
+replace the detail fragment, based on whether it's a phone or
+
+27
+00:01:21,230 --> 00:01:23,460
+tablet. When you work on this task, you'll run into
+
+28
+00:01:23,460 --> 00:01:25,860
+an issue of how to pass the selected date to the
+
+29
+00:01:25,860 --> 00:01:29,120
+detail fragment. Now your instinct might say to create a
+
+30
+00:01:29,120 --> 00:01:32,910
+custom constructor where you can pass in the date. However, we
+
+31
+00:01:32,910 --> 00:01:37,130
+don't normally create custom fragment constructors. If you ever rotate the
+
+32
+00:01:37,130 --> 00:01:40,790
+device, for example, the system can't call your custom fragment constructor
+
+33
+00:01:40,790 --> 00:01:42,980
+with the right parameters, however it can use the
+
+34
+00:01:42,980 --> 00:01:46,270
+empty fragment constructor and initialize it with the same bundle
+
+35
+00:01:46,270 --> 00:01:48,930
+of arguments you used earlier. So to pass information to
+
+36
+00:01:48,930 --> 00:01:52,950
+initialize a fragment, create a bundle of key value pairs,
+
+37
+00:01:52,950 --> 00:01:54,480
+and then set that as the arguments on the
+
+38
+00:01:54,480 --> 00:01:57,330
+fragment. Don't confuse this arguments
+
+39
+00:01:57,330 --> 00:01:59,870
+bundle with the savedInstanceState bundle.
+
+40
+00:01:59,870 --> 00:02:02,350
+Once a fragment has been initialized, you can't change the
+
+41
+00:02:02,350 --> 00:02:06,460
+arguments. You can only read from them, as seen here.
+
+42
+00:02:06,460 --> 00:02:09,500
+On the other hand the saved state bundle is for storing information
+
+43
+00:02:09,500 --> 00:02:11,900
+once a fragment has been running. And you can populate it in
+
+44
+00:02:11,900 --> 00:02:13,980
+the on savedInstanceState method. The bundle
+
+45
+00:02:13,980 --> 00:02:16,510
+can preserve state across orientation changes
+
+46
+00:02:16,510 --> 00:02:19,270
+or if the fragment or activity gets killed by the system. That's why
+
+47
+00:02:19,270 --> 00:02:22,950
+you receive it back again in the onCreate or onCreateView methods. This
+
+48
+00:02:22,950 --> 00:02:25,030
+is what the app should look like when you're done. When you
+
+49
+00:02:25,030 --> 00:02:28,170
+tap on a different date, it updates the detail pane. You can
+
+50
+00:02:28,170 --> 00:02:29,970
+remove any hard coded data because
+
+51
+00:02:29,970 --> 00:02:31,880
+the layout should be populated dynamically now.
+

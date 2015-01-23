@@ -1,0 +1,28 @@
+1
+00:00:00,100 --> 00:00:04,560
+All right, as the comment says below, now that we have a location let's add some
+
+2
+00:00:04,560 --> 00:00:09,270
+weather. Let's implement the weather part of our insert redb test. I'm going to
+
+3
+00:00:09,270 --> 00:00:14,700
+give you some dummy data to help you out. Note that the location key is the row
+
+4
+00:00:14,700 --> 00:00:19,540
+ID of the data we just inserted. Also note that I can use this short syntax for
+
+5
+00:00:19,540 --> 00:00:22,668
+weather entry, because I added this import at the top of the file.
+
+6
+00:00:22,668 --> 00:00:26,910
+Alright, so we insert that provided data that I gave you into our database, and
+
+7
+00:00:26,910 --> 00:00:28,770
+verify that we can read it back out again.
+

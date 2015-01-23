@@ -1,0 +1,164 @@
+1
+00:00:00,200 --> 00:00:03,890
+Okay. So now we have the wireframes implemented for both screens.
+
+2
+00:00:03,890 --> 00:00:07,080
+But what does it look like on the tablet? Well, unfortunately,
+
+3
+00:00:07,080 --> 00:00:08,920
+when we take the phone UI and stretch it out on
+
+4
+00:00:08,920 --> 00:00:11,630
+a tablet, it doesn't look that great. There's a lot of empty
+
+5
+00:00:11,630 --> 00:00:14,690
+white space here. We could better take advantage of this screen
+
+6
+00:00:14,690 --> 00:00:18,860
+real estate by showing more useful information. For example, why do the
+
+7
+00:00:18,860 --> 00:00:21,310
+details need to be a tap away when they could just
+
+8
+00:00:21,310 --> 00:00:25,380
+as easily fit on this screen? And, furthermore, if the user wants
+
+9
+00:00:25,380 --> 00:00:27,850
+to look through the full list of forecasts, their eyes
+
+10
+00:00:27,850 --> 00:00:32,380
+must go like this, which is an unpleasant reading experience. If
+
+11
+00:00:32,380 --> 00:00:34,960
+we want the user to read some content, we should keep
+
+12
+00:00:34,960 --> 00:00:38,340
+the width narrower, so that they can scan it quickly. These
+
+13
+00:00:38,340 --> 00:00:40,080
+considerations are part of responsive
+
+14
+00:00:40,080 --> 00:00:42,400
+design. Responsive design means designing your
+
+15
+00:00:42,400 --> 00:00:45,190
+app by keeping in mind that it'll be used across a
+
+16
+00:00:45,190 --> 00:00:48,230
+range of different device screen sizes. But how do we do
+
+17
+00:00:48,230 --> 00:00:50,540
+that, and what does it mean to build for larger screen
+
+18
+00:00:50,540 --> 00:00:53,700
+devices like tablets. Well, I can show you some examples of
+
+19
+00:00:53,700 --> 00:00:57,420
+how apps adapt using multi-pane layouts. In the Android Design Guide,
+
+20
+00:00:57,420 --> 00:01:01,000
+there's a section on multi-pane layouts. One technique is to combine
+
+21
+00:01:01,000 --> 00:01:04,000
+multiple views together. For example, in the People app, you have
+
+22
+00:01:04,000 --> 00:01:07,800
+the contact list and the contact card for additional details. On
+
+23
+00:01:07,800 --> 00:01:10,240
+the tablet, we can put them side by side. This is
+
+24
+00:01:10,240 --> 00:01:13,120
+also known as the master detail flow. This is the master
+
+25
+00:01:13,120 --> 00:01:15,580
+list and this is the detail pane. In the settings app,
+
+26
+00:01:15,580 --> 00:01:18,310
+we have another example. The column width adjust based on the
+
+27
+00:01:18,310 --> 00:01:21,430
+available screen width. In the calendar app, we have panels, and
+
+28
+00:01:21,430 --> 00:01:25,170
+they stack vertically in the portrait orientation but horizontally in the
+
+29
+00:01:25,170 --> 00:01:28,650
+landscape orientation. There also a couple of other examples that you
+
+30
+00:01:28,650 --> 00:01:31,550
+can look through as well. If you want more information on
+
+31
+00:01:31,550 --> 00:01:35,020
+designing for tablets or responsive design in general, you can check
+
+32
+00:01:35,020 --> 00:01:38,140
+out the links below for more details. In this course, we're
+
+33
+00:01:38,140 --> 00:01:40,390
+learning how to build up the phone UI first, and then the
+
+34
+00:01:40,390 --> 00:01:42,740
+tablet UI. But in reality, when we're designing
+
+35
+00:01:42,740 --> 00:01:44,970
+it, we thought about responsive design from day
+
+36
+00:01:44,970 --> 00:01:47,010
+one. When you're building your own app, it's
+
+37
+00:01:47,010 --> 00:01:49,550
+bad practice to just completely design and build
+
+38
+00:01:49,550 --> 00:01:51,390
+your phone app and then start to brainstorm
+
+39
+00:01:51,390 --> 00:01:53,810
+about the tablet UI. That's because the tablet
+
+40
+00:01:53,810 --> 00:01:55,780
+UI often has an impact on the phone
+
+41
+00:01:55,780 --> 00:01:58,510
+design, as well as the architectural decisions made here.
+

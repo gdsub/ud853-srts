@@ -1,0 +1,32 @@
+1
+00:00:00,100 --> 00:00:04,814
+Perfect, thanks Dan. Since he's turned you into a UI expert now, where should we
+
+2
+00:00:04,814 --> 00:00:09,010
+define this list item layout? If you're thinking the layout folder,
+
+3
+00:00:09,010 --> 00:00:13,510
+under the resources directory, then you are correct. Here you can create a new
+
+4
+00:00:13,510 --> 00:00:18,375
+layout resource file called list item forecast. Inside that file,
+
+5
+00:00:18,375 --> 00:00:23,570
+define a text view as the root view, then assign it an ID list item forecast
+
+6
+00:00:23,570 --> 00:00:27,870
+text view. Give it a minimum height, so that the list item isn't too short for
+
+7
+00:00:27,870 --> 00:00:32,150
+tapping on and vertically center the text within that item. Go ahead and
+
+8
+00:00:32,150 --> 00:00:34,730
+try it yourself now. And check the box when you're done.
+

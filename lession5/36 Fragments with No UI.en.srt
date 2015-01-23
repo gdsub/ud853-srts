@@ -1,0 +1,64 @@
+1
+00:00:00,230 --> 00:00:03,650
+The final advantage of fragments, doesn't involve user interfaces at
+
+2
+00:00:03,650 --> 00:00:07,505
+all. As you know, as visual components, activities are destroyed and
+
+3
+00:00:07,505 --> 00:00:10,970
+re-created, whenever the device configuration changes. Most notably, when the
+
+4
+00:00:10,970 --> 00:00:14,200
+screen orientation switches. That makes sense, because there's a good chance
+
+5
+00:00:14,200 --> 00:00:16,200
+we'll want to create a different layout, to better suit the
+
+6
+00:00:16,200 --> 00:00:19,000
+new configuration. But if we can use fragments to break up
+
+7
+00:00:19,000 --> 00:00:22,340
+visual activity modules, and find out logical ones as well,
+
+8
+00:00:22,340 --> 00:00:25,270
+it turns out we can do exactly that. And because these
+
+9
+00:00:25,270 --> 00:00:27,770
+fragments are non-visual, there's no need to recreate them
+
+10
+00:00:27,770 --> 00:00:30,640
+every time the UI needs updating. Within the onCreate
+
+11
+00:00:30,640 --> 00:00:35,640
+handler of your non-UI fragment, call setRetainInstance, passing in
+
+12
+00:00:35,640 --> 00:00:40,220
+true, and return null in your onCreate view handler.
+
+13
+00:00:40,220 --> 00:00:42,550
+Then, once the parent activity is created, you can
+
+14
+00:00:42,550 --> 00:00:45,180
+kick off any connections, threads, or tasks that are
+
+15
+00:00:45,180 --> 00:00:47,520
+bound to the lifetime of the activity, which don't
+
+16
+00:00:47,520 --> 00:00:49,750
+need to be interrupted every time the device rotates.
+

@@ -1,0 +1,200 @@
+1
+00:00:00,640 --> 00:00:05,360
+I was 12 years old when I got my first modem, a 1200 baud ACE compatible. I
+
+2
+00:00:05,360 --> 00:00:09,335
+started getting online, not the internet online, local
+
+3
+00:00:09,335 --> 00:00:12,712
+BBSs. At around the same time, yuppie was supporting
+
+4
+00:00:12,712 --> 00:00:15,070
+the first brick-sized mobile phones as the first
+
+5
+00:00:15,070 --> 00:00:18,305
+GSM network started rolling out. Fast forward less than
+
+6
+00:00:18,305 --> 00:00:22,470
+17 years to 2007, and the iPhone launches, followed
+
+7
+00:00:22,470 --> 00:00:26,140
+less than a year by Android. And almost overnight,
+
+8
+00:00:26,140 --> 00:00:28,190
+we've come to expect the world's information in the
+
+9
+00:00:28,190 --> 00:00:31,740
+palm of our hands. Just six years after the first
+
+10
+00:00:31,740 --> 00:00:34,680
+Android phone launched, it's powering everything from phones to
+
+11
+00:00:34,680 --> 00:00:37,740
+tablets, watches, TVs and cars. So where do we go
+
+12
+00:00:37,740 --> 00:00:41,245
+next? The most obvious answer is enabling the same
+
+13
+00:00:41,245 --> 00:00:44,884
+handheld cloud connecting computing platform to the next 5 billion
+
+14
+00:00:44,884 --> 00:00:48,680
+people. As hardware becomes cheaper and more powerful, more of
+
+15
+00:00:48,680 --> 00:00:52,950
+the world's population will be able to get internet-connected computers.
+
+16
+00:00:52,950 --> 00:00:55,100
+And the smartphone is going to be what makes
+
+17
+00:00:55,100 --> 00:00:58,850
+it possible. To facilitate this, we're seeing new approaches
+
+18
+00:00:58,850 --> 00:01:02,010
+to getting online, mesh networks, white spaces, or even
+
+19
+00:01:02,010 --> 00:01:06,610
+Google's Project Loon. We'll hopefully soon see ubiquitous world-wide internet
+
+20
+00:01:06,610 --> 00:01:10,160
+connectivity become a reality. At the same time, smartphones
+
+21
+00:01:10,160 --> 00:01:12,490
+will start to disappear. In the same way that
+
+22
+00:01:12,490 --> 00:01:14,810
+we don't think of computers as computers once they
+
+23
+00:01:14,810 --> 00:01:18,040
+become part of our dishwashers, cars, or TVs, we'll stop
+
+24
+00:01:18,040 --> 00:01:20,410
+thinking of mobiles as such when they disappear into our
+
+25
+00:01:20,410 --> 00:01:23,980
+watches and [UNKNOWN]. We'll come to expect that anything that
+
+26
+00:01:23,980 --> 00:01:26,800
+can be improved through the incorporation of a wireless internet
+
+27
+00:01:26,800 --> 00:01:30,820
+connection will simply have one. For that to happen, we need
+
+28
+00:01:30,820 --> 00:01:33,350
+to find more creative ways to interact with computers than
+
+29
+00:01:33,350 --> 00:01:36,570
+using mouse, keyboards and touch screens. I can all ready pick
+
+30
+00:01:36,570 --> 00:01:39,860
+up my phone or lift my wrist, address Google, and
+
+31
+00:01:39,860 --> 00:01:43,660
+perform searches, send texts or email, set alarms, or take notes
+
+32
+00:01:43,660 --> 00:01:46,470
+without having to touch a screen or keyboard. Screen
+
+33
+00:01:46,470 --> 00:01:49,970
+themselves have become so sharp that pixel densities aren't
+
+34
+00:01:49,970 --> 00:01:52,570
+perceptible to the human eye. And the team at
+
+35
+00:01:52,570 --> 00:01:55,630
+Google X are building contact lenses capable of measuring blood
+
+36
+00:01:55,630 --> 00:01:59,420
+sugar levels. Speaking of senses, not only can I
+
+37
+00:01:59,420 --> 00:02:01,590
+control my phone by putting it either face up or
+
+38
+00:02:01,590 --> 00:02:04,170
+face down, it has a battery of sensors similar
+
+39
+00:02:04,170 --> 00:02:08,530
+to an [UNKNOWN] class warship. Light meters, temperature changes, barometers,
+
+40
+00:02:08,530 --> 00:02:10,900
+gyroscopes, all of which can be used to
+
+41
+00:02:10,900 --> 00:02:15,410
+replace text entry or automate processes. Wearables, cars,
+
+42
+00:02:15,410 --> 00:02:18,780
+and thermostats introduce even more possibilities of sensors.
+
+43
+00:02:18,780 --> 00:02:20,850
+Connect all of that to the cloud, and the
+
+44
+00:02:20,850 --> 00:02:24,460
+possibilities are endless. Future of Android isn't a
+
+45
+00:02:24,460 --> 00:02:27,420
+more powerful phone operating system. It is the
+
+46
+00:02:27,420 --> 00:02:31,410
+brains behind invisible, ubiquitous, cloud connected computing. So
+
+47
+00:02:31,410 --> 00:02:33,620
+the skills we learn today to build cool apps
+
+48
+00:02:33,620 --> 00:02:35,810
+are the same skills we'll use tomorrow
+
+49
+00:02:35,810 --> 00:02:38,620
+to control everything around us. We've taken
+
+50
+00:02:38,620 --> 00:02:42,300
+the first step into that future. I can't wait to see what you do next.
+

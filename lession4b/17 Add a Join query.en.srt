@@ -1,0 +1,108 @@
+1
+00:00:00,230 --> 00:00:02,760
+When we first defined our tables we defined
+
+2
+00:00:02,760 --> 00:00:06,510
+the relationships in terms of constraints. Now, we
+
+3
+00:00:06,510 --> 00:00:08,630
+are going to implement that relationship into our
+
+4
+00:00:08,630 --> 00:00:12,220
+query using a join this join will allow us
+
+5
+00:00:12,220 --> 00:00:14,690
+to query the weather table for values from
+
+6
+00:00:14,690 --> 00:00:18,520
+a specific location setting. We'll start by adding a
+
+7
+00:00:18,520 --> 00:00:21,570
+SQL Ite query builder class variable at the
+
+8
+00:00:21,570 --> 00:00:25,280
+top of weather provider. We'll initialize the SQLI to
+
+9
+00:00:25,280 --> 00:00:27,120
+query builder in the static constructor for the
+
+10
+00:00:27,120 --> 00:00:31,830
+class, describing the join between both tables. Note,
+
+11
+00:00:31,830 --> 00:00:35,700
+since both tables have a column named _ID.
+
+12
+00:00:35,700 --> 00:00:37,980
+We must explicitly use the table name in
+
+13
+00:00:37,980 --> 00:00:40,600
+order to disambiguate which underscore ID we are
+
+14
+00:00:40,600 --> 00:00:43,050
+talking about in the join. Then we can
+
+15
+00:00:43,050 --> 00:00:46,030
+define the query. The query is to find
+
+16
+00:00:46,030 --> 00:00:50,600
+using the question mark replacement syntax. These question marks
+
+17
+00:00:50,600 --> 00:00:53,350
+will be replaced by the query parameters. Since we
+
+18
+00:00:53,350 --> 00:00:56,460
+allow people to specify the start date in the URI,
+
+19
+00:00:56,460 --> 00:01:00,160
+we're also going to add a second selection, which includes
+
+20
+00:01:00,160 --> 00:01:02,800
+checking to see whether date text is greater than or
+
+21
+00:01:02,800 --> 00:01:05,630
+equal to our parameter. Next, we'll add a method to
+
+22
+00:01:05,630 --> 00:01:08,550
+get the weather by location entry, using the same query
+
+23
+00:01:08,550 --> 00:01:11,970
+builder. Note, that we fetch the parameters from our URI.
+
+24
+00:01:13,240 --> 00:01:15,620
+And though the string arrays, they can be substituted into
+
+25
+00:01:15,620 --> 00:01:20,620
+our query. Note that if URI does not contain a start date we actually use
+
+26
+00:01:20,620 --> 00:01:23,950
+a different selection. Finally, we add the function
+
+27
+00:01:23,950 --> 00:01:26,440
+into the query routine of our content provider.
+

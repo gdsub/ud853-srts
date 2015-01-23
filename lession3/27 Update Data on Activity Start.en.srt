@@ -1,0 +1,72 @@
+1
+00:00:00,280 --> 00:00:03,650
+On app launch, I know that you're probably tired of seeing the dummy data and
+
+2
+00:00:03,650 --> 00:00:06,721
+needing to hit the refresh button for real data every single time.
+
+3
+00:00:06,721 --> 00:00:10,630
+I'm going to show you how to display the data using the current settings each
+
+4
+00:00:10,630 --> 00:00:14,250
+time the activity is loaded. In forecast fragment,
+
+5
+00:00:14,250 --> 00:00:17,530
+we just refactored the code so that when the refresh button is selected,
+
+6
+00:00:17,530 --> 00:00:21,250
+we call this helper method, updateWeather. Now that it's in a helper method,
+
+7
+00:00:21,250 --> 00:00:25,160
+we can also call it from the onStart method. We over write onStart so
+
+8
+00:00:25,160 --> 00:00:27,970
+that the refresh happens whenever the fragment starts.
+
+9
+00:00:27,970 --> 00:00:31,950
+This will cause the weather data to appear. We'll learn all about on start, and
+
+10
+00:00:31,950 --> 00:00:35,360
+the rest of the android life cycle in the next lesson. At this point,
+
+11
+00:00:35,360 --> 00:00:39,190
+we can also remove all the fake data that we had in the onCreateView method.
+
+12
+00:00:39,190 --> 00:00:44,250
+Then we pass in an empty array list to the ArrayAdapter. Now we can test this.
+
+13
+00:00:44,250 --> 00:00:46,510
+We need to make sure that this is the first app launch and
+
+14
+00:00:46,510 --> 00:00:49,820
+that it wasn't already running,. So if it's already running, kill it.
+
+15
+00:00:49,820 --> 00:00:51,240
+And then tap to open the app,
+
+16
+00:00:51,240 --> 00:00:54,820
+and then you should see the actual weather data immediately. Under settings we
+
+17
+00:00:54,820 --> 00:00:59,310
+can change the location to be the pairs postal code. We hit OK, and
+
+18
+00:00:59,310 --> 00:01:02,950
+then return to the main list, and then we see that the weather data has updated.
+

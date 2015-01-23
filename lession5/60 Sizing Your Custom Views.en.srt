@@ -1,0 +1,244 @@
+1
+00:00:00,140 --> 00:00:03,635
+Knowing the standard widget library is nice, but as someone who
+
+2
+00:00:03,635 --> 00:00:08,430
+was once accused as not so much recreating the wheel, as hand
+
+3
+00:00:08,430 --> 00:00:11,280
+machining my own nuts and bolts, I know there are times
+
+4
+00:00:11,280 --> 00:00:13,990
+when nothing in the tool chest will quite do the job. That's
+
+5
+00:00:13,990 --> 00:00:16,470
+when it's time to dive in and build you own custom
+
+6
+00:00:16,470 --> 00:00:19,900
+view from scratch. Now we're not going to be including any custom
+
+7
+00:00:19,900 --> 00:00:22,170
+views within Sunshine, but we can still take a look at how
+
+8
+00:00:22,170 --> 00:00:25,240
+you would build one. We'll start by creating a new class for
+
+9
+00:00:25,240 --> 00:00:27,250
+our view. Let's call it My View. If
+
+10
+00:00:27,250 --> 00:00:29,650
+you're building something from scratch, rather than modify an
+
+11
+00:00:29,650 --> 00:00:32,159
+existing view, it should descend from either view
+
+12
+00:00:32,159 --> 00:00:36,760
+itself or from surface view. View offers a light
+
+13
+00:00:36,760 --> 00:00:40,820
+weight, canvas-based approach, while surface view is designed
+
+14
+00:00:40,820 --> 00:00:44,085
+specifically to support UI elements that require rapid redraws
+
+15
+00:00:44,085 --> 00:00:47,140
+and/or 3D graphics, using something like Open GL.
+
+16
+00:00:47,140 --> 00:00:50,660
+It's perfect for views that display video or games.
+
+17
+00:00:50,660 --> 00:00:53,550
+Now the existing widget library is entirely view
+
+18
+00:00:53,550 --> 00:00:56,610
+based. So let's take that approach. The base view
+
+19
+00:00:56,610 --> 00:01:01,300
+class draws an empty borderless 100 by 100 pixel
+
+20
+00:01:01,300 --> 00:01:04,830
+box. To change that, we override the onMeasure handler,
+
+21
+00:01:04,830 --> 00:01:07,160
+which allows us to indicate the view size.
+
+22
+00:01:07,160 --> 00:01:10,040
+We'll also override onDraw, in order to draw our
+
+23
+00:01:10,040 --> 00:01:13,180
+own custom view content. Now if it turns out
+
+24
+00:01:13,180 --> 00:01:15,810
+that your view should always be an empty 100
+
+25
+00:01:15,810 --> 00:01:18,690
+pixel box then you're in luck. Otherwise we need to do
+
+26
+00:01:18,690 --> 00:01:22,790
+some work. So let's start by setting our view's size. onMeasure is
+
+27
+00:01:22,790 --> 00:01:26,190
+called when your view's parent is laying out it's children. As
+
+28
+00:01:26,190 --> 00:01:27,970
+you know, when you add a view to a layout you can
+
+29
+00:01:27,970 --> 00:01:31,310
+specify a specific height or width, but in most cases you'll
+
+30
+00:01:31,310 --> 00:01:34,860
+want to either match parent or wrap the content. When a view's on
+
+31
+00:01:34,860 --> 00:01:38,270
+measure is called by its parent layout, it asks, how much space
+
+32
+00:01:38,270 --> 00:01:41,360
+will you use? And passes in how much space is available, and
+
+33
+00:01:41,360 --> 00:01:43,110
+whether the view will be given exactly that much
+
+34
+00:01:43,110 --> 00:01:46,630
+space, or at most that much space using these parameters.
+
+35
+00:01:46,630 --> 00:01:49,650
+You can decode those parameters like this. And that'll allow
+
+36
+00:01:49,650 --> 00:01:53,970
+you to obtain the size and the mode for your
+
+37
+00:01:53,970 --> 00:01:58,780
+height and width specifications. In this example we're demonstrating just
+
+38
+00:01:58,780 --> 00:02:00,820
+for the height parameter, but it works the same for
+
+39
+00:02:00,820 --> 00:02:04,000
+width. We can then use the decoded mode parameter to
+
+40
+00:02:04,000 --> 00:02:06,940
+find out what size we should set our view to.
+
+41
+00:02:06,940 --> 00:02:09,970
+If the returned mode is exactly, the view will be placed
+
+42
+00:02:09,970 --> 00:02:12,740
+into an area of exactly that size. You'll be passed that
+
+43
+00:02:12,740 --> 00:02:15,460
+value if the layout has specified a specific size or if
+
+44
+00:02:15,460 --> 00:02:19,030
+the view has been asked to fill the parent. In either case,
+
+45
+00:02:19,030 --> 00:02:22,370
+it's best practice to simply return the value passed in, unless
+
+46
+00:02:22,370 --> 00:02:25,160
+that value is below your views minimum size, in which case
+
+47
+00:02:25,160 --> 00:02:27,740
+you can return the minimum value and rely on the parent
+
+48
+00:02:27,740 --> 00:02:32,910
+layout to crop or scroll as necessary. Another alternative is AT_MOST. This
+
+49
+00:02:32,910 --> 00:02:35,750
+indicates that your view can define its own size, up to the
+
+50
+00:02:35,750 --> 00:02:39,300
+size given. This is typically the case for views set to wrap
+
+51
+00:02:39,300 --> 00:02:41,790
+content, where the view should be as wide as it needs to
+
+52
+00:02:41,790 --> 00:02:45,100
+be to display its content, but no wider than that. And of
+
+53
+00:02:45,100 --> 00:02:47,900
+course all of that's provided that it still fits within the parent
+
+54
+00:02:47,900 --> 00:02:50,280
+container as indicated by the size
+
+55
+00:02:50,280 --> 00:02:52,260
+parameter. Now we've just finished calculating
+
+56
+00:02:52,260 --> 00:02:54,580
+all of that for the height parameter and you'd need to do
+
+57
+00:02:54,580 --> 00:02:58,060
+exactly the same thing again for width. Once you've done that and
+
+58
+00:02:58,060 --> 00:03:01,150
+determined the size of your control, you have to call
+
+59
+00:03:01,150 --> 00:03:05,050
+the setMeasuredDimension method. Here you pass in your width and
+
+60
+00:03:05,050 --> 00:03:09,229
+height values. If you don't call these setMeasureDimension method, your
+
+61
+00:03:09,229 --> 00:03:11,050
+app will as soon as your view is laid out.
+

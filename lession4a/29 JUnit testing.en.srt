@@ -1,0 +1,180 @@
+1
+00:00:00,470 --> 00:00:04,600
+But it will be a while before we can test this in our code. We still are going
+
+2
+00:00:04,600 --> 00:00:08,870
+to implement a whole layer on top of it along with a bunch of UI changes.
+
+3
+00:00:08,870 --> 00:00:13,740
+Fortunately, we can implement J unit test here to help. And now for
+
+4
+00:00:13,740 --> 00:00:18,610
+some magic. We'll add a directory to the source directory of our Android studio
+
+5
+00:00:18,610 --> 00:00:23,640
+project called Android test. And then, another one underneath it called Java.
+
+6
+00:00:25,460 --> 00:00:29,380
+This is the way we tell Android studio there's a test target in cradle for
+
+7
+00:00:29,380 --> 00:00:34,400
+our app. Now we create a test package that matches our main package with
+
+8
+00:00:34,400 --> 00:00:39,650
+an extra test directory on the end. Create a new class called full
+
+9
+00:00:39,650 --> 00:00:46,300
+test suite in the test package. Add this code. This
+
+10
+00:00:46,300 --> 00:00:49,970
+is some boiler plate code that will allow us to add tests in additional classes.
+
+11
+00:00:52,350 --> 00:00:59,747
+Next, we'll create a TestDb class that extends Android test case [NOISE] and
+
+12
+00:00:59,747 --> 00:01:04,824
+add a test that creates our Db. The way this works is that the test runner
+
+13
+00:01:04,824 --> 00:01:08,822
+will execute every function in our class that begins with test in the order that
+
+14
+00:01:08,822 --> 00:01:12,950
+they are declared in the class. Each test should have a failure path that
+
+15
+00:01:12,950 --> 00:01:17,810
+uses an assert. We start by deleting the database before testing it. So,
+
+16
+00:01:17,810 --> 00:01:24,180
+we have a clean test. Now, to run the test we go to the app start drop down.
+
+17
+00:01:24,180 --> 00:01:28,740
+And select Edit Configurations. We select Plus to add a new configuration. And
+
+18
+00:01:28,740 --> 00:01:34,710
+select Android Tests Against Module App. Now we name the test.
+
+19
+00:01:34,710 --> 00:01:38,190
+Now note that it tends to target the emulator by default. So,
+
+20
+00:01:38,190 --> 00:01:42,000
+I want to use an actual device I'm going to select Show Chooser Dialogue.
+
+21
+00:01:42,000 --> 00:01:48,680
+Now we can just run the test against our device. And, it passes. So
+
+22
+00:01:48,680 --> 00:01:54,160
+let's create a data base insert and read test. At the beginning of it,
+
+23
+00:01:54,160 --> 00:01:58,270
+we'll insert a single record into each table. We'll begin with some dummy
+
+24
+00:01:58,270 --> 00:02:04,450
+data for our location. We'll use the dbHelper to get a writeable database.
+
+25
+00:02:04,450 --> 00:02:08,180
+This is exactly how we will use the database when we code it up in our project.
+
+26
+00:02:09,870 --> 00:02:14,110
+We'll then create a ContentValues object, which is a handy helper object that
+
+27
+00:02:14,110 --> 00:02:18,280
+Android uses to store values and keys. We'll store our dummy data into
+
+28
+00:02:18,280 --> 00:02:22,870
+the columns from our LocationEntry contract. Note that in order to make it
+
+29
+00:02:22,870 --> 00:02:26,870
+work with this abbreviated syntax, I did have to add some extra imports up here.
+
+30
+00:02:28,320 --> 00:02:33,490
+We then insert the data into our data base, and verified that we got a row back.
+
+31
+00:02:33,490 --> 00:02:37,180
+Now I find that it's helpful to put log messages into my test cases.
+
+32
+00:02:38,500 --> 00:02:43,170
+Now we'll use the database read operations to pull our dummy data back out of
+
+33
+00:02:43,170 --> 00:02:47,930
+the data base. We're making use of a custom projection here which, in theory,
+
+34
+00:02:47,930 --> 00:02:52,470
+would make it easy to use our database cursor to query for the values we want.
+
+35
+00:02:52,470 --> 00:02:56,260
+We use a custom projection here. Although, it's not required.
+
+36
+00:02:56,260 --> 00:02:59,580
+If the custom projection wasn't there, we would simply return all columns.
+
+37
+00:03:00,730 --> 00:03:04,220
+A database cursor is a control structure that enables traversal over
+
+38
+00:03:04,220 --> 00:03:09,220
+the records in a database. In Android, this is represented by a cursor object.
+
+39
+00:03:10,530 --> 00:03:14,380
+The cursor object allows one to traverse between records in a query and
+
+40
+00:03:14,380 --> 00:03:17,360
+get the contents of any individual column from a query.
+
+41
+00:03:18,920 --> 00:03:24,330
+Now, we use cursor.moveToFirst to populate our cursor with our row of data.
+
+42
+00:03:24,330 --> 00:03:29,790
+We can then pull out our data by index. Finally assert
+
+43
+00:03:29,790 --> 00:03:35,049
+if it doesn't match our dummy data. And now, we get to run our tests again.
+
+44
+00:03:35,049 --> 00:03:39,620
+[BLANK_AUDIO]
+
+45
+00:03:39,620 --> 00:03:40,570
+And they passed.
+

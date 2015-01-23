@@ -1,0 +1,36 @@
+1
+00:00:00,340 --> 00:00:03,015
+On the tablet, there's a bug where if you select an item near
+
+2
+00:00:03,015 --> 00:00:05,952
+the bottom of the list and then you rotate the device, the selected
+
+3
+00:00:05,952 --> 00:00:08,888
+item is no longer scrolled into view. You have to manually scroll the
+
+4
+00:00:08,888 --> 00:00:12,270
+list. That means we should store the position of the selected item in
+
+5
+00:00:12,270 --> 00:00:14,430
+the savedInstanceState Bundle. If the app
+
+6
+00:00:14,430 --> 00:00:16,120
+is killed, when it's restored, we should
+
+7
+00:00:16,120 --> 00:00:19,030
+read the position back from the Bundle. If the list isn't populated at
+
+8
+00:00:19,030 --> 00:00:22,220
+that time, then we should wait for the onLoadFinished callback to use a
+
+9
+00:00:22,220 --> 00:00:25,400
+position to scroll to the selected item. Check these boxes when you're done.
+

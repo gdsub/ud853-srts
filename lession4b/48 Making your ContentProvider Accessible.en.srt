@@ -1,0 +1,68 @@
+1
+00:00:00,310 --> 00:00:03,480
+It's actually quite straightforward to make your apps content provider
+
+2
+00:00:03,480 --> 00:00:06,880
+available to third party apps. The key is to modify
+
+3
+00:00:06,880 --> 00:00:10,640
+the export flag in the manifest entry here to true.
+
+4
+00:00:10,640 --> 00:00:14,174
+As simple as that. Any app that knows the content URI
+
+5
+00:00:14,174 --> 00:00:16,667
+can use the content resolve or access it the same
+
+6
+00:00:16,667 --> 00:00:19,480
+that you do. Now depending on the sensitivity of your
+
+7
+00:00:19,480 --> 00:00:22,660
+data, you may want to protect it by requiring specific
+
+8
+00:00:22,660 --> 00:00:25,440
+permissions to read or write to the database. So if you
+
+9
+00:00:25,440 --> 00:00:28,080
+want to, you can effectively limit access only to other
+
+10
+00:00:28,080 --> 00:00:30,620
+apps you have created, or to third party apps, which know
+
+11
+00:00:30,620 --> 00:00:34,270
+the permissions and users agree to. Then you just need to
+
+12
+00:00:34,270 --> 00:00:38,050
+publish this contract, to interact with the content provider, specifically the
+
+13
+00:00:38,050 --> 00:00:41,590
+URI and column names. And you've created a simple API
+
+14
+00:00:41,590 --> 00:00:44,120
+for all of your data. And as simple as that, you've
+
+15
+00:00:44,120 --> 00:00:47,890
+created a new API, just for your data. This is exactly
+
+16
+00:00:47,890 --> 00:00:50,910
+the same approach, used by many of the native content providers,
+
+17
+00:00:50,910 --> 00:00:54,460
+including the Contacts Database, Media Store, Calendar and Call Log.
+

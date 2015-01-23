@@ -1,0 +1,16 @@
+1
+00:00:00,760 --> 00:00:05,600
+Let's build up the UI for the weather app. We've created our Android project.
+
+2
+00:00:05,600 --> 00:00:09,800
+And understand more about basic tools. So let's go to the user interface for
+
+3
+00:00:09,800 --> 00:00:13,760
+Sunshine. Specifically, we're building the initial screen.
+
+4
+00:00:13,760 --> 00:00:16,320
+A list of forecasts for the next several days.
+

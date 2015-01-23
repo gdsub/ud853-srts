@@ -1,0 +1,20 @@
+1
+00:00:00,340 --> 00:00:04,440
+Add a menu option to view the user's preferred location on a map. It
+
+2
+00:00:04,440 --> 00:00:09,410
+will be handled by any maps app that's available on your device. If there
+
+3
+00:00:09,410 --> 00:00:13,240
+is no map app on your device, handle this case gracefully to avoid a
+
+4
+00:00:13,240 --> 00:00:15,620
+crash. You might want to recall that
+
+5
+00:00:15,620 --> 00:00:18,460
+we use SharedPreferences to store the preferred location.
+

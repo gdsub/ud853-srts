@@ -1,0 +1,100 @@
+1
+00:00:00,380 --> 00:00:02,190
+Let me the explain the reasoning that I use when I
+
+2
+00:00:02,190 --> 00:00:05,150
+look at a new layout. It looks like there's two equally spaced
+
+3
+00:00:05,150 --> 00:00:09,120
+columns here. That signals to me we need linear layout weights,
+
+4
+00:00:09,120 --> 00:00:12,460
+where each of these have equal weights. So let's create a horizontal
+
+5
+00:00:12,460 --> 00:00:16,712
+linear layout. Within this first chart, we have three vertically stacked
+
+6
+00:00:16,712 --> 00:00:19,830
+text views, so we have a vertical linear layout, and the same
+
+7
+00:00:19,830 --> 00:00:23,030
+goes for this second chart with has two elements vertically stacked
+
+8
+00:00:23,030 --> 00:00:25,570
+on top of each other, which means we use a vertical linear
+
+9
+00:00:25,570 --> 00:00:28,220
+layout as well. And here's the code, we created a
+
+10
+00:00:28,220 --> 00:00:32,490
+new list item forecasts today XML file under the layout folder.
+
+11
+00:00:32,490 --> 00:00:35,340
+The code looks very similar to list item forecast. I
+
+12
+00:00:35,340 --> 00:00:38,540
+has a horizontal linear layout, as a root element. The first
+
+13
+00:00:38,540 --> 00:00:41,370
+channel is a vertical linear layout with the width zero
+
+14
+00:00:41,370 --> 00:00:44,970
+and a weight of one. The second child is another vertical
+
+15
+00:00:44,970 --> 00:00:47,300
+linear layout with a width of zero and a weight
+
+16
+00:00:47,300 --> 00:00:50,600
+of one, that way the horizontal space will be distributed evenly
+
+17
+00:00:50,600 --> 00:00:53,200
+among each child. If you go back to the first
+
+18
+00:00:53,200 --> 00:00:55,700
+linear layout, notice that we have three text views within
+
+19
+00:00:55,700 --> 00:00:59,630
+it. For date, high temperature, and low temperature. We specify
+
+20
+00:00:59,630 --> 00:01:02,550
+gravity to be center horizontal. So anything within the linear
+
+21
+00:01:02,550 --> 00:01:06,220
+layout will be centered horizontally. Otherwise, by default, they would
+
+22
+00:01:06,220 --> 00:01:09,590
+be left aligned to the linear layout. The same applies
+
+23
+00:01:09,590 --> 00:01:12,270
+for the second linear layout. We specify gravity to be
+
+24
+00:01:12,270 --> 00:01:15,720
+center horizontal so that the icon and the weather forecast
+
+25
+00:01:15,720 --> 00:01:18,130
+text view within it are also centered horizontally.
+

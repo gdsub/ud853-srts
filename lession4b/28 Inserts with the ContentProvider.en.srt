@@ -1,0 +1,16 @@
+1
+00:00:00,340 --> 00:00:03,969
+All right. Now for the fun part. Code the method below
+
+2
+00:00:03,969 --> 00:00:07,400
+to insert the location into the location table if it doesn't
+
+3
+00:00:07,400 --> 00:00:13,330
+already exist. Return the ID of the location. Now you can
+
+4
+00:00:13,330 --> 00:00:17,030
+do this the easy way using a query followed by an insert.
+

@@ -1,0 +1,12 @@
+1
+00:00:00,190 --> 00:00:04,050
+Implement the queries for location and location ID in
+
+2
+00:00:04,050 --> 00:00:08,200
+our content provider. Note that content URIs contains a
+
+3
+00:00:08,200 --> 00:00:12,370
+function to get the ID from a standard URI that contains an ID on the end of it.
+

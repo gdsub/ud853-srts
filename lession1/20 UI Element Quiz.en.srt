@@ -1,0 +1,32 @@
+1
+00:00:00,580 --> 00:00:05,240
+The editor is quite powerful. Without using any code, one can create relatively
+
+2
+00:00:05,240 --> 00:00:10,150
+sophisticated layouts. Make sure to use the built-in styled text widgets for
+
+3
+00:00:10,150 --> 00:00:14,420
+large and medium text. All of the text is just placeholder text, so
+
+4
+00:00:14,420 --> 00:00:18,700
+you easily enter it using the visual editor. If you're proud of your creation,
+
+5
+00:00:18,700 --> 00:00:21,750
+take a screenshot and post it along with the XML into the forums.
+
+6
+00:00:22,800 --> 00:00:26,700
+Now that you have some background on the basic tools in Android studio, and
+
+7
+00:00:26,700 --> 00:00:29,650
+a few of the basic android user interface views,
+
+8
+00:00:29,650 --> 00:00:32,170
+Katherine will show you how to start making some sunshine.
+

@@ -1,0 +1,32 @@
+1
+00:00:00,560 --> 00:00:03,530
+All of you detail-oriented people probably noticed that
+
+2
+00:00:03,530 --> 00:00:05,640
+we never actually used the coordinates we get
+
+3
+00:00:05,640 --> 00:00:08,440
+from the server for location, relying instead on
+
+4
+00:00:08,440 --> 00:00:10,760
+both the maps API, and the weather API to
+
+5
+00:00:10,760 --> 00:00:14,440
+do the same thing with location queries. Unfortunately,
+
+6
+00:00:14,440 --> 00:00:18,680
+they don't always agree. Implement maps using the coordinates
+
+7
+00:00:18,680 --> 00:00:21,700
+stored in the location table. You'll want to start
+
+8
+00:00:21,700 --> 00:00:25,260
+by moving the menu code from MainActivity to WeatherFragment.
+

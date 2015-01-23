@@ -1,0 +1,68 @@
+1
+00:00:00,590 --> 00:00:04,730
+Now in Android studio you can hit the play button to run the app on your device.
+
+2
+00:00:04,730 --> 00:00:08,230
+In the device Chooser dialog. you should see your connected device.
+
+3
+00:00:08,230 --> 00:00:12,280
+To prevent the dialog from popping up in future times, check this box and
+
+4
+00:00:12,280 --> 00:00:17,350
+then hit OK to continue. Within a few moments you should see it on your phone.
+
+5
+00:00:17,350 --> 00:00:21,330
+On the other hand, as Raido was mentioning, you can use command line tools.
+
+6
+00:00:21,330 --> 00:00:25,420
+From the root folder of the project, use grade lw to build your app on Mac or
+
+7
+00:00:25,420 --> 00:00:29,460
+Linux. Check the link in the notes below if you're using Windows.
+
+8
+00:00:29,460 --> 00:00:33,410
+This first command grants execution permission to the gradlw rappers script. And
+
+9
+00:00:33,410 --> 00:00:36,240
+you only need to do it the first time you're trying to build from the command
+
+10
+00:00:36,240 --> 00:00:42,310
+line. Then you can call grade lw assemble debug. Once the build is successful,
+
+11
+00:00:42,310 --> 00:00:47,225
+it creates an APK file at the app/build/apk directory. You can use
+
+12
+00:00:47,225 --> 00:00:52,210
+adb to install the app. The -r command means that you can replace an existing
+
+13
+00:00:52,210 --> 00:00:56,270
+version of the app if you've already done it before. For more tips on adb,
+
+14
+00:00:56,270 --> 00:01:00,860
+you can see the instructor notes below. Then you can use this adb command with
+
+15
+00:01:00,860 --> 00:01:06,270
+the activity manager tool in order to start the main activity. And there you see
+
+16
+00:01:06,270 --> 00:01:11,450
+it on the device. And now we see it running in our phones. Woo hoo! Fist bump!
+
+17
+00:01:13,880 --> 00:01:19,050
+We're on a roll. Let's go find Dan so that we can build up the sunshine UI. Woo!
+

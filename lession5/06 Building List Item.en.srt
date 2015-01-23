@@ -1,0 +1,160 @@
+1
+00:00:00,350 --> 00:00:02,800
+To build out our UI, let's start with the wire
+
+2
+00:00:02,800 --> 00:00:05,800
+frame for the main activity. It displays a list of
+
+3
+00:00:05,800 --> 00:00:10,265
+forecasts, where each item contains an icon, a date, weather
+
+4
+00:00:10,265 --> 00:00:13,640
+description; as well as high and low temperatures for that
+
+5
+00:00:13,640 --> 00:00:17,320
+day. Since today's weather is probably most relevant to the
+
+6
+00:00:17,320 --> 00:00:20,220
+user, we give more prominence to it as a list
+
+7
+00:00:20,220 --> 00:00:22,830
+item compared to the other days. We'll start off by
+
+8
+00:00:22,830 --> 00:00:25,730
+building the list item layout for future days because it's simpler.
+
+9
+00:00:25,730 --> 00:00:29,030
+And then afterwards, we'll come back to do the today layout.
+
+10
+00:00:29,030 --> 00:00:33,250
+In the current implementation, the list item forecast layout XML is
+
+11
+00:00:33,250 --> 00:00:36,450
+a horizontal linear layout of four text views. We'll need to
+
+12
+00:00:36,450 --> 00:00:39,460
+modify the layout so that it looks like this wire frame.
+
+13
+00:00:39,460 --> 00:00:41,510
+We should divide and conquer until we can use the view
+
+14
+00:00:41,510 --> 00:00:44,560
+group layouts that we're familiar with. Can you imagine how you'd
+
+15
+00:00:44,560 --> 00:00:46,980
+break down this UI into components that you know how to
+
+16
+00:00:46,980 --> 00:00:51,840
+build? As a hint, what if I draw these separators here?
+
+17
+00:00:51,840 --> 00:00:54,160
+Within those elements, can you find a way to
+
+18
+00:00:54,160 --> 00:00:56,960
+break it down even further with view groups you're familiar
+
+19
+00:00:56,960 --> 00:01:00,280
+with? You'll need nested view groups, which means view groups
+
+20
+00:01:00,280 --> 00:01:02,940
+with children view groups. As a tip, this data will
+
+21
+00:01:02,940 --> 00:01:05,740
+be populated dynamically at run time. But you can
+
+22
+00:01:05,740 --> 00:01:08,960
+test it by hard coding some text values such as
+
+23
+00:01:08,960 --> 00:01:12,420
+Tomorrow for the date or Clear for the weather condition.
+
+24
+00:01:12,420 --> 00:01:16,620
+For images, we can specify a placeholder drawable called ic_launcher.
+
+25
+00:01:16,620 --> 00:01:20,850
+It's named this way, because it's the launcher icon, which is also
+
+26
+00:01:20,850 --> 00:01:23,820
+known as the app icon. And this is already included in our
+
+27
+00:01:23,820 --> 00:01:26,500
+app. We'll be getting the rest of our weather icons for our
+
+28
+00:01:26,500 --> 00:01:29,610
+app later in this lesson. If you want to see what this layout
+
+29
+00:01:29,610 --> 00:01:31,980
+looks like, you can click on the design pane to see a
+
+30
+00:01:31,980 --> 00:01:34,970
+preview of it. On the right, we see a component tree listing
+
+31
+00:01:34,970 --> 00:01:37,830
+out the different views. We can also see for a given view
+
+32
+00:01:37,830 --> 00:01:41,690
+what the properties are, and their values. We can change the orientation
+
+33
+00:01:41,690 --> 00:01:43,890
+of the device that your previewing, you can also
+
+34
+00:01:43,890 --> 00:01:47,900
+select different devices such as Nexus 7, or Nexus
+
+35
+00:01:47,900 --> 00:01:50,630
+10. You can also preview multiple devices at the
+
+36
+00:01:50,630 --> 00:01:52,690
+same time. As you build out your layout for
+
+37
+00:01:52,690 --> 00:01:54,950
+this task, don't worry about the font color, or
+
+38
+00:01:54,950 --> 00:01:58,500
+font size, or any other visual details until later.
+
+39
+00:01:58,500 --> 00:02:00,590
+After you compile and run, the app should look
+
+40
+00:02:00,590 --> 00:02:03,780
+something like this. Check this box when you're done.
+

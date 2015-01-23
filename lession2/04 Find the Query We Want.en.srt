@@ -1,0 +1,56 @@
+1
+00:00:00,570 --> 00:00:02,170
+Now, we should be able to figure out the most
+
+2
+00:00:02,170 --> 00:00:05,530
+appropriate URL that our app should use. Based on the
+
+3
+00:00:05,530 --> 00:00:08,360
+UX wireframes that we saw earlier, you noticed that we'll
+
+4
+00:00:08,360 --> 00:00:12,080
+want one week's worth of data. For this quiz and for
+
+5
+00:00:12,080 --> 00:00:15,130
+the example code that I'll be showing you later, we're
+
+6
+00:00:15,130 --> 00:00:18,280
+going to be using the postal code for Mountain View which is
+
+7
+00:00:18,280 --> 00:00:21,260
+94043. By all means, you should use your own location
+
+8
+00:00:21,260 --> 00:00:25,760
+either specifying the postal code, city name or the latitude, longitude
+
+9
+00:00:25,760 --> 00:00:31,190
+coordinates. Next we want their format from the server to be in JSON format,
+
+10
+00:00:31,190 --> 00:00:36,590
+and we want the units to be reported in metric. But our UI will
+
+11
+00:00:36,590 --> 00:00:39,240
+be able to display Celsius or Fahrenheit
+
+12
+00:00:39,240 --> 00:00:41,170
+based on user preferences, and we'll just
+
+13
+00:00:41,170 --> 00:00:44,038
+do the conversion ourself. Enter the URL
+
+14
+00:00:44,038 --> 00:00:46,590
+that fulfills these requirements in the box below,
+

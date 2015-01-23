@@ -1,0 +1,16 @@
+1
+00:00:00,270 --> 00:00:03,270
+One of the things you may have noticed, is that our app database continues
+
+2
+00:00:03,270 --> 00:00:07,900
+to grow forever, eventually filling up the device. This is a great way to
+
+3
+00:00:07,900 --> 00:00:12,930
+get out app uninstalled. So let's fix this. Add code to delete weather data that
+
+4
+00:00:12,930 --> 00:00:18,190
+is more than one day old. Use the Calendar function to do data arithmetic.
+

@@ -1,0 +1,56 @@
+1
+00:00:00,560 --> 00:00:04,070
+So, Rato, what have we learned in this lesson?
+
+2
+00:00:04,070 --> 00:00:06,300
+>> Well, I learned that I do not want to write
+
+3
+00:00:06,300 --> 00:00:10,060
+databases and content providers. What did you learn in this lesson?
+
+4
+00:00:10,060 --> 00:00:14,440
+>> Well, J unit tests are awesome, and building
+
+5
+00:00:14,440 --> 00:00:16,230
+the back end framework of our apps is the
+
+6
+00:00:16,230 --> 00:00:19,270
+most glorious of work. It's an absolutely vital part
+
+7
+00:00:19,270 --> 00:00:22,480
+of creating a robust app with a great user experience.
+
+8
+00:00:22,480 --> 00:00:25,715
+>> And I also learned that Dan cannot do an English accent.
+
+9
+00:00:25,715 --> 00:00:29,309
+>> [SOUND]. Fortunately, you can get ready to welcome back Katherine
+
+10
+00:00:29,309 --> 00:00:32,912
+for lesson 5, where we'll shatter our activity into fragments, use
+
+11
+00:00:32,912 --> 00:00:36,517
+our content providers to populate more complex UIs, and build layouts
+
+12
+00:00:36,517 --> 00:00:39,900
+that work as well on tablets as they do on phones.
+
+13
+00:00:39,900 --> 00:00:42,100
+>> Which seems like a convenient segway
+
+14
+00:00:42,100 --> 00:00:44,300
+into the history and evolution of Android hardware,
+

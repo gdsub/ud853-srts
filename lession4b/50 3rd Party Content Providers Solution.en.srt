@@ -1,0 +1,16 @@
+1
+00:00:00,090 --> 00:00:02,500
+There's a number of different content providers available to
+
+2
+00:00:02,500 --> 00:00:06,030
+access different kinds of media stored in different locations.
+
+3
+00:00:06,030 --> 00:00:10,095
+To access audio media stored in the internal data store, you'd use the
+
+4
+00:00:10,095 --> 00:00:16,370
+INTERNAL_CONTENT_URI provided in the MediaStore.Audio.Media class.
+

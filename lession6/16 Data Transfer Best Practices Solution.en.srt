@@ -1,0 +1,48 @@
+1
+00:00:00,290 --> 00:00:03,250
+Pulling down all the data will reduce latency and maximize the
+
+2
+00:00:03,250 --> 00:00:06,520
+battery efficiency. But it's unlikely the user is going to read every
+
+3
+00:00:06,520 --> 00:00:10,030
+article. So you'd just be wasting a lot of bandwidth. Downloading
+
+4
+00:00:10,030 --> 00:00:13,270
+all the articles without pictures actually doesn't improve our efficiency if
+
+5
+00:00:13,270 --> 00:00:16,560
+you're just downloading the front page, because you'll still need to
+
+6
+00:00:16,560 --> 00:00:19,470
+activate the radio to download those pictures whenever an article is
+
+7
+00:00:19,470 --> 00:00:22,460
+selected. The right answer is to get the headlines and the
+
+8
+00:00:22,460 --> 00:00:25,360
+articles linked to from that front page, 'cause they're the most likely
+
+9
+00:00:25,360 --> 00:00:27,010
+to be read as the user starts
+
+10
+00:00:27,010 --> 00:00:29,280
+browsing through the app. You can then incrementally
+
+11
+00:00:29,280 --> 00:00:31,640
+download more articles each time the user moves
+
+12
+00:00:31,640 --> 00:00:34,460
+into an area you haven't pre-fetched for yet.
+

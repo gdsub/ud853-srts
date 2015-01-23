@@ -1,0 +1,16 @@
+1
+00:00:00,160 --> 00:00:04,330
+For the Mountainview post code 94043, this is what the query would
+
+2
+00:00:04,330 --> 00:00:09,060
+look like. We set the mode to be JSON format, temperature units
+
+3
+00:00:09,060 --> 00:00:12,660
+to be in metric, and the count param to be seven days
+
+4
+00:00:12,660 --> 00:00:16,460
+of forecast data. Let's take this url and use it in our app
+

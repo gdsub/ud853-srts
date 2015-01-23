@@ -1,0 +1,44 @@
+1
+00:00:00,460 --> 00:00:03,600
+Now, at first glass, reducing the payload of each transfer, and
+
+2
+00:00:03,600 --> 00:00:07,330
+only transmitting data when it's required seems like a sound approach.
+
+3
+00:00:07,330 --> 00:00:09,830
+You're reducing the amount of data being transferred, so that's less
+
+4
+00:00:09,830 --> 00:00:14,300
+data on the network. That's less superfluous work being done storing processing
+
+5
+00:00:14,300 --> 00:00:17,730
+data on the device. It's basically a case of putting off
+
+6
+00:00:17,730 --> 00:00:20,040
+any work, until you actually know you need to do it.
+
+7
+00:00:20,040 --> 00:00:22,630
+But it turns out that this approach has it's drawbacks, compared
+
+8
+00:00:22,630 --> 00:00:26,220
+to the big cookie model of all of that work up front.
+
+9
+00:00:26,220 --> 00:00:30,110
+So, overall, this is a better solution. But let's take a closer look at the big
+
+10
+00:00:30,110 --> 00:00:31,670
+cookie model. And to do that, we really
+
+11
+00:00:31,670 --> 00:00:34,360
+need to understand the underlying cell radio state machine.
+

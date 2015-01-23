@@ -1,0 +1,32 @@
+1
+00:00:00,170 --> 00:00:02,009
+Implement the rest of the red lines on your own.
+
+2
+00:00:02,009 --> 00:00:04,880
+Test on the phone and tablet, and in both orientations.
+
+3
+00:00:04,880 --> 00:00:07,260
+Here's a useful tool to help you with red lines.
+
+4
+00:00:07,260 --> 00:00:10,210
+Under developer options, you can click show layout bounds. When
+
+5
+00:00:10,210 --> 00:00:12,070
+you go back to the Sunshine app, you can see
+
+6
+00:00:12,070 --> 00:00:14,870
+the bounds for all the views, including padding and margin.
+
+7
+00:00:14,870 --> 00:00:17,380
+When you're done, feel free to check with our implementation
+
+8
+00:00:17,380 --> 00:00:20,330
+at the link provided below, then check the box to continue
+

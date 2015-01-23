@@ -1,0 +1,68 @@
+1
+00:00:00,280 --> 00:00:03,180
+You're going to use Android Studio to create the
+
+2
+00:00:03,180 --> 00:00:07,140
+detail activity from the blank activity with fragment template.
+
+3
+00:00:07,140 --> 00:00:09,980
+The template asks for the hierarchical parent of detail
+
+4
+00:00:09,980 --> 00:00:13,680
+activity, which defines the up button noted by the
+
+5
+00:00:13,680 --> 00:00:18,320
+app icon, and a left pointing carrot here. But
+
+6
+00:00:18,320 --> 00:00:20,910
+what does up mean? If you mapped out a
+
+7
+00:00:20,910 --> 00:00:23,630
+hierarchy of all screens in the sunshine app, the
+
+8
+00:00:23,630 --> 00:00:26,150
+root of the tree would be the main activity, and
+
+9
+00:00:26,150 --> 00:00:29,260
+it's child would be the detail activity. So, the
+
+10
+00:00:29,260 --> 00:00:32,960
+app goes to the main activity. While the back button
+
+11
+00:00:32,960 --> 00:00:35,530
+can achieve the same effect, it can also bring
+
+12
+00:00:35,530 --> 00:00:37,920
+you back home or to another app, depending on your
+
+13
+00:00:37,920 --> 00:00:41,440
+history of screens. Up will always navigate you within
+
+14
+00:00:41,440 --> 00:00:44,290
+the same app to the parent, regardless of how you
+
+15
+00:00:44,290 --> 00:00:49,050
+arrived at this screen. Create the detail activity now,
+
+16
+00:00:49,050 --> 00:00:51,220
+and look at how the activity is declared in the
+
+17
+00:00:51,220 --> 00:00:52,470
+Android manifest file.
+

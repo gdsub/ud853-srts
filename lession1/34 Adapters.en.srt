@@ -1,0 +1,124 @@
+1
+00:00:00,400 --> 00:00:03,730
+Given some sample data how do we populate a ListView?
+
+2
+00:00:03,730 --> 00:00:07,370
+Let's look at an example of some contact data and how it can be displayed in
+
+3
+00:00:07,370 --> 00:00:12,140
+the list. We start with our raw data of contacts which is three contacts,
+
+4
+00:00:12,140 --> 00:00:16,720
+as well as our profile images. Then we pass this data into the adapter so
+
+5
+00:00:16,720 --> 00:00:21,730
+it has a reference to it. The adapter also knows how to build a list item layout
+
+6
+00:00:21,730 --> 00:00:26,500
+for each of these data items. So, it could go ahead and create the layouts for
+
+7
+00:00:26,500 --> 00:00:31,160
+them. But we don't need to create the views yet until the ListView requests that
+
+8
+00:00:31,160 --> 00:00:35,290
+it needs them. For example, if you had hundreds of contacts here,
+
+9
+00:00:35,290 --> 00:00:40,740
+you wouldn't want hundreds of layouts sitting around that aren't being used.
+
+10
+00:00:40,740 --> 00:00:42,850
+Then when you bind the adapter to the ListView,
+
+11
+00:00:42,850 --> 00:00:46,710
+the ListView will ask how many items are actually in the data set.
+
+12
+00:00:46,710 --> 00:00:50,520
+And the adapter will check in the data set there's three items, so
+
+13
+00:00:50,520 --> 00:00:53,960
+we will return that to the ListView. Now the ListView knows that it will have to
+
+14
+00:00:53,960 --> 00:00:59,395
+populate itself with three list items. Now the ListView starts at position
+
+15
+00:00:59,395 --> 00:01:04,170
+zero and asks for the list item layout located at that position. It goes back to
+
+16
+00:01:04,170 --> 00:01:09,520
+the adapter and the adapter checks that at position zero, we have the contact,
+
+17
+00:01:09,520 --> 00:01:15,140
+Anna. The adapter knows how to create a list item layout from the contact, Anna.
+
+18
+00:01:15,140 --> 00:01:20,360
+So, it goes ahead and does that. And then we return it to the ListView. And now
+
+19
+00:01:20,360 --> 00:01:24,027
+we see that the Anna list item is located at the zeroth position in the list.
+
+20
+00:01:24,027 --> 00:01:29,270
+Next the ListView wants to get the item at position one, so
+
+21
+00:01:29,270 --> 00:01:34,340
+ask for the layout from the adapter. The adapter checks that at position one,
+
+22
+00:01:34,340 --> 00:01:39,110
+we have the contact Bob. The adapter knows how to create a list item layout for
+
+23
+00:01:39,110 --> 00:01:43,990
+Bob so it goes ahead and does that and then it returns it to the ListView. And
+
+24
+00:01:43,990 --> 00:01:47,660
+now we see that the list item for Bob has been successfully added
+
+25
+00:01:47,660 --> 00:01:51,010
+to the ListView at position one. Now, the ListView fetches its
+
+26
+00:01:51,010 --> 00:01:55,740
+last item because it knows that there was three list items to expect.
+
+27
+00:01:55,740 --> 00:02:01,280
+It fetches the last list item layout at position two by asking the adapter.
+
+28
+00:02:01,280 --> 00:02:06,890
+The adapter checks that at position two, we have Charlie, as well as that image.
+
+29
+00:02:06,890 --> 00:02:10,810
+And we know how to make a list item layout for Charlie, so we can go ahead and
+
+30
+00:02:10,810 --> 00:02:15,010
+do that, and return it to the ListView. And now we have the list item for
+
+31
+00:02:15,010 --> 00:02:19,180
+Charlie and position two in the list. And we have our complete list
+

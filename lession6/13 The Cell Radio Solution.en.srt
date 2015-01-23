@@ -1,0 +1,16 @@
+1
+00:00:00,090 --> 00:00:02,110
+That's right, whenever this app is running, it's
+
+2
+00:00:02,110 --> 00:00:05,260
+keeping the cell radio powered on continuously. In
+
+3
+00:00:05,260 --> 00:00:08,140
+fact, the radio updates alone are enough to
+
+4
+00:00:08,140 --> 00:00:10,640
+prevent the radio from ever returning to idle.
+

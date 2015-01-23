@@ -1,0 +1,80 @@
+1
+00:00:00,100 --> 00:00:02,890
+To evaluate how accessible any app is, you
+
+2
+00:00:02,890 --> 00:00:06,160
+can step through the Accessibility Testing Checklist. Some of
+
+3
+00:00:06,160 --> 00:00:08,940
+those steps will involve changing the accessibility settings in
+
+4
+00:00:08,940 --> 00:00:11,100
+the setting's app. A user will be able to
+
+5
+00:00:11,100 --> 00:00:14,800
+choose from these options. We have Talkback, Captions,
+
+6
+00:00:14,800 --> 00:00:18,050
+Magnification, increased font size, and more. I want to point
+
+7
+00:00:18,050 --> 00:00:22,140
+out one item in particular, Talkback service. Blind and
+
+8
+00:00:22,140 --> 00:00:25,090
+low vision users can turn on the Talkback service.
+
+9
+00:00:25,090 --> 00:00:28,340
+It allows them to navigate around the device with spoken feedback
+
+10
+00:00:28,340 --> 00:00:31,260
+as they interact with each UI element on the screen. There
+
+11
+00:00:31,260 --> 00:00:34,310
+are slightly different gestures, for example, to select or to focus
+
+12
+00:00:34,310 --> 00:00:36,620
+on an item. If it's the first time you turn it
+
+13
+00:00:36,620 --> 00:00:39,490
+on, there will be a tutorial that you can step through.
+
+14
+00:00:39,490 --> 00:00:42,780
+When the user navigates to these elements, Talkback service will read
+
+15
+00:00:42,780 --> 00:00:46,180
+aloud the context description provided. Every UI component that doesn't have
+
+16
+00:00:46,180 --> 00:00:47,960
+any visible text has a content
+
+17
+00:00:47,960 --> 00:00:50,710
+description. Using Talkback or another accessibility
+
+18
+00:00:50,710 --> 00:00:54,270
+tool from the checklist will let the sunshine out. Find and fix at least one
+
+19
+00:00:54,270 --> 00:00:56,660
+accessibility issue in the app. Then please share
+
+20
+00:00:56,660 --> 00:00:58,250
+what you did in the class discussion forum.
+

@@ -1,0 +1,8 @@
+1
+00:00:00,410 --> 00:00:02,080
+Excellent. Now let's get started putting
+
+2
+00:00:02,080 --> 00:00:04,740
+some actual content into our custom view.
+

@@ -1,0 +1,96 @@
+1
+00:00:00,320 --> 00:00:03,010
+All right, you're done. Let's look at the solution.
+
+2
+00:00:03,010 --> 00:00:05,090
+As I said in the question, we're going to be
+
+3
+00:00:05,090 --> 00:00:08,720
+working inside a forecast fragment in the update weather function.
+
+4
+00:00:08,720 --> 00:00:11,220
+First, we're going to need to create a standard intent
+
+5
+00:00:11,220 --> 00:00:14,650
+for our alarm receiver. We then add our location query
+
+6
+00:00:14,650 --> 00:00:17,920
+as an extra. We then wrap that in a pending
+
+7
+00:00:17,920 --> 00:00:21,440
+intent. A pending intent is a special kind of object
+
+8
+00:00:21,440 --> 00:00:25,838
+that describes an intent. This allows other applications to implement
+
+9
+00:00:25,838 --> 00:00:28,060
+the feature of the original intent that's used to
+
+10
+00:00:28,060 --> 00:00:30,880
+create the pending intent. We're only going to use this
+
+11
+00:00:30,880 --> 00:00:34,542
+pending intent once, so I set flag one shot.
+
+12
+00:00:34,542 --> 00:00:37,480
+Then, we get the alarm service and set the alarm
+
+13
+00:00:37,480 --> 00:00:40,900
+to trigger five seconds from now. But we still
+
+14
+00:00:40,900 --> 00:00:44,100
+need for our alarm to do something. Back in the
+
+15
+00:00:44,100 --> 00:00:46,990
+Broadcast Receiver, we need to send the standard intent
+
+16
+00:00:46,990 --> 00:00:51,070
+to start our service, and that's it. Let's try running
+
+17
+00:00:51,070 --> 00:00:53,460
+the app. All right, so now we've got the
+
+18
+00:00:53,460 --> 00:00:56,460
+Alarm Manager getting in the way of our service. We
+
+19
+00:00:56,460 --> 00:00:59,760
+hit refresh. It'll take us about five more seconds
+
+20
+00:00:59,760 --> 00:01:02,660
+before we actually see the data now. And there we
+
+21
+00:01:02,660 --> 00:01:06,930
+have it. A very, very simple alarm. Even with
+
+22
+00:01:06,930 --> 00:01:09,820
+this updating in the background potentially, and using a service,
+
+23
+00:01:09,820 --> 00:01:12,170
+we could still be more efficient in our use
+
+24
+00:01:12,170 --> 00:01:15,730
+of phone resources. Rato can tell us more about that.
+

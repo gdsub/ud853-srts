@@ -1,0 +1,52 @@
+1
+00:00:00,440 --> 00:00:04,830
+You may be thinking, lifecycles are really important.
+
+2
+00:00:04,830 --> 00:00:09,566
+However this section, is on persisting and recovering data. Trust me,
+
+3
+00:00:09,566 --> 00:00:15,210
+I just want to get us coding again. However, these things are closely linked and
+
+4
+00:00:15,210 --> 00:00:19,810
+they're easy to get wrong if you don't understand both. As Reito mentioned,
+
+5
+00:00:19,810 --> 00:00:24,300
+Android saves the state of the application in bundles. You might have had
+
+6
+00:00:24,300 --> 00:00:27,760
+the idea that you would just save all sorts of information in these bundles and
+
+7
+00:00:27,760 --> 00:00:32,259
+not have to worry about any other form of persistence. But, the thing is,
+
+8
+00:00:32,259 --> 00:00:35,540
+these bundles go away as soon as the user hits the Back key in
+
+9
+00:00:35,540 --> 00:00:39,040
+your main activity. It's really important that they do this.
+
+10
+00:00:40,420 --> 00:00:44,880
+When the user chooses to close your activity with the Back key, the expectation
+
+11
+00:00:44,880 --> 00:00:49,390
+is that next time your activity is displayed, it will be in the default state.
+
+12
+00:00:49,390 --> 00:00:53,370
+If the user backgrounds your app using the Home key or the App Switcher,
+
+13
+00:00:53,370 --> 00:00:57,680
+the next time your activity is created, it should resume from the current state.
+

@@ -1,0 +1,92 @@
+1
+00:00:00,620 --> 00:00:02,560
+If you open up the documentation, you can see a
+
+2
+00:00:02,560 --> 00:00:06,100
+couple of examples of typical screen widths. Then it suggests how
+
+3
+00:00:06,100 --> 00:00:08,260
+you can setup your layout folders, so that you can
+
+4
+00:00:08,260 --> 00:00:12,100
+have a different mean activity layout for tablets versus for handsets.
+
+5
+00:00:12,100 --> 00:00:14,940
+And here we define tablets as having a smallest width
+
+6
+00:00:14,940 --> 00:00:18,380
+of at least 600 dp. To customize the UI further, we
+
+7
+00:00:18,380 --> 00:00:22,400
+can create a layout-sw720dp folder. That way, we can have a
+
+8
+00:00:22,400 --> 00:00:25,680
+different main activity layout for ten inch tablets versus for seven
+
+9
+00:00:25,680 --> 00:00:29,140
+inch tablets versus for handsets. So back to
+
+10
+00:00:29,140 --> 00:00:33,130
+our quiz. We need to define activity_main.xml file in
+
+11
+00:00:33,130 --> 00:00:35,630
+our base layout folder so that we can accomplish
+
+12
+00:00:35,630 --> 00:00:37,840
+this layout on the phone. This layout applies to
+
+13
+00:00:37,840 --> 00:00:40,840
+both phone, portrait, and landscape, so we don't need
+
+14
+00:00:40,840 --> 00:00:42,755
+a special version of the layout in the layout
+
+15
+00:00:42,755 --> 00:00:46,704
+lan folder. We do also need to declare activitymain.xml
+
+16
+00:00:46,704 --> 00:00:50,680
+in the layout-sw600dp folder. That way it will override
+
+17
+00:00:50,680 --> 00:00:54,240
+the one pane UI and use a two pane UI in this case. It will be
+
+18
+00:00:54,240 --> 00:00:56,430
+picked up on devices that have greater than
+
+19
+00:00:56,430 --> 00:00:58,760
+600 gp in both width and height. That
+
+20
+00:00:58,760 --> 00:01:01,440
+means seven inch and ten inch devices in
+
+21
+00:01:01,440 --> 00:01:04,140
+both portrait and landscape mode. And lastly, we
+
+22
+00:01:04,140 --> 00:01:07,870
+don't need layout-sw720dp because we don't have different
+
+23
+00:01:07,870 --> 00:01:10,480
+layouts for seven inch versus ten inch devices.
+

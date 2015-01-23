@@ -1,0 +1,32 @@
+1
+00:00:00,610 --> 00:00:03,730
+I've mentioned the FragmentManager, FragmentTransactions in the back stack
+
+2
+00:00:03,730 --> 00:00:06,410
+a few times. Now, take a look at the documentation
+
+3
+00:00:06,410 --> 00:00:09,370
+on the Android developer site, and complete the code,
+
+4
+00:00:09,370 --> 00:00:11,990
+which will replace the contents of the fragment container with
+
+5
+00:00:11,990 --> 00:00:14,550
+a new instance of the details fragment. Keep in
+
+6
+00:00:14,550 --> 00:00:17,060
+mind that this transaction should allow the user to reverse
+
+7
+00:00:17,060 --> 00:00:19,460
+the transaction using the Back button. And in this
+
+8
+00:00:19,460 --> 00:00:21,990
+case, we'll be calling this code from within an activity.
+

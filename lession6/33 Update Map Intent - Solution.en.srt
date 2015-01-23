@@ -1,0 +1,144 @@
+1
+00:00:00,400 --> 00:00:03,910
+All right. And here's the solution. To start off, let's
+
+2
+00:00:03,910 --> 00:00:07,010
+look at our forecast fragment query. Since it's a join
+
+3
+00:00:07,010 --> 00:00:09,830
+between two tables, it's really easy for us to add
+
+4
+00:00:09,830 --> 00:00:12,920
+additional parameters to our query. Now we make sure we keep
+
+5
+00:00:12,920 --> 00:00:16,390
+the column indices consistent. Now we've grabbed the latitude and
+
+6
+00:00:16,390 --> 00:00:19,270
+longitude at the same time we're grabbing our weather entries.
+
+7
+00:00:19,270 --> 00:00:21,270
+The next thing to do is to move the function
+
+8
+00:00:21,270 --> 00:00:25,400
+open preferred location in map over to forecast fragment. Instead of
+
+9
+00:00:25,400 --> 00:00:28,170
+using shared preferences to get these values, we can actually
+
+10
+00:00:28,170 --> 00:00:30,870
+get the cursor from the forecast adapter. We can get
+
+11
+00:00:30,870 --> 00:00:34,480
+our cursor moved to a reasonable position, and then build
+
+12
+00:00:34,480 --> 00:00:39,160
+our new string which is just latitude colon longitude. We'll
+
+13
+00:00:39,160 --> 00:00:42,320
+leave our comment where it was. Finally, we just have
+
+14
+00:00:42,320 --> 00:00:44,900
+to fix up a few things in the code and
+
+15
+00:00:44,900 --> 00:00:47,630
+that's it. Well, at least for the code. We still
+
+16
+00:00:47,630 --> 00:00:51,600
+need to do some work in XML. Let's move this R.ID.action
+
+17
+00:00:51,600 --> 00:00:55,300
+map now over to forecast fragment inside of it on
+
+18
+00:00:55,300 --> 00:00:57,850
+options item selected. And now we've got to do some
+
+19
+00:00:57,850 --> 00:01:01,480
+XML work. Let's look at our main menu. We'll just
+
+20
+00:01:01,480 --> 00:01:04,620
+pull this action map item out, and we'll place it right
+
+21
+00:01:04,620 --> 00:01:08,160
+into forecast fragment. All right. One more thing to do
+
+22
+00:01:08,160 --> 00:01:10,960
+while we're here. One of the things Raito talked about was
+
+23
+00:01:10,960 --> 00:01:13,780
+wanting to get rid of the refresh menu item. So,
+
+24
+00:01:13,780 --> 00:01:17,000
+let's just comment it out. When we remove that action refresh
+
+25
+00:01:17,000 --> 00:01:19,710
+item, we should probably comment it out from our source
+
+26
+00:01:19,710 --> 00:01:22,710
+code too. After all, you never know when you'll want to
+
+27
+00:01:22,710 --> 00:01:25,800
+use that for debugging. So, there we have it. Our
+
+28
+00:01:25,800 --> 00:01:29,200
+final app. No longer having a refresh button. With a
+
+29
+00:01:29,200 --> 00:01:32,510
+new exciting setting to turn off and on weather notifications.
+
+30
+00:01:32,510 --> 00:01:35,520
+Details are taken care of. I hope you've enjoyed building
+
+31
+00:01:35,520 --> 00:01:38,390
+Sunshine. There's still lots of things left to do in
+
+32
+00:01:38,390 --> 00:01:42,250
+Sunshine. For example, we could also add a lot more intelligent
+
+33
+00:01:42,250 --> 00:01:44,710
+things to its user interface. And of course, we
+
+34
+00:01:44,710 --> 00:01:47,300
+could make it a lot smarter about synching data.
+
+35
+00:01:47,300 --> 00:01:49,730
+And I hope the practices you've learned building Sunshine
+
+36
+00:01:49,730 --> 00:01:51,573
+will help you in all of your future applications
+

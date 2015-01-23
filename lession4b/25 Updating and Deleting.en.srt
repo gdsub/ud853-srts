@@ -1,0 +1,16 @@
+1
+00:00:01,710 --> 00:00:04,490
+The update and delete methods look a lot like the
+
+2
+00:00:04,490 --> 00:00:08,980
+insert method, except they update and delete and neither actually returns
+
+3
+00:00:08,980 --> 00:00:13,050
+a URI upon completion, but instead, the number of rows affected.
+
+4
+00:00:14,100 --> 00:00:17,490
+Also, make sure to notify our ContentObservers while you're at it
+

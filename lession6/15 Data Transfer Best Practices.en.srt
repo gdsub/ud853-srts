@@ -1,0 +1,100 @@
+1
+00:00:00,150 --> 00:00:02,260
+The most important thing you have to remember is that
+
+2
+00:00:02,260 --> 00:00:05,850
+every time you transfer data, no matter how small, the radio
+
+3
+00:00:05,850 --> 00:00:10,130
+could stay powered up for nearly half a minute. So every
+
+4
+00:00:10,130 --> 00:00:12,790
+decision you make will be based on minimizing the number of
+
+5
+00:00:12,790 --> 00:00:16,540
+times that this happens. But of course there's a balance here.
+
+6
+00:00:16,540 --> 00:00:19,180
+You want to download all the data a user is likely
+
+7
+00:00:19,180 --> 00:00:21,940
+to need for the current section in a single burst over
+
+8
+00:00:21,940 --> 00:00:25,520
+a single connection at full capacity. But of course, you don't
+
+9
+00:00:25,520 --> 00:00:29,060
+just want to pull down everything wasting battery power and bandwidth
+
+10
+00:00:29,060 --> 00:00:31,980
+downloading data that's never going to be used. Now I could go
+
+11
+00:00:31,980 --> 00:00:34,750
+on for hours on this topic, but Dan's getting impatient. And
+
+12
+00:00:34,750 --> 00:00:36,740
+you can learn the details on how to implement each of
+
+13
+00:00:36,740 --> 00:00:39,600
+these best practices, including pre-fetching,
+
+14
+00:00:39,600 --> 00:00:41,340
+batching and bundling, burying your
+
+15
+00:00:41,340 --> 00:00:44,930
+update frequency, and minimizing your payloads by watching the series of
+
+16
+00:00:44,930 --> 00:00:47,690
+Dev Lite videos or reading the developer guides linked to in
+
+17
+00:00:47,690 --> 00:00:50,670
+the instructor notes below. Now before I leave it to Dan
+
+18
+00:00:50,670 --> 00:00:52,910
+to show you how to implement a sync adapter for
+
+19
+00:00:52,910 --> 00:00:55,820
+Sunshine that takes advantage of a lot of the best practices
+
+20
+00:00:55,820 --> 00:00:58,940
+I just described, let's consider what the best practice would be
+
+21
+00:00:58,940 --> 00:01:01,570
+if you were building something like a news reader app. How
+
+22
+00:01:01,570 --> 00:01:05,030
+much data should you download when the app is first started?
+
+23
+00:01:05,030 --> 00:01:08,280
+Just the front page of headlines, all the stories and images
+
+24
+00:01:08,280 --> 00:01:11,960
+linked to from that front page? Every story available, but none
+
+25
+00:01:11,960 --> 00:01:15,830
+of the images? Or every story and every image currently available?
+

@@ -1,0 +1,132 @@
+1
+00:00:00,210 --> 00:00:05,060
+Here's how I ended up simplifying things. I'd love to see great testing ideas.
+
+2
+00:00:05,060 --> 00:00:08,540
+So, if you're particular to what you've created, post your solution to
+
+3
+00:00:08,540 --> 00:00:13,280
+the forums. I'm starting off refactoring things a little bit. What I'm
+
+4
+00:00:13,280 --> 00:00:17,242
+going to do is I'm going to add a function to get the location content values.
+
+5
+00:00:17,242 --> 00:00:19,850
+This will be useful when we actually try to use these tests for
+
+6
+00:00:19,850 --> 00:00:23,650
+some other things later on. And there we are. A function that'll
+
+7
+00:00:23,650 --> 00:00:28,650
+return location content values. I'm also going to pull the city name out so
+
+8
+00:00:28,650 --> 00:00:33,690
+we can use that for some validation steps later on. And there we are. It's now
+
+9
+00:00:33,690 --> 00:00:37,010
+inside of the function. And then we're simply going to call that function to
+
+10
+00:00:37,010 --> 00:00:40,680
+get our location content values and we can delete all those lines of code.
+
+11
+00:00:40,680 --> 00:00:45,610
+Now, all of these columns, as I said before, are not very important, so
+
+12
+00:00:45,610 --> 00:00:50,360
+we can delete them. And we can also null out the value in our query.
+
+13
+00:00:50,360 --> 00:00:53,674
+The next thing I want to do is actually fix this validation step. What we can do
+
+14
+00:00:53,674 --> 00:00:57,866
+is we can create a function that relies on the fact we can get the map and
+
+15
+00:00:57,866 --> 00:01:02,300
+set from our content values. And then we can simply iterate through those.
+
+16
+00:01:02,300 --> 00:01:05,838
+Then we can see if the values that we used to create the record actually past
+
+17
+00:01:05,838 --> 00:01:10,410
+the values in the cursor that are returned. Now, back to our task. So,
+
+18
+00:01:10,410 --> 00:01:16,105
+there's a lot of unnecessary code here now. All we have to do is call
+
+19
+00:01:16,105 --> 00:01:21,710
+validateCursor with our values and our cursor. All right. So now we've
+
+20
+00:01:21,710 --> 00:01:25,850
+converted the first test. We can do the same thing with the second test as well.
+
+21
+00:01:25,850 --> 00:01:29,140
+First of all, let's do the same abstraction we did before. Now, of course,
+
+22
+00:01:29,140 --> 00:01:32,400
+one of these values isn't going to be static, so we have to add that in.
+
+23
+00:01:32,400 --> 00:01:39,250
+So now we can say, content values equals getWeatherContentValues.
+
+24
+00:01:39,250 --> 00:01:45,240
+With our all important location row ID. Remember, our tables are linked.
+
+25
+00:01:45,240 --> 00:01:48,830
+And then we can insert it into the database. Query for it.
+
+26
+00:01:48,830 --> 00:01:53,160
+If the query is successful we can just call validateCursor again on our weather
+
+27
+00:01:53,160 --> 00:01:58,620
+values with our weather cursor. So much less code.
+
+28
+00:01:58,620 --> 00:02:03,870
+And that's it. Our test is vastly simplified and
+
+29
+00:02:03,870 --> 00:02:08,520
+it will be useful to us later on. So now we can try running this test again to
+
+30
+00:02:08,520 --> 00:02:13,318
+see if it still works after the refactoring. And there we are, test passed. Now,
+
+31
+00:02:13,318 --> 00:02:15,710
+it'd probably be useful for us to actually print out some more data so
+
+32
+00:02:15,710 --> 00:02:19,340
+we can see what was being tested. But, this simplification to our
+
+33
+00:02:19,340 --> 00:02:23,260
+test is going to help us as we move forward. We're not done with testing yet.
+

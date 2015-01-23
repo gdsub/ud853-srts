@@ -1,0 +1,56 @@
+1
+00:00:00,300 --> 00:00:04,160
+Thanks, Dan. As mentioned earlier, we'll be using Android Studio throughout this
+
+2
+00:00:04,160 --> 00:00:08,201
+course. It's an IntelliJ -based IDE that is optimized specifically for
+
+3
+00:00:08,201 --> 00:00:11,770
+Android development. It's still in beta development, so
+
+4
+00:00:11,770 --> 00:00:14,530
+your version may look slightly different, but that's okay.
+
+5
+00:00:14,530 --> 00:00:18,000
+The core functionality should still be the same. If you haven't installed it
+
+6
+00:00:18,000 --> 00:00:21,870
+yet, take a moment to do that now using the detailed instructions provided in
+
+7
+00:00:21,870 --> 00:00:26,110
+the link below. You'll also need to install the support library and that's also
+
+8
+00:00:26,110 --> 00:00:31,110
+included in the instructions. Note that the SDK is included automatically, so
+
+9
+00:00:31,110 --> 00:00:35,000
+you don't need to install that separately. If you're having difficulties, no
+
+10
+00:00:35,000 --> 00:00:38,960
+worries at all. We totally understand because it can be tricky to get everything
+
+11
+00:00:38,960 --> 00:00:43,600
+set up properly. You can search online for people who have a similar issue or
+
+12
+00:00:43,600 --> 00:00:47,470
+there's a troubleshooting link included below. If you still need help, you can
+
+13
+00:00:47,470 --> 00:00:51,990
+ask a question in our discussion forum as well. Once you install it, open it and
+
+14
+00:00:51,990 --> 00:00:55,660
+you can check for updates before proceeding. Check this box when you're done.
+
