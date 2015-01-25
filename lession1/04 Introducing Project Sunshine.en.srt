@@ -1,64 +1,80 @@
 1
 00:00:00,630 --> 00:00:04,770
+在这里  我们将做一个名为Sunshine的天气应用
 In the course, we're going to build a weather app called Sunshine. The main
 
 2
 00:00:04,770 --> 00:00:09,800
+主界面是本周天气预报列表  特别强调呈现了今天的
 screen is a list of this week's forecast, with an emphasized presentation for
 
 3
 00:00:09,800 --> 00:00:14,870
+天气情况  只需要看一眼  我就能决定
 today's weather. With just a quick glance, I can decide if,
 
 4
 00:00:14,870 --> 00:00:20,560
+今天的编码地点  到底该在家  还是应该去公园
 today is a stay inside, in code day. Or if I should code from the park,
 
 5
 00:00:20,560 --> 00:00:26,256
+我们有一个天气情况的图标  比如下雪
 instead. We have icons to indicate conditions, like snow,
 
 6
 00:00:26,256 --> 00:00:30,790
+下雨  有雾或者晴天  我们可以滑动这个列表
 rain, fog or sunshine. We can scroll through the list,
 
 7
 00:00:30,790 --> 00:00:34,730
+查看更久的天气预报  当我们点击某个天气预报情况时
 to see a long range forecast. With a click on one of the forecasts,
 
 8
 00:00:34,730 --> 00:00:38,900
+将会打开到一个有更详细天气信息的视图
 will bring up a detailed view containing the rest of the weathery goodness,
 
 9
 00:00:38,900 --> 00:00:43,390
+我们还可以通过这个按钮将天气情况分享给我们的朋友
 which also gives us the ability to share the weather with our friends.
 
 10
 00:00:43,390 --> 00:00:48,940
+我们可以点击Setting设置计量温度单位和地点
 We can go to Settings and change the unit of measure, as well as the location.
 
 11
 00:00:48,940 --> 00:00:53,500
+这个应用同样可以发送系统通知  以便于我们不打开应用
 The app can even post system wide notifications, to let us know about weather
 
 12
 00:00:53,500 --> 00:00:58,930
+也能看到天气信息  可能你会问  我们为何
 conditions without even entering the app. So, you might ask, why are we
 
 13
 00:00:58,930 --> 00:01:03,120
+要做一个天气应用呢  我们选择它是因为它比较简单
 building a weather app? We chose the weather app because it's a simple concept,
 
 14
 00:01:03,120 --> 00:01:07,590
+涉及到了大量我们要教给大家的核心API  同时每个人都需要查看天气
 which touches most of the core APIs we want to teach and everyone can relate to
 
 15
 00:01:07,590 --> 00:01:12,090
+除非你在地下室住  在本课的结束  你将能够使用
 weather, unless you're in a bunker. By the end of the course, you'll be able
 
 16
 00:01:12,090 --> 00:01:16,110
+这些API来构建你的最终项目应用啦
 to use those APIs and concepts to build your own app for your final project.
 
