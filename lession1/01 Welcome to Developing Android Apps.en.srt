@@ -1,6 +1,6 @@
 1
 00:00:00,025 --> 00:00:03,070
->> Welcome to Android Fundamentals.
+>> Welcome to Android Fundamentals. 
 
 2
 00:00:03,070 --> 00:00:05,720
