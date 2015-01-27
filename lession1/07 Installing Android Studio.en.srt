@@ -1,56 +1,70 @@
 1
 00:00:00,300 --> 00:00:04,160
+谢谢啦  Dan  正如我们之前所说的  我们在整个课程中都将使用Android Studio
 Thanks, Dan. As mentioned earlier, we'll be using Android Studio throughout this
 
 2
 00:00:04,160 --> 00:00:08,201
+Android Studio是基于Intellij的专门为Android应用开发定制的IDE
 course. It's an IntelliJ -based IDE that is optimized specifically for
 
 3
 00:00:08,201 --> 00:00:11,770
+由于现在Android Studio还处于测试开发阶段  所以
 Android development. It's still in beta development, so
 
 4
 00:00:11,770 --> 00:00:14,530
+您的版本看起来可能略有不同  但是没有关系
 your version may look slightly different, but that's okay.
 
 5
 00:00:14,530 --> 00:00:18,000
+Android Studio的核心功能是没有改变的  如果你还没有安装Android Studio
 The core functionality should still be the same. If you haven't installed it
 
 6
 00:00:18,000 --> 00:00:21,870
+现在请您按照详细说明和下面的链接进行操作
 yet, take a moment to do that now using the detailed instructions provided in
 
 7
 00:00:21,870 --> 00:00:26,110
+在说明中还提到了您还需要安装Android Studio的支持库
 the link below. You'll also need to install the support library and that's also
 
 8
 00:00:26,110 --> 00:00:31,110
+需要注意的是  Android SDK是自动包含在内的
 included in the instructions. Note that the SDK is included automatically, so
 
 9
 00:00:31,110 --> 00:00:35,000
+所以你不需要单独安装Android SDK  如果安装SDK有困难
 you don't need to install that separately. If you're having difficulties, no
 
 10
 00:00:35,000 --> 00:00:38,960
+完全不需要担心  我们非常理解做到一切都是正确的设置是非常棘手的
 worries at all. We totally understand because it can be tricky to get everything
 
 11
 00:00:38,960 --> 00:00:43,600
+您可以在线搜索其他人是否也遇到过类似的问题
 set up properly. You can search online for people who have a similar issue or
 
 12
 00:00:43,600 --> 00:00:47,470
+是否含有解决问题的链接  如果你仍然需要帮助
 there's a troubleshooting link included below. If you still need help, you can
 
 13
 00:00:47,470 --> 00:00:51,990
+你也可以在我们论坛的讨论区提问  一旦你安装成功
 ask a question in our discussion forum as well. Once you install it, open it and
 
 14
 00:00:51,990 --> 00:00:55,660
+打开Android Studio并且在你进行下一步之前请检查更新  当你完成时选中该复选框
 you can check for updates before proceeding. Check this box when you're done.
 
