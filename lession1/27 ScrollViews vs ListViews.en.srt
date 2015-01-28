@@ -1,52 +1,65 @@
 1
 00:00:00,110 --> 00:00:03,260
+表面上看来，创建一个项目列表是一件很简单的事情。
 On the surface, creating a list of items is simple enough.
 
 2
 00:00:03,260 --> 00:00:06,350
+Android 包括 Scroll View，在这你可以使用linear布局，
 Android includes a Scroll View into which you can place any
 
 3
 00:00:06,350 --> 00:00:11,740
+依次来安排所包含的元素，使其成为垂直列表。
 linear layout that in turn arranges each item it contains into a vertical list.
 
 4
 00:00:11,740 --> 00:00:15,550
+注意底部已被覆盖掉linear布局的元素。
 Note the items which have fallen off the bottom off the linear layout. And
 
 5
 00:00:15,550 --> 00:00:19,630
+因此，在UI中不可见。
 therefore aren't currently visible in that UI. The Scroll View,
 
 6
 00:00:19,630 --> 00:00:22,660
+Scroll 视图，顾名思义，将通过它的布局的内容的用户可以滚动使用。
 as the name suggests, will let the user scroll through the contents of
 
 7
 00:00:22,660 --> 00:00:26,320
+然而，在内存有限的设备上使用Scroll 视图是个挑战，
 the layout it contains. But there's a challenge associated with that approach on
 
 8
 00:00:26,320 --> 00:00:29,160
+当中，触摸反应是很关键的。
 a device with limited memory, and where touch responsiveness is
 
 9
 00:00:29,160 --> 00:00:32,900
+当你有五十个元素在列表中，
 critically important. If you have 50 items in a list and
 
 10
 00:00:32,900 --> 00:00:37,250
+可以再任意时刻显示十个元素在屏幕上。
 can fit 10 items on screen at any given time. What's the minimum number of
 
 11
 00:00:37,250 --> 00:00:41,150
+那么问题来了，你需要在列表中创建多少个元素才能显示屏幕的最小显示数呢？
 views you'd need to create in order to scroll through every item on the list?
 
 12
 00:00:42,200 --> 00:00:46,090
+可能你一会儿不知道答案，多想想，
 The answer might not be immediately obvious but think about ways in which you
 
 13
 00:00:46,090 --> 00:00:50,270
+你可以更高效的使用视图来显示整个列表。
 can be more efficient in your use of the views used to display the entire list.
 

@@ -1,40 +1,50 @@
 1
 00:00:00,005 --> 00:00:05,080
+响应式设计，这我造！(⊙o⊙)哦~~ 这不但能调整你的浏览器，
 Responsive design, I know. [LAUGH] It's fun to resize your web browser and
 
 2
 00:00:05,080 --> 00:00:10,210
+还能去看看哪些站点有积极的调整，哪些仍然在使用死大笨的水平滚动条。
 see which sites resize gratefully and which sites remain defiantly large with
 
 3
 00:00:10,210 --> 00:00:14,470
+而响应式设计并不仅仅只在web端。
 gross horizontal scroll bars. But responsive design is not just for
 
 4
 00:00:14,470 --> 00:00:19,580
+如今，手机与平板电脑之间的界限正在消失。
 the web. Today, the lines between phones and tablets are disappearing. So
 
 5
 00:00:19,580 --> 00:00:24,140
+如何将你的程序UI扩展到多屏已经变的越来越重要了。
 it's important to think about your UI will scale in our multiscreen world.
 
 6
 00:00:24,140 --> 00:00:28,840
+千万不要被打倒哦！这就像是在网页设计响应布局一样，
 Don't be overwhelmed. Just like designing responsive layouts for the web,
 
 7
 00:00:28,840 --> 00:00:33,760
+建立一个合理灵活并符合常见设备规格的布局。
 build your layouts to be reasonably flexible or within a common device size.
 
 8
 00:00:33,760 --> 00:00:37,000
+你可以设置选项，提供可选择的不同尺寸规格的布局。
 Then you can set break points, providing alternative layouts for
 
 9
 00:00:37,000 --> 00:00:41,350
+这样一来，
 those various sizes. Think about it this way,
 
 10
 00:00:41,350 --> 00:00:46,730
+小屏手机，大屏手机，平板电脑，大型平板电脑就都可以使用了。
 small phone, large phone, medium tablet, and large tablet.
 

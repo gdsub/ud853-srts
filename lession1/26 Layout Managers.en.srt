@@ -1,56 +1,70 @@
 1
 00:00:00,810 --> 00:00:05,680
+回到Rato所说，frame布局、linear布局、relative布局，
 Going back to what Rato said, frame layout, linear layout, and relative layout
 
 2
 00:00:05,680 --> 00:00:09,790
+这三种布局将会是你在构建UI时最常遇见的。
 are three of the most common layouts you will use in building out your UI.
 
 3
 00:00:09,790 --> 00:00:13,860
+这些都是来自view group类，是用来监管子视图的。
 These all descend from the view group class, designed to contain and
 
 4
 00:00:13,860 --> 00:00:17,870
+每一种布局都有各自的优势，
 give order to child views. They each have their strengths and
 
 5
 00:00:17,870 --> 00:00:21,080
+你应该尝试去使用它们，并为你的程序找到最优布局。
 you should always try to use this simplest layout that will get the job done.
 
 6
 00:00:22,160 --> 00:00:26,240
+Frame Layout非常适合简单的布局，当你只有一个子视图时，
 Frame Layout is great for simple layouts when you only have one child to view,
 
 7
 00:00:26,240 --> 00:00:30,560
+例如一个内容区域只有列表视图的情况。
 like a list view that fills the entire content area. Linear layout is
 
 8
 00:00:30,560 --> 00:00:35,640
+Linear Layout能够完美处理视图内容的水平或者垂直堆叠，一个接着一个的堆叠，
 perfect for stacking the views vertically or horizontally, one after another,
 
 9
 00:00:35,640 --> 00:00:40,610
+它也是能够打破比例来显示的唯一的方法。
 it is also the only way to break up the display proportionately. Relative layout
 
 10
 00:00:40,610 --> 00:00:45,200
+Relative Layout相较于别的布局来说更为强大，当然也更为复杂。
 is powerful but a bit more complicated compared to the others. Throw a bunch of
 
 11
 00:00:45,200 --> 00:00:48,490
+抛开relative layout里的一堆视图，你可以对每一个视图对应的父类进行配置，
 views inside a relative layout, and then you can configure each views
 
 12
 00:00:48,490 --> 00:00:53,070
+也可以是relative布局，同级视图，这将给你很多种选择的机会。
 position relative to parent, the relative layout, or to sibling views, tons of
 
 13
 00:00:53,070 --> 00:00:57,320
+当我们构建更复杂的屏幕时，我们会更加详细的讨论布局。
 possibilities. We'll explore these layouts in greater detail when we build more
 
 14
 00:00:57,320 --> 00:01:02,010
+现在让我们回到预期表。
 complex screens. For now, let's get back to building our forecast list.
 
