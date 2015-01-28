@@ -95,30 +95,35 @@ less view management you have to do yourself. This same recycling behavior is
 
 20
 00:01:13,680 --> 00:01:18,420
-是由AdapterView的子类实现的  比如GridView和ListView
+是由AdapterView的子类实现的  比如GridView(横向滑动)和ListView(竖向滑动)
 implemented across all AdapterView descended classes, such as GridView and
 
 21
 00:01:18,420 --> 00:01:21,830
-
+这也向我们解释了为什么AdapterView类在设计时
 ListView, which also introduces the reason that the adapter isn't built
 
 22
 00:01:21,830 --> 00:01:25,960
+把Adapter适配器对象分离出来的原因  把他们分离开
 directly into these controls themself. By keeping them separate,
 
 23
 00:01:25,960 --> 00:01:30,050
+你的Adapter适配器对象就可以根据底层数据来决定如何显示
 your adapter defines how to display each element of the underlying data,
 
 24
 00:01:30,050 --> 00:01:33,480
+在AdapterView类实例化的时候它就可以根据内容
 while the adapter view implementation itself is responsible for
 
 25
 00:01:33,480 --> 00:01:37,800
-controlling how each of these elements is laid out. Be it a list or
+控制每个元素的布局  到底是以列表的形式
+controlling how each of these elements is laid out. 
 
 26
 00:01:37,800 --> 00:01:39,880
+或者是网格的形式显示
 a grid in these particular instances.
