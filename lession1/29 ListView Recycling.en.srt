@@ -1,85 +1,106 @@
 1
 00:00:00,375 --> 00:00:04,120
+ListView是把所有可见条目显示在一个view上  可见条目数量取决于
 ListView starts by requesting a view for every visible item, however many you
 
 2
 00:00:04,120 --> 00:00:08,770
+手机屏幕的大小  与此同时  它同时会在上下两头初始化一对条目
 can fit onto the screen. It'll also create a couple in either direction to make
 
 3
 00:00:08,770 --> 00:00:11,830
+以确保新的视图创建并填充的时候  滑动起来的时候不会卡顿
 sure we can scroll without seeing a flicker as a new view is created and
 
 4
 00:00:11,830 --> 00:00:16,470
+然后他就很快的把新条目创建了  然后下一行就为用户
 populated. Then it creates new items just in time. So it's next in line to
 
 5
 00:00:16,470 --> 00:00:20,550
+呈现了  也就是说  如果用户木有滚动到列表的最下面
 be visible to the user. So if the user never scrolls to the bottom of the list,
 
 6
 00:00:20,550 --> 00:00:24,220
+那ListView也就永远不会从接口请求数据
 the ListView will never request that view from the adapter. But this is really
 
 7
 00:00:24,220 --> 00:00:27,780
+这确实只是一个折中的办法  你想想看  如果用户一直在滑动屏幕
 just a half measure. As you can see, if the user keeps scrolling, we could
 
 8
 00:00:27,780 --> 00:00:31,430
+我们只是一味的在添加新的视图  即使它们从顶部已经消失了
 potentially just keep adding new views, even if they disappear off the top of
 
 9
 00:00:31,430 --> 00:00:35,080
+最终结果是它们一直在内存中占着资源
 the screen. Eventually that's going to lead to the same impact in memory use and
 
 10
 00:00:35,080 --> 00:00:38,230
+那这就跟我们初始化的时候就把它们全部加载到内存里一模一样了
 performance as if we had just created all of these views directly at
 
 11
 00:00:38,230 --> 00:00:42,980
+那么解决方案就是  自动把所有划出屏幕的视图全部回收
 the beginning. The solution is recycling each view as it scrolls off the screen,
 
 12
 00:00:42,980 --> 00:00:46,270
+当条目被滑动回屏幕的时候
 allowing it to be reused when we need to show another item as it
 
 13
 00:00:46,270 --> 00:00:50,080
+重新启用  而不是在视图实例化的时候
 moves into view at the top or bottom. So rather than having to create and
 
 14
 00:00:50,080 --> 00:00:53,710
+将他们全部放进内存
 then hold in memory each item of the list as it comes in to view,
 
 15
 00:00:53,710 --> 00:00:57,400
+所以我们只需要为这些在手机屏幕里可见的条目申请内存
 we only need to do the creation step for the number of visible items and
 
 16
 00:00:57,400 --> 00:01:01,850
+这样的话任何时候一个新的视图显示到手机上的时候
 couple on either side. Then whenever a new list item comes into view,
 
 17
 00:01:01,850 --> 00:01:06,130
+我们只需要更新列表的数据就可以了
 we just update the data displayed in one of our items in our recycle bin.
 
 18
 00:01:06,130 --> 00:01:09,200
+为啥要这么折腾  结果就是更少的内存占用  更顺畅的滑动体验
 The result? Less memory overhead, smoother scrolling and
 
 19
 00:01:09,200 --> 00:01:13,680
+而且你只用做更少的视图管理工作  这种回收机制
 less view management you have to do yourself. This same recycling behavior is
 
 20
 00:01:13,680 --> 00:01:18,420
+是由AdapterView的子类实现的  比如GridView和ListView
 implemented across all AdapterView descended classes, such as GridView and
 
 21
 00:01:18,420 --> 00:01:21,830
+
 ListView, which also introduces the reason that the adapter isn't built
 
 22
@@ -101,4 +122,3 @@ controlling how each of these elements is laid out. Be it a list or
 26
 00:01:37,800 --> 00:01:39,880
 a grid in these particular instances.
-
