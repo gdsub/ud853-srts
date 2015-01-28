@@ -30,7 +30,7 @@ layout as the parent view, as well as a child TextView. Modify this file so that
 
 7
 00:00:26,360 --> 00:00:31,960
-修改这个文件  我们需要替换掉这个TextView组件  换成一个id是ListViewForecast的ListView组件  
+修改这个文件  我们需要替换掉这个TextView组件  换成一个id是listview_forecast的ListView组件  
 we show a ListView instead of a TextView and assign it an ID ListViewForecast so
 
 8
