@@ -20,7 +20,7 @@ version in this pie chart, because pie charts are awesome. For our purposes
 
 5
 00:00:18,314 --> 00:00:22,700
-你真的最好还是考虑看一下这个直方图  如果你眯着眼睛
+你最好还是考虑看一下这个直方图  如果你眯着眼睛
 though, you're really better off looking at this as a histogram. If you squint,
 
 6
@@ -30,27 +30,27 @@ you can almost see a vaguely bell-shaped curve, with the oldest releases here at
 
 7
 00:00:27,715 --> 00:00:31,858
-它们的知名度随着设备的升级和更换而逐渐下降
+它们的流行程度随着设备的升级和更换而逐渐下降
 the left, their popularity dropping off as devices are upgraded or
 
 8
 00:00:31,858 --> 00:00:36,100
-在中间的是在设备中所占比例最大的
+中间的是在设备中所占比例最大的
 replaced. The largest proportion of devices are here in the middle,
 
 9
 00:00:36,100 --> 00:00:40,020
-代表着这些设备已经两岁啦  而最新的平台
+代表着这些设备已经两岁啦  而最新的平台中
 representing devices about two years old. And the newest platforms,
 
 10
 00:00:40,020 --> 00:00:43,470
-日益普及的新手机在发布和升级
+日益普及的新手机发布和升级
 gaining popularity as new phones are released or upgrades go out,
 
 11
 00:00:43,470 --> 00:00:47,523
-在它的右侧  所以考虑到这一点  最低SDK作为您的低通滤波器
+是在它的右侧  所以考虑到这一点  最低SDK作为您的低通滤波器
 are here on the right. So with that in mind, the Min SDK acts as your low-pass
 
 12
@@ -70,7 +70,7 @@ support everyone? Generally, you'll want to target as many users as you can, but
 
 15
 00:01:01,400 --> 00:01:05,040
-但要与一些旧的版本进行匹配是要付出代价的
+但要给旧版本进行匹配是要付出代价的
 there's a cost associated with supporting some of these older versions.
 
 16
