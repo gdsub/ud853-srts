@@ -1,36 +1,45 @@
 1
 00:00:00,290 --> 00:00:05,120
+下面是解决方案  创建一个新的Layout resource文件  名字是List item forecast
 And here's the solution. You create a new layout resource file. Call it list
 
 2
 00:00:05,120 --> 00:00:11,030
+并且主元素是一个文本视图  然后选择OK即可
 item forecast. And the root element is a TextView. Then you just hit OK.
 
 3
 00:00:11,030 --> 00:00:16,830
+现在我们已经创建好item  我们就可以切换到文本窗口了
 Now that we have the item created, we can switch to the Text pane.
 
 4
 00:00:16,830 --> 00:00:20,492
+这里是源代码  我们在这里只有一个文本视图
 Here's the solution code. We have a single TextView where the width is
 
 5
 00:00:20,492 --> 00:00:24,760
+并且宽度是与父文本视图匹配  高度是包设定的内容  我们同样也给出了最小高度
 match parent and the height is wrap content. We also give it a minimum height.
 
 6
 00:00:24,760 --> 00:00:29,370
+所以这个item是可以点按的  我们使用这个框架给出的默认高度值
 So the item is tappable. We use the framework preferred item height for this.
 
 7
 00:00:29,370 --> 00:00:32,759
+现在的最小高度会有更多的垂直空间
 Since there'll be more vertical space now with the minimum height, we specify
 
 8
 00:00:32,759 --> 00:00:37,220
+我们选定了gravity可以使文本在文本视图中垂直居中
 gravity so that the text inside the text view will be centered vertically.
 
 9
 00:00:37,220 --> 00:00:42,100
+最后  我们指定了ID  使我们之前就给出的  现在我们已经有了一个List item
 Lastly, we specify ID, which we gave you earlier. Great. Now we have a list item
 

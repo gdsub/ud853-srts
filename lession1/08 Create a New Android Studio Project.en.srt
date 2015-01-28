@@ -10,7 +10,7 @@ check for updates before proceeding. Then we can configure Android Studio.
 
 3
 00:00:08,240 --> 00:00:12,470
-打开Android SDK Manager查看我们已经安装了什么工具  平台版本和组件
+打开Android SDK Manager查看我们已经安装的工具  平台版本和组件
 Open up the Android SDK Manager to see what tools, platform versions, and
 
 4
@@ -20,17 +20,17 @@ components we have installed. At the time of this recording,
 
 5
 00:00:15,330 --> 00:00:19,900
-Android L平台已经可用  但它仍然是开发者预览模式
+Android L平台已经可用  但它仍然处在开发者预览模式
 the Android L platform is available but it's still in developer preview mode.
 
 6
 00:00:19,900 --> 00:00:23,770
-这意味着它需要一直更改直到正式版发布  您不能将此应用上传到
+这意味着它需要一直更改直到正式版发布  如果它是为Android L平台设计的
 That means it's subject to change until the official release. You can't upload
 
 7
 00:00:23,770 --> 00:00:27,928
-Google Play Store如果它是为Android L平台设计的
+那么您不能将此应用上传到Google Play Store
 your app to Google Play if it's targeting this L platform version.
 
 8
@@ -40,7 +40,7 @@ Hence, we want to use the latest stable platform version which is KITKAT or
 
 9
 00:00:31,670 --> 00:00:36,830
-API level20是为Android Wear或手表而是用的  而不是为手机和平板电脑所使用的
+API level20是为Android Wear或手表而适用的  而不是为手机和平板电脑所适用的
 API level 19. API level 20 is for Android ware or watches and not for
 
 10
@@ -80,12 +80,12 @@ create a new project. In the Project Wizard, we set the app name to be Sunshine.
 
 17
 00:01:02,860 --> 00:01:06,200
-然后我们提供对应的包名称  为了用于分配
+然后我们提供对应的包名称  为了能让应用正式发布
 Then we provide a corresponding package name. For distribution purposes,
 
 18
 00:01:06,200 --> 00:01:10,190
-包名称应该是在Android上安装使用的全局统一的名称
+包名称是在Android上安装您的应用时使用的全局统一的名称
 the package name should be globally unique across packages installed on Android.
 
 19
@@ -105,7 +105,7 @@ the com dot example namespace for our Sunshine app since it's a sample, but
 
 22
 00:01:22,150 --> 00:01:26,010
-因为Sunshine应用是一个样本  所以你不能使用这个名字发布到GooglePlay上
+因为Sunshine应用仅仅是示例  所以你不能用这个名字把应用发布到GooglePlay上
 you cannot publish an app on Google play that uses this namespace.
 
 23
@@ -120,12 +120,12 @@ this class was originally filmed with an older version of Android Studio which
 
 25
 00:01:33,410 --> 00:01:37,280
-并在包名称的末尾添加应用程序模块
+并在包名称的末尾添加.app的包名
 added the app module at the end of the package name. So go ahead and
 
 26
 00:01:37,280 --> 00:01:40,160
-在本课程中如果你想让你的代码会匹配其余的代码现在就需要做出改变
+在本课程中如果你想让你的代码会匹配其余的代码请立刻修改
 make this change now if you want your code to match the rest of the code in
 
 27
@@ -135,7 +135,7 @@ the course. Then we do the project location and
 
 28
 00:01:42,580 --> 00:01:47,030
-选择下一步  现在  我们需要选择我们的最低SDK版本
+并选择下一步  现在  我们需要选择我们的最低SDK版本
 we hit next. Now, we need to choose our minimum SDK version.
 
 29
