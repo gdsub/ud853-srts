@@ -1,60 +1,75 @@
 1
 00:00:00,160 --> 00:00:02,969
+程序可以运行对于一个程序猿来说是最开心的了。下面，我将展示
 I know you're excited to run the app. And I'm going to show you how to do it
 
 2
 00:00:02,969 --> 00:00:05,970
-without a physical device, because we'll be using the emulator. But
+在没有物理设备的情况下，我们还能用模拟器来运行程序。
+without a physical device, because we'll be using the emulator. 
 
 3
 00:00:05,970 --> 00:00:09,460
-first, we need to install one more component from the Android SDK Manager.
+首先，我们需要在Android SDK 中多安装一个组件。
+But first, we need to install one more component from the Android SDK Manager.
 
 4
 00:00:09,460 --> 00:00:13,500
-Click on this button to open up the Android SDK Manager. Scroll to the bottom of
+单击，打开 Android SDK 管理器。
+Click on this button to open up the Android SDK Manager. 
 
 5
 00:00:13,500 --> 00:00:18,030
-the list to find HAXM. It stands for hardware accelerated execution manager. And
+找到列表底部的HAXM。这是硬件加速执行管理器。
+Scroll to the bottom ofthe list to find HAXM. It stands for hardware accelerated execution manager. 
 
 6
 00:00:18,030 --> 00:00:22,220
-it will speed up our emulator. So go ahead and deselect the other packages, and
+它能给模拟器加速。取消其他的安装选项，我们只安装HAXM。
+And it will speed up our emulator. So go ahead and deselect the other packages, and
 
 7
 00:00:22,220 --> 00:00:24,730
-just install this one. Accept the license, and
+接受许可，继续。
+just install this one. Accept the license, and then continue. 
 
 8
 00:00:24,730 --> 00:00:27,990
-then continue. We have to do one more step after this to install HAXM.
+在安装前我们还需要一些步骤。
+We have to do one more step after this to install HAXM.
 
 9
 00:00:27,990 --> 00:00:31,840
+这里将介绍Mac上的安装步骤，而其他平台上的操作请从下方的链接处学习。
 I'll show you the remaining steps on a Mac, but for the other platforms you can
 
 10
 00:00:31,840 --> 00:00:35,310
+首先，找到 Android Studio 下的应用程序文件夹，
 check the link below. First, find Android Studio under the applications folder,
 
 11
 00:00:35,310 --> 00:00:39,010
+打开 show package contents。在SDK文件夹下，
 and then hit show package contents. Then, in the SDK folder,
 
 12
 00:00:39,010 --> 00:00:43,690
+包含一个Intel文件夹，这里面有HAXM运行程序。
 there'll be an extras folder containing an Intel folder with the HAXM folder.
 
 13
 00:00:43,690 --> 00:00:47,160
-Then, we click on the DMG file, open it up and
+运行这个DMG文件，点击继续。
+Then, we click on the DMG file, open it up and then continue.
 
 14
 00:00:47,160 --> 00:00:51,160
-then continue. Step through this installer, and the default values are fine.
+通过这个步骤安装，默认是是ok的。
+Step through this installer, and the default values are fine.
 
 15
 00:00:51,160 --> 00:00:53,620
+安装完成后，就可以关闭所有的窗口。O(∩_∩)O哈哈~
 Once installation is complete, you can close all the windows.
 
