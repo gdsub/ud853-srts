@@ -1,48 +1,59 @@
 1
 00:00:00,280 --> 00:00:03,960
+你应该已经把TextView组件更换成ListView组件
 You should have changed the TextView into a ListView element.
 
 2
 00:00:03,960 --> 00:00:06,860
+然后你就可以删除文本属性  因为你已经不再需要它了
 Then you can remove this text attribute because you don't need it anymore.
 
 3
 00:00:07,920 --> 00:00:11,900
+想一下之前的产品设计图  你应该记得这个天气预报列表占据了整个屏幕
 Now from the UX mocks, you'll remember that the list takes up the whole screen,
 
 4
 00:00:11,900 --> 00:00:16,160
+我们这里设置宽高值都为  match_parent  跟父视图大小一致
 so we want to set the width and height to be match_parent. That will make
 
 5
 00:00:16,160 --> 00:00:20,460
+这会让我们的这个ListView组件匹配其父视图的尺寸  也就是RelativeLayout布局
 the ListView match the dimensions of its parent, which is this RelativeLayout.
 
 6
 00:00:20,460 --> 00:00:23,895
+RelativeLayout的宽高也是match_parent  我们找找它的父类
 And to find out the parent of this RelativeLayout, it's actually in this
 
 7
 00:00:23,895 --> 00:00:29,530
+当然要在activity_main.xml这个文件里找  因为Activity是被这个Fragment布局填充的
 activity_main XML file because the fragment is contained within the activity.
 
 8
 00:00:29,530 --> 00:00:33,860
+在这个文件里  我们看到这个视图的宽高同样是match_parent
 Within this file, we see that this view is also match_parent for height and
 
 9
 00:00:33,860 --> 00:00:37,380
+所以我们现在就可以确认这个ListView组件一定是全屏显示了
 width. So now we can confirm that the ListView actually will take up
 
 10
 00:00:37,380 --> 00:00:42,116
+回到fragment_main.xml这个文件  我们可以为ListView组件
 the full screen. Going back to the fragment_main file, we can add the id,
 
 11
 00:00:42,116 --> 00:00:47,190
+添加一个名为listview_forecast的id  然后  因为这个布局只包含一个子类
 listview_forecast, onto the ListView. And then, since this layout only contains
 
 12
 00:00:47,190 --> 00:00:51,255
+所以我们可以把RelativeLayout改成FrameLayout咯
 one child, we can simplify the layout by changing this into a FrameLayout.
-

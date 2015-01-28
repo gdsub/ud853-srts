@@ -1,52 +1,64 @@
 1
 00:00:00,290 --> 00:00:04,870
+谢谢你Rado  我们现在已经知道了ListView独特的优势
 Thanks, Rado. Now that we know the distinct advantages of using a list view,
 
 2
 00:00:04,870 --> 00:00:08,750
+我们可以使用ListView在我们的应用中显示天气预报列表
 we can use a list view to display the list of weather forecasts in our app.
 
 3
 00:00:08,750 --> 00:00:12,580
+那现在问题来了  在layout布局文件夹中  我们需要修改那个文件去完成我们的要求呢
 Now, which file in the layout folder should we modify to accomplish this?
 
 4
 00:00:13,640 --> 00:00:17,150
+我们希望在Fragment布局中直接添加一个ListView组件
 Well, we want to add the list view directly to the fragment. If you open up
 
 5
 00:00:17,150 --> 00:00:21,690
+如果你打开fragment_main.xml这个文件  你会注意到这个布局文件
 the fragment_main.xml file, you'll notice that the layout includes a relative
 
 6
 00:00:21,690 --> 00:00:26,360
+已经有了一个RelativeLayout布局作父类布局  当然还有一个TextView组件
 layout as the parent view, as well as a child TextView. Modify this file so that
 
 7
 00:00:26,360 --> 00:00:31,960
+修改这个文件  我们需要替换掉这个TextView组件  换成一个id是listview_forecast的ListView组件  
 we show a ListView instead of a TextView and assign it an ID ListViewForecast so
 
 8
 00:00:31,960 --> 00:00:36,460
+以方便我们以后调用它  要注意的是  这种布局(RelativeLayout布局)只能包含一个子元素
 we can reference it later. Also, since this layout only contains one child's
 
 9
 00:00:36,460 --> 00:00:40,380
+使用FrameLayout布局实际上会比RelativeLayout布局效率更高
 view, it would be more efficient to actually switch to a FrameLayout instead of
 
 10
 00:00:40,380 --> 00:00:43,840
+当你做完的时候  重新编译  运行你的应用程序
 a RelativeLayout. After you make the changes, compile and
 
 11
 00:00:43,840 --> 00:00:48,160
+你可能会发现一个白白的屏幕空空如也
 run your app. You'll be a little underwhelmed with the blank screen, but
 
 12
 00:00:48,160 --> 00:00:52,030
+但是那是正确的  那是因为我们并没有为这个ListView组建放入任何数据呢
 that's okay. That's because we haven't populated the list view with data yet,
 
 13
 00:00:52,030 --> 00:00:55,230
+放入数据的工作我们随后再讲  做完之后勾选这个复选框噢
 and that will come in a later step. Check the box when you're done.
-
