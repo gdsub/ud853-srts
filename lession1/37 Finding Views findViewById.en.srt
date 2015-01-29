@@ -1,116 +1,145 @@
 1
 00:00:00,090 --> 00:00:03,670
+一旦适配器被初始化  让我们把它绑定到ListView列表控件
 Once the adapter is initialized, let's bind it to the list view. But
 
 2
 00:00:03,670 --> 00:00:06,980
+但是你可能注意到了在我们的布局中没有提及到ListView列表控件
 you may notice that we don't have a reference to the list view in our fragment.
 
 3
 00:00:06,980 --> 00:00:10,360
+它仅仅是定义在layout XML文件中的  系统会使用并添加
 It was only defined in the layout XML. The system takes and
 
 4
 00:00:10,360 --> 00:00:12,370
+layout XML文件  并且
 inflates layout XML files. And
 
 5
 00:00:12,370 --> 00:00:17,000
+把它们转到一个在视图树顶部的带有一个主activity的根layout完整的视图分层
 turns them into a full view hierarchy with a root layout of the main activity at
 
 6
 00:00:17,000 --> 00:00:21,750
+我们也可以指定ID到树中的每个视图
 the very top of the view tree. We can also assign IDs to each view in the tree,
 
 7
 00:00:21,750 --> 00:00:26,320
+如果你不需要ID来参考那么就不是必要的
 but it's not required if you don't need a reference to an individual view.
 
 8
 00:00:26,320 --> 00:00:29,790
+举个例子  这个图像视图没有与之关联的ID  也是可以的
 For example, this image view doesn't have an ID associated with it and
 
 9
 00:00:29,790 --> 00:00:33,640
+与activity或布局相关联的Java代码同样包含
 that's okay. Within the Java code of the associated activity or
 
 10
 00:00:33,640 --> 00:00:38,660
+如果我们需要一个按钮的引用  我们可以使用findViewByID来完成
 fragment. If we need a reference to the button, we can simply call findViewById,
 
 11
 00:00:38,660 --> 00:00:43,370
+它会遍历树下面的层次结构直到它找到带有button的视图
 which will traverse down the hierarchy until it finds a view with the ID button.
 
 12
 00:00:43,370 --> 00:00:48,050
+然后它会返回  同样的  我们可以遍历树下面的视图层次
 And then it will return that. Similarly, we can traverse down the view
 
 13
 00:00:48,050 --> 00:00:53,620
+去寻找带有container ID的线性的layouts并返回
 hierarchy to find the linear layout with the ID container, and then return that.
 
 14
 00:00:53,620 --> 00:00:57,030
+我们同样可以使用参照去找到TextView通过树向下遍历视图层次结构
 We could do the same to find a reference to this TextView by traversing down
 
 15
 00:00:57,030 --> 00:01:00,830
+但是你会注意到我们已经有了一个container的参考
 the view hierarchy. But you'll notice that we already have a reference to
 
 16
 00:01:00,830 --> 00:01:06,055
+并且TextView是container的子树  因此
 the container which is a direct parent of this TextView. Hence, we can just call
 
 17
 00:01:06,055 --> 00:01:12,420
+因此我们可以直接使用container.findViewById去搜索子树并寻找带有这个ID的TextView
 container.findViewById to search this subtree to find the TextView with this ID,
 
 18
 00:01:12,420 --> 00:01:17,480
+并且返回它  使用这个方法  我们用一个更小的子树
 and then return it. With this method, we have a smaller sub-tree to search for
 
 19
 00:01:17,480 --> 00:01:22,060
+去搜索一个给定的视图而不是去搜索整个View的结构
 a given view, as opposed to searching the entire view hierarchy.
 
 20
 00:01:22,060 --> 00:01:25,890
+在Android Java文档中对于View这个类的说明  如果你也想这样做
 In the Android Java doc for the View class, which is linked below if you want to
 
 21
 00:01:25,890 --> 00:01:30,020
+在下面有文档的链接  它包含一个在Layout XML文档中定义过的按钮的例子
 follow along, it contains an example where the button with Define in Layout XML.
 
 22
 00:01:30,020 --> 00:01:36,350
+这是一个已经分配过的my_button的ID  然后在Activity当中
 It was assigned an ID My Button. Then in the Activity, we can use the find
 
 23
 00:01:36,350 --> 00:01:40,990
+我们可以使用通过查找ID的方法查找view  有了那个ID  我们可以得到它的返回值
 view by ID method, with that ID, so that we can get a reference to the button.
 
 24
 00:01:40,990 --> 00:01:45,510
+然后我们可以动态地改变它  例如添加一个点击监听器来改变
 Then we can change it dynamically, such as by adding a click listener to it.
 
 25
 00:01:46,770 --> 00:01:50,560
+现在在占位符布局的类中  将适配器绑定到ListView
 Now in the placeholder fragment class, bind the adapter to the list view.
 
 26
 00:01:50,560 --> 00:01:54,230
+幸运的是  我们已经给ListView分配了一个ID  所以我们可以很容易的找到它
 Luckily, we did assign an ID to the list view earlier. So, we can find it
 
 27
 00:01:54,230 --> 00:01:58,430
+想想你可以在视图层次中可以调用ID查找视图的最小的树
 easily now. Think about the smallest sub-tree in the view hierarchy that you
 
 28
 00:01:58,430 --> 00:02:03,640
+并在上面设置一个适配器  如果你想要一个例子
 can call find view by ID on. Then set the adapter on it. If you want an example,
 
 29
 00:02:03,640 --> 00:02:07,430
+你可以在下面的链接中看到  当你完成的时候请勾选复选框
 you can see one in the link below. Check the boxes when you're done.
 
