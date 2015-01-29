@@ -152,4 +152,3 @@ do that, and return it to the ListView. And now we have the list item for
 00:02:15,010 --> 00:02:19,180
 现在 我们已经完成了我们这个列表啦
 Charlie and position two in the list. And we have our complete list
-
