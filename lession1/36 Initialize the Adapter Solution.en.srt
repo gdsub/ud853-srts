@@ -1,16 +1,20 @@
 1
 00:00:00,430 --> 00:00:03,860
+当你为 Adapter 适配器创建好内容的时候  它应该看起来像这个样子的
 When you've declared your array adapter of strings, it should look something
 
 2
 00:00:03,860 --> 00:00:09,500
+我们把这个 Fragment 本身传进去  作为一个 Context 参数
 like this. We pass in a context, which is this fragment's parent activity,
 
 3
 00:00:09,500 --> 00:00:14,010
+同时还有列表项目布局的id  以及 TextView 组件的 id
 as well as the ID of the list item layout, and the ID of the text view we
 
 4
 00:00:14,010 --> 00:00:17,380
+最后我们传入天气数据信息
 want to populate. And lastly, we pass in the forecast data.
 
