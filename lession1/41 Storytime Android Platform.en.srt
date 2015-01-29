@@ -1,156 +1,195 @@
 1
 00:00:00,570 --> 00:00:04,040
+2008年8月25日，我提出了第一个android问题，关于堆栈溢出。
 I asked my first Android question on Stack Overflow, on August 25, 2008.
 
 2
 00:00:04,040 --> 00:00:09,080
+这个问题我是在0.9 Android Beta SDK是遇到的。
 Was about a problem I was having on the 0.9 Android Beta SDK.
 
 3
 00:00:10,100 --> 00:00:12,250
+Android从那时起就开始快速发展，
 Android has evolved quickly since then, and
 
 4
 00:00:12,250 --> 00:00:16,560
+在google总部的android甜点园区，那是android开发的核心区，
 no where is there more power than here, in the Android Dessert Sculpture garden,
 
 5
 00:00:16,560 --> 00:00:20,150
+在那会有更高的效率去开发android。
 at the very heart of Android, building 44 at Google HQ.
 
 6
 00:00:21,180 --> 00:00:24,580
+那儿不仅仅有真人大小的甜点模型供人拍照，
 More than just a convenient place to take a photo with a life-size sculpture of
 
 7
 00:00:24,580 --> 00:00:30,400
+也是android发展的历史见证。
 your favorite dessert, it also tells the history of Android. In terms of food,
 
 8
 00:00:30,400 --> 00:00:34,850
+在食品方面来说，每一个推出的Android版本都有两个共同点。
 every Android launch has two things in common. Work from work, Bacon Sundays,
 
 9
 00:00:34,850 --> 00:00:39,070
+日复一日的工作，加班的周末，以及每个关键时刻的产品推出。
 and the crunch time leading up to each launch. And a dessert themed code named
 
 10
 00:00:39,070 --> 00:00:45,106
+android甜点雕塑园是每一个以甜点命名的版本代码的永久纪念。
 memorialized forever here, in the Android Dessert Sculpture garden.
 
 11
 00:00:45,106 --> 00:00:49,447
+每个版本的新的硬件、APIs和功能都有开发人员的参与。
 [NOISE] Each release brings with it new hardware, APIs, and features for
 
 12
 00:00:49,447 --> 00:00:53,954
+第三个重要的android版本，是1.5版本，或者说纸杯蛋糕，
 developers to play with. The third major Android release, 1.5 or Cupcake,
 
 13
 00:00:53,954 --> 00:00:58,162
+当然这是它的版本代称，它给Android SDK带来了视频录制和窗口控件，
 as it was code named, brought video recording and widgets to the Android SDK,
 
 14
 00:00:58,162 --> 00:01:03,580
+这是我们草坪上第一个烤好的甜品。
 and the first baked good to our front lawn. Android 1.6 and 2.0 brought with
 
 15
 00:01:03,580 --> 00:01:08,770
+Android 1.6和2.0分别是巨大的甜甜圈和松饼，它们支持不同显示屏分辨率，
 them giant donuts and eclairs as well as support for different screen sizes, and
 
 16
 00:01:08,770 --> 00:01:13,670
+还能同时跟踪多个触摸点。
 tracking multiple simultaneous touch points. The biggest challenge for
 
 17
 00:01:13,670 --> 00:01:17,940
+对于Android 2.2来说，最大的挑战就是在刚出炉的甜点上加一个开头字母F。
 Android 2.2 was coming up with a baked dessert starting with the letter F.
 
 18
 00:01:17,940 --> 00:01:19,400
+最终我们忽略了一个挑战，
 A challenge we ultimately ignored,
 
 19
 00:01:19,400 --> 00:01:22,900
+这并不是给邻居送一大碗冻酸奶。
 instead introducing this giant bowl of froyo to the neighborhood.
 
 20
 00:01:22,900 --> 00:01:25,125
+随着时间推移，云端设备会将用户反馈消息传送到我们的平台。
 Along with that, in cloud's device messaging to the platform.
 
 21
 00:01:25,125 --> 00:01:31,320
+这种情况下，我们推出了Android 2.3，这个真人大小的姜饼，
 [NOISE] That brings us to Android 2.3, and this giant life-size gingerbread man,
 
 22
 00:01:31,320 --> 00:01:36,067
+给我们带来了气压计、陀螺仪和NFC系统支持。
 along with system support for barometers, gyroscopes and NFC.
 
 23
 00:01:36,067 --> 00:01:40,300
+Android 3.0是一个蜂巢。这是第一个有针对性的版本，
 Android 3.0 was the Honeycomb release. The first one targeted, specifically for
 
 24
 00:01:40,300 --> 00:01:46,020
+针对平板系统并为Android 4.0的发行铺好路。
 tablets and paving the way for Android 4.0. Android 4,
 
 25
 00:01:46,020 --> 00:01:50,460
+Android 4.0这个冰淇淋三明治，让手机和平板电脑重新走到一起。
 Ice Cream Sandwich brought phones and tablets back together. It also introduced
 
 26
 00:01:50,460 --> 00:01:56,320
+它还推出了Android Beam，和大家最喜欢的字体roboto。
 Android Beam, and everyone's favorite font, roboto. Android 4.1 Jelly Bean
 
 27
 00:01:56,320 --> 00:02:00,240
+Android 4.1果冻豆是第一个发布的平台，基于丰富功能的可扩展通知。
 was the first platform release to feature rich expandable notifications.
 
 28
 00:02:00,240 --> 00:02:03,900
+这也是第一个自燃的雕塑，多亏了一个版本一个设计雕塑，
 It's also the first sculpture to spontaneously combust thanks to a version one
 
 29
 00:02:03,900 --> 00:02:08,120
+为此我们还为这些“太阳能高压锅”申请了专利。
 design, that we've since patented as a solar powered pressure cooker. But
 
 30
 00:02:08,120 --> 00:02:13,473
+当然，这是个小插曲。这也给我们带来了一个新成员Android 4.4，奇巧。
 that's another story. [NOISE] Which brings us to the newest member of our team,
 
 31
 00:02:13,473 --> 00:02:18,774
+这个版本给我们带来更多的传感器，主机虚拟卡，还有短信API。
 Android 4.4, Kit-Kat. With sensor batching, host card emulation and an API for
 
 32
 00:02:18,774 --> 00:02:23,750
+这么看来甜点的名字都决定好了吗？
 text messaging. So how do the dessert names get decided? Well ultimately,
 
 33
 00:02:23,750 --> 00:02:27,800
+其实，真正的规则是版本的首字母都遵循了C、D、E、F的顺序。
 the only real rule is sequential lettering. Then it's down to intense lobbying,
 
 34
 00:02:27,800 --> 00:02:31,940
+这个命名甚至经过了激烈的游说，威胁，贿赂和[未知]，还有文化共鸣和[小编不认识]。
 threats, bribery and [UNKNOWN] on the ease of spelling, cultural resonance and
 
 35
 00:02:31,940 --> 00:02:36,630
+而我们现在看到的，就是最终被坚持下来的。
 statuability of each proposal. Eventually something just sort of sticks.
 
 36
 00:02:36,630 --> 00:02:39,810
+即使这样，我们还能给自己带来惊喜。看看GIT的历史，我们可以看到K版本，
 Even then, we can surprise ourselves. Take a look at the GIT history for
 
 37
 00:02:39,810 --> 00:02:44,820
+你能看到奇巧，但事实上它也可以不是奇巧。
 the K release, and you'll see that even KitKat wasn't always KitKat. As for
 
 38
 00:02:44,820 --> 00:02:46,670
+至于下一个版本，我们还得等待它的发布，
 what comes next, we'll have to wait and
 
 39
 00:02:46,670 --> 00:02:48,890
+才能知道接下来的甜点是什么。
 see what the next statue is, before we know for sure.
 

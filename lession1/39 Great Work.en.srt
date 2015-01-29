@@ -1,8 +1,10 @@
 1
 00:00:00,520 --> 00:00:04,900
+现在，我们的应用程序上已经能看见这个漂亮的列表上有天气数据了。干得漂亮！
 And now we have this beautiful list of weather data in our app. Great job.
 
 2
 00:00:04,900 --> 00:00:05,400
+击掌庆祝一下！
 High five. [SOUND]
 
