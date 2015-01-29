@@ -1,30 +1,29 @@
 1
 00:00:00,150 --> 00:00:02,620
-添加到Scroll View的每一个linear布局的项目，
+我们在LinearLayout布局中把每个条目添加到ScrollView视图里
 Adding every item to the linear layout within the scroll view,
 
 2
 00:00:02,620 --> 00:00:06,300
-意味着每一个我们创建的每一个视图都会保存下来并且占用内存，即使
+意味着我们创建了多少个视图（即便视图不可见）就会占用多少内存
 meant that every view we create, sticks around, taking up memory, even if
 
 3
 00:00:06,300 --> 00:00:10,800
-它从来没有被我们发现过。我们想尝试并且创建一个新方法，我们只需使用这个方法，
+我们应该尝试另外一种解决方案  就是我们只需要
 it's never been seen. We want to try and create a way, that we only need to use,
 
 4
 00:00:10,800 --> 00:00:14,990
-越来越多的View会在当前屏幕的两端增加，
+创建屏幕内可见的视图个数  外加上下端不可见的那两个视图就可以了
 as many views as are currently visible in the screen plus one on either end,
 
 5
 00:00:14,990 --> 00:00:17,900
-能确保我们能不闪变地scroll.正因如此，
+这样就可以确保我们在滑动的时候不会有卡顿
 to make sure we can scroll without flickering. To do that,
 
 6
 00:00:17,900 --> 00:00:20,690
-Android才使用列表视图.所以，现在让我们来接近这个吧。
+就是因为这个机制  我们才在Android开发中使用ListView控件
 Android uses List View. So, let's take a closer look at that now.
-
