@@ -1,72 +1,89 @@
 1
 00:00:00,280 --> 00:00:02,550
 Here's the code for the Refresh button in
+这里是刷新按钮的代码，在
 
 2
 00:00:02,550 --> 00:00:06,060
 the forecastfragment menu XML file. We want it to
+forecastfragment 菜单的XML文件的部分。我们想要它
 
 3
 00:00:06,060 --> 00:00:09,160
 appear in the overflow menu, so we set showAsAction
+出现在浮动菜单上，所以我们把它的showAsAction属性设置
 
 4
 00:00:09,160 --> 00:00:12,280
 as never. We also declare the string. You can
+成为永不。我们这里也声明了一个字符串。你可以
 
 5
 00:00:12,280 --> 00:00:15,560
 find the string here in the strings.xml file, which
+在string.xml里面找到这个字符串，这个文件
 
 6
 00:00:15,560 --> 00:00:17,810
 is located in the values folder, which is in
+存放在values文件夹里面，res目录的下面。
 
 7
 00:00:17,810 --> 00:00:21,230
 the res folder. You can get your strings.xml file
+你可以把你的string.xml文件里面的字符翻译
 
 8
 00:00:21,230 --> 00:00:25,340
 translated into different languages. This adds additional values folders,
+成为不同的语言。这样添加额外的values文件夹在res下面，
 
 9
 00:00:25,340 --> 00:00:28,364
 under Res. For example, you would have
+比如，你可以这样添加
 
 10
 00:00:28,364 --> 00:00:33,230
 values-es, for Spanish, values-fr for French. And
+values-es，这是西班牙语，values-fr，这是法语。然后
 
 11
 00:00:33,230 --> 00:00:35,450
 within each of those values folders, you
+在每一个values文件夹里面，你
 
 12
 00:00:35,450 --> 00:00:37,660
 would have a strings.xml file, which would
+要有一个strings.xml文件，这个文件里面
 
 13
 00:00:37,660 --> 00:00:39,940
 contain the localized strings for that language.
+包含的是为此类语言所本地化的字符串（也就是翻译过的字符串），
 
 14
 00:00:40,970 --> 00:00:43,170
 Since translation does cost money, as a
+由于翻译有时候是花钱的，给你一个专业的
 
 15
 00:00:43,170 --> 00:00:45,200
 pro tip, you can mark strings that
+提示，你可以把那些
 
 16
 00:00:45,200 --> 00:00:50,210
 you don't need translated using translatable=false. For example,
+你不想翻译的字符串标记为translatable=false。如这样，
 
 17
 00:00:50,210 --> 00:00:53,560
 if it's a proper name or if it's for debugging like this one,
+当这只是一个确定的名字，或者是为了调试存在的，
 
 18
 00:00:53,560 --> 00:00:57,180
 then you can indicate to the translator that they can skip over this strings
-
+那你可以告诉你的翻译员，说它们可以忽略这些字符串。
