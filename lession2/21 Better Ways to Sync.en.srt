@@ -1,92 +1,115 @@
 1
 00:00:00,400 --> 00:00:02,710
 Because it's being created within an activity, it can be
+因为它在activity里面创建，所以它可以
 
 2
 00:00:02,710 --> 00:00:05,400
 terminated as simply as rotating the phone into a different
+被很轻松的终止，例如把手机旋转到另一个
 
 3
 00:00:05,400 --> 00:00:08,710
 orientation. So, should only ever be used for tasks whose
+方向。 因此，应该只在这种情况下使用它，就是在那些
 
 4
 00:00:08,710 --> 00:00:12,050
 lifecycle is tied to the host activity, and is expected
+生命周期和activity绑定的任务上，而且是期望
 
 5
 00:00:12,050 --> 00:00:15,420
 to run for only a second or two. On mobile,
+只是运行一到两秒的事件。在移动设备上，
 
 6
 00:00:15,420 --> 00:00:18,100
 it's unwise to assume that even the most trivial network
+假定网络访问迅速可达，即便是对于次要事件而言，也是
 
 7
 00:00:18,100 --> 00:00:21,680
 access is going to happen quickly. So a better approach
+不明智的，所以较好的方法是
 
 8
 00:00:21,680 --> 00:00:25,770
 would be to use a service. An application component without
+使用一个“service”，一个没有用户界面的应用程序组件
 
 9
 00:00:25,770 --> 00:00:27,220
 the UI that's less likely to be
+很小可能会被
 
 10
 00:00:27,220 --> 00:00:30,820
 interrupted. Possibly scheduled using an inexact repeating alarm.
+中断。最可能的情况是，在调度所使用的一个不准确的时钟的时候（时钟中断）。
 
 11
 00:00:32,970 --> 00:00:35,860
 Even better, Android has a specialized solution know
+更佳的是，Android有一个特定的解决方案，叫做
 
 12
 00:00:35,860 --> 00:00:39,170
 as Async Adapter. And it's designed especially to schedule
+异步Adapter，而且它专门设计用来调度你的
 
 13
 00:00:39,170 --> 00:00:42,700
 your background data syncs as efficiently as possible. Better
+背景（后台？）数据的同步，并尽可能的高效。
 
 14
 00:00:42,700 --> 00:00:46,830
 still would be using Google Cloud Messaging. This lets
+当然使用谷歌云消息系统是最好的。它可以用来
 
 15
 00:00:46,830 --> 00:00:48,740
 you notify your Async Adapter of changes on the
+通知你的异步Adpater，服务器端有变化发生。
 
 16
 00:00:48,740 --> 00:00:52,460
 server side. So you're only ever initiating network requests
+此时，你只需要在app里面初始化网络请求，
 
 17
 00:00:52,460 --> 00:00:54,510
 from your app when you know there's something to
+当你知道服务器上有何种数据更新的时候。
 
 18
 00:00:54,510 --> 00:00:58,030
 be updated on the server. For now we're concentrating
+这个时候，我们只需要集中在
 
 19
 00:00:58,030 --> 00:01:01,340
 on making our app work when it's in the foreground. But we'll return to
+处理前景任务上，使得我们的app能够运作。 稍后，我们仍然会回过头看看
+
 
 20
 00:01:01,340 --> 00:01:03,340
 look at these approaches to invisibly updating
+那些能够在背景任务上透明化的更新你的
 
 21
 00:01:03,340 --> 00:01:04,890
 your app from the background a little
+app的方法，
 
 22
 00:01:04,890 --> 00:01:09,200
 later. For now, keep in mind that the Refresh button and the new thread
+目前，只需要记住刷新按钮以及创建新的线程的
 
 23
 00:01:09,200 --> 00:01:12,530
 solution is just a place holder while we hook up the rest of the app.
-
+解决方案只是一种，当我们需要和app的其余部分相关联时，所使用的连接点。
