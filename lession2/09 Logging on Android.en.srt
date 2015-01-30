@@ -1,96 +1,120 @@
 1
 00:00:00,540 --> 00:00:02,540
+当你需要输出应用的调试信息时
 When you're logging a message in your app, you need
 
 2
 00:00:02,540 --> 00:00:06,100
+你需要确认一下你需要输出哪个级别的调试信息
 to determine what log level it should be displayed at.
 
 3
 00:00:06,100 --> 00:00:08,710
+除了在开发环境下之外  Verbose这个级别的日志可是千万不能写进代码的
 Verbose logs should never be compiled into your app, except
 
 4
 00:00:08,710 --> 00:00:12,600
+Debug级别的日志只在调试的时候显示  真正运行的时候是不执行操作的
 during development. Debug logs are compiled in, but they're stripped
 
 5
 00:00:12,600 --> 00:00:16,210
+同样的 Error  Warn和Info  这三个也是这样的
 out at run time. Error, warn, and info logs are
 
 6
 00:00:16,210 --> 00:00:19,650
+视频上在显示的代码是是调试 API 的调用时候的样子
 all kept. And this is what the logging API looks
 
 7
 00:00:19,650 --> 00:00:23,100
+第一个参数是调试标签
 like. The first parameter is the log tag, which can
 
 8
 00:00:23,100 --> 00:00:26,320
+一个任意的字符串标识符
 be any string that you want to identify the log message.
 
 9
 00:00:26,320 --> 00:00:28,790
+为你的调试信息打上一个标识符是一个很好的习惯
 It's good practice to define the log tag as a
 
 10
 00:00:28,790 --> 00:00:32,009
+通常它可以是你的类名或者应用名
 constant in your class. Usually it's the name of your class
 
 11
 00:00:32,009 --> 00:00:35,060
+第二个参数是在调试窗口你要看的内容
 or the app. The second parameter is the actual log
 
 12
 00:00:35,060 --> 00:00:38,380
+我们回到Android Debug Monitor这个工具  我们能看到
 message. If we go back to monitor, we can see that
 
 13
 00:00:38,380 --> 00:00:40,840
+这个是调试标签列  这个是
 this is the log tag column and this is where
 
 14
 00:00:40,840 --> 00:00:44,330
+调试的信息  如果你点击这个下拉选框
 the log message is. If you click on this drop down
 
 15
 00:00:44,330 --> 00:00:47,710
+你可以通过日志级别来进行筛选  比如
 here you can filter the logs by log level. For example
 
 16
 00:00:47,710 --> 00:00:50,600
+你可以选择只看所有的错误输出
 you can click on Error to see all the error messages.
 
 17
 00:00:52,050 --> 00:00:54,060
+同样你点击 Warn 之后你就能看到所有警告信息
 If you click on warn, you'll see all the warning
 
 18
 00:00:54,060 --> 00:00:57,500
+警告信息比错误信息更多更吓人
 messages as well as anything more severe than that. The
 
 19
 00:00:57,500 --> 00:01:00,550
+其他的调试级别类似  verbose这个级别意味着
 same goes for the other levels. And verbose means that
 
 20
 00:01:00,550 --> 00:01:03,130
+你能看到所有级别的日志信息
 you can see all the logs at all log levels.
 
 21
 00:01:05,250 --> 00:01:08,650
+特别提醒一下  为了让世界更美好  方便你和其他
 As a PROTIP, you should avoid log spam for your sake and
 
 22
 00:01:08,650 --> 00:01:13,400
+开发者们  你应该尽可能的避免过量的日志信息  日志缓冲区有可能会被填满
 the sake of other developers. The log buffer could fill up and important
 
 23
 00:01:13,400 --> 00:01:16,500
+而你死活找不到你需要的信息
 error messages that you really need to see will either roll of the
 
 24
 00:01:16,500 --> 00:01:20,780
+最终迷失在这虚幻日志的海洋里
 logs or it will get lost in the sea of unimportant log messages.
 
