@@ -1,36 +1,45 @@
 1
 00:00:00,300 --> 00:00:02,680
+现在，我们拥有了菜单的 XML 文件，加入代码到
 Now that we have the menu XML, add the code in
 
 2
 00:00:02,680 --> 00:00:05,590
+fragment 中去 inflate 这个 XML 文件。你能够使用一个占位
 the fragment to inflate it. You can leave a placeholder for
 
 3
 00:00:05,590 --> 00:00:09,020
+当Refresh按钮被选择。这就是当你做完之后它应该看起来的样子。
 when the Refresh button is selected. This is what it should
 
 4
 00:00:09,020 --> 00:00:11,740
+你应该在这里看见了Refresh菜单项，
 look when you're done. You should see the Refresh menu item there,
 
 5
 00:00:11,740 --> 00:00:14,730
+但是点击它之后并没有做任何事。现在这很正常。
 but tapping on it doesn't do anything. That's fine for now.
 
 6
 00:00:14,730 --> 00:00:18,600
+如果需要，你可以参考 mainactivity.java。
 If needed, you can look at mainactivity.java for reference. If you get
 
 7
 00:00:18,600 --> 00:00:21,570
+如果你不知所措，并且没有看到菜单项出现，首先试着去回答
 stuck and don't see the menu item appear, try to answer
 
 8
 00:00:21,570 --> 00:00:25,630
+这个问题：你需要调用 fragment 的什么方法
 this question first: what fragment method do you need to call in
 
 9
 00:00:25,630 --> 00:00:28,430
+为了宣告有菜单项需要显示？
 order to report that it has menu options to display?
 
