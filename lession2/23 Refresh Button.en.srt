@@ -1,64 +1,79 @@
 1
 00:00:00,220 --> 00:00:02,890
 Since the fetch weather task is in the fragment, the
+由于获取天气的任务是在fragment里面，所以，
 
 2
 00:00:02,890 --> 00:00:05,930
 menu option to trigger that task should be inside the fragment
+启动这个任务的菜单项也应该在fragment里面。
 
 3
 00:00:05,930 --> 00:00:08,320
 too. That means we should create a new menu layout
+也就是说，我们需要建立一个新的菜单布局，
 
 4
 00:00:08,320 --> 00:00:12,390
 for the fragment and we'll call it forecastfragment.xml. The file will
+只是对这个fragment而言，我们叫它forecastfragment.xml。这个文件会被
 
 5
 00:00:12,390 --> 00:00:15,770
 live within the menu folder under the Resources directory. Inside
+保持存放在资源目录里面的menu文件夹里面。在
 
 6
 00:00:15,770 --> 00:00:19,200
 that file, we'll declare the new menu option for refresh and
+这个文件的里面，我们声明了新的菜单项，用来刷新，而且我们赋予
 
 7
 00:00:19,200 --> 00:00:22,140
 give it this menu item ID. We'll also need to define
+它一个菜单项ID。我们同时需要定义一个
 
 8
 00:00:22,140 --> 00:00:25,290
 a string label for this word, Refresh. We're taking this one
+字符标签，来标示“Referesh”。现在，来一步步的操作，
 
 9
 00:00:25,290 --> 00:00:27,440
 step at a time, so just make the menu xml
+先把这个练习中的menu的xml文件
 
 10
 00:00:27,440 --> 00:00:30,250
 file change in this exercise. If you compile and run
+改动一下。如果你编译运行这个app，
 
 11
 00:00:30,250 --> 00:00:33,060
 the app, there'll be no visible change. It won't show
+看起来没有什么变化。它还没有
 
 12
 00:00:33,060 --> 00:00:35,500
 up on the device yet because we haven't inflated the menu
+显示在设备上，是因为，我们还没有从xml里面创建菜单按钮。
 
 13
 00:00:35,500 --> 00:00:38,270
 item. Inflating it will be in the coding test after
+创建部分将在这之后的代码测试部分来做，
 
 14
 00:00:38,270 --> 00:00:41,550
 this. See how the menu main.xml is implemented as an
+请看菜单的main.xml在这个事例中是如何实现的。
 
 15
 00:00:41,550 --> 00:00:44,860
 example. For an additional hint, see the menu training guide
+另外提醒一下，看一下下面的菜单训练指南。
 
 16
 00:00:44,860 --> 00:00:47,150
 below. When you're done, you can click on this box here.
-
+当你完成的时候，你可以在这里单击这个按钮
