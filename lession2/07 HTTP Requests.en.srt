@@ -1,48 +1,60 @@
 1
 00:00:00,230 --> 00:00:02,100
+在提供的示例代码里，你会注意到，
 In the sample code provided you'll notice
 
 2
 00:00:02,100 --> 00:00:06,000
+我们创建了一个HTTP URL连接。
 that we create a Http Url connection. To
 
 3
 00:00:06,000 --> 00:00:08,430
+使用http协议在网络上发送和接受数据，
 use Http to send and receive data over
 
 4
 00:00:08,430 --> 00:00:10,960
+我们有两端连在android。
 the network, we have two clients on Android.
 
 5
 00:00:10,960 --> 00:00:13,740
+一个是Http Url连接类，还有一个是拼凑的Http Client类。
 The Http Url connection class, as well as
 
 6
 00:00:13,740 --> 00:00:17,700
+这两种方式都支持Https，
 the patchy Http Client class. Both options support
 
 7
 00:00:17,700 --> 00:00:22,010
+支持以数据流的形式上传和下载，支持配置超时，
 Https, streaming uploads and downloads, configurable time outs,
 
 8
 00:00:22,010 --> 00:00:25,460
+支持IPB 6 和连接池。
 IPB 6 and connection pooling. We recommend the
 
 9
 00:00:25,460 --> 00:00:28,850
+我们更推荐使用Http Url连接类，因为它更为通用，轻量级，
 Http Url Connection class because it's general purpose and light
 
 10
 00:00:28,850 --> 00:00:31,730
+在经过优化之后，能够满足大多数Android应用程序的需求。
 weight, and it's been optimized to suit the needs of
 
 11
 00:00:31,730 --> 00:00:34,460
+想要了解更多的网络连接知识，
 most Android apps. To learn more about connecting to the
 
 12
 00:00:34,460 --> 00:00:37,130
+请参阅读下方的培训指南和博文链接。
 network, see the training guide and blog post link below.
 

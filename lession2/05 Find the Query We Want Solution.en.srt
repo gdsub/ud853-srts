@@ -1,16 +1,20 @@
 1
 00:00:00,160 --> 00:00:04,330
+山景邮编是94043，而这将是我们在查询中提供的信息。
 For the Mountainview post code 94043, this is what the query would
 
 2
 00:00:04,330 --> 00:00:09,060
+我们设定的格式是JSON，温度我们这里用units = metric 表示，
 look like. We set the mode to be JSON format, temperature units
 
 3
 00:00:09,060 --> 00:00:12,660
+计数参数是cnt = 7，这是预测数据的天数。
 to be in metric, and the count param to be seven days
 
 4
 00:00:12,660 --> 00:00:16,460
+我们利用这个网址去使用我们的应用程序。
 of forecast data. Let's take this url and use it in our app
 
