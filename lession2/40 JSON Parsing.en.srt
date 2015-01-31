@@ -1,48 +1,60 @@
 1
 00:00:00,430 --> 00:00:02,800
+一旦你学习了怎样解析 JSON 数据，那么就非常
 Once you've learned how to pars JSON data, it's pretty
 
 2
 00:00:02,800 --> 00:00:04,990
+直观地能够解析余下
 straight forward to be able to pars the rest of the
 
 3
 00:00:04,990 --> 00:00:07,550
+我们需要的字段。因为这并不是一个Java或JSON的课程，
 fields that we need. Since this isn't a course on
 
 4
 00:00:07,550 --> 00:00:10,520
+我们将在下面的gist中提供解析的代码。
 Java or JSON, we're going to provide you with the parsing
 
 5
 00:00:10,520 --> 00:00:13,210
+这就是gist的样子。
 code in the gist below. And this is what the
 
 6
 00:00:13,210 --> 00:00:16,800
+共有三个辅助方法。第一个是
 gist looks like. There are three helper methods. The first is
 
 7
 00:00:16,800 --> 00:00:21,280
+格式化日期。第二个是四舍五入温度。第三个是
 for formatting dates. The second is for rounding temperatures. The third
 
 8
 00:00:21,280 --> 00:00:25,380
+将forecastJsonStr转化成天气预测的数组。
 is for turning a forecastJsonStr, into an array of weather forecasts.
 
 9
 00:00:26,420 --> 00:00:29,780
+更新FetchWeatherTask使用这些辅助方法。并且
 Update the Fetch Weather Tasks to use these helpful functions. And
 
 10
 00:00:29,780 --> 00:00:32,170
+在doinbackground方法中应该返回一个预测的字符串数组。
 the do in background method should return a string array of
 
 11
 00:00:32,170 --> 00:00:35,410
+你能够输出日志去检查数组是不是
 forecasts. You can log the output to check that the array
 
 12
 00:00:35,410 --> 00:00:38,910
+正确。一天的预测的格式应该看起来像这样。
 is correct. The format of one day's forecast should look like this.
 
