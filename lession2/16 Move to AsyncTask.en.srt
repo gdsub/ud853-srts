@@ -1,100 +1,100 @@
 1
 00:00:00,220 --> 00:00:02,050
+让我们应用一下我们刚刚学的，就是打开
 Let's apply what we just learned by opening up
-让我们应用一下我们刚刚学的打开
 
 2
 00:00:02,050 --> 00:00:06,390
+我们工程中的MainActivity.java文件，我们将要使用
 the MainActivity.java file within our project. We're going to take
-我们工程中的MainActivity.java文件，我们将要用
 
 3
 00:00:06,390 --> 00:00:08,830
+这些网络代码片段并且将她移动 到
 this networking code snippet and move it over to
-这些网络代码片段并且移动它到
 
 4
 00:00:08,830 --> 00:00:11,200
-it's own AsyncTask, so it runs in a background
 我们自己的异步任务中，如此他就运行在一个
+it's own AsyncTask, so it runs in a background
 
 5
 00:00:11,200 --> 00:00:14,160
+后台线程上。这个任务就将被定义在
 thread. The task is going to be defined within
-背景线程上。这个任务将被定义在
 
 6
 00:00:14,160 --> 00:00:18,070
-this fragment class. But speaking of which, it's actually
 这个片段类里。但是说到这里，他确实
+this fragment class. But speaking of which, it's actually
 
 7
 00:00:18,070 --> 00:00:21,300
+还叫PlaceholderFragment.让我们通过给它重命名
 still called PlaceholderFragment. Let's do a little bit of
-还叫PlaceholderFragment.让我们做一点小小的
 
 8
 00:00:21,300 --> 00:00:25,365
+来做一下调整。那我们就叫她
 refactoring now by giving it a real name. Let's call
-重整通过给她一个真是的名字。那我们就叫她
 
 9
 00:00:25,365 --> 00:00:28,463
+ForecastFragment.然后你也可以在其他适当的
 it ForecastFragment. And then you can update it
-ForecastFragment.然后你也可以更新她
 
 10
 00:00:28,463 --> 00:00:31,560
+地方更新她。我们也可以
 in other appropriate places as well. We can also
-在其他的适当的地方。我们也可以
 
 11
 00:00:31,560 --> 00:00:34,560
-move ForecastFragment into its own file that way
 移动ForecastFragment到我们自己的文件里
+move ForecastFragment into its own file that way
 
 12
 00:00:34,560 --> 00:00:38,412
-the MainActivity won't get so long and cumbersome. Within
 这样MainActivity就不会显得那么长那么啰嗦。在
+the MainActivity won't get so long and cumbersome. Within
 
 13
 00:00:38,412 --> 00:00:41,284
-ForecastFragment we should define a new inner class
 ForecastFragment里我们应该定义一个新的内部类
+ForecastFragment we should define a new inner class
 
 14
 00:00:41,284 --> 00:00:45,290
-called FetchWeatherTask which extends from AsyncTask. And then you
 叫做FetchWeatherTask,她扩展自AsyncTask。然后你
+called FetchWeatherTask which extends from AsyncTask. And then you
 
 15
 00:00:45,290 --> 00:00:48,770
+可以移动网络代码片段到这个里边。当你
 can move the networking code snippet here. After you
-可以移动网络代码片段。在你
 
 16
 00:00:48,770 --> 00:00:50,840
+做完调整并且运行过你的应用程序之后，她应该
 make the changes and run your app, it should
-做完调整并且运行你的应用程序之后，他应该
 
 17
 00:00:50,840 --> 00:00:53,770
+看起来是个样子。那就应该没有区别
 look something like this. There really should be no difference except it
-看起来像这个。那就应该没有区别
 
 18
 00:00:53,770 --> 00:00:57,290
-doesn't crash now. In the next step we will add code to execute
 除了她现在不能崩溃，在接下来的这一步中我们将要添加代码去执行
+doesn't crash now. In the next step we will add code to execute
 
 19
 00:00:57,290 --> 00:01:01,300
-the task. And later in the lesson, we'll do JSON parsing and updating
 这个任务。在这节课的最后，我们将要做JSON语法分析并且更新
+the task. And later in the lesson, we'll do JSON parsing and updating
 
 20
 00:01:01,300 --> 00:01:05,120
+用户界面。在这期间，让这些基础改变你的代码吧。
 the UI. In the meantime though, make these initial changes to your code.
-UI。在这期间，让这些基础修改你的代码吧
 

@@ -1,170 +1,170 @@
 1
 00:00:00,440 --> 00:00:03,790
-If you answered Async Task, then you are correct.
 如果你回答Async Task(异步任务)，那么你是正确的。
+If you answered Async Task, then you are correct.
 
 2
 00:00:03,790 --> 00:00:06,930
-To understand why we chose Async Task as the answer,
 为了理解我们为什么选择Async Task(异步任务)作为答案
+To understand why we chose Async Task as the answer,
 
 3
 00:00:06,930 --> 00:00:09,900
+我们可以看一下开发人员文档。在这个API
 we can check the developer documentation. In this API
-我们可以检查开发人员文档。在这个API
 
 4
 00:00:09,900 --> 00:00:13,670
+指南里关于进程和线程中，我们可以滑到
 guide on processes and threads, we can scroll to the
-指南里关于进程和线程的内容中，我们可以滑到
 
 5
 00:00:13,670 --> 00:00:16,730
+Worker threads的部分。那么,如果你需要的话
 Worker threads section. Right away, if you want to follow
-Worker threads的部分。So,如果你想要
 
 6
 00:00:16,730 --> 00:00:20,810
+链接就在下边。说明一下，我在这举个例子,
 along, the link is included below. Say, for example, that
-链接就在下边。说明一下，举个例子，
 
 7
 00:00:20,810 --> 00:00:23,170
-you want to download an image from the network
 如果你想从这个网址上下载一张图片
+you want to download an image from the network
 
 8
 00:00:23,170 --> 00:00:26,040
+并且你想更新这个
 at this URL and then you want to update the
-并且你想更改这个
 
 9
 00:00:26,040 --> 00:00:30,020
+用户界面以便显示这个位图。那么，机智的你
 UI so that it displays this bitmap. Well, creating
-UI以便显示这个位图。那么，新建
 
 10
 00:00:30,020 --> 00:00:32,250
+就应该新建一个你自己的线程去下载图片
 your own thread to download the image is a
-一个属于你自己的线程去下载图片是
 
 11
 00:00:32,250 --> 00:00:35,170
+但是还有更重要的事情要做，那就是
 valid option, but there's a lot of overhead to
-一个明智的选择，但是有许多其他的事情要
 
 12
 00:00:35,170 --> 00:00:38,790
+确保你的应用程序真正意义上的线程安全。在
 handle in making you app actually thread safe. After
-去处理在让你的应用程序真正意义上的线程安全。在
 
 13
 00:00:38,790 --> 00:00:41,750
+你下载完你的照片后，你并不能马上更新这个
 you download your image, you cannot directly update the
-你下载完你的照片后，你不能马上更新这个
 
 14
 00:00:41,750 --> 00:00:45,070
+后台线程的用户界面。但是，Android里边却有几个
 UI from a background thread. However, Android has several
-背景线程的UI。但是，Android仍然有几个
 
 15
 00:00:45,070 --> 00:00:47,500
+选项在运行代码以此从其他线程中
 options to run code that manipulates the UI to
-选项在运行代码以此操纵UI
 
 16
 00:00:47,500 --> 00:00:51,280
+来运行操作用户界面。在这个例子中，
 run from other threads. In this example, yet another
-从其他线程运行。在这个例子中，创建另外一个
 
 17
 00:00:51,280 --> 00:00:54,220
+另一个可运行状态被建立，就是为了得到主线程传回要求更新图像的位图结果。
 runnable is created to get the bitmap result back onto
-可运行的位图结果回
 
 18
 00:00:54,220 --> 00:00:57,810
+更新图像的位图结果。这种解决方案
 the main thread to update the image view. This solution
-主线程更新图像。这种解决方案
 
 19
 00:00:57,810 --> 00:01:00,220
-is a little cumbersome because you have to manage two
 是有一点小麻烦因为你不得不管理两个
+is a little cumbersome because you have to manage two
 
 20
 00:01:00,220 --> 00:01:04,099
+可运行的状态。为了简化这个复杂性我们可以用
 runnables here. To abstract away this complexity we can use
-可运行的。为了简化这个复杂性我们可以用
 
 21
 00:01:04,099 --> 00:01:06,960
-an async task and then to kick off the async
 一个异步任务然后再把她分离。
+an async task and then to kick off the async
 
 22
 00:01:06,960 --> 00:01:10,400
+例如，当有人点击一个按钮时，你
 task. For example, when someone clicks a button, then you
-例如，当某人点击一个按钮时，然后你
 
 23
 00:01:10,400 --> 00:01:13,030
+只需要初始化这个任务，然后你就可以在这上边调用执行，
 just initialize the task, and then you can call execute
-只需要初始化这个任务，然后你就可以调用执行
 
 24
 00:01:13,030 --> 00:01:16,730
+然后传输所有必要的参数。
 on it, and then pass in any parameters that are needed.
-在他上边，然后传输所有必要的参数。
 
 25
 00:01:16,730 --> 00:01:19,470
+注意！当你在扩展异步类的时候，
 Notice that when you're extending the Async class, there's a
-注意！当你正在扩展异步类的时候，
 
 26
 00:01:19,470 --> 00:01:22,750
-couple of generics that you need to specify. The first is
 有几个需要你指定的泛型。第一个就是
+couple of generics that you need to specify. The first is
 
 27
 00:01:22,750 --> 00:01:24,670
-the type that will be passed into the do in
 将要被传递到
+the type that will be passed into the do in
 
 28
 00:01:24,670 --> 00:01:28,520
+后台方法的类型。所以，如果你想在这个图片网站中传递
 background method. So, if you want to pass in this image URL
-背景方法的类型。所以，如果你想在这个图片URL中传递
 
 29
 00:01:28,520 --> 00:01:31,310
+一个指定的字符串作为后台
 that is specified string here and then in doing background
-一个指定的字符串作为背景
 
 30
 00:01:31,310 --> 00:01:34,690
-you'll get a string parameter. The second one is for the
 你就会得到一个字符串参数。第二个呢就是
+you'll get a string parameter. The second one is for the
 
 31
 00:01:34,690 --> 00:01:37,380
+工程的类型，当你的更新作为一个任务被执行并且有进展的时候你就会需要这个类型
 type of object that you'll get when you get progress
-工程的类型，当你的更新作为一个任务被执行并且得到进展的时候你就会得到这个类型
 
 32
 00:01:37,380 --> 00:01:41,670
+你就会需要这个类型。我们在这里就不使用了，
 updates as a task gets executed. We're not using that here,
-的时候你就会得到这个类型。我们在这里就不使用了，
 
 33
 00:01:41,670 --> 00:01:48,000
+所以把它指定为空的也是可以的。第三种类型就是结果的类型
 so it's okay to specify that as void. And the third type is type of results
-所以把它作为一个空的来制定也是可以的。第三种类型就是结果的类型
 
 34
 00:01:48,000 --> 00:01:52,127
+也就是当我们将要通过onPostExecute方法传送回主线程时需要的类型。
 that we'll be sending back to the main thread through the onPostExecute method
-也就是当我们将要通过onPostExecute方法传送回主线程
 
