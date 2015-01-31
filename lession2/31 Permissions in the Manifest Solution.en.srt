@@ -1,36 +1,45 @@
 1
 00:00:00,460 --> 00:00:03,340
+你可以声明委托需要使用相机
 While declaring a commission is required for using a
 
 2
 00:00:03,340 --> 00:00:07,240
+打一个电话  或访问联系人详细信息
 camera, making a phone call, or accessing contact details. You
 
 3
 00:00:07,240 --> 00:00:09,440
+你完成这些任务可以让系统的应用程序作为中介
 can do each of these things using a system app
 
 4
 00:00:09,440 --> 00:00:13,340
+因为相机应用  拨号器  和联系人应用
 as an intermediator. Because the camera app, dialer, and contacts
 
 5
 00:00:13,340 --> 00:00:15,090
+将被用来提供你向用户请求的数据
 app will each be used to provide the data
 
 6
 00:00:15,090 --> 00:00:17,950
+有机会取消您开始给应用运行时
 you request users have the chance to cancel the action
 
 7
 00:00:17,950 --> 00:00:21,300
+去拒绝您访问的权限操作
 you initiated giving them run time ability to refuse your
 
 8
 00:00:21,300 --> 00:00:25,830
+然而  UI如果要访问用户现在所在的位置
 access. However, UI can only access the user's current location
 
 9
 00:00:25,830 --> 00:00:28,170
+它必须向用户请求权限
 if it explicitly declares a user's permission.
 

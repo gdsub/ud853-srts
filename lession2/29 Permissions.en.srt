@@ -1,136 +1,165 @@
 1
 00:00:00,410 --> 00:00:04,200
+让我们来谈谈有关权限的问题  当每个应用程序的APK已经安装的时候
 Let's talk about permissions, when each app APK is installed,
 
 2
 00:00:04,200 --> 00:00:07,290
+它被给予了它自己的特有的Linux用户ID
 it's given it's own unique Linux user ID. And each
 
 3
 00:00:07,290 --> 00:00:10,175
+并且每个应用都在Android虚拟机内运行在自己的实例中
 app runs within its instance in the Android Virtual machine.
 
 4
 00:00:10,175 --> 00:00:16,946
+由于每个应用程序时完全在沙箱中运行的
 [SOUND] As a result each app is completely sand boxed.
 
 5
-00:00:16,946 --> 00:00:19,831
-[BLANK_AUDIO]
-
-6
 00:00:19,831 --> 00:00:23,051
+它的文件处理和其他的资源是其他应用程序不能访问的
 Its files processes and other resources are inaccessible
 
-7
+6
 00:00:23,051 --> 00:00:26,110
+这个沙箱的运作方法确保了在默认情况下
 to other apps. This sandboxing approach is used to
 
-8
+7
 00:00:26,110 --> 00:00:29,210
+没有任何应用程序可以访问到敏感的数据
 ensure that by default no app can access sensitive
 
-9
+8
 00:00:29,210 --> 00:00:32,250
+或执行操作并且可能对其他的应用程序  系统  或用户
 data or perform actions that could adversely impact other
 
-10
+9
 00:00:32,250 --> 00:00:36,210
+产生不利的影响  比如说像访问互联网
 apps, the OS, or users. Things like accessing the
 
-11
+10
 00:00:36,210 --> 00:00:39,320
+获取用户的地理位置  或阅读或修改联系人的数据库
 internet, getting the user's location, or reading or modifying
 
-12
+11
 00:00:39,320 --> 00:00:42,660
+而不是让用户看到当你的应用
 the contacts database. Rather than asking the user each
 
-13
+12
 00:00:42,660 --> 00:00:45,660
+试图去访问某些敏感的内容时
 time an app tries to access something sensitive you
 
-14
+13
 00:00:45,660 --> 00:00:48,720
+所有需要请求的权限都显示出来
 declared permissions that your app requires in it's manifest.
 
-15
+14
 00:00:48,720 --> 00:00:52,130
+那样用会得到一列表的权限请求
 You can get a list of all of the permission
 
-16
+15
 00:00:52,130 --> 00:00:56,090
+你的应用程序所需的权限可以列在Android开发者站点上
 your app may require here at the Android developer site.
 
-17
+16
 00:00:56,090 --> 00:00:58,390
+所以  为什么不请求所有的权限而再也不用担心权限问题呢
 So, why not just ask for all the permissions and
 
-18
+17
 00:00:58,390 --> 00:01:01,320
+是的  当用户安装你的应用程序时
 never worry about it again? Well, when users install
 
-19
+18
 00:01:01,320 --> 00:01:04,200
+随着更人性化的描述
 your app their greeted with this dialogue which lists all
 
-20
+19
 00:01:04,200 --> 00:01:06,645
+在这个对话框中列出所有你需要的请求的权限
 of the permissions that you've requested along with the more
 
-21
+20
 00:01:06,645 --> 00:01:10,770
+没有说这个应用程序就是为了想偷取我数据
 user-friendly descriptions. Nothing says this app was built by hackers
 
-22
+21
 00:01:10,770 --> 00:01:13,380
+抢劫我房子  清空我账户并且
 who want to steal my data, rob my house, clear out my
 
-23
+22
 00:01:13,380 --> 00:01:16,560
+拍摄和分享我的裸露的照片
 bank account, and take and share nude pictures of me like
 
-24
+23
 00:01:16,560 --> 00:01:19,250
+做出一个伪天气应用想要访问我的设备上的所有权限的黑客
 a weather app that wants access to every permission on the
 
-25
+24
 00:01:19,250 --> 00:01:24,100
+最好的做法是请求绝对最低权限
 device. Best practice is to request the absolute minimum of permissions.
 
-26
+25
 00:01:24,100 --> 00:01:26,340
+每次你需要请求一个新的权限
 Every time you need to request a new permission, take it
 
-27
+26
 00:01:26,340 --> 00:01:29,390
+把它标注上并且思考是否有其他的选择
 as a flag to stop and consider if there are other
 
-28
+27
 00:01:29,390 --> 00:01:32,970
+可以达到同样的目的  例如
 alternatives that might achieve the same goal. For example, using an
 
-29
+28
 00:01:32,970 --> 00:01:37,140
+去直接使用相机的应用程序而不是直接访问摄像头
 intent to launch the camera app, rather than accessing the camera, directly.
 
-30
+29
 00:01:37,140 --> 00:01:39,550
+之后我们会看一些与其他应用程序共享数据的方式
 Later, we'll look at ways to share your data with
 
-31
+30
 00:01:39,550 --> 00:01:43,370
+使你想请求的和内容提供的去创建应用程序沙箱之间的桥梁
 other apps, using intents and content providers to create bridges
 
-32
+31
 00:01:43,370 --> 00:01:46,630
+你可以在这些实例中
 between these apps sandboxs. You can declare and use those
 
-33
+32
 00:01:46,630 --> 00:01:48,040
+声明和使用这些权限
 permissions in these instances to
 
-34
+33
 00:01:48,040 --> 00:01:51,080
+去限制和访问用户的敏感信息
 similarly restrict access to sensitive information.
 
