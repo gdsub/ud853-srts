@@ -1,29 +1,36 @@
 1
 00:00:00,320 --> 00:00:01,800
+在我们继续之前，这里我要说明下
 Before we go any further, I need to
 
 2
 00:00:01,800 --> 00:00:04,110
+Catherine已经说了
 jump in here. Catherine has already said that
 
 3
 00:00:04,110 --> 00:00:06,410
+刷新按钮只是为了debug
 the refresh button is for debugging only, but
 
 4
 00:00:06,410 --> 00:00:08,600
+那么让我们看看这是为什么。在现实世界
 let's look at why. In real life, you
 
 5
 00:00:08,600 --> 00:00:10,720
+你应该总是将刷新按钮隐藏
 should always seek to eliminate the refresh button
 
 6
 00:00:10,720 --> 00:00:12,970
+一个好App应该像个好管家
 from your app. A good app should work
 
 7
 00:00:12,970 --> 00:00:16,560
+在你想要什么并问出来之前就把东西给你
 like a good butler, giving you what you want before you even have to ask for
 
 8
@@ -32,41 +39,51 @@ it.
 
 9
 00:00:21,720 --> 00:00:23,720
+和保存按钮一样，他们都是历史遗留产物。
 Much like the Save button, it's a relic of a
 
 10
 00:00:23,720 --> 00:00:27,370
+对于我们这些从软驱时代过来的人来说
 bygone age. That's the best a reassuring safety blanket for those
 
 11
 00:00:27,370 --> 00:00:30,370
+这就是一个让人安心的毯子
 of us who grew up with floppy disks. With the ability
 
 12
 00:00:30,370 --> 00:00:33,670
+我们现在有能力运行后台任务或者直接从服务器发送信息
 to run background tasks or send messages directly from the server
 
 13
 00:00:33,670 --> 00:00:36,860
+到我们的App，实在没有必要让用户来
 to our app, there's really no reason to force users
 
 14
 00:00:36,860 --> 00:00:39,960
+手动运行刷新，而是应该让App自己去
 to manually hit refresh. But the app is up to date
 
 15
 00:00:39,960 --> 00:00:43,300
+更新同步云端的信息
 and sync with the cloud should be a given. But like
 
 16
 00:00:43,300 --> 00:00:47,230
+但是就像我们之前说过的，这是为了debug。所以比起输出语句
 we said, this is for debugging, so like print line it's
 
 17
 00:00:47,230 --> 00:00:51,370
+还是加一个刷新按钮更方便。让我们来看看
 acceptable for this particular purpose. Let's also take a look at
 
 18
 00:00:51,370 --> 00:00:55,650
+后台线程的模型，哪些选项是有潜在问题的？
 our background threading model, which of the following is potential an issue?
 
