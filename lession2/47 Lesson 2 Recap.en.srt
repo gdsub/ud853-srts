@@ -1,32 +1,39 @@
 1
 00:00:00,330 --> 00:00:02,100
+现在你知道了如何使用模拟数据进行UI开发
 So now you've taken a UI with mock data
 
 2
 00:00:02,100 --> 00:00:04,390
+也学会了更新真实的数据
 and learned how to update with the real data. You
 
 3
 00:00:04,390 --> 00:00:06,955
+你还学会了使用权限  将耗时操作转移到
 learned how to use permissions, move time consuming processes
 
 4
 00:00:06,955 --> 00:00:09,540
+UI线程之外  另外还了解了一些网络I/O的
 of the UI thread, and were introduced to the basics
 
 5
 00:00:09,540 --> 00:00:12,410
+基础知识  来参加我们的第3课吧
 of network I/O. Join us again in lesson three,
 
 6
 00:00:12,410 --> 00:00:14,990
+我们将会创建更多的Activity组件并且学习怎样在它们之间
 where we'll create more activities and learn how to navigate
 
 7
 00:00:14,990 --> 00:00:17,700
+进行跳转  但是首先  让我来带领你
 between them. But first, come with me as I take
 
 8
 00:00:17,700 --> 00:00:20,190
+进行一次Android历史之旅
 you on another voyage in to the history of Android
-
