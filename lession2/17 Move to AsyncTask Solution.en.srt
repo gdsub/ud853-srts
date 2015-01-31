@@ -1,80 +1,100 @@
 1
 00:00:00,420 --> 00:00:03,460
+对于天气预报Fragment里问题的解答
 For the solution within forecast fragment, we
 
 2
 00:00:03,460 --> 00:00:08,310
+我们创建了FetchWeatherTask类，使它继承AsyncTask。
 implemented FetchWeather/task, which extends AsyncTask. The generics
 
 3
 00:00:08,310 --> 00:00:13,518
+这里的类型我们只用了Void，在这里是没问题的。然后在doInBackground方法里
 we use are just Void, and this is fine for now. Then within the doInBackground
 
 4
 00:00:13,518 --> 00:00:16,014
+把之前网路交互的代码片段复制到里面来
 method, we copied our networking codes snippet,
 
 5
 00:00:16,014 --> 00:00:18,610
+大体是相同的，除了在这里
 here. It's the same, except [INAUDIBLE] in
 
 6
 00:00:18,610 --> 00:00:21,600
+我们返回一个null
 certain cases we return null instead of
 
 7
 00:00:21,600 --> 00:00:24,010
+而不是将预报天气的JSON字符串赋值为null
 setting the forecast JSON string to be null.
 
 8
 00:00:25,010 --> 00:00:28,770
+在最前面，这儿是一个onCreateView()
 Previously, the code was an on create view, which expected us
 
 9
 00:00:28,770 --> 00:00:31,370
+这里面我们需要填充并返回一个view类，所以有必要运行到
 inflate and return a view. So it's important that it got
 
 10
 00:00:31,370 --> 00:00:33,510
+下面这些代码
 to the rest of the code. Even if there was an
 
 11
 00:00:33,510 --> 00:00:37,110
+即使在网路交互代码中报错。现在网络部分在
 error in the networking code. Now that the networking code is in
 
 12
 00:00:37,110 --> 00:00:40,060
+一个AsyncTask里面，也不需要我们做什么多余的处理了。
 a sync task, there's really nothing that comes after this in
 
 13
 00:00:40,060 --> 00:00:42,890
+这里报错也没问题
 the given background method. So it's fine to just bail early
 
 14
 00:00:42,890 --> 00:00:46,430
+另外对于我们的日志信息
 whenever there's an error. Also know that for our log messages,
 
 15
 00:00:46,430 --> 00:00:50,230
+我们定义了一个log tag常数，在这个Task的顶端。
 we've defined a log tag constant. At the top of this task.
 
 16
 00:00:51,640 --> 00:00:55,940
+这个log tag被定义为FetchWeatherTask.class的名字
 This log tag is defined to be the name of the FetchWeatherTask.class. The
 
 17
 00:00:55,940 --> 00:00:57,670
+我们这么做而不是
 reason we use this syntax instead
 
 18
 00:00:57,670 --> 00:01:01,170
+声明一个FetchWeatherTask的String，是因为
 of declaring a string FetchWeatherTask, it because
 
 19
 00:01:01,170 --> 00:01:04,370
+我们希望这两者能同步。如果你重命名了
 we want these two to be in sync. If you ever rename the
 
 20
 00:01:04,370 --> 00:01:07,630
+这个类，那么这儿将抛出一个Exception除非你同样修改了这儿。
 class then it will throw an exception unless you also update it here.
 
