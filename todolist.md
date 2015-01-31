@@ -7,6 +7,7 @@
 * @EzioKissshot：2.36 ~ 2.39
 * @xiazdong：2.40 ~ 2.43
 * @gejiaheng：2.44 ~ 2.47 （待确认）
+* @tingya：3.1 ~ 3.4 （实习）
 
 
 #20150130 TODOLIST （已完成）
