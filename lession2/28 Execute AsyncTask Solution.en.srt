@@ -1,40 +1,50 @@
 1
 00:00:00,470 --> 00:00:02,880
+在forecasefragment类中，我们更改了
 In the forecast fragment class, we modify the
 
 2
 00:00:02,880 --> 00:00:08,134
+onOptionsItemSelected方法。当Refresh菜单项被选择，
 onOptionsItemSelected method. When the Refresh menu item is selected,
 
 3
 00:00:08,134 --> 00:00:11,129
+我们创建了一个新的FetchWeatherTask，并且我们调用
 we create a new FetchWeatherTask and then we call
 
 4
 00:00:11,129 --> 00:00:13,489
+execute。尽管调用不再阻塞UI线程
 execute on it. While the call is no longer
 
 5
 00:00:13,489 --> 00:00:16,487
+因为这是AsyncTask，
 blocking the UI thread because it's an AsyncTask, the
 
 6
 00:00:16,487 --> 00:00:19,390
+应用仍然会崩溃。如果你查看日志，
 app will still crash. If we check the logs,
 
 7
 00:00:19,390 --> 00:00:21,920
+我们会看到在这应用崩溃了。
 we see that the app crashed. This time though,
 
 8
 00:00:21,920 --> 00:00:26,030
+这是一个security的异常。它说权限被拒绝，并且问
 with a security expression. It says Permission denied and
 
 9
 00:00:26,030 --> 00:00:29,810
+是不是没有申请INTERNET权限。确实，
 ask if you're missing the INTERNET permission or not. And indeed,
 
 10
 00:00:29,810 --> 00:00:32,670
+我们没申请INTERNET权限，因此我们需要申请它。
 we are missing the INTERNET permission, so we need to request it.
 
