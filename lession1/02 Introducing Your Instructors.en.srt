@@ -5,12 +5,12 @@ I'm Katherine Kwan, and I'm a developer advocate at Google. I started off by
 
 2
 00:00:05,340 --> 00:00:09,000
-Android应用团队做过工程师  我为
+Android应用团队做过工程师  我参与过
 working as an engineer on the Android apps team. I worked there for
 
 3
 00:00:09,000 --> 00:00:13,740
-Play商店和记事本应用程序Google Keep等Google产品做事
+Play商店和记事本Google Keep等Google产品的开发
 three years on products like Google Play and Google Keep, the note taking app.
 
 4
@@ -20,7 +20,7 @@ I'm continually blown away by what you can build on this platform, and
 
 5
 00:00:19,244 --> 00:00:24,590
-做些真正可以改善人们生活质量的应用程序
+做些真正可以改善人们生活质量的应用
 I'm particularly inspired by those apps that can truly improve people's lives.
 
 6
@@ -35,7 +35,7 @@ then they feel like they don't have the technical skills to actually build it.
 
 8
 00:00:31,420 --> 00:00:35,150
-这也是我为什么转做开发者关系工作
+这也是为什么我要转到开发者关系推广部
 And that's why I shifted over to developer relations so
 
 9
@@ -54,7 +54,7 @@ I'll be helping you implement your very first app.
 
 12
 00:00:48,544 --> 00:00:52,170
-我是来自Google开发者关系部门的Dan Gauthan
+我是来自Google开发倡导部的Dan Gauthan
 >> My name is Dan Gauthan. I've been a developer advocate at Google for
 
 13
@@ -79,7 +79,7 @@ missed by new Android developers. You'll learn to lean on the framework,
 
 17
 00:01:08,181 --> 00:01:11,565
-专注如何让你的应用独一无二而不是重复造轮子
+专注于如何让你的应用独一无二而不是重复造轮子
 focusing on what makes your app unique instead of reinventing the wheel.
 
 18
@@ -88,7 +88,7 @@ focusing on what makes your app unique instead of reinventing the wheel.
 
 19
 00:01:17,092 --> 00:01:22,820
-我是Rado Mya  我在Google开发者关系部门工作过五年
+我是Rado Mya  我在Google开发倡导部工作过五年
 >> I'm Rado Mya, and I've been a developer advocate at Google for five years.
 
 20
@@ -98,7 +98,7 @@ I started working on Androids so long ago that back then there were no devices.
 
 21
 00:01:27,700 --> 00:01:30,940
-当时我们所有的工作都在模拟器环境  很差的SDK环境下进行
+当时我们所有的工作都在模拟器环境  不够完备的SDK环境下进行
 All we had to work with were an emulator, a beater SDK, and
 
 22
@@ -133,6 +133,6 @@ the time you finished this course you'll know more than just how to create yet
 
 28
 00:01:54,630 --> 00:01:58,900
-你还会知道如何做一个专注于的用户伟大应用
+你还会知道如何做一个专注于用户的伟大应用
 another app. You'll know how to build great apps that focus on the user.
 
