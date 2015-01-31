@@ -8,7 +8,7 @@
 
 @jintao: 2.13 ~ 2.16 （实习）--Done
 
-@EzioKissshot：2.17 ~ 2.20 （实习）
+@EzioKissshot：2.17 ~ 2.20 （实习）--Done
 
 @hellomaya：2.21 ~ 2.24 （实习）--Done
 
