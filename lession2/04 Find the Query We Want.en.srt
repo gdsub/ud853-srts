@@ -1,56 +1,80 @@
 1
 00:00:00,570 --> 00:00:02,170
+现在  我们应该能够找出最
 Now, we should be able to figure out the most
 
 2
 00:00:02,170 --> 00:00:05,530
+适合我们的应用程序应该使用的URL  基于我们之前看到的
 appropriate URL that our app should use. Based on the
 
 3
 00:00:05,530 --> 00:00:08,360
+用户体验的线框图  你注意到  我们
 UX wireframes that we saw earlier, you noticed that we'll
 
 4
 00:00:08,360 --> 00:00:12,080
+需要一个星期的有价值的数据  这个测试和
 want one week's worth of data. For this quiz and for
 
 5
 00:00:12,080 --> 00:00:15,130
-the example code that I'll be showing you later, we're
+示例代码  我将在稍后展示出来
+the example code that I'll be showing you later,
 
 6
 00:00:15,130 --> 00:00:18,280
-going to be using the postal code for Mountain View which is
+我们将使用Mountain View的邮政编码
+we're going to be using the postal code for Mountain View which is
 
 7
 00:00:18,280 --> 00:00:21,260
+邮政编码是94043  无论如何  你应该使用你自己的位置
 94043. By all means, you should use your own location
 
 8
-00:00:21,260 --> 00:00:25,760
-either specifying the postal code, city name or the latitude, longitude
+00:00:21,260 --> 00:00:23,445
+或者指定邮政编码
+either specifying the postal code,
 
 9
-00:00:25,760 --> 00:00:31,190
-coordinates. Next we want their format from the server to be in JSON format,
+00:00:23,446 --> 00:00:25,760
+城市名称或纬度经度坐标
+city name or the latitude, longitude
 
 10
-00:00:31,190 --> 00:00:36,590
-and we want the units to be reported in metric. But our UI will
+00:00:25,760 --> 00:00:28,004
+接下来  我们所需要的
+coordinates. Next we want their
 
 11
-00:00:36,590 --> 00:00:39,240
-be able to display Celsius or Fahrenheit
+00:00:28,005 --> 00:00:31,190
+服务器数据的格式是JSON格式
+format from the server to be in JSON format,
 
 12
-00:00:39,240 --> 00:00:41,170
-based on user preferences, and we'll just
+00:00:31,190 --> 00:00:36,590
+并且我们需要度量单位的报告  但是我们的UI将
+and we want the units to be reported in metric. But our UI will
 
 13
-00:00:41,170 --> 00:00:44,038
-do the conversion ourself. Enter the URL
+00:00:36,590 --> 00:00:39,240
+能够显示摄氏度或华氏度
+be able to display Celsius or Fahrenheit
 
 14
+00:00:39,240 --> 00:00:41,170
+基于用户的偏好设置  我们将
+based on user preferences, and we'll just
+
+15
+00:00:41,170 --> 00:00:44,038
+自己完成转换  在下面的框中输入
+do the conversion ourself. Enter the URL
+
+16
 00:00:44,038 --> 00:00:46,590
+满足这些需求的URL
 that fulfills these requirements in the box below,
 
