@@ -1,11 +1,11 @@
 1
 00:00:00,450 --> 00:00:02,650
-就如我们之前提到的，你将继续在App的这里看到
+就如我们之前提到的，你将继续在App的这里看到测试数据
 As we mentioned before, you're going to still see fake
 
 2
 00:00:02,650 --> 00:00:05,120
-伪造的数据。我们需要加点代码去
+我们需要加点代码去
 data in the app. We'll need to add code to
 
 3
