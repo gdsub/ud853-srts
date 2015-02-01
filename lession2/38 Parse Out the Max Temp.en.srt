@@ -1,64 +1,80 @@
 1
 00:00:00,480 --> 00:00:02,719
+下一步，让我们来做一个练习
 For the next step, let's do an exercise that focuses
 
 2
 00:00:02,719 --> 00:00:06,400
+来取出这些属性的其中一个的值
 on extracting out the value of one of those attributes. We're
 
 3
 00:00:06,400 --> 00:00:09,480
+这次做练习的方式有点不同。你应该在
 going to do this exercise a little bit differently. You'll implement this
 
 4
 00:00:09,480 --> 00:00:12,740
+Udacity平台上完成它。这样我们就能验证
 on the Udacity platform. And we'll be able to verify that
 
 5
 00:00:12,740 --> 00:00:16,420
+你的代码是否正确。在这个视频结束后，你会看到一个像这样的IDE
 your code is correct. After this video, you'll see an IDE
 
 6
 00:00:16,420 --> 00:00:18,870
+其中包含一些初始的代码
 like this. Where it contains some starter code, as well as
 
 7
 00:00:18,870 --> 00:00:22,790
+旁边的标签页有一些Java单元测试（JUnit）代码
 some j unit tests in a separate tab. In particular, we
 
 8
 00:00:22,790 --> 00:00:25,780
+我们希望你来实现这个函数，取得一天的最大温度
 want you to implement this function, to get the max temperature
 
 9
 00:00:25,780 --> 00:00:28,160
+会给你一个JSON字符串，里面是天气数据
 for a day. You're given a weather JSON
 
 10
 00:00:28,160 --> 00:00:30,390
+和之前从OpenWeatherMap服务端
 string, formatted the same way as you would get
 
 11
 00:00:30,390 --> 00:00:32,700
+取得的JSON是一样的格式
 from the Open Weather Map service. And you
 
 12
 00:00:32,700 --> 00:00:35,910
+另外你也会获得我们关注的那天的日期索引
 also get the day index that we care about.
 
 13
 00:00:35,910 --> 00:00:37,340
+开动大脑来编写代码吧
 Feel free to play around with the code
 
 14
 00:00:37,340 --> 00:00:40,520
+用Android Studio，或者其他开发环境
 in Android Studio, or a separate development environment, before
 
 15
 00:00:40,520 --> 00:00:43,070
+之后将写好的代码粘贴到这儿。你也可以
 you paste your answer here. Or you can use
 
 16
 00:00:43,070 --> 00:00:45,800
+直接用Udacity的IDE。如果你喜欢的话。
 the Udacity IDE. Whichever feels more natural to you.
 

@@ -1,4 +1,5 @@
 1
 00:00:00,422 --> 00:00:03,860
+我们想显示在预报列表上的属性就是这些
 And here the attributes we care about to display a list of forecasts in our app.
 

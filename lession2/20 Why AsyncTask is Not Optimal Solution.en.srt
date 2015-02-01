@@ -5,12 +5,12 @@ Well, the transfer isn't happening on the UI thread, but
 
 2
 00:00:03,040 --> 00:00:05,750
-但是这不是坏事。实际上，不在UI线程中
+但是这不是坏事。实际上，不在UI线程中是好事
 that's not a bad thing. In fact, it's good that it's
 
 3
 00:00:05,750 --> 00:00:07,900
-是好事，所以这儿也没问题
+所以这儿也没问题
 not happening on the UI thread. So that's not a problem
 
 4
@@ -25,12 +25,12 @@ apps, so that's not a problem. The real problem is that
 
 6
 00:00:15,200 --> 00:00:18,080
-传输所在的线程的生命周期与UI组件生命周期明确地
+传输所在的线程的生命周期与UI组件生命周期明确地绑定
 the transfer is happening on a thread whose lifetime is tied
 
 7
 00:00:18,080 --> 00:00:21,800
-绑定，在这里是与activity的生命周期绑定
+在这里是与activity的生命周期绑定
 explicitly to a UI component, in this case an activity. So
 
 8
