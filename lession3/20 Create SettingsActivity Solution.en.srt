@@ -1,24 +1,29 @@
 1
 00:00:00,160 --> 00:00:03,460
-First, we create our settings activity, and this is the code that we got
+首先我们来创建SettingsActivity组件  这些就是我们根据要点写出的代码
+First, we create our SettingsActivity, and this is the code that we got
 
 2
 00:00:03,460 --> 00:00:07,870
-from the gist. Then, in the Android Manifest, we declare the settings activity.
+然后在AndroidManifest文件中  我们注册SettingsActivity
+from the gist. Then, in the AndroidManifest, we declare the SettingsActivity.
 
 3
 00:00:07,870 --> 00:00:11,520
-We give it an activity named Settings, which is declared in the Strings file.
+我们为这个Activity取名叫Settings  它是定义在字符串资源文件中的
+We give it an activity name Settings, which is declared in the strings file.
 
 4
 00:00:13,080 --> 00:00:17,080
-We also declare the main activity as the parent activity. That way,
+我们同时将MainActivity声明为它的父activity  这样的话
+We also declare the MainActivity as the parent activity. That way,
 
 5
 00:00:17,080 --> 00:00:19,340
-when you hit the up button in the settings activity,
+当你点击SettingsActivity组件左上角的箭头时
+when you hit the up button in the SettingsActivity,
 
 6
 00:00:19,340 --> 00:00:21,670
-it will return back to the main activity.
-
+就可以返回到MainActivity中了
+it will return back to the MainActivity.
