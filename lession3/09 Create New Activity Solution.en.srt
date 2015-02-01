@@ -1,32 +1,40 @@
 1
 00:00:00,370 --> 00:00:04,070
+我们在包名这里点击右键选择创建一个新的 Activity
 We start by right-clicking on our package name to create the new activity from
 
 2
 00:00:04,070 --> 00:00:07,620
+选择Blank Activity with Fragement
 the Blank Activity with Fragment template. So
 
 3
 00:00:07,620 --> 00:00:11,950
+名字叫DetailActivity
 for name, we use DetailActivity, and again, the
 
 4
 00:00:11,950 --> 00:00:17,930
+然后我们设置它的 Hierarchical Parent 为 MainActivity
 hierarchical parent of this class is going to be our main activity. So as you
 
 5
 00:00:17,930 --> 00:00:19,840
+现在你能看见  我们有一个新的类创建
 can see, we now have a new
 
 6
 00:00:19,840 --> 00:00:25,380
+同时还有activity_detail.xml
 DetailActivity along with the XML for activity_detail and
 
 7
 00:00:25,380 --> 00:00:29,070
+以及 frament_detail.xml 这俩文件被创建
 a fragment associated with that activity. Great! You're
 
 8
 00:00:29,070 --> 00:00:32,240
+你做的很好 但是我们这个新的 Activity 并没有执行啊
 done. But we still aren't launching our new activity.
 

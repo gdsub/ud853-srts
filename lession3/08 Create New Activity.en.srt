@@ -1,68 +1,85 @@
 1
 00:00:00,280 --> 00:00:03,180
+你要用 Android Studio 来创建详细界面
 You're going to use Android Studio to create the
 
 2
 00:00:03,180 --> 00:00:07,140
+点击新建Activity  选择Blank Activity with Fragement
 detail activity from the blank activity with fragment template.
 
 3
 00:00:07,140 --> 00:00:09,980
+下一步要求设置它的Hierarchical Parent
 The template asks for the hierarchical parent of detail
 
 4
 00:00:09,980 --> 00:00:13,680
+这个设置设定了这个Activity向上返回到哪
 activity, which defines the up button noted by the
 
 5
 00:00:13,680 --> 00:00:18,320
+同时让左上方按钮变成了一个返回键
 app icon, and a left pointing carrot here. But
 
 6
 00:00:18,320 --> 00:00:20,910
+这里的向上什么意思呐  你把
 what does up mean? If you mapped out a
 
 7
 00:00:20,910 --> 00:00:23,630
+这个程序中几个屏幕之间的层级目录画一下
 hierarchy of all screens in the sunshine app, the
 
 8
 00:00:23,630 --> 00:00:26,150
+根位置应该是 MainActivity  它的子视图
 root of the tree would be the main activity, and
 
 9
 00:00:26,150 --> 00:00:29,260
+应该是 DetailActivity
 it's child would be the detail activity. So, the
 
 10
 00:00:29,260 --> 00:00:32,960
+当你在MainActivyty主视图上时候
 app goes to the main activity. While the back button
 
 11
 00:00:32,960 --> 00:00:35,530
+返回按钮的效果是一样的  它会让你返回主屏幕
 can achieve the same effect, it can also bring
 
 12
 00:00:35,530 --> 00:00:37,920
+或者根据你最近的打开的程序跳转到其他的应用上去
 you back home or to another app, depending on your
 
 13
 00:00:37,920 --> 00:00:41,440
+向上在应用里他会让你返回到父级
 history of screens. Up will always navigate you within
 
 14
 00:00:41,440 --> 00:00:44,290
+不论你是从哪里切换到这个屏幕来的
 the same app to the parent, regardless of how you
 
 15
 00:00:44,290 --> 00:00:49,050
+现在就创建这个 DetailActivity 类吧
 arrived at this screen. Create the detail activity now,
 
 16
 00:00:49,050 --> 00:00:51,220
+然后看看它是怎样在 AndroidMainfest.xml 文件中
 and look at how the activity is declared in the
 
 17
 00:00:51,220 --> 00:00:52,470
+定义的
 Android manifest file.
 
