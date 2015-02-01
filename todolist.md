@@ -2,8 +2,8 @@
 
 * @publicloudapp：	润稿 3.1 ~ 3.4 翻译 3.38 ~ 3.41		
 * @xiaorain：	休息		
-* @chenglu：	3.5 ~ 3.8		
-* @blogjintao：	3.9 ~ 3.13		
+* @chenglu：	3.5 ~ 3.9		
+* @blogjintao：	3.10 ~ 3.13		
 * @EzioKissshot：	3.14 ~ 3.17		
 * @xiazdong：	休息		
 * @gejiaheng：	3.18 ~ 3.21		
