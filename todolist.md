@@ -1,18 +1,18 @@
 #20150202 TodoList
 
-* @publicloudapp	检查/修改格式 4.1 ~ 4.20 / 润稿 4.1 ~ 4.10
-* @xiaorain	润稿 4.11 ~ 4.20
-* @chenglu	休息
-* @blogjintao	4.21 ~ 4.24
-* @EzioKissshot	4.25 ~ 4.28
-* @xiazdong	休息
-* @gejiaheng	4.29 ~ 4.32
-* @tingya	4b.1 ~ 4b.4
-* @shr1992	4b.5 ~ 4b.8
-* @raylu1988	未确认
-* @w437392342	4b.10 4b.11 4b.13 4b.15
-* @RonnSanji	4b.16 4b.17 4b.18 4b.20  实习
-* @LeopardWang	4b.21 4b.22 4b.24 4b.25  实习
+* @publicloudapp：	检查/修改格式 4.1 ~ 4.20 / 润稿 4.1 ~ 4.10		
+* @xiaorain：	润稿 4.11 ~ 4.20		强势回归
+* @chenglu：	休息		
+* @blogjintao：	4.21 ~ 4.24		
+* @EzioKissshot：	4.25 ~ 4.28		
+* @xiazdong：	4b.26 ~ 4b.29		强势回归
+* @gejiaheng：	4.29 ~ 4.32		
+* @tingya：	4b.1 ~ 4b.4		
+* @shr1992：	4b.5 ~ 4b.8		
+* @raylu1988：	未确认	今天不分配任务	
+* @w437392342：	4b.10 4b.11 4b.13 4b.15		
+* @RonnSanji：	4b.16 4b.17 4b.18 4b.20		实习
+* @LeopardWang：	4b.21 4b.22 4b.24 4b.25		实习
 
 #20150201 TODOLIST
 
