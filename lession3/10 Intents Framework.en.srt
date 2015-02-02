@@ -1,56 +1,70 @@
 1
 00:00:00,560 --> 00:00:03,240
+从一个活动中移动。在这种情况下，
 To move from one activity. In this case,
 
 2
 00:00:03,240 --> 00:00:06,210
+我们的阳光应用程序里的主活动，另外，这边这个是细节活动，
 the MainActivity in our sunshine app, to another, here
 
 3
 00:00:06,210 --> 00:00:11,300
+我们叫他开始活动。但是注意当我们
 the DetailActivity, we call StartActivity. But note that when
 
 4
 00:00:11,300 --> 00:00:14,490
+使用开始活动这个方法时，并不是指出这个活动的类名称
 using the StartActivity method, rather than specifying the class
 
 5
 00:00:14,490 --> 00:00:16,900
+就立即开始了，类名称
 name of the activity to start directly, that
 
 6
 00:00:16,900 --> 00:00:20,590
+就直接被打包在了一个意图里。
 class name is packaged explicitly within an intent. The
 
 7
 00:00:20,590 --> 00:00:22,990
+这个最基础的前提是很简单的。不管什么时候你需要让你的
 basic premise is simple. Whenever you need your app
 
 8
 00:00:22,990 --> 00:00:25,950
+应用程序组件进行互相交流，或者是系统之间，
 components to communicate with each other, or the system,
 
 9
 00:00:25,950 --> 00:00:27,420
+你就可以用意图来识别认定的终点。
 you use intents to identify the
 
 10
 00:00:27,420 --> 00:00:30,950
+在你的开发程序下启动活动是
 target destination. Starting activities within your
 
 11
 00:00:30,950 --> 00:00:32,912
+最简单的例子。
 app is the simplest example. [SOUND]
 
 12
 00:00:32,912 --> 00:00:38,050
+通过使用环境和活动的一个类名称
 With your intent explicitly indicating the target
 
 13
 00:00:38,050 --> 00:00:44,136
+与你的意图明确指示目标。意图使用
 using the context and a class name of the activity. Intents that use the
 
 14
 00:00:44,136 --> 00:00:48,090
+你认准的组件的名字，就是为了然你知道这个是明确的意图。
 name of the component you're targeting directly, are known as explicit intents.
 

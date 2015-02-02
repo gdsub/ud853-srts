@@ -1,16 +1,32 @@
+#20150202 TodoList
+
+* @publicloudapp：	检查/修改格式 4.1 ~ 4.20 / 润稿 4.1 ~ 4.10		
+* @xiaorain：	润稿 4.11 ~ 4.20		强势回归
+* @chenglu：	休息		
+* @blogjintao：	4.21 ~ 4.24		
+* @EzioKissshot：	4.25 ~ 4.28		
+* @xiazdong：	4b.26 ~ 4b.29		强势回归
+* @gejiaheng：	4.29 ~ 4.32		
+* @tingya：	4b.1 ~ 4b.4		
+* @shr1992：	4b.5 ~ 4b.8		
+* @raylu1988：	未确认	今天不分配任务	
+* @w437392342：	4b.10 4b.11 4b.13 4b.15		
+* @RonnSanji：	4b.16 4b.17 4b.18 4b.20		实习
+* @LeopardWang：	4b.21 4b.22 4b.24 4b.25		实习
+
 #20150201 TODOLIST
 
 * @publicloudapp：	润稿 3.1 ~ 3.4 翻译 3.38 ~ 3.41		
 * @xiaorain：	休息		
-* @chenglu：	3.5 ~ 3.9		
-* @blogjintao：	3.10 ~ 3.13		
-* @EzioKissshot：	3.14 ~ 3.17		
+* @chenglu：	3.5 ~ 3.9		-- Done
+* @blogjintao：	3.10 ~ 3.13		-- Done
+* @EzioKissshot：	3.14 ~ 3.17		-- Done
 * @xiazdong：	休息		
-* @gejiaheng：	3.18 ~ 3.21		
-* @tingya：	3.22 ~ 3.25		
-* @shr1992：	3.26 ~ 3.29		实习
-* @raylu1988：	3.30 ~ 3.33		实习
-* @w437392342：	3.34 ~ 3.37		实习
+* @gejiaheng：	3.18 ~ 3.21		-- Done
+* @tingya：	3.22 ~ 3.25		-- 任务延期
+* @shr1992：	3.26 ~ 3.29		实习  --Done
+* @raylu1988：	3.30 ~ 3.33		实习 -- 确认中
+* @w437392342：	3.34 ~ 3.37		实习 -- 任务延期
 
 
 #20150131 TODOLIST

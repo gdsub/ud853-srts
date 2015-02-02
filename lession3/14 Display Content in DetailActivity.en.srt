@@ -1,16 +1,20 @@
 1
 00:00:00,360 --> 00:00:04,650
+当Detail Activity启动时，它展示了一个Hello World
 Once the Detail Activity is launched, it shows Hello World. Instead,
 
 2
 00:00:04,650 --> 00:00:08,670
+而我们期望的是从Intent中读取天气预报数据，并把它展示出来
 we want to read the forecast data from the Intent, and display
 
 3
 00:00:08,670 --> 00:00:12,171
+适当修改下代码，让App和概念图相符
 it. Make the appropriate changes in the app, so it matches
 
 4
 00:00:12,171 --> 00:00:16,500
+然后编译运行App来验证功能是否成功运行
 the mocks. Then, verify the behavior by compiling and running the app.
 
