@@ -10,12 +10,12 @@ convinced I'm ever going to tire of the obvious puns our app name allows.
 
 3
 00:00:09,430 --> 00:00:13,050
-切记  我们本次课程通篇都是一起做这个应用程序
+切记  在我们学习本课程并一起完成这个应用程序的时候
 Remember, as we progress through this course and build this app together, you
 
 4
 00:00:13,050 --> 00:00:16,600
-在你的想象中  这个就是你要的应用程序  毕竟市面上已经有很多天气类的
+你也应该要好好考虑下你想要实现的应用  毕竟市面上已经有很多天气类的
 should be thinking about the app you want to create. There are too many weather
 
 5
