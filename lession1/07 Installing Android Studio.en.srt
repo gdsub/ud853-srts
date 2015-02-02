@@ -45,7 +45,7 @@ you don't need to install that separately. If you're having difficulties, no
 
 10
 00:00:35,000 --> 00:00:38,960
-完全不需要担心  我们非常理解做到一切都是正确的设置是非常棘手的
+完全不需要担心  我们非常理解一上手就跑通并正确设置是非常棘手的
 worries at all. We totally understand because it can be tricky to get everything
 
 11
