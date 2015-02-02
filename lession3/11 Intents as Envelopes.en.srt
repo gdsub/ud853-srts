@@ -1,120 +1,150 @@
 1
 00:00:00,590 --> 00:00:02,710
+我认为可以把意图看作一个信封，
 I like to think of intents as envelopes
 
 2
 00:00:04,920 --> 00:00:08,109
+里边包括了每一个人，或者说在这种情况下，你想把组件送到哪里。
 each one includes who, or in this case, which component you want it
 
 3
 00:00:08,109 --> 00:00:11,290
+这还有少量的空间数据，
 delivered to. And there's room for a small amount of data to be delivered,
 
 4
 00:00:13,360 --> 00:00:14,409
+把他打包为临时的。
 packaged as extras.
 
 5
 00:00:16,870 --> 00:00:19,000
+原始的元祖将被提供给应用程序组件，
 Primitive tuples that will be available to the application
 
 6
 00:00:19,000 --> 00:00:23,550
+最终得到并打开这个意图。所以你就会在信封上
 component that ultimately receives and opens this intent. So an
 
 7
 00:00:23,550 --> 00:00:26,910
+看到一个清楚的意图，即被明确指定的容器名字。
 explicit intent, explicitly specifies the name of the recipient, as
 
 8
 00:00:26,910 --> 00:00:29,900
+隐藏意图更有意思。
 you can see on this envelope. Implicit intents are a
 
 9
 00:00:29,900 --> 00:00:33,800
+来，看这里，我们并不指定这个类的名称。
 lot more interesting. Here, we don't specify the name of
 
 10
 00:00:33,800 --> 00:00:36,550
+我们甚至不知道他是什么。所以，
 the class. We don't even know what it is. So,
 
 11
 00:00:36,550 --> 00:00:39,500
+我们应该如何显示出那个活动被推送了呢？好，
 how do we indicate which activity to launch? Well, you
 
 12
 00:00:39,500 --> 00:00:42,230
+你也许知道这样的故事，你是否有时候听说用这些字母
 know those stories you sometimes hear about letters with fake
 
 13
 00:00:42,230 --> 00:00:47,890
+作为假地址，但是依旧可以以某种方式找到收件人？
 addresses like these that somehow still find their way to the intended
 
 14
 00:00:47,890 --> 00:00:52,410
+安卓系统的意图决议也是这样工作的。
 recipient? Well the intent resolution system on Android, works the same way.
 
 15
 00:00:54,660 --> 00:00:56,940
+找到一个活动，让他能够执行一个你
 Finding an activity, capable of performing an action
 
 16
 00:00:56,940 --> 00:01:00,920
+指定相关数据的动作。所以，并不是指定
 you specify on the associated data. So, rather than
 
 17
 00:01:00,920 --> 00:01:03,420
+一个类名称，然后你表明一个你想要一个活动完成
 specifying the name of a class, you indicate
 
 18
 00:01:03,420 --> 00:01:05,930
+的动作，还有
 an action you'd like an activity to perform, and
 
 19
 00:01:05,930 --> 00:01:09,000
+执行动作的数据就可以的。
 on what data that action should be performed.
 
 20
 00:01:09,000 --> 00:01:13,210
+像这样，我们想要解决一个活动，
 Like this, where we want to address an activity
 
 21
 00:01:13,210 --> 00:01:16,450
+这个活动就是要具有浏览一个网站的能力。因为意图可以
 that's capable of viewing a website. And because intents
 
 22
 00:01:16,450 --> 00:01:20,200
+跨越程序的界线，所以这个活动即使开始了，
 can cross through application boundaries, the activity that started,
 
 23
 00:01:20,200 --> 00:01:22,900
+也很可能不是你的应用程序的一部分。所以，
 may not be part of your app. So,
 
 24
 00:01:22,900 --> 00:01:27,270
+你可以像这样把功能包括起来，你可以
 you can include functionality like this, browsing websites or
 
 25
 00:01:29,480 --> 00:01:35,750
+浏览网站或者打电话或者从你的地址薄里选择一个联系人。在你的应用程序
 making phone calls or choosing a contact from your address book. All
 
 26
 00:01:35,750 --> 00:01:39,150
+里的所有东西，不需要你亲自去执行他。
 from within your app, without you having to implement any of it yourself.
 
 27
 00:01:41,160 --> 00:01:42,520
+你甚至不需要知道这个
 You don't even need to know about the app
 
 28
 00:01:42,520 --> 00:01:45,530
+最终服务你的请求的应用程序。你可以在安卓开发者的网站上找到
 that will ultimately service your request. You can find
 
 29
 00:01:45,530 --> 00:01:47,850
+一些其他拥有与你相同意图页面的本地应用，
 details of some of the intents supported by native
 
 30
 00:01:47,850 --> 00:01:50,970
+并从中了解一些意图的细节。
 apps in Common Intents page of the Android developer site.
 

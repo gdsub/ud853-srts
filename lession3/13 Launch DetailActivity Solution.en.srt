@@ -1,48 +1,60 @@
 1
 00:00:00,300 --> 00:00:03,360
+这个解决方案就是为活动细节类启动一个明确的意图。
 The solution is to lauch an explicit intent to
 
 2
 00:00:03,360 --> 00:00:07,750
+然后我们到新建界面，
 the Detail Activity Class. We'll go to On Create View,
 
 3
 00:00:07,750 --> 00:00:10,610
+我们就会在这定义我们的项目点击监听器。用她来
 where our On Item click listener is defined. To
 
 4
 00:00:10,610 --> 00:00:13,460
+传递天气预报的信息，我们可以用一个额外的意图，
 pass in the Weather Forecast information, we can use an
 
 5
 00:00:13,460 --> 00:00:16,000
+这个意图里存放的是一个键值对。
 intent extra, which is a key value pair in
 
 6
 00:00:16,000 --> 00:00:20,090
+我们使用这个密钥名，extratext意图，但其实我们
 the Intent. We use the key name, Intent.extratext, but we
 
 7
 00:00:20,090 --> 00:00:22,800
+能用的是密钥里边的所有字符串。只要
 can use any string for the key. As long as
 
 8
 00:00:22,800 --> 00:00:26,110
+我们读取信息时就会用到相同的密钥。
 we use the same key when reading the information out.
 
 9
 00:00:26,110 --> 00:00:29,150
+就像烤面包，我们可以在适配器
 Just as in the toast, we obtain the forecast
 
 10
 00:00:29,150 --> 00:00:31,850
+给定的位置通过调用活动项,然后从当前列表项得到预测数据
 data from the current list item, by calling get
 
 11
 00:00:31,850 --> 00:00:34,600
+然后从当前列表项得到预测数据.一旦
 item on the adapter at the given position. Once
 
 12
 00:00:34,600 --> 00:00:37,320
+我们添加了意图，我们就开始了这个活动。
 we've added the intent, we just start the activity.
 

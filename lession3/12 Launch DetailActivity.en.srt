@@ -1,28 +1,35 @@
 1
 00:00:01,660 --> 00:00:04,190
+谢谢，Rado。现在你在一个形象的比喻中也理解了
 Thanks, Rado. Now that you understand what
 
 2
 00:00:04,190 --> 00:00:06,960
+什么是意图。那就让给我们用它来干一些
 intents are in glorious metaphor, let's use them
 
 3
 00:00:06,960 --> 00:00:10,370
+有用的事。我们将用一个启动明细活动的意图
 to do something useful. We'll replace the toast,
 
 4
 00:00:10,370 --> 00:00:12,660
+以此来取代面包。
 with an intent to launch the detail activity.
 
 5
 00:00:14,940 --> 00:00:18,830
+你需要通过天气预报的数据显示详细的活动。
 You'll need to pass in weather forecast data for the detail activity to
 
 6
 00:00:18,830 --> 00:00:22,230
+对于其他更多的信息，你会在意图类里边看到意图
 display. For more information, see the intent
 
 7
 00:00:22,230 --> 00:00:24,760
+额外定义的常量。
 extra constants defined in the intent class.
 
