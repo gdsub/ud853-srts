@@ -1,3 +1,19 @@
+#20150202 TodoList
+
+* @publicloudapp	检查/修改格式 4.1 ~ 4.20 / 润稿 4.1 ~ 4.10
+* @xiaorain	润稿 4.11 ~ 4.20
+* @chenglu	休息
+* @blogjintao	4.21 ~ 4.24
+* @EzioKissshot	4.25 ~ 4.28
+* @xiazdong	休息
+* @gejiaheng	4.29 ~ 4.32
+* @tingya	4b.1 ~ 4b.4
+* @shr1992	4b.5 ~ 4b.8
+* @raylu1988	未确认
+* @w437392342	4b.9 ~ 4b.12
+* @RonnSanji	4b.13 ~ 4b.16
+* @LeopardWang	4b.17 ~ 4b.20
+
 #20150201 TODOLIST
 
 * @publicloudapp：	润稿 3.1 ~ 3.4 翻译 3.38 ~ 3.41		
