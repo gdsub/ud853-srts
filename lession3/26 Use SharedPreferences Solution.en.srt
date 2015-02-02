@@ -1,16 +1,21 @@
-1
+﻿1
 00:00:00,650 --> 00:00:04,600
+在预测碎片（ForecastFragment）类，当刷新菜单项被选中的时候，
 Within the forecast fragment class, when the refresh menu item is selected,
 
 2
 00:00:04,600 --> 00:00:09,312
+我们从SharedPreferences读取。因为它们是键-值对，我们得到了
 we read from SharedPreferences. Since they are key-value pairs, we get their
 
 3
 00:00:09,312 --> 00:00:14,000
+值存储的位置的键。如果没有保存值，那么我们回退
 value stored for the location key. If there's no value stored then we fall back
 
 4
 00:00:14,000 --> 00:00:18,930
+到默认位置。然后我们把位置传递到获取天气的任务。
 to the default location. Then we pass the location into the fetch weather task.
+
 
