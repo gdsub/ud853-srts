@@ -2,15 +2,15 @@
 
 * @publicloudapp：	润稿 3.1 ~ 3.4 翻译 3.38 ~ 3.41		
 * @xiaorain：	休息		
-* @chenglu：	3.5 ~ 3.9		
-* @blogjintao：	3.10 ~ 3.13		
-* @EzioKissshot：	3.14 ~ 3.17		
+* @chenglu：	3.5 ~ 3.9		-- Done
+* @blogjintao：	3.10 ~ 3.13		-- Done
+* @EzioKissshot：	3.14 ~ 3.17		-- Done
 * @xiazdong：	休息		
-* @gejiaheng：	3.18 ~ 3.21		
-* @tingya：	3.22 ~ 3.25		
-* @shr1992：	3.26 ~ 3.29		实习
-* @raylu1988：	3.30 ~ 3.33		实习
-* @w437392342：	3.34 ~ 3.37		实习
+* @gejiaheng：	3.18 ~ 3.21		-- Done
+* @tingya：	3.22 ~ 3.25		-- 确认中
+* @shr1992：	3.26 ~ 3.29		实习  --Done
+* @raylu1988：	3.30 ~ 3.33		实习 -- 确认中
+* @w437392342：	3.34 ~ 3.37		实习 -- 任务延期
 
 
 #20150131 TODOLIST
