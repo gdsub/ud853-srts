@@ -1,44 +1,55 @@
 1
 00:00:00,940 --> 00:00:07,092
+好了。你做完了。现在看看我的解决方法。因此
 All right. You're done. Let's take a look at my solution. All right. So, here's
 
 2
 00:00:07,092 --> 00:00:10,657
+这里是我们的addlocation的函数。locationSetting, cityName,
 what our addLocation function looks like, locationSetting, cityName,
 
 3
 00:00:10,657 --> 00:00:14,630
+latitude和longitude。就像在我们contentprovider
 latitude and longitude. Just like in our content
 
 4
 00:00:14,630 --> 00:00:17,230
+测试中，我们能使用getContentResolver去查询
 provider test, we can use getContentResolver to query
 
 5
 00:00:17,230 --> 00:00:20,410
+基于内容的URI。记住
 based upon the content URI. Remember that the
 
 6
 00:00:20,410 --> 00:00:23,390
+默认，location元组CONTENT_URI传递全部的
 default location entry CONTENT_URI passes all of the
 
 7
 00:00:23,390 --> 00:00:26,240
+参数到数据库中。因此我们能够简单的
 parameters into the database. So we can easily
 
 8
 00:00:26,240 --> 00:00:29,030
+构建一个查询，其中包含位置的设置，去看看是否
 construct a query containing the location setting to see if
 
 9
 00:00:29,030 --> 00:00:32,020
+它在数据库中。如果不在，那么查询
 it's in the database yet. If it's not, then the query
 
 10
 00:00:32,020 --> 00:00:34,710
+将返回一个空集，并且我们应该插入新的
 will return an empty set and we should insert the new
 
 11
 00:00:34,710 --> 00:00:38,850
+city name, location setting, latitude 和 longitude 到数据库中。
 city name, location setting, latitude, and longitude into the database together.
 

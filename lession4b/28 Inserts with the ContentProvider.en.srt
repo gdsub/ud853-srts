@@ -1,16 +1,20 @@
 1
 00:00:00,340 --> 00:00:03,969
+好了。现在是娱乐的部分。实现下面的方法
 All right. Now for the fun part. Code the method below
 
 2
 00:00:03,969 --> 00:00:07,400
+去插入地址到地址表如果它还不存在。
 to insert the location into the location table if it doesn't
 
 3
 00:00:07,400 --> 00:00:13,330
+返回location的ID。现在你能
 already exist. Return the ID of the location. Now you can
 
 4
 00:00:13,330 --> 00:00:17,030
+通过先插入，后查询的简单方法去做。
 do this the easy way using a query followed by an insert.
 
