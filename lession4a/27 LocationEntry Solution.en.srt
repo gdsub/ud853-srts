@@ -1,16 +1,20 @@
 1
 00:00:01,340 --> 00:00:06,510
+一个简单多的表，只有一个标准主键，很少的值
 A much simpler table. Just a standard primary key, a few values, and
 
 2
 00:00:06,510 --> 00:00:11,860
+还有一点点约束条件。注意我们用了ON CONFLICT IGNORE
 a few constraints. Note that we use ON CONFLICT IGNORE. This means in insert
 
 3
 00:00:11,860 --> 00:00:15,430
+这表明向数据库中插入相同键的话不会更新数据库
 into the database with the same key will not actually update the database at
 
 4
 00:00:15,430 --> 00:00:20,190
+并且也不会再Android helper函数中返回ID
 all. And therefore will also not return an ID in the Android helper functions.
 
