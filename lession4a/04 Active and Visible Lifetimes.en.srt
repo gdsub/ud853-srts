@@ -1,104 +1,131 @@
 1
 00:00:00,880 --> 00:00:03,650
+活跃生命周期是指当你的Activity处于前台并且
 The active life cycle is when your activity is in the foreground and
 
 2
 00:00:03,650 --> 00:00:10,600
+获取了焦点  此时Activity可以响应用户的事件  并且
 has focus. Here it is actively receiving input from user events and
 
 3
 00:00:10,600 --> 00:00:16,140
+不会被其他Activity所遮挡  另一方面
 no other activities are obscuring it. On [UNKNOWN] and
 
 4
 00:00:16,140 --> 00:00:20,570
+当你的Activity被遮挡时  活跃生命周期结束
 the active lifetime ends as soon as your activity is partially obscured,
 
 5
 00:00:20,570 --> 00:00:27,120
+像这个例子中  由于你选中了Google商店中的某个应用  查询对话框跳出
 like in this example. [SOUND] You can see here the permissions dialogue
 
 6
 00:00:27,120 --> 00:00:31,828
+遮住了Google Play程序
 is displayed in front of Google Play for
 
 7
 00:00:31,828 --> 00:00:36,826
+来安装这个应用  再例如  另一个Activity想要
 an app in store. Or the same thing happens when you have another activity trying
 
 8
 00:00:36,826 --> 00:00:41,290
+执行一个隐式的Intent  并需要用户做出选择  所以
 to fulfill an implicit intent and the user needs to make a selection. So
 
 9
 00:00:41,290 --> 00:00:43,790
+为了有效的利用有限的资源
 to make efficient use of limited resources,
 
 10
 00:00:43,790 --> 00:00:46,590
+你会想要利用这些信号来调整自己的应用的资源占用情况
 you'll want to use these signals to adjust your app's resource burden.
 
 11
 00:00:47,660 --> 00:00:52,140
+当活跃生命周期结束的时候  UI的交互可以暂停
 So, most updates through a UI, can be paused when this lifetime ends,
 
 12
 00:00:52,140 --> 00:00:57,400
+这是通过onPause信号来传达的  但是你会看到  这个Activity还是可见的
 which is announced by onPause. But as you see, the app is still visible, so
 
 13
 00:00:57,400 --> 00:01:01,650
+所以你不能暂停任何跟你的UI显示相关的进程
 you shouldn't pause any processes that are drawing your UI. The visible
 
 14
 00:01:01,650 --> 00:01:05,459
+可视生命周期表示你的应用是可见的全程
 lifetime on the other hand continues whenever the app is at all visible and
 
 15
 00:01:05,459 --> 00:01:11,112
+当你的应用被别的应用遮住时  可视生命周期结束  像这样
 ends as soon as it's completely obscured by another app. Like this.
+
 
 16
 00:01:11,112 --> 00:01:16,844
+所以  一旦你看到结束信号产生时  应用转到后台 
 [SOUND] At this point, our app is moved to the background.
 
 17
 00:01:16,844 --> 00:01:22,000
+用户就完全看不到你的应用了
 So when you see on stop, you know the user can't see your app at all. So, while
 
 18
 00:01:22,000 --> 00:01:26,410
+当你的程序运行时  创建onCreate和销毁onDestroy大多数时候只会被调用一次
 OnCreate and OnDestroy will be called at most once, each time your app is run,
 
 19
 00:01:26,410 --> 00:01:29,740
+但是这些事件会被调用多次
 these handlers are likely to be called many times, while the app is running.
 
 20
 00:01:29,740 --> 00:01:34,310
+这里就是不同的地方了  基本上所有的平台
 Now, this is where things get a little different. On almost al platforms,
 
 21
 00:01:34,310 --> 00:01:38,260
+应用的生命周期都是可预测的  具体来说就是  你启动一个程序
 app life cycles are deterministic. Generally, you'll start a program and
 
 22
 00:01:38,260 --> 00:01:42,140
+它持续的执行  知道程序结束或者用户点击取消
 it'll keep running, until it either completes or the user cancels it. You look
 
 23
 00:01:42,140 --> 00:01:45,660
+你可以参考传统的桌面开发  你的程序一直保持运行  直到
 at traditional desktop development that means your app keeps running until your
 
 24
 00:01:45,660 --> 00:01:50,280
+用户在文件菜单中点停止或者退出  这时你可以释放资源
 user chooses quit or exit from the file menu. At that point you can say stay and
 
 25
 00:01:50,280 --> 00:01:55,350
+但是  Android的生命周期不同
 free resources. But as we know on Android life cycles work a little differently.
 
 26
 00:01:55,350 --> 00:01:58,010
+让我们看看Android的生命周期到底是怎么工作的
 So, let's take a closer look at exactly how that works now.
 

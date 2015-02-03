@@ -1,8 +1,10 @@
 1
 00:00:36,300 --> 00:00:39,850
+我们的目标是即使在网络非常慢或者无法连接网络的时候
 >> The goal is to ensure your app provides a seamless, efficient experience for
 
 2
 00:00:39,850 --> 00:00:42,890
+你的应用依然能够给使用者提供不间断的  响应快速的应用体验
 your users, even when networks may be slow or unavailable
 

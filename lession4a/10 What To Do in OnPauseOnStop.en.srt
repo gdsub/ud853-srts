@@ -1,24 +1,30 @@
 1
 00:00:00,760 --> 00:00:05,350
+对于应用来说  系统认为它是低优先级也是一个信号
 It's also a signal to app that the system now considers it alert priority. Given
 
 2
 00:00:05,350 --> 00:00:09,380
+考虑到可用的有限的资源  我们需要响应并且减少我们占用的系统资源
 the limited resources available, we should respond by reducing our use of system
 
 3
 00:00:09,380 --> 00:00:13,890
+特别是那些会持续消耗电量的操作
 resources. Particularly, anything that could continue draining the battery.
 
 4
 00:00:13,890 --> 00:00:18,500
+这包括那些需要持续更新UI的操作
 That includes anything that's being used exclusively to update the UI. So, what
 
 5
 00:00:18,500 --> 00:00:23,120
+那么当收到暂停或者停止信号时  哪些监听器或者更新需要被暂停或者断开连接呢
 are some examples of listeners or updates that should be paused or disconnected
 
 6
 00:00:23,120 --> 00:00:28,110
+请把你的答案写在下面的文本框中
 when onpause or onstop are received? Put your answer in the text box below.
 

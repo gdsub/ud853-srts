@@ -1,32 +1,40 @@
 1
 00:00:00,590 --> 00:00:02,340
+一些好的回答包括
 Some good examples of answers include,
 
 2
 00:00:02,340 --> 00:00:06,990
+传感器监听器  位置更新  动态广播接收
 sensor listeners, location updates, dynamic broadcast receivers. Or
 
 3
 00:00:06,990 --> 00:00:11,940
+和游戏驱动  那些在你的Activity被暂停时都需要保持运行的任务
 games physics engines. Any task that your application needs to keep happening,
 
 4
 00:00:11,940 --> 00:00:15,580
+是不能放在Activity中的
 even when your activity is paused. Shouldn't really happen within an activity at
 
 5
 00:00:15,580 --> 00:00:20,680
+我们将在第六节学习解决这个问题的方法
 all. We'll have a look at some solutions to that problem in lesson six.
 
 6
 00:00:20,680 --> 00:00:22,700
+请记住  当你的Activity处于暂停状态时
 Keep in mind that when you're activity is paused,
 
 7
 00:00:22,700 --> 00:00:28,140
+它还是可见的  它只是被遮住了一部分  通常是被对话框遮住
 it's still visible. It's just obscured by something else, usually a dialog box.
 
 8
 00:00:28,140 --> 00:00:32,990
+并没有停止  所以不要在暂停的时候停止绘制你的UI
 But it's not stopped. So, don't stop drawing your UI when you receive on pause
 
