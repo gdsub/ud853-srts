@@ -1,0 +1,48 @@
+1
+00:00:00,210 --> 00:00:02,969
+Once the user's location preference has been stored. When do
+当用户的location preference 被存储后
+
+2
+00:00:02,969 --> 00:00:06,340
+we make use of it? We need the preferred location on
+我们什么时候该用好它呢？我们需要首选地理位置用来
+
+3
+00:00:06,340 --> 00:00:10,380
+we query the weather service. Luckily, in lesson 2, we
+查询气象服务。幸运的是，在第二节中，我们
+
+4
+00:00:10,380 --> 00:00:14,390
+modified fetch weather task to accept a location parameter. We hard
+修改了天气去接受地理位置参数。
+
+5
+00:00:14,390 --> 00:00:16,550
+coded it to be the Mountain View zip code. But
+我们将它硬解码为Mountain View zip code
+
+6
+00:00:16,550 --> 00:00:19,960
+now we should use the location stored in shared preferences. We
+但是现在我们需要使用存储在SharePreference中的地理位置
+7
+00:00:19,960 --> 00:00:22,570
+haven't explicitly shown you how to do this. So you might
+我们并没有明确地向你展示如何实现，所以你可能需要
+
+8
+00:00:22,570 --> 00:00:25,210
+need to do some digging around. On the Ander developer site
+查阅资料，可以在Android developer的网址上
+
+9
+00:00:25,210 --> 00:00:27,550
+to figure out how to do it. Once
+弄清楚如何实现它。当你
+
+10
+00:00:27,550 --> 00:00:29,790
+you've made the change, check the box to continue.
+完成了这个改变后，勾选这个方框并继续
