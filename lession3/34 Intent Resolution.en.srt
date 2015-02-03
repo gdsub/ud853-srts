@@ -1,64 +1,79 @@
 1
 00:00:00,330 --> 00:00:02,330
 So, how did the system know that the Maps
+所以，系统是如何知道地图软件能够接受它的指令的呢?
 
 2
 00:00:02,330 --> 00:00:05,564
-app could handle this Intent? The activity within the
+app could handle this Intent? The activity within the地图软件的每个活动
 
 3
 00:00:05,564 --> 00:00:09,720
 Maps app included an intent filter like this one
+都会包含一个类似载货单接口的指令过滤器。
 
 4
 00:00:09,720 --> 00:00:13,140
 within its manifest entry. It indicates that the Maps
+在数据库里有一个地图方案，它指明了
 
 5
 00:00:13,140 --> 00:00:17,100
 app is capable of performing this view action on
+地图软件能执行的预行为
 
 6
 00:00:17,100 --> 00:00:19,980
 all data which has a geo scheme. You can
+针对你的活动，你可以
 
 7
 00:00:19,980 --> 00:00:22,250
 use intent filters for your activities to define the
+使用指令过滤器定义一个它们能胜任的行为
 
 8
 00:00:22,250 --> 00:00:25,470
 actions they're capable of performing, and optionally, the kind
+但任意地，这类数据
 
 9
 00:00:25,470 --> 00:00:27,700
 of data that they can perform it on. So,
+要能顺利执行。所以
 
 10
 00:00:27,700 --> 00:00:30,194
 when you use an implicit intent to address or
+当你使用一个暗示指令去写地址或者
 
 11
 00:00:30,194 --> 00:00:32,630
 request to start an activity, much like you did
+请求开始一个活动，更多就像你和凯瑟琳以及开放天气地图域名链接在做这件事一样，
 
 12
 00:00:32,630 --> 00:00:37,600
 with Catherine and the openweathermap.org link, Android resolves this request
+安卓解决这类请求的方法
 
 13
 00:00:37,600 --> 00:00:40,850
 by checking the intent filters of every activity that's
+是通过检查每个活动的指令过滤器
 
 14
 00:00:40,850 --> 00:00:44,150
 installed on the device until it finds the best possible
+直到这些被安置在设备上的活动找到可能的最佳
 
 15
 00:00:44,150 --> 00:00:47,880
 match. If multiple activities match, as in the case
+匹配。如果有多种匹配方式，就根据网址域名的实际情形，
 
 16
 00:00:47,880 --> 00:00:50,570
 with the web url, the user is given a choice.
+使用者有选择的机会。
 
