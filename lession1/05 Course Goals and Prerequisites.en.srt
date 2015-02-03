@@ -35,7 +35,7 @@ build your own final project.
 
 8
 00:00:26,452 --> 00:00:30,939
-这里我希望你已经理会面向对象编程的思想
+这里我希望你已经理解面向对象编程的思想
 We're expecting you to already be familiar with object-oriented programming, and
 
 9
@@ -150,7 +150,7 @@ Join me here, at the very heart of Android, at the end of this lesson,
 
 31
 00:01:42,620 --> 00:01:45,680
-就能知道这些雕塑的代表着什么
+就能知道这些雕塑代表着什么
 to find out how this sculpture garden of tasty treats,
 
 32
