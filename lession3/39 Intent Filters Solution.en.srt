@@ -1,32 +1,40 @@
 1
 00:00:00,260 --> 00:00:03,220
+你可以注册一个事件监听器侦听电源连接
 You could register a listener for the action power connected
 
 2
 00:00:03,220 --> 00:00:06,630
+应该在你的列表式接收器中去做
 event and you should do that within your manifest. That
 
 3
 00:00:06,630 --> 00:00:08,420
+这样  它可以被叫做一旦启动你的应用程序
 way, it can be called to start your app once
 
 4
 00:00:08,420 --> 00:00:11,190
+设备会开始充电  甚至是从上次你使用应用的地方
 the device is getting charged, even if it's been terminated since
 
 5
 00:00:11,190 --> 00:00:13,200
+在被终止的地方继续使用
 the last time you were using it. You can use
 
 6
 00:00:13,200 --> 00:00:15,830
+你可以使用一个类似的方法来延迟试图发送数据到设备
 a similar approach to delay trying to send data until the
 
 7
 00:00:15,830 --> 00:00:19,270
+直到设备是在连网状态下的  他是否会在当你连接到
 device has internet connectivity. Would it change behavior of the
 
 8
 00:00:19,270 --> 00:00:21,950
+车用底座和桌面底座时的行为改变用户体验
 user experience when you're connected to a car or desk dock?
 
