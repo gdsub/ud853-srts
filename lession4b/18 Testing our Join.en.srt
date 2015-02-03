@@ -1,96 +1,96 @@
 1
 00:00:00,260 --> 00:00:02,610
 Now we have to test this. Let's go back to
-
+我们现在来测试。 让我们再次调回
 2
 00:00:02,610 --> 00:00:05,930
 test provider once more. It'll be helpful to parameterize our tests
-
+测试提供者。 这会帮助我们来更多的提供
 3
 00:00:05,930 --> 00:00:10,510
 a little bit more, both for location and for date.
-
+地点和实际的测试参数。
 4
 00:00:10,510 --> 00:00:13,780
 All right, now that we've parameterized our tests, let's go back
-
+好的， 这样我们已经把参数输入了我们的测试方法，让我们一起回去
 5
 00:00:13,780 --> 00:00:16,840
 at looking into our insert read provider. For the weather,
-
+来观察我们的insert read provider。 对于天气的查询，
 6
 00:00:16,840 --> 00:00:20,740
 we're currently using the raw content URI to query. But we
-
+我们目前使用的时一个原始内容的URI来进行查询。 但是我们
 7
 00:00:20,740 --> 00:00:23,290
 can also query on additional data. By cutting and pasting
-
+可以同时通过日期查询。 通过来输入这些数值，
 8
 00:00:23,290 --> 00:00:26,130
 this text, we can try the text with different query parameters.
-
+我们可以试着用不同的查询参数来查询结果。 
 9
 00:00:26,130 --> 00:00:27,920
 We'll close the cursor because it's good
-
+我建议大家现在可以关闭光标提示， 这是一个很好的
 10
 00:00:27,920 --> 00:00:30,150
 practice. Now for our second weather query,
-
+练习机会哦。 现在对于我们第二个天气查询，
 11
 00:00:31,600 --> 00:00:32,720
 we're going to test the first of
-
+我们首先来测试我们的
 12
 00:00:32,720 --> 00:00:40,010
 our new URIs: WeatherEntry.buildweatherlocation and we can use
-
+新的URI： WeatherEntry.buildweatherlocation 同时我们要使用
 13
 00:00:40,010 --> 00:00:44,180
 our new task location parameter. Alright, let's
-
+新的任务地点参数。 好的， 我们来试着
 14
 00:00:44,180 --> 00:00:47,220
 try running this test. And our test
-
+运行这条测试。 测试显示通过。
 15
 00:00:47,220 --> 00:00:49,370
 passed. Alright. We're going to add one more
-
+很棒吧。 这时我们要来加多一点
 16
 00:00:49,370 --> 00:00:51,580
 test with a slight variation on the query
-
+测试， 这些测试是用来查询
 17
 00:00:51,580 --> 00:00:53,340
 using build weather location with start
-
+天气地点和开始日期的查询
 18
 00:00:53,340 --> 00:00:55,420
 date, instead. So, we're going to use test
-
+这样一来，我们将会来测试我们的地点就
 19
 00:00:55,420 --> 00:01:00,910
 location as well as test date. And now, let's run those tests. And
-
+和我们测试日期一样了。 做完这些我们来运行下。
 20
 00:01:00,910 --> 00:01:02,890
 our tests pass. Now, sometimes it's
-
+同样，测试通过。是时候来
 21
 00:01:02,890 --> 00:01:06,020
 useful to actually demonstrate a test failure.
-
+写一些参数来说明我们的测试是可以失败的了。
 22
 00:01:06,020 --> 00:01:09,420
 Let's put in a date that's certainly going to fail, 20150624. We would
-
+我们放一些能够导致测试失败的日期参数，20150624。 我们可以预料
 23
 00:01:13,560 --> 00:01:19,360
 expect this test to fail. Let's try it and indeed it fails. So
-
+这个参数没法通过测试， 看在运行之后果然失败啦。
 24
 00:01:19,360 --> 00:01:22,050
 we're pretty sure that our tests are actually doing what we expect them to.
-
+这样我们更能确定我们的测试是和我们的预期是吻合的
