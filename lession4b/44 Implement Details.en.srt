@@ -1,11 +1,11 @@
 1
 00:00:00,460 --> 00:00:05,170
 Now for the big quiz. In all seriousness, this is the most
-现在我们来一个终极测试。 只是一个非常严肃，而且
+现在我们来一个终极测试。 这是一个非常严肃，而且
 2
 00:00:05,170 --> 00:00:09,880
 complicated exercise I've given you so far this lesson. I want you
-很复杂的锻炼，需要你所学的所有只是。 你要做的就是
+很复杂的测试，需要用到你所学的所有知识。 你要做的就是
 3
 00:00:09,880 --> 00:00:14,540
 to implement the details view using the cursor loader and multiple text view
@@ -21,7 +21,7 @@ not adapters. What does this mean? Well, it makes sense. Your detail
 6
 00:00:25,660 --> 00:00:27,850
 view does not contain a list so you don't
-view 不能包涵一个列表从而你不需要去
+view 不能包涵一个列表，你不需要去
 7
 00:00:27,850 --> 00:00:30,010
 need to use an adapter, but you can still
@@ -45,7 +45,7 @@ into your intent. The date is the important thing to
 12
 00:00:44,760 --> 00:00:46,860
 the detail you need to have passed into it
-细节数据党你需要输入的时候会提供
+细节数据当你需要输入的时候会提供
 13
 00:00:46,860 --> 00:00:50,670
 to properly query the content provider. Now remember, you can
