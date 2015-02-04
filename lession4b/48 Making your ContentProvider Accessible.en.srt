@@ -1,68 +1,85 @@
 1
 00:00:00,310 --> 00:00:03,480
+µ±Äã´òËãÈÃÄãÓ¦ÓÃµÄcontent providerÄÚÈİÌá¹©¿ÉÒÔÔÚµÚÈı·½µÄÓ¦ÓÃÊ±  ÉÏÊö·½·¨
 It's actually quite straightforward to make your apps content provider
-å½“ä½ æ‰“ç®—è®©ä½ åº”ç”¨çš„content provider(å†…å®¹æä¾›)å¯ä»¥åœ¨ç¬¬ä¸‰æ–¹çš„åº”ç”¨æ—¶ï¼Œä¸Šè¿°æ–¹æ³•
+
 2
 00:00:03,480 --> 00:00:06,880
+ÊÇºÜÖ±½ÓµÄ  ¹Ø¼üÊÇĞèÒªĞŞ¸Ä
 available to third party apps. The key is to modify
-æ˜¯å¾ˆç›´æ¥çš„ã€‚ å…³é”®æ˜¯éœ€è¦ä¿®æ”¹
+
 3
 00:00:06,880 --> 00:00:10,640
+ÔÚmanifestÎÄ¼şÖĞµÄexport flagÊä³öÖ¸±ê³ÉtureÕıÖµ
 the export flag in the manifest entry here to true.
-åœ¨manifestæ–‡ä»¶ä¸­çš„export flagï¼ˆè¾“å‡ºæŒ‡æ ‡ï¼‰æˆ ture(æ­£å€¼)
+
 4
 00:00:10,640 --> 00:00:14,174
+¾ÍÕâÃ´¼òµ¥  ÈÎºÎÒ»¸öÓ¦ÓÃ»áÖªµÀÄÚÈİURI
 As simple as that. Any app that knows the content URI
-å°±è¿™ä¹ˆç®€å•ã€‚ä»»ä½•ä¸€ä¸ªåº”ç”¨ä¼šçŸ¥é“å†…å®¹URI
+
 5
 00:00:14,174 --> 00:00:16,667
+¿ÉÒÔÊ¹ÓÃÄÄĞ©ÄÚÈİÀ´½â¾ö»òÕß·ÃÎÊËü  Õâ¸úÄã×öµÄÊ±
 can use the content resolve or access it the same
-å¯ä»¥ä½¿ç”¨å“ªäº›å†…å®¹æ¥è§£å†³æˆ–è€…è®¿é—®å®ƒã€‚è¿™è·Ÿä½ åšçš„æ—¶
+
 6
 00:00:16,667 --> 00:00:19,480
+Ò»ÑùµÄ  ÏÖÔÚ¹ØÓÚÄãÕâĞ©Êı¾İµÄÃô¸Ğ³Ì¶È
 that you do. Now depending on the sensitivity of your
-ä¸€æ ·çš„ã€‚ ç°åœ¨å…³äºä½ è¿™äº›æ•°æ®çš„æ•æ„Ÿç¨‹åº¦
+
 7
 00:00:19,480 --> 00:00:22,660
+ÄãÏëÒª¶ÔÕâĞ©Êı¾İÔÚ·ÃÎÊ»òÕßĞŞ¸ÄÊ±
 data, you may want to protect it by requiring specific
-ä½ æƒ³è¦å¯¹è¿™äº›æ•°æ®åœ¨è®¿é—®æˆ–è€…ä¿®æ”¹æ—¶
+
 8
 00:00:22,660 --> 00:00:25,440
+½øĞĞ·Ö¼¶¹ÜÀí  ËùÒÔÈç¹ûÄãÏëÕâÃ´×ö
 permissions to read or write to the database. So if you
-è¿›è¡Œåˆ†çº§ç®¡ç†ã€‚æ‰€ä»¥å¦‚æœä½ æƒ³è¿™ä¹ˆåš
+
 9
 00:00:25,440 --> 00:00:28,080
+Äã¿ÉÒÔ¶ÔÄã×Ô¼º´´½¨µÄ»òÕßµÚÈı·½µÄÓ¦ÓÃÉèÖÃ
 want to, you can effectively limit access only to other
-ä½ å¯ä»¥å¯¹ä½ è‡ªå·±åˆ›å»ºçš„æˆ–è€…ç¬¬ä¸‰æ–¹çš„åº”ç”¨è®¾ç½®
+
 10
 00:00:28,080 --> 00:00:30,620
+·ÃÎÊÏŞÖÆ  ÕâÑù¾Í¿ÉÒÔÀ´ÕÆÎÕ
 apps you have created, or to third party apps, which know
-è®¿é—®é™åˆ¶ï¼Œè¿™æ ·å°±å¯ä»¥æ¥æŒæ¡
+
 11
 00:00:30,620 --> 00:00:34,270
+·ÃÎÊÈ¨ÏŞÁË  ÏÂÒ»²½ÄãĞèÒª×öµÄÊÇ
 the permissions and users agree to. Then you just need to
-è®¿é—®æƒé™äº†ã€‚ä¸‹ä¸€æ­¥ä½ éœ€è¦åšçš„æ˜¯
+
 12
 00:00:34,270 --> 00:00:38,050
+¹«¿ªÕâĞ©·ÃÎÊÈ¨ÏŞµÄºÏÔ¼  Í¨¹ıºÍÄÚÈİÌá¹©ÕßµÄ»¥¶¯  ÓÈÆäÊÇ
 publish this contract, to interact with the content provider, specifically the
-å…¬å¼€è¿™äº›è®¿é—®æƒé™çš„åˆçº¦ï¼Œ é€šè¿‡å’Œå†…å®¹æä¾›è€…çš„äº’åŠ¨ï¼Œå°¤å…¶æ˜¯
+
 13
 00:00:38,050 --> 00:00:41,590
+URI ºÍ Êı¾İÁĞµÄÃû³Æ  ÕâÑùÄãÒÑ¾­ÎªÄãµÄÊı¾İ´´½¨ÁËÒ»¸ö
 URI and column names. And you've created a simple API
-URI å’Œ æ•°æ®åˆ—çš„åç§°ã€‚è¿™æ ·ä½ å·²ç»ä¸ºä½ çš„æ•°æ®åˆ›å»ºäº†ä¸€ä¸ª
+
 14
 00:00:41,590 --> 00:00:44,120
+¼òµ¥µÄAPI  ¾ÍÕâÃ´ÈİÒ×  ÄãÒÑ¾­ÎªÄã×Ô¼ºµÄÊı¾İ´´½¨ÁËÕâ¸ö
 for all of your data. And as simple as that, you've
-ç®€å•çš„APIã€‚å°±è¿™ä¹ˆå®¹æ˜“ï¼Œä½ å·²ç»ä¸ºä½ è‡ªå·±çš„æ•°æ®åˆ›å»ºäº†è¿™ä¸ª
+
 15
 00:00:44,120 --> 00:00:47,890
+ĞÂµÄAPI  Õâ¸ö·½·¨ÆäÊµºÍºÜ¶ànative content providers±¾µØÄÚÈİÌá¹©Õß
 created a new API, just for your data. This is exactly
-æ–°çš„APIã€‚è¿™ä¸ªæ–¹æ³•å…¶å®å’Œå¾ˆå¤šative content providersï¼ˆæœ¬åœ°å†…å®¹æä¾›è€…ï¼‰
+
 16
 00:00:47,890 --> 00:00:50,910
+ËùÊ¹ÓÃµÄ·½·¨ÊÇÒ»ÑùµÄ  
 the same approach, used by many of the native content providers,
-æ‰€ä½¿ç”¨çš„æ–¹æ³•æ˜¯ä¸€æ ·çš„ã€‚
+
 17
 00:00:50,910 --> 00:00:54,460
+°üÀ¨ÁËContacts DatabaseºÏÔ¼Êı¾İ¿â  Media StoreÃ½Ìå¿â  ÈÕÀúºÍµ÷ÓÃÈÕÖ¾
 including the Contacts Database, Media Store, Calendar and Call Log.
-åŒ…æ‹¬äº†Contacts Database(åˆçº¦æ•°æ®åº“)ï¼ŒMedia Store(åª’ä½“åº“),æ—¥å†å’Œè°ƒç”¨æ—¥å¿—.
+
