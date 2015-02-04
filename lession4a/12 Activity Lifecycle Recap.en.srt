@@ -1,11 +1,11 @@
 1
 00:00:00,470 --> 00:00:05,240
-对于Sunshine这个程序的目的来说  这些信息只是理论上的
+对于Sunshine这个程序来说  这些信息只是理论上的
 For the purposes of the Sunshine app, this information is purely theoretical.
 
 2
 00:00:05,240 --> 00:00:07,700
-事实上  当你需要加入一些特殊的操作  如传感器监听器
+事实上  当你需要加入一些特殊的操作  如传感监听器
 In fact, you'll really only need to consider this later,
 
 3
@@ -30,7 +30,7 @@ the way the system handles exiting your app, when it needs its resources.
 
 7
 00:00:22,110 --> 00:00:26,380
-你也应该明白为什么退出或者停止键在Android应用中其实
+你也应该明白为什么退出或者停止键在Android应用中 其实
 You should hopefully understand why Exit or Quit buttons in Android apps serve
 
 8
@@ -45,7 +45,7 @@ it will get torn down instantly. That's actually exactly what happens when
 
 10
 00:00:35,070 --> 00:00:37,290
-实际上就是如上所述的行为体现
+实际上表现的就是上述的行为
 you use a simple hits back from within their activity.
 
 11

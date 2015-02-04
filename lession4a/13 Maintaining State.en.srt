@@ -15,12 +15,12 @@ its chance to be the star when called on. So whenever the user switches back to
 
 4
 00:00:11,670 --> 00:00:14,700
-你必须要显示出跟离开时一样的UI界面
+无论它是否曾被系统终止过
 your app, whether or not the system is kilted in the interim,
 
 5
 00:00:14,700 --> 00:00:18,780
-无论它是否曾被系统终止过
+你必须要显示出跟离开时一样的UI界面
 they should be presented with the same UI they had when they left. To help,
 
 6
@@ -35,7 +35,7 @@ circumstances. On save instance data is called immediately before on pause. So
 
 8
 00:00:27,030 --> 00:00:33,450
-保存实例数据函数会被立即调用
+保存实例数据的函数会被立即调用
 as soon as your app is no longer active, an on
 
 9
@@ -45,7 +45,7 @@ restore instance data is called immediately after on create, but
 
 10
 00:00:37,630 --> 00:00:41,220
-在重新创建时  恢复实例数据函数会被立即调用
+在重新创建时  恢复实例数据的函数会被立即调用
 only if the app is being restarted after having been terminated by the system.
 
 11
@@ -80,6 +80,6 @@ the resource management happening under the covers. That's enough of the why,
 
 17
 00:01:05,880 --> 00:01:08,910
-让Dan给大家介绍一下如何把这些理论与实际结合起来
+让Dan给大家介绍一下 如何把这些理论与实际结合起来
 let's go back to Dan and see how to put this theory into practice.
 

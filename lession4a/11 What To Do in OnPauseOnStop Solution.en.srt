@@ -1,11 +1,11 @@
 1
 00:00:00,590 --> 00:00:02,340
-一些好的回答包括
+一些好的回答 包括
 Some good examples of answers include,
 
 2
 00:00:02,340 --> 00:00:06,990
-传感器监听器  位置更新  动态广播接收
+传感器监听  位置更新  动态广播接收
 sensor listeners, location updates, dynamic broadcast receivers. Or
 
 3
@@ -20,7 +20,7 @@ even when your activity is paused. Shouldn't really happen within an activity at
 
 5
 00:00:15,580 --> 00:00:20,680
-我们将在第六节学习解决这个问题的方法
+我们将在第六节课中学习 如何解决这个问题
 all. We'll have a look at some solutions to that problem in lesson six.
 
 6
@@ -30,7 +30,7 @@ Keep in mind that when you're activity is paused,
 
 7
 00:00:22,700 --> 00:00:28,140
-它还是可见的  它只是被遮住了一部分  通常是被对话框遮住
+它还是可见的  只是被遮住了一部分  通常是被对话框遮住
 it's still visible. It's just obscured by something else, usually a dialog box.
 
 8
