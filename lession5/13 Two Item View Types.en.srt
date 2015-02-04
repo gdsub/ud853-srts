@@ -1,112 +1,140 @@
 1
 00:00:00,110 --> 00:00:03,070
+一旦forecast adapter能够正常工作，我们就要修改forecast adapter
 Once a forecast adapter works, we want to modify it so
 
 2
 00:00:03,070 --> 00:00:05,420
+使它能返回一个today列表里第二表项的View类型
 that it can return a second item view type for the
 
 3
 00:00:05,420 --> 00:00:09,377
+通常在继承的子类中，getViewTypeCount方法会返回1种类型
 today list item. Normally in the sub class, getViewTypeCount return to
 
 4
 00:00:09,377 --> 00:00:12,033
+但是我们会重写这个方法，使它针对两种不同的布局而返回2种类型
 one, but we're going to override it so it returns two for
 
 5
 00:00:12,033 --> 00:00:14,930
+但是它怎么知道什么时候
 the two different layouts. But how does it know when to
 
 6
 00:00:14,930 --> 00:00:19,180
+返回什么类型呢？ 所以，我们要重写getItemViewType方法的时候
 use one there or the other? Well, we override getItemViewType so
 
 7
 00:00:19,180 --> 00:00:21,530
+如果当前位置处于0，
 that when the position in the list is zero, then we
 
 8
 00:00:21,530 --> 00:00:25,790
+那么我们就认为它是TODAY类型的。反之，就是FUTURE_DAY类型的
 say that it's the TODAY view type. Otherwise, it's the FUTURE_DAY
 
 9
 00:00:25,790 --> 00:00:28,430
+这两种类型在之前就已经声明了。
 view type. These two view types are declared up
 
 10
 00:00:28,430 --> 00:00:32,659
+它们仅仅是通过整形数值来代表View的类型。
 above. These are just integer representations of the view type.
 
 11
 00:00:32,659 --> 00:00:35,320
+返回值范围必须从0开始
 The numbering has to start at zero because these values
 
 12
 00:00:35,320 --> 00:00:38,880
+因为位置的数值必须小于getViewTypeCount的返回值
 can not be greater than or equal to getViewTypeCount. So,
 
 13
 00:00:38,880 --> 00:00:40,870
+所以这里合法的返回值只有0和1
 the possible values for us are zero and one,
 
 14
 00:00:40,870 --> 00:00:43,435
+继而可知0对应view_type_today
 so that we know that zero always maps to the
 
 15
 00:00:43,435 --> 00:00:47,780
+而1对应view_type_future_day
 view_type_today and that one always maps to view_type_future_day. We're going to
 
 16
 00:00:47,780 --> 00:00:50,790
+我们会在新的View方法里用到这组对应关系
 use this information in the new View method. Remember that
 
 17
 00:00:50,790 --> 00:00:55,670
+还记得吗，我们之前已经加载了list_item_forecast.xml。 
 previously we inflated the list_item_forecast.xml. Now, we're going to use
 
 18
 00:00:55,670 --> 00:00:58,280
+那么现在就是用getItemViewType方法来确定该用哪个布局
 the getItemViewType to determine whether we should use one
 
 19
 00:00:58,280 --> 00:01:00,210
+在“to do”中来实现这个操作。
 layout or the other. Fill in the to do
 
 20
 00:01:00,210 --> 00:01:04,170
+LayoutId指资源ID，
 to address this behavior. LayoutId refers to resource ID,
 
 21
 00:01:04,170 --> 00:01:07,890
+它的表现形式是R.layout.某项资源
 which is in the form of r.layout.something. We don't
 
 22
 00:01:07,890 --> 00:01:09,780
+我们无需重构bindView方法
 have to reform the bindView method because it will
 
 23
 00:01:09,780 --> 00:01:12,580
+它自己会进行绑定操作。因为today布局中该资源的ID和future布局中
 continue to work. That's because the IDs are the
 
 24
 00:01:12,580 --> 00:01:16,040
+该资源的ID是一样的。
 same between the today layout and the future day layout.
 
 25
 00:01:16,040 --> 00:01:17,490
+当你完成后，你的程序就会是这个样子滴。
 This is what your app should look like when you're
 
 26
 00:01:17,490 --> 00:01:20,020
+today的布局和其它日子的布局是不同的。
 done. The today layout is different from the rest of the
 
 27
 00:01:20,020 --> 00:01:22,760
+自己动手试试看！把上面这些修改添加到你的程序里，
 days. Go ahead and make these changes in your app and
 
 28
 00:01:22,760 --> 00:01:25,400
+并完成To Do里的工作。 完成后在方格里打钩。
 then finish the To Do. Check this box when you're done.
 
