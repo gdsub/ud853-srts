@@ -1,68 +1,68 @@
 1
 00:00:00,310 --> 00:00:03,480
 It's actually quite straightforward to make your apps content provider
-
+当你打算让你应用的content provider(内容提供)可以在第三方的应用时，上述方法
 2
 00:00:03,480 --> 00:00:06,880
 available to third party apps. The key is to modify
-
+是很直接的。 关键是需要修改
 3
 00:00:06,880 --> 00:00:10,640
 the export flag in the manifest entry here to true.
-
+在manifest文件中的export flag（输出指标）成 ture(正值)
 4
 00:00:10,640 --> 00:00:14,174
 As simple as that. Any app that knows the content URI
-
+就这么简单。任何一个应用会知道内容URI
 5
 00:00:14,174 --> 00:00:16,667
 can use the content resolve or access it the same
-
+可以使用哪些内容来解决或者访问它。这跟你做的时
 6
 00:00:16,667 --> 00:00:19,480
 that you do. Now depending on the sensitivity of your
-
+一样的。 现在关于你这些数据的敏感程度
 7
 00:00:19,480 --> 00:00:22,660
 data, you may want to protect it by requiring specific
-
+你想要对这些数据在访问或者修改时
 8
 00:00:22,660 --> 00:00:25,440
 permissions to read or write to the database. So if you
-
+进行分级管理。所以如果你想这么做
 9
 00:00:25,440 --> 00:00:28,080
 want to, you can effectively limit access only to other
-
+你可以对你自己创建的或者第三方的应用设置
 10
 00:00:28,080 --> 00:00:30,620
 apps you have created, or to third party apps, which know
-
+访问限制，这样就可以来掌握
 11
 00:00:30,620 --> 00:00:34,270
 the permissions and users agree to. Then you just need to
-
+访问权限了。下一步你需要做的是
 12
 00:00:34,270 --> 00:00:38,050
 publish this contract, to interact with the content provider, specifically the
-
+公开这些访问权限的合约， 通过和内容提供者的互动，尤其是
 13
 00:00:38,050 --> 00:00:41,590
 URI and column names. And you've created a simple API
-
+URI 和 数据列的名称。这样你已经为你的数据创建了一个
 14
 00:00:41,590 --> 00:00:44,120
 for all of your data. And as simple as that, you've
-
+简单的API。就这么容易，你已经为你自己的数据创建了这个
 15
 00:00:44,120 --> 00:00:47,890
 created a new API, just for your data. This is exactly
-
+新的API。这个方法其实和很多ative content providers（本地内容提供者）
 16
 00:00:47,890 --> 00:00:50,910
 the same approach, used by many of the native content providers,
-
+所使用的方法是一样的。
 17
 00:00:50,910 --> 00:00:54,460
 including the Contacts Database, Media Store, Calendar and Call Log.
-
+包括了Contacts Database(合约数据库)，Media Store(媒体库),日历和调用日志.
