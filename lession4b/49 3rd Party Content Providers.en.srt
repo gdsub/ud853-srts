@@ -1,16 +1,20 @@
-1
+﻿1
 00:00:00,720 --> 00:00:02,870
+联系讲师的笔记，
 Explore the Native Content Providers linked to in
 
 2
 00:00:02,870 --> 00:00:05,320
+思考下面的本地内容提供者的问题。
 the instructor notes below. What's the name for the
 
 3
 00:00:05,320 --> 00:00:08,130
+用于查找内容URI来在内部数据存储中访问
 static constant used to find the content URI
 
 4
 00:00:08,130 --> 00:00:11,600
+音频存储的静态常量的名字是什么？
 for accessing audio stored on the internal data store?
 

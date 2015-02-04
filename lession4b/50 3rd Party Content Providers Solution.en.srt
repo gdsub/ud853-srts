@@ -1,16 +1,20 @@
-1
+﻿1
 00:00:00,090 --> 00:00:02,500
+有很多不同的内容提供者可以
 There's a number of different content providers available to
 
 2
 00:00:02,500 --> 00:00:06,030
+在不同的位置访问不同类型的媒体存储
 access different kinds of media stored in different locations.
 
 3
 00:00:06,030 --> 00:00:10,095
+在内部数据存储里访问音频媒体存储，可以使用
 To access audio media stored in the internal data store, you'd use the
 
 4
 00:00:10,095 --> 00:00:16,370
+INTERNAL_CONTENT_URI MediaStore.Audio中提供的媒体类
 INTERNAL_CONTENT_URI provided in the MediaStore.Audio.Media class.
 
