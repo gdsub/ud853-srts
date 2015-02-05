@@ -1,36 +1,45 @@
-1
+﻿1
 00:00:00,340 --> 00:00:03,015
+在平板上，这里有一个bug。当你选择了
 On the tablet, there's a bug where if you select an item near
 
 2
 00:00:03,015 --> 00:00:05,952
+一个靠近列表底部的项目，然后旋转设备
 the bottom of the list and then you rotate the device, the selected
 
 3
 00:00:05,952 --> 00:00:08,888
+被选项不会重新被滚动到可见，你需要手动管理一下列表
 item is no longer scrolled into view. You have to manually scroll the
 
 4
 00:00:08,888 --> 00:00:12,270
+这意味着我们要存储被选项的位置
 list. That means we should store the position of the selected item in
 
 5
 00:00:12,270 --> 00:00:14,430
+存入到savedInstanceState Bundle里
 the savedInstanceState Bundle. If the app
 
 6
 00:00:14,430 --> 00:00:16,120
+如果应用被杀掉了，当它重载的时候
 is killed, when it's restored, we should
 
 7
 00:00:16,120 --> 00:00:19,030
+我们要从Bundle对象里读取这个位置信息。如果列表在那时
 read the position back from the Bundle. If the list isn't populated at
 
 8
 00:00:19,030 --> 00:00:22,220
+还没有被填充，我们应该等待onLoadFinished回调函数，
 that time, then we should wait for the onLoadFinished callback to use a
 
 9
 00:00:22,220 --> 00:00:25,400
+依靠位置信息滚动到被选项上。做完后在方框上标个√
 position to scroll to the selected item. Check these boxes when you're done.
 
