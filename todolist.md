@@ -1,3 +1,40 @@
+#20150204 已分配任务列表
+* @xiaorain：		5.17 ~ 20
+* @chenglu：		5.21 ~ 5.24
+* @blogjintao：		5.25 ~ 5.28
+* @EzioKissshot：		休息
+* @xiazdong：		5.56 ~ 5.59 待确认
+* @gejiaheng：		4.29 ~ 4.32 延期任务
+* @tingya：		4b.36 5.29 5.30 5.31
+* @shr1992：		5.32 ~ 5.35
+* @raylu1988：		5.36 ~ 5.39
+* @w437392342：		4b.10 4b.11 4b.13 4b.15 延期任务
+* @RonnSanji：		5.40 ~ 5.43
+* @LeopardWang：		5.44 ~ 5.47
+* @supersheep：		5.48 ~ 5.51
+* @xiaofans：		5.5 ~ 5.8 延期任务
+* stevens：		5.52 ~ 5.55
+
+
+#20150203 已分配任务列表
+* @publicloudapp：		检查/修改格式 4.1 ~ 4.20 / 润稿 4.1 ~ 4.10 / 修改格式 3.34 ~ 3.37
+* @xiaorain：		润稿 4.11 ~ 4.20
+* @chenglu：		病假休息
+* @blogjintao：		4b.31 ~ 4b.34
+* @EzioKissshot：		休息
+* @xiazdong：		休息
+* @gejiaheng：		4.29 ~ 4.32 延期任务
+* @tingya：		4b.35 ~ 4b.38
+* @shr1992：		5.9 ~ 5.12
+* @raylu1988：		4b.39 4b.41 4b.42 4b.43
+* @w437392342：		4b.10 4b.11 4b.13 4b.15 延期任务
+* @RonnSanji：		4b.44 4b.46 4b.47 4b.48
+* @LeopardWang：		4b.49 ~ 4b.52
+* @supersheep：		5.1 ~ 5.4
+* @xiaofans：		5.5 ~ 5.8
+* stevens：		5.13 ~ 5.16
+
+
 #20150202 TodoList
 
 * @publicloudapp：	检查/修改格式 4.1 ~ 4.20 / 润稿 4.1 ~ 4.10		

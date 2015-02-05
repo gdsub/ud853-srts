@@ -1,68 +1,85 @@
 1
 00:00:00,330 --> 00:00:04,098
+我们之前说到使用Sunshine指令去开启活动然后
 We've talked about using intents within Sunshine to start activities and send
 
 2
 00:00:04,098 --> 00:00:07,390
+在应用间发送数据  但如果你要群发信息给
 data between apps. But what if you want to broadcast a message to
 
 3
 00:00:07,390 --> 00:00:11,630
+多个应用呢  举个例子  系统要广播一个消息  说
 many apps? For example, the system will broadcast a message, saying that the
 
 4
 00:00:11,630 --> 00:00:16,180
+设备正在充电或者即将重启  我们的方法是
 device is charging or that it's just finished rebooting. To do that ourselves,
 
 5
 00:00:19,780 --> 00:00:24,350
+使用sendbroadcast的方法来广播一个指令  然后这些广播
 we use the SendBroadcast method to broadcast an intent. And those broadcasts
 
 6
 00:00:24,350 --> 00:00:26,900
+就会被广播接收者接受  通常
 are received by broadcast receivers, typically
 
 7
 00:00:26,900 --> 00:00:30,430
+就会简明指向接受者  使用指令
 referred to as simply, receivers. Using intent
 
 8
 00:00:30,430 --> 00:00:34,010
+过滤器  就像之前一样  它们会表明那些广播是自己
 filters, like the ones we saw earlier, they indicate which broadcast they're
 
 9
 00:00:34,010 --> 00:00:37,960
+感兴趣的  所以如果我们反馈的是之前的封装的暗喻
 interested in. So if we return to our envelope metaphor from earlier, in
 
 10
 00:00:41,070 --> 00:00:43,080
+在是广播指令的情况下  你的
 the case of a broadcast intent, your
 
 11
 00:00:43,080 --> 00:00:47,140
+封装会被写地址传递给任一
 envelope is basically addressed to any broadcast receiver
 
 12
 00:00:47,140 --> 00:00:49,170
+感兴趣知道会此事件的广播接收者
 that's interested in knowing that this event has
 
 13
 00:00:49,170 --> 00:00:51,940
+而它正是通过指令过滤器来实现的
 happened. And it does that using intent filter.
 
 14
 00:00:56,490 --> 00:00:59,670
+所以广播指令正是通过每一个
 So intents, which are broadcast, are transmitted to every
 
 15
 00:00:59,670 --> 00:01:01,980
+含有广播接受装置中的指令
 app with a broadcast receiver that has an intent
 
 16
 00:01:01,980 --> 00:01:05,349
+过滤器的广播接收作用来告诉系统你的想法  这真的让我觉得很有趣
 filter telling the system your ideas are intriguing to
 
 17
 00:01:05,349 --> 00:01:08,341
+然后我希望能分发给终端使用者
 me and I wish to subscribe to end user.
 

@@ -1,40 +1,50 @@
 1
 00:00:00,260 --> 00:00:04,260
+让我们开始为我们的数据和我们的模型之间定义一个协议。
 Let's start by defining a database contract between our data and
 
 2
 00:00:04,260 --> 00:00:08,580
-our model. A contract is an agreement between our data model and our
+这个协议是建立在我们的数据模型和
+our model. A contract is an agreement between our data model and
 
 3
 00:00:08,580 --> 00:00:13,680
+我们描述信息是怎么储存的观点之间的。它包含了所有将要显示在我们用户界面
 views describing how information is stored. It will contain all the fields that
 
 4
 00:00:13,680 --> 00:00:18,800
+的所有字段。那就让我们开始在Android Studio上编写代码吧。
 our user interface will display. Let's go into Android Studio to begin coding.
 
 5
 00:00:18,800 --> 00:00:24,340
+我们要在我们的工程中添加一个新的程序包，我们给他命为data，然后把数据模型放到这里边。
 We'll add a new package to our project named data to encapsulate the data model.
 
 6
 00:00:26,550 --> 00:00:30,320
+接下来，我们要新建一个合约类，让他储存我们的列信息。
 Next, we'll create a contract class to store our column information.
 
 7
 00:00:34,620 --> 00:00:38,830
+在我们合约类里的内部类将被用作定义表格。
 The inner classes within our contract class will be used to define tables.
 
 8
 00:00:38,830 --> 00:00:43,320
+每一个表格都将实现base columns因为通过base columns表述的列是很有用的。
 Each table will implement base columns because the columns represented by base
 
 9
 00:00:43,320 --> 00:00:48,820
+特别是这个ID列，必须是我们表格的一部分，
 columns are useful. The ID column, in particular, must be part of our table
 
 10
 00:00:48,820 --> 00:00:52,430
+也是为了以后我们的内容提供者集成工作。
 in order for our content provider integration to work later on in this lesson
 

@@ -1,108 +1,108 @@
 1
 00:00:00,230 --> 00:00:02,760
 When we first defined our tables we defined
-
+当我们第一次定义表格，我们使用
 2
 00:00:02,760 --> 00:00:06,510
 the relationships in terms of constraints. Now, we
-
+限制来定义表格直接的关系。 现在，我们
 3
 00:00:06,510 --> 00:00:08,630
 are going to implement that relationship into our
-
+将要去把这些表格的关系应用到
 4
 00:00:08,630 --> 00:00:12,220
 query using a join this join will allow us
-
+我们的查询中，在此，使用join 就会使我们
 5
 00:00:12,220 --> 00:00:14,690
 to query the weather table for values from
-
+可以通过一些特殊的地址
 6
 00:00:14,690 --> 00:00:18,520
 a specific location setting. We'll start by adding a
-
+来查询天气的表格。我们需要将SQL Ite 查询的
 7
 00:00:18,520 --> 00:00:21,570
 SQL Ite query builder class variable at the
-
+创建者类加入在
 8
 00:00:21,570 --> 00:00:25,280
 top of weather provider. We'll initialize the SQLI to
-
+天气创建者之前。 我们也需要初始化 SQLI
 9
 00:00:25,280 --> 00:00:27,120
 query builder in the static constructor for the
-
+查询的创建者， 使用一个静态的类
 10
 00:00:27,120 --> 00:00:31,830
 class, describing the join between both tables. Note,
-
+并且要描述在两个表格中这个join。 注意，
 11
 00:00:31,830 --> 00:00:35,700
 since both tables have a column named _ID.
-
+既然两个表格有一个共同的列叫做_ID.
 12
 00:00:35,700 --> 00:00:37,980
 We must explicitly use the table name in
-
+我们必须要明确的使用这个表格的名称，
 13
 00:00:37,980 --> 00:00:40,600
 order to disambiguate which underscore ID we are
-
+这样才能消除在join里使用下划线ID时
 14
 00:00:40,600 --> 00:00:43,050
 talking about in the join. Then we can
-
+产生的歧义。然后我们就可以来
 15
 00:00:43,050 --> 00:00:46,030
 define the query. The query is to find
-
+定义查询啦。 这个查询有一个
 16
 00:00:46,030 --> 00:00:50,600
 using the question mark replacement syntax. These question marks
-
+使用问号替代的语法。这些问号
 17
 00:00:50,600 --> 00:00:53,350
 will be replaced by the query parameters. Since we
-
+将会被查询的参数代替。 既然我们
 18
 00:00:53,350 --> 00:00:56,460
 allow people to specify the start date in the URI,
-
+允许大家在URI中使用特指的开始时间
 19
 00:00:56,460 --> 00:01:00,160
 we're also going to add a second selection, which includes
-
+我们也需要增加第二个选项， 这个第二选项包括
 20
 00:01:00,160 --> 00:01:02,800
 checking to see whether date text is greater than or
-
+去检查日期的值是否大于或等比
 21
 00:01:02,800 --> 00:01:05,630
 equal to our parameter. Next, we'll add a method to
-
+我们放入的参数。 下面，我们将加入两个方法去
 22
 00:01:05,630 --> 00:01:08,550
 get the weather by location entry, using the same query
-
+通过具体地理位置来获取天气， 同意，我们使用的时相同的获取
 23
 00:01:08,550 --> 00:01:11,970
 builder. Note, that we fetch the parameters from our URI.
-
+创建者。注意，这就是我们从URI获取到参数，
 24
 00:01:13,240 --> 00:01:15,620
 And though the string arrays, they can be substituted into
-
+经管这些事字符串数组，他们依然可以被在查询中取代
 25
 00:01:15,620 --> 00:01:20,620
 our query. Note that if URI does not contain a start date we actually use
-
+注意，乳沟在URI中不存在开始日期的情况我们实际上使用了
 26
 00:01:20,620 --> 00:01:23,950
 a different selection. Finally, we add the function
-
+另一种不同的选项。 最后，我们在查询中加入我们
 27
 00:01:23,950 --> 00:01:26,440
 into the query routine of our content provider.
-
+内容提供的函数方法。 

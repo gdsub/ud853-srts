@@ -1,80 +1,100 @@
 1
 00:00:00,080 --> 00:00:03,130
+我们继续写我们的content provider。Query将会是
 Let's continue coding our content provider. Query will be
 
 2
 00:00:03,130 --> 00:00:06,250
+最复杂的要求content provider的方法。
 the most complex of the required content provider methods.
 
 3
 00:00:07,280 --> 00:00:09,730
+我们开始查询操作环节。
 We begin with the bones of the query operation.
 
 4
 00:00:10,810 --> 00:00:13,600
+我们再次使用SURI匹配对象来
 We use our SURI matcher object once again to
 
 5
 00:00:13,600 --> 00:00:16,149
+打开URI类型。这是
 switch on the type of URI. This is the
 
 6
 00:00:16,149 --> 00:00:18,050
+我们填写content provider里
 only function where we will have to fill out
 
 7
 00:00:18,050 --> 00:00:21,540
+每一类型URl的唯一功能。
 every type of URI in the content provider. Several
 
 8
 00:00:21,540 --> 00:00:25,300
+他们中的几个只用来查询。我们将先实施
 of them are used for querying only. We'll implement
 
 9
 00:00:25,300 --> 00:00:29,060
+基础的天气查询。这次查询，我们
 the basic weather query first. For this query, we
 
 10
 00:00:29,060 --> 00:00:30,900
+就要传递所有的参数到
 just pass through all of the parameters to the
 
 11
 00:00:30,900 --> 00:00:34,540
+数据库里。非常简单的资料。我们填写这些参数
 database. Pretty simple stuff. Let's fix these parameters so
 
 12
 00:00:34,540 --> 00:00:36,760
+使他们起作用。所以这里的字符串
 they make some sense. So the strings here is
 
 13
 00:00:36,760 --> 00:00:40,650
+事实上是一个预测。S是一个选择。下一个
 actually a projection. S is a selection. The next
 
 14
 00:00:40,650 --> 00:00:43,970
+数组是选择Args。在上一个字符串里
 array is selectionArgs. In the last string is sort
 
 15
 00:00:43,970 --> 00:00:47,710
+排序顺序来匹配的更好。在这个功能的结尾，
 order that matches a lot better. At the bottom
 
 16
 00:00:47,710 --> 00:00:50,480
+我们设置一个cursor的通告
 of the function, we're going to set the notification
 
 17
 00:00:50,480 --> 00:00:54,710
+URl给那些进入这个功能里的。
 URI for our cursor to the one that was passed into the function.
 
 18
 00:00:54,710 --> 00:00:59,790
+这会引起cursor注册一个content observer。来监听
 This causes the cursor to register a content observer. To watch for changes that
 
 19
 00:00:59,790 --> 00:01:05,830
+发生在URl和它的任何派生物的变化。通过这些派生物
 happen to that URI and any of its descendents. By descendents
 
 20
 00:01:05,830 --> 00:01:10,610
+我了解了任何URl都通过这一路径。但，我们需要一直测试它。
 I mean any URI that begins with this path. But, we still need to test this.
 

@@ -40,7 +40,7 @@ will bring up a detailed view containing the rest of the weathery goodness,
 
 9
 00:00:38,900 --> 00:00:43,390
-我们还可以通过这个按钮将天气情况分享给我们的朋友
+我们还可以在此视图上将天气情况分享给我们的朋友
 which also gives us the ability to share the weather with our friends.
 
 10

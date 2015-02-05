@@ -1,24 +1,30 @@
 1
 00:00:00,120 --> 00:00:04,110
+现在我们再来重新回顾一下详细的框图
 This is a good time to revisit our final detailed wire frame.
 
 2
 00:00:04,110 --> 00:00:08,160
+对于每次天气预报  我们至少要保存日期
 For each weather forecast, we're going to need to store at least the date,
 
 3
 00:00:08,160 --> 00:00:11,710
+天气状况  最高温度  最低温度
 the condition, the high and low temperature,
 
 4
 00:00:11,710 --> 00:00:17,130
+湿度  风向  风速  气压
 the humidity. The wind speed and direction, and the barometric pressure.
 
 5
 00:00:17,130 --> 00:00:22,380
+在数据库中  我们用行来表示一次预报
 Since our database will use row to represent each forecast day, we'll store
 
 6
 00:00:22,380 --> 00:00:26,100
+所以上述的每一项都被存在不同的列中
 each piece of data associated with the forecast in a separate column.
 

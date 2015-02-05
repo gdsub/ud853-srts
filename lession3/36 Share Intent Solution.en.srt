@@ -1,188 +1,235 @@
 1
 00:00:00,550 --> 00:00:02,492
+这就是我们的分享行为提示的代码的解决方法
 Here's our coding solution for the share action
 
 2
 00:00:02,492 --> 00:00:07,140
+让我们从添加字符串来作为开始
 provider. Lets start by adding a string. The
 
 3
 00:00:07,140 --> 00:00:12,590
+字符串会成为我们的行为的标签现在我们要添加一个新的
 string will be used for the label for our action. Now we're going to add a new
 
 4
 00:00:12,590 --> 00:00:15,250
+菜单资源  这些资源会成为
 menu resource. This resource will be for the
 
 5
 00:00:15,250 --> 00:00:18,360
+详细的片段帧  我们将从添加名字空间开始
 detail fragment. We'll start by adding the name
 
 6
 00:00:18,360 --> 00:00:20,780
+这些名字空间被用于支持安卓语言设计的小部件可扩张标记语言
 space used by the Android support library for
 
 7
 00:00:20,780 --> 00:00:24,390
+最终  我们添加到实际项目中去
 it's widget XML. Finally, we add the actual item.
 
 8
 00:00:25,640 --> 00:00:28,340
+这个菜单项目包含我们从
 This menu item contains the string that we
 
 9
 00:00:28,340 --> 00:00:31,200
+字符串文件里面添加的字符串
 just added from the strings file. It's always
 
 10
 00:00:31,200 --> 00:00:33,130
+它作为一个行为被展示出来所以它会出现在
 shown as an action. So it appears on
 
 11
 00:00:33,130 --> 00:00:37,499
+行为棒中它是一行为提示分级  是安卓支持的库里面的一个分享行为提示
 the action bar. And it's actionProviderClass, is the ShareActionProvider
 
 12
 00:00:37,499 --> 00:00:40,710
+安卓支持的库
 from the Android support library. The Android support
 
 13
 00:00:40,710 --> 00:00:44,000
+允许分享行为提示能被使用于比
 library allows the ShareActionProvider to be used on earlier
 
 14
 00:00:44,000 --> 00:00:46,530
+Android 4.0之前的版本  当它
 versions of Android then 4.0. When it was
 
 15
 00:00:46,530 --> 00:00:50,550
+被官方添加到框架中去接下来  让我们进入
 officially added to the framework. Next, let's go to
 
 16
 00:00:50,550 --> 00:00:53,704
+详细活动模块  我们即将了解
 the DetailAactivity. We're going to be looking at the
 
 17
 00:00:53,704 --> 00:00:57,750
+包含详细活动的细节片段帧  所以我们要做的第一件事
 DetailFragment within the DetailActivity. So the first thing
 
 18
 00:00:57,750 --> 00:01:01,860
+是在我们的片段帧里面添加一些有用的东西  让我们添加
 we can do in our fragment is to add a few useful things. Let's add a log
 
 19
 00:01:01,860 --> 00:01:05,590
+一个您可以  一个用来分享的井号标签  井号标签阳光应用字符串  
 tag, a string for the share hashtag, hashtag
 
 20
 00:01:05,590 --> 00:01:08,840
+然后添加一个预示字符串
 sunshineApp, and we're going to take the forecast
 
 21
 00:01:08,840 --> 00:01:12,430
+使它成为一个有效成员接下来
 string and make it a member variable. Next
 
 22
 00:01:12,430 --> 00:01:17,070
+在onCreate窗口  我们让有效成员实际生成
 in onCreate view, let's actually populate our member variable.
 
 23
 00:01:17,070 --> 00:01:20,330
+最后  使用它设置文本
 And then finally, use it to set the text.
 
 24
 00:01:20,330 --> 00:01:24,610
+我们创建一个分享指令这个指令使用ACTION_SEND
 Lets create a share intent. This intent uses ACTION_SEND.
 
 25
 00:01:24,610 --> 00:01:28,120
+在一些重要时刻当任务被重置时  这些标志活动会被清除
 This flag activity cleared when task reset is somewhat
 
 26
 00:01:28,120 --> 00:01:31,470
+它阻止我们正要分享的活动
 important. It prevents the activity we're sharing to from
 
 27
 00:01:31,470 --> 00:01:34,970
+被放入活动栈
 being place onto the activity stack. What will happen,
 
 28
 00:01:34,970 --> 00:01:36,740
+如果我们没有这个标志  接下来会发生的是
 if we don't have this flag, is when you
 
 29
 00:01:36,740 --> 00:01:39,230
+当我们点击模块返回应用时  
 click on the icon to return to the application
 
 30
 00:01:39,230 --> 00:01:42,550
+你可能实际结束了另一个应用
 later, you may actually end up in another application.
 
 31
 00:01:42,550 --> 00:01:45,060
+真正掌握分享指令是
 The one that's actually handling the share intent. When
 
 32
 00:01:45,060 --> 00:01:50,500
+当你使用  FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET时  它会真正返回你
 FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET is used, it'll actually return you to your
 
 33
 00:01:50,500 --> 00:01:54,410
+的当前应用我们已经设置类型  test/plain  让
 application instead. We've set the type, test/plain, to let
 
 34
 00:01:54,410 --> 00:01:57,380
+安卓知道我们即将分享清晰的文本
 Android know we're going to be sharing plain text. And
 
 35
 00:01:57,380 --> 00:02:00,460
+然后添加我们分享的预示字符串到井号标签
 then we share our forecast string plus our hashtag.
 
 36
 00:02:00,460 --> 00:02:02,820
+最后只剩下一件事要做了我们
 Only one more thing left to do. We have
 
 37
 00:02:02,820 --> 00:02:05,450
+要添加一个菜单到片段帧做完这个  
 to add the menu to the fragment. To do
 
 38
 00:02:05,450 --> 00:02:07,690
+我们再添加一个标志给这个片段帧赋予
 this, we have to set a flag that this fragment
 
 39
 00:02:07,690 --> 00:02:09,940
+其一个选择菜单否则  
 has an options menu at all. Otherwise, it
 
 40
 00:02:09,940 --> 00:02:12,260
+它不会有onCreate可选菜单成员结构
 won't actually call the onCreate options menu member
 
 41
 00:02:12,260 --> 00:02:16,350
+最后  这就是我们的on create可选成员
 function. Finally, here's our on creat options member
 
 42
 00:02:16,350 --> 00:02:18,555
+结构正如你所见的  我们使一个
 function. As you can see, we're inflating the
 
 43
 00:02:18,555 --> 00:02:21,846
+我们早前创建的片段帧菜单生效找到
 detailfragment menu that we created earlier. Finding the
 
 44
 00:02:21,846 --> 00:02:25,644
+分享目录  接着点击分享行为提示  然后链接我们的
 share item, getting the ShareActionProvider, and attaching our
 
 45
 00:02:25,644 --> 00:02:29,360
+指令到分享行为提示  无论什么时候你
 intent to this ShareActionProvider. You'll want to update
 
 46
 00:02:29,360 --> 00:02:32,700
+要分享的数据改变了  它都会及时更新
 this whenever the data you want to share changes.
 
 47
 00:02:32,700 --> 00:02:36,480
+这就是全部内容了  你现在就可以添加一个分享行为提示到Sunshine了
 And that's it. You've now added a ShareActionProvider into Sunshine.
 

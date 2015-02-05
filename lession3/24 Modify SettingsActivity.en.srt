@@ -1,80 +1,99 @@
 1
 00:00:00,410 --> 00:00:02,650
+为了使得 preference 显示在手机上，我们
 To make the preferences appear on the phone, we
 
 2
 00:00:02,650 --> 00:00:05,730
+需要修改SettingsActivity。在Oncreate方法中
 need to modify settings activity. In the on-create method
 
 3
 00:00:05,730 --> 00:00:08,270
+我们将重写一些代码
 we're going to replace this to do with some code.
 
 4
 00:00:09,290 --> 00:00:14,111
+我们将用addPreferencesFromResource调用我们定义的pref_general.xml文件
 We're going to call addPreferencesFromResource with the pref_general xml
 
 5
 00:00:14,111 --> 00:00:16,700
+我们需要将
 that we defined. Then we need to bind the
 
 6
 00:00:16,700 --> 00:00:20,780
+location preference的值赋给preference summary
 preference summary to the value of the location preference.
 
 7
 00:00:20,780 --> 00:00:23,320
+这意味着当用户修改preference时
 This means that when the user changes the preference,
 
 8
 00:00:23,320 --> 00:00:26,820
+标签下面的值将会更新
 the summary value underneath the label will be updated.
 
 9
 00:00:26,820 --> 00:00:29,090
+如果你看一下这个方法的声明
 If you look at the declaration of this method,
 
 10
 00:00:29,090 --> 00:00:31,640
+可以看到对于一个给定的preference
 we see that for a given preference, it sets a
 
 11
 00:00:31,640 --> 00:00:34,590
+它在preference中设置了一个监听事件，如果你
 preference change listener on it. If you scroll to
 
 12
 00:00:34,590 --> 00:00:37,870
+滑动到顶部，你会看到SettingsActivity实际上已经实现了
 the top, you see that the settings activity actually implements
 
 13
 00:00:37,870 --> 00:00:41,580
+OnPreferenceChangelistener的接口。这个方法
 the interface on preference change listener. That method is
 
 14
 00:00:41,580 --> 00:00:44,990
 found down below, where we override the on preference change
+在下面我们重载OnPreferenceChange方法的地方可以找到
 
 15
 00:00:44,990 --> 00:00:48,380
+记住我们的location Preference实际上是一个
 method. Remember that our location preference is actually an
 
 16
 00:00:48,380 --> 00:00:52,010
+edit text preference。所以它并不会陷入这种情况中
 edit text preference. So, it won't fall into this case,
 
 17
 00:00:52,010 --> 00:00:54,940
+但是它会陷入下面的这种情况当中
 but it will fall in this case down here. Then,
 
 18
 00:00:54,940 --> 00:00:56,970
+然后在设置的UI界面中你可以看到摘要
 in the settings UI you can see that the summary
 
 19
 00:00:56,970 --> 00:01:00,240
+现在是这个值。在你的应用中尝试做这些改变吧
 is now this value. Make these changes in your app.
 
 20
 00:01:00,240 --> 00:01:02,680
+看看这节课老师为你所需要的代码行所做的笔记
 See the instructor notes for the lines of code you need.
-

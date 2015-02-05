@@ -1,80 +1,100 @@
 1
 00:00:00,150 --> 00:00:04,230
+让我们来讨论讨论  说真的  这个是根据你的数据大小
 Let's talk about this. Honestly, it really depends on
 
 2
 00:00:04,230 --> 00:00:07,210
+来决定的  对于储存量小的
 the size of your data. For small amounts of
 
 3
 00:00:07,210 --> 00:00:11,310
+二进制数据  那些小到不用操心的那种
 binary data, very, very small amounts of binary data,
 
 4
 00:00:11,310 --> 00:00:13,070
+你只需要把原始数据放进
 you could actually put the raw data in the
 
 5
 00:00:13,070 --> 00:00:15,770
+数据库  有一小部分的数据是这样类型的  而且这些数据的储存
 database. There are blob types and those are supported
 
 6
 00:00:15,770 --> 00:00:18,900
+功能工作的很好  当然了  如果你打算把
 and work pretty well. However, as you start putting
 
 7
 00:00:18,900 --> 00:00:22,230
+大一点的数据放进数据库  这种原始数据储存就不实用了
 larger data into the database, it gets pretty inefficient.
 
 8
 00:00:22,230 --> 00:00:23,860
+你就不得不写一大堆程序来解决这个问题
 And you end up writing a lot more code.
 
 9
 00:00:25,320 --> 00:00:27,430
+当然  只要是把数据储存在设备的公共文件夹
 Well, as far as storing the files in a public folder
 
 10
 00:00:27,430 --> 00:00:30,420
+这些都要考虑以上问题  当然  上述的方法还是可以解决问题的  只要
 on the device is concerned, well, that might work if you
 
 11
 00:00:30,420 --> 00:00:33,640
+你想把文件分享出去  但是  事实上  你不想让这些文件跟
 actually wanted to share those files. But, typically, you don't want to
 
 12
 00:00:33,640 --> 00:00:36,360
+别的应用的文件混在一起  所以把这些文件放在公共
 share those files with other applications. So, storing them in a
 
 13
 00:00:36,360 --> 00:00:40,580
+文件夹是一个坏主意  除此之外  第三个
 public folder on the device isn't a very good idea. But
 
 14
 00:00:40,580 --> 00:00:43,580
+选择其实也挺好  把这些文件储存在一个
 the third option is pretty good. Storing the files in a
 
 15
 00:00:43,580 --> 00:00:47,950
+私人的文件夹同时在参照一个数据库中的地址  这时  
 private folder and then referencing the location in the database. Now,
 
 16
 00:00:47,950 --> 00:00:50,720
+无可厚非的  你就不需要把温泉全部放在数据库了
 admittedly, you might not even need to put them into the database
 
 17
 00:00:50,720 --> 00:00:53,510
+  不过这通常值得去做如果
 at all. But it's often nice to do this if
 
 18
 00:00:53,510 --> 00:00:55,520
+你需要做一系列的查询  你
 you need to do any kind of queries on them. You
 
 19
 00:00:55,520 --> 00:00:58,140
+可以把元始数据储存在数据库并且储存在
 can store metadata in the database and store files in
 
 20
 00:00:58,140 --> 00:01:01,850
+私有文件夹  这就是安卓gallery文件廊如何工作的
 a private folder. This is what Android does in the gallery.
 

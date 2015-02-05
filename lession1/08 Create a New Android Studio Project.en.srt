@@ -85,7 +85,7 @@ Then we provide a corresponding package name. For distribution purposes,
 
 18
 00:01:06,200 --> 00:01:10,190
-包名称是在Android上安装您的应用时使用的全局统一的名称
+包名是在Android上应用程序安装时的唯一标识
 the package name should be globally unique across packages installed on Android.
 
 19
@@ -105,12 +105,12 @@ the com dot example namespace for our Sunshine app since it's a sample, but
 
 22
 00:01:22,150 --> 00:01:26,010
-因为Sunshine应用仅仅是示例  所以你不能用这个名字把应用发布到GooglePlay上
+因为Sunshine应用仅仅是示例  所以你不能用这个包名把应用发布到GooglePlay上
 you cannot publish an app on Google play that uses this namespace.
 
 23
 00:01:26,010 --> 00:01:30,020
-通常情况下保持默认的建议的包名称是没有问题的  然而
+通常情况下使用默认的建议的包名称是没有问题的  然而
 Usually leaving the default package name that's suggested is fine. However,
 
 24
@@ -125,7 +125,7 @@ added the app module at the end of the package name. So go ahead and
 
 26
 00:01:37,280 --> 00:01:40,160
-在本课程中如果你想让你的代码会匹配其余的代码请立刻修改
+在本课程中如果你想让你的代码与本课程的代码一样的话，请立刻修改这个设置
 make this change now if you want your code to match the rest of the code in
 
 27

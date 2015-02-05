@@ -1,24 +1,30 @@
 1
 00:00:00,140 --> 00:00:04,161
+好的，现在我们再来用我们的ContentProvider进行信息交互，所以
 All right. Now we're back to interacting with our ContentProvider, so it's time
 
 2
 00:00:04,161 --> 00:00:05,881
+是时候来干点别的了。用
 to have another exercise. Use the
 
 3
 00:00:05,881 --> 00:00:08,956
+ContentProvider把矢量对象的内容插入到
 ContentProvider to insert the vector of content
 
 4
 00:00:08,956 --> 00:00:11,330
+数据库里
 value objects into the database. [LAUGH]
 
 5
 00:00:11,330 --> 00:00:12,863
+不要担心，我们已经基本上完成了插入数据。
 Don't worry, we're really almost done with
 
 6
 00:00:12,863 --> 00:00:16,420
+接下来就是比较有趣的部分了，那就是让你觉得你做的这一切都值得。
 inserting data. Next is the fun part that makes this all worth it.
 

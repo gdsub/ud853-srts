@@ -1,64 +1,80 @@
-1
+﻿1
 00:00:00,370 --> 00:00:03,920
+接下来我会给你们演示如何在代码里添加断点
 I'll show you how we can add breakpoints in our code. Go ahead and
 
 2
 00:00:03,920 --> 00:00:06,960
+点击屏幕上的bug图标来打开调试器
 click on the screen bug icon, to attach the debugger.
 
 3
 00:00:11,650 --> 00:00:15,708
+打开设置菜单，在SettingsActivity里面我们将会添加两个断点
 We'll go to the Settings menu. In the SettingsActivity I'm going to add two
 
 4
 00:00:15,708 --> 00:00:20,492
+在onPreferenceChange方法里。
 breakpoints, in the onPreferenceChange method. I'm going to add a breakpoint at
 
 5
 00:00:20,492 --> 00:00:24,790
+一个设置在第59行，当是ListPreference并且setSummary被调用时
 line 59 in the case of a ListPreference when it's about to set the summary. I'm
 
 6
 00:00:24,790 --> 00:00:29,170
+另一个断点设置在第63行，当不是ListPreference并且setSummary被调用时
 also going to add a breakpoint at line 63, when it's not a ListPreference and it
 
 7
 00:00:29,170 --> 00:00:34,120
+现在我们运行APP看看 点击Location
 sets the summary. Let's go into the app to try it out. Tap on the Location and
 
 8
 00:00:34,120 --> 00:00:38,530
+然后更改邮编号码。在你点击OK后，断点就会被触发
 change the postal code. If you hit OK, then it triggers the breakpoint to
 
 9
 00:00:38,530 --> 00:00:42,140
+停在这里。这里有此刻这些变量的值
 stop at right here. These are the values of the variables at this time.
 
 10
 00:00:42,140 --> 00:00:47,110
+这里我们能看到新的邮编号码。你可以跳过这个方法，或者进到这个方法里看具体的运行情况。
 And we see the new postal code here. You can step over or into the method for
 
 11
 00:00:47,110 --> 00:00:51,960
+你也可以点击Play来使程序继续运行，或者点击Stop来结束调试
 more details. Or you can hit Play to continue. Or Stop to stop the debugger.
 
 12
 00:00:53,160 --> 00:00:57,410
-Let's hit Play to continue. And then we see that the [UNKNOWN] has been
+我们现在点击Play以便继续。然后我们看到这里被
+Let's hit Play to continue. And then we see that the UI has been
 
 13
 00:00:57,410 --> 00:01:01,800
+更新成一个新的邮编号码了。接下来我们试试
 updated to the, the preference summary, is the new postal code. Let's try it for
 
 14
 00:01:01,800 --> 00:01:06,830
-Temperature Units. They tap here, and then select Imperial.
+改变温度单位。点击这里，然后选择英制单位
+Temperature Units. You tap here, and then select Imperial.
 
 15
 00:01:06,830 --> 00:01:11,190
+这会触发ListPreference里的这个断点。点击Play继续
 It triggers this breakpoint in the ListPreference case. We hit Play to continue,
 
 16
 00:01:11,190 --> 00:01:14,760
+现在我们能看到偏好设置里显示的是英制单位了
 and then we see that, Imperial is now the preference summary.
 

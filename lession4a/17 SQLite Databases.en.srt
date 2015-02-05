@@ -1,12 +1,15 @@
 1
 00:00:00,200 --> 00:00:05,860
+这是一个稍微复杂一点的SQL查询语句
 Okay. Here's a slightly more complicated SQL query. See the instructor notes for
 
 2
 00:00:05,860 --> 00:00:11,160
+查询用户手册  你可以得到更多的SQL语句资源
 some resources that you can use to help parse the SQL statement. One note,
 
 3
 00:00:11,160 --> 00:00:14,940
+要注意的是  这里的max是表示一天中最高温度的列名
 max is the name of the column that stores the high temperature for the day.
 

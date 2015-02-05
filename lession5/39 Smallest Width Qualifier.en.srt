@@ -1,128 +1,160 @@
-1
+﻿1
 00:00:00,090 --> 00:00:02,130
+我们已经讲过几次，把sw写在
 We mentioned this several times. Put the SW in
 
 2
 00:00:02,130 --> 00:00:06,190
+素材文件夹的名字里表示最小屏宽。
 the resource folder name stands for smallest width. To drive
 
 3
 00:00:06,190 --> 00:00:09,280
+为了真正理解这一点，我们来看一个假设的情况。
 home that point, let's walk through a hypothetical situation. Say
 
 4
 00:00:09,280 --> 00:00:11,760
+假设你有一个这样的文件夹结构。
 you have an app directory structure like this. We have
 
 5
 00:00:11,760 --> 00:00:14,140
+在默认Layout文件夹里有一些配置文件
 some layouts defined in the base layout folder and
 
 6
 00:00:14,140 --> 00:00:18,070
+其中一些被layout-sw600dp文件夹里的配置文件覆盖掉
 we override some of those in the layout-sw600dp folder. We
 
 7
 00:00:18,070 --> 00:00:22,790
+其中一个又被layout-sw720dp文件夹的配置文件覆盖掉
 also override one of these in the layout-sw720dp folder. Let's
 
 8
 00:00:22,790 --> 00:00:25,320
+我们来看看哪一个配置文件会被应用到哪一个设备上
 look at which layouts would be applied on which device.
 
 9
 00:00:25,320 --> 00:00:27,740
-Say your app is running on a Nexxus five.
+假设你的APP在Nexus 5上运行
+Say your app is running on a Nexus five.
 
 10
 00:00:27,740 --> 00:00:30,510
-The Nexxus five has dimensions 360 dp by six 640
+Nexus 5的大小是360dp*640dp
+The Nexus five has dimensions 360 dp by six 640
 
 11
 00:00:30,510 --> 00:00:33,610
+在两个数字中，最小屏宽是360dp
 dp. Of the two, the smallest width is 360 dp.
 
 12
 00:00:33,610 --> 00:00:36,350
+所以我们用这个数字来和文件夹名字
 So we use this number to compare it against the
 
 13
 00:00:36,350 --> 00:00:39,950
+比较。360dp小于600dp
 folder names. 360 dp is less than 600 and
 
 14
 00:00:39,950 --> 00:00:43,020
-is less than, 720 so all the layouts will come
+也小于720dp。所以所有的配置文件
+is less than 720 so all the layouts will come
 
 15
 00:00:43,020 --> 00:00:47,420
-from the space layout folder. For the Nexus 72012 version,
+会使用这个默认Layout文件夹里的。对于Nexus 7 2012的版本
+from this base layout folder. For the Nexus 7 2012 version,
 
 16
 00:00:47,420 --> 00:00:50,950
+它的大小是600dp*960dp
 the dimensions are 600 dp by 960 dp. Of the
 
 17
 00:00:50,950 --> 00:00:54,470
+这两个数字中600dp是最小屏宽。所以用它
 two sides 600 dp is the smaller width. So you compare
 
 18
 00:00:54,470 --> 00:00:57,830
+和文件夹名字比较。很明显它的最小屏宽
 this against the folder names. It turns out that the smallest width
 
 19
 00:00:57,830 --> 00:01:00,710
+大于等于600dp。所以
 is greater than or equal to 600 dp, so for the
 
 20
 00:01:00,710 --> 00:01:03,800
+detail和item这两个配置文件会使用这个文件夹里的。
 detail and the item layout, we pull it from this folder. Now
 
 21
 00:01:03,800 --> 00:01:06,370
+这个文件夹里没有main.xml
 the main .xml file is not declared in this folder, so
 
 22
 00:01:06,370 --> 00:01:09,020
+所以我们退回较小限制的文件夹，也就是
 we fall back to a less specific folder, which turns out to
 
 23
 00:01:09,020 --> 00:01:11,968
+这一个默认Layout文件夹。对于Nexus 10
 be this one in the base layout folder. For the Nexus ten,
 
 24
 00:01:11,968 --> 00:01:15,920
+它的大小是800dp*1280dp。这两个数字中，
 the dimensions are 800 dp by 1280 dp. Of the two sides,
 
 25
 00:01:15,920 --> 00:01:19,220
+800dp是最小屏宽。这个设备满足
 800 dp is the smallest width. Now this device satisfies
 
 26
 00:01:19,220 --> 00:01:22,100
+所有这些分类。因为800dp大于
 the categories for all of these because 800 is greater than
 
 27
 00:01:22,100 --> 00:01:24,990
+720dp也大于600dp。但是系统会首先选择
 720 and greater than 600. However, the system chooses the
 
 28
 00:01:24,990 --> 00:01:28,550
+最大限制的文件夹。所以这个item配置会被使用
 most specific folder first. So it will choose this item layout
 
 29
 00:01:28,550 --> 00:01:31,050
+而不是这两个。因为detail配置没有在这里定义
 over these two. Since the detail layout is not defined
 
 30
 00:01:31,050 --> 00:01:33,820
+系统会退回较小限制的文件夹，
 here, it will fall back to a less specific folder, which
 
 31
 00:01:33,820 --> 00:01:36,810
+也就是这一个。然后是main.xml，它在这两个
 is this one. Then for the main.xml file, it's not declared
 
 32
 00:01:36,810 --> 00:01:38,930
+文件夹里都没有被定义，所以系统会退回这一个
 in either of these, so it falls back to this one.
 

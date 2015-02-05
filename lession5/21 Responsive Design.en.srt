@@ -1,164 +1,205 @@
 1
 00:00:00,200 --> 00:00:03,890
+我们现在已经实现了两个屏幕的线框图了
 Okay. So now we have the wireframes implemented for both screens.
 
 2
 00:00:03,890 --> 00:00:07,080
+它在平板上会是什么效果呐  额…很不幸
 But what does it look like on the tablet? Well, unfortunately,
 
 3
 00:00:07,080 --> 00:00:08,920
+当我们把手机界面伸展到平板时
 when we take the phone UI and stretch it out on
 
 4
 00:00:08,920 --> 00:00:11,630
+它就看起来不怎么好了  有太多的空白部分
 a tablet, it doesn't look that great. There's a lot of empty
 
 5
 00:00:11,630 --> 00:00:14,690
+我们可以充分利用屏幕的优势
 white space here. We could better take advantage of this screen
 
 6
 00:00:14,690 --> 00:00:18,860
+去向用户展示更多有用的信息  举个栗子
 real estate by showing more useful information. For example, why do the
 
 7
 00:00:18,860 --> 00:00:21,310
+这么大个屏幕  为啥要点开才能查看详细的
 details need to be a tap away when they could just
 
 8
 00:00:21,310 --> 00:00:25,380
+天气情况呐  此外  如果用户
 as easily fit on this screen? And, furthermore, if the user wants
 
 9
 00:00:25,380 --> 00:00:27,850
+要看一下整个列表项
 to look through the full list of forecasts, their eyes
 
 10
 00:00:27,850 --> 00:00:32,380
+他们的眼镜必须横扫着看  这是很差劲的用户体验
 must go like this, which is an unpleasant reading experience. If
 
 11
 00:00:32,380 --> 00:00:34,960
+如果我们想让用户去读一些内容的话  我们应该把
 we want the user to read some content, we should keep
 
 12
 00:00:34,960 --> 00:00:38,340
+宽度设限  那样他们就可以快速的扫描阅读
 the width narrower, so that they can scan it quickly. These
 
 13
 00:00:38,340 --> 00:00:40,080
+这些属于响应式设计范畴
 considerations are part of responsive
 
 14
 00:00:40,080 --> 00:00:42,400
+响应式设计是  你的应用应该在不同
 design. Responsive design means designing your
 
 15
 00:00:42,400 --> 00:00:45,190
+分辨率大小的屏幕下保持
 app by keeping in mind that it'll be used across a
 
 16
 00:00:45,190 --> 00:00:48,230
+相同或者相近的用户体验  这个该怎么做呢
 range of different device screen sizes. But how do we do
 
 17
 00:00:48,230 --> 00:00:50,540
+为平板这么大的设备适配
 that, and what does it mean to build for larger screen
 
 18
 00:00:50,540 --> 00:00:53,700
+是什么意思呢  我可以为你展示一些实际例子
 devices like tablets. Well, I can show you some examples of
 
 19
 00:00:53,700 --> 00:00:57,420
+看看这些应用是如何使用 Muti-pane 布局适配不同屏幕的吧  在Android设计指南里
 how apps adapt using multi-pane layouts. In the Android Design Guide,
 
 20
 00:00:57,420 --> 00:01:01,000
+有一个部分叫 Muti-pane 布局  有一项方法就是  把多个视图
 there's a section on multi-pane layouts. One technique is to combine
 
 21
 00:01:01,000 --> 00:01:04,000
+结合在一起  举个栗子  在联系人这个应用里  你有
 multiple views together. For example, in the People app, you have
 
 22
 00:01:04,000 --> 00:01:07,800
+一个联系人列表和联系人详细信息卡片
 the contact list and the contact card for additional details. On
 
 23
 00:01:07,800 --> 00:01:10,240
+在平板设备上  我们可以把他们各方一边  这是
 the tablet, we can put them side by side. This is
 
 24
 00:01:10,240 --> 00:01:13,120
+我们熟知的 Master/Detail Flow  这个是主列表
 also known as the master detail flow. This is the master
 
 25
 00:01:13,120 --> 00:01:15,580
+这个是详细页  在设置里
 list and this is the detail pane. In the settings app,
 
 26
 00:01:15,580 --> 00:01:18,310
+我们还有另外一个栗子  选项列的宽是根据屏幕的宽度
 we have another example. The column width adjust based on the
 
 27
 00:01:18,310 --> 00:01:21,430
+自适应的  在日历应用里  我们有很多 panel
 available screen width. In the calendar app, we have panels, and
 
 28
 00:01:21,430 --> 00:01:25,170
+它们在屏幕纵向的时候是垂直叠放的  
 they stack vertically in the portrait orientation but horizontally in the
 
 29
 00:01:25,170 --> 00:01:28,650
+屏幕横向的时候是水平叠放的  这里还有其他一些个例子你可以去
 landscape orientation. There also a couple of other examples that you
 
 30
 00:01:28,650 --> 00:01:31,550
+瞧一瞧  如果你想知道更多关于
 can look through as well. If you want more information on
 
 31
 00:01:31,550 --> 00:01:35,020
+平板和响应式设计的话  你可以查看
 designing for tablets or responsive design in general, you can check
 
 32
 00:01:35,020 --> 00:01:38,140
+课程视频下方的链接  在我们的系列课程里
 out the links below for more details. In this course, we're
 
 33
 00:01:38,140 --> 00:01:40,390
+我们会先学习手机用户界面设计然后才是
 learning how to build up the phone UI first, and then the
 
 34
 00:01:40,390 --> 00:01:42,740
+平板  事实情况是  当我们最初
 tablet UI. But in reality, when we're designing
 
 35
 00:01:42,740 --> 00:01:44,970
+开始考虑它的设计的时候  就应该考虑到响应式设计
 it, we thought about responsive design from day
 
 36
 00:01:44,970 --> 00:01:47,010
+当你自己做应用程序的时候
 one. When you're building your own app, it's
 
 37
 00:01:47,010 --> 00:01:49,550
+千万不要把手机的用户界面设计完了
 bad practice to just completely design and build
 
 38
 00:01:49,550 --> 00:01:51,390
+再去开始头脑风暴平板的
 your phone app and then start to brainstorm
 
 39
 00:01:51,390 --> 00:01:53,810
+界面设计  因为平板的界面通常会被手机
 about the tablet UI. That's because the tablet
 
 40
 00:01:53,810 --> 00:01:55,780
+界面的设计所影响
 UI often has an impact on the phone
 
 41
 00:01:55,780 --> 00:01:58,510
+包括产品的架构等
 design, as well as the architectural decisions made here.
 

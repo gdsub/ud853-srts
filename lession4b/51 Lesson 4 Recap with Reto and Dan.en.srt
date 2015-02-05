@@ -1,56 +1,70 @@
-1
+﻿1
 00:00:00,560 --> 00:00:04,070
+所以,Rato,这节课我们学到了什么?
 So, Rato, what have we learned in this lesson?
 
 2
 00:00:04,070 --> 00:00:06,300
+嗯,我学到了我不想写数据库和内容提供者。
 >> Well, I learned that I do not want to write
 
 3
 00:00:06,300 --> 00:00:10,060
+你呢？
 databases and content providers. What did you learn in this lesson?
 
 4
 00:00:10,060 --> 00:00:14,440
+嗯,J单元测试是很棒的，以及 
 >> Well, J unit tests are awesome, and building
 
 5
 00:00:14,440 --> 00:00:16,230
+建立我们的应用程序的后端框架是最光荣的工作
 the back end framework of our apps is the
 
 6
 00:00:16,230 --> 00:00:19,270
+这是创建健壮的应用程序与伟大的用户体验
 most glorious of work. It's an absolutely vital part
 
 7
 00:00:19,270 --> 00:00:22,480
+的一个绝对重要的一部分
 of creating a robust app with a great user experience.
 
 8
 00:00:22,480 --> 00:00:25,715
+我也学到了Dan不能做一个英语口音
 >> And I also learned that Dan cannot do an English accent.
 
 9
 00:00:25,715 --> 00:00:29,309
+幸运的是,您可以准备欢迎凯瑟琳回到第5课
 >> [SOUND]. Fortunately, you can get ready to welcome back Katherine
 
 10
 00:00:29,309 --> 00:00:32,912
+那节课上我们将把activity组件拆成fragment组件
 for lesson 5, where we'll shatter our activity into fragments, use
 
 11
 00:00:32,912 --> 00:00:36,517
+使用我们的内容提供者来填充更复杂的UI
 our content providers to populate more complex UIs, and build layouts
 
 12
 00:00:36,517 --> 00:00:39,900
+以及构建在平板电脑上和手机上一样好的布局
 that work as well on tablets as they do on phones.
 
 13
 00:00:39,900 --> 00:00:42,100
+这似乎是方便的摄位车进入了历史
 >> Which seems like a convenient segway
 
 14
 00:00:42,100 --> 00:00:44,300
+也是android硬件的进化
 into the history and evolution of Android hardware,
 

@@ -1,173 +1,216 @@
 1
 00:00:00,470 --> 00:00:04,600
+但是我们需要等一会才能测试我们的代码  我们仍然需要
 But it will be a while before we can test this in our code. We still are going
 
 2
 00:00:04,600 --> 00:00:08,870
+实现很多的代码  包括UI界面
 to implement a whole layer on top of it along with a bunch of UI changes.
 
 3
 00:00:08,870 --> 00:00:13,740
-Fortunately, we can implement J unit test here to help. And now for
+幸运的是  我们可以让JUnit测试帮助我们完成这些  大家仔细看
+Fortunately, we can implement JUnit test here to help. And now for
 
 4
 00:00:13,740 --> 00:00:18,610
-some magic. We'll add a directory to the source directory of our Android studio
+我的操作  我们先在Android Studio工程的src文件夹下创建一个
+some magic. We'll add a directory to the source directory of our Android Studio
 
 5
 00:00:18,610 --> 00:00:23,640
-project called Android test. And then, another one underneath it called Java.
+androidTest文件夹  然后在它的下面再继续创建一个java文件夹
+project called androidTest. And then, another one underneath it called java.
 
 6
 00:00:25,460 --> 00:00:29,380
-This is the way we tell Android studio there's a test target in cradle for
+这样Android Studio就知道我们有一个针对App的测试
+This is the way we tell Android Studio there's a test target in gradle for
 
 7
 00:00:29,380 --> 00:00:34,400
-our app. Now we create a test package that matches our main package with
+现在我们创建一个测试包  这个测试包的包名是主包名后面
+our App. Now we create a test package that matches our main package with
 
 8
 00:00:34,400 --> 00:00:39,650
-an extra test directory on the end. Create a new class called full
+再加上test后缀  在这个测试包中创建一个新的
+an extra test directory on the end. Create a new class called
 
 9
 00:00:39,650 --> 00:00:46,300
-test suite in the test package. Add this code. This
+叫fullTestSuite的类  添加上这些代码
+fullTestSuite in the test package. Add this code. This
 
 10
 00:00:46,300 --> 00:00:49,970
+这是一些可以让我们将其它类添加到测试中的模板代码
 is some boiler plate code that will allow us to add tests in additional classes.
 
 11
 00:00:52,350 --> 00:00:59,747
-Next, we'll create a TestDb class that extends Android test case [NOISE] and
+下面我们来创建一个继承自AndroidTestCase的TestDb类
+Next, we'll create a TestDb class that extends AndroidTestCase [NOISE] and
 
 12
 00:00:59,747 --> 00:01:04,824
-add a test that creates our Db. The way this works is that the test runner
+添加一个创建数据库的测试  可以这样进行测试是因为TestRunner会
+add a test that creates our Db. The way this works is that the TestRunner
 
 13
 00:01:04,824 --> 00:01:08,822
+按照定义的顺序执行这个类中的
 will execute every function in our class that begins with test in the order that
 
 14
 00:01:08,822 --> 00:01:12,950
+以test开头的方法  每个测试都需要有一种导致断言失败
 they are declared in the class. Each test should have a failure path that
 
 15
 00:01:12,950 --> 00:01:17,810
+的情况  在进行测试之前我们先删除数据库  这样
 uses an assert. We start by deleting the database before testing it. So,
 
 16
 00:01:17,810 --> 00:01:24,180
+我们可以进行简洁的测试  我们先到运行app的下拉菜单中来启动测试
 we have a clean test. Now, to run the test we go to the app start drop down.
 
 17
 00:01:24,180 --> 00:01:28,740
+选择编辑配置  再选择添加来添加一个新的配置
 And select Edit Configurations. We select Plus to add a new configuration. And
 
 18
 00:01:28,740 --> 00:01:34,710
+选择针对App模块的Android Tests  并对它进行命名
 select Android Tests Against Module App. Now we name the test.
 
 19
 00:01:34,710 --> 00:01:38,190
+注意一下这里默认是运行模拟器的  所以
 Now note that it tends to target the emulator by default. So,
 
 20
 00:01:38,190 --> 00:01:42,000
+要使用真实的设备的话我们要选择显示选择对话框的选项
 I want to use an actual device I'm going to select Show Chooser Dialogue.
 
 21
 00:01:42,000 --> 00:01:48,680
+现在我们就可以在我们的设备上进行测试了  这里显示测试通过了
 Now we can just run the test against our device. And, it passes. So
 
 22
 00:01:48,680 --> 00:01:54,160
-let's create a data base insert and read test. At the beginning of it,
+我们再来进行一下数据库的插入和读取测试  作为开始
+let's create a database insert and read test. At the beginning of it,
 
 23
 00:01:54,160 --> 00:01:58,270
+我们向每一个表中插入一行数据  我们先使用一些虚拟的
 we'll insert a single record into each table. We'll begin with some dummy
 
 24
 00:01:58,270 --> 00:02:04,450
+位置信息  我们使用dbHelper对象获取一个可写数据库实例
 data for our location. We'll use the dbHelper to get a writeable database.
 
 25
 00:02:04,450 --> 00:02:08,180
+这就是我们之前在项目中设计的使用数据库的方式
 This is exactly how we will use the database when we code it up in our project.
 
 26
 00:02:09,870 --> 00:02:14,110
+然后创建一个ContentValues对象  它在Android中可以用来方便地
 We'll then create a ContentValues object, which is a handy helper object that
 
 27
 00:02:14,110 --> 00:02:18,280
+存储键值对  我们会把这些虚拟数据存入
 Android uses to store values and keys. We'll store our dummy data into
 
 28
 00:02:18,280 --> 00:02:22,870
+LocationEntry类中定义的对应列中  注意到为了直接通过类名
 the columns from our LocationEntry contract. Note that in order to make it
 
 29
 00:02:22,870 --> 00:02:26,870
+进行编码  我在这里做了一些额外的导入包中的类的操作
 work with this abbreviated syntax, I did have to add some extra imports up here.
 
 30
 00:02:28,320 --> 00:02:33,490
-We then insert the data into our data base, and verified that we got a row back.
+然后我们把数据插入数据库  并验证插入这一行数据成功了
+We then insert the data into our database, and verified that we got a row back.
 
 31
 00:02:33,490 --> 00:02:37,180
+我发现在测试类中打印一些log信息是非常有用的
 Now I find that it's helpful to put log messages into my test cases.
 
 32
 00:02:38,500 --> 00:02:43,170
+现在我们再用数据库的读操作从数据库中读取出我们之前存入的
 Now we'll use the database read operations to pull our dummy data back out of
 
 33
 00:02:43,170 --> 00:02:47,930
-the data base. We're making use of a custom projection here which, in theory,
+虚拟数据  我们在这里使用一个自定义的映射  理论上讲
+the database. We're making use of a custom projection here which, in theory,
 
 34
 00:02:47,930 --> 00:02:52,470
+这会使我们更方便地查找我们需要的数据集
 would make it easy to use our database cursor to query for the values we want.
 
 35
 00:02:52,470 --> 00:02:56,260
+虽然我们用了自定义的映射  但是它并不是必须的
 We use a custom projection here. Although, it's not required.
 
 36
 00:02:56,260 --> 00:02:59,580
+如果不使用自定义映射  那么会返回包含所有列的数据集
 If the custom projection wasn't there, we would simply return all columns.
 
 37
 00:03:00,730 --> 00:03:04,220
+一个数据库游标是用来对数据库中的数据集进行遍历操作的
 A database cursor is a control structure that enables traversal over
 
 38
 00:03:04,220 --> 00:03:09,220
-the records in a database. In Android, this is represented by a cursor object.
+控制结构  在Android中  这是用一个Cursor对象来表示的
+the records in a database. In Android, this is represented by a Cursor object.
 
 39
 00:03:10,530 --> 00:03:14,380
-The cursor object allows one to traverse between records in a query and
+Cursor对象可以让我们在查询的结果集中进行遍历操作
+The Cursor object allows one to traverse between records in a query and
 
 40
 00:03:14,380 --> 00:03:17,360
+也可以获取结果集中的任意数据项
 get the contents of any individual column from a query.
 
 41
 00:03:18,920 --> 00:03:24,330
-Now, we use cursor.moveToFirst to populate our cursor with our row of data.
+现在  我们使用cursor.moveToFirst()方法来以行为单位对cursor对象进行操作
+Now, we use cursor.moveToFirst() to populate our cursor with our row of data.
 
 42
 00:03:24,330 --> 00:03:29,790
+然后可以再通过每列的索引获取数据项  最后
 We can then pull out our data by index. Finally assert
 
 43
 00:03:29,790 --> 00:03:35,049
+对这些数据和之前的虚拟数据是否一样进行断言  现在再运行一下我们的测试
 if it doesn't match our dummy data. And now, we get to run our tests again.
 
 44
@@ -176,5 +219,5 @@ if it doesn't match our dummy data. And now, we get to run our tests again.
 
 45
 00:03:39,620 --> 00:03:40,570
+这里显示测试通过了
 And they passed.
-
