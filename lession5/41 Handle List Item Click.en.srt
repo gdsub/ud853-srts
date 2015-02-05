@@ -75,146 +75,181 @@ talk to the main activity we should create a callback interface. It's
 
 16
 00:00:47,280 --> 00:00:50,390
-最好来设想
+最好来设想fragment将会一直跟一个
 a better assumption to say that the fragment will always be within
 
 17
 00:00:50,390 --> 00:00:53,730
+活动互动，并且这样反馈可以说明
 an activity that implements this callback than to say that
 
 18
 00:00:53,730 --> 00:00:56,980
+前段fragment将会总在主要活动之内。
 the forecast fragment will always be inside the main activity. The
 
 19
 00:00:56,980 --> 00:00:59,660
+这时有一个好的例子就是详细fragment如何在两个不同的
 detail fragment is a good example of how a fragment can
 
 20
 00:00:59,660 --> 00:01:02,170
+活动中被使用了。 主要活动和详细
 be used in two different activities. The main activity and the
 
 21
 00:01:02,170 --> 00:01:05,120
+活动。所以我们不能够仅仅依靠活动反馈的
 detail activity. So don't rely on get activity returning a
 
 22
 00:01:05,120 --> 00:01:08,830
+类。我们需要用gist，用
 specific activity class. Using the gist that we provided, use a
 
 23
 00:01:08,830 --> 00:01:11,750
+反馈类来通知活动列表被
 callback class to notify the activity that a list item has
 
 24
 00:01:11,750 --> 00:01:15,310
+选择了。看看下面关于选项监听的提示。
 been selected. See the hint below on the item click listener.
 
 25
 00:01:15,310 --> 00:01:18,622
+这样，活动就可以被启动详细活动或者
 Then the activity can either launch the detail activity or
 
 26
 00:01:18,622 --> 00:01:21,230
+去替换详细fragment，基于设备是一个手机还是一个
 replace the detail fragment, based on whether it's a phone or
 
 27
 00:01:21,230 --> 00:01:23,460
+平板。当你在做这类事情的时候，你可能面临这样
 tablet. When you work on this task, you'll run into
 
 28
 00:01:23,460 --> 00:01:25,860
+iGetter问题，如何把选择的数据传入
 an issue of how to pass the selected date to the
 
 29
 00:01:25,860 --> 00:01:29,120
+详细fragment。 你本能的会想要创建一个
 detail fragment. Now your instinct might say to create a
 
 30
 00:01:29,120 --> 00:01:32,910
+自定义的构造器来传入你的数据。然而，我们
 custom constructor where you can pass in the date. However, we
 
 31
 00:01:32,910 --> 00:01:37,130
+不需要这样的做法。如果你从没转动过
 don't normally create custom fragment constructors. If you ever rotate the
 
 32
 00:01:37,130 --> 00:01:40,790
+设备的视角，系统更不不会去执行你的构造器
 device, for example, the system can't call your custom fragment constructor
 
 33
 00:01:40,790 --> 00:01:42,980
+然而他会使用一个
 with the right parameters, however it can use the
 
 34
 00:01:42,980 --> 00:01:46,270
+空的构造器，并且会用你之前使用的一些数据来进行初始化
 empty fragment constructor and initialize it with the same bundle
 
 35
 00:01:46,270 --> 00:01:48,930
+所以，如果你想要把对的信息代入并
 of arguments you used earlier. So to pass information to
 
 36
 00:01:48,930 --> 00:01:52,950
+初始化一个fragment，你就创建一个键值对的bundel，
 initialize a fragment, create a bundle of key value pairs,
 
 37
 00:01:52,950 --> 00:01:54,480
+同时把他们设置成fragment的内容。
 and then set that as the arguments on the
 
 38
 00:01:54,480 --> 00:01:57,330
+不用被这些arguments bundle和 savedInstanceState bundle
 fragment. Don't confuse this arguments
 
 39
 00:01:57,330 --> 00:01:59,870
+弄混了。
 bundle with the savedInstanceState bundle.
 
 40
 00:01:59,870 --> 00:02:02,350
+当一个 fragment被初始化以后，你不可以改变那些
 Once a fragment has been initialized, you can't change the
 
 41
 00:02:02,350 --> 00:02:06,460
+内容。你可以读取内容。
 arguments. You can only read from them, as seen here.
 
 42
 00:02:06,460 --> 00:02:09,500
+换句话说就是那些储存了的bundle是为了储存fragment变化时的
 On the other hand the saved state bundle is for storing information
 
 43
 00:02:09,500 --> 00:02:11,900
+信息的。你可以把它植入进
 once a fragment has been running. And you can populate it in
 
 44
 00:02:11,900 --> 00:02:13,980
+savedInstanceState 方法中。这bundle
 the on savedInstanceState method. The bundle
 
 45
 00:02:13,980 --> 00:02:16,510
+可以预留一个位置如果设备的方向改变或者
 can preserve state across orientation changes
 
 46
 00:02:16,510 --> 00:02:19,270
+那个fragment或活动被系统关闭了。 这就是
 or if the fragment or activity gets killed by the system. That's why
 
 47
 00:02:19,270 --> 00:02:22,950
+为什么你再次从onCreate 或者 onCreateView 方法中得到它。 这就是
 you receive it back again in the onCreate or onCreateView methods. This
 
 48
 00:02:22,950 --> 00:02:25,030
+我们的应用应该有的功能。当你触碰了
 is what the app should look like when you're done. When you
 
 49
 00:02:25,030 --> 00:02:28,170
+不同的日期，应用会更新详细信息。你可以
 tap on a different date, it updates the detail pane. You can
 
 50
 00:02:28,170 --> 00:02:29,970
+把默认的数据移除因为
 remove any hard coded data because
 
 51
 00:02:29,970 --> 00:02:31,880
+这些布局现在时动态实施的。
 the layout should be populated dynamically now.
 
