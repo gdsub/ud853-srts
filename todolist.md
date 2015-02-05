@@ -1,3 +1,21 @@
+#20150205 已分配任务列表
+* @xiaorain：			5.69
+* @chenglu：		安排校对润稿工作
+* @blogjintao：			6.8 ~ 6.11
+* @EzioKissshot：			6.12 ~ 6.15
+* @xiazdong：			休息到2.11
+* @gejiaheng：			5.60 ~ 5.64
+* @raylu1988：			6.16 ~ 6.19
+* @tingya：			5.65 ~ 5.68
+* @shr1992：			6.20 ~ 6.23
+* @w437392342：			6.1 ~ 6.3
+* @RonnSanji：			6.28 ~ 6.31
+* @LeopardWang：			6.24 ~ 6.27
+* @supersheep：			6.32 ~ 6.36
+* @xiaofans：			休息
+* @tyisme614：			6.4 ~ 6.7
+
+
 #20150204 已分配任务列表
 * @xiaorain：		5.17 ~ 20
 * @chenglu：		5.21 ~ 5.24
