@@ -1,69 +1,86 @@
-1
+﻿1
 00:00:00,240 --> 00:00:01,350
+让我们看看实现一个非常
 Let's take a look at what it will
 
 2
 00:00:01,350 --> 00:00:05,630
+基本的SyncAdapter需要做些什么。我们会
 take to implement a very basic SyncAdapter. We're going
 
 3
 00:00:05,630 --> 00:00:09,430
+写两个服务。每一个服务的主要
 to write two services. Each service serves the primary
 
 4
 00:00:09,430 --> 00:00:12,530
+目的是送一个表示Android Binder接口的对象
 purpose of delivering an object that represents an Android
 
 5
 00:00:12,530 --> 00:00:15,780
+给一个系统框架
 Binder interface to one of the system frameworks.
 
 6
 00:00:15,780 --> 00:00:19,400
+Binder实际上是低层次胶水 帮助在
 A Binder is actually the low-level glue that implements
 
 7
 00:00:19,400 --> 00:00:23,400
+在Android系统里实现线程间的交流。每一次你使用
 cross process communication in Android. You've been using Binders
 
 8
 00:00:23,400 --> 00:00:26,750
+Android系统服务时都有用到Binder
 every time you talk to an Android system service.
 
 9
 00:00:26,750 --> 00:00:30,520
+Intent和ContentProvider是基于Binder接口
 Intents and content providers are just high-level abstractions on
 
 10
 00:00:30,520 --> 00:00:33,600
+之上的高层次抽象。有一个叫AIDL的语言
 top of the Binder interface. There's a whole language known
 
 11
 00:00:33,600 --> 00:00:37,290
+被用来帮助定义这些接口。我们不会
 as AIDL to help define these interfaces. We're not
 
 12
 00:00:37,290 --> 00:00:39,710
+在这里讲到所有的，但是利用服务和Binder
 going to cover all this here, but there's a lot
 
 13
 00:00:39,710 --> 00:00:42,620
+你已经可以做很多东西了。
 more you can do with services and Binders. One
 
 14
 00:00:42,620 --> 00:00:45,370
+在我们开始前最后一件事，我们会定义一下
 more thing before we start, we're going to define an
 
 15
 00:00:45,370 --> 00:00:48,960
+一个认证器服务和一个认证器。但是它只会
 Authenticator Service and an Authenticator. But it will only
 
 16
 00:00:48,960 --> 00:00:51,780
+被Android的账户框架用以允许我们
 be used by the Android accounts framework to allow us
 
 17
 00:00:51,780 --> 00:00:55,320
+创建新的账户。SyncAdapter需要一个
 to create an account. SyncAdaptor's need an account.
 
 18
