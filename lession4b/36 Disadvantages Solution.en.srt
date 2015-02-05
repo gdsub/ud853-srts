@@ -1,30 +1,49 @@
 1
-00:00:00,400 --> 00:00:02,740
-早期的Android版本并没有装载器
-Early versions of Android didn't have the loader
+00:00:00,320 --> 00:00:02,930
+就像我之前说的一样，早期的Android版本
+As I said before, early versions of Android
 
 2
-00:00:02,740 --> 00:00:06,310
-而现在为了避免直接从UI 代码中直接查询数据库添加了装载器
-pattern. It was added to avoid directly querying the
+00:00:02,930 --> 00:00:07,130
+是没有loader model的。原先被弃用的modle
+didn't have the loader model. The original deprecated model
 
 3
-00:00:06,310 --> 00:00:10,830
-那么，从UI 代码中直接查询数据库
-database from the UI code. What are the disadvantages
+00:00:07,130 --> 00:00:09,908
+造成了帧速率下降，使得许多应用不得不重新查询数据库
+caused frame rate drops whenever many applications had to
 
 4
-00:00:10,830 --> 00:00:14,080
-的缺点是什么呢？
-in directly querying the database from the UI code?
+00:00:09,908 --> 00:00:14,750
+即便是一个简单的应用，所得到的数据库也比我们在Sunshine应用中
+re-query their databases. Even simple ones. Databases get far
 
 5
-00:00:16,129 --> 00:00:18,630
-第一，查询将会消耗很多时间
-The query could take a long time. It could
+00:00:14,750 --> 00:00:16,329
+拥有的复杂得多
+more complex than what we have here in
 
 6
-00:00:18,630 --> 00:00:21,630
-第二，它可能会在完成之前被中止。第三，或者说它其实没有缺点
-be terminated before it completes. Or there are no disadvantages.
+00:00:16,329 --> 00:00:19,630 
+所以第一个答案是确定的
+Sunshine. So the first answer is a definite yes.
 
+7
+00:00:20,660 --> 00:00:22,980
+我们注意到像AsyncTask这样的是如何与UI界面相连接的
+We noted how things like AsyncTask are bound to
+
+8
+00:00:22,980 --> 00:00:25,450
+所以就算是一个细微的方向改变也会杀死查询进程
+the UI, so something as little as an orientation
+
+9
+00:00:25,450 --> 00:00:28,780
+因此，另一个答案也是确定的
+change could kill the query. So that's another definite
+
+10
+00:00:28,780 --> 00:00:33,224
+所以第三个选项肯定是错误的
+yes. So the third option is just a non-starter.

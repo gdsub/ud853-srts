@@ -1,128 +1,160 @@
 1
 00:00:00,120 --> 00:00:02,600
+当我们学习响应式设计时候，我们可以看到
 When we were learning that response in design, we saw that
 
 2
 00:00:02,600 --> 00:00:05,360
+常见的模式都是使用 master detail flow，就和我们
 a common pattern was to use the master detail flow, which
 
 3
 00:00:05,360 --> 00:00:08,410
+将要在sunshine这个应用中使用的一样。这是在平板上的
 is what were going to use for sunshine. Here are the
 
 4
 00:00:08,410 --> 00:00:11,580
+效果。在左边有forecast列表，
 tablet mocks. We have a list of forecasts on the left, and
 
 5
 00:00:11,580 --> 00:00:14,220
+当选中它们的时候，我们可以在右边看到详细的信息格子
 then for the selected item, we see the detail pane on
 
 6
 00:00:14,220 --> 00:00:18,080
+无论是纵向还是横向，这种方法都适用于
 the right. This applies for a seven inch and ten inch tablets.
 
 7
 00:00:18,080 --> 00:00:22,380
+7英寸和十英寸的平板电脑。在纵向模式下，列项
 Both portrait and landscape orientations. In portrait mode, the columns are
 
 8
 00:00:22,380 --> 00:00:25,670
+只是有一点点窄而已，但它仍然是两个窗口的UI界面
 just a little bit narrower, but it's still a two pane UI.
 
 9
 00:00:25,670 --> 00:00:28,220
+这些都会在main activity下实现
 In terms of implementation, all of this will be under the
 
 10
 00:00:28,220 --> 00:00:31,020
+在左边是forecast fragment
 main activity. Then on the left, we have the forecast fragment.
 
 11
 00:00:31,020 --> 00:00:34,070
+在右边是detail fragment
 And then on the right, we have the detail fragment. On
 
 12
 00:00:34,070 --> 00:00:36,846
+而在手机上，我们在main activity下只有左边的这个预报列表
 the phone, we would still have the main activity with the list
 
 13
 00:00:36,846 --> 00:00:39,580
+当选中其中的一个项时，会跳转到
 of forecast. And then selecting an item would still launch the
 
 14
 00:00:39,580 --> 00:00:44,480
+detail activity。这是另一种展示方式。在平板电脑上，
 detail activity. Here's another way to visualize it. On the tablet, we
 
 15
 00:00:44,480 --> 00:00:47,630
+在一个activity上有两个紧接着的fragment，而在手机上
 have two fragments side by side under one activity. And then
 
 16
 00:00:47,630 --> 00:00:51,030
+我们的第一个activity包含了第一个fragment
 on the phone, we have the first activity containing the first fragment.
 
 17
 00:00:51,030 --> 00:00:54,080
+当选中了一个项后，会跳转到包含第二个fragment的activity
 Selecting an item will launch the second activity containing the second
 
 18
 00:00:54,080 --> 00:00:57,640
+我们将把这些分成多个编码任务
 fragment. We're going to break this up into multiple coding tasks until
 
 19
 00:00:57,640 --> 00:01:00,140
+直到我们建立最后一个layout布局。首先，我们为平板电脑建立两个
 we build up the final layout. First we'll build up the
 
 20
 00:01:00,140 --> 00:01:03,460
+窗口UI界面。接下来我们将两个fragment
 two pane UI for tablets. Then we'll hook up the communication
 
 21
 00:01:03,460 --> 00:01:07,070
+之间进行通信，即选择一项在右边的窗口
 between the two fragments, so that's selecting an item replaces the
 
 22
 00:01:07,070 --> 00:01:09,530
+显示详细信息。接着我们会学习如何
 detail pane on the right. Then we'll learn how to show
 
 23
 00:01:09,530 --> 00:01:12,590
+在一个被选中项上展示其状态，所以
 an activated state on the currently selected item, so we know
 
 24
 00:01:12,590 --> 00:01:16,100
+我们就会知道详细信息与哪一个相对应。我们还需要确保
 what the details pane corresponds to. We'll also need to make
 
 25
 00:01:16,100 --> 00:01:18,630
+滚动的位置被维持在一个方向
 sure that the scroll position is maintained across
 
 26
 00:01:18,630 --> 00:01:22,430
+上变化。做完这些以后，我们将更新detail layout
 orientation changes. After that, we'll update the detail layout
 
 27
 00:01:22,430 --> 00:01:24,730
+去优化这些更宽的屏幕。
 so it's optimized for these wider screens. And
 
 28
 00:01:24,730 --> 00:01:27,370
+然后，我们将修改adapter所以在这里，“今天”的布局和
 then we'll modify the adapter so that today's layout
 
 29
 00:01:27,370 --> 00:01:29,340
+“其他天”的布局看起来是一样的。在平板上，“today”的布局
 looks like the other days. There's no special
 
 30
 00:01:29,340 --> 00:01:31,980
+并没有什么特殊之处。所以充满希望的是
 today layout on the tablet. So hopefully it's clear
 
 31
 00:01:31,980 --> 00:01:34,930
+我们如何实现这个在平板上的表现行为的思路是很清晰的
 how we're going to approach implementing this tablet behavior and
 
 32
 00:01:34,930 --> 00:01:36,660
+我们将会一个接一个地去慢慢实现
 we're going to step through it slowly, one by one
 
