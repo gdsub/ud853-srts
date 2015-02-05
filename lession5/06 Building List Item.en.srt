@@ -1,160 +1,200 @@
 1
 00:00:00,350 --> 00:00:02,800
+为了构建我们的ui 我们来从MainActivity的
 To build out our UI, let's start with the wire
 
 2
 00:00:02,800 --> 00:00:05,800
+框图开始  它展示了一个天气预报的列表
 frame for the main activity. It displays a list of
 
 3
 00:00:05,800 --> 00:00:10,265
+每个条目保护一个图标 日期 和天气情况
 forecasts, where each item contains an icon, a date, weather
 
 4
 00:00:10,265 --> 00:00:13,640
+也有最高和最低温度
 description; as well as high and low temperatures for that
 
 5
 00:00:13,640 --> 00:00:17,320
+	由于今天的天气是用户关注最高的
 day. Since today's weather is probably most relevant to the
 
 6
 00:00:17,320 --> 00:00:20,220
+我们给了它更突出的显示相比于
 user, we give more prominence to it as a list
 
 7
 00:00:20,220 --> 00:00:22,830
+另外日期的天气 我们将开始构建列表的条目在
 item compared to the other days. We'll start off by
 
 8
 00:00:22,830 --> 00:00:25,730
+接下来的几天里 因为它是比较简单的
 building the list item layout for future days because it's simpler.
 
 9
 00:00:25,730 --> 00:00:29,030
+然后再开始构建今天的列表条目
 And then afterwards, we'll come back to do the today layout.
 
 10
 00:00:29,030 --> 00:00:33,250
+在当前的实现中 列表的条目xml布局是
 In the current implementation, the list item forecast layout XML is
 
 11
 00:00:33,250 --> 00:00:36,450
+一个含有4个TextView的LinearLayout 我们也需要再修改这个布局
 a horizontal linear layout of four text views. We'll need to
 
 12
 00:00:36,450 --> 00:00:39,460
+以达到框图要求的效果
 modify the layout so that it looks like this wire frame.
 
 13
 00:00:39,460 --> 00:00:41,510
+我们应该一个一个来指导我们掌握了ViewGroup的几个布局
 We should divide and conquer until we can use the view
 
 14
 00:00:41,510 --> 00:00:44,560
+的用法 你能想象一下
 group layouts that we're familiar with. Can you imagine how you'd
 
 15
 00:00:44,560 --> 00:00:46,980
+来把这个ui分解成你所知道的组件吗? 
 break down this UI into components that you know how to
 
 16
 00:00:46,980 --> 00:00:51,840
+作为一个提示 如果我在这画一些分割线呢
 build? As a hint, what if I draw these separators here?
 
 17
 00:00:51,840 --> 00:00:54,160
+你能找到一个方法
 Within those elements, can you find a way to
 
 18
 00:00:54,160 --> 00:00:56,960
+更近一步的进行分解用相应的ViewGroup
 break it down even further with view groups you're familiar
 
 19
 00:00:56,960 --> 00:01:00,280
+你将使用到嵌套的view组 意味着view组里面有子view组
 with? You'll need nested view groups, which means view groups
 
 20
 00:01:00,280 --> 00:01:02,940
+提示一下  这些数据是动态改变的
 with children view groups. As a tip, this data will
 
 21
 00:01:02,940 --> 00:01:05,740
+但是你可以
 be populated dynamically at run time. But you can
 
 22
 00:01:05,740 --> 00:01:08,960
+为了测试先写死一些值就像明天的日期或者
 test it by hard coding some text values such as
 
 23
 00:01:08,960 --> 00:01:12,420
+清楚的气象条件
 Tomorrow for the date or Clear for the weather condition.
 
 24
 00:01:12,420 --> 00:01:16,620
+对于图片 我们指定一个叫做ic_launcher的文件名
 For images, we can specify a placeholder drawable called ic_launcher.
 
 25
 00:01:16,620 --> 00:01:20,850
+之所以这样命名 意味它是一个启动的图标 也叫做应用的
 It's named this way, because it's the launcher icon, which is also
 
 26
 00:01:20,850 --> 00:01:23,820
+icon 这已经被包含到我们的app中了
 known as the app icon. And this is already included in our
 
 27
 00:01:23,820 --> 00:01:26,500
+我们将得到天气的图标在之后的课程里
 app. We'll be getting the rest of our weather icons for our
 
 28
 00:01:26,500 --> 00:01:29,610
+如果你想看下这个布局的样子
 app later in this lesson. If you want to see what this layout
 
 29
 00:01:29,610 --> 00:01:31,980
+你可以点击设备窗格看一下预览
 looks like, you can click on the design pane to see a
 
 30
 00:01:31,980 --> 00:01:34,970
+在右侧 我们看到一个树形展示了不同的view
 preview of it. On the right, we see a component tree listing
 
 31
 00:01:34,970 --> 00:01:37,830
+我们也可以看一个给定的view的属性和值
 out the different views. We can also see for a given view
 
 32
 00:01:37,830 --> 00:01:41,690
+我们可以改变设备的方向当你预览的时候
 what the properties are, and their values. We can change the orientation
 
 33
 00:01:41,690 --> 00:01:43,890
+你也可以选择不同的设备就像
 of the device that your previewing, you can also
 
 34
 00:01:43,890 --> 00:01:47,900
+Nexus 7 或Nexus系列的
 select different devices such as Nexus 7, or Nexus
 
 35
 00:01:47,900 --> 00:01:50,630
+你也可以同时预览多个设备
 10. You can also preview multiple devices at the
 
 36
 00:01:50,630 --> 00:01:52,690
+当你构建你的布局的时候
 same time. As you build out your layout for
 
 37
 00:01:52,690 --> 00:01:54,950
+不要担心字体的颜色或者大小
 this task, don't worry about the font color, or
 
 38
 00:01:54,950 --> 00:01:58,500
+或者之后的任何视觉细节
 font size, or any other visual details until later.
 
 39
 00:01:58,500 --> 00:02:00,590
+当你编译并且允许后 应用应该看起来像这样
 After you compile and run, the app should look
 
 40
 00:02:00,590 --> 00:02:03,780
+选择这个框当你完成的时候
 something like this. Check this box when you're done.
 

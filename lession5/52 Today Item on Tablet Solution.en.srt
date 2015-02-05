@@ -1,36 +1,45 @@
 1
 00:00:00,780 --> 00:00:03,490
+在Main Activity中，我们在forecast fragment中使用
 In the main activity, we tell the forecast fragment to use a
 
 2
 00:00:03,490 --> 00:00:07,030
+一个特殊的today布局当mTwoPane为false的时候
 special today layout if it's one pane mode. In the fragment, we
 
 3
 00:00:07,030 --> 00:00:10,320
+在fragment实现体中，如果这个值不为空，我们就把这个值通过传参进行传递
 pass on this value to the forecast adapter, if it's not null.
 
 4
 00:00:10,320 --> 00:00:13,430
+之所以它可以为空是因为activity中的onCreate方法的调用顺序比
 The reason it could be null is because the activity on Create method
 
 5
 00:00:13,430 --> 00:00:16,900
+fragment的onCreateView方法靠前
 will happen before the fragment on Create View method. And this is
 
 6
 00:00:16,900 --> 00:00:20,580
+forecast adapter在这里初始化。所以我们把这个Boolean变量设在这里
 where the forecast adapter is initialized. So we set the Boolean here,
 
 7
 00:00:20,580 --> 00:00:23,200
+因为它是public方法，所以我们这里这么写。
 as well. The reason we have this code here is because it's
 
 8
 00:00:23,200 --> 00:00:26,180
+将来它可以在这个方法之前或者之后
 a public method. So, in the future, it could be called before or
 
 9
 00:00:26,180 --> 00:00:27,230
+被调用。
 after this method.
 

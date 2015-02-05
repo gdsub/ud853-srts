@@ -1,80 +1,100 @@
 1
 00:00:00,100 --> 00:00:02,890
+为了验证任何一个应用的可理解性，你
 To evaluate how accessible any app is, you
 
 2
 00:00:02,890 --> 00:00:06,160
+能够逐一进行辅助测试的清单。一些步骤
 can step through the Accessibility Testing Checklist. Some of
 
 3
 00:00:06,160 --> 00:00:08,940
+将包含修改在设置选项中的accessibility设置项。
 those steps will involve changing the accessibility settings in
 
 4
 00:00:08,940 --> 00:00:11,100
+一个用户将能够
 the setting's app. A user will be able to
 
 5
 00:00:11,100 --> 00:00:14,800
+选择选项。我们有talkback,captions,
 choose from these options. We have Talkback, Captions,
 
 6
 00:00:14,800 --> 00:00:18,050
+magnification,increased font size，还有更多。我想在这里
 Magnification, increased font size, and more. I want to point
 
 7
 00:00:18,050 --> 00:00:22,140
+特别提一个选项，也就是talkback服务。盲人和
 out one item in particular, Talkback service. Blind and
 
 8
 00:00:22,140 --> 00:00:25,090
+视力障碍的用户能够启用talkback服务。
 low vision users can turn on the Talkback service.
 
 9
 00:00:25,090 --> 00:00:28,340
+它允许他们通过语音反馈对设备进行导航
 It allows them to navigate around the device with spoken feedback
 
 10
 00:00:28,340 --> 00:00:31,260
+在他们与屏幕上的每个UI元素进行交互时。
 as they interact with each UI element on the screen. There
 
 11
 00:00:31,260 --> 00:00:34,310
+存在一些略微不同的手势，比如，选择或者聚焦
 are slightly different gestures, for example, to select or to focus
 
 12
 00:00:34,310 --> 00:00:36,620
+一个选项。如果这是你第一次打开这个服务，
 on an item. If it's the first time you turn it
 
 13
 00:00:36,620 --> 00:00:39,490
+这里有一个教程帮助你一步一步进行。
 on, there will be a tutorial that you can step through.
 
 14
 00:00:39,490 --> 00:00:42,780
+当用户导向到这些元素，talkback服务将朗读
 When the user navigates to these elements, Talkback service will read
 
 15
 00:00:42,780 --> 00:00:46,180
+提供的内容描述。每个没有任何可见文字的UI组件
 aloud the context description provided. Every UI component that doesn't have
 
 16
 00:00:46,180 --> 00:00:47,960
+都有内容描述。
 any visible text has a content
 
 17
 00:00:47,960 --> 00:00:50,710
+使用在清单中的Talkback或者其他辅助功能
 description. Using Talkback or another accessibility
 
 18
 00:00:50,710 --> 00:00:54,270
+将让Sunshine应用发声。找到并修改至少一个
 tool from the checklist will let the sunshine out. Find and fix at least one
 
 19
 00:00:54,270 --> 00:00:56,660
+在应用中的可理解性问题。然后在课程讨论论坛中分享
 accessibility issue in the app. Then please share
 
 20
 00:00:56,660 --> 00:00:58,250
+你做了什么。
 what you did in the class discussion forum.
 

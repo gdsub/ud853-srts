@@ -1,32 +1,40 @@
 1
 00:00:00,170 --> 00:00:02,009
+自己实现红线的其他部分。
 Implement the rest of the red lines on your own.
 
 2
 00:00:02,009 --> 00:00:04,880
+在手机和平板上进行横向和纵向的测试。
 Test on the phone and tablet, and in both orientations.
 
 3
 00:00:04,880 --> 00:00:07,260
+这里有一个很有用的工具帮助你实现红线部分。
 Here's a useful tool to help you with red lines.
 
 4
 00:00:07,260 --> 00:00:10,210
+在开发者选项中，你能点击显示布局的边界。当
 Under developer options, you can click show layout bounds. When
 
 5
 00:00:10,210 --> 00:00:12,070
+你回到Sunshine应用，你能看到
 you go back to the Sunshine app, you can see
 
 6
 00:00:12,070 --> 00:00:14,870
+全部视图的边界，包括内边距和外边距。
 the bounds for all the views, including padding and margin.
 
 7
 00:00:14,870 --> 00:00:17,380
+当你做完了，看看在下面链接中的我们的实现，
 When you're done, feel free to check with our implementation
 
 8
 00:00:17,380 --> 00:00:20,330
+然后勾选选项继续。
 at the link provided below, then check the box to continue
 

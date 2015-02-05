@@ -1,37 +1,46 @@
 1
 00:00:00,270 --> 00:00:03,070
+在平板的网格图中，当一个列表被选择后，
 In the tablet wireframes, when a list item is selected
 
 2
 00:00:03,070 --> 00:00:06,530
+会显示一个蓝色的激活框的背景。通过设置背景的状态
 it shows this blue activated state background. This can be done
 
 3
 00:00:06,530 --> 00:00:08,430
+列表可以被设置成为
 by setting the background of the list item to be
 
 4
 00:00:08,430 --> 00:00:10,990
+可绘型。我们看看文档是怎么在以下说明
 a state drawable. We can look at the documentation for the
 
 5
 00:00:10,990 --> 00:00:12,970
+ StateListDrawable 的。
 StateListDrawable, which is linked below.
 
 6
 00:00:12,970 --> 00:00:14,700
+本质上，一个StateListDrawable 可以允许你
 Essentially a StateListDrawable allows you
 
 7
 00:00:14,700 --> 00:00:18,960
+基于不同的界面特别的选出不同的可绘型模板。
 to specify different drawables based on the state of the view.
 
 8
 00:00:18,960 --> 00:00:22,180
+我们提供了StateListDrawable的一些代码。把这些代码
 We provide you the code for the StateListDrawable. Drop it in
 
 9
 00:00:22,180 --> 00:00:25,520
+放进res目录下的一个drawable 文件夹里。
 by creating a drawable folder under the res directory. When set
 
 10

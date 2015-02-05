@@ -1,212 +1,265 @@
 1
 00:00:00,220 --> 00:00:02,670
+是时候把红色标记的数值在main activity里进行实现了
 It's time to implement the red lines for the main activity. We
 
 2
 00:00:02,670 --> 00:00:04,939
+我们先实现其中一部分，这样你就知道如何操作了
 can do one part together so that you get the hang of it.
 
 3
 00:00:04,939 --> 00:00:09,640
+首先我们先设置Forecast布局中的列表项
 We begin by styling the list item Forecast Layout. The red line specifies
 
 4
 00:00:09,640 --> 00:00:12,240
+标记中说明了这个图片应该是32dp x 32dp的。
 that the image should be 32 dp by 32 dp. We could hard
 
 5
 00:00:12,240 --> 00:00:15,100
+我们可以在代码中直接设置图片大小为32dp x 32dp，但是这个效果和
 code the image view to be 32 by 32 dp, but it's actually
 
 6
 00:00:15,100 --> 00:00:18,330
+在布局中设置宽高为"wrap_content"是一样的
 the same as leaving it as wrapped content for height and width. To
 
 7
 00:00:18,330 --> 00:00:21,970
+如果需要知道设置wrap_content时图标的大小是多少，我们可以打开
 know what the icon size would be if we wrap content, we open
 
 8
 00:00:21,970 --> 00:00:25,370
+MDPI版本的资源图标，这里我们可以看到它的尺寸是
 up the MDPI version of the icon and we do verify that it
 
 9
 00:00:25,370 --> 00:00:28,450
+32px x 32px(px指像素)。无论我们设置实际值还是
 is 32 pixels by 32 pixels. Whether we hard code it
 
 10
 00:00:28,450 --> 00:00:31,400
+使用wrap_content, 从视觉上看，它都是一样的
 or just add wrap content, visually, the imagine will still look
 
 11
 00:00:31,400 --> 00:00:34,310
+但是考虑到程序的灵活性
 the same, but in the future it will be more flexible
 
 12
 00:00:34,310 --> 00:00:38,210
+我们可以设置wrap_content，使程序能够自适应图片尺寸
 if we just specify wrap content in case the image size changes.
 
 13
 00:00:38,210 --> 00:00:41,150
+接下来我们来处理文字。在ice cream sandwich以及更高版本的android系统中
 Next we style the text. On ice cream sandwich and above,
 
 14
 00:00:41,150 --> 00:00:44,060
+Roboto是默认字体。
 Roboto is the default font for text views. It is created
 
 15
 00:00:44,060 --> 00:00:47,310
+它是针对UI的需要和对高分辨率显示屏的优化所定制的。
 specifically to satisfy the requirements of UI and to optimize for
 
 16
 00:00:47,310 --> 00:00:50,510
+红色标记表明这里的字体是
 high density screens. The red line indicates that the font family is
 
 17
 00:00:50,510 --> 00:00:53,130
+Roboto sans-serif-condensed，所以我们在代码里这样设置
 Roboto sans serif condensed, so we add that to the
 
 18
 00:00:53,130 --> 00:00:56,240
+对于字体大小，如果在程序中包含太多不同大小的字体
 code. On the topic of font sizes, having too many font
 
 19
 00:00:56,240 --> 00:00:58,820
+会使用户分不清楚程序的前后层次
 sizes in your app can confuse your user about the visual
 
 20
 00:00:58,820 --> 00:01:01,540
+也会混淆主要内容和次要内容
 hierarchy of your app, as to what's important and what's not
 
 21
 00:01:01,540 --> 00:01:05,110
+Android设置指南中推荐使用这四种尺寸来
 important. The Android design guide recommends these four type sizes
 
 22
 00:01:05,110 --> 00:01:08,800
+保证平台和用户体验的一致性
 for consistency with a platform and for user experience. In our
 
 23
 00:01:08,800 --> 00:01:11,710
+的程序中，我们统一使用标准的字体大小。当然了，有一些是
 app, we stick to the standard type sizes. And that's an
 
 24
 00:01:11,710 --> 00:01:15,540
+刻意设置的大小，比如这个较大的温度值
 intentional part of the design, such as the large temperature values.
 
 25
 00:01:15,540 --> 00:01:17,750
+所以这里红色标记说明了日期文本的大小为22sp
 Hence, when the red line say that the date text
 
 26
 00:01:17,750 --> 00:01:21,100
+我们可以把代码中文本的尺寸设置为22sp
 should be 22sp for font size, we could specify Android
 
 27
 00:01:21,100 --> 00:01:24,420
+但是Andorid所推荐的
 text size to be 22sp, but the text appearance large
 
 28
 00:01:24,420 --> 00:01:27,210
+最大文本尺寸已经是22sp了。对了这里注意一下字体尺寸的
 attribute already maps to that value. Note that the font
 
 29
 00:01:27,210 --> 00:01:30,520
+单位是sp而不是dips。SP代表scaled pixels
 sizes are specified in S-P, not dips. S-P stands for
 
 30
 00:01:30,520 --> 00:01:33,130
+它参照当前设备系统字体大小的设置进行自动放大或者缩小
 scaled pixels, so you can scale with the device font
 
 31
 00:01:33,130 --> 00:01:36,771
+在我们的程序中，我们把字体大小设置为textAppearanceLarge
 size. In our app, we specify text appearance large and
 
 32
 00:01:36,771 --> 00:01:41,090
+和textAppearanceSmall。也就是分别设置了22sp和14sp
 text appearance small, which will give up 22spand 14sp respectively.
 
 33
 00:01:41,090 --> 00:01:43,880
+默认字体颜色是黑色的，所以我们无需
 The default font color is black, so we don't need to specify
 
 34
 00:01:43,880 --> 00:01:47,110
+再在我们的程序中指定字体颜色
 the android text color attribute on our text views. Let's look at the
 
 35
 00:01:47,110 --> 00:01:50,790
+下面我们来看一下列表项中的间隔。列表项中有三个区域
 spacing for the elements within the list item now. We have three children.
 
 36
 00:01:50,790 --> 00:01:53,680
+第一个区域有60dp宽，里面的图片是居中放置的。
 The first one is 60 dp wide, with the image centered inside of
 
 37
 00:01:53,680 --> 00:01:56,124
+所以我们可以在imageView周围添加一个FrameLayout
 it. So we can add a frame layout around the image view
 
 38
 00:01:56,124 --> 00:01:58,601
+然后把gravity属性设置为center。
 and set the gravity to be center on the image, that way the
 
 39
 00:01:58,601 --> 00:02:02,695
+这样一来图片就会在父容器中自动居中。对于另外两列，我们不应该
 image centers itself within the parent. For the other two columns, we shouldn't
 
 40
 00:02:02,695 --> 00:02:06,150
+设置这么高的dp值。因为这些布局不会随着设备而自动改变尺寸
 hard code such high dp values. Because otherwise the layout won't scale across
 
 41
 00:02:06,150 --> 00:02:09,650
+我们使用linearLayout的weight属性
 other devices. Instead, we can use linear layout weights, the weight of
 
 42
 00:02:09,650 --> 00:02:12,610
+这里的weight值为7，而这里是5。我们可以尝试不同的数值
 seven here, and the weight of five. We just tried different values
 
 43
 00:02:12,610 --> 00:02:16,390
+知道这个效果接近这个真实值。
 until we got approximately equal to these values. The trick in doing
 
 44
 00:02:16,390 --> 00:02:19,490
+这里处理红色标记的技巧在于你既需要满足视觉细节
 red lines is that you want to match the visual specs, but
 
 45
 00:02:19,490 --> 00:02:21,910
+又需要保持代码的灵活性，
 you also want to be flexible in the code, so that it
 
 46
 00:02:21,910 --> 00:02:24,840
+使程序能够运行在不同尺寸的屏幕上。这就是list_item_forecast布局
 adapts to different screen sizes. And this is what the code looks
 
 47
 00:02:24,840 --> 00:02:26,770
+而实现代码。
 like for the list_items_forecast layout. We
 
 48
 00:02:26,770 --> 00:02:28,930
+我们用到了一个横向对齐的linearLayout,
 have a horizontal linear layout, containing
 
 49
 00:02:28,930 --> 00:02:31,530
+里面有一个包含ImageView的FrameLayout。然后还用到一个纵向对齐的
 the frame layout with the image view. Then we have a vertical
 
 50
 00:02:31,530 --> 00:02:35,050
+LinearLayout，它的weight值为7。而另一个纵向对齐的LinearLayout的weight值
 linear layout with weight seven. And then we have another vertical layout
 
 51
 00:02:35,050 --> 00:02:37,620
+为5。你可以从下面的连接中获得代码文件。
 with weight five. We can check the link below for the full
 
 52
 00:02:37,620 --> 00:02:40,650
+当你完成后，程序就是介个样子滴。
 code file. This is what is looks like when you're done. These
 
 53
 00:02:40,650 --> 00:02:43,110
+下面这些列表项已经搞定了，today项我们还没处理。
 items looks polished, but we haven't gotten to the today item yet.
 

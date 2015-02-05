@@ -1,96 +1,120 @@
 1
 00:00:00,370 --> 00:00:02,800
+回到线稿。在这个手机布局中，
 Going back to the wire frames. In the phone layout, we
 
 2
 00:00:02,800 --> 00:00:05,570
+我们想要today项稍微大一点儿。
 wanted the today item to be a little bit bigger. But on
 
 3
 00:00:05,570 --> 00:00:07,410
+但在平板中，我们希望他就跟其他项一样就好，
 the tablets, we just want it to look like all the
 
 4
 00:00:07,410 --> 00:00:11,970
+因为我们还有一个展开面板在那儿。
 other items, because we have an expanded detail pane here. To do
 
 5
 00:00:11,970 --> 00:00:15,320
+要在ForecastAdapter的newView方法中这么做，我们应当为返回
 this in the forecast adapter new view method, we should return
 
 6
 00:00:15,320 --> 00:00:19,060
+列表项目的布局，而非today布局
 the layout for a list item forecast not for the today layout.
 
 7
 00:00:19,060 --> 00:00:21,760
+然后在bindView方法中，我们应当为today项
 Then in the bind view method, for the today item, we
 
 8
 00:00:21,760 --> 00:00:25,470
+使用灰色图标，而不是有颜色的图标。
 should use the gray icon instead of the colored icon. These decisions
 
 9
 00:00:25,470 --> 00:00:29,140
+这一决定由getItemViewType方法来控制。
 get controlled by the return value of the getItemViewType method. Therefore,
 
 10
 00:00:29,140 --> 00:00:32,830
+因此，我们修改getItemViewType方法，这样在零的位置上，
 we modify the getItemViewType method so that at the zero position,
 
 11
 00:00:32,830 --> 00:00:35,080
+如果我们必须使用特殊的today布局，
 if we have to use the special today layout, then we
 
 12
 00:00:35,080 --> 00:00:38,240
+我们就返回view type为today。否则，如果我们不想用
 return view type today. Otherwise, if we shouldn't use the special
 
 13
 00:00:38,240 --> 00:00:40,620
+特别的今日布局，那我们只要返回所有将来日
 today layout, then we should just return the view type for
 
 14
 00:00:40,620 --> 00:00:43,800
+的view type就好。这个布尔值是由设值方法控制的。
 all future days. This Boolean is controlled by the setter method.
 
 15
 00:00:43,800 --> 00:00:46,790
+要访问这一布尔值，我们在ForecastAdapter中创一个公共的设值方法。
 To access this Boolean, we created a public setter method on
 
 16
 00:00:46,790 --> 00:00:50,620
+但是谁知道如何设置这个值属性呢？
 the forecast adapter. But who knows how to set this value properly?
 
 17
 00:00:50,620 --> 00:00:52,380
+好，MainActivity会知道他是单面板
 Well the main activity knows whether it's one pane,
 
 18
 00:00:52,380 --> 00:00:54,730
+还是双面板UI的。所以，他可以决定
 or two pane UI. So, it can decide whether
 
 19
 00:00:54,730 --> 00:00:56,650
+我们该不该特殊的today布局。
 we should use the special today layout or not.
 
 20
 00:00:57,670 --> 00:01:00,040
+我们在此没有访问ForecastAdapter，但
 We don't have access to the forecast adapter here, but
 
 21
 00:01:00,040 --> 00:01:03,020
+我们可以从ForecastFragment中取得其值。
 we can plumb the value through the forecast fragment.
 
 22
 00:01:03,020 --> 00:01:05,319
+要访问ForecastFragment，我们可以
 To get access to the forecast fragment, we can ask
 
 23
 00:01:05,319 --> 00:01:07,350
+请求FragmentManager，并把fragmentID传给他。
 the fragment manager and pass it the fragment ID.
 
 24
 00:01:08,600 --> 00:01:10,710
+完成修改代码，于是app看起来就像这样。
 Finish changing the code so the app looks like this.
 

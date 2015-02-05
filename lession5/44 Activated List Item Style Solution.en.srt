@@ -1,52 +1,65 @@
-1
+﻿1
 00:00:00,150 --> 00:00:03,240
+通过这个文档，我们需要的是单选模式
 From the documentation, we want singleChoice, mode so
 
 2
 00:00:03,240 --> 00:00:06,080
+这样可以保证同一时刻只有一个列表项显示被选中
 that the list item only shows one selected item at a time.
 
 3
 00:00:06,080 --> 00:00:09,540
+你可以在fragment_main布局中的listview控件里声明这个属性
 You can declare this attribute on the list view in the fragment_main file.
 
 4
 00:00:09,540 --> 00:00:12,920
+然而，我们并不希望在单一屏幕模式时指定选择模式
 However, we don't want to specify ChoiceMode in one ping mode. So, to
 
 5
 00:00:12,920 --> 00:00:16,860
+所以，为了可以有不同的代码路径，我们把这个布局文件复制到
 have these different code paths, we could copy the file in the Layout folder and
 
 6
 00:00:16,860 --> 00:00:19,870
+Layout-sw600dp文件夹中
 put it in the Layout and put it in the Layout-sw600dp folder.
 
 7
 00:00:19,870 --> 00:00:23,460
+更好的解决方案是声明一个style，这样，我们只有一个布局文件
 A better solution is to declare a style. So, we have one layout file but
 
 8
 00:00:23,460 --> 00:00:27,281
+但拥有不同的style.在values文件夹中的Base style 文件里
 different styles. In the Base styles file in the values folder,
 
 9
 00:00:27,281 --> 00:00:30,580
+我们声明一个ForecastListStyle。先让它空着就可以
 we declare ForecastListStyle. We leave it empty because we don't need to
 
 10
 00:00:30,580 --> 00:00:35,640
+因为还不需要指定选择模式。在Layout-sw600dp文件夹里创建一个新的style文件
 specify ChoiceMode. We create a new styles file in the values-sw600dp folder.
 
 11
 00:00:35,640 --> 00:00:40,390
+这两种情况下，ForecastListStyle包含了选择模式
 In the two pane case, the ForecastListStyle does include the ChoiceMode.
 
 12
 00:00:40,390 --> 00:00:43,840
+这两个文件有不同数量的style。如果不是声明在更高层级的文件夹里
 The two files have a different number of styles. If it's not declared in
 
 13
 00:00:43,840 --> 00:00:46,410
+它会退回基本style
 a higher folder, then it will just fall back to the Base style.
 
