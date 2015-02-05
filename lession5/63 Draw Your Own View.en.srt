@@ -1,132 +1,164 @@
 1
 00:00:00,160 --> 00:00:02,340
+现在到了通过向我们的新View中绘制内容来
 Now, it's time to finish creating our new view
 
 2
 00:00:02,340 --> 00:00:05,460
+完成它的时候了  我们在自定义View的
 by drawing its contents. And, we do that within our
 
 3
 00:00:05,460 --> 00:00:08,900
+onDraw()方法中进行绘制  随着Android画布API的发展
 Custom View's onDraw method. Now, the Android Canvas is pretty
 
 4
 00:00:08,900 --> 00:00:11,790
+它现在已经非常标准  它使用
 standard as far as canvas API's go. It uses the
 
 5
 00:00:11,790 --> 00:00:14,320
+画家算法  这意味着你后绘制的新内容会
 Painter's algorithm, meaning that each new thing you paint
 
 6
 00:00:14,320 --> 00:00:18,460
+覆盖之前的内容  Canvas和Paint类
 will cover anything beneath it. The Canvas and Paint classes
 
 7
 00:00:18,460 --> 00:00:20,770
+提供很多的画笔和其它帮助来根据
 offer a variety of brushes and helpers to draw and
 
 8
 00:00:20,770 --> 00:00:25,080
+颜色、图案、倾斜度和图片来绘制或者填充线条、方框、圆以及文字
 fill lines, boxes, circles, and text with colors, patterns, gradients,
 
 9
 00:00:25,080 --> 00:00:28,050
+同时还提供在你绘制的时候进行移动、旋转和
 and images, as well as offering the ability to move, rotate,
 
 10
 00:00:28,050 --> 00:00:31,110
+放大缩小画布的功能  我可以在这里
 and scale the canvas while you draw. I could spend a lot
 
 11
 00:00:31,110 --> 00:00:34,240
+花很多时间来讲述到底怎么使用这些工具
 of time here detailing exactly how to use each of these tools,
 
 12
 00:00:34,240 --> 00:00:36,940
+但是Android这方面的内容没有什么特殊的  而且它们在下面链接的文档中
 but there's nothing unique to Android and it's covered really well on
 
 13
 00:00:36,940 --> 00:00:41,380
+有很详细的描述  我们可以这样来创建非常高级的
 the documentation link below. It is possible though to create pretty advanced
 
 14
 00:00:41,380 --> 00:00:44,550
+界面  举个例子  比如我们先画一个圆
 UIs this way. For example, for example, if we start by drawing
 
 15
 00:00:44,550 --> 00:00:47,330
+再添加第二个圆  然后你只需要
 a circle and then add a second circle and then you just
 
 16
 00:00:47,330 --> 00:00:50,120
+绘制剩下的指南针  这是我预先准备的
 need to finish drawing the rest of the compass. Here's an example
 
 17
 00:00:50,120 --> 00:00:52,780
+一个例子  你绘制的每一个View的规格
 I prepared earlier. The specifics of what you draw are
 
 18
 00:00:52,780 --> 00:00:55,700
+都不尽相同  但是有一点相同的是
 different for every view, but one thing that is consistent
 
 19
 00:00:55,700 --> 00:00:58,650
+你一直是在一个资源受限的设备上进行绘制的
 is the resource constraint device you're drawing on. And that
 
 20
 00:00:58,650 --> 00:01:01,150
+onDraw()方法在每次屏幕刷新的时候都会被调用
 the onDraw method be called every time the screen is
 
 21
 00:01:01,150 --> 00:01:04,739
+每秒钟会有很多次  这意味着
 refreshed, potentially many times a second; that means any object
 
 22
 00:01:04,739 --> 00:01:08,130
-created here within your onDraw method, including things like paint
+你在onDraw()方法中创建的任何对象  包括Paint对象
+created here within your onDraw method, including things like Paint
 
 23
 00:01:08,130 --> 00:01:12,100
+都会频繁地被创建和销毁
 objects, will be created and destroyed at an alarming frequency.
 
 24
 00:01:12,100 --> 00:01:15,680
+对象的创建和销毁在Android上的代价会很大
 Object creation and destruction can be expensive on Android; potentially
 
 25
 00:01:15,680 --> 00:01:19,110
+可能在垃圾回收开始以后影响到界面的流畅性
 effecting the smoothness of your UI, when garbage collection is initiated.
 
 26
 00:01:19,110 --> 00:01:22,030
+解决的方案就是将任何对象的使用范围从
 The solution? Move the scope of any object used within the
 
 27
 00:01:22,030 --> 00:01:25,930
+onDraw()循环中移到类的作用域中  继续去覆写
 onDraw loop, into the class scope. Go ahead and override the
 
 28
 00:01:25,930 --> 00:01:29,790
+你的新View中的onDraw()方法  绘制新的控制界面
 onDraw method within your new view and draw the new control.
 
 29
 00:01:29,790 --> 00:01:32,380
+其实  为什么不趁这个机会创建一个
 In fact, why not take this opportunity to create a custom
 
 30
 00:01:32,380 --> 00:01:35,400
+同时显示风速、风向和阳光的自定义控制界面呢
 control that can display the wind speed and direction fused within
 
 31
 00:01:35,400 --> 00:01:38,070
+完成以后  你就可以使用它的完全限定名
 sunshine. Once you're done, you can add it to your layer
 
 32
 00:01:38,070 --> 00:01:40,830
+来把它添加到XML文件的布局层次中
 using it it's full package name and class name in the XML
 
 33
 00:01:40,830 --> 00:01:45,370
+就像这样  运行一下  然后把你的新View的截图发到论坛中
 like this. Run it and then post a screenshot of your new view into the forum.
-

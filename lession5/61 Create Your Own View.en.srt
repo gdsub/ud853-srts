@@ -1,32 +1,39 @@
 1
 00:00:00,420 --> 00:00:03,070
+现在让我们趁这个机会继续创建我们的
 Now let's take this opportunity to go ahead and create our
 
 2
 00:00:03,070 --> 00:00:05,960
+自定义View  我们并没有明确需要哪种
 own custom view. And we don't need one in particular for
 
 3
 00:00:05,960 --> 00:00:09,320
+自定义View  所以你可以自由选择  对我来说
 sunshine, so you can go ahead and choose anything. Personally, I'm
 
 4
 00:00:09,320 --> 00:00:12,240
+我是一个指南针的粉丝  这正是我在写的东西
 a fan of compass control, so that's what I've been building. You'll
 
 5
 00:00:12,240 --> 00:00:15,820
+你需要三个构造方法  分别用来支持从代码动态创建View
 need to include three constructors to support your view being created
 
 6
 00:00:15,820 --> 00:00:19,660
+以及通过资源文件或者扩展布局的方法创建View  然后简单地覆写
 in code through a resource or through inflation, then simply override the
 
 7
 00:00:19,660 --> 00:00:23,550
+onMeasure()方法并且设置大小  完成以后勾选上这里
 onMeasure method and set your dimensions. Click here when you're done,
 
 8
 00:00:23,550 --> 00:00:26,280
+现在你可以在你的gear手表上绘制内容了
 and, you're ready to get started drawing the contents of your gear.
-
