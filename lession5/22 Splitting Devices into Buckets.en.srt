@@ -1,112 +1,140 @@
 1
 00:00:00,110 --> 00:00:02,160
+我们的应用需要适配所有
 So, we need to build an app that adapts well to
 
 2
 00:00:02,160 --> 00:00:05,360
+不同的设备  但是设备的类型太多了
 all different devices. But there's so many types of devices. So,
 
 3
 00:00:05,360 --> 00:00:07,680
+我们如何下手呢  我们可以先按照尺寸
 where do we begin? Well, we can start by grouping them
 
 4
 00:00:07,680 --> 00:00:10,930
+大小来区分他们  我们把手机
 into buckets based on physical size. We can have a bucket for
 
 5
 00:00:10,930 --> 00:00:15,390
+和7寸、10寸的平板
 phones and a bucket for seven inch tablets. And a bucket
 
 6
 00:00:15,390 --> 00:00:19,320
+分成三类  你也可以根据屏幕宽度
 for ten inch tablets as well. You can go even more granular
 
 7
 00:00:19,320 --> 00:00:22,060
+来区分他们  不过这都是一些较为常见的
 based on screen width. But these are the most common buckets
 
 8
 00:00:22,060 --> 00:00:26,260
+区分方法  事实上只根据大小来区分他们是远远不够的
 that you'll need. Now, classifying based on size alone is not enough.
 
 9
 00:00:26,260 --> 00:00:28,950
+即便他们的大小相同  他们的屏幕密度(DPI)
 Even among devices of the same size, there's still
 
 10
 00:00:28,950 --> 00:00:32,870
+也不尽相同  屏幕密度的计算方法是
 a wide range of screen densities. Screen density is calculated
 
 11
 00:00:32,870 --> 00:00:35,270
+设备的每英寸有多少的像素点
 from the number of dots per inch on the device
 
 12
 00:00:35,270 --> 00:00:38,990
+简称DPI  最小的是Low DPI
 or DPI. Scale starts off with low density devices, also
 
 13
 00:00:38,990 --> 00:00:42,120
+它每英寸仅有120个像素点
 known as LDPI devices. It has about 120 dots
 
 14
 00:00:42,120 --> 00:00:45,870
+再高一点的是 MDPI、HDPI 再高的就是 
 per inch, then it increases to medium density, high density
 
 15
 00:00:45,870 --> 00:00:48,960
+XDPI、XXDPI、XXXDPI 等等  它越高就代表这
 all the way to extra, extra, extra high density devices
 
 16
 00:00:48,960 --> 00:00:51,400
+单位英寸可以显示的像素点越多
 were the number of dots per inch is much higher.
 
 17
 00:00:51,400 --> 00:00:53,260
+那么我们该如何让我们的应用
 So, how do we build an app that accounts for
 
 18
 00:00:53,260 --> 00:00:57,390
+适配这么多不同的屏幕密度呢  我们指定布局的尺寸时
 all these different screen densities? Well, when we specify layout dimensions,
 
 19
 00:00:57,390 --> 00:01:01,590
+我们应该知道我们不能用像素来做大小标识了
 we quickly realize that we can't use pixels. For example,
 
 20
 00:01:01,590 --> 00:01:04,360
+比如一个48像素大小的按钮  在MDPI的设备上看起来还可以
 a 48 pixel button that looks fine on an MDPI device
 
 21
 00:01:04,360 --> 00:01:07,810
+但是在高清的设备上
 will look much smaller on a higher density device where
 
 22
 00:01:07,810 --> 00:01:11,180
+估计就会显得48像素
 the pixels are more compacted and the physical size of 48
 
 23
 00:01:11,180 --> 00:01:13,870
+太低了  用户肯定希望这个按钮很容易
 pixels is much smaller. The user wants a button to be
 
 24
 00:01:13,870 --> 00:01:17,220
+点击  而且按钮不应该随着屏幕的大小而改变
 easily tappable, and so it shouldn't change based on screen density.
 
 25
 00:01:17,220 --> 00:01:19,970
+所以我们需要一个统一的计量单位来表示物理大小
 So we need a consistent unit of measure to define physical
 
 26
 00:01:19,970 --> 00:01:24,610
+在Android里  我们称之为与密度无关的像素  或者叫 dips
 size, and in Android we call that density-independent pixels or dips
 
 27
 00:01:24,610 --> 00:01:28,460
+或者称之为dp  所以一个40dp 的按钮
 or dp for short. That way, a 48 dp button will
 
 28
 00:01:28,460 --> 00:01:31,750
+在所有不同大小设备里看起来就是一样的了
 be the same physical size across all these different screen densities.
 
