@@ -75,12 +75,12 @@ there's a cost associated with supporting some of these older versions.
 
 16
 00:01:05,040 --> 00:01:07,830
-比如像创建不同的执行路径都不可用
+比如像兼容不可用
 Things like creating different execution paths around deprecated or
 
 17
 00:01:07,830 --> 00:01:12,730
-或更新API呈现一种带有不同功能的不一样的用户体验
+或更新的API或者针对不同功能进行不一样的展示效果及用户体验
 update APIs or presenting a different UX to devices with different features. So
 
 18
@@ -100,7 +100,7 @@ new APIs and hardware support. So it may not make sense to
 
 21
 00:01:24,900 --> 00:01:28,190
-你的最小功能集的设备上运行是没有意义的
+您的最小功能集的设备上运行是没有意义的
 make your app available to devices that don't support your minimum feature set.
 
 22
@@ -120,22 +120,22 @@ An app targeted to a certain API will continue to be forward compatible on
 
 25
 00:01:41,060 --> 00:01:45,650
-该平台使用目标SDK的值以防
+该平台使用目标SDK的兼容模式当
 future releases. The platform uses the Target SDK values in case a future
 
 26
 00:01:45,650 --> 00:01:50,040
-后续的平台显著的改变预期的行为
+后续的平台发生重大变更
 platform makes a significant change to expected behavior. This ensures your app
 
 27
 00:01:50,040 --> 00:01:54,620
-这样可以确保您的应用程序在用户的手机升级的时候仍然可用
+这样可以确保您的应用程序在用户的手机升级之后仍然可用
 doesn't break when a user's phone gets upgraded. If you're developing a new app,
 
 28
 00:01:54,620 --> 00:01:58,630
-如果你正在开发一个新的应用程序  没有任何理由去针对某一个版本作为目标SDK比使用最新版本的Android更为合适
+如果你正在开发一个新的应用程序  没有任何理由去拒绝使用最新版本Android来作为你的目标SDK
 there's really no reason to target anything but the latest Android version. And
 
 29
