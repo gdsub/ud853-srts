@@ -1,360 +1,450 @@
 1
 00:00:00,150 --> 00:00:03,730
+好 为近一步写超赞的app就像你们
 Great. So to move one step closer to building awesome apps like the ones you
 
 2
 00:00:03,730 --> 00:00:06,880
+在论坛里面所提交的那样 我们将会学习如何写
 submitted to the discussion forum, we're going to learn about how to build up
 
 3
 00:00:06,880 --> 00:00:11,290
+sunshine app的页面 我们将做一个快速回顾 帮助你回想起在第一节课所学的内容
 the Sunshine UI. We'll do a quick recap first to help remind you of the concepts
 
 4
 00:00:11,290 --> 00:00:16,940
+我们使用views来写android的页面
 that you learned in lesson one. In order to build a UI in Android, we use views.
 
 5
 00:00:16,940 --> 00:00:20,400
+Views是屏幕上的长方形  你有可能看见也有可能看不见它的边框
 Views are rectangles on the screen, and we may or may not see the borders of
 
 6
 00:00:20,400 --> 00:00:24,890
+实际上 绘图和事件处理都在view中进行 并且 
 that rectangle. Essentially, a view handles drawing and event handling. And
 
 7
 00:00:24,890 --> 00:00:29,790
+所有android中的基本控件都是继承这个基类(View)  Android的设计指南
 all the basic widgets in Android extend from this base class. The Android design
 
 8
 00:00:29,790 --> 00:00:35,450
+有构建app模块的例子  例如
 guide has visual examples of these basic building blocks of apps. For example,
 
 9
 00:00:35,450 --> 00:00:38,800
+我们有基本的文本显示控件 以及可编辑的文本控件
 we have the basic text field, as well as editable text fields.
 
 10
 00:00:38,800 --> 00:00:42,970
+他们有自动补全以及文本选择功能
 We can do auto complete on them, and it comes with text selection as well.
 
 11
 00:00:42,970 --> 00:00:46,640
+它可以弹出一个action bar 你可以对文本进行复制和粘贴
 Where it pops up a contextual action bar, for you to copy and paste.
 
 12
 00:00:46,640 --> 00:00:51,840
+当然也有按钮控件 也有使用无边框的按钮一个建议(设计指南上) 
 There are also buttons, and also a suggestion to use borderless buttons.
 
 13
 00:00:51,840 --> 00:00:55,210
+它也有spinners控件 在上面你可以从下拉菜单中进行选择
 It also has spinners, where you can select from a drop down menu.
 
 14
 00:00:55,210 --> 00:00:58,330
+也有复选框 单选框 切换开关 和
 There's also checkboxes, radio buttons, on/off switches, and
 
 15
 00:00:58,330 --> 00:01:02,720
+一些进度条控件  除此之外 还有很多基本控件(大大的有)
 they also have some progress bars. There's a ton more basic widgets here, and
 
 16
 00:01:02,720 --> 00:01:07,390
+Java文档上也有 看一下控件  即使他们没有在这列举到
 also in the Java docs. Check those out. And even ones that aren't listed here,
 
 17
 00:01:07,390 --> 00:01:10,600
+所以 你会用到的 当你需要的时候
 so. You'll come across them as you need them.
 
 18
 00:01:10,600 --> 00:01:14,390
+现在 如果你想一起展示多个view 你需要用一个view组
 Now, if you want to display multiple views together, you'll need a view group.
 
 19
 00:01:14,390 --> 00:01:17,640
+一个view组是子view的容器 这里有几个Dan(人名)之前介绍过的ViewGroup
 A view group is a container for children views. Here are a couple of
 
 20
 00:01:17,640 --> 00:01:22,030
+首选 看一下FrameLayout
 common view groups, which Dan introduced earlier. First, we have a frame layout.
 
 21
 00:01:22,030 --> 00:01:25,230
+子view会默认添加到它的左上方
 A child that gets added will be default positioned in the top left corner of
 
 22
 00:01:25,230 --> 00:01:29,530
+当你添加第二个view的时候 它会覆盖第一个view
 the view group. If you add a second view here, it will overlap the first one. So
 
 23
 00:01:29,530 --> 00:01:33,840
+所以 通常一个FrameLayout放一个子view 接下来 看LinearLayout
 typically we only have one child per frame layout. Next we have a linear layout,
 
 24
 00:01:33,840 --> 00:01:37,900
+它的子view可以横着或者竖着排列
 it's composed of children either in a horizontal row or in a vertical column.
 
 25
 00:01:37,900 --> 00:01:41,590
+我们也可以定义子view的比重  比重属性允许我们
 We can also specify layout weight. Lay out weight allows us to
 
 26
 00:01:41,590 --> 00:01:45,410
+指定子view的宽度或者高度 例如
 distribute the width or height of a parent across the children. For example,
 
 27
 00:01:45,410 --> 00:01:48,940
+这个的宽度比重是1 那个的宽度比重也是1 那么父view的宽度就会 
 this has weight one, and this has weight one then the width of the parent can be
 
 28
 00:01:48,940 --> 00:01:53,930
+被他们两子view平分   接下来看RelativeLayout 我们可以指定一个view
 split across them evenly. Then we have a relative layout where we can specify
 
 29
 00:01:53,930 --> 00:01:58,950
+在父view的左部 上部 右部 或者下部
 that a view should be aligned to the parent's left, top, right or bottom edge.
 
 30
 00:01:58,950 --> 00:02:02,520
+我们也可以指定一个view相对于另外一个view的位置
 We can also specify that one view should be relative to another view.
 
 31
 00:02:02,520 --> 00:02:05,490
+它的子view排列方式比LinearLayout的灵活 但是
 It isn't full if the space is nicely compared to a linear layout, but
 
 32
 00:02:05,490 --> 00:02:10,530
+但是LinearLayout也有自己的优点   GridLayout会把自己分割成一个一个的格子(想象下监狱的形状)
 there are pros and cons to each. There's a grid layout where the views fill
 
 33
 00:02:10,530 --> 00:02:15,590
+你也可以指定跨多个格子的view
 up cells in a grid. You can also have views that span multiple cells.
 
 34
 00:02:15,590 --> 00:02:18,090
+注意ViewGroup也是一个View(上面说的各种Layout都继承自ViewGroup)
 I also want to point out that a view group is a view.
 
 35
 00:02:18,090 --> 00:02:21,650
+所以在我们的代码中把列表的一个条目作为一个单独的view
 So in our code when we refer to a list item layout as being a single view.
 
 36
 00:02:21,650 --> 00:02:26,050
+就是任何布局都能当一个view看
 That just means the root view of the whole view hierarchy for that layout.
 
 37
 00:02:26,050 --> 00:02:30,110
+如果一个布局的最顶部是ViewGroup 它也可以包含一个ViewGroup当做子View
 Chances are that root view is a ViewGroup, so it contains children views as well
 
 38
 00:02:30,110 --> 00:02:34,169
+所以 你可以嵌套ViewGroup
 as ViewGroups. So basically you can nest ViewGroups within ViewGroups.
 
 39
 00:02:35,210 --> 00:02:38,510
+我们说这么多父view 子view之间的关系的原因
 The reason why we care so much about parent child view relationships,
 
 40
 00:02:38,510 --> 00:02:42,470
+是因为子view的放置取决于他的父view的类型
 is because the way a child view gets laid out depends on its parent.
 
 41
 00:02:42,470 --> 00:02:45,500
+最简单的例子是指定view的宽度和高度
 The simplest example of this is specifying a view's width and
 
 42
 00:02:45,500 --> 00:02:48,770
+你要明白 每个view都需要一个宽度和高度
 height. By now you've seen that every view requires a height and
 
 43
 00:02:48,770 --> 00:02:53,529
+宽度或高度可能的两个值是wrap content(需要多大就多大) match parent(占满父view的宽度或高度)
 width. The two possible values are either wrap content or match parent.
 
 44
 00:02:54,540 --> 00:02:57,860
+这些图展示的这个TextView(文本控件的)可能的宽度或高度的属性
 This diagram shows all the possible combinations for width and height for
 
 45
 00:02:57,860 --> 00:03:01,620
+这个是相对平衡的view当它的宽度和高度属性设置为wrap_content的时候
 this text view. This is the balance of the view when we set wrap_content for
 
 46
 00:03:01,620 --> 00:03:05,230
+这是当宽度属性为match_parent 或
 height and width. This is what happens when we do match_parent for
 
 47
 00:03:05,230 --> 00:03:09,090
+高度属性页为match_parent的时候 这个是当高度和宽度属性都为match_parent的
 the width and match_parent for the height. And this is what happens when
 
 48
 00:03:09,090 --> 00:03:12,731
+时候 它占据的父view的全部大小
 both are set as match_parent. It shows the full dimensions of the parent.
 
 49
 00:03:12,731 --> 00:03:16,750
+当你在手机上运行的时候 所有这些看起来是一样的
 When you run this on the device. All of these would visually look the same,
 
 50
 00:03:16,750 --> 00:03:19,860
+因为在手机上你看不到这些边界 所以和你选的哪一个有什么关系呢?
 because you wouldn't see these boundaries. So why does it matter which one
 
 51
 00:03:19,860 --> 00:03:23,160
+恩 直到有另外一个子view需要在这个view旁边的时候你才能看到区别
 we pick? Well, it matters as soon as you have other children that need to
 
 52
 00:03:23,160 --> 00:03:27,270
+另一个原因是你需要要指定view的gravity属性
 be beside this view. And another reason is you want to specify gravity.
 
 53
 00:03:27,270 --> 00:03:31,250
+我来快速的解释一下gravity的意思  例如
 Let me spend a quick moment explaining gravity. Say for example, you
 
 54
 00:03:31,250 --> 00:03:35,640
+在FrameLayout的这个文本控件  默认的  这个文本居左
 have this text view within a frame layout. By default, the text is left aligned.
 
 55
 00:03:35,640 --> 00:03:39,540
+在这种情况下 没有设置gravity属性 如果我们设置gravity属性为居中
 And in this case, no gravity is set. If we specify gravity equals center,
 
 56
 00:03:39,540 --> 00:03:43,250
+这个文本就会显示在文本框的中间  垂直方向不能移动
 then it will center the content within the text view. Vertically it can't move,
 
 57
 00:03:43,250 --> 00:03:46,960
+因为它已经居中了 但是水平方向它被转移到了中间
 'because it's already centered, but horizontally it does shift over to be in
 
 58
 00:03:46,960 --> 00:03:50,570
+如果设置了layout_gravity属性为居中
 the middle. Instead of this. If we specify layout gravity equals center,
 
 59
 00:03:50,570 --> 00:03:53,540
+这个文本框就会显示在父view的中间
 that means to center horizontally and vertically within the parent.
 
 60
 00:03:53,540 --> 00:03:57,160
+我们抓到子view 并且把它移到父view的中间
 So we grab the whole child text view and we move it into the center.
 
 61
 00:03:57,160 --> 00:04:00,440
+现在 文字不能水平方向居中了 因为文本框已经占据了父view最大的宽度
 Now it can't be centered horizontally, because it already takes up the max width
 
 62
 00:04:00,440 --> 00:04:03,530
+如果实在想把内容居中显示
 of the parent. If we really want to move the content to the middle,
 
 63
 00:04:03,530 --> 00:04:07,600
+我们应该设置它的宽度属性为wrap_content 这样我们就能把它移到中间了
 then we should specify wrap content on this text view, so that it can be
 
 64
 00:04:07,600 --> 00:04:11,350
+你也可以设置view的padding和margin属性
 moved to the center with this attribute. You can also specify padding and
 
 65
 00:04:11,350 --> 00:04:15,710
+例如 如果你在TextView上添加了padding属性
 margin on views. For example, if you added padding on this text view,
 
 66
 00:04:15,710 --> 00:04:19,750
+然后它就上下左右向里移动文本的内容
 then it would shift the content inside by x amount on all sides.
 
 67
 00:04:19,750 --> 00:04:23,390
+如果你设置的view的margin 记住父view才是那个
 If you specify layout margin to be x, then remember that the parent is
 
 68
 00:04:23,390 --> 00:04:27,320
+需要改变布局大小的 这种情况下
 the one who will be interpreting this layout ground. In this case,
 
 69
 00:04:27,320 --> 00:04:31,240
+如果为一个textview添加margin属性 textview的可显示区域就会变小
 it adds a margin of x all around the text view. The text view is only this size.
 
 70
 00:04:32,260 --> 00:04:35,280
+他们的效果看起来是一样的
 When you render both of these, they would visually look the same.
 
 71
 00:04:35,280 --> 00:04:37,690
+这里需要注意的一点 如果这是个按钮 你按下了它
 Here's one case where it could matter. If this was a button and
 
 72
 00:04:37,690 --> 00:04:41,740
+这里应该显示一个灰色的按下背景 在某些情况下 
 you pressed it, there could be a gray background here showing. In some cases you
 
 73
 00:04:41,740 --> 00:04:47,010
+你可以同时使用padding和margin  所有的view都有visibility属性 以
 may want padding or margin or both. All views have a visibility property. For
 
 74
 00:04:47,010 --> 00:04:50,020
+这个imageview来说 它有可见 不可见 消失三种状态
 this image view, it can be visible, invisible, or gone.
 
 75
 00:04:50,020 --> 00:04:53,390
+如果设置了invisible属性 它就不显示了 但是它还占据一定的大小
 If it's invisible then it's not shown, but there's still a place holder for
 
 76
 00:04:53,390 --> 00:04:56,830
+我们仍然要为它分配相应区域的大小 如果设置gone属性
 it, we still have to go and measure the size of it. If it's gone,
 
 77
 00:04:56,830 --> 00:04:59,920
+它就不在布局中了 如果这些属性在xml里面设置
 then it's not even in the layout. It's as if it didn't exist in the XML.
 
 78
 00:04:59,920 --> 00:05:04,490
+你可以代码里面动态的设置它的可见性
 You can also toggle the visibility of a view dynamically during runtime.
 
 79
 00:05:04,490 --> 00:05:08,680
+在java文档里 你可以找到它所有可能的xml属性
 In the java doc, you can find all the possible XML attributes for that class.
 
 80
 00:05:08,680 --> 00:05:12,740
+它也展示了继承的xml属性 例如 从这个View类继承
 It also shows inherited XML attributes, for example, from the view class.
 
 81
 00:05:12,740 --> 00:05:16,430
+为这个ImageView 并且文档也展示了属性的在java代码中的使用
 For this image view, and then it shows the corresponding Java methods for
 
 82
 00:05:16,430 --> 00:05:20,310
+现在通过这些简短的了解帮助我们开始
 those attributes. Now as a briefer for [UNKNOWN] basics to help us get started,
 
 83
 00:05:20,310 --> 00:05:22,250
+稍后一定要看开发者网址获取更多的知识
 but definitely check out the developer site for
 
 84
 00:05:22,250 --> 00:05:26,670
+就像在现实世界里 如果你们以一个团队来进行android app开发
 more details later. Much like the real world, if you were working with a team to
 
 85
 00:05:26,670 --> 00:05:30,660
+你应该实现这些框图
 build an Android app, you would start by implementing the wire frames first.
 
 86
 00:05:30,660 --> 00:05:33,920
+这有一个正确的用户交互的流程
 This has a correct flow for how the user will interact with the app. But
 
 87
 00:05:33,920 --> 00:05:37,780
+但是还没有最终的效果图 我们会一步一步的完善
 it doesn't have the final visual look and feel yet. We'll build this up step by
 
 88
 00:05:37,780 --> 00:05:42,030
+以MainActivtiy开始 然后进入到DetailActivtiy
 step, starting with the main activity then we'll move on to the detail activity
 
 89
 00:05:42,030 --> 00:05:46,630
+再然后构建平板的ui        然后我们会受到一组视觉标记资源 
 and then later build up the tablet UI. Then we'll receive a set of visual marks
 
 90
 00:05:46,630 --> 00:05:50,780
+所有的这些帮助我们写完美的layout
 red lines and assets, all of this will help us build a pixel perfect layout
 

@@ -1,164 +1,205 @@
 1
 00:00:00,140 --> 00:00:03,920
+为了完成这个列表的条目 我们创建了一个水平的带有三个子View的
 To build up this list item we created a horizontal linear layout with three
 
 2
 00:00:03,920 --> 00:00:08,470
+LinearLayout 第一个子View是ImageView 第二个子View是一个
 children. The first child is an image view. The second child is a vertical
 
 3
 00:00:08,470 --> 00:00:11,980
+垂直有两个在各自顶部TextView的LinearLayout
 linear layout composed of two text views stacked on top of each other.
 
 4
 00:00:11,980 --> 00:00:15,200
+第三个子view与第二个一样   也是一个垂直的在各自顶部的
 The third child is the same. It's a vertical linear layout composed of
 
 5
 00:00:15,200 --> 00:00:17,480
+用来显示温度的文本框
 the two temperature text views stacked on top of each other.
 
 6
 00:00:17,480 --> 00:00:20,370
+现在你可能疑惑为什么不用RelativeLayout
 Now you might be wondering why we didn't use a relative layout.
 
 7
 00:00:20,370 --> 00:00:24,354
+因为这样会使用较少的层 然而使用RelativeLayout是好的当你
 Because that would give us less layers of hierarchy. Well, relative layouts
 
 8
 00:00:24,354 --> 00:00:29,100
+想要指定一个view在另一个view的右边或者
 are good if you want to specify that one view should be to the right of another,
 
 9
 00:00:29,100 --> 00:00:33,545
+上面的时候     RelativeLayout也是好的当你想要一个view在
 or on top of another view. Relative layouts are also good if you want a view to
 
 10
 00:00:33,545 --> 00:00:37,923
+父view的左边 上面 右边 或者底部的时候 对于现在这种让两个文本框居中在这个
 be aligned to the parents left, top, right or bottom. But it's harder in this
 
 11
 00:00:37,923 --> 00:00:42,042
+ImageView分配的高度中
 case to center these two text views within the vertical height allocated by this
 
 12
 00:00:42,042 --> 00:00:46,190
+这里和这里使用LinearLayout都相对比较简单 所以不管这个图片是任何高度
 image view. It's easier with the linear layout here and here, so if the image
 
 13
 00:00:46,190 --> 00:00:50,140
+这两个TextView仍然可以垂直方向居中
 was any taller, these two text views would still stay vertically centered. And
 
 14
 00:00:50,140 --> 00:00:53,860
+这是在Android Studio中预览的样子
 this is what it looks like in the Device Preview within Android Studio.
 
 15
 00:00:53,860 --> 00:00:56,530
+我想指出一点关于这个水平方向的
 I want to point out one thing about this horizontal linear layout,
 
 16
 00:00:56,530 --> 00:00:59,880
+有三个子view的LinearLayout ImageView 竖直方向的LinearLayout 和另外一个
 which has three children. The image view, the vertical linear layout, and
 
 17
 00:00:59,880 --> 00:01:04,483
+数值方向的LinearLayout   第二个子view的宽度是0dp 
 the other vertical linear layout. The second child actually has a width of zero
 
 18
 00:01:04,483 --> 00:01:09,110
+weight是1  这意味着任何的水平控件不会被另外一个子view占据
 DP but a weight of one. That means that any horizontal space that's not taken up
 
 19
 00:01:09,110 --> 00:01:14,470
+LineayLayout将会根据权重来分配
 by other children will be distributed among views that have assigned weights. So
 
 20
 00:01:14,470 --> 00:01:18,430
+因此 来看一下第三个子view  它的宽度属性是wrap_conten weight属性为0
 if we look at this third child, it has a width of wrap content and
 
 21
 00:01:18,430 --> 00:01:21,000
+如果我们把它的weight属性改为1
 a weight of zero. If we gave it a weight of one,
 
 22
 00:01:21,000 --> 00:01:25,070
+它会被像这样拉伸  基本上 这个图标是一个调整后的宽度
 then it would stretch out like this. Basically the icon is a fixed width, and
 
 23
 00:01:25,070 --> 00:01:28,560
+然后剩余的宽度分给其他的两个子view
 then the remaining horizontal space is divided among these two children.
 
 24
 00:01:28,560 --> 00:01:31,970
+因为他们都有属性weight为1 会平均分配 但是如果你看一下
 Since they both have a weight one, it's distributed equally. But if you look at
 
 25
 00:01:31,970 --> 00:01:35,840
+框图的话 这是温度视图是居右的
 the wire frames, these temperature views are actually aligned to the right. So
 
 26
 00:01:35,840 --> 00:01:39,930
+所以我们需要把width的属性设置为wrap_content weight属性设置为0
 all we need is for the width to be wrap content, and for the weight to be zero.
 
 27
 00:01:39,930 --> 00:01:43,690
+然后剩下的水平空间就会给中间的weight为1的那个
 Then any remaining horizontal space will be assigned to this middle element,
 
 28
 00:01:43,690 --> 00:01:46,480
+这是xml的代码
 with a weight of one. And this is the code for the xml layout.
 
 29
 00:01:46,480 --> 00:01:50,770
+我们有一个水平方向的LinearLayout 宽度是match_parent
 We have a linear layout in horizontal orientation. The width is match parent to
 
 30
 00:01:50,770 --> 00:01:54,590
+暂满屏幕的宽度          每一个列表条目的高度为wrap_content
 match the width of the screen, and each list item has wrap content on its
 
 31
 00:01:54,590 --> 00:01:58,230
+但是有一个最小的高度
 height. But it does have a minimum height at least of this attribute,
 
 32
 00:01:58,230 --> 00:02:02,140
+列表首选的高度           我们把gravity属性设置为竖直居中 从而让所有的
 list preferred item height. We specify gravity to be center vertical so that
 
 33
 00:02:02,140 --> 00:02:05,790
+子view都在竖直方向上居中 我们也设置了一点点padding
 all of its children are vertically centered within it. We also specify a little
 
 34
 00:02:05,790 --> 00:02:10,120
+在里面 我们添加一个imageview 高度属性设置为wrap_content
 bit of padding. Inside of it, we add an image view, which has wrap content for
 
 35
 00:02:10,120 --> 00:02:14,630
+宽度也一样       我们指定了相应的drawable 
 height and width. And we specify the source as this placeholder drawable.
 
 36
 00:02:14,630 --> 00:02:17,720
+下一步 我们有 宽度为0dp 比重为1的LinearLayout
 Next we have the vertical linear layout, where the width is zero DP and
 
 37
 00:02:17,720 --> 00:02:21,643
+我也定义了一点点的填充在图标
 the weight is one. We specify a little bit of padding between this view and
 
 38
 00:02:21,643 --> 00:02:24,060
+与这个LinearLayout之间
 the icon beside it. Within the linear layout,
 
 39
 00:02:24,060 --> 00:02:28,390
+我们也有日期文本控件和预报文本控件 除此之外
 we have the date_textview as well as the forecast_textview. Beside that,
 
 40
 00:02:28,390 --> 00:02:31,930
+我们还有另外一个竖直的LinearLayout 来访最高温度
 we have another vertical linear layout with the high temperature_textview and
 
 41
 00:02:31,930 --> 00:02:34,090
+和最低温度 就是这些
 the low temperature_textview. And that's it.
 
