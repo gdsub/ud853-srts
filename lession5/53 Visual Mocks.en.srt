@@ -1,48 +1,60 @@
 1
 00:00:00,080 --> 00:00:03,440
+恭喜！ 你已经完成了这个程序的整体轮廓
 Hurray, you're done implementing wire frames for the app! Now
 
 2
 00:00:03,440 --> 00:00:06,150
+现在我们开始对应用的细节进行雕琢，应用一些风格和Views
 comes the visual polish part, where we tweak the styles
 
 3
 00:00:06,150 --> 00:00:08,950
+让app看着炫起来。
 and the views to make the app look awesome. Here
 
 4
 00:00:08,950 --> 00:00:10,620
+这些是一些程序效果图，当我们的app完成后就是介个样子滴
 are the visual mocks, for what the app should look
 
 5
 00:00:10,620 --> 00:00:13,310
+如果你的团队里有设计师
 like, when we're done. If you work with a designer,
 
 6
 00:00:13,310 --> 00:00:16,050
+那么他们还会给在其中你画出一些红色标记。
 they should also give you red lines. Red lines specify
 
 7
 00:00:16,050 --> 00:00:21,990
+这些标记包括尺寸、字体风格、颜色、空白区域等等
 everything from sizes, font styles, colors, spacing, et cetera. This
 
 8
 00:00:21,990 --> 00:00:25,160
+通过这些参数可以帮助你构造较为完美的布局以贴近效果图
 should help you achieve pixel perfect layouts that match the
 
 9
 00:00:25,160 --> 00:00:28,500
+那么我们如何处理这些数据呢？
 visual mocks. How did we come up with these values?
 
 10
 00:00:28,500 --> 00:00:31,370
+这里我们用到了Android设计指南，指南里有和度量与网格相关的信息
 Well we used the Android design guide, which has information on
 
 11
 00:00:31,370 --> 00:00:34,060
+我们使用这些信息来满足程序设计的需要
 metrics and grids, and we adapted them to fit our
 
 12
 00:00:34,060 --> 00:00:36,920
+你可以点击这个链接获得更多内容。
 app's needs. You can click on the link for more info.
 
