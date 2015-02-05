@@ -1,48 +1,60 @@
-1
+﻿1
 00:00:00,290 --> 00:00:03,250
+下载所有的数据能够降低延时并且最大化
 Pulling down all the data will reduce latency and maximize the
 
 2
 00:00:03,250 --> 00:00:06,520
+利用电池效率。但是用户通常不会阅读所有的
 battery efficiency. But it's unlikely the user is going to read every
 
 3
 00:00:06,520 --> 00:00:10,030
+文章。所以你浪费了很多带宽。下载
 article. So you'd just be wasting a lot of bandwidth. Downloading
 
 4
 00:00:10,030 --> 00:00:13,270
+所有文章而不下载图片实际上并不会帮助我们提高效率
 all the articles without pictures actually doesn't improve our efficiency if
 
 5
 00:00:13,270 --> 00:00:16,560
+如果你只是下载头版，因为你仍然需要
 you're just downloading the front page, because you'll still need to
 
 6
 00:00:16,560 --> 00:00:19,470
+启动网络连接来下载图片 当一篇文章被点开时
 activate the radio to download those pictures whenever an article is
 
 7
 00:00:19,470 --> 00:00:22,460
+正确答案是下载首页所有的标题以及
 selected. The right answer is to get the headlines and the
 
 8
 00:00:22,460 --> 00:00:25,360
+其对应的文章包括图片，因为它们是最有可能
 articles linked to from that front page, 'cause they're the most likely
 
 9
 00:00:25,360 --> 00:00:27,010
+在用户打开APP后
 to be read as the user starts
 
 10
 00:00:27,010 --> 00:00:29,280
+被读到的。之后你可以逐步
 browsing through the app. You can then incrementally
 
 11
 00:00:29,280 --> 00:00:31,640
+下载更多的文章每当用户将页面
 download more articles each time the user moves
 
 12
 00:00:31,640 --> 00:00:34,460
+移动到还没有提前下载的页面时
 into an area you haven't pre-fetched for yet.
 
