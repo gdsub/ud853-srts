@@ -1,65 +1,81 @@
 1
 00:00:00,070 --> 00:00:02,270
+一旦两个窗口在平板中显示了，让我们来
 Once the two panes are showing up on a tablet, let's
 
 2
 00:00:02,270 --> 00:00:05,390
+把我们的程序修改修改，这样当列表被选择了，我们就可以响应。
 modify our code to handle the list item click. On the phone,
 
 3
 00:00:05,390 --> 00:00:08,050
+在手机里，如果是前端选项被点击，我们需要
 if an item is clicked in the forecast fragment, then we
 
 4
 00:00:08,050 --> 00:00:11,430
+启动详细的活动。 在平板的界面里，如果一个选项
 must launch the detail activity. On the tablet UI, once an item
 
 5
 00:00:11,430 --> 00:00:14,720
+是在前段被选择了，我们需要通知主要活动，
 in the forecast fragment is clicked, we notify the main activity,
 
 6
 00:00:14,720 --> 00:00:18,360
+这样详细的界面会代替。原因是这两个fragments
 which goes and replaces the detail fragment. The reason the two fragments
 
 7
 00:00:18,360 --> 00:00:21,730
+不会互相交流。因为们需要来维持一个虚拟抽象的概念。
 don't talk to each other is because we want to maintain abstraction from
 
 8
 00:00:21,730 --> 00:00:25,100
+如果我们设想前端列知道了详细列表总是在它
 each other. If the forecast list fragment started assuming that the detail
 
 9
 00:00:25,100 --> 00:00:28,360
+右边，这个设想就会被破坏。
 fragment was always right next to it, then the assumption would break.
 
 10
 00:00:28,360 --> 00:00:31,360
+例如，手机里详细的fragment 不在
 For example, on the phone where the detail fragment is not inside
 
 11
 00:00:31,360 --> 00:00:35,170
+主要活动中。 这时我们的fragment必须要通过自身的活动来
 the main activity. Therefore our fragment must go through its activity and
 
 12
 00:00:35,170 --> 00:00:37,990
+分配事件来支持其他的
 the activity must know how to dispatch the event to the other
 
 13
 00:00:37,990 --> 00:00:41,000
+fragment。 让我们保持这样的想法，我们的fragment不一定总是在同样的
 fragments. Keep in mind that our fragment doesn't always have to be
 
 14
 00:00:41,000 --> 00:00:43,860
+活动中工作， 为了能够让前段的fragment可以和
 used in the same activity, in order for the forecast fragment to
 
 15
 00:00:43,860 --> 00:00:47,280
+主要活动沟通，我们必须创建一个反馈接口。
 talk to the main activity we should create a callback interface. It's
 
 16
 00:00:47,280 --> 00:00:50,390
+最好来设想
 a better assumption to say that the fragment will always be within
 
 17
