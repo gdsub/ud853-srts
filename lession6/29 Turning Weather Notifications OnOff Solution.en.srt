@@ -1,40 +1,50 @@
 1
 00:00:00,290 --> 00:00:03,010
+非常好，做完之后，需要把所有需要的
 Alright, you're done. Let's start by adding all of
 
 2
 00:00:03,010 --> 00:00:06,130
+字符串添加在新的偏好设置中。
 the strings we're going to need for our new preference.
 
 3
 00:00:06,130 --> 00:00:10,278
+Key，label，还有一些像true，false，和default。 
 Key, label, and something like true, false, and default.
 
 4
 00:00:10,278 --> 00:00:14,010
+我们将要添加一些偏好在之前的通用xml里， 
 Then we'll additional preference into pref general xnl, a check
 
 5
 00:00:14,010 --> 00:00:17,560
+一个检验栏被我们定义了。
 box preference that uses those strings we just defined.
 
 6
 00:00:17,560 --> 00:00:20,730
+让我们来打开我们sync adaptor。 在提示功能中，
 Let's go over to our sync adaptor. In the notify
 
 7
 00:00:20,730 --> 00:00:22,820
+添加一些代码来获取偏好数据
 function, we add the code to fetch the preference
 
 8
 00:00:22,820 --> 00:00:25,480
+并且使用这些数据。看，就是这样。
 and make use of it. And there we have it.
 
 9
 00:00:25,480 --> 00:00:28,560
+现在消息提示不会再被显示了，如果用户不希望这样
 Now we won't display notifications if the user doesn't want us
 
 10
 00:00:28,560 --> 00:00:30,810
+这对于一个应用是锦上添花的。
 to, which is a great thing for an app to do.
 
