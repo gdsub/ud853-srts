@@ -1,32 +1,40 @@
 1
 00:00:00,560 --> 00:00:03,530
+你们这些细心的人可能都注意到了
 All of you detail-oriented people probably noticed that
 
 2
 00:00:03,530 --> 00:00:05,640
+我们没有真的使用从server端返回的坐标
 we never actually used the coordinates we get
 
 3
 00:00:05,640 --> 00:00:08,440
+来定位，而是依靠
 from the server for location, relying instead on
 
 4
 00:00:08,440 --> 00:00:10,760
+地图API和天气API
 both the maps API, and the weather API to
 
 5
 00:00:10,760 --> 00:00:14,440
+来做跟位置查询同样的事情。
 do the same thing with location queries. Unfortunately,
 
 6
 00:00:14,440 --> 00:00:18,680
+不幸的是，他们不总是同意。使用location表里存储的
 they don't always agree. Implement maps using the coordinates
 
 7
 00:00:18,680 --> 00:00:21,700
+坐标吧。你可以从把MainActivity的代码
 stored in the location table. You'll want to start
 
 8
 00:00:21,700 --> 00:00:25,260
+移到WeatherFragment开始
 by moving the menu code from MainActivity to WeatherFragment.
 
