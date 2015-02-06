@@ -1,68 +1,85 @@
 1
 00:00:00,390 --> 00:00:01,770
+现在你已经知道
 Now that you know how to create an
 
 2
 00:00:01,770 --> 00:00:05,410
+如何建立一个复杂的任意嵌套布局，重要的是明白，
 arbitrarily complex nested layout, it's important to understand
 
 3
 00:00:05,410 --> 00:00:08,109
+它并不是毫无限制的。再次强调，
 that they don't come for free. Once again,
 
 4
 00:00:08,109 --> 00:00:10,965
+这是对平台资源的约束，防止恶意破坏。
 the resource constraints of the platform spoil the party.
 
 5
 00:00:10,965 --> 00:00:15,351
+【声音】扩大复杂布局可能花费很高，
 [SOUND] Inflating complex layouts can be expensive, potentially
 
 6
 00:00:15,351 --> 00:00:19,427
+也可能影响你的程序的运行速度和响应时间。
 impacting the performance and responsiveness of your app.
 
 7
 00:00:19,427 --> 00:00:21,765
+因此，这有两个经验之谈。
 So there are two good rules of thumb
 
 8
 00:00:21,765 --> 00:00:25,620
+一、让你的布局浅而宽，
 to help. First, keep your layout shallow and wide,
 
 9
 00:00:25,620 --> 00:00:28,930
+而不是深而窄。这意思是，
 rather than deep and narrow. That means you're better
 
 10
 00:00:28,930 --> 00:00:32,490
+最好多一点同级关系，而不是父子关系。
 off with more siblings and fewer children. Because it's
 
 11
 00:00:32,490 --> 00:00:34,970
+因为它并不这么简单，我相信你也想避免过多的视图。
 never as simple as that, you also want to
 
 12
 00:00:34,970 --> 00:00:38,930
+最基本的条件是，
 avoid having excessive views. In the most general terms, that
 
 13
 00:00:38,930 --> 00:00:42,430
+在你的整个activity层次中，不应该有超过10层的嵌套视图，
 means your activities' full hierarchy should never have more
 
 14
 00:00:42,430 --> 00:00:45,450
+或者全部视图数不能超过80个。
 than ten nested views or over 80 views in
 
 15
 00:00:45,450 --> 00:00:48,590
+这听起来像是有很多要求，
 total. That probably sounds like a lot, but let's
 
 16
 00:00:48,590 --> 00:00:51,350
+让我们打开Android studio中的Hierarchy Viewer，
 open up the Hierarchy Viewer tool in Android studio and
 
 17
 00:00:51,350 --> 00:00:53,170
+来看看视图多少和速度的关系是怎样的。
 see just how quickly that can add up
 

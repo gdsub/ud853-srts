@@ -1,100 +1,125 @@
 1
 00:00:00,090 --> 00:00:02,840
+你已经实现了主activity的线框构架。那么现在让我们来
 You've implemented the main activity wireframe. So, now, we can move
 
 2
 00:00:02,840 --> 00:00:05,800
+实现子activity的事件框架。这就是它的实现图。
 on to the detail activity wireframe. This is what it looks
 
 3
 00:00:05,800 --> 00:00:08,440
+这有日期、最高最低气温，
 like. We have the date, the high and low temperatures, and
 
 4
 00:00:08,440 --> 00:00:11,690
+还有补充的天气信息。我们还有天气图像和天气预报。
 then additional weather information. We also have the weather icon and
 
 5
 00:00:11,690 --> 00:00:14,870
+这些水平对齐。
 the weather forecast. And these line up horizontally. Build up the
 
 6
 00:00:14,870 --> 00:00:19,020
+我们在layout XML里构建线框布局。然后对你所填充的信息
 layout XML for this wireframe. Then modify the detail fragments that
 
 7
 00:00:19,020 --> 00:00:22,640
+和新视图进行细节上的修改。
 you can populate all this information, including these new views. While
 
 8
 00:00:22,640 --> 00:00:25,220
+当如上操作时，你可以把这块代码移动到自己的文件里，
 you're doing that, you might as well move the detail fragment
 
 9
 00:00:25,220 --> 00:00:28,550
+让它独立于具体的activity。
 into its own file, so it's separate from the detail activity. At
 
 10
 00:00:28,550 --> 00:00:31,380
+当你把它移到自己的文件里时，这个类就可以写的很长。
 this point the detail fragment class is getting pretty long so you can
 
 11
 00:00:31,380 --> 00:00:34,450
+在开始之前，我想说，
 move that into it its own file. Before you get started, I want
 
 12
 00:00:34,450 --> 00:00:37,530
+这里的布局信息会占用了大量的垂直空间。
 to point out that this layout has information taking up a lot of
 
 13
 00:00:37,530 --> 00:00:41,270
+当你旋转设备切换成横屏，说者换成一个跟应用程序显示不一致的设备时，
 vertical space. If you rotate your device into landscape mode, or you have
 
 14
 00:00:41,270 --> 00:00:44,350
+布局中以一些内容就可能被隔断。
 a smaller height device, some of the content could get cut off. So
 
 15
 00:00:44,350 --> 00:00:47,720
+那么我们想个办法让布局可以垂直滚动。
 think about how you can make this layout be vertically scrollable. To show
 
 16
 00:00:47,720 --> 00:00:50,280
+给大家说一下我的想法，我添加了一对多文本行在布局的底部。
 you what I mean, I added a couple more lines of text at
 
 17
 00:00:50,280 --> 00:00:53,240
+接下来设置内容垂直滚动，
 the bottom of the layout. Then I made the content vertically scrollable
 
 18
 00:00:53,240 --> 00:00:55,930
+这样你们就能看到全部内容了。
 so you can see all the information. So go ahead and make that
 
 19
 00:00:55,930 --> 00:00:58,340
+继续，也改变你的布局吧。当你完成以上步骤时，
 change to your layout as well. When you're done with all these
 
 20
 00:00:58,340 --> 00:01:00,910
+你的app会是这样。现在，我们并不关心
 steps, this is what the app should look like. We don't care about
 
 21
 00:01:00,910 --> 00:01:04,000
+画面的细节效果。我们只是要确保功能实现，
 the visual details now. We just want to make sure the functionality is
 
 22
 00:01:04,000 --> 00:01:07,210
+能将所有信息正确的显示在屏幕上。
 hooked up, so all the right information is displayed on screen. You can
 
 23
 00:01:07,210 --> 00:01:08,930
+你可以使用下面提供的代码，
 use the code snippets provided below
 
 24
 00:01:08,930 --> 00:01:10,860
+来帮助你的函数和字符串。
 for helper functions and strings that you're
 
 25
 00:01:10,860 --> 00:01:14,520
+现在留一个占位图，会对接下来的开发有好处。
 going to need. And again, leaving a placeholder image is fine for now
 
