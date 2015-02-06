@@ -1,16 +1,20 @@
-1
+﻿1
 00:00:01,220 --> 00:00:06,070
+好了，你已经完成了！我们看一下结果。这个练习
 All right, you're done! Let's look at the solution. This exercise
 
 2
 00:00:06,070 --> 00:00:10,250
+相当短。而且似乎很像之前我们
 is pretty short. And it looks just like the way we
 
 3
 00:00:10,250 --> 00:00:15,410
+做建立天气URI的方法，早些的那个。再次强调一下，我们只是
 did the build weather URI, earlier. Once again, we just
 
 4
 00:00:15,410 --> 00:00:20,260
+用内容的URI和附加的ID，来扩展ID的记录
 use content URIs with appended ID, to append the ID of the record.
 
