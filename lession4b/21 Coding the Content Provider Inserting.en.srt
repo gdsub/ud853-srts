@@ -1,208 +1,260 @@
-1
+﻿1
 00:00:00,770 --> 00:00:02,780
+我们现在可以通过内容提供者
 While it's great that we can query our database
 
 2
 00:00:02,780 --> 00:00:05,160
+查询数据库了,如果我们还可以
 through the content provider, it would be nice if
 
 3
 00:00:05,160 --> 00:00:07,200
+使用内容提供者插入数据就好了
 we could also use the content provider to put
 
 4
 00:00:07,200 --> 00:00:12,010
+我们将从Insert函数开始
 data in. We'll begin with the insert function. Let's fill
 
 5
 00:00:12,010 --> 00:00:14,710
+让我们用已经在其它的内容提供者函数里写过的
 the insert function with the same URI matcher code
 
 6
 00:00:14,710 --> 00:00:18,200
+URImatcher来写insert函数
 we had in the other content provider functions but with
 
 7
 00:00:18,200 --> 00:00:21,080
+但是这里有一点不同。我们只去匹配基本URI
 one change. We're only going to match the base
 
 8
 00:00:21,080 --> 00:00:25,770
+对此，这里有一个很棒的理由：
 URIs. There's a good reason for this. When we insert
 
 9
 00:00:25,770 --> 00:00:28,820
+一旦我们在数据库中插入数据，我们希望它可以
 into our database, we want it to notify every
 
 10
 00:00:28,820 --> 00:00:31,630
+提醒所有的内容观察者数据可能被我们的插入操作改变了。
 content observer that might have data modified by our
 
 11
 00:00:31,630 --> 00:00:35,370
+这将导致游标注册者自身通知其后代
 insert. It turns out that cursors register themselves as
 
 12
 00:00:35,370 --> 00:00:39,370
+这意味着根URI被通知了
 notify for descendents which means that notifying the root
 
 13
 00:00:39,370 --> 00:00:42,760
+我们也通知了所有根URI的后代
 URI. We'll also notify all descendents of that URI.
 
 14
 00:00:43,770 --> 00:00:45,830
+如果我们通知是基于非根URI的
 If we were to notify based on anything else
 
 15
 00:00:45,830 --> 00:00:48,730
+这个根URI的游标监听者
 other than the root URI. Then a cursor listening
 
 16
 00:00:48,730 --> 00:00:50,780
+不会被通知到
 on the root URI will not get notified of a
 
 17
 00:00:50,780 --> 00:00:53,690
+这一定会影响到它
 change that would certainly impact it. So we have to
 
 18
 00:00:53,690 --> 00:00:57,060
+所以这样做时一定要非常谨慎
 be very careful when doing that. For this reason it makes
 
 19
 00:00:57,060 --> 00:00:59,780
+基于这个原因，只允许插入根URI到数据库
 a lot of sense to only allow insertions at our
 
 20
 00:00:59,780 --> 00:01:04,390
+是非常有意义的。这样一来，会非常非常容易
 root URI into our database. That way, it's very, very easy
 
 21
 00:01:04,390 --> 00:01:07,000
+处理通知。这意味着我们不需要
 to handle notifications. It means that we also don't have
 
 22
 00:01:07,000 --> 00:01:10,420
+为我们的插入建立一个包含了来自这个URI的参数和
 to build a combination query for our insert. Containing a parameter
 
 23
 00:01:10,420 --> 00:01:12,880
+来自函数的其它参数的复合查询
 coming from the URI. With the rest of the parameters
 
 24
 00:01:12,880 --> 00:01:15,850
+所以对于天气数据来说，我们只需要把
 coming from a function. So for weather we just pass the
 
 25
 00:01:15,850 --> 00:01:19,760
+这个参数传入到insert函数中就可以了
 parameters into a database insert call. We should
 
 26
 00:01:19,760 --> 00:01:22,810
+插入失败的话，应该抛出一个异常
 throw an exception if the insert fails. The
 
 27
 00:01:22,810 --> 00:01:24,370
+唯一的技巧就是保证
 only trick here is to make sure we
 
 28
 00:01:24,370 --> 00:01:28,470
+返回正确的值，这里是一个URI类型
 return the correct value, which is a URI. Fortunately
 
 29
 00:01:28,470 --> 00:01:30,700
+幸运的是，我们已经做了一个建立URI的函数
 we made a function to build these URIs
 
 30
 00:01:30,700 --> 00:01:32,950
+它通过ID来获取天气的路径
 which contain the weather path followed by an
 
 31
 00:01:32,950 --> 00:01:37,480
+让我们完成它吧。
 ID. Let's go task this. Once again, we
 
 32
 00:01:37,480 --> 00:01:41,190
+再次回到test Provider，改变我们的测试
 go to test provider and we modify our test.
 
 33
 00:01:41,190 --> 00:01:43,520
+它是testInsertReadProvider方法
 Because after all it's supposed to be test insert
 
 34
 00:01:43,520 --> 00:01:48,390
+这里是我们的插入语句，显然它仍然在和数据库打交道
 read provider. Here's our insert statement. Obviously it's still talking
 
 35
 00:01:48,390 --> 00:01:50,280
+我们将让他和内容提供者去对话
 to the database. We're going to want to make it
 
 36
 00:01:50,280 --> 00:01:54,220
+通常这是相当直接的 
 talk to the provider. As always, that's pretty straight forward.
 
 37
 00:01:54,220 --> 00:01:56,170
+我们总是使用内容解析器获取我们的provider
 We always get our provider by using our content
 
 38
 00:01:56,170 --> 00:01:59,540
+所以我们可以用内容解析器的db来替换
 resolver so we can replace this insert statement with the
 
 39
 00:01:59,540 --> 00:02:03,340
+这个插入语句，当然
 db with a content resolver instead. And of course
 
 40
 00:02:03,340 --> 00:02:06,260
+我们不用内容解析器的表名
 we don't use a content resolver against a table name.
 
 41
 00:02:06,260 --> 00:02:10,120
-Instead we do it against the WeatherEntry.content URI.
+我们用WeatherEntry.CONTENT_URI来代替它
+Instead we do it against the WeatherEntry.content_URI.
 
 42
 00:02:11,250 --> 00:02:13,940
+但是仍然有一个错误。当然
 But there's still something wrong. Of course, we
 
 43
 00:02:13,940 --> 00:02:16,600
+我们不能返回weather row ID
 don't actually return the weather row ID, we
 
 44
 00:02:16,600 --> 00:02:19,440
+要返回URI。但是我们依然可以得到
 return the URI. But we can still get a
 
 45
 00:02:19,440 --> 00:02:22,390
+weather row ID，怎么做呢？
 weather row ID. How do we do that?
 
 46
 00:02:22,390 --> 00:02:25,850
+相当简单！在ContentUris里使用一个帮助类
 Quite simply. Using a helper function in content
 
 47
 00:02:25,850 --> 00:02:29,240
+并且不需要插入
 URI's, and we don't really need that insert.
 
 48
 00:02:29,240 --> 00:02:31,520
+毕竟我们知道，除非值是true,否则内容解析器函数
 After all, we know that this content resolver function
 
 49
 00:02:31,520 --> 00:02:35,052
+不会返回值
 isn't actually going to return unless the value is true. Now that we
 
 50
 00:02:35,052 --> 00:02:38,052
+现在我们就完成了。执行测试，来确保我们真的使用内容提供者
 finished that, let's run the test. And make sure that we can actually
 
 51
 00:02:38,052 --> 00:02:43,783
+插入了数据，测试通过了
 insert using our content provider. And our test passed. Well, you know what
 
 52
 00:02:43,783 --> 00:02:46,680
+好了，现在该轮到你来写了
 time it is. Time for you to write some of this as well.
 
