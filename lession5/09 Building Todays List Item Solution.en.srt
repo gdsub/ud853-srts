@@ -1,100 +1,125 @@
-1
+﻿1
 00:00:00,380 --> 00:00:02,190
+让我解释一下我用它的原因，在我
 Let me the explain the reasoning that I use when I
 
 2
 00:00:02,190 --> 00:00:05,150
+看见这个布局。它看上去像有两个等大的隔开的
 look at a new layout. It looks like there's two equally spaced
 
 3
 00:00:05,150 --> 00:00:09,120
-columns here. That signals to me we need linear layout weights,
+列在这里。这提示我我们需要一个LinearLayout分布，
+columns here. That signals to me we need LinearLayout weights,
 
 4
 00:00:09,120 --> 00:00:12,460
+其中的每一个都应该是等权的。所以我们来建立一个水平的
 where each of these have equal weights. So let's create a horizontal
 
 5
 00:00:12,460 --> 00:00:16,712
-linear layout. Within this first chart, we have three vertically stacked
+LinearLayout。在第一个图表里，我们有三个垂直堆叠的
+LinearLayout. Within this first chart, we have three vertically stacked
 
 6
 00:00:16,712 --> 00:00:19,830
-text views, so we have a vertical linear layout, and the same
+文本框，所以我们现在有一个垂直的LinearLayout。同样
+text views, so we have a vertical LinearLayout, and the same
 
 7
 00:00:19,830 --> 00:00:23,030
+处理有第二个元素的第二个图表，垂直地堆叠
 goes for this second chart with has two elements vertically stacked
 
 8
 00:00:23,030 --> 00:00:25,570
-on top of each other, which means we use a vertical linear
+在上面，这意味着我们同样用一个垂直的LinearLayout
+on top of each other, which means we use a vertical LinearLayout
 
 9
 00:00:25,570 --> 00:00:28,220
-layout as well. And here's the code, we created a
+这里是代码，我们创建一个
+as well. And here's the code, we created a
 
 10
 00:00:28,220 --> 00:00:32,490
-new list item forecasts today XML file under the layout folder.
+new_list_item_forecasts_today XML文件，在layout文件夹下
+new_list_item_forecasts_today XML file under the layout folder.
 
 11
 00:00:32,490 --> 00:00:35,340
-The code looks very similar to list item forecast. I
+代码看上去和list_item_forecast很相似。我
+The code looks very similar to list_item_forecast. I
 
 12
 00:00:35,340 --> 00:00:38,540
-has a horizontal linear layout, as a root element. The first
+有一个水平的LinearLayout作为根节点。第一个
+has a horizontal LinearLayout, as a root element. The first
 
 13
 00:00:38,540 --> 00:00:41,370
-channel is a vertical linear layout with the width zero
+子节点是一个垂直的LinearLayout，宽度是0
+child is a vertical LinearLayout with the width zero 
 
 14
 00:00:41,370 --> 00:00:44,970
+权值是1.第二个子节点是另外一个垂直的
 and a weight of one. The second child is another vertical
 
 15
 00:00:44,970 --> 00:00:47,300
-linear layout with a width of zero and a weight
+LinearLayout，宽度是0，权重也是
+LinearLayout with a width of zero and a weight
 
 16
 00:00:47,300 --> 00:00:50,600
+1，这样水平的空间会形成平均的分布
 of one, that way the horizontal space will be distributed evenly
 
 17
 00:00:50,600 --> 00:00:53,200
+在所有子节点中间。如果你退回到第一个
 among each child. If you go back to the first
 
 18
 00:00:53,200 --> 00:00:55,700
-linear layout, notice that we have three text views within
+LinearLayout 注意我们有三个文本框在
+LinearLayout, notice that we have three TextViews within
 
 19
 00:00:55,700 --> 00:00:59,630
-it. For date, high temperature, and low temperature. We specify
+其中，分别是日期，最高气温，最低气温。我们指明
+it,for date, high temperature, and low temperature. We specify
 
 20
 00:00:59,630 --> 00:01:02,550
-gravity to be center horizontal. So anything within the linear
+中心应该在水平中央，所以在这个LinearLayout的一切
+gravity to be center horizontal. So anything within the LinearLayout
 
 21
 00:01:02,550 --> 00:01:06,220
-layout will be centered horizontally. Otherwise, by default, they would
+都会居中对齐。否则，按照预设，他们应该
+will be centered horizontally. Otherwise, by default, they would
 
 22
 00:01:06,220 --> 00:01:09,590
-be left aligned to the linear layout. The same applies
+靠左对齐在LinearLayout里。做同样的设定
+be left aligned to the LinearLayout. The same applies
 
 23
 00:01:09,590 --> 00:01:12,270
-for the second linear layout. We specify gravity to be
+在第二个LinearLayout里。我们明确指出中心应该在
+for the second LinearLayout. We specify gravity to be
 
 24
 00:01:12,270 --> 00:01:15,720
+水平中间，这样图标和天气预报的
 center horizontal so that the icon and the weather forecast
 
 25
 00:01:15,720 --> 00:01:18,130
+文本框在其中的，也会水平居中。
 text view within it are also centered horizontally.
 

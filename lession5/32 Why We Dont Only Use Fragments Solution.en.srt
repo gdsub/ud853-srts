@@ -1,48 +1,60 @@
-1
+﻿1
 00:00:00,160 --> 00:00:02,270
+有很多原因你可能更好的将
 There's a number of reasons you'd be potentially better
 
 2
 00:00:02,270 --> 00:00:05,180
+你的App分解为不同的活动。拥有一个
 off breaking your app into different activities. Having a
 
 3
 00:00:05,180 --> 00:00:09,760
+完整的活动增加你代码的复杂度，
 single monolithic activity increases the complexity of your code,
 
 4
 00:00:09,760 --> 00:00:12,370
+使得创建和管理意图过滤更为
 making the creation and management of intent filters much
 
 5
 00:00:12,370 --> 00:00:15,470
+艰难，使其更难维护，测试，
 harder and making it more difficult to maintain, test,
 
 6
 00:00:15,470 --> 00:00:18,740
+代码理解。这也增加了
 and read your activity code. It also increases the
 
 7
-00:00:18,740 --> 00:00:22,660
+00:00:18,740 --> 00:00:22,660A good rule of thumb is to create a
+耦合的风险并使其
 risk of tightly coupling independent components and makes it
 
 8
 00:00:22,660 --> 00:00:25,190
+更易于引入安全风险，如果
 much more likely to introduce security risks if the
 
 9
 00:00:25,190 --> 00:00:29,150
+这一单一活动包含敏感信息和可共享的信息。
 single activity includes both sensitive information and information that's safe
 
 10
 00:00:29,150 --> 00:00:31,650
+好的经验是创建一个
 to share. A good rule of thumb is to create a
 
 11
 00:00:31,650 --> 00:00:35,260
+新的活动，在任何改变发生的时候。比如，显示
 new activity whenever the context changes. For example, displaying a
 
 12
 00:00:35,260 --> 00:00:38,530
+不同种类的数据，在从查看到输入的过程中。
 different kind of data, while switching from viewing to entering data.
 

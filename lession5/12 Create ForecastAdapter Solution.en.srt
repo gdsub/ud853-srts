@@ -1,48 +1,60 @@
-1
+﻿1
 00:00:00,130 --> 00:00:03,210
-Here's the solution. In the utility class, we add the
+这里是解决方案。在Utility类，我们添加了
+Here's the solution. In the Utility class, we add the
 
 2
 00:00:03,210 --> 00:00:06,260
+在要点中提供的辅助方法。我们也
 helper methods that were provide in the gist. We also
 
 3
 00:00:06,260 --> 00:00:09,970
-declared these strings in the strings.xml file. In the Forecast
+在string.xml文件里对这些字符串进行了声明。在
+declared these strings in the strings.xml file. In the 
 
 4
 00:00:09,970 --> 00:00:13,000
-Adapter Class, in the bind view method, we finish off the
+ForecastAdapter类的bindView函数中我们完成了
+ForecastAdapter Class, in the bindView method, we finish off the
 
 5
 00:00:13,000 --> 00:00:16,210
+遗留下来的to do.在外面读取了最高气温值
 remaining to do's. After we read the high temperature value
 
 6
 00:00:16,210 --> 00:00:18,420
+从游标中，之后，我们去找到
 from the cursor, we go and try to find the
 
 7
 00:00:18,420 --> 00:00:21,950
-text view, represented by the ID, list item high text
+TextView，以ID为唯一值的list_item_high_textview
+TextView, represented by the ID, list_item_high_textview
 
 8
 00:00:21,950 --> 00:00:25,970
-view. Then we use a utility function to format the temperature
+然后我使用Utility来完成温度规定的格式。
+ Then we use Utility function to format the temperature
 
 9
 00:00:25,970 --> 00:00:28,960
-so that it can be displayed in the text view. Then we do the
+这样它将被展示在TextView里。然后我们完成
+so that it can be displayed in the TextView. Then we do the
 
 10
 00:00:28,960 --> 00:00:32,820
-same for the low temperature value. In the forecast fragment class, in the on
+同样的事情，对最低气温值。在ForecastFragment类
+same for the low temperature value. In the ForecastFragment class, in the on
 
 11
 00:00:32,820 --> 00:00:38,230
-create view method, we remove the use of the simple cursor adapter. Instead, we
+在onCreateView类函数里,我们去掉了单一游标适配器，作为替代，我们
+onCreateView method, we remove the use of the simple cursor adapter. Instead, we
 
 12
 00:00:38,230 --> 00:00:41,420
-use the new forecast adapter and then we set it on the list view.
+使用了ForecastAdapter并在listview上完成设置。
+use the new ForecastAdapter and then we set it on the listview.
 
