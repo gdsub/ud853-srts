@@ -1,84 +1,105 @@
-1
+﻿1
 00:00:00,640 --> 00:00:02,710
+如果一个应用程序在后台更新
 If an app updates in the background, but no one
 
 2
 00:00:02,710 --> 00:00:06,060
+但是没有人打开它，找出来，那它真的发生了吗
 opens it to find out, did it really happen? Notification
 
 3
 00:00:06,060 --> 00:00:09,040
+通知开始作为一个方便的方式通知用户后台更新
 started off as a convenient way to notify users of
 
 4
 00:00:09,040 --> 00:00:12,780
+但是它们已经成为一个强大的标准化的捷径
 background updates. But they've grown to become a powerful standardized shortcut
 
 5
 00:00:12,780 --> 00:00:15,340
+来用更轻量级的操作方式直接和应用交互
 to interact directly with apps in a light weight way.
 
 6
 00:00:15,340 --> 00:00:19,080
+从Jelly Bean（4.0）版本开始,通知可以被展开
 Starting in Jelly Bean it was possible to expand notifications, making
 
 7
 00:00:19,080 --> 00:00:22,230
+让它们能容下更多的信息。
 them larger and containing more information. That also introduced the
 
 8
 00:00:22,230 --> 00:00:25,730
+这就引入了富通知的概念，它可以包括这样的操作
 concept of the rich notification, which is able to include actions
 
 9
 00:00:25,730 --> 00:00:27,740
+在通知栏的数据上直接执行操作
 like these, to be performed on the data
 
 10
 00:00:27,740 --> 00:00:31,390
+这加速了交互
 included within the notification. This speeds up interaction and
 
 11
 00:00:31,390 --> 00:00:35,060
+帮助用户简化他们通知分类
 helps users streamline their notification triage experience. As a
 
 12
 00:00:35,060 --> 00:00:38,890
+作为一个标准化的UI设计，在有限的屏幕空间
 standardized UI designed specifically for conveying timely information in
 
 13
 00:00:38,890 --> 00:00:42,252
+输送及时的信息，通知机制的易用是明显的
 limited screen space. Notifications were the obvious mechanism
 
 14
 00:00:42,252 --> 00:00:44,800
+当Android扩展到可穿戴设备的时候
 to use, when Android expanded in to wearables with
 
 15
 00:00:44,800 --> 00:00:48,040
+那些你为手机和平板电脑设计的丰富的通知
 Android Wear. Suddenly those rich notifications that you designed
 
 16
 00:00:48,040 --> 00:00:51,240
+突然就对可穿戴设备兼容了,而且免费。
 for phones and tablets make your app wearable compatible,
 
 17
 00:00:51,240 --> 00:00:54,630
+但是不要做得太过了，有用和垃圾之间仅有一线之隔
 for free. Don't overdo it though, there's a fine line between
 
 18
 00:00:54,630 --> 00:00:57,650
+用户只用点击几下就可以
 useful and spammy. And it's only a couple of clicks for a
 
 19
 00:00:57,650 --> 00:00:59,630
+永久禁用你的应用程序的通知
 user to disable your app's notifications
 
 20
 00:00:59,630 --> 00:01:01,450
+所以看看下面的指令设计指南的链接里
 permanently. So check out the instruction
 
 21
 00:01:01,450 --> 00:01:05,030
+关于创建良好的通知的部分
 that's below for links to the design guide in creating good notifications.
 

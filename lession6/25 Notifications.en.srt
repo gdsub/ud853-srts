@@ -1,156 +1,195 @@
-1
+﻿1
 00:00:00,590 --> 00:00:03,070
+Android最强大的特性之一就是
 One of the most powerful features of Android, since the
 
 2
 00:00:03,070 --> 00:00:05,550
+自这个平台发布以来
 start of the platform has been the ability to deliver
 
 3
 00:00:05,550 --> 00:00:09,100
+就有及时通知用户的能力
 timely notifications to users. We're going to add a simple
 
 4
 00:00:09,100 --> 00:00:12,480
+我们来给天气应用添加一个简单的通知
 one to our weather app. This simple notification will show the
 
 5
 00:00:12,480 --> 00:00:16,730
+这个通知将显示天气预报的图标，文本
 weather icon for the forecast, the forecast text, and the
 
 6
 00:00:16,730 --> 00:00:19,420
+以及今天的高温和低温
 high and low temperature for the day. One of the key
 
 7
 00:00:19,420 --> 00:00:21,870
+我想特别指出的是
 things we wanted to point out is how not to
 
 8
 00:00:21,870 --> 00:00:25,920
+怎么不会把我们的通知变成垃圾
 be spammy with our notification. Our app will display at most
 
 9
 00:00:25,920 --> 00:00:29,080
+我们的应用最多只会显示一个通知。通知过多
 a single notification. It really wouldn't make sense if these
 
 10
 00:00:29,080 --> 00:00:33,120
+排起长队真的没有什么意义。它们也没有足够的内容显示了
 notifications stacked up anyhow. They don't display enough information to
 
 11
 00:00:33,120 --> 00:00:36,250
+通知的关键是提供一个有用的少量的信息
 give context. The key thing with notifications is to deliver
 
 12
 00:00:36,250 --> 00:00:39,970
+并且以一种标准的方式格式化
 a useful morsel of information, formatted in a standard way, so
 
 13
 00:00:39,970 --> 00:00:42,760
+这样它可以与系统其它的通知协调
 that it harmonizes with the rest of the system. We'll
 
 14
 00:00:42,760 --> 00:00:45,440
+我们将首先添加一个字符串
 start by adding a string for the preference for the
 
 15
 00:00:45,440 --> 00:00:48,140
+这个字符串在最后我们会把它通知给用户
 last time we sent a notification to the user. As
 
 16
 00:00:48,140 --> 00:00:51,210
+一个格式化的字符串作为通知的内容
 well as a format string for the body of the notification.
 
 17
 00:00:51,210 --> 00:00:54,610
+让我们实现通知的内部同步适配器
 Let's implement the notification inside of our sync adapter.
 
 18
 00:00:54,610 --> 00:00:56,670
+我们的通知将会基于数据库中的内容
 Our notification will be based upon what is in
 
 19
 00:00:56,670 --> 00:01:00,100
+因此,我们将在同步适配器里
 the database. So, we'll create projection and column indices
 
 20
 00:01:00,100 --> 00:01:04,110
+为天气id创建列索引值
 value in our sync adapter, for the weather id. Description,
 
 21
 00:01:04,110 --> 00:01:07,320
+描述为max 和 min TEMP
 max and then temperature, let's add a function to
 
 22
 00:01:07,320 --> 00:01:10,020
+让我们开始添加函数吧
 notify us of the weather. We'll add some additional
 
 23
 00:01:10,020 --> 00:01:13,430
+我们要增加一些常量。一天的毫秒数
 constants up here. One for day in mili's and
 
 24
 00:01:13,430 --> 00:01:16,220
+以及一个相同的通知ID
 one so that we an use the same notification ID.
 
 25
 00:01:16,220 --> 00:01:19,060
+重用通知ID意味着我们的应用只会有
 Reusing the notification ID means that our application will only
 
 26
 00:01:19,060 --> 00:01:23,260
+最多一个通知。最后我们在同步适配器
 post at most one notification. And then finally, we'll call
 
 27
 00:01:23,260 --> 00:01:25,750
+执行同步数据的函数里，在适当的位置调用
 this function at a reasonable place within our on perform
 
 28
 00:01:25,750 --> 00:01:29,540
+这个函数。
 sync function within our sync adapter. Inside of notify weather, we'll
 
 29
 00:01:29,540 --> 00:01:31,761
+我们会查看是否我们已经显示了那天的通知
 check to see whether or not, we've actually shown notification
 
 30
 00:01:31,761 --> 00:01:36,010
+如果没有，我们得检查数据库
 that day. If we haven't, then we'll talk to the database.
 
 31
 00:01:36,010 --> 00:01:38,140
+获取当天数据解析器的游标
 Get a cursor for the current resolver for the current
 
 32
 00:01:38,140 --> 00:01:41,320
+然后更新数据，但还有一件事没做
 day, and then fetch the data, but one thing were not
 
 33
 00:01:41,320 --> 00:01:45,770
+就是真正的显示出通知。现在好了
 doing is actually showing the notification. Now all right, were getting near
 
 34
 00:01:45,770 --> 00:01:48,970
+我们接近完工了。实现天气的通知
 the end. Implement a weather notification,
 
 35
 00:01:48,970 --> 00:01:53,380
+用Notification Compat.builde创建一个Notification实例
 build our notification using Notification Compat.builder
 
 36
 00:01:53,380 --> 00:01:59,910
+指向V4兼容包的Pending Intent 
 pointing to a Pending Intent built by the v4 compatible. TaskStackBuilder and
 
 37
 00:01:59,910 --> 00:02:03,770
+TaskStackBuilder，并且使用NotificationManager发送。
 sent with the NotificationManager. Hint: an
 
 38
 00:02:03,770 --> 00:02:06,860
+提示，显式intent是一个不错的主意
 explicit intent to our main activity is
 
 39
 00:02:06,860 --> 00:02:11,280
+这里有你想读的一些文档
 a good idea here. There's lots of documentation on this you'll want to read.
 
