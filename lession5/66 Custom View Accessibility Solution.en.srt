@@ -1,4 +1,5 @@
 1
 00:00:00,350 --> 00:00:03,540
+太棒了，现在我们的界面看起来很棒，并对所有人都开放
 Perfect. Now our views look good, and are accessible to everyone.
 

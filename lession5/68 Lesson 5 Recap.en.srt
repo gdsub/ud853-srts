@@ -1,36 +1,45 @@
 1
 00:00:00,480 --> 00:00:03,070
+在这节课中，我们学习如何创建一个
 In this lesson, we learned how to create rich, responsive
 
 2
 00:00:03,070 --> 00:00:06,030
+跨越不同硬件类型和屏幕尺寸进行工作的丰富
 user interfaces that work across a variety of different hardware
 
 3
 00:00:06,030 --> 00:00:09,180
+而且反应灵敏的用户界面。我们还将了解到更多有关
 types and screen sizes. We also learned more details on
 
 4
 00:00:09,180 --> 00:00:12,020
+Android layout managers和 screen widget 的细节，甚至
 the Android layout managers and screen widgets and even had to
 
 5
 00:00:12,020 --> 00:00:15,500
+不得不从头开始构建我们的视图。加入我们的课程六
 create our own views from scratch. Join us for lesson
 
 6
 00:00:15,500 --> 00:00:18,900
+我们将会构建前台应用，并学会如何使应用更新
 six where we take our foreground-only app and discover how to
 
 7
 00:00:18,900 --> 00:00:22,100
+和触发后台通知而不消耗太多的电量
 make it update and trigger notifications from the background, all
 
 8
 00:00:22,100 --> 00:00:25,650
+但首先，和我一起回到Google，
 without draining your battery. But first, join me back at Google
 
 9
 00:00:25,650 --> 00:00:28,110
+开始书写Android历史中的另一个故事
 for another story from the Android history books.
 
