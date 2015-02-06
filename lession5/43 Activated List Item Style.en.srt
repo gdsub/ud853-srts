@@ -40,134 +40,166 @@ We provide you the code for the StateListDrawable. Drop it in
 
 9
 00:00:22,180 --> 00:00:25,520
-放进res目录下的一个drawable 文件夹里。
+放进res目录下的一个drawable 文件夹里。当设置一个
 by creating a drawable folder under the res directory. When set
 
 10
 00:00:25,520 --> 00:00:27,920
+选项列表的背景时，这个touch selector将会显示成
 on the background of a list item, the touch selector will
 
 11
 00:00:27,920 --> 00:00:31,350
+默认的透明色。这跟我们可以看到的一样，这个活动的背景
 appear transparent by default. As seen here we just see the background
 
 12
 00:00:31,350 --> 00:00:34,080
+显示出来。当这个界面被按下之后我们可以看到一个
 of the activity come through. When the view is pressed then
 
 13
 00:00:34,080 --> 00:00:37,590
+灰色的背景。当状态被激活之后，我们看到一个
 we see a grey background. Then when the state is activated we
 
 14
 00:00:37,590 --> 00:00:40,620
+蓝色的背景。这说明被选的选项进入了
 see a blue background. This indicates that it's the selected item
 
 15
 00:00:40,620 --> 00:00:44,200
+支付模式。在列表布局界面，我们要设置背景为
 into pay mode. In the list item layout, we set the background
 
 16
 00:00:44,200 --> 00:00:47,190
+可绘型的touch selector。同样今天我们也需要
 to be this drawable touch selector. We also did the same
 
 17
 00:00:47,190 --> 00:00:50,600
+这样的设置。在touch selector文件里， 可以看到
 for the today layout. In the touch selector file, we also see
 
 18
 00:00:50,600 --> 00:00:54,010
+颜色控制的选项。这个安卓颜色标注是用来
 that we have some colors defined here. That Android color notation
 
 19
 00:00:54,010 --> 00:00:57,336
+给一个框架设置颜色的。颜色其实是在colors.xml文件里。
 is for a framework defined color. Our colors are in the colors.xml
 
 20
 00:00:57,336 --> 00:01:00,770
+目录是在values文件夹下。这给开发者提供了一些帮助，当你需要
 file. This is located under the values folder. This us useful
 
 21
 00:01:00,770 --> 00:01:03,610
+多次参考一些颜色的时候。再来一个小线索，
 if you need to reference colors multiple times in your app. As
 
 22
 00:01:03,610 --> 00:01:06,650
+当需要做一个列表来显示它的状态时，
 a hint, to make a list item show its activated state,
 
 23
 00:01:06,650 --> 00:01:10,160
+你可以在XML属性表里找到list view 的属性。
 you can look at the documentation for the XML attribute choice mode
 
 24
 00:01:10,160 --> 00:01:13,140
+你一旦找到对的属性，就可以
 for the list view. Once you find the right attribute, you'll realize
 
 25
 00:01:13,140 --> 00:01:16,480
+看到单窗的属性和双窗属性有什么不同。
 that you want different behavior for one pane versus two pane mode.
 
 26
 00:01:16,480 --> 00:01:18,820
+同时你也可以在Java代码里修改这些设置，
 While you could change the behavior programmatically in the Java
 
 27
 00:01:18,820 --> 00:01:21,610
+我的建议是希望你能够完全从xml里面修改
 code, we'd like you to do it purely via the resource
 
 28
 00:01:21,610 --> 00:01:24,550
+这些风格。 阅读下面的文档你可以
 XML files using a style. Read this doc to learn
 
 29
 00:01:24,550 --> 00:01:27,220
+学到如何去定义XML里的属性，同时你也
 about how styles can be defined in XML and use what
 
 30
 00:01:27,220 --> 00:01:30,880
+可以学到如何对不同屏幕大小的设备进行设置。
 you learned earlier about defining alternative resources for different sized
 
 31
 00:01:30,880 --> 00:01:33,950
+普遍上来讲，设计风格就是你把所有关于界面的属性放在
 devices. In general, styles are a way that you can group
 
 32
 00:01:33,950 --> 00:01:37,320
+一起。举个例子啊， 这些文字属性会来替换
 together attributes for a view. For example, these text attributes
 
 33
 00:01:37,320 --> 00:01:41,607
+CodeFont的风格。CodeFont的风格其实是在
 are replaced by this style CodeFont. The CodeFont styles is defined
 
 34
 00:01:41,607 --> 00:01:44,710
+styles.xml 文件里的，之前讲过，在values 文件夹。
 in the styles.xml file, located in the values folder.
 
 35
 00:01:44,710 --> 00:01:48,610
+你可以通过设置父类的风格来定义
 You can also have styles inherent other styles by specifying
 
 36
 00:01:48,610 --> 00:01:51,290
+子类的风格。这里还有一些其他的例子，你可以用来
 the parent. There are a couple other examples that you
 
 37
 00:01:51,290 --> 00:01:53,350
+参考。好的，这就是你最后应用
 can check out on this page. This is what the
 
 38
 00:01:53,350 --> 00:01:55,280
+看上去的样子了。有两个
 app should look like when you're done. The two
 
 39
 00:01:55,280 --> 00:01:57,950
+窗口来显示被选择过的状态。在
 pane mode shows the pressed and activated state. On the
 
 40
 00:01:57,950 --> 00:02:00,890
+网页窗口中，我们只能看到按下的状态，因为
 web pane mode, we see just the press state, because
 
 41
 00:02:00,890 --> 00:02:03,400
+按下选项之后会显示细节在屏幕上。
 tapping on an item brings you to the details screen.
 
