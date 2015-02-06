@@ -10,7 +10,7 @@ Let's choose our dessert now. At the current time,
 
 3
 00:00:06,950 --> 00:00:12,190
-当下，99％活跃在Google Play商店的设备都选择了2.3.3以上的SDK。
+到目前为止，在Google Play商店的%99的活跃设备都选择了2.3.3以上的SDK。
 choosing Gingerbread covers 99% of the devices active on the Google Play store.
 
 4
@@ -35,7 +35,7 @@ But now can be used on older versions of the platform, like Gingerbread.
 
 8
 00:00:27,230 --> 00:00:31,728
-我们选择SDK的最新版本是 API 10，因为它包含了API 9所没有的bug修复。
+我们选择SDK的最新版本是 API 10，因为它修复了API 9平台上面的bugs
 We pick the latest version of Gingerbread at API level 10, because it contains
 
 9
@@ -55,12 +55,12 @@ our new app. We're going to pick the Blank Activity with Fragment Template.
 
 12
 00:00:45,470 --> 00:00:50,630
-对于背景context类，activity服务将其表现为我们的UI布局。
+针对后台运行的上下文，activity是我们展示UI的表现层。
 For background context, an activity serves as the presentation layer for our UI.
 
 13
 00:00:50,630 --> 00:00:54,620
-其中fragment代表了画面性能的一部分。
+其中fragment是作为我们的页面逻辑的部分。
 And the fragment within it represents a behavior or portion of the screen.
 
 14
@@ -140,7 +140,7 @@ We're going to get a better one in less than five. Then go ahead and
 
 29
 00:01:53,240 --> 00:01:57,450
-继续，点击完成。新的图标会显示在绘制对象的文件夹上。
+继续，点击完成。新的图标会显示在Drawable文件夹上。
 click Next and Finish. And the new icon shows up in the Drawable folders.
 
 30

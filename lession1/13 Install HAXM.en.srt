@@ -55,7 +55,7 @@ and then hit show package contents. Then, in the SDK folder,
 
 12
 00:00:39,010 --> 00:00:43,690
-包含一个Intel文件夹，这里面有HAXM运行程序。
+包含一个extras文件夹，这个文件夹下的Intel文件夹里包含了HAXM运行程序。
 there'll be an extras folder containing an Intel folder with the HAXM folder.
 
 13
