@@ -1,100 +1,125 @@
 1
 00:00:00,150 --> 00:00:02,260
+你需要记住的是
 The most important thing you have to remember is that
 
 2
 00:00:02,260 --> 00:00:05,850
+每次你传输数据，无论多小
 every time you transfer data, no matter how small, the radio
 
 3
 00:00:05,850 --> 00:00:10,130
+无线电就要运作至少半分钟
 could stay powered up for nearly half a minute. So every
 
 4
 00:00:10,130 --> 00:00:12,790
+所以你的决策要基于最小化
 decision you make will be based on minimizing the number of
 
 5
 00:00:12,790 --> 00:00:16,540
+它运作的时间。但是这里也需要平衡考虑
 times that this happens. But of course there's a balance here.
 
 6
 00:00:16,540 --> 00:00:19,180
+你想一次下载当前情况下
 You want to download all the data a user is likely
 
 7
 00:00:19,180 --> 00:00:21,940
+用户可能需要的数据
 to need for the current section in a single burst over
 
 8
 00:00:21,940 --> 00:00:25,520
+但是，你肯定不想把全部都下载下来
 a single connection at full capacity. But of course, you don't
 
 9
 00:00:25,520 --> 00:00:29,060
+这样完全是浪费电量，下下来了一大堆
 just want to pull down everything wasting battery power and bandwidth
 
 10
 00:00:29,060 --> 00:00:31,980
+可能永远用不到的数据
 downloading data that's never going to be used. Now I could go
 
 11
 00:00:31,980 --> 00:00:34,750
+这里展开来我能讲一小时，不过Dan快等不及了
 on for hours on this topic, but Dan's getting impatient. And
 
 12
 00:00:34,750 --> 00:00:36,740
+你能从他那儿学到怎样才是最佳实践
 you can learn the details on how to implement each of
 
 13
 00:00:36,740 --> 00:00:39,600
+包括预读取、
 these best practices, including pre-fetching,
 
 14
 00:00:39,600 --> 00:00:41,340
+成批打包数据、减少你的更新频率
 batching and bundling, burying your
 
 15
 00:00:41,340 --> 00:00:44,930
+和最小化载荷，通过一系列开发视频
 update frequency, and minimizing your payloads by watching the series of
 
 16
 00:00:44,930 --> 00:00:47,690
+或者是读下面链接里的开发者指南
 Dev Lite videos or reading the developer guides linked to in
 
 17
 00:00:47,690 --> 00:00:50,670
+现在在我将工作交给Dan
 the instructor notes below. Now before I leave it to Dan
 
 18
 00:00:50,670 --> 00:00:52,910
+让他给你们展示怎样实现一个Sunshine的
 to show you how to implement a sync adapter for
 
 19
 00:00:52,910 --> 00:00:55,820
+采用了一大堆我刚刚说过的最佳实践的同步adapter之前
 Sunshine that takes advantage of a lot of the best practices
 
 20
 00:00:55,820 --> 00:00:58,940
+让我们想想如果你去开发一个App像是新闻阅读器，
 I just described, let's consider what the best practice would be
 
 21
 00:00:58,940 --> 00:01:01,570
+什么才是最佳时间
 if you were building something like a news reader app. How
 
 22
 00:01:01,570 --> 00:01:05,030
+当这个App第一次被启动时，应该下载多少数据
 much data should you download when the app is first started?
 
 23
 00:01:05,030 --> 00:01:08,280
+只下载主页面需要的标题、头版新闻里的所有文字和图片、
 Just the front page of headlines, all the stories and images
 
 24
 00:01:08,280 --> 00:01:11,960
+所有新闻的文字（不包括图片）
 linked to from that front page? Every story available, but none
 
 25
 00:01:11,960 --> 00:01:15,830
+还是现在可以取得的所有新闻的文字和图片？
 of the images? Or every story and every image currently available?
 
