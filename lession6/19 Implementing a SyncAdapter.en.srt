@@ -80,342 +80,426 @@ be used by the Android accounts framework to allow us
 
 17
 00:00:51,780 --> 00:00:55,320
-创建新的账户。SyncAdapter需要一个
+创建新的账户。SyncAdapter需要一个账户
 to create an account. SyncAdaptor's need an account.
 
 18
 00:00:55,320 --> 00:00:57,300
+并且账户框架要求
 And the account framework requires that there be
 
 19
 00:00:57,300 --> 00:01:00,780
+认证服务提供一个认证器
 an authenticator delivered by an authenticator Service. You'll
 
 20
 00:01:00,780 --> 00:01:02,890
+你会看到我们的认证器只是一系列
 see that our authenticator is just a series
 
 21
 00:01:02,890 --> 00:01:05,250
+的Stub。它们会在每次被调用时丢出
 of stubs, with exceptions that get thrown for
 
 22
 00:01:05,250 --> 00:01:07,290
+异常。这样没有异常的话就能证明
 each call just to prove that it isn't
 
 23
 00:01:07,290 --> 00:01:12,210
+它没有被用到。最后一点，这一个章节几乎
 really used. One final note. This section approximately
 
 24
 00:01:12,210 --> 00:01:18,060
+是照着developer.android.com上的线上教程来讲SyncAdapter的
 follows the online training at developer.android.com around sync adapters.
 
 25
 00:01:18,060 --> 00:01:19,860
+所以如果有什么问题的话
 Feel free to look there if you have
 
 26
 00:01:19,860 --> 00:01:22,680
+可以去那里看看。我们将创建一个新的
 any more questions. We're going to create a new
 
 27
 00:01:22,680 --> 00:01:27,550
+包：sync，它将包括所有这些东西
 package, sync, to house all of this goodness.
 
 28
 00:01:27,550 --> 00:01:31,210
+然后为我们的认证器创建一个新的类
 And a new class file for our authenticator. This
 
 29
 00:01:31,210 --> 00:01:33,200
+我们要粘贴进来的这段代码
 code that we're about to paste in really
 
 30
 00:01:33,200 --> 00:01:36,920
+完全从developer.android.com website拷贝的
 just comes from the developer.android.com website, and as I
 
 31
 00:01:36,920 --> 00:01:40,660
+像我刚才说的 它只是一个stub。
 mentioned earlier it's just a stub. You can tell
 
 32
 00:01:40,660 --> 00:01:43,100
+因为调用任何这些函数都会丢出一个异常
 because we throw exceptions for calling any of the
 
 33
 00:01:43,100 --> 00:01:46,970
+除了构造函数
 functions except for the constructor. And one
 
 34
 00:01:46,970 --> 00:01:51,830
+然后另一个文件：SunshineAuthenticatorService 这个会有多一些
 more file. Create SunshineAuthenticatorService. This is more code
 
 35
 00:01:51,830 --> 00:01:54,170
+代码是专门写来我们用的。它允许
 that is written for us. It allows
 
 36
 00:01:54,170 --> 00:01:57,260
+账户经理访问这个空的认证器
 the account manager to access the empty authenticator
 
 37
 00:01:57,260 --> 00:02:03,430
+我们刚刚粘贴进来的那个。现在我们在strings.xml里添加账户类型
 that we just pasted in. Now we add the account type in our strings.xml. The
 
 38
 00:02:03,430 --> 00:02:05,920
+这个账户类型字符串建议它是专门供
 account type string suggests that it is specific
 
 39
 00:02:05,920 --> 00:02:08,820
+我们的APP使用的。如果我们有很多程序
 to our app. If we had many applications
 
 40
 00:02:08,820 --> 00:02:11,400
+用同一个账户，我们会想
 using the same account, we might want
 
 41
 00:02:11,400 --> 00:02:14,610
+创建一个example.com账户。我们会
 to create just an example.com account. We'll also
 
 42
 00:02:14,610 --> 00:02:16,140
+清理不需要的东西然后添加
 begin to clean things up and add
 
 43
 00:02:16,140 --> 00:02:19,370
+一个content_authority字符串。注意，这个和
 a content authority string. Note that this matches
 
 44
 00:02:19,370 --> 00:02:24,390
+我们的内容提供商字符串保持一致。我们一会会修整这个XML文件 让它们都用
 our content provider string. We'll fix the XML file later so they both use
 
 45
 00:02:24,390 --> 00:02:29,081
+这同一个字符串。创建一个新的XML素材文件，文件名是
 this same string. We create a new XML resource file, filename
 
 46
 00:02:29,081 --> 00:02:34,950
+authenticator.xml，Root Element：account-authenticator
 authenticator.xml, with root element account-authenticator.
 
 47
 00:02:34,950 --> 00:02:38,620
+你可能注意到了，SunshineAuthenticatorService
 And you probably noticed that SunshineAuthenticatorService is
 
 48
 00:02:38,620 --> 00:02:40,680
+实际上需要在AndroidManifest.xml里
 actually a service that needs to be registered
 
 49
 00:02:40,680 --> 00:02:44,810
+跟包经理注册。
 with a package manager in AndroidManifest.xml. Here's
 
 50
 00:02:44,810 --> 00:02:47,940
+这里这些就是做这个事儿的
 some more pasty goodness that does just that.
 
 51
 00:02:47,940 --> 00:02:50,770
+现在要非常非常小心。这些字符串
 Now be very, very careful. These strings
 
 52
 00:02:50,770 --> 00:02:53,790
+必须要精确地保持一致。系统为
 all have to match precisely. The error messages
 
 53
 00:02:53,790 --> 00:02:56,610
+这种不正确的账户而报出的错误信息
 that the system gives for having incorrect accounts
 
 54
 00:02:56,610 --> 00:02:59,960
+是很不直观的。有了这些，
 are not necessarily intuitive. And with that you
 
 55
 00:02:59,960 --> 00:03:03,120
+你应该能创建出有效账户。重申一下，
 should be able to create valid accounts. Once again,
 
 56
 00:03:03,120 --> 00:03:05,530
+这些只是把SyncAdapter和
 this is all just so that the SyncAdapter can be
 
 57
 00:03:05,530 --> 00:03:08,350
+账户连接起来。你实际上并不会真正用到
 tied to an account. You don't actually use this
 
 58
 00:03:08,350 --> 00:03:12,052
+好了，我们来调整一下manifest里的provider标签
 at all. All right, let's tweak our provider tag in
 
 59
 00:03:12,052 --> 00:03:15,410
+我们要加上syncable属性
 the manifest. We're going to add the syncable attribute.
 
 60
 00:03:15,410 --> 00:03:17,720
+这让Android知道我们打算让
 This just lets Android know that we're planning to synchronize
 
 61
 00:03:17,720 --> 00:03:20,799
+这个内容提供商和服务器同步。然后我们设置
 the content provider with the server. Also, we'll set
 
 62
 00:03:20,799 --> 00:03:25,220
+android:exported=false。 我们在默认设置里设置了
 android:exported equals false. We had it at the default setting.
 
 63
 00:03:25,220 --> 00:03:28,750
+这意味着其他APP也能读取到我们的内容。最后，
 Which means that other apps could see our content. Finally,
 
 64
 00:03:28,750 --> 00:03:31,530
+我们把authorities改成我们新的字符串。
 let's change the authority to use our new string. Now
 
 65
 00:03:31,530 --> 00:03:34,930
+现在来做一些特殊的许可权。我们需要能
 for some additional permissions. We need to be able to
 
 66
 00:03:34,930 --> 00:03:38,790
+读取和写入同步配置。这是能理解的。我们也
 read and write sync settings. That makes sense. We also
 
 67
 00:03:38,790 --> 00:03:41,810
+必须验证用户， 尽管我们不会真正用到
 have to authenticate accounts, even though we're not really using
 
 68
 00:03:41,810 --> 00:03:45,420
-them for anything. None of these permissions are ones users
+这些在任何情况下。这些许可权都不是它的用户
+them for anything. None of these permissions are one's users
 
 69
 00:03:45,420 --> 00:03:48,530
+应该关心的。但是作为开发者，我们总是想要
 should be concerned about. But as developers, we always want
 
 70
 00:03:48,530 --> 00:03:51,780
+非常小心 当我们添加新的许可的时候
 to be careful when we have to add new permissions.
 
 71
 00:03:51,780 --> 00:03:54,780
+接下来在sync文件夹里创建SunshineSyncAdapter文件
 Let's create the SunshineSyncAdapter file itself inside
 
 72
 00:03:54,780 --> 00:03:57,610
+它是从AbstractThreadedSyncAdapter继承来的
 of sync, which extends the abstract threaded sync
 
 73
 00:03:57,610 --> 00:04:00,683
+按Ctrl+I 然后按Ctrl+O
 adapter class. Hit Ctrl+I and then Ctrl+O
 
 74
 00:04:00,683 --> 00:04:04,900
+这帮助我们在构建函数里创建所有需要的抽象函数
 to implement the necessary abstract methods in constructor.
 
 75
 00:04:04,900 --> 00:04:07,170
+我们会使用这第一个构建函数。我们会
 We'll use the first constructor. We'll fill
 
 76
 00:04:07,170 --> 00:04:09,330
+晚一些来完成这个。你可能能回想起
 this out later. As you may recall, the
 
 77
 00:04:09,330 --> 00:04:12,650
+这个SyncAdapter模式还需要另一个服务。
 sync adaptor pattern requires yet another service. So
 
 78
 00:04:12,650 --> 00:04:15,645
+我们创建另一个类 叫做SunshineSyncService
 we're going to create another Java class called SunshineSyncService.
 
 79
 00:04:16,730 --> 00:04:20,670
+这个类是用来传递SyncAdapterBinder给SyncManager的
 This class is used to deliver the sync adapter Binder to the sync manager.
 
 80
 00:04:21,860 --> 00:04:24,690
+这个Binder是被
 The Binder is implemented for us by
 
 81
 00:04:24,690 --> 00:04:28,520
+AbstractThreadedSyncAdapter创建的 然后
 the abstract threaded sync adapter class. And returned
 
 82
 00:04:28,520 --> 00:04:31,560
+通过getSyncAdapterBinder返回。现在我们
 in the getSyncAdapterBinder method. And now, we
 
 83
 00:04:31,560 --> 00:04:35,750
+需要多一个XML文件。创建syncadapter.xml
 need one more XML file. Create syncadapter.xml with
 
 84
 00:04:35,750 --> 00:04:39,120
+Root element：sync-adapter。重申一次，这个XML
 root element sync-adapter. Once again, this XML
 
 85
 00:04:39,120 --> 00:04:42,590
+定义和sync-adapter相关的配置
 file defines the settings associated with our sync-adapter.
 
 86
 00:04:42,590 --> 00:04:45,290
-Including it's content authority. The account type that it
+包括它的内容方，以及同步的账户类型
+Including its content authority. The account type that it
 
 87
 00:04:45,290 --> 00:04:48,890
+对用户是否可见、
 syncs. Whether or not it's user visible. Whether it
 
 88
 00:04:48,890 --> 00:04:52,180
+是否支持上传。这会改变内容提供商
 supports uploading, which changes the way the content provider
 
 89
 00:04:52,180 --> 00:04:56,280
+和SyncAdapter的交互方式。是否允许多线程同步，以及
 interacts with the sync adapter. Allowing parallel syncs and is
 
 90
 00:04:56,280 --> 00:04:59,400
+是否总是可同步的。这些配置对于这一个APP都是有意义的
 always syncable. These settings make sense for this particular
 
 91
 00:04:59,400 --> 00:05:02,350
+我打赌你知道接下来是什么
 application, and I bet you know what comes next. You're
 
 92
 00:05:02,350 --> 00:05:05,100
+是的，你必须向包经理注册
 right. You have to register the sync adapter service
 
 93
 00:05:05,100 --> 00:05:08,140
+这个SyncAdapter服务。因此我们不得不创建
 with the package manager. And therefore we have to create
 
 94
 00:05:08,140 --> 00:05:12,540
+更多的manifest项目，包括一些重要的元数据
 more manifest entries, containing some important metadata. Most
 
 95
 00:05:12,540 --> 00:05:15,602
+最重要的是要和我们刚刚创建的文件连接起来
 importantly, links to the file we just created. All
 
 96
 00:05:15,602 --> 00:05:19,040
+好了，我们就快完成了。让我们开始直接在
 right, now we're getting close. Let's start working
 
 97
 00:05:19,040 --> 00:05:21,690
+SyncAdapter上工作吧。我们首先
 on the sync adapter, itself. We'll start with a
 
 98
 00:05:21,690 --> 00:05:24,820
+用这个辅助函数来获取一个假的同步账户
 helper function to get the dummy sync account
 
 99
 00:05:24,820 --> 00:05:27,760
+并且确保它已经被创建好了。然后，
 and make sure that it has been created. Then,
 
 100
 00:05:27,760 --> 00:05:30,560
+给我们的SyncAdapter添加另外一个辅助函数
 we'll add another helper function to our sync adaptor,
 
 101
 00:05:30,560 --> 00:05:32,510
+以便能更容易测试我们的SyncAdapter
 to make it easier to test our sync adaptor.
 
