@@ -1,80 +1,99 @@
 1
 00:00:00,720 --> 00:00:02,650
+现在我们有了数据库，我们可以利用好
 Now that we have a database, we can take
 
 2
 00:00:02,650 --> 00:00:05,420
+Android的模式，将作为应用content provider的数据
 advantage of an Android pattern to bind our view to
 
 3
 00:00:05,420 --> 00:00:09,220
+和界面连接起来
 our data model known as a content provider. A content
 
 4
 00:00:09,220 --> 00:00:11,810
+content provider让我们想到数据
 provider allows us to think of our view data in
 
 5
 00:00:11,810 --> 00:00:15,010
+就我们的 URL 而言，是一个适合我们应用的结构
 terms of URIs which is a convenient structure for
 
 6
 00:00:15,010 --> 00:00:19,020
+我们可以显示不同的数据，来源于
 our applications. We can have views display different data based
 
 7
 00:00:19,020 --> 00:00:23,130
+那些当前活动的URL。事实证明
 upon which URI is currently active. As it turns out,
 
 8
 00:00:23,130 --> 00:00:26,270
+URL是这些Intents的主要数据成员
 a URI is the primary data member for those Intents,
 
 9
 00:00:26,270 --> 00:00:30,300
+通过content provider和intents相结合
 that Rato so gloriously described. With a combination
 
 10
 00:00:30,300 --> 00:00:33,310
+我们可以很方便地
 of content providers and intents, one can nicely
 
 11
 00:00:33,310 --> 00:00:35,730
+将数据从视图中分离开来
 decouple the data being displayed from the view.
 
 12
 00:00:36,910 --> 00:00:38,940
+使用URL和data location
 And there's one other great thing we get from
 
 13
 00:00:38,940 --> 00:00:42,020
+我们可以从中得到一件更棒的事情。
 using URI with a data location. It's easy
 
 14
 00:00:42,020 --> 00:00:44,890
+这很容易让我们的数据库中注册用来观察location的通知部件
 to have our database notify components that are registered
 
 15
 00:00:44,890 --> 00:00:48,060
+location的变化导致我们的光标去更新列表
 to observe that location which causes our cursor
 
 16
 00:00:48,060 --> 00:00:50,990
+并且展示最新的数据
 to update our list and show the latest data.
 
 17
 00:00:50,990 --> 00:00:55,190
+content provider会返回各种数据，但通常是，他们返回
 Content providers can return all sorts of data but typically, they return either
 
 18
 00:00:55,190 --> 00:00:59,440
+的是一个列表，或者是一个单一列表项。这里是我们如何修改
 a list of items, or a single item. Here's how one might modify our
 
 19
 00:00:59,440 --> 00:01:03,440
+去选择一个特定的日期的数据，而不是一定范围内的天数
 query to select the data for a specific date, rather than a range of
 
 20
 00:01:03,440 --> 00:01:08,770
+在这种情况下包含了更多可以显示出来的信息
 days which in this case also contains more information for the viewer to see.
-

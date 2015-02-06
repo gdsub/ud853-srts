@@ -1,84 +1,105 @@
 1
 00:00:00,230 --> 00:00:03,500
+这些是content provider所需求的功能
 These are the required content provider functions. You
 
 2
 00:00:03,500 --> 00:00:05,270
+你可以以任何你喜欢的方式实现它们
 can implement them any way you like, but
 
 3
 00:00:05,270 --> 00:00:08,130
+但是你会发现它是直接
 you'll find that it's really straight forward to
 
 4
 00:00:08,130 --> 00:00:12,530
+将它们在SQLite 数据库的顶部实现了
 implement them on top of a SQLite database. The
 
 5
 00:00:12,530 --> 00:00:16,219
+content provider功能中包含的参数
 parameters packed into our content provider functions match
 
 6
 00:00:16,219 --> 00:00:19,710
+和Android中SQLite的接口参数是准确配对的
 the parameters used for Android's SQLite's interface almost
 
 7
 00:00:19,710 --> 00:00:22,570
+最大的不同就是我们使用URI代替了
 exactly. The biggest difference is that we replaced
 
 8
 00:00:22,570 --> 00:00:25,810
+table string。在简单的content provider中
 the table string, with a uri. In the simplest
 
 9
 00:00:25,810 --> 00:00:29,020
+数据查询被直接
 content provider implementation, the query is passed
 
 10
 00:00:29,020 --> 00:00:31,840
+传送到数据库中，注意，
 straight through to the database. Note that
 
 11
 00:00:31,840 --> 00:00:33,720
+有一些参数并不能简单地被content provider控制
 there are parameters that cannot be easily
 
 12
 00:00:33,720 --> 00:00:37,300
+比如说，grouping functionality
 controlled through content providers, such as grouping functionality.
 
 13
 00:00:39,530 --> 00:00:42,790
+但是这个参数允许灵活使用
 But the interface allows for very flexible querying.
 
 14
 00:00:42,790 --> 00:00:46,120
+更重要的是，projection或者columns
 Most importantly, the projection or columns allows for querying
 
 15
 00:00:46,120 --> 00:00:48,945
+使得查询变得更加高效，因为column 索引和cursor object
 to be much more efficient. Because the column
 
 16
 00:00:48,945 --> 00:00:52,290
+是与我们提交到数据库中
 indices and our cursor object match the projection that
 
 17
 00:00:52,290 --> 00:00:55,150
+的projection相互对应的，我们可以
 we submit to the database, we can just
 
 18
 00:00:55,150 --> 00:00:58,340
+通过数字索引得到它们的值，而不需要
 get the values by their numerical index instead of
 
 19
 00:00:58,340 --> 00:01:00,950
+使用 getColumnIndex去寻找每一个
 having to use getColumnIndex to look up each
 
 20
 00:01:00,950 --> 00:01:04,420
+column 索引。好的，现在是时候编写一些有关Sunshine应用的代码了
 column index. All right, it's time to code some
 
 21
 00:01:04,420 --> 00:01:07,160
+让我们写一个content provider
 more Sunshine. Let's code a content provider.
 

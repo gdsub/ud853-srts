@@ -1,180 +1,225 @@
 1
 00:00:00,210 --> 00:00:02,840
+在我们创建content provider之前
 Before we start creating our content provider,
 
 2
 00:00:02,840 --> 00:00:04,440
+我们先回顾一下weather contract
 it's time to go back to our weather
 
 3
 00:00:04,440 --> 00:00:07,470
+我们将使用weather contract 
 contract. We're going to use the weather contract,
 
 4
 00:00:07,470 --> 00:00:11,980
+定义database和content provider
 for both database definitions and content provider definitions.
 
 5
 00:00:11,980 --> 00:00:17,310
+我们包括的这些URI会公开数据和界面
 These are the URIs that our contract will expose for a data and view. Some of
 
 6
 00:00:17,310 --> 00:00:20,279
+有些URL会返回一些列表或者项目目录
 them return a list or directory of items.
 
 7
 00:00:22,050 --> 00:00:23,740
+还有一些会返回单个的项
 And some of them return as single item.
 
 8
 00:00:25,380 --> 00:00:29,620
+URI第一部分所描述的内容是系统如何从不同的应用中
 The first part of the URI is the content authority which is how the system
 
 9
 00:00:29,620 --> 00:00:33,590
+分辨出URL的，就像域名
 disambiguate URIs from different application, similar to the
 
 10
 00:00:33,590 --> 00:00:36,060
+和网站之间的关系一样
 relationship between a domain name and its website.
 
 11
 00:00:37,100 --> 00:00:39,120
+这一串用于授权的简单字符
 A convenient string to use for the content
 
 12
 00:00:39,120 --> 00:00:41,250
+是这个应用的包名
 authority is the package name of the app.
 
 13
 00:00:42,820 --> 00:00:46,190
+让我们回到我们的weather contract，我们将
 Let's return to our weather contract. We'll add
 
 14
 00:00:46,190 --> 00:00:50,390
+为content provider增加CONTENT_AUTHORITY和BASE_CONTENT_URI
 the CONTENT_AUTHORITY and the BASE_CONTENT_URI for our content
 
 15
 00:00:50,390 --> 00:00:52,010
+在我们的weather contract代码的前面部分
 provider to the beginning of our weather
 
 16
 00:00:52,010 --> 00:00:55,060
+接下来，我们会在添加一些字符到
 contract. Next, we'll add strings to the base
 
 17
 00:00:55,060 --> 00:00:58,470
+URI的基础路径中。每一个URI
 path of our URIs. Each URI essentially points
 
 18
 00:00:58,470 --> 00:01:00,660
+实际上都指向一张不同的表，对于每一张表
 to a different table. For each of our
 
 19
 00:01:00,660 --> 00:01:06,310
+location entry和weather entry，我们都为每张表
 tables, location entry, and weather entry, we
 
 20
 00:01:06,310 --> 00:01:11,340
+创建了相对应的content URI
 create a content URI that represents the base location for each table. Now,
 
 21
 00:01:11,340 --> 00:01:16,140
+我们还会在location和weather contract中增加一些magical value
 we'll add some magical value to the location and weather entry contracts.
 
 22
 00:01:16,140 --> 00:01:20,020
+这些包含特殊MIME类型的前缀表示
 These contain special MIME type prefixes that indicate that
 
 23
 00:01:20,020 --> 00:01:23,740
+这个URI要么返回一个目录，列表项要么返回
 the URI either returns a directory, list of items,
 
 24
 00:01:23,740 --> 00:01:26,070
+一个单一项。现在，我们将在weather entry中增加
 or a single item. Now, we're going to add some
 
 25
 00:01:26,070 --> 00:01:29,360
+URI builder和decoder 功能，
 URI builders and decoder functions in weather entry. It's
 
 26
 00:01:29,360 --> 00:01:32,270
+这是很方便的，因为当知道真实的URI编码后，
 convenient to have this as it makes fewer places
 
 27
 00:01:32,270 --> 00:01:36,270
+它使得你的代码更少
 in your code aware of the actual URI encoding,
 
 28
 00:01:36,270 --> 00:01:39,252
+在contract知识中记住这个知识点，如果你只是
 keeping this knowledge in the contract. If you're just
 
 29
 00:01:39,252 --> 00:01:41,500
+将有一个标准的 integer primary key 的URI
 going to have a URI with a standard integer
 
 30
 00:01:41,500 --> 00:01:44,660
+这是用来区分项目查询
 primary key, which is a typical way of distinguishing between
 
 31
 00:01:44,660 --> 00:01:47,040
+或者列表项查询的典型方式
 a query for item or the query for a list
 
 32
 00:01:47,040 --> 00:01:50,240
+也可以使用ContentUris.withAppendedId 函数
 of items, one can use the content URIs with appended
 
 33
 00:01:50,240 --> 00:01:53,150
+Strings，比如说设置地理位置，可以
 id function. Strings, such as a location setting, can be
 
 34
 00:01:53,150 --> 00:01:56,900
-appended with the append path function. We can also these
+用appendPath函数，我们也可以使用这些函数
+appended with the append path function. We can also use these
 
 35
 00:01:56,900 --> 00:02:01,040
+增加可能有用的查询参数，在这个例子中
 functions to add potentially useful query parameters. In this case,
 
 36
 00:02:01,040 --> 00:02:03,730
+我们使用一个startDate作为一个查询参数。
 we use a query parameter for the start date. Query
 
 37
 00:02:03,730 --> 00:02:06,770
+当我们有一个固定的，
 parameters are useful for when we have a fixed database
 
 38
 00:02:06,770 --> 00:02:09,389
+并且是有限的参数查询数据库时，查询参数是很有用的
 query that we want to have some limited parameterization
 
 39
 00:02:09,389 --> 00:02:11,970
+在这个例子中，这是这链接这两张表中参数
 for. In this case, it will be a parameter for
 
 40
 00:02:11,970 --> 00:02:15,150
+最后，我们有
 our join between the two tables. Finally, we have
 
 41
 00:02:15,150 --> 00:02:18,270
+生成都两部分都包含
 this function that builds a two part URI that contains
 
 42
 00:02:18,270 --> 00:02:22,060
+location 和date segments的URI的函数。除此以外，还有
 both location and date segments. Below this, we have
 
 43
 00:02:22,060 --> 00:02:26,080
+其他辅助函数用来帮助解码URI结构，通过
 helper functions that help decode the URI structure. This hides
 
 44
 00:02:26,080 --> 00:02:28,630
+我们的代码将URI结构隐藏了起来，并且
 the URI structure form our code as well and
 
 45
 00:02:28,630 --> 00:02:31,690
+将所有的知识都放在了contract中
 places all the knowledge in one place within the contract.
 
