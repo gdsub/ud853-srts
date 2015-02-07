@@ -1,116 +1,145 @@
 1
 00:00:00,140 --> 00:00:03,840
+我们回顾第二节当凯瑟琳调用一个
 Remember back in lesson two when Katherine used a
 
 2
 00:00:03,840 --> 00:00:07,030
+异步任务连接刷新键来更新
 AsyncTask hooked up to a refresh button to update
 
 3
 00:00:07,030 --> 00:00:09,310
+数据？Rato就说到这是怎样的一个
 our data? Rato talked about how that was a
 
 4
 00:00:09,310 --> 00:00:13,290
+不好的方法，因为异步任务没有和
 bad idea, because the AsyncTask is not tied to
 
 5
 00:00:13,290 --> 00:00:16,610
+活动的生命周期捆绑在一起。只要异步任务
 the activity life cycle. The virtual machine will hold
 
 6
 00:00:16,610 --> 00:00:18,960
+在运行，虚拟机将会坚持活动对象，
 on to the activity object as long as the
 
 7
 00:00:18,960 --> 00:00:23,190
+即使在安卓已经通知onDestroy后
 AsyncTask is running, even after Android has called onDestroy
 
 8
 00:00:23,190 --> 00:00:26,130
+希望他被丢弃。
 for the activity and expect it to be discarded.
 
 9
 00:00:26,130 --> 00:00:28,380
+如果你旋转你的手机，这个行为将
 If you rotate your phone, the behavior is to
 
 10
 00:00:28,380 --> 00:00:31,810
+破坏你的活动然后实例化一个新的。
 destroy your activity and instantiate a new one. The
 
 11
 00:00:31,810 --> 00:00:35,400
+现在单纯的异步任务实施有俩条线路来尝试
 naive AsyncTask implementation now has two threads trying to
 
 12
 00:00:35,400 --> 00:00:39,290
+实现相同的更新，等等。关键是，
 perform the same update, and so forth. The point is,
 
 13
 00:00:39,290 --> 00:00:41,910
+它不是一个非常有潜能的作为长后台
 it's not the best pattern for a potentially very
 
 14
 00:00:41,910 --> 00:00:45,680
+操作的一条最好的路径，比如获取网络服务
 long background operation, such as fetching from web services. If
 
 15
 00:00:45,680 --> 00:00:48,410
+如果你离开了app，异步任务将会继续
 you leave the app, the asynctask will continue to
 
 16
 00:00:48,410 --> 00:00:51,340
+运行只要你的活动进程一直存在于后台，
 run for as long as your process is kept alive,
 
 17
 00:00:51,340 --> 00:00:53,750
+但是 会运行在一个较低的优先权，然后你的进程
 but will run at a low priority, and your process
 
 18
 00:00:53,750 --> 00:00:55,900
+会被先杀掉如果系统服务
 will be the first thing to be killed if the device
 
 19
 00:00:55,900 --> 00:00:59,760
+需要更多的资源。然而会有一个更大的问题，你的app
 needs more resources. And there's a bigger problem. Your app
 
 20
 00:00:59,760 --> 00:01:02,660
+必须可视化且运行在前台并第一时间实例化
 has to be visible and running in the foreground to instantiate
 
 21
 00:01:02,660 --> 00:01:05,590
+任务。因为我们开始一个
 the task in the first place. Because we started a
 
 22
 00:01:05,590 --> 00:01:09,000
+任务，当我们打开app去更新天气，
 task, to update the weather when we started the app, this
 
 23
 00:01:09,000 --> 00:01:13,070
+如果天气总重复改变这会变成不受欢迎的行为。所以
 can have undesirable behavior if the weather changes rapidly. So
 
 24
 00:01:13,070 --> 00:01:16,110
+我们现在要学习正确的方法来执行更新。
 now we're going to learn the right way to perform updates.
 
 25
 00:01:16,110 --> 00:01:18,700
+我们需要当app在前台运行得时候，
 We'll want to automate the process while the app is in
 
 26
 00:01:18,700 --> 00:01:22,690
+它会自动更新。但更重要的是，我们想要app能够
 the foreground. But even more importantly, we want the app to get
 
 27
 00:01:22,690 --> 00:01:26,690
-regular updates in the background with minimal battery drain. That will
+在后台以最小的电量消耗来实现有规律的更新。那将
+egular updates in the background with minimal battery drain. That will
 
 28
 00:01:26,690 --> 00:01:28,660
+是我们后续在介绍天气更新得时候，在这门课程
 be especially important later in this
 
 29
 00:01:28,660 --> 00:01:31,010
+里面最重要的部分。
 lesson when we introduce weather notifications.
 
