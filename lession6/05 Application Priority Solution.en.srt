@@ -1,32 +1,40 @@
 1
 00:00:00,570 --> 00:00:03,040
+对了。地图程序目前不可见或者也没有
 That's right. Maps isn't visible or running any
 
 2
 00:00:03,040 --> 00:00:05,625
+在后台跑服务，那么它就是最先被释放资源的那个。
 services, so it's the most likely to be killed.
 
 3
 00:00:05,625 --> 00:00:08,290
+GMail是一个正在运行的服务，但是它没有和用户发生直接的
 G-mail is running a service, but it's not interacting
 
 4
 00:00:08,290 --> 00:00:10,790
+的交互，而Google音乐应用和照相机应用正在和用户发生交互
 directly with the user while Google Music and the
 
 5
 00:00:10,790 --> 00:00:13,870
+而在这两个应用中，音乐应用比照相应用
 camera app are. Of those two, the Music app
 
 6
 00:00:13,870 --> 00:00:15,690
+在前台的时间长。
 must have been in the foreground for longer than
 
 7
 00:00:15,690 --> 00:00:18,980
+所以它的优先级会相对低一些
 the camera. So it's got a slightly lower priority,
 
 8
 00:00:18,980 --> 00:00:21,310
+不过他们都不会被系统释放掉
 though neither are in any danger of being killed.
 
