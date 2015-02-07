@@ -1,13 +1,16 @@
 1
 00:00:00,270 --> 00:00:03,114
+你可以在网上，找到如何使屏幕支持网络页面，
 Using the screen support page, and whatever technical
 
 2
 00:00:03,114 --> 00:00:06,078
+还有所有技术规范的细节
 specification details you can find on the internet, what
 
 3
 00:00:06,078 --> 00:00:08,619
+那么Nexus One 和 the Nexus 5这两款设备的尺寸和密度是多少?
 are the sizes and densities of these two devices,
 
 4
@@ -16,17 +19,21 @@ the Nexus One and the Nexus 5? For these
 
 5
 00:00:11,190 --> 00:00:13,080
+关于这些，我们可以知道屏幕尺寸是有标准的，
 purposes, the screen size should be one of
 
 6
 00:00:13,080 --> 00:00:17,580
+小 中 大 特大。
 the available buckets, small, normal, large, or extra large.
 
 7
 00:00:17,580 --> 00:00:19,580
+还有像素的大小也应当参照屏幕大小规格，
 And, the pixel density should always refer to one
 
 8
 00:00:19,580 --> 00:00:25,540
+LDPI MDPI HDPI XHDPI 和 XXHDPI
 of our buckets, LDPI, MDPI, HDPI, XHDPI, or XXHDPI.
 
