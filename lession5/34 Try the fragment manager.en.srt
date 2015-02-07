@@ -1,32 +1,40 @@
-1
+﻿1
 00:00:00,610 --> 00:00:03,730
+我已经讲过几次在back stack里的FragmentManager, FragmentTransactions
 I've mentioned the FragmentManager, FragmentTransactions in the back stack
 
 2
 00:00:03,730 --> 00:00:06,410
+现在在Android开发者的网站上
 a few times. Now, take a look at the documentation
 
 3
 00:00:06,410 --> 00:00:09,370
+看一看文档，然后完成这个代码
 on the Android developer site, and complete the code,
 
 4
 00:00:09,370 --> 00:00:11,990
+要求代替掉这个fragment_container的内容
 which will replace the contents of the fragment container with
 
 5
 00:00:11,990 --> 00:00:14,550
+用一个新的DetailsFragment
 a new instance of the details fragment. Keep in
 
 6
 00:00:14,550 --> 00:00:17,060
+记住，这个应该允许用户
 mind that this transaction should allow the user to reverse
 
 7
 00:00:17,060 --> 00:00:19,460
+用后退键撤销操作。
 the transaction using the Back button. And in this
 
 8
 00:00:19,460 --> 00:00:21,990
+这种情况，我们要从Activity里执行这段代码。
 case, we'll be calling this code from within an activity.
 

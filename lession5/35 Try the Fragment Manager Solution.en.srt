@@ -1,36 +1,45 @@
-1
+﻿1
 00:00:00,080 --> 00:00:02,940
+我们用FragmentManager来开始一个界面切换
 We use the FragmentManager to begin a transaction, to look that
 
 2
 00:00:02,940 --> 00:00:05,580
+我们添加这个界面切换进back stack
 we want to add this transaction to the back stack, and
 
 3
 00:00:05,580 --> 00:00:09,170
+然后用这个replace命令，指定我们想要替换掉的
 then use the replace command, specifying the container ID, whose contents
 
 4
 00:00:09,170 --> 00:00:11,590
+内容的ContainerID和这个我们想要新添进去的Fragment
 we want to replace, and the new fragment we want to
 
 5
 00:00:11,590 --> 00:00:14,700
+然后我们调用commit()来执行这个界面切换
 put in there. And we execute the transaction by calling commit.
 
 6
 00:00:14,700 --> 00:00:18,070
-Now you can actually chain another of changes within the same
+实际上它们可以把很多个变化串在一起在同一个界面切换里执行
+They can actually chain a number of changes together within the same
 
 7
 00:00:18,070 --> 00:00:21,160
+所以它也可以完成相同的效果
 transaction, so it's also possible to achieve much of the same
 
 8
 00:00:21,160 --> 00:00:25,770
+通过先移除Container A的内容，然后添加Fragment B
 effect by first removing the contents of container A and adding fragment
 
 9
 00:00:25,770 --> 00:00:27,010
+到这个Container里
 B to that container.
 
