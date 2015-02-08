@@ -25,34 +25,40 @@ some logging. Since we ultimately want to run
 
 6
 00:00:15,550 --> 00:00:19,330
-状态下运行我们的程序。
+状态下运行我们的程序。让我们把地点查询代码从
 the SyncAdapter in undetected mode. Let's pull the location
 
 7
 00:00:19,330 --> 00:00:22,610
+utility 类里拿出来。然后我们把这些代码
 query from our utility class. And then we
 
 8
 00:00:22,610 --> 00:00:26,140
+粘贴到已经建立的sunshine 服务中。
 paste in the code from our existing sunshine service.
 
 9
 00:00:26,140 --> 00:00:30,050
+下面必须要补充一些东西。我们需要调用getContext方法来获取
 We'll have to patch a few things up. We'll have to call getContext to
 
 10
 00:00:30,050 --> 00:00:34,590
+当前的内容， 举例来说。 请注意，我在复制主要的方法的同时我也
 get the current context, for example. Note that I copied over ad location at
 
 11
 00:00:34,590 --> 00:00:39,770
+复制了地点的数据。最后，
 the same time I copied over the primary function. And then finally, we'll fix
 
 12
 00:00:39,770 --> 00:00:42,210
+我们来使用一个新的帮助方法来修补好我们的
 update weather to use the new helper
 
 13
 00:00:42,210 --> 00:00:45,040
+SyncAdapter。 让我们来运行一下。
 function in our SyncAdapter. Let's run this.
-
