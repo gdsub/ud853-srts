@@ -85,8 +85,8 @@ You should have your newly created Sunshine app with the files on the left here.
 
 18
 00:01:12,680 --> 00:01:16,170
-确保你的 Gradel Build 完成。
-Make sure you wait for the Gradel Build to finish. If you still see errors,
+确保你的 Gradle Build 完成。
+Make sure you wait for the Gradle Build to finish. If you still see errors,
 
 19
 00:01:16,170 --> 00:01:19,450
