@@ -1,25 +1,31 @@
 1
 00:00:00,200 --> 00:00:03,330
+非常好，做完这些让我们看看
 All right, you're done. Lets look at the
 
 2
 00:00:03,330 --> 00:00:06,490
+解决方案。现在需要开始在抽象线程的
 solution. We'll begin by adding a log tag
 
 3
 00:00:06,490 --> 00:00:10,160
+SyncAdapter中加入一个记录页面。既然这个抽象线程是在
 into our abstract threaded SyncAdapter. Since this stuff
 
 4
 00:00:10,160 --> 00:00:12,880
+后台运行的。我们使用一个记录器是非常有帮助的
 runs in the background, it's really helpful to have
 
 5
 00:00:12,880 --> 00:00:15,550
+我们最终还是希望能够在SyncAdapter没有被察觉的
 some logging. Since we ultimately want to run
 
 6
 00:00:15,550 --> 00:00:19,330
+状态下运行我们的程序。
 the SyncAdapter in undetected mode. Let's pull the location
 
 7
