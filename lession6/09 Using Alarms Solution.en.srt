@@ -1,96 +1,120 @@
 1
 00:00:00,320 --> 00:00:03,010
+好的，你已经完成了。让我们看看答案。
 All right, you're done. Let's look at the solution.
 
 2
 00:00:03,010 --> 00:00:05,090
+正如我在问题里所说的那样，我们要
 As I said in the question, we're going to be
 
 3
 00:00:05,090 --> 00:00:08,720
+在天气更新功能里的一个forcast片段里工作。
 working inside a forecast fragment in the update weather function.
 
 4
 00:00:08,720 --> 00:00:11,220
+首先，我们需要为我们的alarm receiver新建一个标准意图。
 First, we're going to need to create a standard intent
 
 5
 00:00:11,220 --> 00:00:14,650
+然后我们把位置查询功能临时添加进来。
 for our alarm receiver. We then add our location query
 
 6
 00:00:14,650 --> 00:00:17,920
+然后打包到一个待定的意图里。
 as an extra. We then wrap that in a pending
 
 7
 00:00:17,920 --> 00:00:21,440
+待定意图其实是工程描述意图的一种特别形式。
 intent. A pending intent is a special kind of object
 
 8
 00:00:21,440 --> 00:00:25,838
+这时候允许其他应用程序
 that describes an intent. This allows other applications to implement
 
 9
 00:00:25,838 --> 00:00:28,060
+实现被用来新建
 the feature of the original intent that's used to
 
 10
 00:00:28,060 --> 00:00:30,880
+待定意图的最初意图的特征。其实我们仅仅使用一次待定意图，
 create the pending intent. We're only going to use this
 
 11
 00:00:30,880 --> 00:00:34,542
+所以们定义为flag-one-shot。
 pending intent once, so I set flag one shot.
 
 12
 00:00:34,542 --> 00:00:37,480
+然后，我们用alarm service设置alarm让他从现在
 Then, we get the alarm service and set the alarm
 
 13
 00:00:37,480 --> 00:00:40,900
+起触发五秒。但是我们仍然需要
 to trigger five seconds from now. But we still
 
 14
 00:00:40,900 --> 00:00:44,100
+给我们的alarm做点东西。回到Broadcast Receiver，
 need for our alarm to do something. Back in the
 
 15
 00:00:44,100 --> 00:00:46,990
+我们需要发送标准意图，
 Broadcast Receiver, we need to send the standard intent
 
 16
 00:00:46,990 --> 00:00:51,070
+然后开始我们的服务，就是这样。让我们试着运行应用程序。
 to start our service, and that's it. Let's try running
 
 17
 00:00:51,070 --> 00:00:53,460
+好的，所以我们已经有了可以停止我们
 the app. All right, so now we've got the
 
 18
 00:00:53,460 --> 00:00:56,460
+的服务的Alarm Manager。
 Alarm Manager getting in the way of our service. We
 
 19
 00:00:56,460 --> 00:00:59,760
+我们刷新一下。到我们真正看到数据的时候可能至少需要
 hit refresh. It'll take us about five more seconds
 
 20
 00:00:59,760 --> 00:01:02,660
+五秒钟。然后我们等一下。
 before we actually see the data now. And there we
 
 21
 00:01:02,660 --> 00:01:06,930
+一个短暂的小生命诞生，非常简单的alarm。甚至
 have it. A very, very simple alarm. Even with
 
 22
 00:01:06,930 --> 00:01:09,820
+只是在我们不知道的时候就在后台更新了，还有在使用服务的时候，
 this updating in the background potentially, and using a service,
 
 23
 00:01:09,820 --> 00:01:12,170
+我们还可以更高效地使用我们的手机资源。
 we could still be more efficient in our use
 
 24
 00:01:12,170 --> 00:01:15,730
+Rato会告诉我们更多关于他的知识。
 of phone resources. Rato can tell us more about that.
 

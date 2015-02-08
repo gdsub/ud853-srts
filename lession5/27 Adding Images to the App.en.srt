@@ -1,188 +1,235 @@
 1
 00:00:00,090 --> 00:00:02,540
+我们给你提供了一个asset drop，看下边的链接，
 We're providing you with an asset drop, view the link below,
 
 2
 00:00:02,540 --> 00:00:05,130
+这样你就可以下载图片然后让他存到你的应用程序里。
 so that you can download the images and include them in
 
 3
 00:00:05,130 --> 00:00:08,280
+当我们打开assets ZIP文件时
 the app. When we open up the assets ZIP file, we
 
 4
 00:00:08,280 --> 00:00:11,190
+我们看到相同的图标以不同分辨率的不同尺寸被提供出来。
 see that the same icon is provided at different sizes for
 
 5
 00:00:11,190 --> 00:00:15,800
+在drawable MDPI文件夹里，我们看到
 different resolutions. In the drawable MDPI folder, we see the assets
 
 6
 00:00:15,800 --> 00:00:19,710
+将要被用到一个MDPI设备里的assets.在drawableHDPI文件夹里
 that will be used on an MDPI device. In the drawable
 
 7
 00:00:19,710 --> 00:00:22,040
+我们看到了将要被用到一个HDPI设备的assets.
 HDPI folder, we see the assets that will be used on
 
 8
 00:00:22,040 --> 00:00:25,260
+这同样适用于其他文件夹。
 an HDPI device. And the same goes for the other folders.
 
 9
 00:00:26,380 --> 00:00:29,000
+在res目录复制所有下载的用于提供的assets的时候，
 Under the res directory copy over all the asset
 
 10
 00:00:29,000 --> 00:00:32,580
+点击一张图片展现他的预览
 folders provided in the download. Clicking on an image shows
 
 11
 00:00:32,580 --> 00:00:34,770
+同时尺寸和像素也被展现出来。
 a preview of it and the size and pixels
 
 12
 00:00:34,770 --> 00:00:37,580
+在这时，你也可以删除老的
 is also shown. At this time you can also remove
 
 13
 00:00:37,580 --> 00:00:41,500
+占位符ic启动图标。我们的新启动图标
 the old placeholder ic launcher icons. Our new launcher
 
 14
 00:00:41,500 --> 00:00:45,220
+就位于mipmap文件夹里。这些是来自drawable文件夹的不同文件夹。
 icons are located in mipmap folders. These are distinct folders
 
 15
 00:00:45,220 --> 00:00:48,130
+如果你建了一个有着
 from the drawable folders. If you build an APK
 
 16
 00:00:48,130 --> 00:00:51,690
+像HDPI那样的目标屏幕分辨率的APK，Android asset
 for a target screen resolution like HDPI, the Android asset
 
 17
 00:00:51,690 --> 00:00:55,730
+packaging工具，AAPT，就可以删除drawable里其他你不需要的决议。
 packaging tool, AAPT, can strip out the drawables for other resolutions
 
 18
 00:00:55,730 --> 00:00:58,330
+但是如果他是在mipmap文件夹里，
 that you don't need. But if it's in the mipmap folders,
 
 19
 00:00:58,330 --> 00:01:01,261
+那么这些assets将被留在APK里不管目标分辨率。
 then these assets will stay in the APK regardless of the
 
 20
 00:01:01,261 --> 00:01:04,190
+但是当你需要一
 target resolution. But when would you need an image at a
 
 21
 00:01:04,190 --> 00:01:07,700
+个分辨率不同于设备的分辨率的图片怎么办？好的，有一个例子就是
 resolution different than the resolution of the device? Well, one example
 
 22
 00:01:07,700 --> 00:01:11,080
+Android launcher应用程序，他控制着主屏幕以及
 is the Android launcher app, which controls the home screen as
 
 23
 00:01:11,080 --> 00:01:13,830
+整个应用程序商店。在设备的当前密度中
 well as the All App store. The launcher app won't use
 
 24
 00:01:13,830 --> 00:01:16,741
+启动应用程序将不用图标，而是
 the icon at the current density of the device, but rather
 
 25
 00:01:16,741 --> 00:01:22,560
+在接下来的最高分辨率中取出一个的图标。对于XXHDP设备就像Nexus 5一样，
 pulls a icon for the next highest resolution up. For an XXHDPI device like the
 
 26
 00:01:22,560 --> 00:01:24,950
+通常情况下assets将从drawable XXHDPI文件夹里
 Nexus 5, normally the assets will be pulled
 
 27
 00:01:24,950 --> 00:01:28,850
+提取出来。但是，在这种情况下，
 from the drawable XXHDPI folder. However, in this
 
 28
 00:01:28,850 --> 00:01:32,620
+启动图标将取出一个XXXHDPI版本启动器图标
 case the launcher icon will pull the XXXHDPI
 
 29
 00:01:32,620 --> 00:01:35,320
+这样就将
 version of the launcher icon. That will make
 
 30
 00:01:35,320 --> 00:01:37,860
+更大的应用程序图标更清晰的出现在
 the larger app icons appear sharper on the
 
 31
 00:01:37,860 --> 00:01:42,715
+所有应用程序屏幕上。因为图标有了新的位置
 all apps screen. In the code replace @drawable/ic_launcher
 
 32
 00:01:42,715 --> 00:01:47,070
+所以我们要在代码中替换掉@drawable/ic_launcher还有@mipmap/ic_launcher。
 with @mipmap/ic_launcher because of the new location of the icons.
 
 33
 00:01:47,070 --> 00:01:49,980
+剩下的图标就是修改预测列表和细节屏幕，
 For the rest of the icons modify the forecast list
 
 34
 00:01:49,980 --> 00:01:53,160
+让他显示正确的天气图标
 and the details screen to display the right weather icon
 
 35
 00:01:53,160 --> 00:01:56,110
+,而不是占位符。看看在老师的笔记中的提示
 instead of the placeholder one. See the hints below in
 
 36
 00:01:56,110 --> 00:01:59,470
+在下边的要点中使用我们的辅助函数，
 the instructor notes. Using the helper functions we've provided in
 
 37
 00:01:59,470 --> 00:02:02,260
+你就可以将天气条件代码映射到你需要的图标上
 the gist below, you can map the weather condition code
 
 38
 00:02:02,260 --> 00:02:04,860
+这就是当你完成
 to the icon that you'll need. This is what the
 
 39
 00:02:04,860 --> 00:02:07,590
+这一步时应用程序应该出现的样子。
 app should look like when you're done with this step.
 
 40
 00:02:07,590 --> 00:02:09,400
+注意每个天气的图标都是有两种类型的，
 Note that there are two types of each weather
 
 41
 00:02:09,400 --> 00:02:12,350
+一个灰色的图标和一个彩色的艺术形象.
 icon, a gray icon and a colored art image.
 
 42
 00:02:12,350 --> 00:02:15,040
+在主要预报中我们将用灰色图标列表。
 In the main forecast list we'll be using the
 
 43
 00:02:15,040 --> 00:02:18,630
+但是，对于今天的布局，我们将用彩色图标。
 gray icon. However, for the today layout, we'll use the
 
 44
 00:02:18,630 --> 00:02:21,650
+当你进到细节活动时，
 colored icon. When you go inside the detail activity,
 
 45
 00:02:21,650 --> 00:02:24,930
+你也将使用彩色图标。在这时，
 you'll also use the colored icon. At this time,
 
 46
 00:02:24,930 --> 00:02:27,160
+你也可以删除任何图片你硬编码到
 you can also remove any images you hard coded
 
 47
 00:02:27,160 --> 00:02:30,570
+XML布局，因为他们现在将被动态填充。
 into the layout XML, because they'll be populated dynamically now.
 
