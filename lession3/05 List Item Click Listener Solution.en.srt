@@ -1,4 +1,4 @@
-1
+﻿1
 00:00:00,370 --> 00:00:04,380
 正确答案是setOnItemClickListener  我们应该
 The answer is setOnItemClickListener. We should register

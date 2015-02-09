@@ -1,70 +1,70 @@
-1
+ï»¿1
 00:00:00,560 --> 00:00:03,240
-´ÓÒ»¸ö»î¶¯ÖĞÒÆ¶¯¡£ÔÚÕâÖÖÇé¿öÏÂ£¬
+ä»ä¸€ä¸ªActivityç§»åŠ¨åˆ°å¦ä¸€ä¸ªActivity
 To move from one activity. In this case,
 
 2
 00:00:03,240 --> 00:00:06,210
-ÎÒÃÇµÄÑô¹âÓ¦ÓÃ³ÌĞòÀïµÄÖ÷»î¶¯£¬ÁíÍâ£¬Õâ±ßÕâ¸öÊÇÏ¸½Ú»î¶¯£¬
+è¿™é‡Œå°±æ˜¯ä»æˆ‘ä»¬çš„Sunshineçš„MainActivity
 the MainActivity in our sunshine app, to another, here
 
 3
 00:00:06,210 --> 00:00:11,300
-ÎÒÃÇ½ĞËû¿ªÊ¼»î¶¯¡£µ«ÊÇ×¢Òâµ±ÎÒÃÇ
+ç§»åŠ¨åˆ°DetailActivityï¼Œè¿™ä¸ªè¿‡ç¨‹å«startActivity()ã€‚ä½†æ˜¯æ³¨æ„å½“æˆ‘ä»¬
 the DetailActivity, we call StartActivity. But note that when
 
 4
 00:00:11,300 --> 00:00:14,490
-Ê¹ÓÃ¿ªÊ¼»î¶¯Õâ¸ö·½·¨Ê±£¬²¢²»ÊÇÖ¸³öÕâ¸ö»î¶¯µÄÀàÃû³Æ
+ä½¿ç”¨startActivity()è¿™ä¸ªæ–¹æ³•æ—¶ï¼Œå¹¶ä¸æ˜¯ç›´æ¥ä¼ é€’è¿™ä¸ªActivityçš„
 using the StartActivity method, rather than specifying the class
 
 5
 00:00:14,490 --> 00:00:16,900
-¾ÍÁ¢¼´¿ªÊ¼ÁË£¬ÀàÃû³Æ
+ç±»åç§°æ¥å¼€å§‹ï¼Œè€Œæ˜¯æŠŠç±»åç§°
 name of the activity to start directly, that
 
 6
 00:00:16,900 --> 00:00:20,590
-¾ÍÖ±½Ó±»´ò°üÔÚÁËÒ»¸öÒâÍ¼Àï¡£
+åŒ…è£…åœ¨ä¸€ä¸ªIntenté‡Œã€‚
 class name is packaged explicitly within an intent. The
 
 7
 00:00:20,590 --> 00:00:22,990
-Õâ¸ö×î»ù´¡µÄÇ°ÌáÊÇºÜ¼òµ¥µÄ¡£²»¹ÜÊ²Ã´Ê±ºòÄãĞèÒªÈÃÄãµÄ
+è¿™ä¸ªåŸºæœ¬å‰ææ˜¯å¾ˆç®€å•çš„ã€‚ä¸ç®¡ä»€ä¹ˆæ—¶å€™ä½ éœ€è¦è®©ä½ çš„
 basic premise is simple. Whenever you need your app
 
 8
 00:00:22,990 --> 00:00:25,950
-Ó¦ÓÃ³ÌĞò×é¼ş½øĞĞ»¥Ïà½»Á÷£¬»òÕßÊÇÏµÍ³Ö®¼ä£¬
+åº”ç”¨ç¨‹åºç»„ä»¶è¿›è¡Œäº’ç›¸äº¤æµï¼Œæˆ–è€…ä¸ç³»ç»Ÿäº¤æµï¼Œ
 components to communicate with each other, or the system,
 
 9
 00:00:25,950 --> 00:00:27,420
-Äã¾Í¿ÉÒÔÓÃÒâÍ¼À´Ê¶±ğÈÏ¶¨µÄÖÕµã¡£
+åº”è¯¥ç”¨Intentæ¥æŒ‡å®šç›®æ ‡
 you use intents to identify the
 
 10
 00:00:27,420 --> 00:00:30,950
-ÔÚÄãµÄ¿ª·¢³ÌĞòÏÂÆô¶¯»î¶¯ÊÇ
+ä½ çš„APPä¸­å¯åŠ¨Activityæ˜¯
 target destination. Starting activities within your
 
 11
 00:00:30,950 --> 00:00:32,912
-×î¼òµ¥µÄÀı×Ó¡£
+æœ€ç®€å•çš„ä¾‹å­ã€‚
 app is the simplest example. [SOUND]
 
 12
 00:00:32,912 --> 00:00:38,050
-Í¨¹ıÊ¹ÓÃ»·¾³ºÍ»î¶¯µÄÒ»¸öÀàÃû³Æ
+é€šè¿‡ä½¿ç”¨Contextå’ŒActivityçš„ç±»åç§°
 With your intent explicitly indicating the target
 
 13
 00:00:38,050 --> 00:00:44,136
-ÓëÄãµÄÒâÍ¼Ã÷È·Ö¸Ê¾Ä¿±ê¡£ÒâÍ¼Ê¹ÓÃ
+èƒ½æ˜ç¡®åœ°æŒ‡å®šIntentçš„ç›®æ ‡ã€‚è¿™ç§ç›´æ¥ä½¿ç”¨ç›®æ ‡ç»„ä»¶
 using the context and a class name of the activity. Intents that use the
 
 14
 00:00:44,136 --> 00:00:48,090
-ÄãÈÏ×¼µÄ×é¼şµÄÃû×Ö£¬¾ÍÊÇÎªÁËÈ»ÄãÖªµÀÕâ¸öÊÇÃ÷È·µÄÒâÍ¼¡£
+åå­—çš„Intentï¼Œä¹Ÿè¢«ç§°ä½œæ˜ç¡®çš„Intent
 name of the component you're targeting directly, are known as explicit intents.
 
