@@ -5,22 +5,22 @@ Now, we should be able to figure out the most
 
 2
 00:00:02,170 --> 00:00:05,530
-适合我们的应用程序应该使用的URL  基于我们之前看到的
+适合我们的应用程序使用的URL  基于我们
 appropriate URL that our app should use. Based on the
 
 3
 00:00:05,530 --> 00:00:08,360
-用户体验的线框图  你注意到  我们
+之前看到的用户体验的线框图  你注意到我们
 UX wireframes that we saw earlier, you noticed that we'll
 
 4
 00:00:08,360 --> 00:00:12,080
-需要一个星期的有价值的数据  这个测试和
+需要一个星期的数据  为了便于这个测试和
 want one week's worth of data. For this quiz and for
 
 5
 00:00:12,080 --> 00:00:15,130
-示例代码  我将在稍后展示出来
+我稍后将要展示给你们的示例代码的进行
 the example code that I'll be showing you later,
 
 6
@@ -30,12 +30,12 @@ we're going to be using the postal code for Mountain View which is
 
 7
 00:00:18,280 --> 00:00:21,260
-邮政编码是94043  无论如何  你应该使用你自己的位置
+也即94043  无论如何  你应该使用你自己的位置
 94043. By all means, you should use your own location
 
 8
 00:00:21,260 --> 00:00:23,445
-或者指定邮政编码
+可以指定邮政编码
 either specifying the postal code,
 
 9
@@ -45,36 +45,35 @@ city name or the latitude, longitude
 
 10
 00:00:25,760 --> 00:00:28,004
-接下来  我们所需要的
+接下来  我们希望
 coordinates. Next we want their
 
 11
 00:00:28,005 --> 00:00:31,190
-服务器数据的格式是JSON格式
+服务器返回的数据的格式是JSON格式
 format from the server to be in JSON format,
 
 12
 00:00:31,190 --> 00:00:36,590
-并且我们需要度量单位的报告  但是我们的UI将
+并且我们希望使用公制度量标准  但是我们的界面将
 and we want the units to be reported in metric. But our UI will
 
 13
 00:00:36,590 --> 00:00:39,240
-能够显示摄氏度或华氏度
+能够根据用户的设置来显示
 be able to display Celsius or Fahrenheit
 
 14
 00:00:39,240 --> 00:00:41,170
-基于用户的偏好设置  我们将
+摄氏温度或者华氏温度  我们将
 based on user preferences, and we'll just
 
 15
 00:00:41,170 --> 00:00:44,038
-自己完成转换  在下面的框中输入
+自己完成转换  在下面的框中
 do the conversion ourself. Enter the URL
 
 16
 00:00:44,038 --> 00:00:46,590
-满足这些需求的URL
+输入满足这些需求的URL
 that fulfills these requirements in the box below,
-

@@ -1,40 +1,39 @@
 1
 00:00:00,650 --> 00:00:02,793
-在第一课中,我们建立了一个新项目
+在第一课中  我们创建了一个
 In lesson one,we built a new project
 
 2
 00:00:02,794 --> 00:00:04,180
-支持基本的UI并带有模拟的数据 
+使用模拟数据展示其基本界面的项目
 with a basic UI backed with mock Data.
 
 3
 00:00:04,180 --> 00:00:06,730
-在这节课中,我们将我们的sunshine应用
+在这节课中  我们将会把sunshine应用
 In this lesson, we'll hook sunshine up
 
 4
 00:00:06,730 --> 00:00:09,140
-与云连接  取代模拟数据
-With the Cloud, replacing the mock data with
+连接到云端  从而使用从OpenWeatherMap API获取的
+with the Cloud, replacing the mock data with
 
 5
 00:00:09,140 --> 00:00:09,817
-而获得真正的天气数据使用
-Real weather data using
+真实的天气数据来取代模拟数据
+real weather data using the OpenWeatherMap API
 
 6
 00:00:12,420 --> 00:00:14,320
-Android所做到的  我们将了解
-Android To do that, we'll learn about the Android
+为了做到上面所提到的  我们将学习Android的
+To do that, we'll learn about the Android
 
 7
 00:00:14,320 --> 00:00:16,860
-Android权限系统  网络I/O  以及如何将
+权限系统  网络I/O  以及如何将
 Permission system,Network I/O, and how to move
 
 8
 00:00:16,860 --> 00:00:19,460
-一些非常耗时的应用在主UI线程中关闭
-Time consuming tasks off the main UI thread.
-
+耗时任务从主线程（UI线程）中移出
+time consuming tasks off the main UI thread.
