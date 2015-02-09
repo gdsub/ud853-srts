@@ -1,120 +1,120 @@
-1
+ï»¿1
 00:00:00,320 --> 00:00:03,010
-ºÃµÄ£¬ÄãÒÑ¾­Íê³ÉÁË¡£ÈÃÎÒÃÇ¿´¿´´ğ°¸¡£
+å¥½çš„ï¼Œä½ å·²ç»å®Œæˆäº†ã€‚è®©æˆ‘ä»¬çœ‹çœ‹ç­”æ¡ˆã€‚
 All right, you're done. Let's look at the solution.
 
 2
 00:00:03,010 --> 00:00:05,090
-ÕıÈçÎÒÔÚÎÊÌâÀïËùËµµÄÄÇÑù£¬ÎÒÃÇÒª
+æ­£å¦‚æˆ‘åœ¨é—®é¢˜é‡Œæ‰€è¯´çš„é‚£æ ·ï¼Œæˆ‘ä»¬è¦
 As I said in the question, we're going to be
 
 3
 00:00:05,090 --> 00:00:08,720
-ÔÚÌìÆø¸üĞÂ¹¦ÄÜÀïµÄÒ»¸öforcastÆ¬¶ÎÀï¹¤×÷¡£
+åœ¨å¤©æ°”æ›´æ–°åŠŸèƒ½é‡Œçš„ä¸€ä¸ªforcast fragmentç»„ä»¶é‡Œå·¥ä½œã€‚
 working inside a forecast fragment in the update weather function.
 
 4
 00:00:08,720 --> 00:00:11,220
-Ê×ÏÈ£¬ÎÒÃÇĞèÒªÎªÎÒÃÇµÄalarm receiverĞÂ½¨Ò»¸ö±ê×¼ÒâÍ¼¡£
+é¦–å…ˆï¼Œæˆ‘ä»¬éœ€è¦ä¸ºæˆ‘ä»¬çš„alarm receiveræ–°å»ºä¸€ä¸ªæ ‡å‡†çš„Intentå¯¹è±¡ã€‚
 First, we're going to need to create a standard intent
 
 5
 00:00:11,220 --> 00:00:14,650
-È»ºóÎÒÃÇ°ÑÎ»ÖÃ²éÑ¯¹¦ÄÜÁÙÊ±Ìí¼Ó½øÀ´¡£
+ç„¶åæˆ‘ä»¬æŠŠä½ç½®æŸ¥è¯¢åŠŸèƒ½ä¸´æ—¶æ·»åŠ è¿›æ¥ã€‚
 for our alarm receiver. We then add our location query
 
 6
 00:00:14,650 --> 00:00:17,920
-È»ºó´ò°üµ½Ò»¸ö´ı¶¨µÄÒâÍ¼Àï¡£
+ç„¶åæ‰“åŒ…åˆ°ä¸€ä¸ªpendingIntentå¯¹è±¡é‡Œã€‚
 as an extra. We then wrap that in a pending
 
 7
 00:00:17,920 --> 00:00:21,440
-´ı¶¨ÒâÍ¼ÆäÊµÊÇ¹¤³ÌÃèÊöÒâÍ¼µÄÒ»ÖÖÌØ±ğĞÎÊ½¡£
+pendingIntentå…¶å®æ˜¯ä¸€ç§ç‰¹æ®Šçš„intentå¯¹è±¡ã€‚
 intent. A pending intent is a special kind of object
 
 8
 00:00:21,440 --> 00:00:25,838
-ÕâÊ±ºòÔÊĞíÆäËûÓ¦ÓÃ³ÌĞò
+å®ƒå¯ä»¥è®©å…¶ä»–åº”ç”¨ç¨‹åºåœ¨
 that describes an intent. This allows other applications to implement
 
 9
 00:00:25,838 --> 00:00:28,060
-ÊµÏÖ±»ÓÃÀ´ĞÂ½¨
+pendingIntentä¸Šä½¿ç”¨ä¸€äº›æ™®é€šIntent
 the feature of the original intent that's used to
 
 10
 00:00:28,060 --> 00:00:30,880
-´ı¶¨ÒâÍ¼µÄ×î³õÒâÍ¼µÄÌØÕ÷¡£ÆäÊµÎÒÃÇ½ö½öÊ¹ÓÃÒ»´Î´ı¶¨ÒâÍ¼£¬
+æ‰€åŒ…å«çš„ç‰¹æ€§ã€‚å…¶å®æˆ‘ä»¬ä»…ä»…ä½¿ç”¨ä¸€æ¬¡PendingIntentï¼Œ
 create the pending intent. We're only going to use this
 
 11
 00:00:30,880 --> 00:00:34,542
-ËùÒÔÃÇ¶¨ÒåÎªflag-one-shot¡£
+æ‰€ä»¥æˆ‘åœ¨è¿™å®šä¹‰äº†ä¸ªFlag_One-Shotã€‚
 pending intent once, so I set flag one shot.
 
 12
 00:00:34,542 --> 00:00:37,480
-È»ºó£¬ÎÒÃÇÓÃalarm serviceÉèÖÃalarmÈÃËû´ÓÏÖÔÚ
+ç„¶åï¼Œæˆ‘ä»¬ç”¨alarm serviceè®¾ç½®alarmè®©ä»–ä»ç°åœ¨
 Then, we get the alarm service and set the alarm
 
 13
 00:00:37,480 --> 00:00:40,900
-Æğ´¥·¢ÎåÃë¡£µ«ÊÇÎÒÃÇÈÔÈ»ĞèÒª
+èµ·è®¡æ—¶ï¼Œäº”ç§’åè§¦å‘ã€‚ä½†æ˜¯æˆ‘ä»¬ä»ç„¶éœ€è¦
 to trigger five seconds from now. But we still
 
 14
 00:00:40,900 --> 00:00:44,100
-¸øÎÒÃÇµÄalarm×öµã¶«Î÷¡£»Øµ½Broadcast Receiver£¬
+ç»™æˆ‘ä»¬çš„alarmåšç‚¹ä¸œè¥¿ã€‚å›åˆ°Broadcast Receiverï¼Œ
 need for our alarm to do something. Back in the
 
 15
 00:00:44,100 --> 00:00:46,990
-ÎÒÃÇĞèÒª·¢ËÍ±ê×¼ÒâÍ¼£¬
+æˆ‘ä»¬éœ€è¦å‘é€æ ‡å‡†intentå¯¹è±¡ï¼Œ
 Broadcast Receiver, we need to send the standard intent
 
 16
 00:00:46,990 --> 00:00:51,070
-È»ºó¿ªÊ¼ÎÒÃÇµÄ·şÎñ£¬¾ÍÊÇÕâÑù¡£ÈÃÎÒÃÇÊÔ×ÅÔËĞĞÓ¦ÓÃ³ÌĞò¡£
+ç„¶åå¼€å§‹æˆ‘ä»¬çš„æœåŠ¡ï¼Œå°±æ˜¯è¿™æ ·ã€‚è®©æˆ‘ä»¬è¯•ç€è¿è¡Œåº”ç”¨ç¨‹åºã€‚
 to start our service, and that's it. Let's try running
 
 17
 00:00:51,070 --> 00:00:53,460
-ºÃµÄ£¬ËùÒÔÎÒÃÇÒÑ¾­ÓĞÁË¿ÉÒÔÍ£Ö¹ÎÒÃÇ
+å¥½çš„ï¼Œæ‰€ä»¥æˆ‘ä»¬å·²ç»æœ‰äº†å¯ä»¥åœæ­¢æˆ‘ä»¬
 the app. All right, so now we've got the
 
 18
 00:00:53,460 --> 00:00:56,460
-µÄ·şÎñµÄAlarm Manager¡£
+çš„æœåŠ¡çš„Alarm Managerã€‚
 Alarm Manager getting in the way of our service. We
 
 19
 00:00:56,460 --> 00:00:59,760
-ÎÒÃÇË¢ĞÂÒ»ÏÂ¡£µ½ÎÒÃÇÕæÕı¿´µ½Êı¾İµÄÊ±ºò¿ÉÄÜÖÁÉÙĞèÒª
+æˆ‘ä»¬ç‚¹ä¸€ä¸‹åˆ·æ–°ã€‚åˆ°æˆ‘ä»¬çœŸæ­£çœ‹åˆ°æ•°æ®çš„æ—¶å€™å¯èƒ½è‡³å°‘éœ€è¦
 hit refresh. It'll take us about five more seconds
 
 20
 00:00:59,760 --> 00:01:02,660
-ÎåÃëÖÓ¡£È»ºóÎÒÃÇµÈÒ»ÏÂ¡£
+äº”ç§’é’Ÿã€‚ç„¶åæˆ‘ä»¬ç­‰ä¸€ä¸‹ã€‚
 before we actually see the data now. And there we
 
 21
 00:01:02,660 --> 00:01:06,930
-Ò»¸ö¶ÌÔİµÄĞ¡ÉúÃüµ®Éú£¬·Ç³£¼òµ¥µÄalarm¡£ÉõÖÁ
+ä¸€ä¸ªçŸ­æš‚çš„å°ç”Ÿå‘½è¯ç”Ÿï¼Œéå¸¸ç®€å•çš„alarmã€‚ç”šè‡³
 have it. A very, very simple alarm. Even with
 
 22
 00:01:06,930 --> 00:01:09,820
-Ö»ÊÇÔÚÎÒÃÇ²»ÖªµÀµÄÊ±ºò¾ÍÔÚºóÌ¨¸üĞÂÁË£¬»¹ÓĞÔÚÊ¹ÓÃ·şÎñµÄÊ±ºò£¬
+åªæ˜¯åœ¨æˆ‘ä»¬ä¸çŸ¥é“çš„æ—¶å€™å°±åœ¨åå°æ›´æ–°äº†ï¼Œè¿˜æœ‰åœ¨ä½¿ç”¨æœåŠ¡çš„æ—¶å€™ï¼Œ
 this updating in the background potentially, and using a service,
 
 23
 00:01:09,820 --> 00:01:12,170
-ÎÒÃÇ»¹¿ÉÒÔ¸ü¸ßĞ§µØÊ¹ÓÃÎÒÃÇµÄÊÖ»ú×ÊÔ´¡£
+æˆ‘ä»¬è¿˜å¯ä»¥æ›´é«˜æ•ˆåœ°ä½¿ç”¨æˆ‘ä»¬çš„æ‰‹æœºèµ„æºã€‚
 we could still be more efficient in our use
 
 24
 00:01:12,170 --> 00:01:15,730
-Rato»á¸æËßÎÒÃÇ¸ü¶à¹ØÓÚËûµÄÖªÊ¶¡£
+Ratoä¼šå‘Šè¯‰æˆ‘ä»¬æ›´å¤šå…³äºä»–çš„çŸ¥è¯†ã€‚
 of phone resources. Rato can tell us more about that.
 

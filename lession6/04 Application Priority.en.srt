@@ -1,6 +1,6 @@
 1
 00:00:00,540 --> 00:00:02,455
-那么现在我们已经学习了Service(服务)的工作机制
+那么现在我们已经明白了Service(服务)的工作机制
 So now that we understand how services work,
 
 2
@@ -35,7 +35,7 @@ first to be executed. Critical apps are those that
 
 8
 00:00:22,450 --> 00:00:25,780
-这些程序处在前台，正与用户发生交互。
+这些程序处在前台，正与用户发生交互行为
 are active. They're in the foreground, interacting with users.
 
 9
@@ -55,17 +55,17 @@ activities and any application with a running service.
 
 12
 00:00:35,620 --> 00:00:38,760
-比结束前台程序、释放可见的activity
+优先级比结束前台程序、释放可见activity
 While less impactful than killing a foreground app, destroying
 
 13
 00:00:38,760 --> 00:00:41,720
-或者结束服务稍低一些级别的，
+或者结束服务稍低一些级别的也会通知用户
 visible activities or cancelling services running tasks like
 
 14
 00:00:41,720 --> 00:00:45,410
-比如在后台进行更新的操作也会让用户知道
+比如程序在后台进行更新。
 background updates it's still going to be noticeable to users.
 
 15

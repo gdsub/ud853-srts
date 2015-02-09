@@ -35,7 +35,7 @@ handle intent. Let's add a few helpful constants, such as
 
 8
 00:00:22,240 --> 00:00:25,550
-Intent Extra所需的String常量，
+和Intent Extra所需的String常量，
 log tag and an Intent Extra, so we can pass
 
 9
@@ -55,7 +55,7 @@ After all, Intent Service doesn't return a value. And
 
 12
 00:00:34,110 --> 00:00:36,790
-由于它是一个服务，因此它有自己的Context(上下文)
+而且由于它是一个服务，因此它有自己的Context(上下文)
 since it's a service, it has its own context.
 
 13
