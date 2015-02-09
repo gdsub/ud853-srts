@@ -1,100 +1,122 @@
 1
 00:00:00,130 --> 00:00:03,680
+Beto提到，对于屏幕分辨率不同的手机应该使用分辨率不同的图标。
 Beto mentioned that we should provide bit maps at different resolutions.
 
 2
 00:00:03,680 --> 00:00:06,700
+在我们的应用程序里，Nexus S使用了48 dib的图标，
 In our app, the 48 dib icon on the Nexus S
 
 3
 00:00:06,700 --> 00:00:08,910
+虽然它看起来与Nexus 4甚至Nexus 5使用的图标大小一样。
 looks to be about the same size as on the Nexus
 
 4
 00:00:08,910 --> 00:00:12,830
+但事实上， 
 4, and on the Nexus 5. However, in reality, this asset
 
 5
 00:00:12,830 --> 00:00:15,360
+相比于后两者，Nexus S显示的图标分辨率会更大一些。
 that's being displayed is actually a lot bigger in terms of
 
 6
 00:00:15,360 --> 00:00:18,540
+为了证实这一点，
 pixels compared to this one. To confirm, we can check out
 
 7
 00:00:18,540 --> 00:00:21,940
+我们不妨打开app资源文件夹来看一下。在drawable文件夹中，可以看到
 the app resource folders. In the drawable folders, we see that
 
 8
 00:00:21,940 --> 00:00:25,320
 our app has a 48 by 48 pixel launcher icon for
-
+mdpi分辨率的设备中有一个像素为48x48的启动图标,
 9
 00:00:25,320 --> 00:00:29,068
+它被放在mdpi分辨率的drawable文件夹中。
 mdpi devices located in the drawable mdpi folder. To
-
+ 
 10
 00:00:29,068 --> 00:00:31,900
+对于屏幕分辨率更高的设备，若要达到同样令人满意的效果， 
 make an equivalent icon for the higher density devices,
 
 11
 00:00:31,900 --> 00:00:34,780
+我们需要一个像素更高的启动图标。
 we need to make that icon progressively larger. To
 
 12
 00:00:34,780 --> 00:00:37,390
+那么，为了弄清这些图片究竟要多大，以及
 know exactly how big to make these images and
 
 13
 00:00:37,390 --> 00:00:40,370
+如何将它们转换为像素更高的图片，
 what the dibbed pixel conversion should be, we use
 
 14
 00:00:40,370 --> 00:00:43,270
+我们可以选择mdpi分辨率屏幕的设备作为一个基准。此时
 an mdpi device as the baseline. This is where
 
 15
 00:00:43,270 --> 00:00:46,573
+一个dib相当于一个像素点。 然而在HDPI分辨率的
 one dib equals one pixel. Then on the HDPI
 
 16
 00:00:46,573 --> 00:00:50,793
+设备上，一个dib则需被转化为1.5个像素点。
 device one dib equals 1.5 pixels. And then it increases
 
 17
 00:00:50,793 --> 00:00:53,030
 from there, all the way to an xx HDPI
-
+同样的方法，对于xx HDPI分辨率的设备，
 18
 00:00:53,030 --> 00:00:56,570
 device, where one dib equals four pixels. For more info
-
+一个dib等同于4个像素点。更多的换算，
 19
 00:00:56,570 --> 00:00:59,121
+你可以参照以下的链接。
 on the conversions, see the link below. Following those
 
 20
 00:00:59,121 --> 00:01:01,461
+按照这样的规律，我们可以一一对照分辨率不同的
 rules, these are the sizes of the launcher icon in
 
 21
 00:01:01,461 --> 00:01:05,319
+drawable文件夹中的启动图标。MDPI分辨率的屏幕
 our drawable folders. The MDPI one is 48 pixels
 
 22
 00:01:05,319 --> 00:01:09,250
+使用的图标像素为48x48。HDPI分辨率的屏幕使用的图标
 by 48 pixels. The one for HDPI is 1.5 times
 
 23
 00:01:09,250 --> 00:01:13,360
+像素为1.5x48x48。    对于XHDPI分辨率的设备，
 the size of this one. From an XHDPI device,
 
 24
 00:01:13,360 --> 00:01:15,970
+其图标像素是2x48x48。
 the icon is two times the size of the MDPI
 
 25
 00:01:15,970 --> 00:01:21,340
-one, and for an XXHDPI device, the icon is the three times the size of this one.
 
+one, and for an XXHDPI device, the icon is the three times the size of this one.
+最后，对于XXHDPI分辨率的设备，其图标像素是3x48x48。
