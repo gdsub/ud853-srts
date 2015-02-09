@@ -15,16 +15,16 @@ Or when it's run on a device, with a much larger screen? The good news,
 
 4
 00:00:13,850 --> 00:00:17,400
-Android提供了非常棒的工具去帮助你的layouts
+Android提供了非常棒的工具去帮助你设计layouts
 is that Android provides excellent tools to help you with layouts.
 
 5
 00:00:17,400 --> 00:00:21,150
-你要知道它们会帮助你的应用程序可以在手机  平板电脑
+你要去学习使用它们来帮助你使得你的应用程序在手机 、平板电脑
 You'll want to understand them to make your app look amazing across the wide
 
 6
 00:00:21,150 --> 00:00:25,160
-以及其他设备商都可以正常的工作
+以及其他设备上都可以正常的工作
 variety of phones, tablets and other devices you'll want your app to work on.
 

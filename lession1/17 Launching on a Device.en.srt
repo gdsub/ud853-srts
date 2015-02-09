@@ -80,5 +80,5 @@ it on the device. And now we see it running in our phones. Woo hoo! Fist bump!
 
 17
 00:01:13,880 --> 00:01:19,050
-很顺利啊有木有  我们邀请Dan来将程序的界面吧  哈哈
+很顺利啊有木有  我们邀请Dan来帮我们设计程序的界面吧  哈哈
 We're on a roll. Let's go find Dan so that we can build up the sunshine UI. Woo!

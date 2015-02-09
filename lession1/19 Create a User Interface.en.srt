@@ -40,7 +40,7 @@ is where we reference our UI layout resource, called fragment main.
 
 9
 00:00:35,700 --> 00:00:41,720
-这个XML文件项目文件的res目录下
+这个XML文件项目文件在res目录下
 This XML file lives in the Resource's RES directory of our Project Folder. You
 
 10
@@ -85,7 +85,7 @@ where we can drag and drop new UI elements and modify the layout visually. And
 
 18
 00:01:21,840 --> 00:01:26,330
-在Text栏里  我们能看到布局中界面元素的原始XML代码
+在Text栏里  我们能阅读和修改布局中界面元素的原始XML代码
 the Text tab, where we can see and edit the XML that defined the layout and
 
 19
@@ -120,7 +120,7 @@ It has many options, such as whether it supports single or multi line.
 
 25
 00:01:56,240 --> 00:02:00,380
-EditText有很多格式化的显示方式  在Text Field一栏里可以找到
+EditText有多种预设的显示方式  在Text Field一栏里可以找到
 There are several styled versions of editText, in the text field section of
 
 26

@@ -20,7 +20,7 @@ Here's the solution code. We have a single TextView where the width is
 
 5
 00:00:20,492 --> 00:00:24,760
-并且宽度是与父文本视图匹配  高度是包设定的内容  我们同样也给出了最小高度
+并且宽度是与父文本视图匹配  高度是包含内容高度  我们同样也给出了最小高度
 match parent and the height is wrap content. We also give it a minimum height.
 
 6
@@ -30,16 +30,16 @@ So the item is tappable. We use the framework preferred item height for this.
 
 7
 00:00:29,370 --> 00:00:32,759
-现在的最小高度会有更多的垂直空间
+因为设置了最小高度所以垂直方向有很多空白
 Since there'll be more vertical space now with the minimum height, we specify
 
 8
 00:00:32,759 --> 00:00:37,220
-我们选定了gravity可以使文本在文本视图中垂直居中
+因此我们设置gravity 使得文本在文本视图中垂直居中
 gravity so that the text inside the text view will be centered vertically.
 
 9
 00:00:37,220 --> 00:00:42,100
-最后  我们指定了ID  使我们之前就给出的  现在我们已经有了一个List item
+最后  我们指定了ID  使用我们之前就给出的  现在我们已经有了一个List item
 Lastly, we specify ID, which we gave you earlier. Great. Now we have a list item
 

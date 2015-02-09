@@ -5,7 +5,7 @@ Perfect, thanks Dan. Since he's turned you into a UI expert now, where should we
 
 2
 00:00:04,814 --> 00:00:09,010
-我们应该在哪里定义这个列表项目的Layouts
+我们应该在哪里定义这个列表项目的Layout？
 define this list item layout? If you're thinking the layout folder,
 
 3
@@ -25,12 +25,12 @@ define a text view as the root view, then assign it an ID list item forecast
 
 6
 00:00:23,570 --> 00:00:27,870
-给它一个最小的高度  不会让List item轻按太短
+给它一个最小的高度  使得List item按起来比较容易
 text view. Give it a minimum height, so that the list item isn't too short for
 
 7
 00:00:27,870 --> 00:00:32,150
-并且中心垂直于文本项
+并且使里面的文本项中心垂直
 tapping on and vertically center the text within that item. Go ahead and
 
 8
