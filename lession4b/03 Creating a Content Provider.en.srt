@@ -10,17 +10,17 @@ can implement them any way you like, but
 
 3
 00:00:05,270 --> 00:00:08,130
-但是你会发现它是直接
+但是你会发现将它们在SQLite 数据库的顶部实现
 you'll find that it's really straight forward to
 
 4
 00:00:08,130 --> 00:00:12,530
-将它们在SQLite 数据库的顶部实现了
+是非常直接的方法
 implement them on top of a SQLite database. The
 
 5
 00:00:12,530 --> 00:00:16,219
-content provider功能中包含的参数
+content provider函数中包含的参数
 parameters packed into our content provider functions match
 
 6
@@ -35,7 +35,7 @@ exactly. The biggest difference is that we replaced
 
 8
 00:00:22,570 --> 00:00:25,810
-table string。在简单的content provider中
+table string。在最简单的content provider的实现中
 the table string, with a uri. In the simplest
 
 9
@@ -50,7 +50,7 @@ straight through to the database. Note that
 
 11
 00:00:31,840 --> 00:00:33,720
-有一些参数并不能简单地被content provider控制
+有一些参数并不能简单地通过content provider控制
 there are parameters that cannot be easily
 
 12

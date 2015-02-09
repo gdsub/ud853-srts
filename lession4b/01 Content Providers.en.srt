@@ -1,26 +1,26 @@
 1
 00:00:00,720 --> 00:00:02,650
-现在我们有了数据库，我们可以利用好
+现在我们有了数据库，我们可以利用一个
 Now that we have a database, we can take
 
 2
 00:00:02,650 --> 00:00:05,420
-Android的模式，将作为应用content provider的数据
+Android的模式，把已知的数据模型作为内容提供者
 advantage of an Android pattern to bind our view to
 
 3
 00:00:05,420 --> 00:00:09,220
-和界面连接起来
+和视图连接起来
 our data model known as a content provider. A content
 
 4
 00:00:09,220 --> 00:00:11,810
-content provider让我们想到数据
+内容提供者可以让我们把数据URI看成
 provider allows us to think of our view data in
 
 5
 00:00:11,810 --> 00:00:15,010
-就我们的 URL 而言，是一个适合我们应用的结构
+是一个对应用程序而言非常方便的结构
 terms of URIs which is a convenient structure for
 
 6
@@ -30,12 +30,12 @@ our applications. We can have views display different data based
 
 7
 00:00:19,020 --> 00:00:23,130
-那些当前活动的URL。事实证明
+那些当前活动的URI。事实证明
 upon which URI is currently active. As it turns out,
 
 8
 00:00:23,130 --> 00:00:26,270
-URL是这些Intents的主要数据成员
+URI是这些Intents的主要数据成员
 a URI is the primary data member for those Intents,
 
 9
@@ -55,12 +55,12 @@ decouple the data being displayed from the view.
 
 12
 00:00:36,910 --> 00:00:38,940
-使用URL和data location
+使用URI和data location
 And there's one other great thing we get from
 
 13
 00:00:38,940 --> 00:00:42,020
-我们可以从中得到一件更棒的事情。
+我们可以做到另一件很棒的事情。
 using URI with a data location. It's easy
 
 14
@@ -70,7 +70,7 @@ to have our database notify components that are registered
 
 15
 00:00:44,890 --> 00:00:48,060
-location的变化导致我们的光标去更新列表
+观察location的变化会让我们的游标去更新列表
 to observe that location which causes our cursor
 
 16

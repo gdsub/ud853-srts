@@ -1,26 +1,26 @@
 1
 00:00:00,150 --> 00:00:04,190
-我们回到码content provider。第一个
+我们回到码content provider。首先
 Let's go back to coding the content provider. The first
 
 2
 00:00:04,190 --> 00:00:06,860
-询问content provider的实现方法是
+需要content provider的实现方法是
 of the required content provider methods we're going to implement
 
 3
 00:00:06,860 --> 00:00:10,130
-gettype。gettype是在返还URl时
+gettype。gettype是用来在给定的URI里返回
 is getType. getType is used to return the mime type
 
 4
 00:00:10,130 --> 00:00:13,420
-被用来和数据关联的mime type。我们使用
+和数据关联的mime type。我们使用
 associated with the data at the given URI. We use
 
 5
 00:00:13,420 --> 00:00:16,010
-我们之前建立的URL匹配器来匹配
+之前建立的URL匹配器来匹配
 the URI matcher we built earlier to match the given
 
 6

@@ -1,11 +1,11 @@
 1
 00:00:00,390 --> 00:00:04,260
-在我们开始码我们的content provider之前，我们
+在我们开始我们的content provider代码之前，我们
 Before we start coding our content provider, let's
 
 2
 00:00:04,260 --> 00:00:07,000
-要先确认列表是正确建立的。
+要先确认manifest是正确建立的。
 make sure the manifest is set up correctly.
 
 3
@@ -51,7 +51,7 @@ database helper. In on create, we initiate our instance variable.
 
 11
 00:00:33,650 --> 00:00:36,490
-我们通过返回真实值来告诉安卓
+我们通过返回true值来告诉安卓
 We return true, which is how we tell Android that
 
 12
@@ -81,7 +81,7 @@ and see how the content provider calls replace the SQLI
 
 17
 00:00:51,060 --> 00:00:54,240
-database calls。通过使用Android
+数据调用的。通过使用Android
 database calls. Let's start by using Android
 
 18

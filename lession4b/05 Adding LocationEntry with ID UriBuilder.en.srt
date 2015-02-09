@@ -1,9 +1,9 @@
-﻿1
+1
 00:00:00,240 --> 00:00:02,830
-添加代码来建立一个URI查询
+在WeatherContract的LocationEntry里
 Add code to build a URI for querying the
 
 2
 00:00:02,830 --> 00:00:07,660
-地址通过ID在WeatherContract的LocationEntry部分
+添加代码来建立一个通过ID查询地址的URI
 location by ID within the LocationEntry part of the WeatherContract.

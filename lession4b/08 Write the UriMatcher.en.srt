@@ -1,6 +1,6 @@
-﻿1
+1
 00:00:01,060 --> 00:00:04,390
-好的，你完成了。我给你看看我的方法。
+好的，你完成了。我给你看看我的解决方案。
 All right, you're done. Let me show you my solution.
 
 2
@@ -45,7 +45,7 @@ Finally, we have the location URIs. Since the ID in the database is
 
 10
 00:00:36,930 --> 00:00:41,670
-长整型，用#是非常自然的直觉。
+长整型，用#是非常有意义的。
 always a long integer, it makes perfect sense to use the pound sign pattern.
 
 11
