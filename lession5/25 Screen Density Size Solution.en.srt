@@ -5,7 +5,7 @@ The Nexus One has a 3.7 inch screen, and the Nexus 5, a 4.9 inch display, so
 
 2
 00:00:05,640 --> 00:00:07,560
-这两款手机的屏幕尺寸都不是很普遍
+这两款手机的屏幕尺寸用户体验都很不错。
 they both fall comfortably within the normal range
 
 3
