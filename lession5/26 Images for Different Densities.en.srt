@@ -35,8 +35,9 @@ the app resource folders. In the drawable folders, we see that
 
 8
 00:00:21,940 --> 00:00:25,320
-our app has a 48 by 48 pixel launcher icon for
 mdpi分辨率的设备中有一个像素为48x48的启动图标,
+our app has a 48 by 48 pixel launcher icon for
+
 9
 00:00:25,320 --> 00:00:29,068
 它被放在mdpi分辨率的drawable文件夹中。
@@ -79,12 +80,14 @@ device one dib equals 1.5 pixels. And then it increases
 
 17
 00:00:50,793 --> 00:00:53,030
-from there, all the way to an xx HDPI
 同样的方法，对于xx HDPI分辨率的设备，
+from there, all the way to an xx HDPI
+
 18
 00:00:53,030 --> 00:00:56,570
-device, where one dib equals four pixels. For more info
 一个dib等同于4个像素点。更多的换算，
+device, where one dib equals four pixels. For more info
+
 19
 00:00:56,570 --> 00:00:59,121
 你可以参照以下的链接。
@@ -117,6 +120,6 @@ the icon is two times the size of the MDPI
 
 25
 00:01:15,970 --> 00:01:21,340
-
-one, and for an XXHDPI device, the icon is the three times the size of this one.
 最后，对于XXHDPI分辨率的设备，其图标像素是3x48x48。
+one, and for an XXHDPI device, the icon is the three times the size of this one.
+
