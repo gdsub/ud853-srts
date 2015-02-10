@@ -35,7 +35,7 @@ we show a ListView instead of a TextView and assign it an ID ListViewForecast so
 
 8
 00:00:31,960 --> 00:00:36,460
-以方便我们以后调用它  要注意的是  这种布局(RelativeLayout布局)只能包含一个子元素
+以方便我们以后调用它  因为这个布局(RelativeLayout布局)只包含了一个子元素
 we can reference it later. Also, since this layout only contains one child's
 
 9

@@ -5,7 +5,7 @@ When you've declared your array adapter of strings, it should look something
 
 2
 00:00:03,860 --> 00:00:09,500
-我们把这个 Fragment 本身传进去  作为一个 Context 参数
+我们把这个Fragment所属的Activity传进去  作为一个Context参数
 like this. We pass in a context, which is this fragment's parent activity,
 
 3

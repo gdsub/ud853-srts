@@ -5,7 +5,7 @@ At this point, we should have created some fake data to display in our list.
 
 2
 00:00:03,910 --> 00:00:08,350
-我们创建一个这样的数组  代码见视频  每个数组元素都代表着一个天气情况
+我们创建一个这样的数组 每个数组元素都代表着一个天气情况
 We created an array of stings to represent each weather forecast item and
 
 3
