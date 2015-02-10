@@ -15,12 +15,12 @@ Verbose logs should never be compiled into your app, except
 
 4
 00:00:08,710 --> 00:00:12,600
-Debug级别的日志只在调试的时候显示  真正运行的时候是不执行操作的
+Debug级别的调试代码会被编译  但是真正运行的时候是不执行的
 during development. Debug logs are compiled in, but they're stripped
 
 5
 00:00:12,600 --> 00:00:16,210
-同样的 Error  Warn和Info  这三个也是这样的
+Error  Warn和Info这3个级别的调试代码则会被执行
 out at run time. Error, warn, and info logs are
 
 6
@@ -40,7 +40,7 @@ be any string that you want to identify the log message.
 
 9
 00:00:26,320 --> 00:00:28,790
-为你的调试信息打上一个标识符是一个很好的习惯
+将这个调试标签在你的类中定义为常量是一个好的习惯
 It's good practice to define the log tag as a
 
 10
@@ -50,7 +50,7 @@ constant in your class. Usually it's the name of your class
 
 11
 00:00:32,009 --> 00:00:35,060
-第二个参数是在调试窗口你要看的内容
+第二个参数是真正的调试信息
 or the app. The second parameter is the actual log
 
 12
@@ -85,7 +85,7 @@ If you click on warn, you'll see all the warning
 
 18
 00:00:54,060 --> 00:00:57,500
-警告信息比错误信息更多更吓人
+以及所有高于警告级别的日志信息
 messages as well as anything more severe than that. The
 
 19
@@ -110,11 +110,11 @@ the sake of other developers. The log buffer could fill up and important
 
 23
 00:01:13,400 --> 00:01:16,500
-而你死活找不到你需要的信息
+真正重要的错误信息要么会被缓存清除掉
 error messages that you really need to see will either roll of the
 
 24
 00:01:16,500 --> 00:01:20,780
-最终迷失在这虚幻日志的海洋里
+要么会淹没在大量的不重要的日志信息中
 logs or it will get lost in the sea of unimportant log messages.
 
