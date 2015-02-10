@@ -1,6 +1,6 @@
 1
 00:00:00,375 --> 00:00:04,120
-ListView把所有可见条目显示出来  可见条目数量取决于
+ListView是把所有可见条目显示在一个view上  可见条目数量取决于
 ListView starts by requesting a view for every visible item, however many you
 
 2
@@ -55,22 +55,22 @@ the beginning. The solution is recycling each view as it scrolls off the screen,
 
 12
 00:00:42,980 --> 00:00:46,270
-当条目被滑动出屏幕的时候
+当条目被滑动回屏幕的时候
 allowing it to be reused when we need to show another item as it
 
 13
 00:00:46,270 --> 00:00:50,080
-回收资源重新利用，来显示新的条目  
+重新启用  而不是在视图实例化的时候
 moves into view at the top or bottom. So rather than having to create and
 
 14
 00:00:50,080 --> 00:00:53,710
-而不是在视图实例化的时候将他们全部放进内存
+将他们全部放进内存
 then hold in memory each item of the list as it comes in to view,
 
 15
 00:00:53,710 --> 00:00:57,400
-所以我们只需要为这些在手机屏幕里可见的加上边上两个条目申请内存
+所以我们只需要为这些在手机屏幕里可见的条目申请内存
 we only need to do the creation step for the number of visible items and
 
 16
@@ -80,7 +80,7 @@ couple on either side. Then whenever a new list item comes into view,
 
 17
 00:01:01,850 --> 00:01:06,130
-我们只需要更新我们的回收站中的一个条目的信息，然后把它显示出去就行了
+我们只需要更新列表的数据就可以了
 we just update the data displayed in one of our items in our recycle bin.
 
 18
@@ -105,12 +105,12 @@ ListView, which also introduces the reason that the adapter isn't built
 
 22
 00:01:21,830 --> 00:01:25,960
-把Adapter适配器和控制器分离的原因  把他们分离开
+把Adapter适配器对象分离出来的原因  把他们分离开
 directly into these controls themself. By keeping them separate,
 
 23
 00:01:25,960 --> 00:01:30,050
-你的Adapter适配器就可以根据底层数据来决定如何显示
+你的Adapter适配器对象就可以根据底层数据来决定如何显示
 your adapter defines how to display each element of the underlying data,
 
 24

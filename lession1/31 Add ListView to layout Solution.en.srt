@@ -25,7 +25,7 @@ the ListView match the dimensions of its parent, which is this RelativeLayout.
 
 6
 00:00:20,460 --> 00:00:23,895
-RelativeLayout的宽高也是match_parent  我们找找它的父元素
+RelativeLayout的宽高也是match_parent  我们找找它的父类
 And to find out the parent of this RelativeLayout, it's actually in this
 
 7
@@ -50,7 +50,7 @@ the full screen. Going back to the fragment_main file, we can add the id,
 
 11
 00:00:42,116 --> 00:00:47,190
-添加一个名为listview_forecast的id  然后  因为这个布局只包含一个子元素
+添加一个名为listview_forecast的id  然后  因为这个布局只包含一个子类
 listview_forecast, onto the ListView. And then, since this layout only contains
 
 12

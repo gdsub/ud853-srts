@@ -1,21 +1,21 @@
 1
 00:00:00,150 --> 00:00:02,620
-我们将多少列表项添加到LinearLayout中
+我们在LinearLayout布局中把每个条目添加到ScrollView视图里
 Adding every item to the linear layout within the scroll view,
 
 2
 00:00:02,620 --> 00:00:06,300
-就意味着我们创建了多少个视图对象（即便视图不可见）就会占用多少内存
+意味着我们创建了多少个视图（即便视图不可见）就会占用多少内存
 meant that every view we create, sticks around, taking up memory, even if
 
 3
 00:00:06,300 --> 00:00:10,800
-我们应该这么想  我们只需要创建屏幕内可见的视图个数
+我们应该尝试另外一种解决方案  就是我们只需要
 it's never been seen. We want to try and create a way, that we only need to use,
 
 4
 00:00:10,800 --> 00:00:14,990
-外加上下端不可见的那两个视图就可以了
+创建屏幕内可见的视图个数  外加上下端不可见的那两个视图就可以了
 as many views as are currently visible in the screen plus one on either end,
 
 5

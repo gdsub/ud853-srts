@@ -1,45 +1,45 @@
 1
 00:00:00,290 --> 00:00:05,120
-ä¸‹é¢æ˜¯è§£å†³æ–¹æ¡ˆ  åˆ›å»ºä¸€ä¸ªæ–°çš„Layout resourceæ–‡ä»¶  åå­—æ˜¯List item forecast
+ÏÂÃæÊÇ½â¾ö·½°¸  ´´½¨Ò»¸öĞÂµÄLayout resourceÎÄ¼ş  Ãû×ÖÊÇList item forecast
 And here's the solution. You create a new layout resource file. Call it list
 
 2
 00:00:05,120 --> 00:00:11,030
-å¹¶ä¸”ä¸»å…ƒç´ æ˜¯ä¸€ä¸ªæ–‡æœ¬è§†å›¾  ç„¶åé€‰æ‹©OKå³å¯
+²¢ÇÒÖ÷ÔªËØÊÇÒ»¸öÎÄ±¾ÊÓÍ¼  È»ºóÑ¡ÔñOK¼´¿É
 item forecast. And the root element is a TextView. Then you just hit OK.
 
 3
 00:00:11,030 --> 00:00:16,830
-ç°åœ¨æˆ‘ä»¬å·²ç»åˆ›å»ºå¥½item  æˆ‘ä»¬å°±å¯ä»¥åˆ‡æ¢åˆ°æ–‡æœ¬çª—å£äº†
+ÏÖÔÚÎÒÃÇÒÑ¾­´´½¨ºÃitem  ÎÒÃÇ¾Í¿ÉÒÔÇĞ»»µ½ÎÄ±¾´°¿ÚÁË
 Now that we have the item created, we can switch to the Text pane.
 
 4
 00:00:16,830 --> 00:00:20,492
-è¿™é‡Œæ˜¯æºä»£ç   æˆ‘ä»¬åœ¨è¿™é‡Œåªæœ‰ä¸€ä¸ªæ–‡æœ¬è§†å›¾
+ÕâÀïÊÇÔ´´úÂë  ÎÒÃÇÔÚÕâÀïÖ»ÓĞÒ»¸öÎÄ±¾ÊÓÍ¼
 Here's the solution code. We have a single TextView where the width is
 
 5
 00:00:20,492 --> 00:00:24,760
-å¹¶ä¸”å®½åº¦æ˜¯ä¸çˆ¶æ–‡æœ¬è§†å›¾åŒ¹é…  é«˜åº¦æ˜¯åŒ…å«å†…å®¹é«˜åº¦  æˆ‘ä»¬åŒæ ·ä¹Ÿç»™å‡ºäº†æœ€å°é«˜åº¦
+²¢ÇÒ¿í¶ÈÊÇÓë¸¸ÎÄ±¾ÊÓÍ¼Æ¥Åä  ¸ß¶ÈÊÇ°üº¬ÄÚÈİ¸ß¶È  ÎÒÃÇÍ¬ÑùÒ²¸ø³öÁË×îĞ¡¸ß¶È
 match parent and the height is wrap content. We also give it a minimum height.
 
 6
 00:00:24,760 --> 00:00:29,370
-æ‰€ä»¥è¿™ä¸ªitemæ˜¯å¯ä»¥ç‚¹æŒ‰çš„  æˆ‘ä»¬ä½¿ç”¨è¿™ä¸ªæ¡†æ¶ç»™å‡ºçš„é»˜è®¤é«˜åº¦å€¼
+ËùÒÔÕâ¸öitemÊÇ¿ÉÒÔµã°´µÄ  ÎÒÃÇÊ¹ÓÃÕâ¸ö¿ò¼Ü¸ø³öµÄÄ¬ÈÏ¸ß¶ÈÖµ
 So the item is tappable. We use the framework preferred item height for this.
 
 7
 00:00:29,370 --> 00:00:32,759
-å› ä¸ºè®¾ç½®äº†æœ€å°é«˜åº¦æ‰€ä»¥å‚ç›´æ–¹å‘æœ‰å¾ˆå¤šç©ºç™½
+ÒòÎªÉèÖÃÁË×îĞ¡¸ß¶ÈËùÒÔ´¹Ö±·½ÏòÓĞºÜ¶à¿Õ°×
 Since there'll be more vertical space now with the minimum height, we specify
 
 8
 00:00:32,759 --> 00:00:37,220
-å› æ­¤æˆ‘ä»¬è®¾ç½®gravity ä½¿å¾—æ–‡æœ¬åœ¨æ–‡æœ¬è§†å›¾ä¸­å‚ç›´å±…ä¸­
+Òò´ËÎÒÃÇÉèÖÃgravity Ê¹µÃÎÄ±¾ÔÚÎÄ±¾ÊÓÍ¼ÖĞ´¹Ö±¾ÓÖĞ
 gravity so that the text inside the text view will be centered vertically.
 
 9
 00:00:37,220 --> 00:00:42,100
-æœ€å  æˆ‘ä»¬æŒ‡å®šäº†ID  ä½¿ç”¨æˆ‘ä»¬ä¹‹å‰å°±ç»™å‡ºçš„  ç°åœ¨æˆ‘ä»¬å·²ç»æœ‰äº†ä¸€ä¸ªList item
+×îºó  ÎÒÃÇÖ¸¶¨ÁËID  Ê¹ÓÃÎÒÃÇÖ®Ç°¾Í¸ø³öµÄ  ÏÖÔÚÎÒÃÇÒÑ¾­ÓĞÁËÒ»¸öList item
 Lastly, we specify ID, which we gave you earlier. Great. Now we have a list item
 
