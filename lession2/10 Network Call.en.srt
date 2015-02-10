@@ -15,23 +15,23 @@ this networking code snippet here and drop it into
 
 4
 00:00:07,210 --> 00:00:11,380
-通过网络请求获取真实数据
+通过网络请求获取真实的天气数据
 the sunshine app to query for actual weather data. Open
 
 5
 00:00:11,380 --> 00:00:14,550
 打开项目工程的的MainActivity.java这个文件
-up your project in main activity.java. In this class,
+up your project in MainActivity.java. In this class,
 
 6
 00:00:14,550 --> 00:00:18,420
-拉到这个类的最底部  找到PlaceholderFragment这个类
-scroll down to the placeholder fragment class within the placeholder
+往下拉  找到PlaceholderFragment这个类
+scroll down to the PlaceholderFragment class. Within the
 
 7
 00:00:18,420 --> 00:00:22,010
-的 OnCreateView() 这个方法  再往下拉
-fragment class in the on create view method, scroll down
+在它的OnCreateView()这个方法中  再往下拉
+PlaceholderFragment class in the OnCreateView method, scroll down
 
 8
 00:00:22,010 --> 00:00:25,490
@@ -40,12 +40,12 @@ and go ahead and add the networking code snippet here.
 
 9
 00:00:25,490 --> 00:00:30,410
-或者保持留白  等你什么时候想粘过来了再粘  你或许需要设置
+或者保持留白  等你什么时候想粘过来了再粘  你或许自动导入
 To get her blank, is pasted below again if you need it. You may need to enable
 
 10
 00:00:30,410 --> 00:00:33,700
-自动导入或者手动导入某些类
+或者手动设置这些设置选项
 these options in auto import or add the imports
 
 11
@@ -65,7 +65,7 @@ cat to figure out which error is the guilty
 
 14
 00:00:43,430 --> 00:00:47,290
-出错的原因吧  我们把它留作测验题
+导致应用崩溃的原因吧  我们把它留作测验题
 culprit that caused the crash. We're assuming that for
 
 15
