@@ -5,12 +5,12 @@ That's right, whenever this app is running, it's
 
 2
 00:00:02,110 --> 00:00:05,260
-它使得无线电总是运行
+它会使无线电一直处在运行状态
 keeping the cell radio powered on continuously. In
 
 3
 00:00:05,260 --> 00:00:08,140
-实际上，这些间断的更新足以使
+实际上，这些无线电更新就足以使
 fact, the radio updates alone are enough to
 
 4
