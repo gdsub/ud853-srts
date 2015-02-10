@@ -1,100 +1,100 @@
 1
 00:00:00,220 --> 00:00:02,050
-ÈÃÎÒÃÇÓ¦ÓÃÒ»ÏÂÎÒÃÇ¸Õ¸ÕÑ§µÄ£¬¾ÍÊÇ´ò¿ª
+è®©æˆ‘ä»¬é€šè¿‡æ‰“å¼€å·¥ç¨‹ä¸­çš„MainActivity.javaæ–‡ä»¶
 Let's apply what we just learned by opening up
 
 2
 00:00:02,050 --> 00:00:06,390
-ÎÒÃÇ¹¤³ÌÖĞµÄMainActivity.javaÎÄ¼ş£¬ÎÒÃÇ½«ÒªÊ¹ÓÃ
+æ¥åº”ç”¨åˆšæ‰å­¦åˆ°çš„çŸ¥è¯†ã€‚æˆ‘ä»¬å°†è¦ä½¿ç”¨
 the MainActivity.java file within our project. We're going to take
 
 3
 00:00:06,390 --> 00:00:08,830
-ÕâĞ©ÍøÂç´úÂëÆ¬¶Î²¢ÇÒ½«ËıÒÆ¶¯ µ½
+è¿™äº›ç½‘ç»œéƒ¨åˆ†çš„ä»£ç ç‰‡æ®µå¹¶ä¸”å°†å®ƒç§»åŠ¨åˆ°
 this networking code snippet and move it over to
 
 4
 00:00:08,830 --> 00:00:11,200
-ÎÒÃÇ×Ô¼ºµÄÒì²½ÈÎÎñÖĞ£¬Èç´ËËû¾ÍÔËĞĞÔÚÒ»¸ö
+å®ƒè‡ªå·±çš„å¼‚æ­¥ä»»åŠ¡ä¸­ï¼Œè¿™æ ·å®ƒå°±è¿è¡Œåœ¨ä¸€ä¸ª
 it's own AsyncTask, so it runs in a background
 
 5
 00:00:11,200 --> 00:00:14,160
-ºóÌ¨Ïß³ÌÉÏ¡£Õâ¸öÈÎÎñ¾Í½«±»¶¨ÒåÔÚ
+åå°çº¿ç¨‹ä¸Šã€‚è¿™ä¸ªä»»åŠ¡çš„ç±»å°±å°†è¢«å®šä¹‰åœ¨
 thread. The task is going to be defined within
 
 6
 00:00:14,160 --> 00:00:18,070
-Õâ¸öÆ¬¶ÎÀàÀï¡£µ«ÊÇËµµ½ÕâÀï£¬ËûÈ·Êµ
-this fragment class. But speaking of which, it's actually
+è¿™ä¸ªFragmenç±»é‡Œã€‚ä½†æ˜¯è¯´åˆ°è¿™é‡Œï¼Œå®ƒå®é™…ä¸Š
+this Fragment class. But speaking of which, it's actually
 
 7
 00:00:18,070 --> 00:00:21,300
-»¹½ĞPlaceholderFragment.ÈÃÎÒÃÇÍ¨¹ı¸øËüÖØÃüÃû
+è¿˜å«PlaceholderFragment.è®©æˆ‘ä»¬é€šè¿‡ç»™å®ƒé‡å‘½å
 still called PlaceholderFragment. Let's do a little bit of
 
 8
 00:00:21,300 --> 00:00:25,365
-À´×öÒ»ÏÂµ÷Õû¡£ÄÇÎÒÃÇ¾Í½ĞËı
+æ¥åšä¸€ä¸‹è°ƒæ•´ã€‚é‚£æˆ‘ä»¬å°±å«å®ƒ
 refactoring now by giving it a real name. Let's call
 
 9
 00:00:25,365 --> 00:00:28,463
-ForecastFragment.È»ºóÄãÒ²¿ÉÒÔÔÚÆäËûÊÊµ±µÄ
+ForecastFragment.ç„¶åä½ ä¹Ÿå¯ä»¥åœ¨å…¶å®ƒå¼•ç”¨å®ƒ
 it ForecastFragment. And then you can update it
 
 10
 00:00:28,463 --> 00:00:31,560
-µØ·½¸üĞÂËı¡£ÎÒÃÇÒ²¿ÉÒÔ
+çš„åœ°æ–¹è¿›è¡Œä¸€ä¸‹æ›´æ–°ã€‚æˆ‘ä»¬ä¹Ÿå¯ä»¥
 in other appropriate places as well. We can also
 
 11
 00:00:31,560 --> 00:00:34,560
-ÒÆ¶¯ForecastFragmentµ½ÎÒÃÇ×Ô¼ºµÄÎÄ¼şÀï
+ç§»åŠ¨ForecastFragmentåˆ°å•ç‹¬çš„æ–‡ä»¶é‡Œ
 move ForecastFragment into its own file that way
 
 12
 00:00:34,560 --> 00:00:38,412
-ÕâÑùMainActivity¾Í²»»áÏÔµÃÄÇÃ´³¤ÄÇÃ´†ªàÂ¡£ÔÚ
+è¿™æ ·MainActivityå°±ä¸ä¼šæ˜¾å¾—é‚£ä¹ˆé•¿é‚£ä¹ˆå•°å—¦ã€‚åœ¨
 the MainActivity won't get so long and cumbersome. Within
 
 13
 00:00:38,412 --> 00:00:41,284
-ForecastFragmentÀïÎÒÃÇÓ¦¸Ã¶¨ÒåÒ»¸öĞÂµÄÄÚ²¿Àà
+ForecastFragmenté‡Œæˆ‘ä»¬åº”è¯¥å®šä¹‰ä¸€ä¸ªæ–°çš„å†…éƒ¨ç±»
 ForecastFragment we should define a new inner class
 
 14
 00:00:41,284 --> 00:00:45,290
-½Ğ×öFetchWeatherTask,ËıÀ©Õ¹×ÔAsyncTask¡£È»ºóÄã
+å«åšFetchWeatherTask,å®ƒç»§æ‰¿è‡ªAsyncTaskã€‚ç„¶åä½ 
 called FetchWeatherTask which extends from AsyncTask. And then you
 
 15
 00:00:45,290 --> 00:00:48,770
-¿ÉÒÔÒÆ¶¯ÍøÂç´úÂëÆ¬¶Îµ½Õâ¸öÀï±ß¡£µ±Äã
+å¯ä»¥æŠŠç½‘ç»œéƒ¨åˆ†çš„ä»£ç ç‰‡æ®µç§»åŠ¨åˆ°è¿™é‡Œã€‚å½“ä½ 
 can move the networking code snippet here. After you
 
 16
 00:00:48,770 --> 00:00:50,840
-×öÍêµ÷Õû²¢ÇÒÔËĞĞ¹ıÄãµÄÓ¦ÓÃ³ÌĞòÖ®ºó£¬ËıÓ¦¸Ã
+åšå®Œè°ƒæ•´å¹¶ä¸”è¿è¡Œè¿‡ä½ çš„åº”ç”¨ç¨‹åºä¹‹åï¼Œå®ƒåº”è¯¥
 make the changes and run your app, it should
 
 17
 00:00:50,840 --> 00:00:53,770
-¿´ÆğÀ´ÊÇ¸öÑù×Ó¡£ÄÇ¾ÍÓ¦¸ÃÃ»ÓĞÇø±ğ
+çœ‹èµ·æ¥æ˜¯ä¸ªæ ·å­ã€‚è¿™å’Œä¹‹å‰åº”è¯¥æ²¡æœ‰åŒºåˆ«
 look something like this. There really should be no difference except it
 
 18
 00:00:53,770 --> 00:00:57,290
-³ıÁËËıÏÖÔÚ²»ÄÜ±ÀÀ££¬ÔÚ½ÓÏÂÀ´µÄÕâÒ»²½ÖĞÎÒÃÇ½«ÒªÌí¼Ó´úÂëÈ¥Ö´ĞĞ
+é™¤äº†å®ƒç°åœ¨ä¸åº”è¯¥å´©æºƒï¼Œåœ¨æ¥ä¸‹æ¥çš„è¿™ä¸€æ­¥ä¸­æˆ‘ä»¬å°†è¦æ·»åŠ ä»£ç å»æ‰§è¡Œ
 doesn't crash now. In the next step we will add code to execute
 
 19
 00:00:57,290 --> 00:01:01,300
-Õâ¸öÈÎÎñ¡£ÔÚÕâ½Ú¿ÎµÄ×îºó£¬ÎÒÃÇ½«Òª×öJSONÓï·¨·ÖÎö²¢ÇÒ¸üĞÂ
+è¿™ä¸ªä»»åŠ¡ã€‚åœ¨è¿™èŠ‚è¯¾çš„åé¢éƒ¨åˆ†ï¼Œæˆ‘ä»¬å°†è¦åšJSONè§£æå¹¶ä¸”æ›´æ–°
 the task. And later in the lesson, we'll do JSON parsing and updating
 
 20
 00:01:01,300 --> 00:01:05,120
-ÓÃ»§½çÃæ¡£ÔÚÕâÆÚ¼ä£¬ÈÃÕâĞ©»ù´¡¸Ä±äÄãµÄ´úÂë°É¡£
+ç”¨æˆ·ç•Œé¢ã€‚åœ¨è¿™æœŸé—´ï¼Œå…ˆä»è¿™äº›æœ€åŸºæœ¬çš„æ”¹å˜å¼€å§‹å§ã€‚
 the UI. In the meantime though, make these initial changes to your code.
 
