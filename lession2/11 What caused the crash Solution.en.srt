@@ -5,8 +5,8 @@ If you run it on your phone, your app will crashed
 
 2
 00:00:02,830 --> 00:00:06,270
-因为报 NetworkOnMainException 错误了
-because of a network got main thread exception. We found
+因为报 NetworkOnMainException 异常了
+because of a NetworkOnMainException. We found
 
 3
 00:00:06,270 --> 00:00:08,990
@@ -15,7 +15,7 @@ this answer by connecting our device to our computer and
 
 4
 00:00:08,990 --> 00:00:12,790
-通过工具来检查错误
+通过Android设备监视器来检查错误
 then checking Android device monitor for the error. You can
 
 5
@@ -25,18 +25,18 @@ see here that this is our package name and this
 
 6
 00:00:15,220 --> 00:00:18,010
-和进程号  如果你在这里搜索那个进程号
+和进程id  我们可以通过进程id
 is our process ID. If you search the logs for
 
 7
 00:00:18,010 --> 00:00:22,390
-然后我们的错误就显示出来了  我们（从Caused by这里）能发现它
+过滤出错误信息  这个崩溃最终是由
 that process ID then our error appears. It's triggered ultimately
 
 8
 00:00:22,390 --> 00:00:25,700
-最终报的错是NetworkOnMainThreadException
-by a network on main thread exception. If you're curious
+NetworkOnMainThreadException异常引起的
+by a NetworkOnMainThreadException. If you're curious
 
 9
 00:00:25,700 --> 00:00:28,560
@@ -45,12 +45,12 @@ as to what line of our code actually caused
 
 10
 00:00:28,560 --> 00:00:30,730
-你可以继续下拉查看更多
+你可以继续向下看调用栈来查看更多的信息
 this, you can scroll down the stack trace to
 
 11
 00:00:30,730 --> 00:00:33,940
-这一部分是我们的框架部分
+这一部分是系统的调用信息
 read more. This is our framework code that you
 
 12
@@ -61,16 +61,16 @@ can skip and here's where it actually hits our
 13
 00:00:36,570 --> 00:00:41,440
 在PlaceholderFragment这个类的onCreateView()方法里报错了
-app. It's within the placeholder fragment class, in the onCreateView method. And
+app. It's within the PlaceholderFragment class, in the onCreateView method. And
 
 14
 00:00:41,440 --> 00:00:46,680
 它在 MainActivity.java 这个文件的第116行
-it happens in main activity.java file, in line 116. So
+it happens in MainActivity.java file, in line 116. So
 
 15
 00:00:46,680 --> 00:00:51,650
-所以我们回到我们的代码里去  116行是urlConnection.connect()这个方法引起了错误
+所以我们回到我们的代码里去  116行的urlConnection.connect()这个方法引起了错误
 if we go back to the code, on that line you can see that urlConnection.connect
 
 16
