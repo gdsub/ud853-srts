@@ -1,35 +1,35 @@
-1
+ï»¿1
 00:00:01,660 --> 00:00:04,190
-Ğ»Ğ»£¬Rado¡£ÏÖÔÚÄãÔÚÒ»¸öĞÎÏóµÄ±ÈÓ÷ÖĞÒ²Àí½âÁË
+è°¢è°¢ï¼ŒRadoã€‚ç°åœ¨ä½ åœ¨ä¸€ä¸ªå½¢è±¡çš„æ¯”å–»ä¸­ä¹Ÿç†è§£äº†
 Thanks, Rado. Now that you understand what
 
 2
 00:00:04,190 --> 00:00:06,960
-Ê²Ã´ÊÇÒâÍ¼¡£ÄÇ¾ÍÈÃ¸øÎÒÃÇÓÃËüÀ´¸ÉÒ»Ğ©
+ä»€ä¹ˆæ˜¯Intentã€‚é‚£å°±è®©ç»™æˆ‘ä»¬ç”¨å®ƒæ¥å¹²ä¸€äº›
 intents are in glorious metaphor, let's use them
 
 3
 00:00:06,960 --> 00:00:10,370
-ÓĞÓÃµÄÊÂ¡£ÎÒÃÇ½«ÓÃÒ»¸öÆô¶¯Ã÷Ï¸»î¶¯µÄÒâÍ¼
+æœ‰ç”¨çš„äº‹ã€‚æˆ‘ä»¬å°†ç”¨ä¸€ä¸ªå¯åŠ¨DetailActivityçš„Intent
 to do something useful. We'll replace the toast,
 
 4
 00:00:10,370 --> 00:00:12,660
-ÒÔ´ËÀ´È¡´úÃæ°ü¡£
+æ¥å–ä»£Toastã€‚
 with an intent to launch the detail activity.
 
 5
 00:00:14,940 --> 00:00:18,830
-ÄãĞèÒªÍ¨¹ıÌìÆøÔ¤±¨µÄÊı¾İÏÔÊ¾ÏêÏ¸µÄ»î¶¯¡£
+ä½ éœ€è¦æŠŠå¤©æ°”é¢„æŠ¥çš„æ•°æ®ä¼ é€’ç»™DetailActivityæ¥æ˜¾ç¤ºã€‚
 You'll need to pass in weather forecast data for the detail activity to
 
 6
 00:00:18,830 --> 00:00:22,230
-¶ÔÓÚÆäËû¸ü¶àµÄĞÅÏ¢£¬Äã»áÔÚÒâÍ¼ÀàÀï±ß¿´µ½ÒâÍ¼
+å¯¹äºå…¶ä»–æ›´å¤šçš„ä¿¡æ¯ï¼Œçœ‹çœ‹Intentçš„
 display. For more information, see the intent
 
 7
 00:00:22,230 --> 00:00:24,760
-¶îÍâ¶¨ÒåµÄ³£Á¿¡£
+extraså±æ€§ï¼Œå®ƒè¢«å®šä¹‰åœ¨Intentç±»é‡Œ
 extra constants defined in the intent class.
 

@@ -1,130 +1,130 @@
-1
+ï»¿1
 00:00:00,640 --> 00:00:04,350
-ËùÒÔ£¬ÏÖÔÚÎÒÃÇÓĞÒ»¸ö¼òµ¥µÄ·şÎñ£¬²»ÊÇÃ´£¿
+æ‰€ä»¥ï¼Œç°åœ¨æˆ‘ä»¬æœ‰ä¸€ä¸ªç®€å•çš„æœåŠ¡ï¼Œä¸éš¾å§ï¼Ÿ
 So, now, we have a simple service. Wasn't that easy?
 
 2
 00:00:04,350 --> 00:00:08,140
-µ«ÊÇËûÈÔÈ»²»ÄÜ¼¤»îËû×Ô¼º¡£ĞÒÔËµÄÊÇ£¬ÕâÓĞÒ»¸ö×¨ÃÅ
+ä½†æ˜¯ä»–ä»ç„¶ä¸èƒ½å”¤é†’ä»–è‡ªå·±ã€‚å¹¸è¿çš„æ˜¯ï¼Œè¿™æœ‰ä¸€ä¸ªä¸“é—¨
 But it still doesn't wake itself up. Fortunately, there's a system
 
 3
 00:00:08,140 --> 00:00:11,430
-ÎªËû×¼±¸µÄÏµÍ³·şÎñ¡£Õâ¸ÕºÃÊÇÒıÈëAlarmManagerµÄºÃ»ú»á¡£
+ç³»ç»ŸæœåŠ¡æ¥åšè¿™ä¸ªå·¥ä½œã€‚è¿™åˆšå¥½æ˜¯å¼•å…¥AlarmManagerçš„å¥½æœºä¼šã€‚
 service for that. This is a good opportunity to introduce
 
 4
 00:00:11,430 --> 00:00:15,020
-AlarmManagerÔÊĞíÄãÍ¨ÖªÏµÍ³£¬ÈÃÏµÍ³ÖªµÀÄãÏëÓÃËü
+AlarmManagerå…è®¸ä½ é€šçŸ¥ç³»ç»Ÿï¼Œè®©ç³»ç»ŸçŸ¥é“ä½ æƒ³ç”¨å®ƒ
 the AlarmManager. The AlarmManager allows you to tell the system that
 
 5
 00:00:15,020 --> 00:00:17,220
-À´¼¤»îÒ»¸öÄãÓ¦ÓÃ³ÌĞòµÄ×é¼ş£¬
+æ¥æ¿€æ´»ä¸€ä¸ªä½ çš„åº”ç”¨ç¨‹åºçš„ç»„ä»¶ï¼Œ
 you want it to wake a component of your application
 
 6
 00:00:17,220 --> 00:00:19,690
-²¢ÇÒÔÚºóÌ¨×öÒ»Ğ©´¦Àí¡£
+å¹¶ä¸”åœ¨åå°åšä¸€äº›å¤„ç†ã€‚
 up after a period of time and do some processing in
 
 7
 00:00:19,690 --> 00:00:22,370
-ÄãÉõÖÁ¿ÉÒÔÅ¼¶ûÓÃËüÀ´¼¤»î
+ä½ ç”šè‡³å¯ä»¥å¶å°”ç”¨å®ƒæ¥å”¤é†’
 the background. You can even have it wake up your
 
 8
 00:00:22,370 --> 00:00:26,780
-ÄãµÄÓ¦ÓÃ³ÌĞò¡£µ«ÊÇ£¬ÎÒÃÇÊÇÔõÃ´ÔÚºóÌ¨¼¤»îµÄÄØ£¿
+ä½ çš„åº”ç”¨ç¨‹åºã€‚ä½†æ˜¯ï¼Œæˆ‘ä»¬ä»åå°èƒ½å”¤é†’ä»€ä¹ˆå‘¢ï¼Ÿ
 application periodically but, what do we wake up in the background?
 
 9
 00:00:26,780 --> 00:00:28,810
-Õâ½«ÊÇÒ»¸öAndroid×é¼ş£¬ÔÚËû±»½Ğ×ö
+å®ƒæ˜¯ä¸€ä¸ªAndroidç»„ä»¶ï¼Œä¹‹å‰æˆ‘ä»¬æ²¡æœ‰æ¥è§¦è¿‡
 That would be an Android component we haven't
 
 10
 00:00:28,810 --> 00:00:32,940
-Broadcast ReceiverÖ®Ç°£¬ÎÒÃÇÊÇ´ÓÀ´¶¼Ã»ÓĞ¼û¹ıµÄ¡£Broadcast Receiver
+å«åšBroadcast Receiverã€‚
 seen before called a Broadcast Receiver. A Broadcast Receiver
 
 11
 00:00:32,940 --> 00:00:34,770
-ÊÇÒ»¸öÌØÊâÀà£¬Ëü¾­³£±»ÓÃÀ´
+Broadcast Receiveræ˜¯ä¸€ä¸ªç‰¹æ®Šç±»ï¼Œå®ƒç»å¸¸è¢«ç”¨æ¥
 is a special class, that is used to
 
 12
 00:00:34,770 --> 00:00:39,270
-½ÓÊÕÀ´×ÔÆäËûÓ¦ÓÃ³ÌĞòµÄintent broadcast¡£Ò»¸ö
+æ¥æ”¶æ¥è‡ªå…¶ä»–åº”ç”¨ç¨‹åºçš„intentå¹¿æ’­ã€‚é€šå¸¸
 receive intent broadcast often from other applications. Typically a
 
 13
 00:00:39,270 --> 00:00:42,020
-broadcast receiver½«»áÏóÕ÷ĞÔµÄÎªÕâĞ©broadcaast¼ÇÂ¼Ò»¸öintent filter
+broadcast receiverä¼šç™»è®°ä¸€äº›Intent Filter(ç”¨æ¥ç­›é€‰å¹¿æ’­æ¶ˆæ¯ä¸­Intent)
 broadcast receiver will register an intent filter for
 
 14
 00:00:42,020 --> 00:00:45,690
-ÕâÒ²ÊÇÒ»ÖÖÓ¦ÓÃ³ÌĞò¼àÌı¾¯±¨µÄÒ»ÖÖ·½·¨¡£
+è¿™ä¹Ÿæ˜¯ä¸€ç§åº”ç”¨ç¨‹åºç›‘å¬è­¦æŠ¥çš„ä¸€ç§æ–¹æ³•ã€‚
 these broadcasts. It's also one way the application will
 
 15
 00:00:45,690 --> 00:00:48,980
-ËùÒÔÈÃÎÒÃÇÌí¼ÓÒ»Ğ©alarm stuff°É¡£
+æ‰€ä»¥è®©æˆ‘ä»¬æ·»åŠ ä¸€äº›alarm stuffå§ã€‚
 listen in on alarms. So let's add some alarm
 
 16
 00:00:48,980 --> 00:00:52,530
-Ê×ÏÈ£¬ÎÒÃÇÒªÌí¼ÓÒ»¸öBroadcast Receiver
+é¦–å…ˆï¼Œæˆ‘ä»¬è¦æ·»åŠ ä¸€ä¸ªBroadcast Receiver
 stuff. First, I'm going to add a Broadcast Receiver
 
 17
 00:00:52,530 --> 00:00:56,100
-×÷ÎªSunshine·şÎñµÄÒ»¸ö¾²Ì¬ÄÚ²¿Àà¡£
+ä½œä¸ºSunshineæœåŠ¡çš„ä¸€ä¸ªé™æ€å†…éƒ¨ç±»ã€‚
 as a static inner class of Sunshine Service.
 
 18
 00:00:56,100 --> 00:00:58,760
-µ«Ëû³ÉÎªÒ»¸öAndroid×é¼şÖ®ºó£¬ÎÒÃÇÒªÔÚ
+ä½†ä»–æˆä¸ºä¸€ä¸ªAndroidç»„ä»¶ä¹‹åï¼Œæˆ‘ä»¬è¦åœ¨
 Since this is an Android component, I'll register
 
 19
 00:00:58,760 --> 00:01:02,540
-²Ëµ¥Àï¼ÇÂ¼Õâ¸öBroadcast Receiver¡£×¢Òâ
+Manifestæ–‡ä»¶é‡Œè®°å½•è¿™ä¸ªBroadcast Receiverã€‚æ³¨æ„
 this Broadcast Receiver in the manifest. Note the
 
 20
 00:01:02,540 --> 00:01:06,770
-ÔÚÕâÖÖ·½Ê½ÏÂ¾²Ì¬ÄÚ²¿ÀàÊÇÒÔ·ûºÅ³öÏÖµÄ¡£ºÃµÄ£¬
+åœ¨è¿™ç§æ–¹å¼ä¸‹é™æ€å†…éƒ¨ç±»æ˜¯ä»¥ç¬¦å·å‡ºç°çš„ã€‚å¥½çš„ï¼Œ
 way a static inner class is notated. Okay, I've
 
 21
 00:01:06,770 --> 00:01:09,080
-ÎÒÒÑ¾­°ÑBroadcast ReceiverµÄºËĞÄ²¿·Ö¸øÄãÁË£¬
+æˆ‘å·²ç»æŠŠBroadcast Receiverçš„æ ¸å¿ƒéƒ¨åˆ†ç»™ä½ äº†ï¼Œ
 given you the bones of a broadcast receiver
 
 22
 00:01:09,080 --> 00:01:11,180
-ÕâÑù¾Í¿ÉÒÔ¿ØÖÆÒ»¸öalarmÁË£¬µ«ÊÇÏÖÔÚ
+è¿™æ ·å°±å¯ä»¥æ§åˆ¶ä¸€ä¸ªalarmäº†ï¼Œä½†æ˜¯ç°åœ¨
 that can handle an alarm, but now it's
 
 23
 00:01:11,180 --> 00:01:14,770
-ÂÖµ½ÄãÁË¡£Äã¿ÉÒÔ´ÓÒÑ¾­Ã÷È·µÄÒâÍ¼ÖĞĞÂ½¨Ò»¸öPendingIntent
+è½®åˆ°ä½ äº†ã€‚ä½ å¯ä»¥ä»å·²ç»é€šè¿‡æ˜¾å¼å£°æ˜çš„Intentæ¥å®ä¾‹åŒ–ä¸€ä¸ªPendingIntent
 your turn. You can create a PendingIntent from
 
 24
 00:01:14,770 --> 00:01:17,840
-ÈÃalarm manager¼¤»îÄãµÄbroadcast receiver¡£
+ä»¥ä½¿alarm manageræ¿€æ´»ä½ çš„broadcast receiverã€‚
 an explicit intent to have the alarm manager activate
 
 25
 00:01:17,840 --> 00:01:22,390
-ÎÒ½¨ÒéÄãÏÈËæ±ã¸øÉèÖÃ¸ö¶Ì¾¯±¨£¬±È·½Ëµ5Ãë£¬
+æˆ‘å»ºè®®ä½ å…ˆéšä¾¿ç»™è®¾ç½®ä¸ªçŸ­è­¦æŠ¥ï¼Œæ¯”æ–¹è¯´5ç§’ï¼Œ
 your broadcast receiver. I recommend setting the alarm to something absurdly
 
 26
 00:01:22,390 --> 00:01:26,030
-ÕâÑùÄã¾Í¿ÉÒÔºÜÇáËÉµØ²âÊÔËûµÄ¹¤×÷×´Ì¬ÁË¡£
+è¿™æ ·ä½ å°±å¯ä»¥å¾ˆè½»æ¾åœ°æµ‹è¯•ä»–çš„å·¥ä½œçŠ¶æ€äº†ã€‚
 short, like five seconds, so you can easily test that it's working.
 

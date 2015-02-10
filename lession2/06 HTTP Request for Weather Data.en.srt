@@ -1,60 +1,59 @@
 1
 00:00:00,180 --> 00:00:02,390
-为了从一个应用程序中获取它的开放气象图数据，
-To fetch the data from open weather map within an
+为了在应用中向OpenWeatherMap请求数据，
+To fetch the data from OpenWeatherMap within an
 
 2
 00:00:02,390 --> 00:00:05,750
-首先我们需要以URL的形式，
+首先我们需要以之前确定的URL的形式，
 app, first we need to make an HTTP request to the
 
 3
 00:00:05,750 --> 00:00:09,150
-向API构造一个HTTP请求。
+向API发送一个HTTP请求。
 API at the URL that we decided on earlier. Then we
 
 4
 00:00:09,150 --> 00:00:11,520
-我们需要从输入流中以JSON字符串的形式读取响应。
+然后我们需要从输入流中以JSON字符串的形式读取响应。
 need to read the response from the input stream to get
 
 5
 00:00:11,520 --> 00:00:14,480
-如果它没有被解析，那么我们需要检查一下是否哪里出现了问题。
+它还没有被解析，不过我们稍后再来了解这方面的知识。
 a JSON string. It hasn't been parsed yet, but we'll worry
 
 6
 00:00:14,480 --> 00:00:18,080
-接下来，我们需要清空断开的连接，
+接下来，我们需要通过断开连接并且关闭所有输入流
 about that later. Then we clean up by disconnecting the connection
 
 7
 00:00:18,080 --> 00:00:21,300
-并关闭一切输入流。我们也记录了我们所抓获的任何出错点。
+来进行清理工作。我们也记录错误日志。
 and closing any input streams. We also log any errors that
 
 8
 00:00:21,300 --> 00:00:25,300
-由于这是一个庞大的网络公式化代码，
+由于网络处理的部分有非常多样板化的代码，
 we catch. Since it's a lot of networking boiler plate code,
 
 9
 00:00:25,300 --> 00:00:27,500
-我们将为您提供的这些功能的代码。
+我们将为您提供的这些功能
 we've provided you with a code snippet
 
 10
 00:00:27,500 --> 00:00:29,890
-请参阅下方的GitHub链接的简介。
+的代码片段。请参阅下方的
 that handles these steps. See the link for
 
 11
 00:00:29,890 --> 00:00:31,990
-当你已经看完，
+GitHub链接的简介。当你看完以后，
 the GitHub gist below. After you've taken a
 
 12
 00:00:31,990 --> 00:00:34,120
 点击此框，继续往下学习。
 look at it, check this box to continue.
-

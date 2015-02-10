@@ -5,7 +5,7 @@ Back in lesson four, we learned that the
 
 2
 00:00:02,050 --> 00:00:04,990
-安卓运行机制将会杀掉那些没有可视化活动的app，
+Android Runtime(运行时)会杀掉那些activity处于不可见状态的app，
  Android Runtime will kill apps with no visible activities,
 
 3
@@ -15,22 +15,22 @@ in order to free resources needed by the foreground
 
 4
 00:00:07,300 --> 00:00:10,110
-但如果你的app任务已经开启且
+但要是你的程序中的一些任务需要在
 app. But what if your app has tasks that
 
 5
 00:00:10,110 --> 00:00:12,820
-需要继续，而你的活动是不可视化的，比如
+activity不可见的情况下继续执行肿么办，比如
 need to continue when the activity isn't visible, things
 
 6
 00:00:12,820 --> 00:00:17,150
-像下载文件，上传相片，或者听音乐呢？嗯，
+下载文件，上传相片，或者听音乐呢？
 like downloading files, uploading photos, or playing music? Well,
 
 7
 00:00:17,150 --> 00:00:21,357
-有一个专门的应用组件。我们已经
+针对这个有一个专门的程序组件：Service(服务)。我们已经
 there's an application component for that. Services. We've already
 
 8
@@ -45,83 +45,83 @@ Broadcast Receivers and Intents. Services,
 
 10
 00:00:25,230 --> 00:00:29,500
-Services是安卓应用组件的最后一个难题。
+Services是安卓应用组件整副拼图里的最后一块。
 are the final piece to the Android app component
 
 11
 00:00:29,500 --> 00:00:33,369
-你开启服务更多得像你开始一个活动，通过
+启动Service和启动activity类似
 puzzle. You start services much like you do activities, by
 
 12
 00:00:33,369 --> 00:00:36,880
-传递一个指令来开始服务通知。
+通过调用startService方法，并向该方法传递一个intent对象。
 passing in an intent to a Start Service call.
 
 13
 00:00:36,880 --> 00:00:39,212
-然后你停止服务也是相同的方式，通过通知
+停止服务也是相同的方式，通过调用
 And you can stop services the same way, by calling
 
 14
 00:00:39,212 --> 00:00:40,930
-Stoo Service传递你想要停止的
+stopService，并传递你想要停止的
 Stop Service and passing in the name of the
 
 15
 00:00:40,930 --> 00:00:44,770
-服务的名字。不像活动，服务没有
+服务的名字。不像activity，service没有
 service you want to stop. Unlike activities, services have no
 
 16
 00:00:44,770 --> 00:00:47,777
-用户接口，且他们比后台进程有更高的
+交互界面，且他们比后台进程有更高的
 user interface and they run at a higher priority than
 
 17
 00:00:47,777 --> 00:00:50,490
-活动优先权。这意味着一个开启运行服务的app
+活动优先权。这意味着当系统资源不足的时候
 background activities. This means that an app with a running
 
 18
 00:00:50,490 --> 00:00:52,690
-在为了给前台程序释放资源时
+程序中的后台服务
 service is less likely to be killed by the run
 
 19
 00:00:52,690 --> 00:00:55,620
-有更低的几率会被runtime杀掉进程。
+更容易被runtime(运行时)所保留
 time, in order to free resources for the foreground activities.
 
 20
 00:00:55,620 --> 00:00:58,350
-事实上，默认情况下，系统将会在app里被
+事实上，默认情况下，系统会重启
 In fact, by default, the system will attempt to restart
 
 21
 00:00:58,350 --> 00:01:01,180
-终止之前重启那些被终止的服务。
+那些在程序终止他们之前被系统所终止的服务。
 services that are terminated before they are stopped from within
 
 22
 00:01:01,180 --> 00:01:05,129
-这会在简化的生命周期里面会被反映出来。
+在这个简化的生命周期里面可以看出来。
 the app. This is reflected in this simplified life cycle.
 
 23
 00:01:05,129 --> 00:01:09,050
-对比Activities,Services被设计来执行
+和Activities相比,Services被设计来执行
 Compared to Activities, Services are designed to execute longer running
 
 24
 00:01:09,050 --> 00:01:12,340
-不能被打断的更长的运行任务。典型地，你只需要
+那些需要长时间运行的任务。典型地，你只需要
 tasks that shouldn't be interrupted. Typically, you'll only need to
 
 25
 00:01:12,340 --> 00:01:15,900
-覆盖onstartcommad处理程序，那些你开始的
-override the onStartCommad handler, which is where you begin the background
+重写onStartCommand，在这里添加你后台需要运行的任务代码
+override the onStartCommand handler, which is where you begin the background
 
 26
 00:01:15,900 --> 00:01:18,860

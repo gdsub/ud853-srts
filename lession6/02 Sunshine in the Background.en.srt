@@ -10,7 +10,7 @@ AsyncTask hooked up to a refresh button to update
 
 3
 00:00:07,030 --> 00:00:09,310
-数据？Rato就说到这是怎样的一个
+数据吗？Rato就谈到这是怎样的一个
 our data? Rato talked about how that was a
 
 4
@@ -20,12 +20,12 @@ bad idea, because the AsyncTask is not tied to
 
 5
 00:00:13,290 --> 00:00:16,610
-活动的生命周期捆绑在一起。只要异步任务
+activity的生命周期捆绑在一起。虚拟机会一直保持
 the activity life cycle. The virtual machine will hold
 
 6
 00:00:16,610 --> 00:00:18,960
-在运行，虚拟机将会坚持活动对象，
+activity对象，只要异步任务处在运行状态
 on to the activity object as long as the
 
 7
@@ -45,7 +45,7 @@ If you rotate your phone, the behavior is to
 
 10
 00:00:28,380 --> 00:00:31,810
-破坏你的活动然后实例化一个新的。
+破坏你的activity然后实例化一个新的。
 destroy your activity and instantiate a new one. The
 
 11
@@ -60,47 +60,47 @@ perform the same update, and so forth. The point is,
 
 13
 00:00:39,290 --> 00:00:41,910
-它不是一个非常有潜能的作为长后台
+它对于冗长的后台操作的情况并不是最好的解决方法
 it's not the best pattern for a potentially very
 
 14
 00:00:41,910 --> 00:00:45,680
-操作的一条最好的路径，比如获取网络服务
+比如获取网络服务
 long background operation, such as fetching from web services. If
 
 15
 00:00:45,680 --> 00:00:48,410
-如果你离开了app，异步任务将会继续
+如果你将app转到了后台，异步任务将会继续
 you leave the app, the asynctask will continue to
 
 16
 00:00:48,410 --> 00:00:51,340
-运行只要你的活动进程一直存在于后台，
+运行只要你的活动进程一直处于活跃状态，
 run for as long as your process is kept alive,
 
 17
 00:00:51,340 --> 00:00:53,750
-但是 会运行在一个较低的优先权，然后你的进程
+只不过运行在一个较低的优先权下，然后你的进程
 but will run at a low priority, and your process
 
 18
 00:00:53,750 --> 00:00:55,900
-会被先杀掉如果系统服务
+会被优先释放掉，当系统服务
 will be the first thing to be killed if the device
 
 19
 00:00:55,900 --> 00:00:59,760
-需要更多的资源。然而会有一个更大的问题，你的app
+需要更多的资源。而且还会有一个更大的问题，你的app
 needs more resources. And there's a bigger problem. Your app
 
 20
 00:00:59,760 --> 00:01:02,660
-必须可视化且运行在前台并第一时间实例化
+必须在屏幕上处于可见状态且运行在前台并第一时间实例化
 has to be visible and running in the foreground to instantiate
 
 21
 00:01:02,660 --> 00:01:05,590
-任务。因为我们开始一个
+了异步任务。因为我们开始一个
 the task in the first place. Because we started a
 
 22
@@ -110,7 +110,7 @@ task, to update the weather when we started the app, this
 
 23
 00:01:09,000 --> 00:01:13,070
-如果天气总重复改变这会变成不受欢迎的行为。所以
+如果天气总是快速变化严重影响用户体验。所以
 can have undesirable behavior if the weather changes rapidly. So
 
 24
@@ -131,11 +131,11 @@ the foreground. But even more importantly, we want the app to get
 27
 00:01:22,690 --> 00:01:26,690
 在后台以最小的电量消耗来实现有规律的更新。那将
-egular updates in the background with minimal battery drain. That will
+regular updates in the background with minimal battery drain. That will
 
 28
 00:01:26,690 --> 00:01:28,660
-是我们后续在介绍天气更新得时候，在这门课程
+是我们后续在介绍天气信息通知时候，在这门课程
 be especially important later in this
 
 29
