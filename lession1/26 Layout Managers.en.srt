@@ -1,70 +1,70 @@
 1
 00:00:00,810 --> 00:00:05,680
-»Øµ½RatoËùËµ£¬frame²¼¾Ö¡¢linear²¼¾Ö¡¢relative²¼¾Ö£¬
+å›åˆ°Ratoæ‰€è¯´ï¼Œframeå¸ƒå±€ã€linearå¸ƒå±€ã€relativeå¸ƒå±€ï¼Œ
 Going back to what Rato said, frame layout, linear layout, and relative layout
 
 2
 00:00:05,680 --> 00:00:09,790
-ÕâÈıÖÖ²¼¾Ö½«»áÊÇÄãÔÚ¹¹½¨UIÊ±×î³£Óö¼ûµÄ¡£
+è¿™ä¸‰ç§å¸ƒå±€å°†ä¼šæ˜¯ä½ åœ¨æ„å»ºUIæ—¶æœ€å¸¸é‡è§çš„ã€‚
 are three of the most common layouts you will use in building out your UI.
 
 3
 00:00:09,790 --> 00:00:13,860
-ÕâĞ©¶¼ÊÇÀ´×Ôview groupÀà£¬ÊÇÓÃÀ´¼à¹Ü×ÓÊÓÍ¼µÄ¡£
+è¿™äº›éƒ½ç»§æ‰¿è‡ªview groupç±»ï¼Œæ˜¯ç”¨æ¥åŒ…å®¹å’Œæ’åˆ—é‡Œé¢çš„å­è§†å›¾ï¼ˆå„ç§viewï¼‰çš„ã€‚
 These all descend from the view group class, designed to contain and
 
 4
 00:00:13,860 --> 00:00:17,870
-Ã¿Ò»ÖÖ²¼¾Ö¶¼ÓĞ¸÷×ÔµÄÓÅÊÆ£¬
+æ¯ä¸€ç§å¸ƒå±€éƒ½æœ‰å„è‡ªçš„ä¼˜åŠ¿ï¼Œ
 give order to child views. They each have their strengths and
 
 5
 00:00:17,870 --> 00:00:21,080
-ÄãÓ¦¸Ã³¢ÊÔÈ¥Ê¹ÓÃËüÃÇ£¬²¢ÎªÄãµÄ³ÌĞòÕÒµ½×îÓÅ²¼¾Ö¡£
+ä½ åº”è¯¥å°è¯•å­¦ä¹ ä½¿ç”¨ä»–ä»¬ï¼Œå°½é‡ç”¨æœ€ç®€å•çš„å¸ƒå±€å®Œæˆå·¥ä½œ
 you should always try to use this simplest layout that will get the job done.
 
 6
 00:00:22,160 --> 00:00:26,240
-Frame Layout·Ç³£ÊÊºÏ¼òµ¥µÄ²¼¾Ö£¬µ±ÄãÖ»ÓĞÒ»¸ö×ÓÊÓÍ¼Ê±£¬
+Frame Layoutï¼ˆæ¡†æ¶å¸ƒå±€ï¼‰éå¸¸é€‚åˆç®€å•çš„å¸ƒå±€ï¼Œå½“ä½ åªæœ‰ä¸€ä¸ªå­è§†å›¾æ—¶ï¼Œ
 Frame Layout is great for simple layouts when you only have one child to view,
 
 7
 00:00:26,240 --> 00:00:30,560
-ÀıÈçÒ»¸öÄÚÈİÇøÓòÖ»ÓĞÁĞ±íÊÓÍ¼µÄÇé¿ö¡£
+ä¾‹å¦‚å†…å®¹åŒºåŸŸåªæœ‰åˆ—è¡¨è§†å›¾çš„æƒ…å†µã€‚
 like a list view that fills the entire content area. Linear layout is
 
 8
 00:00:30,560 --> 00:00:35,640
-Linear LayoutÄÜ¹»ÍêÃÀ´¦ÀíÊÓÍ¼ÄÚÈİµÄË®Æ½»òÕß´¹Ö±¶Ñµş£¬Ò»¸ö½Ó×ÅÒ»¸öµÄ¶Ñµş£¬
+Linear Layoutï¼ˆçº¿æ€§å¸ƒå±€ï¼‰èƒ½å¤Ÿä½¿å­è§†å›¾æ°´å¹³æˆ–å‚ç›´æ’åˆ—
 perfect for stacking the views vertically or horizontally, one after another,
 
 9
 00:00:35,640 --> 00:00:40,610
-ËüÒ²ÊÇÄÜ¹»´òÆÆ±ÈÀıÀ´ÏÔÊ¾µÄÎ¨Ò»µÄ·½·¨¡£
+å®ƒä¹Ÿæ˜¯å”¯ä¸€ä¸€ä¸ªèƒ½å¤Ÿæ‰“ç ´æ¯”ä¾‹æ˜¾ç¤ºçš„å¸ƒå±€
 it is also the only way to break up the display proportionately. Relative layout
 
 10
 00:00:40,610 --> 00:00:45,200
-Relative LayoutÏà½ÏÓÚ±ğµÄ²¼¾ÖÀ´Ëµ¸üÎªÇ¿´ó£¬µ±È»Ò²¸üÎª¸´ÔÓ¡£
+Relative Layoutç›¸è¾ƒäºåˆ«çš„å¸ƒå±€æ¥è¯´æ›´ä¸ºå¼ºå¤§ï¼Œå½“ç„¶ä¹Ÿæ›´ä¸ºå¤æ‚ã€‚
 is powerful but a bit more complicated compared to the others. Throw a bunch of
 
 11
 00:00:45,200 --> 00:00:48,490
-Å×¿ªrelative layoutÀïµÄÒ»¶ÑÊÓÍ¼£¬Äã¿ÉÒÔ¶ÔÃ¿Ò»¸öÊÓÍ¼¶ÔÓ¦µÄ¸¸Àà½øĞĞÅäÖÃ£¬
+ä½ å¯ä»¥ç›¸å¯¹äºå…¶çˆ¶å…ƒç´ çš„ä½ç½®æ¥è®¾ç½®å…¶ä¸­çš„å­å…ƒç´ çš„ä½ç½®
 views inside a relative layout, and then you can configure each views
 
 12
 00:00:48,490 --> 00:00:53,070
-Ò²¿ÉÒÔÊÇrelative²¼¾Ö£¬Í¬¼¶ÊÓÍ¼£¬Õâ½«¸øÄãºÜ¶àÖÖÑ¡ÔñµÄ»ú»á¡£
+ä¹Ÿå¯ä»¥ç›¸å¯¹å®ƒçš„åŒçº§åˆ«å…ƒç´ çš„ä½ç½®æ¥è®¾ç½®ï¼Œè¿™å°±æ˜¯â€œç›¸å¯¹â€å¸ƒå±€
 position relative to parent, the relative layout, or to sibling views, tons of
 
 13
 00:00:53,070 --> 00:00:57,320
-µ±ÎÒÃÇ¹¹½¨¸ü¸´ÔÓµÄÆÁÄ»Ê±£¬ÎÒÃÇ»á¸ü¼ÓÏêÏ¸µÄÌÖÂÛ²¼¾Ö¡£
+å½“æˆ‘ä»¬æ„å»ºæ›´å¤æ‚çš„UIæ—¶ï¼Œæˆ‘ä»¬ä¼šæ›´åŠ è¯¦ç»†çš„è®¨è®ºå¸ƒå±€ã€‚
 possibilities. We'll explore these layouts in greater detail when we build more
 
 14
 00:00:57,320 --> 00:01:02,010
-ÏÖÔÚÈÃÎÒÃÇ»Øµ½Ô¤ÆÚ±í¡£
+ç°åœ¨è®©æˆ‘ä»¬æ¥è®¾è®¡æˆ‘ä»¬çš„å¤©æ°”é¢„æŠ¥åˆ—è¡¨
 complex screens. For now, let's get back to building our forecast list.
 
