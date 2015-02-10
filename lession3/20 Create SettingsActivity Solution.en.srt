@@ -1,29 +1,29 @@
-1
+ï»¿1
 00:00:00,160 --> 00:00:03,460
-Ê×ÏÈÎÒÃÇÀ´´´½¨SettingsActivity×é¼ş  ÕâĞ©¾ÍÊÇÎÒÃÇ¸ù¾İÒªµãĞ´³öµÄ´úÂë
+é¦–å…ˆæˆ‘ä»¬æ¥åˆ›å»ºSettingsActivityç»„ä»¶  è¿™äº›å°±æ˜¯æˆ‘ä»¬æ ¹æ®è¦ç‚¹å†™å‡ºçš„ä»£ç 
 First, we create our SettingsActivity, and this is the code that we got
 
 2
 00:00:03,460 --> 00:00:07,870
-È»ºóÔÚAndroidManifestÎÄ¼şÖĞ  ÎÒÃÇ×¢²áSettingsActivity
+ç„¶ååœ¨AndroidManifestæ–‡ä»¶ä¸­  æˆ‘ä»¬å£°æ˜SettingsActivity
 from the gist. Then, in the AndroidManifest, we declare the SettingsActivity.
 
 3
 00:00:07,870 --> 00:00:11,520
-ÎÒÃÇÎªÕâ¸öActivityÈ¡Ãû½ĞSettings  ËüÊÇ¶¨ÒåÔÚ×Ö·û´®×ÊÔ´ÎÄ¼şÖĞµÄ
+æˆ‘ä»¬ä¸ºè¿™ä¸ªActivityå–åå«Settings  å®ƒæ˜¯å®šä¹‰åœ¨å­—ç¬¦ä¸²èµ„æºæ–‡ä»¶ä¸­çš„
 We give it an activity name Settings, which is declared in the strings file.
 
 4
 00:00:13,080 --> 00:00:17,080
-ÎÒÃÇÍ¬Ê±½«MainActivityÉùÃ÷ÎªËüµÄ¸¸activity  ÕâÑùµÄ»°
+æˆ‘ä»¬åŒæ—¶å°†MainActivityå£°æ˜ä¸ºå®ƒçš„çˆ¶activity  è¿™æ ·çš„è¯
 We also declare the MainActivity as the parent activity. That way,
 
 5
 00:00:17,080 --> 00:00:19,340
-µ±Äãµã»÷SettingsActivity×é¼ş×óÉÏ½ÇµÄ¼ıÍ·Ê±
+å½“ä½ ç‚¹å‡»SettingsActivityç»„ä»¶å·¦ä¸Šè§’çš„ç®­å¤´æ—¶
 when you hit the up button in the SettingsActivity,
 
 6
 00:00:19,340 --> 00:00:21,670
-¾Í¿ÉÒÔ·µ»Øµ½MainActivityÖĞÁË
+å°±å¯ä»¥è¿”å›åˆ°MainActivityä¸­äº†
 it will return back to the MainActivity.

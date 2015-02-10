@@ -1,74 +1,74 @@
-1
+ï»¿1
 00:00:00,090 --> 00:00:02,990
-ÎÒÃÇÒª³ä·ÖÀûÓÃframework¿ò¼ÜÎªÎÒÃÇÌá¹©µÄÌõ¼şÀ´´´½¨ÎÒÃÇµÄ
+æˆ‘ä»¬è¦å……åˆ†åˆ©ç”¨framework(æ¡†æ¶)ä¸ºæˆ‘ä»¬æä¾›çš„æ¡ä»¶æ¥åˆ›å»ºæˆ‘ä»¬çš„
 We'll take advantage of what the framework offers in order to build our
 
 2
 00:00:02,990 --> 00:00:06,890
-SettingsActivity×é¼ş  ÓÉÓÚÎÒÃÇÒªÖ§³ÖÔËĞĞGingerbreadµÄÉè±¸
+SettingsActivityç»„ä»¶  ç”±äºæˆ‘ä»¬è¦æ”¯æŒè¿è¡ŒGingerbreadçš„è®¾å¤‡
 SettingsActivity. Since we're supporting Gingerbread devices,
 
 3
 00:00:06,890 --> 00:00:10,628
-ÎÒÃÇ»áÊ¹ÓÃPreferenceActivityÀà  Èç¹ûÄãÏëÒªÖ§³ÖµÄÉè±¸ÊÇÔËĞĞHoneycomb»òÕß¸üĞÂµÄÏµÍ³
+æˆ‘ä»¬ä¼šä½¿ç”¨PreferenceActivityç±»  å¦‚æœä½ æƒ³è¦æ”¯æŒçš„è®¾å¤‡æ˜¯è¿è¡ŒHoneycombæˆ–è€…æ›´æ–°çš„ç³»ç»Ÿ
 we'll use a PreferenceActivity class. If you're targeting Honeycomb later,
 
 4
 00:00:10,628 --> 00:00:13,220
-ÄÇÃ´Äã¿ÉÒÔÊ¹ÓÃPreferenceFragmentÀà
+é‚£ä¹ˆä½ å¯ä»¥ä½¿ç”¨PreferenceFragmentç±»
 you'll want to use the PreferenceFragment class.
 
 5
 00:00:13,220 --> 00:00:16,480
-¸ù¾İÏÂÃæÌá¹©µÄÒªµãÀ´´´½¨Ò»¸öĞÂµÄSettingsActivityÀà
+æ ¹æ®ä¸‹é¢æä¾›çš„è¦ç‚¹æ¥åˆ›å»ºä¸€ä¸ªæ–°çš„SettingsActivityç±»
 Create a new SettingsActivity class from the gist provided below.
 
 6
 00:00:17,550 --> 00:00:23,000
-ÔÚAndroidManifestÎÄ¼şÖĞ×¢²áÕâ¸öĞÂµÄActivity×é¼ş  Äã¿ÉÒÔ¿´µ½
+åœ¨AndroidManifestæ–‡ä»¶ä¸­æ³¨å†Œè¿™ä¸ªæ–°çš„Activityç»„ä»¶  ä½ å¯ä»¥çœ‹åˆ°
 Update the AndroidManifest to declare this new activity. You can see the
 
 7
 00:00:23,000 --> 00:00:27,390
-DetailActivity×÷ÎªÀı×ÓÒ²ÔÚÆäÖĞ  Èç¹ûÄã·¢ÏÖÓĞAPI±»·ÏÆúÁË
+DetailActivityä½œä¸ºä¾‹å­ä¹Ÿåœ¨å…¶ä¸­  å¦‚æœä½ å‘ç°æœ‰APIè¢«åºŸå¼ƒäº†
 DetailActivity is declared as an example. If you see that APIs are deprecated,
 
 8
 00:00:27,390 --> 00:00:31,600
-Ã»ÓĞ¹ØÏµ  ÕâÊÇÎÒÃÇÔÚÊ¹ÓÃPreferenceActivityµÄÊ±ºò  ÎªÁË¼æÈİÔËĞĞGingerbreadµÄÉè±¸
+æ²¡æœ‰å…³ç³»  è¿™æ˜¯æˆ‘ä»¬åœ¨ä½¿ç”¨PreferenceActivityçš„æ—¶å€™  ä¸ºäº†å…¼å®¹è¿è¡ŒGingerbreadçš„è®¾å¤‡
 that's okay. That's a side effect of using PreferenceActivity, in order
 
 9
 00:00:31,600 --> 00:00:36,980
-¶ø²úÉúµÄ¸±×÷ÓÃ  ÔÚÄãÎªÁË×îÖÕµÄÏîÄ¿±àĞ´ÄãµÄAppµÄÊ±ºò
+è€Œäº§ç”Ÿçš„å‰¯ä½œç”¨  åœ¨ä½ ä¸ºäº†æœ€ç»ˆçš„é¡¹ç›®ç¼–å†™ä½ çš„Appçš„æ—¶å€™
 to target Gingerbread devices. When you create your App for your final project,
 
 10
 00:00:36,980 --> 00:00:41,460
-Äã¿ÉÒÔÊ¹ÓÃAndroid StudioÖĞµÄÏòµ¼¹¦ÄÜ´´½¨ĞÂµÄSettingsActivity×é¼ş
+ä½ å¯ä»¥ä½¿ç”¨Android Studioä¸­çš„å‘å¯¼åŠŸèƒ½åˆ›å»ºæ–°çš„SettingsActivityç»„ä»¶
 you can use the wizard in Android Studio to create a new SettingsActivity.
 
 11
 00:00:41,460 --> 00:00:44,830
-Ïòµ¼¹¦ÄÜÎªÄã´´½¨µÄ´úÂë»áÏòºó¼æÈİ¾ÉµÄÏµÍ³
+å‘å¯¼åŠŸèƒ½ä¸ºä½ åˆ›å»ºçš„ä»£ç ä¼šå‘åå…¼å®¹æ—§çš„ç³»ç»Ÿ
 The code the wizard provides will make your app backward compatible,
 
 12
 00:00:44,830 --> 00:00:49,040
-ÕâÊÇÍ¨¹ıÊ¹ÓÃPreferenceActivityºÍPreferenceFragment×öµ½µÄ
+è¿™æ˜¯é€šè¿‡ä½¿ç”¨PreferenceActivityå’ŒPreferenceFragmentåšåˆ°çš„
 by using a combination of PreferenceActivity and PreferenceFragment.
 
 13
 00:00:49,040 --> 00:00:53,280
-ÎÒÃÇÎªÁËÑ§Ï°µÄĞèÒª  Ö»ÊÇÌá¹©ÁËÒ»¸öÏà¶Ô¼òµ¥µÄÊµÏÖ
+æˆ‘ä»¬ä¸ºäº†å­¦ä¹ çš„éœ€è¦  åªæ˜¯æä¾›äº†ä¸€ä¸ªç›¸å¯¹ç®€å•çš„å®ç°
 Our gist is meant to be a simplified version of that for learning purposes. So
 
 14
 00:00:53,280 --> 00:00:56,970
-ÍíĞ©Ê±ºò  Äã¾ÍÄÜ¸üºÃµØÀí½âÏòµ¼¾¿¾¹×öÁËÊ²Ã´¹¤×÷
+æ™šäº›æ—¶å€™  ä½ å°±èƒ½æ›´å¥½åœ°ç†è§£å‘å¯¼ç©¶ç«Ÿåšäº†ä»€ä¹ˆå·¥ä½œ
 later, you'd be able to understand better what the wizard is doing.
 
 15
 00:00:56,970 --> 00:00:58,350
-Íê³ÉÒÔºó¾Í¹´Ñ¡ÉÏÕâĞ©Ñ¡Ïî°É
+å®Œæˆä»¥åå°±å‹¾é€‰ä¸Šè¿™äº›é€‰é¡¹å§
 Check these items off when you're done.

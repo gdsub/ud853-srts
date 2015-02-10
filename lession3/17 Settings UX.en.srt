@@ -1,21 +1,21 @@
-1
+﻿1
 00:00:00,360 --> 00:00:03,420
-我们来为设置UI画一个线稿
+我们来看看设置界面画的线框图
 Let's go through the wire frames for the settings UI.
 
 2
 00:00:03,420 --> 00:00:07,010
-在detail activity中的溢出项目菜单（overflow menu），有一个设置选项
+在DetailActivity中的溢出项目菜单（overflow menu），有一个设置选项
 Within the detail activity in the overflow menu, there's a settings menu item.
 
 3
 00:00:07,010 --> 00:00:10,970
-当你单击这个设置选项，会打开一个设置activity
-When you tap on the setting's menu item, it opens up the settings activity.
+当你单击这个设置选项，会打开一个SettingsActivity
+When you tap on the setting's menu item, it opens up the SettingsActivity.
 
 4
 00:00:11,980 --> 00:00:15,800
-如果你单击地点项，会弹出一个对话框，你可以向这里面填入邮编
+如果你单击LOCATION(地点)项，会弹出一个对话框，你可以向这里面填入邮编
 If you tap of location, it pops up a dialog, where you can enter in your
 
 5
@@ -35,17 +35,17 @@ the location you expect. Note that there's no validation on this string input.
 
 8
 00:00:29,420 --> 00:00:33,528
-如果你想让这个App成为一个成品App，可能应该在这里放一些
+如果你想让这个App成为一个成品App，你应该在这里做一些对错误输入的处理
 If you're trying to make this app a production app, you would want some kind of
 
 9
 00:00:33,528 --> 00:00:39,070
-天气选项。如果你单击“选择单位”，会打开一个对话框
-air handling here. If you tap on pick your units, it opens up a dialogue
+如果你单击“PICK YOUR UNIT”(单位），会打开一个对话框
+error handling here. If you tap on pick your units, it opens up a dialogue
 
 10
 00:00:39,070 --> 00:00:42,820
-你可以从中选择一个单位
+你可以从中选择一个在这个APP里的温度按公制单位或英制单位显示
 where you can choose to display temperature within the app as wither metric or
 
 11
@@ -55,8 +55,8 @@ imperial units. This is basically just Celsius or Fahrenheit, and
 
 12
 00:00:46,640 --> 00:00:50,280
-这就是设置activity所做的。记住，你不会想将所有东西
-that is what this settings activity does. Remember that you don't want to make
+这就是SettingsActivity所做的。记住，你不会想将所有东西
+that is what this SettingsActivity does. Remember that you don't want to make
 
 13
 00:00:50,280 --> 00:00:53,570
@@ -65,22 +65,22 @@ everything a setting. If you're discussing a feature with a teammate and you
 
 14
 00:00:53,570 --> 00:00:58,010
-并且不知道怎么办才好，不要妥协性地将它做成一个用户设置选项
+并且不知道怎么办才好，不要折衷地将它做成一个用户设置选项
 can't decide on something, don't compromise by just making it a user setting.
 
 15
 00:00:58,010 --> 00:01:02,180
-有很多经验都表明，现在做一个艰难的决定要好过把问题抛给用户
+有很多经验都表明，现在做一个艰难的产品决定会对用户比较好
 There are instances where making a difficult product decision now will be better
 
 16
 00:01:02,180 --> 00:01:06,050
-因为这样就不需要为下一步的决定设置选项的值
+因为这样用户就不需要担心不知道该设置什么值
 for the user, because then they won't have the burden of having to decide what
 
 17
 00:01:06,050 --> 00:01:10,020
-所烦恼了。并且记住，总是有下一次App升级的机会
+并且记住，总是有下一次App升级的机会
 the value of the setting should be. And remember, there's always an opportunity
 
 18

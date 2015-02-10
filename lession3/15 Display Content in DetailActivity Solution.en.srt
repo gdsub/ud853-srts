@@ -1,4 +1,4 @@
-1
+﻿1
 00:00:00,450 --> 00:00:03,660
 在fragment_detail布局中，已经定义了一个TextView
 In the fragment detailed layout, a text view
@@ -10,18 +10,18 @@ is already defined. We have to assign it an
 
 3
 00:00:06,160 --> 00:00:09,200
-这样的话在detail fragment中
+这样的话在DetailActivity的DetailFragment中
 ID so that within the detail fragment of detail
 
 4
 00:00:09,200 --> 00:00:12,120
-我们就能够用findViewById
-activity we can use find view by ID to
+我们就能够用findViewById()
+activity we can use findViewById to
 
 5
 00:00:12,120 --> 00:00:15,180
 来找到这个TextView。为了取得这个TextView
-find the text view. To determine the forecast
+find the TextView. To determine the forecast
 
 6
 00:00:15,180 --> 00:00:18,150
@@ -30,8 +30,8 @@ info that the text view should display. We can
 
 7
 00:00:18,150 --> 00:00:20,770
-我们可以在启动detail activity的Intent中找到它
-access the intent that the detail activity was launched
+我们可以在启动DetailActivity的Intent中找到它
+access the intent that the DetailActivity was launched
 
 8
 00:00:20,770 --> 00:00:25,255
