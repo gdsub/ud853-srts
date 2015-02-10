@@ -15,17 +15,17 @@ to turn on until it can start transmitting. That kind of
 
 4
 00:00:09,120 --> 00:00:12,430
-经常触发这个延迟会降低用户体验
+这样的延迟在用户浏览网页的时候会造成特别差的用户体验
 latency makes for a sucky web browsing experience. So rather than
 
 5
 00:00:12,430 --> 00:00:15,850
-所以比起来不传输数据立马回到空闲状态，状态机采用了
+所以状态机会在一定的时间内保持活跃状态，而不是切换到空闲状态
 going back to idle, state machine stays on at full power
 
 6
 00:00:15,850 --> 00:00:18,730
-在这之后仍然处于满功率状态一段时间，通常是5~10秒
+通常是5~10秒
 for a certain amount of time. Typically, around five to ten
 
 7
@@ -35,36 +35,37 @@ seconds before dropping to an intermediate low power mode that uses
 
 8
 00:00:22,940 --> 00:00:25,860
-这时候用的电也比满功率少，要回到满功率
+这时候用的电也比活跃状态时少，而且返回活跃状态的延迟
 less battery than full power, and has lower latency to return
 
 9
 00:00:25,860 --> 00:00:28,661
-所需的延迟时间也比空闲状态少
+也比处于等待状态时少
 to full power than the standby mode. If a new
 
 10
 00:00:28,661 --> 00:00:31,370
-如果新开启了一个网络连接，状态机会回到满功率状态
+如果新初始化了一个网络连接，无线电性能会回到满功率状态
 transfer is initiated, the radio will be promoted back to
 
 11
 00:00:31,370 --> 00:00:34,560
-如果之后30秒~1分钟的时间没事可做
+而且如果在之后的30秒~1分钟
 full power mode. And if nothing happens for another period
 
 12
 00:00:34,560 --> 00:00:38,020
+的时间内没事可做
 of time, typically around 30 seconds to a minute, it'll
 
 13
 00:00:38,020 --> 00:00:41,690
-它会回到空闲状态。确切的延迟和后续时间（tail time）
+它会回到等待状态。确切的延迟和后续时间（tail time）
 drop back to standby. The exact latency and tail times
 
 14
 00:00:41,690 --> 00:00:45,000
-不同的载体网络不同，甚至不同国家和州都不同
+因运营商而异，甚至不同国家和州都不同
 varies between carriers, and even in carriers between states and
 
 15
