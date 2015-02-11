@@ -1,165 +1,165 @@
 1
 00:00:00,410 --> 00:00:04,200
-ÈÃÎÒÃÇÀ´Ì¸Ì¸ÓĞ¹ØÈ¨ÏŞµÄÎÊÌâ  µ±Ã¿¸öÓ¦ÓÃ³ÌĞòµÄAPKÒÑ¾­°²×°µÄÊ±ºò
+è®©æˆ‘ä»¬æ¥è°ˆè°ˆæœ‰å…³æƒé™çš„é—®é¢˜  å½“æ¯ä¸ªåº”ç”¨ç¨‹åºçš„APKè¢«å®‰è£…çš„æ—¶å€™
 Let's talk about permissions, when each app APK is installed,
 
 2
 00:00:04,200 --> 00:00:07,290
-Ëü±»¸øÓèÁËËü×Ô¼ºµÄÌØÓĞµÄLinuxÓÃ»§ID
+å®ƒè¢«ç»™äºˆäº†å®ƒè‡ªå·±çš„ç‰¹æœ‰çš„Linuxç”¨æˆ·ID
 it's given it's own unique Linux user ID. And each
 
 3
 00:00:07,290 --> 00:00:10,175
-²¢ÇÒÃ¿¸öÓ¦ÓÃ¶¼ÔÚAndroidĞéÄâ»úÄÚÔËĞĞÔÚ×Ô¼ºµÄÊµÀıÖĞ
+å¹¶ä¸”æ¯ä¸ªåº”ç”¨éƒ½è¿è¡Œåœ¨è‡ªå·±çš„Androiè™šæ‹Ÿæœºå®ä¾‹ä¸­
 app runs within its instance in the Android Virtual machine.
 
 4
 00:00:10,175 --> 00:00:16,946
-ÓÉÓÚÃ¿¸öÓ¦ÓÃ³ÌĞòÊ±ÍêÈ«ÔÚÉ³ÏäÖĞÔËĞĞµÄ
+å› æ­¤æ¯ä¸ªåº”ç”¨ç¨‹åºæ˜¯å®Œå…¨è¢«æ²™ç®±éš”ç¦»çš„
 [SOUND] As a result each app is completely sand boxed.
 
 5
 00:00:19,831 --> 00:00:23,051
-ËüµÄÎÄ¼ş´¦ÀíºÍÆäËûµÄ×ÊÔ´ÊÇÆäËûÓ¦ÓÃ³ÌĞò²»ÄÜ·ÃÎÊµÄ
+å®ƒçš„æ–‡ä»¶å¤„ç†å’Œå…¶ä»–çš„èµ„æºæ˜¯å…¶ä»–åº”ç”¨ç¨‹åºä¸èƒ½è®¿é—®çš„
 Its files processes and other resources are inaccessible
 
 6
 00:00:23,051 --> 00:00:26,110
-Õâ¸öÉ³ÏäµÄÔË×÷·½·¨È·±£ÁËÔÚÄ¬ÈÏÇé¿öÏÂ
+è¿™ä¸ªæ²™ç®±çš„è¿ä½œæ–¹æ³•ç¡®ä¿äº†åœ¨é»˜è®¤æƒ…å†µä¸‹
 to other apps. This sandboxing approach is used to
 
 7
 00:00:26,110 --> 00:00:29,210
-Ã»ÓĞÈÎºÎÓ¦ÓÃ³ÌĞò¿ÉÒÔ·ÃÎÊµ½Ãô¸ĞµÄÊı¾İ
+æ²¡æœ‰ä»»ä½•åº”ç”¨ç¨‹åºå¯ä»¥è®¿é—®åˆ°æ•æ„Ÿçš„æ•°æ®
 ensure that by default no app can access sensitive
 
 8
 00:00:29,210 --> 00:00:32,250
-»òÖ´ĞĞ²Ù×÷²¢ÇÒ¿ÉÄÜ¶ÔÆäËûµÄÓ¦ÓÃ³ÌĞò  ÏµÍ³  »òÓÃ»§
+æˆ–æ‰§è¡Œå¯èƒ½å¯¹å…¶ä»–çš„åº”ç”¨ç¨‹åº  ç³»ç»Ÿ  æˆ–ç”¨æˆ·äº§ç”Ÿ
 data or perform actions that could adversely impact other
 
 9
 00:00:32,250 --> 00:00:36,210
-²úÉú²»ÀûµÄÓ°Ïì  ±ÈÈçËµÏñ·ÃÎÊ»¥ÁªÍø
+ä¸åˆ©å½±å“çš„æ“ä½œ  æ¯”å¦‚è¯´åƒè®¿é—®äº’è”ç½‘
 apps, the OS, or users. Things like accessing the
 
 10
 00:00:36,210 --> 00:00:39,320
-»ñÈ¡ÓÃ»§µÄµØÀíÎ»ÖÃ  »òÔÄ¶Á»òĞŞ¸ÄÁªÏµÈËµÄÊı¾İ¿â
+è·å–ç”¨æˆ·çš„åœ°ç†ä½ç½®  è¯»å–æˆ–ä¿®æ”¹è”ç³»äººçš„æ•°æ®åº“
 internet, getting the user's location, or reading or modifying
 
 11
 00:00:39,320 --> 00:00:42,660
-¶ø²»ÊÇÈÃÓÃ»§¿´µ½µ±ÄãµÄÓ¦ÓÃ
+è¿™äº›æ“ä½œ  æ¯”èµ·åº”ç”¨æ¯æ¬¡è®¿é—®æ•æ„Ÿæ•°æ®
 the contacts database. Rather than asking the user each
 
 12
 00:00:42,660 --> 00:00:45,660
-ÊÔÍ¼È¥·ÃÎÊÄ³Ğ©Ãô¸ĞµÄÄÚÈİÊ±
+çš„æ—¶å€™éƒ½è¯¢é—®ä¸€ä¸‹ç”¨æˆ·
 time an app tries to access something sensitive you
 
 13
 00:00:45,660 --> 00:00:48,720
-ËùÓĞĞèÒªÇëÇóµÄÈ¨ÏŞ¶¼ÏÔÊ¾³öÀ´
+ä½ åº”è¯¥åœ¨manifesté…ç½®æ–‡ä»¶ä¸­å£°æ˜ä½ çš„åº”ç”¨éœ€è¦çš„æƒé™
 declared permissions that your app requires in it's manifest.
 
 14
 00:00:48,720 --> 00:00:52,130
-ÄÇÑùÓÃ»áµÃµ½Ò»ÁĞ±íµÄÈ¨ÏŞÇëÇó
+ä½ å¯ä»¥ä»Androidå¼€å‘è€…ç½‘ç«™ä¸Š
 You can get a list of all of the permission
 
 15
 00:00:52,130 --> 00:00:56,090
-ÄãµÄÓ¦ÓÃ³ÌĞòËùĞèµÄÈ¨ÏŞ¿ÉÒÔÁĞÔÚAndroid¿ª·¢ÕßÕ¾µãÉÏ
+è·å–ä½ çš„åº”ç”¨å¯èƒ½éœ€è¦çš„æ‰€æœ‰æƒé™çš„åˆ—è¡¨
 your app may require here at the Android developer site.
 
 16
 00:00:56,090 --> 00:00:58,390
-ËùÒÔ  ÎªÊ²Ã´²»ÇëÇóËùÓĞµÄÈ¨ÏŞ¶øÔÙÒ²²»ÓÃµ£ĞÄÈ¨ÏŞÎÊÌâÄØ
+æ‰€ä»¥  ä¸ºä»€ä¹ˆä¸è¯·æ±‚æ‰€æœ‰çš„æƒé™
 So, why not just ask for all the permissions and
 
 17
 00:00:58,390 --> 00:01:01,320
-ÊÇµÄ  µ±ÓÃ»§°²×°ÄãµÄÓ¦ÓÃ³ÌĞòÊ±
+è€Œå†ä¹Ÿä¸ç”¨æ‹…å¿ƒæƒé™é—®é¢˜å‘¢  æ˜¯çš„  å½“ç”¨æˆ·å®‰è£…
 never worry about it again? Well, when users install
 
 18
 00:01:01,320 --> 00:01:04,200
-Ëæ×Å¸üÈËĞÔ»¯µÄÃèÊö
-your app their greeted with this dialogue which lists all
+ä½ çš„åº”ç”¨ç¨‹åºçš„æ—¶å€™  ä»–ä»¬ä¼šçœ‹åˆ°è¿™ä¸ªåˆ—å‡ºäº†ä½ ç”³è¯·
+your app they greeted with this dialogue which lists all
 
 19
 00:01:04,200 --> 00:01:06,645
-ÔÚÕâ¸ö¶Ô»°¿òÖĞÁĞ³öËùÓĞÄãĞèÒªµÄÇëÇóµÄÈ¨ÏŞ
+çš„æ‰€æœ‰æƒé™çš„å¯¹è¯æ¡†  è¿™äº›æƒé™ä½¿äº†ç”¨æˆ·
 of the permissions that you've requested along with the more
 
 20
 00:01:06,645 --> 00:01:10,770
-Ã»ÓĞËµÕâ¸öÓ¦ÓÃ³ÌĞò¾ÍÊÇÎªÁËÏëÍµÈ¡ÎÒÊı¾İ
+æ›´æ˜“ç†è§£çš„æè¿°  æ²¡æœ‰åº”ç”¨ç¨‹åºä¼šåœ¨è¿™é‡Œè¯´å®ƒæ˜¯é»‘å®¢ä¸“é—¨
 user-friendly descriptions. Nothing says this app was built by hackers
 
 21
 00:01:10,770 --> 00:01:13,380
-ÇÀ½ÙÎÒ·¿×Ó  Çå¿ÕÎÒÕË»§²¢ÇÒ
+ç”¨æ¥çªƒå–æˆ‘æ•°æ®  æŠ¢åŠ«æˆ‘æˆ¿å­  æ¸…ç©ºæˆ‘è´¦æˆ·
 who want to steal my data, rob my house, clear out my
 
 22
 00:01:13,380 --> 00:01:16,560
-ÅÄÉãºÍ·ÖÏíÎÒµÄÂãÂ¶µÄÕÕÆ¬
+å¹¶ä¸”æ‹æ‘„å’Œåˆ†äº«æˆ‘çš„è£¸éœ²çš„ç…§ç‰‡çš„
 bank account, and take and share nude pictures of me like
 
 23
 00:01:16,560 --> 00:01:19,250
-×ö³öÒ»¸öÎ±ÌìÆøÓ¦ÓÃÏëÒª·ÃÎÊÎÒµÄÉè±¸ÉÏµÄËùÓĞÈ¨ÏŞµÄºÚ¿Í
+å°±æ¯”å¦‚ä¸€ä¸ªæƒ³è·å–è®¾å¤‡ä¸Šæ‰€æœ‰æƒé™çš„å¤©æ°”åº”ç”¨
 a weather app that wants access to every permission on the
 
 24
 00:01:19,250 --> 00:01:24,100
-×îºÃµÄ×ö·¨ÊÇÇëÇó¾ø¶Ô×îµÍÈ¨ÏŞ
+æœ€å¥½çš„åšæ³•æ˜¯åªè¯·æ±‚éœ€è¦çš„æƒé™
 device. Best practice is to request the absolute minimum of permissions.
 
 25
 00:01:24,100 --> 00:01:26,340
-Ã¿´ÎÄãĞèÒªÇëÇóÒ»¸öĞÂµÄÈ¨ÏŞ
+æ¯æ¬¡ä½ éœ€è¦è¯·æ±‚ä¸€ä¸ªæ–°çš„æƒé™
 Every time you need to request a new permission, take it
 
 26
 00:01:26,340 --> 00:01:29,390
-°ÑËü±ê×¢ÉÏ²¢ÇÒË¼¿¼ÊÇ·ñÓĞÆäËûµÄÑ¡Ôñ
+åœä¸‹æ¥æ€è€ƒä¸€ä¸‹  æ˜¯å¦æœ‰å…¶ä»–çš„
 as a flag to stop and consider if there are other
 
 27
 00:01:29,390 --> 00:01:32,970
-¿ÉÒÔ´ïµ½Í¬ÑùµÄÄ¿µÄ  ÀıÈç
+æ›¿ä»£æ–¹æ¡ˆå¯ä»¥è¾¾åˆ°åŒæ ·çš„ç›®çš„  ä¾‹å¦‚
 alternatives that might achieve the same goal. For example, using an
 
 28
 00:01:32,970 --> 00:01:37,140
-È¥Ö±½ÓÊ¹ÓÃÏà»úµÄÓ¦ÓÃ³ÌĞò¶ø²»ÊÇÖ±½Ó·ÃÎÊÉãÏñÍ·
+ä½¿ç”¨Intentæ¥å¯åŠ¨ç…§ç›¸æœº  è€Œä¸æ˜¯ç›´æ¥è®¿é—®ç…§ç›¸æœº
 intent to launch the camera app, rather than accessing the camera, directly.
 
 29
 00:01:37,140 --> 00:01:39,550
-Ö®ºóÎÒÃÇ»á¿´Ò»Ğ©ÓëÆäËûÓ¦ÓÃ³ÌĞò¹²ÏíÊı¾İµÄ·½Ê½
+ä¹‹åæˆ‘ä»¬ä¼šçœ‹ä¸€äº›ä¸å…¶ä»–åº”ç”¨ç¨‹åºå…±äº«æ•°æ®çš„æ–¹æ³•
 Later, we'll look at ways to share your data with
 
 30
 00:01:39,550 --> 00:01:43,370
-Ê¹ÄãÏëÇëÇóµÄºÍÄÚÈİÌá¹©µÄÈ¥´´½¨Ó¦ÓÃ³ÌĞòÉ³ÏäÖ®¼äµÄÇÅÁº
+ä½¿ç”¨Intentå’ŒContentProvideræ¶è®¾èµ·åº”ç”¨ç¨‹åºæ²™ç›’
 other apps, using intents and content providers to create bridges
 
 31
 00:01:43,370 --> 00:01:46,630
-Äã¿ÉÒÔÔÚÕâĞ©ÊµÀıÖĞ
+ä¹‹é—´çš„æ¡¥æ¢  ä½ åŒæ ·å¯ä»¥åœ¨è¿™äº›å®ä¾‹ä¸Š
 between these apps sandboxs. You can declare and use those
 
 32
 00:01:46,630 --> 00:01:48,040
-ÉùÃ÷ºÍÊ¹ÓÃÕâĞ©È¨ÏŞ
+å£°æ˜å’Œä½¿ç”¨è¿™äº›æƒé™
 permissions in these instances to
 
 33
 00:01:48,040 --> 00:01:51,080
-È¥ÏŞÖÆºÍ·ÃÎÊÓÃ»§µÄÃô¸ĞĞÅÏ¢
+å»é™åˆ¶è®¿é—®ç”¨æˆ·çš„æ•æ„Ÿä¿¡æ¯
 similarly restrict access to sensitive information.
 
