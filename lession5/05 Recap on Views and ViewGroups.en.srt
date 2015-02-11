@@ -1,450 +1,449 @@
 1
 00:00:00,150 --> 00:00:03,730
-ºÃ Îª½üÒ»²½Ğ´³¬ÔŞµÄapp¾ÍÏñÄãÃÇ
+æ£’æäº†.ä¸ºäº†æ›´å¥½çš„å†™å‡ºåƒä½ ä»¬
 Great. So to move one step closer to building awesome apps like the ones you
 
 2
 00:00:03,730 --> 00:00:06,880
-ÔÚÂÛÌ³ÀïÃæËùÌá½»µÄÄÇÑù ÎÒÃÇ½«»áÑ§Ï°ÈçºÎĞ´
+åœ¨è®ºå›é‡Œé¢æäº¤çš„é‚£æ ·èµçš„Appï¼Œæˆ‘ä»¬å°†ä¼šå­¦ä¹ å¦‚ä½•ç¼–å†™
 submitted to the discussion forum, we're going to learn about how to build up
 
 3
 00:00:06,880 --> 00:00:11,290
-sunshine appµÄÒ³Ãæ ÎÒÃÇ½«×öÒ»¸ö¿ìËÙ»Ø¹Ë °ïÖúÄã»ØÏëÆğÔÚµÚÒ»½Ú¿ÎËùÑ§µÄÄÚÈİ
+Sunshineçš„ç•Œé¢ã€‚æˆ‘ä»¬å°†åšä¸€ä¸ªå¿«é€Ÿå›é¡¾ï¼Œå¸®åŠ©ä½ å›æƒ³èµ·åœ¨ç¬¬ä¸€èŠ‚è¯¾æ‰€å­¦çš„å†…å®¹ã€‚
 the Sunshine UI. We'll do a quick recap first to help remind you of the concepts
 
 4
 00:00:11,290 --> 00:00:16,940
-ÎÒÃÇÊ¹ÓÃviewsÀ´Ğ´androidµÄÒ³Ãæ
+ä¸ºäº†åœ¨Androidä¸­æ„å»ºç•Œé¢ï¼Œæˆ‘ä»¬ä½¿ç”¨viewsã€‚
 that you learned in lesson one. In order to build a UI in Android, we use views.
 
 5
 00:00:16,940 --> 00:00:20,400
-ViewsÊÇÆÁÄ»ÉÏµÄ³¤·½ĞÎ  ÄãÓĞ¿ÉÄÜ¿´¼ûÒ²ÓĞ¿ÉÄÜ¿´²»¼ûËüµÄ±ß¿ò
+Viewsæ˜¯å±å¹•ä¸Šçš„é•¿æ–¹å½¢ï¼Œä½ æœ‰å¯èƒ½çœ‹è§ä¹Ÿæœ‰å¯èƒ½çœ‹ä¸è§å®ƒçš„è¾¹æ¡†ã€‚
 Views are rectangles on the screen, and we may or may not see the borders of
 
 6
 00:00:20,400 --> 00:00:24,890
-Êµ¼ÊÉÏ »æÍ¼ºÍÊÂ¼ş´¦Àí¶¼ÔÚviewÖĞ½øĞĞ ²¢ÇÒ 
+å®é™…ä¸Šï¼Œç»˜å›¾å’Œäº‹ä»¶å¤„ç†éƒ½åœ¨viewä¸­è¿›è¡Œï¼Œå¹¶ä¸”
 that rectangle. Essentially, a view handles drawing and event handling. And
 
 7
 00:00:24,890 --> 00:00:29,790
-ËùÓĞandroidÖĞµÄ»ù±¾¿Ø¼ş¶¼ÊÇ¼Ì³ĞÕâ¸ö»ùÀà(View)  AndroidµÄÉè¼ÆÖ¸ÄÏ
+æ‰€æœ‰androidä¸­çš„åŸºæœ¬æ§ä»¶éƒ½æ˜¯ç»§æ‰¿è¿™ä¸ªåŸºç±»(View)ã€‚Androidçš„è®¾è®¡æŒ‡å—
 all the basic widgets in Android extend from this base class. The Android design
 
 8
 00:00:29,790 --> 00:00:35,450
-ÓĞ¹¹½¨appÄ£¿éµÄÀı×Ó  ÀıÈç
+æœ‰è¿™äº›æ„å»ºappçš„åŸºç¡€æ¨¡å—çš„å¯è§†åŒ–ä¾‹å­ã€‚ä¾‹å¦‚ï¼Œ
 guide has visual examples of these basic building blocks of apps. For example,
 
 9
 00:00:35,450 --> 00:00:38,800
-ÎÒÃÇÓĞ»ù±¾µÄÎÄ±¾ÏÔÊ¾¿Ø¼ş ÒÔ¼°¿É±à¼­µÄÎÄ±¾¿Ø¼ş
+æˆ‘ä»¬æœ‰åŸºæœ¬çš„æ–‡æœ¬æ˜¾ç¤ºæ§ä»¶ï¼Œä»¥åŠå¯ç¼–è¾‘çš„æ–‡æœ¬æ§ä»¶ã€‚
 we have the basic text field, as well as editable text fields.
 
 10
 00:00:38,800 --> 00:00:42,970
-ËûÃÇÓĞ×Ô¶¯²¹È«ÒÔ¼°ÎÄ±¾Ñ¡Ôñ¹¦ÄÜ
+ä»–ä»¬æœ‰è‡ªåŠ¨è¡¥å…¨ä»¥åŠæ–‡æœ¬é€‰æ‹©åŠŸèƒ½ã€‚
 We can do auto complete on them, and it comes with text selection as well.
 
 11
 00:00:42,970 --> 00:00:46,640
-Ëü¿ÉÒÔµ¯³öÒ»¸öaction bar Äã¿ÉÒÔ¶ÔÎÄ±¾½øĞĞ¸´ÖÆºÍÕ³Ìù
+å®ƒå¯ä»¥å¼¹å‡ºä¸€ä¸ªaction barï¼Œä½ å¯ä»¥å¯¹æ–‡æœ¬è¿›è¡Œå¤åˆ¶å’Œç²˜è´´ã€‚
 Where it pops up a contextual action bar, for you to copy and paste.
 
 12
 00:00:46,640 --> 00:00:51,840
-µ±È»Ò²ÓĞ°´Å¥¿Ø¼ş Ò²ÓĞÊ¹ÓÃÎŞ±ß¿òµÄ°´Å¥Ò»¸ö½¨Òé(Éè¼ÆÖ¸ÄÏÉÏ) 
+å½“ç„¶ä¹Ÿæœ‰æŒ‰é’®æ§ä»¶ï¼Œä¹Ÿæœ‰ä½¿ç”¨æ— è¾¹æ¡†çš„æŒ‰é’®ä¸€ä¸ªå»ºè®®(è®¾è®¡æŒ‡å—ä¸Š)ã€‚
 There are also buttons, and also a suggestion to use borderless buttons.
 
 13
 00:00:51,840 --> 00:00:55,210
-ËüÒ²ÓĞspinners¿Ø¼ş ÔÚÉÏÃæÄã¿ÉÒÔ´ÓÏÂÀ­²Ëµ¥ÖĞ½øĞĞÑ¡Ôñ
+å®ƒä¹Ÿæœ‰spinnersæ§ä»¶ï¼Œåœ¨ä¸Šé¢ä½ å¯ä»¥ä»ä¸‹æ‹‰èœå•ä¸­è¿›è¡Œé€‰æ‹©ã€‚
 It also has spinners, where you can select from a drop down menu.
 
 14
 00:00:55,210 --> 00:00:58,330
-Ò²ÓĞ¸´Ñ¡¿ò µ¥Ñ¡¿ò ÇĞ»»¿ª¹Ø ºÍ
+ä¹Ÿæœ‰å¤é€‰æ¡†ï¼Œå•é€‰æ¡†ï¼Œåˆ‡æ¢å¼€å…³å’Œ
 There's also checkboxes, radio buttons, on/off switches, and
 
 15
 00:00:58,330 --> 00:01:02,720
-Ò»Ğ©½ø¶ÈÌõ¿Ø¼ş  ³ı´ËÖ®Íâ »¹ÓĞºÜ¶à»ù±¾¿Ø¼ş(´ó´óµÄÓĞ)
+ä¸€äº›è¿›åº¦æ¡æ§ä»¶ã€‚ é™¤æ­¤ä¹‹å¤–ï¼Œè¿˜æœ‰å¾ˆå¤šåŸºæœ¬æ§ä»¶(å¤§å¤§çš„æœ‰)ã€‚
 they also have some progress bars. There's a ton more basic widgets here, and
 
 16
 00:01:02,720 --> 00:01:07,390
-JavaÎÄµµÉÏÒ²ÓĞ ¿´Ò»ÏÂ¿Ø¼ş  ¼´Ê¹ËûÃÇÃ»ÓĞÔÚÕâÁĞ¾Ùµ½
+Javaæ–‡æ¡£ä¸Šä¹Ÿæœ‰ã€‚ çœ‹ä¸€ä¸‹è¿™äº›æ§ä»¶ï¼Œä»¥åŠé‚£äº›æ²¡æœ‰åœ¨è¿™åˆ—ä¸¾åˆ°çš„ä¹Ÿæ˜¯ã€‚
 also in the Java docs. Check those out. And even ones that aren't listed here,
 
 17
 00:01:07,390 --> 00:01:10,600
-ËùÒÔ Äã»áÓÃµ½µÄ µ±ÄãĞèÒªµÄÊ±ºò
+å½“ä½ éœ€è¦çš„æ—¶å€™ä½ ä¼šç”¨åˆ°çš„ã€‚
 so. You'll come across them as you need them.
 
 18
 00:01:10,600 --> 00:01:14,390
-ÏÖÔÚ Èç¹ûÄãÏëÒ»ÆğÕ¹Ê¾¶à¸öview ÄãĞèÒªÓÃÒ»¸öview×é
+ç°åœ¨ï¼Œå¦‚æœä½ æƒ³ä¸€èµ·å±•ç¤ºå¤šä¸ªviewï¼Œä½ éœ€è¦ç”¨ä¸€ä¸ªviewç»„ã€‚
 Now, if you want to display multiple views together, you'll need a view group.
 
 19
 00:01:14,390 --> 00:01:17,640
-Ò»¸öview×éÊÇ×ÓviewµÄÈİÆ÷ ÕâÀïÓĞ¼¸¸öDan(ÈËÃû)Ö®Ç°½éÉÜ¹ıµÄViewGroup
+ä¸€ä¸ªviewç»„æ˜¯å­viewçš„å®¹å™¨ã€‚è¿™é‡Œæœ‰å‡ ä¸ª
 A view group is a container for children views. Here are a couple of
 
 20
 00:01:17,640 --> 00:01:22,030
-Ê×Ñ¡ ¿´Ò»ÏÂFrameLayout
+Dan(äººå)ä¹‹å‰ä»‹ç»è¿‡çš„å¸¸ç”¨ViewGroupã€‚
 common view groups, which Dan introduced earlier. First, we have a frame layout.
 
 21
 00:01:22,030 --> 00:01:25,230
-×Óview»áÄ¬ÈÏÌí¼Óµ½ËüµÄ×óÉÏ·½
+é¦–å…ˆæ¥çœ‹FrameLayoutï¼Œå­è§†å›¾ä¼šé»˜è®¤æ·»åŠ åˆ°å®ƒçš„å·¦ä¸Šæ–¹ã€‚
 A child that gets added will be default positioned in the top left corner of
 
 22
 00:01:25,230 --> 00:01:29,530
-µ±ÄãÌí¼ÓµÚ¶ş¸öviewµÄÊ±ºò Ëü»á¸²¸ÇµÚÒ»¸öview
+å½“ä½ æ·»åŠ ç¬¬äºŒä¸ªviewçš„æ—¶å€™ï¼Œå®ƒä¼šè¦†ç›–ç¬¬ä¸€ä¸ªviewã€‚
 the view group. If you add a second view here, it will overlap the first one. So
 
 23
 00:01:29,530 --> 00:01:33,840
-ËùÒÔ Í¨³£Ò»¸öFrameLayout·ÅÒ»¸ö×Óview ½ÓÏÂÀ´ ¿´LinearLayout
+æ‰€ä»¥æˆ‘ä»¬é€šå¸¸åªåœ¨ä¸€ä¸ªFrameLayoutä¸­æ”¾ä¸€ä¸ªå­viewã€‚
 typically we only have one child per frame layout. Next we have a linear layout,
 
 24
 00:01:33,840 --> 00:01:37,900
-ËüµÄ×Óview¿ÉÒÔºá×Å»òÕßÊú×ÅÅÅÁĞ
+æ¥ä¸‹æ¥çœ‹LinearLayoutï¼Œå®ƒçš„å­viewå¯ä»¥æ¨ªç€æˆ–è€…ç«–ç€æ’åˆ—
 it's composed of children either in a horizontal row or in a vertical column.
 
 25
 00:01:37,900 --> 00:01:41,590
-ÎÒÃÇÒ²¿ÉÒÔ¶¨Òå×ÓviewµÄ±ÈÖØ  ±ÈÖØÊôĞÔÔÊĞíÎÒÃÇ
+æˆ‘ä»¬ä¹Ÿå¯ä»¥å®šä¹‰å­viewçš„æ¯”é‡ã€‚æ¯”é‡å±æ€§å…è®¸æˆ‘ä»¬
 We can also specify layout weight. Lay out weight allows us to
 
 26
 00:01:41,590 --> 00:01:45,410
-Ö¸¶¨×ÓviewµÄ¿í¶È»òÕß¸ß¶È ÀıÈç
+æŒ‡å®šå­viewçš„å®½åº¦æˆ–è€…é«˜åº¦ã€‚ä¾‹å¦‚ï¼Œ
 distribute the width or height of a parent across the children. For example,
 
 27
 00:01:45,410 --> 00:01:48,940
-Õâ¸öµÄ¿í¶È±ÈÖØÊÇ1 ÄÇ¸öµÄ¿í¶È±ÈÖØÒ²ÊÇ1 ÄÇÃ´¸¸viewµÄ¿í¶È¾Í»á 
+è¿™ä¸ªçš„å®½åº¦æ¯”é‡æ˜¯1ï¼Œè¿™ä¸ªçš„å®½åº¦æ¯”é‡ä¹Ÿæ˜¯1ï¼Œé‚£ä¹ˆçˆ¶viewçš„å®½åº¦å°±ä¼š
 this has weight one, and this has weight one then the width of the parent can be
 
 28
 00:01:48,940 --> 00:01:53,930
-±»ËûÃÇÁ½×ÓviewÆ½·Ö   ½ÓÏÂÀ´¿´RelativeLayout ÎÒÃÇ¿ÉÒÔÖ¸¶¨Ò»¸öview
+è¢«ä»–ä»¬ä¸¤å­viewå¹³åˆ†ã€‚æ¥ä¸‹æ¥çœ‹RelativeLayoutï¼Œæˆ‘ä»¬å¯ä»¥æŒ‡å®šä¸€ä¸ªview
 split across them evenly. Then we have a relative layout where we can specify
 
 29
 00:01:53,930 --> 00:01:58,950
-ÔÚ¸¸viewµÄ×ó²¿ ÉÏ²¿ ÓÒ²¿ »òÕßÏÂ²¿
+åœ¨çˆ¶viewçš„å·¦éƒ¨ï¼Œä¸Šéƒ¨ï¼Œå³éƒ¨ï¼Œæˆ–è€…ä¸‹éƒ¨ã€‚
 that a view should be aligned to the parent's left, top, right or bottom edge.
 
 30
 00:01:58,950 --> 00:02:02,520
-ÎÒÃÇÒ²¿ÉÒÔÖ¸¶¨Ò»¸öviewÏà¶ÔÓÚÁíÍâÒ»¸öviewµÄÎ»ÖÃ
+æˆ‘ä»¬ä¹Ÿå¯ä»¥æŒ‡å®šä¸€ä¸ªviewç›¸å¯¹äºå¦å¤–ä¸€ä¸ªviewçš„ä½ç½®ã€‚
 We can also specify that one view should be relative to another view.
 
 31
 00:02:02,520 --> 00:02:05,490
-ËüµÄ×ÓviewÅÅÁĞ·½Ê½±ÈLinearLayoutµÄÁé»î µ«ÊÇ
+ç›¸æ¯”LinearLayoutå®ƒçš„ç©ºé—´ä¸ä¼šè¢«å¡«æ»¡ï¼Œ
 It isn't full if the space is nicely compared to a linear layout, but
 
 32
 00:02:05,490 --> 00:02:10,530
-µ«ÊÇLinearLayoutÒ²ÓĞ×Ô¼ºµÄÓÅµã   GridLayout»á°Ñ×Ô¼º·Ö¸î³ÉÒ»¸öÒ»¸öµÄ¸ñ×Ó(ÏëÏóÏÂ¼àÓüµÄĞÎ×´)
-there are pros and cons to each. There's a grid layout where the views fill
+ä½†ä»–ä»¬éƒ½å„æœ‰åƒç§‹ã€‚è¿˜æœ‰GridLayoutï¼Œä»–ä¼šæŠŠè‡ªå·±åˆ†å‰²æˆä¸€ä¸ªä¸€ä¸ªçš„æ ¼å­ã€‚
+there are pros and cons to each. There's also a grid layout where the views fill
 
 33
 00:02:10,530 --> 00:02:15,590
-ÄãÒ²¿ÉÒÔÖ¸¶¨¿ç¶à¸ö¸ñ×ÓµÄview
+ä½ ä¹Ÿå¯ä»¥æŒ‡å®šè·¨å¤šä¸ªæ ¼å­çš„viewã€‚
 up cells in a grid. You can also have views that span multiple cells.
 
 34
 00:02:15,590 --> 00:02:18,090
-×¢ÒâViewGroupÒ²ÊÇÒ»¸öView(ÉÏÃæËµµÄ¸÷ÖÖLayout¶¼¼Ì³Ğ×ÔViewGroup)
+æ³¨æ„ViewGroupä¹Ÿæ˜¯ä¸€ä¸ªView(ä¸Šé¢è¯´çš„å„ç§Layoutéƒ½ç»§æ‰¿è‡ªViewGroup)
 I also want to point out that a view group is a view.
 
 35
 00:02:18,090 --> 00:02:21,650
-ËùÒÔÔÚÎÒÃÇµÄ´úÂëÖĞ°ÑÁĞ±íµÄÒ»¸öÌõÄ¿×÷ÎªÒ»¸öµ¥¶ÀµÄview
+æ‰€ä»¥å½“æˆ‘ä»¬åœ¨ä»£ç ä¸­æŠŠåˆ—è¡¨çš„ä¸€ä¸ªæ¡ç›®ä½œä¸ºä¸€ä¸ªå•ç‹¬çš„viewæ¥å¼•ç”¨ã€‚
 So in our code when we refer to a list item layout as being a single view.
 
 36
 00:02:21,650 --> 00:02:26,050
-¾ÍÊÇÈÎºÎ²¼¾Ö¶¼ÄÜµ±Ò»¸öview¿´
+ä»–ä¹Ÿå°±ä»£è¡¨è¿™é‚£æ•´ä¸ªå¸ƒå±€ï¼ˆæŒ‡list itemçš„ä¸€é¡¹ï¼‰çš„æ ¹è§†å›¾ã€‚
 That just means the root view of the whole view hierarchy for that layout.
 
 37
 00:02:26,050 --> 00:02:30,110
-Èç¹ûÒ»¸ö²¼¾ÖµÄ×î¶¥²¿ÊÇViewGroup ËüÒ²¿ÉÒÔ°üº¬Ò»¸öViewGroupµ±×ö×ÓView
+å¦‚æœä¸€ä¸ªå¸ƒå±€çš„æœ€é¡¶éƒ¨æ˜¯ViewGroupï¼Œå®ƒä¹Ÿå¯ä»¥åŒ…å«ä¸€ä¸ªViewGroupå½“åšå­Viewã€‚
 Chances are that root view is a ViewGroup, so it contains children views as well
 
 38
 00:02:30,110 --> 00:02:34,169
-ËùÒÔ Äã¿ÉÒÔÇ¶Ì×ViewGroup
+æ‰€ä»¥ä½ å¯ä»¥åœ¨ViewGroupä¸­åµŒå¥—ViewGroup
 as ViewGroups. So basically you can nest ViewGroups within ViewGroups.
 
 39
 00:02:35,210 --> 00:02:38,510
-ÎÒÃÇËµÕâÃ´¶à¸¸view ×ÓviewÖ®¼äµÄ¹ØÏµµÄÔ­Òò
+æˆ‘ä»¬è¯´è¿™ä¹ˆå¤šçˆ¶viewå­viewä¹‹é—´çš„å…³ç³»çš„åŸå› 
 The reason why we care so much about parent child view relationships,
 
 40
 00:02:38,510 --> 00:02:42,470
-ÊÇÒòÎª×ÓviewµÄ·ÅÖÃÈ¡¾öÓÚËûµÄ¸¸viewµÄÀàĞÍ
+æ˜¯å› ä¸ºå­viewçš„æ”¾ç½®å–å†³äºä»–çš„çˆ¶viewçš„ç±»å‹
 is because the way a child view gets laid out depends on its parent.
 
 41
 00:02:42,470 --> 00:02:45,500
-×î¼òµ¥µÄÀı×ÓÊÇÖ¸¶¨viewµÄ¿í¶ÈºÍ¸ß¶È
+æœ€ç®€å•çš„ä¾‹å­æ˜¯æŒ‡å®šviewçš„å®½åº¦å’Œé«˜åº¦
 The simplest example of this is specifying a view's width and
 
 42
 00:02:45,500 --> 00:02:48,770
-ÄãÒªÃ÷°× Ã¿¸öview¶¼ĞèÒªÒ»¸ö¿í¶ÈºÍ¸ß¶È
+ä½ è¦æ˜ç™½ æ¯ä¸ªviewéƒ½éœ€è¦ä¸€ä¸ªå®½åº¦å’Œé«˜åº¦
 height. By now you've seen that every view requires a height and
 
 43
 00:02:48,770 --> 00:02:53,529
-¿í¶È»ò¸ß¶È¿ÉÄÜµÄÁ½¸öÖµÊÇwrap content(ĞèÒª¶à´ó¾Í¶à´ó) match parent(Õ¼Âú¸¸viewµÄ¿í¶È»ò¸ß¶È)
+å®½åº¦æˆ–é«˜åº¦å¯èƒ½çš„ä¸¤ä¸ªå€¼æ˜¯wrap content(éœ€è¦å¤šå¤§å°±å¤šå¤§) match parent(å æ»¡çˆ¶viewçš„å®½åº¦æˆ–é«˜åº¦)
 width. The two possible values are either wrap content or match parent.
 
 44
 00:02:54,540 --> 00:02:57,860
-ÕâĞ©Í¼Õ¹Ê¾µÄÕâ¸öTextView(ÎÄ±¾¿Ø¼şµÄ)¿ÉÄÜµÄ¿í¶È»ò¸ß¶ÈµÄÊôĞÔ
+è¿™å¼ å›¾å±•ç¤ºäº†è¿™ä¸ªæ‰€æœ‰TextViewå¯èƒ½çš„å®½é«˜å±æ€§ç»„åˆ
 This diagram shows all the possible combinations for width and height for
 
 45
 00:02:57,860 --> 00:03:01,620
-Õâ¸öÊÇÏà¶ÔÆ½ºâµÄviewµ±ËüµÄ¿í¶ÈºÍ¸ß¶ÈÊôĞÔÉèÖÃÎªwrap_contentµÄÊ±ºò
-this text view. This is the balance of the view when we set wrap_content for
+è¿™æ˜¯viewçš„å®½é«˜éƒ½ä¸ºwrap_contentçš„æ—¶çš„è¾¹ç•Œã€‚
+this text view. This is the bounds of the view when we set wrap_content for
 
 46
 00:03:01,620 --> 00:03:05,230
-ÕâÊÇµ±¿í¶ÈÊôĞÔÎªmatch_parent »ò
+è¿™æ˜¯æˆ‘ä»¬ç»™å®½åº¦è®¾ç½®match_parentï¼Œ
 height and width. This is what happens when we do match_parent for
 
 47
 00:03:05,230 --> 00:03:09,090
-¸ß¶ÈÊôĞÔÒ³Îªmatch_parentµÄÊ±ºò Õâ¸öÊÇµ±¸ß¶ÈºÍ¿í¶ÈÊôĞÔ¶¼Îªmatch_parentµÄ
+ä»¥åŠç»™é«˜åº¦è®¾match_parentæ—¶å€™çš„æ ·å­ã€‚
 the width and match_parent for the height. And this is what happens when
 
 48
 00:03:09,090 --> 00:03:12,731
-Ê±ºò ËüÕ¼¾İµÄ¸¸viewµÄÈ«²¿´óĞ¡
+ä»¥åŠè¿™æ˜¯ä¸¤é¡¹éƒ½ä¸ºmatch_parentçš„æ—¶å€™ï¼Œä»–ä¼šå æ®çˆ¶å®¹å™¨çš„å…¨éƒ¨å¤§å°ã€‚
 both are set as match_parent. It shows the full dimensions of the parent.
 
 49
 00:03:12,731 --> 00:03:16,750
-µ±ÄãÔÚÊÖ»úÉÏÔËĞĞµÄÊ±ºò ËùÓĞÕâĞ©¿´ÆğÀ´ÊÇÒ»ÑùµÄ
+å½“ä½ åœ¨æ‰‹æœºä¸Šè¿è¡Œçš„æ—¶å€™ æ‰€æœ‰è¿™äº›çœ‹èµ·æ¥æ˜¯ä¸€æ ·çš„
 When you run this on the device. All of these would visually look the same,
 
 50
 00:03:16,750 --> 00:03:19,860
-ÒòÎªÔÚÊÖ»úÉÏÄã¿´²»µ½ÕâĞ©±ß½ç ËùÒÔºÍÄãÑ¡µÄÄÄÒ»¸öÓĞÊ²Ã´¹ØÏµÄØ?
+å› ä¸ºåœ¨æ‰‹æœºä¸Šä½ çœ‹ä¸åˆ°è¿™äº›è¾¹ç•Œã€‚æ‰€ä»¥å’Œä½ é€‰å“ªä¸€ä¸ªæœ‰ä»€ä¹ˆå…³ç³»å‘¢?
 because you wouldn't see these boundaries. So why does it matter which one
 
 51
 00:03:19,860 --> 00:03:23,160
-¶÷ Ö±µ½ÓĞÁíÍâÒ»¸ö×ÓviewĞèÒªÔÚÕâ¸öviewÅÔ±ßµÄÊ±ºòÄã²ÅÄÜ¿´µ½Çø±ğ
+æ©ï¼Œåªè¦æœ‰å¦å¤–ä¸€ä¸ªå­viewéœ€è¦åœ¨è¿™ä¸ªviewæ—è¾¹çš„æ—¶å€™ä½ å°±èƒ½çœ‹åˆ°åŒºåˆ«äº†ã€‚
 we pick? Well, it matters as soon as you have other children that need to
 
 52
 00:03:23,160 --> 00:03:27,270
-ÁíÒ»¸öÔ­ÒòÊÇÄãĞèÒªÒªÖ¸¶¨viewµÄgravityÊôĞÔ
+å¦ä¸€ä¸ªåŸå› æ˜¯ä½ éœ€è¦è¦æŒ‡å®šviewçš„gravityå±æ€§
 be beside this view. And another reason is you want to specify gravity.
 
 53
 00:03:27,270 --> 00:03:31,250
-ÎÒÀ´¿ìËÙµÄ½âÊÍÒ»ÏÂgravityµÄÒâË¼  ÀıÈç
+æˆ‘æ¥å¿«é€Ÿçš„è§£é‡Šä¸€ä¸‹gravityçš„æ„æ€ã€‚æ¯”å¦‚è¯´ï¼Œ
 Let me spend a quick moment explaining gravity. Say for example, you
 
 54
 00:03:31,250 --> 00:03:35,640
-ÔÚFrameLayoutµÄÕâ¸öÎÄ±¾¿Ø¼ş  Ä¬ÈÏµÄ  Õâ¸öÎÄ±¾¾Ó×ó
+åœ¨FrameLayoutçš„è¿™ä¸ªTextViewä¸­ã€‚é»˜è®¤æ–‡æœ¬æ˜¯å·¦å¯¹é½çš„ã€‚
 have this text view within a frame layout. By default, the text is left aligned.
 
 55
 00:03:35,640 --> 00:03:39,540
-ÔÚÕâÖÖÇé¿öÏÂ Ã»ÓĞÉèÖÃgravityÊôĞÔ Èç¹ûÎÒÃÇÉèÖÃgravityÊôĞÔÎª¾ÓÖĞ
+åœ¨æ­¤ä¾‹ä¸­ï¼Œæ²¡æœ‰è®¾ç½®gravityã€‚å¦‚æœæˆ‘ä»¬è®¾ç½®gravityä¸ºcenter
 And in this case, no gravity is set. If we specify gravity equals center,
 
 56
 00:03:39,540 --> 00:03:43,250
-Õâ¸öÎÄ±¾¾Í»áÏÔÊ¾ÔÚÎÄ±¾¿òµÄÖĞ¼ä  ´¹Ö±·½Ïò²»ÄÜÒÆ¶¯
+ä»–å°±ä¼šå°†å†…å®¹æ˜¾ç¤ºåœ¨TextViewçš„ä¸­é—´ã€‚å‚ç›´æ–¹å‘ä¸èƒ½ç§»åŠ¨ï¼Œ
 then it will center the content within the text view. Vertically it can't move,
 
 57
 00:03:43,250 --> 00:03:46,960
-ÒòÎªËüÒÑ¾­¾ÓÖĞÁË µ«ÊÇË®Æ½·½ÏòËü±»×ªÒÆµ½ÁËÖĞ¼ä
+å› ä¸ºæ–‡æœ¬å·²ç»å±…ä¸­äº†ï¼Œä½†æ˜¯æ°´å¹³æ–¹å‘å®ƒè¢«è½¬ç§»åˆ°äº†ä¸­é—´ã€‚
 'because it's already centered, but horizontally it does shift over to be in
 
 58
 00:03:46,960 --> 00:03:50,570
-Èç¹ûÉèÖÃÁËlayout_gravityÊôĞÔÎª¾ÓÖĞ
+æ­¤å¤–ï¼Œå¦‚æœæŒ‡å®šäº†layout_gravityå±æ€§ä¸ºcenter
 the middle. Instead of this. If we specify layout gravity equals center,
 
 59
 00:03:50,570 --> 00:03:53,540
-Õâ¸öÎÄ±¾¿ò¾Í»áÏÔÊ¾ÔÚ¸¸viewµÄÖĞ¼ä
+é‚£å°±è¡¨ç¤ºè¿™ä¸ªæ°´å¹³å’Œå‚ç›´ä¸Šéƒ½åœ¨çˆ¶viewçš„ä¸­é—´ã€‚
 that means to center horizontally and vertically within the parent.
 
 60
 00:03:53,540 --> 00:03:57,160
-ÎÒÃÇ×¥µ½×Óview ²¢ÇÒ°ÑËüÒÆµ½¸¸viewµÄÖĞ¼ä
+æˆ‘ä»¬æŠ“ä½æ•´ä¸ªå­è§†å›¾å¹¶ä¸”æŠŠå®ƒç§»åˆ°ä¸­é—´ã€‚
 So we grab the whole child text view and we move it into the center.
 
 61
 00:03:57,160 --> 00:04:00,440
-ÏÖÔÚ ÎÄ×Ö²»ÄÜË®Æ½·½Ïò¾ÓÖĞÁË ÒòÎªÎÄ±¾¿òÒÑ¾­Õ¼¾İÁË¸¸view×î´óµÄ¿í¶È
+ç°åœ¨æ–‡å­—ä¸èƒ½æ°´å¹³æ–¹å‘å±…ä¸­äº†ï¼Œå› ä¸ºæ–‡æœ¬æ¡†å·²ç»å æ®äº†çˆ¶viewæœ€å¤§çš„å®½åº¦ã€‚
 Now it can't be centered horizontally, because it already takes up the max width
 
 62
 00:04:00,440 --> 00:04:03,530
-Èç¹ûÊµÔÚÏë°ÑÄÚÈİ¾ÓÖĞÏÔÊ¾
+å¦‚æœå®åœ¨æƒ³æŠŠå†…å®¹å±…ä¸­æ˜¾ç¤ºï¼Œ
 of the parent. If we really want to move the content to the middle,
 
 63
 00:04:03,530 --> 00:04:07,600
-ÎÒÃÇÓ¦¸ÃÉèÖÃËüµÄ¿í¶ÈÊôĞÔÎªwrap_content ÕâÑùÎÒÃÇ¾ÍÄÜ°ÑËüÒÆµ½ÖĞ¼äÁË
+æˆ‘ä»¬åº”è¯¥è®¾ç½®å®ƒçš„å®½åº¦å±æ€§ä¸ºwrap_contentï¼Œè¿™æ ·æˆ‘ä»¬å°±èƒ½æŠŠå®ƒç§»åˆ°ä¸­é—´äº†
 then we should specify wrap content on this text view, so that it can be
 
 64
 00:04:07,600 --> 00:04:11,350
-ÄãÒ²¿ÉÒÔÉèÖÃviewµÄpaddingºÍmarginÊôĞÔ
+ä½ ä¹Ÿå¯ä»¥è®¾ç½®viewçš„paddingå’Œmarginå±æ€§ã€‚
 moved to the center with this attribute. You can also specify padding and
 
 65
 00:04:11,350 --> 00:04:15,710
-ÀıÈç Èç¹ûÄãÔÚTextViewÉÏÌí¼ÓÁËpaddingÊôĞÔ
+ä¾‹å¦‚ï¼Œå¦‚æœä½ åœ¨TextViewä¸Šæ·»åŠ äº†paddingå±æ€§
 margin on views. For example, if you added padding on this text view,
 
 66
 00:04:15,710 --> 00:04:19,750
-È»ºóËü¾ÍÉÏÏÂ×óÓÒÏòÀïÒÆ¶¯ÎÄ±¾µÄÄÚÈİ
+å®ƒå°±ä¼šåœ¨æ‰€æœ‰æ–¹å‘ä¸Šå°†å†…å®¹å‘å†…ç§»åŠ¨xã€‚
 then it would shift the content inside by x amount on all sides.
 
 67
 00:04:19,750 --> 00:04:23,390
-Èç¹ûÄãÉèÖÃµÄviewµÄmargin ¼Ç×¡¸¸view²ÅÊÇÄÇ¸ö
+å¦‚æœä½ è®¾ç½®çš„viewçš„layout_marginä¸ºxï¼Œé‚£ä¹ˆè®°ä½ï¼Œçˆ¶viewæ‰æ˜¯é‚£ä¸ª
 If you specify layout margin to be x, then remember that the parent is
 
 68
 00:04:23,390 --> 00:04:27,320
-ĞèÒª¸Ä±ä²¼¾Ö´óĞ¡µÄ ÕâÖÖÇé¿öÏÂ
-the one who will be interpreting this layout ground. In this case,
+è¢«è§£æè¿™ä¸ªå¸ƒå±€å‚æ•°çš„ã€‚è¿™ç§æƒ…å†µä¸‹ï¼Œ
+the one who will be interpreting this layout param. In this case,
 
 69
 00:04:27,320 --> 00:04:31,240
-Èç¹ûÎªÒ»¸ötextviewÌí¼ÓmarginÊôĞÔ textviewµÄ¿ÉÏÔÊ¾ÇøÓò¾Í»á±äĞ¡
+ä»–ä¼šåœ¨TextViewçš„å››å‘¨åŠ ä¸Šä¸€ä¸ªè¾¹è·ã€‚TextViewå°±åªæœ‰è¿™ä¹ˆå¤§ã€‚
 it adds a margin of x all around the text view. The text view is only this size.
 
 70
 00:04:32,260 --> 00:04:35,280
-ËûÃÇµÄĞ§¹û¿´ÆğÀ´ÊÇÒ»ÑùµÄ
+å½“ä½ æ¸²æŸ“ä¸¤è€…æ—¶ï¼Œä»–ä»¬çœ‹èµ·æ¥çš„æ•ˆæœæ˜¯ä¸€æ ·çš„ã€‚
 When you render both of these, they would visually look the same.
 
 71
 00:04:35,280 --> 00:04:37,690
-ÕâÀïĞèÒª×¢ÒâµÄÒ»µã Èç¹ûÕâÊÇ¸ö°´Å¥ Äã°´ÏÂÁËËü
+è¿™é‡Œéœ€è¦æ³¨æ„çš„ä¸€ç‚¹ã€‚å¦‚æœè¿™æ˜¯ä¸ªæŒ‰é’®ï¼Œä½ æŒ‰ä¸‹äº†å®ƒï¼Œ
 Here's one case where it could matter. If this was a button and
 
 72
 00:04:37,690 --> 00:04:41,740
-ÕâÀïÓ¦¸ÃÏÔÊ¾Ò»¸ö»ÒÉ«µÄ°´ÏÂ±³¾° ÔÚÄ³Ğ©Çé¿öÏÂ 
+è¿™é‡Œä¼šæ˜¾ç¤ºä¸€ä¸ªç°è‰²çš„æŒ‰ä¸‹èƒŒæ™¯ã€‚åœ¨æŸäº›æƒ…å†µä¸‹
 you pressed it, there could be a gray background here showing. In some cases you
 
 73
 00:04:41,740 --> 00:04:47,010
-Äã¿ÉÒÔÍ¬Ê±Ê¹ÓÃpaddingºÍmargin  ËùÓĞµÄview¶¼ÓĞvisibilityÊôĞÔ ÒÔ
-may want padding or margin or both. All views have a visibility property. For
+ä½ å¯ä»¥åŒæ—¶ä½¿ç”¨paddingå’Œmarginã€‚æ‰€æœ‰çš„viewéƒ½æœ‰visibilityå±æ€§
+may want padding or margin or  both. All views have a visibility property. For
 
 74
 00:04:47,010 --> 00:04:50,020
-Õâ¸öimageviewÀ´Ëµ ËüÓĞ¿É¼û ²»¿É¼û ÏûÊ§ÈıÖÖ×´Ì¬
+ä»¥è¿™ä¸ªimageviewæ¥è¯´ï¼Œå®ƒæœ‰å¯è§ï¼Œä¸å¯è§ï¼Œæ¶ˆå¤±ä¸‰ç§çŠ¶æ€ã€‚
 this image view, it can be visible, invisible, or gone.
 
 75
 00:04:50,020 --> 00:04:53,390
-Èç¹ûÉèÖÃÁËinvisibleÊôĞÔ Ëü¾Í²»ÏÔÊ¾ÁË µ«ÊÇËü»¹Õ¼¾İÒ»¶¨µÄ´óĞ¡
+å¦‚æœè®¾ä¸ºinvisibleå±æ€§ï¼Œå®ƒå°±ä¸æ˜¾ç¤ºäº†ï¼Œä½†æ˜¯å®ƒè¿˜å æ®ä¸€å®šçš„å¤§å°ã€‚
 If it's invisible then it's not shown, but there's still a place holder for
 
 76
 00:04:53,390 --> 00:04:56,830
-ÎÒÃÇÈÔÈ»ÒªÎªËü·ÖÅäÏàÓ¦ÇøÓòµÄ´óĞ¡ Èç¹ûÉèÖÃgoneÊôĞÔ
+æˆ‘ä»¬ä»ç„¶è¦ä¸ºå®ƒåˆ†é…ç›¸åº”åŒºåŸŸçš„å¤§å°ã€‚å¦‚æœè®¾ç½®goneå±æ€§
 it, we still have to go and measure the size of it. If it's gone,
 
 77
 00:04:56,830 --> 00:04:59,920
-Ëü¾Í²»ÔÚ²¼¾ÖÖĞÁË Èç¹ûÕâĞ©ÊôĞÔÔÚxmlÀïÃæÉèÖÃ
+å®ƒå°±ä¸åœ¨å¸ƒå±€ä¸­äº†ï¼Œå°±å¥½åƒä»–ä¸å­˜åœ¨äºxmlé‡Œä¸€æ ·ã€‚
 then it's not even in the layout. It's as if it didn't exist in the XML.
 
 78
 00:04:59,920 --> 00:05:04,490
-Äã¿ÉÒÔ´úÂëÀïÃæ¶¯Ì¬µÄÉèÖÃËüµÄ¿É¼ûĞÔ
+ä½ ä¹Ÿå¯ä»¥è¿è¡Œæ—¶åŠ¨æ€çš„è®¾ç½®å®ƒçš„å¯è§æ€§ã€‚
 You can also toggle the visibility of a view dynamically during runtime.
 
 79
 00:05:04,490 --> 00:05:08,680
-ÔÚjavaÎÄµµÀï Äã¿ÉÒÔÕÒµ½ËüËùÓĞ¿ÉÄÜµÄxmlÊôĞÔ
+åœ¨Javaæ–‡æ¡£é‡Œï¼Œä½ å¯ä»¥æ‰¾åˆ°å®ƒæ‰€æœ‰å¯èƒ½çš„xmlå±æ€§
 In the java doc, you can find all the possible XML attributes for that class.
 
 80
 00:05:08,680 --> 00:05:12,740
-ËüÒ²Õ¹Ê¾ÁË¼Ì³ĞµÄxmlÊôĞÔ ÀıÈç ´ÓÕâ¸öViewÀà¼Ì³Ğ
-It also shows inherited XML attributes, for example, from the view class.
+å®ƒä¹Ÿå±•ç¤ºäº†è¿™ä¸ªImageViewç»§æ‰¿çš„xmlå±æ€§ï¼Œä¾‹å¦‚ä»Viewç±»ç»§æ‰¿ã€‚
+It also shows inherited XML attributes, for example, from the view class,
 
 81
 00:05:12,740 --> 00:05:16,430
-ÎªÕâ¸öImageView ²¢ÇÒÎÄµµÒ²Õ¹Ê¾ÁËÊôĞÔµÄÔÚjava´úÂëÖĞµÄÊ¹ÓÃ
-For this image view, and then it shows the corresponding Java methods for
+å¹¶ä¸”æ–‡æ¡£ä¹Ÿå±•ç¤ºäº†è¿™äº›å±æ€§çš„ç›¸å…³Javaæ–¹æ³•ã€‚
+for this image view. And then it shows the corresponding Java methods for
 
 82
 00:05:16,430 --> 00:05:20,310
-ÏÖÔÚÍ¨¹ıÕâĞ©¼ò¶ÌµÄÁË½â°ïÖúÎÒÃÇ¿ªÊ¼
+ç°åœ¨é€šè¿‡è¿™äº›ç®€çŸ­çš„äº†è§£å¸®åŠ©æˆ‘ä»¬å¼€å§‹
 those attributes. Now as a briefer for [UNKNOWN] basics to help us get started,
 
 83
 00:05:20,310 --> 00:05:22,250
-ÉÔºóÒ»¶¨Òª¿´¿ª·¢ÕßÍøÖ·»ñÈ¡¸ü¶àµÄÖªÊ¶
+ç¨åä¸€å®šè¦çœ‹å¼€å‘è€…ç½‘å€è·å–æ›´å¤šçš„çŸ¥è¯†ã€‚
 but definitely check out the developer site for
 
 84
 00:05:22,250 --> 00:05:26,670
-¾ÍÏñÔÚÏÖÊµÊÀ½çÀï Èç¹ûÄãÃÇÒÔÒ»¸öÍÅ¶ÓÀ´½øĞĞandroid app¿ª·¢
+å°±åƒåœ¨ç°å®ä¸–ç•Œé‡Œï¼Œå¦‚æœä½ ä»¬ä»¥ä¸€ä¸ªå›¢é˜Ÿæ¥è¿›è¡ŒAndroidåº”ç”¨å¼€å‘
 more details later. Much like the real world, if you were working with a team to
 
 85
 00:05:26,670 --> 00:05:30,660
-ÄãÓ¦¸ÃÊµÏÖÕâĞ©¿òÍ¼
+ä½ å°†ä¼šä»å®ç°è¿™äº›çº¿æ¡†å›¾å¼€å§‹ã€‚
 build an Android app, you would start by implementing the wire frames first.
 
 86
 00:05:30,660 --> 00:05:33,920
-ÕâÓĞÒ»¸öÕıÈ·µÄÓÃ»§½»»¥µÄÁ÷³Ì
+è¿™é‡Œé¢æœ‰ä¸€ä¸ªæ­£ç¡®çš„ç”¨æˆ·äº¤äº’çš„æµç¨‹ã€‚
 This has a correct flow for how the user will interact with the app. But
 
 87
 00:05:33,920 --> 00:05:37,780
-µ«ÊÇ»¹Ã»ÓĞ×îÖÕµÄĞ§¹ûÍ¼ ÎÒÃÇ»áÒ»²½Ò»²½µÄÍêÉÆ
+ä½†æ˜¯è¿˜æ²¡æœ‰æœ€ç»ˆçš„æ•ˆæœå’Œä½“éªŒã€‚æˆ‘ä»¬ä¼šä¸€æ­¥ä¸€æ­¥çš„å®Œå–„ï¼Œ
 it doesn't have the final visual look and feel yet. We'll build this up step by
 
 88
 00:05:37,780 --> 00:05:42,030
-ÒÔMainActivtiy¿ªÊ¼ È»ºó½øÈëµ½DetailActivtiy
+ä»¥MainActivtiyå¼€å§‹ ç„¶åè¿›å…¥åˆ°DetailActivtiy
 step, starting with the main activity then we'll move on to the detail activity
 
 89
 00:05:42,030 --> 00:05:46,630
-ÔÙÈ»ºó¹¹½¨Æ½°åµÄui        È»ºóÎÒÃÇ»áÊÜµ½Ò»×éÊÓ¾õ±ê¼Ç×ÊÔ´ 
+å†ç„¶åæ„å»ºå¹³æ¿çš„uiã€‚ç„¶åæˆ‘ä»¬ä¼šæ”¶åˆ°ä¸€ç»„è§†è§‰æ ‡è®°èµ„æº
 and then later build up the tablet UI. Then we'll receive a set of visual marks
 
 90
 00:05:46,630 --> 00:05:50,780
-ËùÓĞµÄÕâĞ©°ïÖúÎÒÃÇĞ´ÍêÃÀµÄlayout
+æ‰€æœ‰çš„è¿™äº›å¸®åŠ©æˆ‘ä»¬å†™åƒç´ çº§å®Œç¾çš„å¸ƒå±€ã€‚
 red lines and assets, all of this will help us build a pixel perfect layout
-

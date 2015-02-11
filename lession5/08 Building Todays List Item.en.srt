@@ -1,45 +1,44 @@
 1
 00:00:00,130 --> 00:00:03,630
-ÏÂÒ»²½ ÎÒÃÇ½«´´½¨½ñÌìµÄÁĞ±íÌõÄ¿  Õâ¸öÌõÄ¿ÓëÆäËûÁĞ±íµÄ
+ä¸‹ä¸€æ­¥ï¼Œæˆ‘ä»¬å°†åˆ›å»ºä»Šæ—¥åˆ—è¡¨é¡¹ã€‚ç”±äºè¿™ä¸€å±‚ä¸å…¶ä»–åˆ—è¡¨é¡¹
 Next, we'll create the Today List Item. Since this layer is different from
 
 2
 00:00:03,630 --> 00:00:07,790
-ÌõÄ¿ÊÇ²»Ò»ÑùµÄ   ÎÒÃÇ½«ÒªÔÚ×ÊÔ´Ä¿Â¼ÏÂÃæÎªÆä
+æ˜¯ä¸ä¸€æ ·çš„ï¼Œæˆ‘ä»¬å°†è¦åœ¨èµ„æºç›®å½•ä¸‹é¢ä¸ºå…¶
 the other list items, we're going to need to create a new XML file under
 
 3
 00:00:07,790 --> 00:00:12,730
-ĞÂ½¨Ò»¸öxmlÎÄ¼ş        ÎÒÃÇÓÃÍ¬ÑùµÄÕ¼Î»Í¼Æ¬¾ÍÏñÄãÖ®Ç°ÓÃÊÇ
+æ–°å»ºä¸€ä¸ªxmlæ–‡ä»¶ã€‚ ä½¿ç”¨å’Œä½ ä¹‹å‰ç”¨çš„ç›¸åŒçš„å ä½å›¾ç‰‡ã€‚
 the resources layout folder. Use the same place holder image as you did before.
 
 4
 00:00:12,730 --> 00:00:18,250
-Í¬ÑùÒ²Ê¹ÓÃÒ»ÑùµÄids¾ÍÏñÄãÔÚlist_item_forecas_xmlÎÄ¼ş¶¨ÒåµÄÒ»Ñù
+åŒæ ·ä¹Ÿä½¿ç”¨å’Œä½ åœ¨list_item_forecas_xmlæ–‡ä»¶ä¸­å®šä¹‰çš„ä¸€æ ·çš„idsã€‚
 Also use the same IDs that you declared in the list_ item_forecas_xml file.
 
 5
 00:00:18,250 --> 00:00:21,152
-ÀıÈç ÔÚÎÒÃÇµÄ´úÂëÖĞ ÎÒÃÇ½ĞÕâ¸öÌõÄ¿Í¼±ê ºÍ
+ä¾‹å¦‚ï¼Œåœ¨æˆ‘ä»¬çš„ä»£ç ä¸­ï¼Œæˆ‘ä»¬å«è¿™ä¸ªlist_item_icon
 For example, in our code we called this list item icon, and
 
 6
 00:00:21,152 --> 00:00:25,110
-ÎÒÃÇ½ĞÕâ¸öÌõÄ¿ÈÕÆÚÎÄ±¾                 ËùÒÔÎÒÃÇÊ¹ÓÃÏàÍ¬µÄid
+å«è¿™ä¸ªåˆ—è¡¨é¡¹ä¸ºdate_text_viewã€‚æ‰€ä»¥æˆ‘ä»¬ä¸ºxmlä¸­çš„è¿™ä¸ªå…ƒç´ ä½¿ç”¨
 we callled this list item date text view. So we use those same ID's for
 
 7
 00:00:25,110 --> 00:00:29,390
-ÎªÕâ¸öxmlÎÄ¼şÖĞµÄÔªËØ         Äã½«»áÖªµÀÔ­Òòµ±ÎÒÃÇ½éÉÜViewHolderµÄÊ±ºò
+è¿™äº›ç›¸åŒçš„idã€‚å½“æˆ‘ä»¬ç¨åä»‹ç»ViewHolderçš„æ—¶å€™ä½ å°†ä¼šçŸ¥é“ç¼˜ç”±ã€‚
 the elements in this XML file. You'll see why when we introduce view holders
 
 8
 00:00:29,390 --> 00:00:33,180
-	È·±£Õâ¸öapp¿ÉÒÔ±àÒëÍ¨¹ıµ±ÄãÍê³Éºó
+å½“ä½ åŠ å®Œåï¼Œç¡®ä¿è¿™ä¸ªappä¾æ—§å¯ä»¥ç¼–è¯‘é€šè¿‡ã€‚
 later. After you've finished adding it, make sure the app still compiles.
 
 9
 00:00:33,180 --> 00:00:35,410
-ÏÂÒ»²½Äã²»»á¿´¼ûÈÎºÎÊÓ¾õÉÏµÄ²îÒì
+åˆ°ä¸‹ä¸€æ­¥ä¹‹å‰ä½ ä¸ä¼šçœ‹è§ä»»ä½•è§†è§‰ä¸Šçš„å·®å¼‚
 You won't see any visual difference until the next step.
-

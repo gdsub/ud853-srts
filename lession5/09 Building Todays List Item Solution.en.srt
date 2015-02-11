@@ -1,16 +1,16 @@
 ﻿1
 00:00:00,380 --> 00:00:02,190
-让我解释一下我用它的原因，在我
+让我解释一下我看到这个布局时的
 Let me the explain the reasoning that I use when I
 
 2
 00:00:02,190 --> 00:00:05,150
-看见这个布局。它看上去像有两个等大的隔开的
+推理过程。它看上去像有两个同等大小隔开的
 look at a new layout. It looks like there's two equally spaced
 
 3
 00:00:05,150 --> 00:00:09,120
-列在这里。这提示我我们需要一个LinearLayout分布，
+列在这里。这表示我我们需要一个LinearLayout权重，
 columns here. That signals to me we need LinearLayout weights,
 
 4
@@ -30,22 +30,22 @@ text views, so we have a vertical LinearLayout, and the same
 
 7
 00:00:19,830 --> 00:00:23,030
-处理有第二个元素的第二个图表，垂直地堆叠
-goes for this second chart with has two elements vertically stacked
+处理有第二个图表，他有两个元素垂直地互相堆叠，
+goes for this second chart which has two elements vertically stacked
 
 8
 00:00:23,030 --> 00:00:25,570
-在上面，这意味着我们同样用一个垂直的LinearLayout
+这意味着我们同样用一个垂直的LinearLayout。
 on top of each other, which means we use a vertical LinearLayout
 
 9
 00:00:25,570 --> 00:00:28,220
-这里是代码，我们创建一个
+这里是代码，我们在layout文件夹下创建一个
 as well. And here's the code, we created a
 
 10
 00:00:28,220 --> 00:00:32,490
-new_list_item_forecasts_today XML文件，在layout文件夹下
+new_list_item_forecasts_today XML文件
 new_list_item_forecasts_today XML file under the layout folder.
 
 11
@@ -61,11 +61,11 @@ has a horizontal LinearLayout, as a root element. The first
 13
 00:00:38,540 --> 00:00:41,370
 子节点是一个垂直的LinearLayout，宽度是0
-child is a vertical LinearLayout with the width zero 
+child is a vertical LinearLayout with the width zero
 
 14
 00:00:41,370 --> 00:00:44,970
-权值是1.第二个子节点是另外一个垂直的
+权值是1。第二个子节点是另外一个垂直的
 and a weight of one. The second child is another vertical
 
 15
@@ -75,17 +75,17 @@ LinearLayout with a width of zero and a weight
 
 16
 00:00:47,300 --> 00:00:50,600
-1，这样水平的空间会形成平均的分布
+1，这样水平的空间将会在所有子节点中间
 of one, that way the horizontal space will be distributed evenly
 
 17
 00:00:50,600 --> 00:00:53,200
-在所有子节点中间。如果你退回到第一个
+平均分布。如果你退回到第一个
 among each child. If you go back to the first
 
 18
 00:00:53,200 --> 00:00:55,700
-LinearLayout 注意我们有三个文本框在
+LinearLayout，注意我们有三个文本框在
 LinearLayout, notice that we have three TextViews within
 
 19
@@ -100,26 +100,26 @@ gravity to be center horizontal. So anything within the LinearLayout
 
 21
 00:01:02,550 --> 00:01:06,220
-都会居中对齐。否则，按照预设，他们应该
+都会水平居中对齐。否则，按照预设，他们应该
 will be centered horizontally. Otherwise, by default, they would
 
 22
 00:01:06,220 --> 00:01:09,590
-靠左对齐在LinearLayout里。做同样的设定
+在LinearLayout里靠左对齐。
 be left aligned to the LinearLayout. The same applies
 
 23
 00:01:09,590 --> 00:01:12,270
-在第二个LinearLayout里。我们明确指出中心应该在
+为第二个LinearLayout做相同的设定。我们指定中心应该在
 for the second LinearLayout. We specify gravity to be
 
 24
 00:01:12,270 --> 00:01:15,720
-水平中间，这样图标和天气预报的
+水平中间，这样里面的图标和天气预报的
 center horizontal so that the icon and the weather forecast
 
 25
 00:01:15,720 --> 00:01:18,130
-文本框在其中的，也会水平居中。
+TextView也会水平居中。
 text view within it are also centered horizontally.
 
