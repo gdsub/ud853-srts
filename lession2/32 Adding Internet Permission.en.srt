@@ -1,11 +1,11 @@
 1
 00:00:00,270 --> 00:00:02,960
-谢谢Fredo  跟之前一样  又到了提问时间了
+谢谢Fredo  跟之前一样  我们又
 Thanks Fredo! So, like old times, we're going to
 
 2
 00:00:02,960 --> 00:00:05,800
-我们来对权限进行提问  通过修改AndroidManifest.xml文件
+需要申请权限了  通过修改AndroidManifest.xml文件
 need to ask for permission. Go ahead and change
 
 3
@@ -15,12 +15,12 @@ the Android Manifest file, to request the Internet permission.
 
 4
 00:00:08,960 --> 00:00:11,730
-然后告诉我们你添加的权限名字是什么
+然后告诉我们你添加的
 And then tell us the exact string name of
 
 5
 00:00:11,730 --> 00:00:14,380
-重新运行你的应用程序
+权限名字是什么  重新运行你的应用程序
 the permission that you used. Run the app
 
 6
@@ -30,11 +30,11 @@ again, to ensure that it doesn't crash. You can
 
 7
 00:00:16,760 --> 00:00:19,070
-同时你可以检查网络请求部分的日志信息
+同时你记录网络请求部分的日志信息
 also log the output of the network call, to
 
 8
 00:00:19,070 --> 00:00:21,530
-确保你获得了真实的天气数据
+确保你正确地获得了返回的天气数据
 verify that you got the weather data back correctly.
 
