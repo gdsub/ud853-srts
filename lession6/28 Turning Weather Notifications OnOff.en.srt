@@ -1,6 +1,6 @@
 1
 00:00:00,230 --> 00:00:03,910
-好点，现在我们需要在应用中加更多的细节。
+那么现在我们需要在应用中加更多的细节。
 All right. We're just going to add a few more details to the app.
 
 2
@@ -25,6 +25,6 @@ that preference to turn off the notification.
 
 6
 00:00:14,640 --> 00:00:17,650
-提示下，你可以用一个CheckBoxPreference来完成
+提示：你可以用一个CheckBoxPreference来完成
 Hint, you're going to want to use a CheckBoxPreference
 

@@ -1,6 +1,6 @@
 1
 00:00:00,270 --> 00:00:03,270
-其中有些东西你可能会注意到，我们应用的数据库大小感觉上一直在
+其中有些东西你可能会注意到，我们所使用的数据库大小感觉上一直在
 One of the things you may have noticed, is that our app database continues
 
 2
@@ -15,6 +15,6 @@ get out app uninstalled. So let's fix this. Add code to delete weather data that
 
 4
 00:00:12,930 --> 00:00:18,190
-一天之前的天气数据。我们需要使用日历功能来让应用完成这个功能。
+一天之前的天气数据。我们需要使用日历来让应用完成这个功能。
 is more than one day old. Use the Calendar function to do data arithmetic.
 

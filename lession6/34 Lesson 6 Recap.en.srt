@@ -5,7 +5,7 @@ Congratulations. You now know how to build an
 
 2
 00:00:02,780 --> 00:00:05,290
-同事在后台运行高校的应用了。
+同时在后台运行高校的应用了。
 app that runs beautifully in the foreground, and efficiently
 
 3
@@ -15,17 +15,17 @@ in the background. In this lesson, you learned how
 
 4
 00:00:07,840 --> 00:00:10,930
-以及考虑适配器，同时还有创建
+以及考虑Adapter(适配器)，同时还有创建
 to use services and think adapters, as well as
 
 5
 00:00:10,930 --> 00:00:14,020
-丰富的提醒，一切都是为了创造
+丰富的通知，一切都是为了创造
 creating rich notifications, all ways to provide a
 
 6
 00:00:14,020 --> 00:00:17,670
-很棒的用户体验，即使你的应用不可见。
+很棒的用户体验，即使在你的应用不可见的时候。
 great user experience, even when your app isn't visible.
 
 7

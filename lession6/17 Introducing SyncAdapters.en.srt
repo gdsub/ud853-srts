@@ -10,12 +10,12 @@ transactions efficient. But the good news is that Android
 
 3
 00:00:05,610 --> 00:00:08,070
-为我们提供了同步管理框架 它实现了
+为我们提供了同步管理框架，它使用了
 gives you the Sync Manager framework that implements
 
 4
 00:00:08,070 --> 00:00:11,190
-很多最有方法。你通过SyncAdapter
+很多优化的设计方法。你通过实现SyncAdapter
 many of these best practices. You utilize that framework
 
 5
@@ -30,7 +30,7 @@ introduced in Android 2.0 Eclair or Android API level
 
 7
 00:00:18,235 --> 00:00:21,880
-允许Android程序使用和Google APP使用的一样
+它允许Android程序使用和Google APP所使用的一样
 5, allows Android applications to leverage the same
 
 8
@@ -60,22 +60,22 @@ the OS. In other words, that's one big cookie.
 
 13
 00:00:38,460 --> 00:00:42,250
-Android同步经理使用SyncAdapter来处理同步请求
+Android Sync Manager使用SyncAdapter来处理同步请求
 Android Sync Manager handles synchronization requests using sync
 
 14
 00:00:42,250 --> 00:00:45,100
-同步经理尽可能的把那些请求进行分批
+Sync Manager尽可能的把那些请求进行分批
 adapters. The Sync Manager batches and time shifts
 
 15
 00:00:45,100 --> 00:00:47,480
-和移时处理来是你的数据传输
+和分时处理来是你的数据传输
 these requests when possible to allow your data
 
 16
 00:00:47,480 --> 00:00:50,770
-和其他APP的数据传输一起被合理地计划
+以此把当前APP和其他APP的数据传输一起被合理地计划
 transfers to be scheduled with transfers from other apps,
 
 17
@@ -95,12 +95,12 @@ the radio. If your device has less memory,
 
 20
 00:00:58,100 --> 00:01:01,890
-它会安排较少的同时进行的同步。同步经理
+它会安排较少的同时进行的同步。
 it will schedule fewer simultaneous synchs. The Synch Manager
 
 21
 00:01:01,890 --> 00:01:03,950
-也会在初始化数据传输前检查
+Sync Manager也会在初始化数据传输前检查
 also takes care of things like checking for
 
 22
@@ -115,12 +115,12 @@ connectivity is dropped. The synchronization framework works with content
 
 24
 00:01:12,520 --> 00:01:16,020
-提供双向同步。并且能利用Android账户经理
+提供双向同步。并且能利用Android的账户管理
 providers for two way synchronization and leverages the Android
 
 25
 00:01:16,020 --> 00:01:18,500
-来提供与账户连接的同步服务
+来提供与账户相关的同步服务
 account manager to provide synchronization services that are
 
 26
@@ -135,12 +135,12 @@ of these things, but we'll still have to
 
 28
 00:01:23,110 --> 00:01:25,710
-处理这些功能的一些复杂性
+接触一些和这些特性相关的复杂内容
 deal with some of the complexity of these features.
 
 29
 00:01:25,710 --> 00:01:29,170
-一开始这会让SyncAdapter使人畏惧
+一开始这会让SyncAdapter令人望而却步
 This can make SyncAdapter seem daunting at first.
 
 30

@@ -65,12 +65,12 @@ next intent and use it to build out pending intent
 
 14
 00:00:43,700 --> 00:00:47,470
-在传入notificationManager里面就好了。
+再传入notificationManager里面就好了。
 that we pass into the notification manager. Finally we call
 
 15
 00:00:47,470 --> 00:00:51,150
-最后调用notificationManager
+最后调用notificationManager，它其中包含通过buidler所创建的intent对象
 the notification manager with the built intent from our builder,
 
 16
@@ -80,6 +80,6 @@ with a notify function. One of the great things about notification manager is
 
 17
 00:00:55,480 --> 00:00:58,490
-即使它是UI线程
+甚至是UI线程
 it can be used from any thread even though it is displaying UI.
 

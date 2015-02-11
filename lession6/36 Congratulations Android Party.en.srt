@@ -10,7 +10,7 @@
 
 3
 00:00:01,842 --> 00:00:03,310
-啊内容提供器
+啊！ Content Providers
 >> Content providers.
 
 4

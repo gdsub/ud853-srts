@@ -1,11 +1,11 @@
 1
 00:00:00,280 --> 00:00:02,870
-现在我们修改代码以至于当Refresh菜单项被选择时，
+现在我们修改代码使得当Refresh菜单项被选择时，
 Now modify the code so that when the Refresh menu item
 
 2
 00:00:02,870 --> 00:00:08,290
-他执行FetchWeatherTask。但是，
+执行FetchWeatherTask任务。但是稍等一下，
 is selected, it executes the FetchWeatherTask. But hang on. When you
 
 3
