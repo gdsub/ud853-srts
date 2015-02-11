@@ -5,11 +5,11 @@ All right. You're done. Let's look at the solution. All
 2
 00:00:04,500 --> 00:00:08,270
 right. We'll move to WeatherProvider. We start by creating a
-我们回来WeatherProvider。 让我们来创建
+我们回来WeatherProvider。 让我们在来provider顶部
 3
 00:00:08,270 --> 00:00:10,830
 third selection query up at the top of our provider,
-第三个选项查询，
+创建第三个选项查询，
 4
 00:00:10,830 --> 00:00:13,670
 much like the second query except that we search for

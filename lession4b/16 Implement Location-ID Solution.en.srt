@@ -81,7 +81,7 @@ work. So, let's test that to make sure that works.
 21
 00:01:06,620 --> 00:01:10,010
 And our test passed, as expected. The interesting thing about
-一如既往的，我们测试通过了。 有趣事是
+一如既往的，我们测试通过了。 有趣的事是
 22
 00:01:10,010 --> 00:01:12,170
 this test is that it's just only testing the first

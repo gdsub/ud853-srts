@@ -21,7 +21,7 @@ to query the weather table for values from
 6
 00:00:14,690 --> 00:00:18,520
 a specific location setting. We'll start by adding a
-来查询天气的表格。我们需要将SQL Ite 查询的
+来查询天气的表格。我们需要将SQLite 查询的
 7
 00:00:18,520 --> 00:00:21,570
 SQL Ite query builder class variable at the
@@ -29,7 +29,7 @@ SQL Ite query builder class variable at the
 8
 00:00:21,570 --> 00:00:25,280
 top of weather provider. We'll initialize the SQLI to
-天气创建者之前。 我们也需要初始化 SQLI
+天气创建者之前。 我们也需要初始化 SQLite
 9
 00:00:25,280 --> 00:00:27,120
 query builder in the static constructor for the

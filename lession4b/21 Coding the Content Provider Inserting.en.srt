@@ -50,7 +50,7 @@ content observer that might have data modified by our
 
 11
 00:00:31,630 --> 00:00:35,370
-这将导致游标注册者自身通知其后代
+这将导致游标注册者自身通知其派生物
 insert. It turns out that cursors register themselves as
 
 12
@@ -60,7 +60,7 @@ notify for descendents which means that notifying the root
 
 13
 00:00:39,370 --> 00:00:42,760
-我们也通知了所有根URI的后代
+我们也通知了所有根URI的派生物
 URI. We'll also notify all descendents of that URI.
 
 14

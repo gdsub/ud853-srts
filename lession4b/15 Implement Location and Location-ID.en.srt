@@ -1,15 +1,15 @@
 1
 00:00:00,190 --> 00:00:04,050
-实施地址查询和
+实现地址查询和
 Implement the queries for location and location ID in
 
 2
 00:00:04,050 --> 00:00:08,200
-在content provider的地址ID。content URls笔记有
+在content provider的地址ID。content URls包含有一个函数
 our content provider. Note that content URIs contains a
 
 3
 00:00:08,200 --> 00:00:12,370
-一个功能能从标准URI那里得到ID。而标准URl包含一个ID在他的末端。
+这个函数能从标准URI那里得到ID。而标准URl在他的结尾包含一个ID。
 function to get the ID from a standard URI that contains an ID on the end of it.
 

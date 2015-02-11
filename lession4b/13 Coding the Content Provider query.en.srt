@@ -5,7 +5,7 @@ Let's continue coding our content provider. Query will be
 
 2
 00:00:03,130 --> 00:00:06,250
-最复杂的要求content provider的方法。
+content provider需要的方法中最复杂的。
 the most complex of the required content provider methods.
 
 3
@@ -35,7 +35,7 @@ every type of URI in the content provider. Several
 
 8
 00:00:21,540 --> 00:00:25,300
-他们中的几个只用来查询。我们将先实施
+他们中的几个只用来查询。我们将先实现
 of them are used for querying only. We'll implement
 
 9
@@ -50,7 +50,7 @@ just pass through all of the parameters to the
 
 11
 00:00:30,900 --> 00:00:34,540
-数据库里。非常简单的资料。我们填写这些参数
+数据库里。非常简单。我们填写这些参数
 database. Pretty simple stuff. Let's fix these parameters so
 
 12
@@ -75,12 +75,12 @@ order that matches a lot better. At the bottom
 
 16
 00:00:47,710 --> 00:00:50,480
-我们设置一个cursor的通告
+我们给传入这个函数的cursor
 of the function, we're going to set the notification
 
 17
 00:00:50,480 --> 00:00:54,710
-URl给那些进入这个功能里的。
+设置一个通知URl
 URI for our cursor to the one that was passed into the function.
 
 18
