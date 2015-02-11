@@ -1,86 +1,86 @@
 1
 00:00:00,450 --> 00:00:03,730
-在一个可视化布局的编辑器上构图布局是一件简单的事儿。
+在一个可视化布局的编辑器上设计布局很简单
 Building something that looks great in the visual layout editor is the easy
 
 2
 00:00:03,730 --> 00:00:08,960
-你同样需要考虑不同尺寸的屏幕以及画面的定位。
+你同样需要考虑不同尺寸的屏幕以及屏幕的方向
 part. You also need to consider different screens and orientations. As you
 
 3
 00:00:08,960 --> 00:00:12,460
-当你开始设计你程序的UI时，
+当你开始设计你程序的UI时 很可能会想去用你开发时候用的设备参数
 begin to layout your UI, there's a temptation to build it pixel perfect for
 
 4
 00:00:12,460 --> 00:00:16,120
-你得让UI的像素适合你当时使用的设备。
+去试图构建适合这个参数的像素完美的布局 
 the device you happen to be using at the time. This is reinforced by
 
 5
 00:00:16,120 --> 00:00:20,320
-事实上，这是这是通过对运行程序的加强，而不是改变窗口的大小。
+而你的编程时用的设备屏幕大小通常不会改变
 the fact that your apps window doesn't generally change size while it's running.
 
 6
 00:00:20,320 --> 00:00:22,720
-所以你不能只通过抓取低i-corner来改变界面的大小。
+所以你无法随意调整屏幕的大小
 So you can't just grab the lower i-corner and grow and
 
 7
 00:00:22,720 --> 00:00:26,530
-如果你曾开发过web或者桌面应用，
+来看看它在不同设备上有什么不同表现 但是如果你开发过网络或者桌面应用
 shrink your app to see how it behaves. But if you've ever developed for
 
 8
 00:00:26,530 --> 00:00:29,660
-你就会知道设置静态方法是并不是个好办法。
+你就会知道这有什么缺点
 the web or desktop, you know this static approach is a bad idea.
 
 9
 00:00:30,760 --> 00:00:36,950
-Android首次发布的标准分辨率是 480×320。
+Android首次发布时 屏幕标准是480*320的HVGA
 When Android first launched, HVGA 480 by 320 resolution screens were standard.
 
 10
 00:00:36,950 --> 00:00:41,260
-当我们开始研究如何在这些设备建立适合的用户体验时，
+那时候我们可以用绝对布局定义每个元素的位置
 As we began exploring how to build engaging user experiences on those devices,
 
 11
 00:00:41,260 --> 00:00:44,650
-我们可以使用绝对布局来定义每个画面元件的确切位置。
+来开发高用户体验的应用程序
 we could use absolute layouts to define the exact location of each
 
 12
 00:00:44,650 --> 00:00:50,840
-然而不到一年的时间，宽分辨率的安卓手机就被开发出来了。
+但是一年以内 第一个WVGA屏幕的Android手机发布了
 screen element. But within a year, the first WVGA Android phones were released.
 
 13
 00:00:50,840 --> 00:00:54,850
-现在，Android可以在任何设备上运行，从手机到平板手机到平板电脑、电视、
+而现在Android运行在各种尺寸屏幕的平板手机、平板、TV
 And now Android runs on everything from phones to phablets, tablets, TVs and
 
 14
 00:00:54,850 --> 00:01:00,030
-还有任意尺寸的屏幕，凡是你能想到的分辨率和宽高比都可以。
+还有穿戴式设备 
 wearables with any screen size, resolution and aspect ratio you can imagine.
 
 15
 00:01:00,030 --> 00:01:03,008
-这，就像桌面和网页开发时你可以使用 panels 和 CSS，
+桌面开发和Web开发上 你可以用panels或CSS
 So, just like desktop or web where you might use panels or
 
 16
 00:01:03,008 --> 00:01:07,104
-你的Android UI需要在屏幕运行的基础上进行扩展，
+你的Android UI需要适应各种屏幕
 CSS, your Android UI needs to scale based on the screen it's running within,
 
 17
 00:01:07,104 --> 00:01:09,546
-这就是不使用绝对布局的原因。
+这就是不使用绝对布局的原因
 which is why absolute layout was deprecated.
 
 18
@@ -89,16 +89,16 @@ which is why absolute layout was deprecated.
 
 19
 00:01:14,284 --> 00:01:17,559
-支持LinearLayout布局、RelativeLayout布局、
+利用LinearLayout布局、RelativeLayout布局、
 In favor of layouts like LinearLayout, RelativeLayout and
 
 20
 00:01:17,559 --> 00:01:20,063
-GridLayout布局，这些能够动态调整界面，
+GridLayout布局 来构建动态大小的布局
 GridLayout, they can dynamically resize and
 
 21
 00:01:20,063 --> 00:01:23,930
-适应任何屏幕，遵循响应式设计的原则。
+以适应越来越多样化的Android设备 请遵照响应式布局的准则来设计
 adapt to any screen, following the principles of responsive design.
 

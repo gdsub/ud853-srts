@@ -1,145 +1,145 @@
 1
 00:00:00,090 --> 00:00:03,670
-Ò»µ©ÊÊÅäÆ÷±»³õÊ¼»¯  ÈÃÎÒÃÇ°ÑËü°ó¶¨µ½ListViewÁĞ±í¿Ø¼ş
+ä¸€æ—¦Adapterè¢«åˆå§‹åŒ–  è®©æˆ‘ä»¬æŠŠå®ƒç»‘å®šåˆ°ListViewä¸Š
 Once the adapter is initialized, let's bind it to the list view. But
 
 2
 00:00:03,670 --> 00:00:06,980
-µ«ÊÇÄã¿ÉÄÜ×¢Òâµ½ÁËÔÚÎÒÃÇµÄ²¼¾ÖÖĞÃ»ÓĞÌá¼°µ½ListViewÁĞ±í¿Ø¼ş
+ä½†æ˜¯æˆ‘ä»¬è¿˜æ²¡æœ‰ListViewçš„å¼•ç”¨
 you may notice that we don't have a reference to the list view in our fragment.
 
 3
 00:00:06,980 --> 00:00:10,360
-Ëü½ö½öÊÇ¶¨ÒåÔÚlayout XMLÎÄ¼şÖĞµÄ  ÏµÍ³»áÊ¹ÓÃ²¢Ìí¼Ó
+åªæ˜¯æŠŠå®ƒå®šä¹‰åœ¨äº†å¸ƒå±€XMLä¸­
 It was only defined in the layout XML. The system takes and
 
 4
 00:00:10,360 --> 00:00:12,370
-layout XMLÎÄ¼ş  ²¢ÇÒ
+ç³»ç»Ÿä¼šå®ç°XMLä¸­çš„å¸ƒå±€
 inflates layout XML files. And
 
 5
 00:00:12,370 --> 00:00:17,000
-°ÑËüÃÇ×ªµ½Ò»¸öÔÚÊÓÍ¼Ê÷¶¥²¿µÄ´øÓĞÒ»¸öÖ÷activityµÄ¸ùlayoutÍêÕûµÄÊÓÍ¼·Ö²ã
+å¹¶å°†å®ƒä»¬è½¬æ¢æˆä¸€ä¸ªå€’æ ‘çŠ¶çš„ç»“æ„
 turns them into a full view hierarchy with a root layout of the main activity at
 
 6
 00:00:17,000 --> 00:00:21,750
-ÎÒÃÇÒ²¿ÉÒÔÖ¸¶¨IDµ½Ê÷ÖĞµÄÃ¿¸öÊÓÍ¼
+Main Activityåœ¨æ ‘é¡¶ï¼ˆæˆ–è€…è¯´æ ‘æ ¹ï¼‰ æˆ‘ä»¬å¯ä»¥ç»™æ ‘ä¸Šçš„æ¯ä¸ªViewè®¾ä¸€ä¸ªID
 the very top of the view tree. We can also assign IDs to each view in the tree,
 
 7
 00:00:21,750 --> 00:00:26,320
-Èç¹ûÄã²»ĞèÒªIDÀ´²Î¿¼ÄÇÃ´¾Í²»ÊÇ±ØÒªµÄ
+ä¸è¿‡ä½ ç”¨ä¸åˆ°çš„Viewå¯ä»¥ä¸ç»™å®ƒè®¾
 but it's not required if you don't need a reference to an individual view.
 
 8
 00:00:26,320 --> 00:00:29,790
-¾Ù¸öÀı×Ó  Õâ¸öÍ¼ÏñÊÓÍ¼Ã»ÓĞÓëÖ®¹ØÁªµÄID  Ò²ÊÇ¿ÉÒÔµÄ
+ä¾‹å¦‚ è¿™ä¸ªå›¾åƒViewæ²¡æœ‰IDå®Œå…¨æ²¡é—®é¢˜
 For example, this image view doesn't have an ID associated with it and
 
 9
 00:00:29,790 --> 00:00:33,640
-Óëactivity»ò²¼¾ÖÏà¹ØÁªµÄJava´úÂëÍ¬Ñù°üº¬
+åœ¨Javaä»£ç ä¸­å¯¹åº”çš„Activityæˆ–Fragmentä¸­
 that's okay. Within the Java code of the associated activity or
 
 10
 00:00:33,640 --> 00:00:38,660
-Èç¹ûÎÒÃÇĞèÒªÒ»¸ö°´Å¥µÄÒıÓÃ  ÎÒÃÇ¿ÉÒÔÊ¹ÓÃfindViewByIDÀ´Íê³É
+å¦‚æœæˆ‘ä»¬éœ€è¦è¿™ä¸ªæŒ‰é’®çš„å¼•ç”¨ å¯ä»¥è°ƒç”¨findViewById
 fragment. If we need a reference to the button, we can simply call findViewById,
 
 11
 00:00:38,660 --> 00:00:43,370
-Ëü»á±éÀúÊ÷ÏÂÃæµÄ²ã´Î½á¹¹Ö±µ½ËüÕÒµ½´øÓĞbuttonµÄÊÓÍ¼
+å®ƒä¼šä¸€ç›´å‘ä¸‹éå†è¿™ä¸ªæ ‘ç›´åˆ°å®ƒæ‰¾åˆ°æœ‰è¿™ä¸ªIDçš„æŒ‰é’®
 which will traverse down the hierarchy until it finds a view with the ID button.
 
 12
 00:00:43,370 --> 00:00:48,050
-È»ºóËü»á·µ»Ø  Í¬ÑùµÄ  ÎÒÃÇ¿ÉÒÔ±éÀúÊ÷ÏÂÃæµÄÊÓÍ¼²ã´Î
+ç„¶åä¼šè¿”å›å®ƒ åŒæ · æˆ‘ä»¬å¯ä»¥éå†
 And then it will return that. Similarly, we can traverse down the view
 
 13
 00:00:48,050 --> 00:00:53,620
-È¥Ñ°ÕÒ´øÓĞcontainer IDµÄÏßĞÔµÄlayouts²¢·µ»Ø
+å»ç”¨IDæ‰¾LinearLayoutè¿™ä¸ªå®¹å™¨
 hierarchy to find the linear layout with the ID container, and then return that.
 
 14
 00:00:53,620 --> 00:00:57,030
-ÎÒÃÇÍ¬Ñù¿ÉÒÔÊ¹ÓÃ²ÎÕÕÈ¥ÕÒµ½TextViewÍ¨¹ıÊ÷ÏòÏÂ±éÀúÊÓÍ¼²ã´Î½á¹¹
+åŒæ ·çš„ å¯ä»¥ç”¨IDæ¥æ‰¾è¿™ä¸ªTextView
 We could do the same to find a reference to this TextView by traversing down
 
 15
 00:00:57,030 --> 00:01:00,830
-µ«ÊÇÄã»á×¢Òâµ½ÎÒÃÇÒÑ¾­ÓĞÁËÒ»¸öcontainerµÄ²Î¿¼
+ä½†æ˜¯æƒ³å¿…ä½ å·²ç»æ³¨æ„åˆ°äº† å®ƒçš„çˆ¶å…ƒç´ å®¹å™¨çš„å¼•ç”¨æˆ‘ä»¬å·²ç»æœ‰äº†
 the view hierarchy. But you'll notice that we already have a reference to
 
 16
 00:01:00,830 --> 00:01:06,055
-²¢ÇÒTextViewÊÇcontainerµÄ×ÓÊ÷  Òò´Ë
+æ‰€ä»¥æˆ‘ä»¬èƒ½ç›´æ¥å¯¹çˆ¶å…ƒç´ è°ƒç”¨findViewById
 the container which is a direct parent of this TextView. Hence, we can just call
 
 17
 00:01:06,055 --> 00:01:12,420
-Òò´ËÎÒÃÇ¿ÉÒÔÖ±½ÓÊ¹ÓÃcontainer.findViewByIdÈ¥ËÑË÷×ÓÊ÷²¢Ñ°ÕÒ´øÓĞÕâ¸öIDµÄTextView
+ç„¶åç”¨IDæ‰¾åˆ°å®ƒå¯¹åº”çš„å­å…ƒç´ 
 container.findViewById to search this subtree to find the TextView with this ID,
 
 18
 00:01:12,420 --> 00:01:17,480
-²¢ÇÒ·µ»ØËü  Ê¹ÓÃÕâ¸ö·½·¨  ÎÒÃÇÓÃÒ»¸ö¸üĞ¡µÄ×ÓÊ÷
+ç„¶åè¿”å›å®ƒ  ä½¿ç”¨è¿™ä¸ªæ–¹æ³•  æˆ‘ä»¬è¦æœç´¢çš„æ ‘
 and then return it. With this method, we have a smaller sub-tree to search for
 
 19
 00:01:17,480 --> 00:01:22,060
-È¥ËÑË÷Ò»¸ö¸ø¶¨µÄÊÓÍ¼¶ø²»ÊÇÈ¥ËÑË÷Õû¸öViewµÄ½á¹¹
+æ¯”èµ·æ•´ä¸ªä¹¦æ›´å°
 a given view, as opposed to searching the entire view hierarchy.
 
 20
 00:01:22,060 --> 00:01:25,890
-ÔÚAndroid JavaÎÄµµÖĞ¶ÔÓÚViewÕâ¸öÀàµÄËµÃ÷  Èç¹ûÄãÒ²ÏëÕâÑù×ö
+åœ¨Android Javaæ–‡æ¡£ä¸­å¯¹äºViewè¿™ä¸ªç±»çš„è¯´æ˜ï¼ˆä¸‹é¢æœ‰é“¾æ¥ï¼‰
 In the Android Java doc for the View class, which is linked below if you want to
 
 21
 00:01:25,890 --> 00:01:30,020
-ÔÚÏÂÃæÓĞÎÄµµµÄÁ´½Ó  Ëü°üº¬Ò»¸öÔÚLayout XMLÎÄµµÖĞ¶¨Òå¹ıµÄ°´Å¥µÄÀı×Ó
+è¿™é‡Œæœ‰ä¸ªXMLä¸­å®šä¹‰å¥½çš„æŒ‰é’®
 follow along, it contains an example where the button with Define in Layout XML.
 
 22
 00:01:30,020 --> 00:01:36,350
-ÕâÊÇÒ»¸öÒÑ¾­·ÖÅä¹ıµÄmy_buttonµÄID  È»ºóÔÚActivityµ±ÖĞ
+IDæ˜¯my_button  åœ¨Activityå½“ä¸­
 It was assigned an ID My Button. Then in the Activity, we can use the find
 
 23
 00:01:36,350 --> 00:01:40,990
-ÎÒÃÇ¿ÉÒÔÊ¹ÓÃÍ¨¹ı²éÕÒIDµÄ·½·¨²éÕÒview  ÓĞÁËÄÇ¸öID  ÎÒÃÇ¿ÉÒÔµÃµ½ËüµÄ·µ»ØÖµ
+æˆ‘ä»¬å¯ä»¥ä½¿ç”¨IDæŸ¥æ‰¾è¿™ä¸ªView  å¾—åˆ°æŒ‰é’®çš„åº”ç”¨
 view by ID method, with that ID, so that we can get a reference to the button.
 
 24
 00:01:40,990 --> 00:01:45,510
-È»ºóÎÒÃÇ¿ÉÒÔ¶¯Ì¬µØ¸Ä±äËü  ÀıÈçÌí¼ÓÒ»¸öµã»÷¼àÌıÆ÷À´¸Ä±ä
+ç„¶åæˆ‘ä»¬å¯ä»¥åŠ¨æ€åœ°ä¿®æ”¹æŒ‰é’® ä¾‹å¦‚ç»™å®ƒåŠ ä¸€ä¸ªç›‘å¬å™¨
 Then we can change it dynamically, such as by adding a click listener to it.
 
 25
 00:01:46,770 --> 00:01:50,560
-ÏÖÔÚÔÚÕ¼Î»·û²¼¾ÖµÄÀàÖĞ  ½«ÊÊÅäÆ÷°ó¶¨µ½ListView
+åœ¨PlaceholderFragment.classä¸­ å°†Adapterä¸ListViewç»‘å®š
 Now in the placeholder fragment class, bind the adapter to the list view.
 
 26
 00:01:50,560 --> 00:01:54,230
-ĞÒÔËµÄÊÇ  ÎÒÃÇÒÑ¾­¸øListView·ÖÅäÁËÒ»¸öID  ËùÒÔÎÒÃÇ¿ÉÒÔºÜÈİÒ×µÄÕÒµ½Ëü
+å¹¸è¿çš„æ˜¯  æˆ‘ä»¬å·²ç»ç»™ListViewåˆ†é…äº†ä¸€ä¸ªID  æ‰€ä»¥å¾ˆå®¹æ˜“æ‰¾åˆ°å®ƒ
 Luckily, we did assign an ID to the list view earlier. So, we can find it
 
 27
 00:01:54,230 --> 00:01:58,430
-ÏëÏëÄã¿ÉÒÔÔÚÊÓÍ¼²ã´ÎÖĞ¿ÉÒÔµ÷ÓÃID²éÕÒÊÓÍ¼µÄ×îĞ¡µÄÊ÷
+ä½¿ç”¨æœ€å°çš„æ ‘æ¥éå†æ‰¾åˆ°å®ƒ
 easily now. Think about the smallest sub-tree in the view hierarchy that you
 
 28
 00:01:58,430 --> 00:02:03,640
-²¢ÔÚÉÏÃæÉèÖÃÒ»¸öÊÊÅäÆ÷  Èç¹ûÄãÏëÒªÒ»¸öÀı×Ó
+ç„¶åç»™å®ƒè®¾ä¸€ä¸ªAdapter å¦‚æœä½ æƒ³è¦ç‚¹æç¤º
 can call find view by ID on. Then set the adapter on it. If you want an example,
 
 29
 00:02:03,640 --> 00:02:07,430
-Äã¿ÉÒÔÔÚÏÂÃæµÄÁ´½ÓÖĞ¿´µ½  µ±ÄãÍê³ÉµÄÊ±ºòÇë¹´Ñ¡¸´Ñ¡¿ò
+å¯ä»¥çœ‹çœ‹ä¸‹é¢çš„é“¾æ¥ åšå®Œåå‹¾ä¸Šå¤é€‰æ¡†
 you can see one in the link below. Check the boxes when you're done.
 
