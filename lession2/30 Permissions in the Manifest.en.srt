@@ -1,20 +1,20 @@
 1
 00:00:00,200 --> 00:00:01,250
-»¨Ò»µãÊ±¼äÈ¥ä¯ÀÀ
+èŠ±ä¸€ç‚¹æ—¶é—´å»æµè§ˆ
 Take a moment to explore the
 
 2
 00:00:01,250 --> 00:00:05,080
-developers.android.comÉÏÃæµÄ°²È«²¿·ÖµÄÄÚÈİ
+developers.android.comä¸Šé¢çš„å®‰å…¨éƒ¨åˆ†çš„å†…å®¹
 security section of developers.android.com. Which of these
 
 3
 00:00:05,080 --> 00:00:06,990
-ÏÂÃæµÄÄÄÒ»¸ö»î¶¯Ö»ÓĞÔÚÏòÓÃ»§
+ä¸‹é¢çš„å“ªäº›æ“ä½œåªæœ‰åœ¨manifestæ–‡ä»¶ä¸­
 following activities can only be done
 
 4
 00:00:06,990 --> 00:00:09,330
-ÇëÇóÈ¨ÏŞ¹ıºó²Å¿ÉÒÔÍê³É
+å£°æ˜æƒé™ä»¥åæ‰å¯ä»¥å®Œæˆ
 after declaring a uses-permission in the manifest?
 
