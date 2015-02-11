@@ -1,200 +1,199 @@
 1
 00:00:00,350 --> 00:00:02,800
-ÎªÁË¹¹½¨ÎÒÃÇµÄui ÎÒÃÇÀ´´ÓMainActivityµÄ
+ä¸ºäº†æ„å»ºæˆ‘ä»¬çš„UIï¼Œæˆ‘ä»¬æ¥ä»MainActivityçš„
 To build out our UI, let's start with the wire
 
 2
 00:00:02,800 --> 00:00:05,800
-¿òÍ¼¿ªÊ¼  ËüÕ¹Ê¾ÁËÒ»¸öÌìÆøÔ¤±¨µÄÁĞ±í
+çº¿æ¡†å›¾å¼€å§‹ã€‚å®ƒå±•ç¤ºäº†ä¸€ä¸ªå¤©æ°”é¢„æŠ¥çš„åˆ—è¡¨
 frame for the main activity. It displays a list of
 
 3
 00:00:05,800 --> 00:00:10,265
-Ã¿¸öÌõÄ¿±£»¤Ò»¸öÍ¼±ê ÈÕÆÚ ºÍÌìÆøÇé¿ö
+æ¯ä¸ªæ¡ç›®åŒ…å«ä¸€ä¸ªå›¾æ ‡ï¼Œä¸€ä¸ªæ—¥æœŸï¼Œå¤©æ°”æƒ…å†µ
 forecasts, where each item contains an icon, a date, weather
 
 4
 00:00:10,265 --> 00:00:13,640
-Ò²ÓĞ×î¸ßºÍ×îµÍÎÂ¶È
+ä»¥åŠå½“å¤©æœ€é«˜å’Œæœ€ä½æ¸©åº¦ã€‚
 description; as well as high and low temperatures for that
 
 5
 00:00:13,640 --> 00:00:17,320
-	ÓÉÓÚ½ñÌìµÄÌìÆøÊÇÓÃ»§¹Ø×¢×î¸ßµÄ
+ç”±äºä»Šå¤©çš„å¤©æ°”æ˜¯ç”¨æˆ·å…³æ³¨æœ€é«˜çš„
 day. Since today's weather is probably most relevant to the
 
 6
 00:00:17,320 --> 00:00:20,220
-ÎÒÃÇ¸øÁËËü¸üÍ»³öµÄÏÔÊ¾Ïà±ÈÓÚ
+æˆ‘ä»¬ç»™äº†å®ƒç›¸æ¯”å…¶ä»–æ—¥æœŸæ›´çªå‡ºçš„æ˜¾ç¤ºã€‚
 user, we give more prominence to it as a list
 
 7
 00:00:20,220 --> 00:00:22,830
-ÁíÍâÈÕÆÚµÄÌìÆø ÎÒÃÇ½«¿ªÊ¼¹¹½¨ÁĞ±íµÄÌõÄ¿ÔÚ
+æˆ‘ä»¬å°†åœ¨æ¥ä¸‹æ¥çš„å‡ å¤©é‡Œ
 item compared to the other days. We'll start off by
 
 8
 00:00:22,830 --> 00:00:25,730
-½ÓÏÂÀ´µÄ¼¸ÌìÀï ÒòÎªËüÊÇ±È½Ï¼òµ¥µÄ
+ä»æ„å»ºåˆ—è¡¨é¡¹çš„å¸ƒå±€å¼€å§‹ï¼Œå› ä¸ºå®ƒæ˜¯æ¯”è¾ƒç®€å•çš„ã€‚
 building the list item layout for future days because it's simpler.
 
 9
 00:00:25,730 --> 00:00:29,030
-È»ºóÔÙ¿ªÊ¼¹¹½¨½ñÌìµÄÁĞ±íÌõÄ¿
+ç„¶åå›æ¥æ„å»ºä»Šæ—¥å¸ƒå±€ã€‚
 And then afterwards, we'll come back to do the today layout.
 
 10
 00:00:29,030 --> 00:00:33,250
-ÔÚµ±Ç°µÄÊµÏÖÖĞ ÁĞ±íµÄÌõÄ¿xml²¼¾ÖÊÇ
+åœ¨å½“å‰çš„å®ç°ä¸­ï¼Œåˆ—è¡¨é¡¹xmlå¸ƒå±€æ˜¯
 In the current implementation, the list item forecast layout XML is
 
 11
 00:00:33,250 --> 00:00:36,450
-Ò»¸öº¬ÓĞ4¸öTextViewµÄLinearLayout ÎÒÃÇÒ²ĞèÒªÔÙĞŞ¸ÄÕâ¸ö²¼¾Ö
+ä¸€ä¸ªå«æœ‰4ä¸ªTextViewçš„LinearLayout æˆ‘ä»¬ä¹Ÿéœ€è¦
 a horizontal linear layout of four text views. We'll need to
 
 12
 00:00:36,450 --> 00:00:39,460
-ÒÔ´ïµ½¿òÍ¼ÒªÇóµÄĞ§¹û
+ä¿®æ”¹è¿™ä¸ªå¸ƒå±€ä»¥è¾¾åˆ°æ¡†å›¾è¦æ±‚çš„æ•ˆæœ
 modify the layout so that it looks like this wire frame.
 
 13
 00:00:39,460 --> 00:00:41,510
-ÎÒÃÇÓ¦¸ÃÒ»¸öÒ»¸öÀ´Ö¸µ¼ÎÒÃÇÕÆÎÕÁËViewGroupµÄ¼¸¸ö²¼¾Ö
+æˆ‘ä»¬åº”è¯¥é€ä¸ªåˆ†è§£ï¼Œç›´åˆ°å¯ä»¥ä½¿ç”¨æˆ‘ä»¬ç†Ÿæ‚‰çš„å‡ ä¸ªViewGroupå¸ƒå±€ã€‚
 We should divide and conquer until we can use the view
 
 14
 00:00:41,510 --> 00:00:44,560
-µÄÓÃ·¨ ÄãÄÜÏëÏóÒ»ÏÂ
+ä½ èƒ½æƒ³è±¡ä¸€ä¸‹è¯¥å¦‚ä½•
 group layouts that we're familiar with. Can you imagine how you'd
 
 15
 00:00:44,560 --> 00:00:46,980
-À´°ÑÕâ¸öui·Ö½â³ÉÄãËùÖªµÀµÄ×é¼şÂğ? 
+æ¥æŠŠè¿™ä¸ªUIåˆ†è§£æˆä½ æ‰€çŸ¥é“çš„ç»„ä»¶å—?
 break down this UI into components that you know how to
 
 16
 00:00:46,980 --> 00:00:51,840
-×÷ÎªÒ»¸öÌáÊ¾ Èç¹ûÎÒÔÚÕâ»­Ò»Ğ©·Ö¸îÏßÄØ
+ä½œä¸ºæç¤º,å¦‚æœæˆ‘åœ¨è¿™ç”»ä¸€äº›åˆ†å‰²çº¿å‘¢?
 build? As a hint, what if I draw these separators here?
 
 17
 00:00:51,840 --> 00:00:54,160
-ÄãÄÜÕÒµ½Ò»¸ö·½·¨
+æœ‰äº†è¿™äº›å…ƒç´ ï¼Œä½ èƒ½æ‰¾åˆ°ä¸€ä¸ªæ–¹æ³•å°†å…¶
 Within those elements, can you find a way to
 
 18
 00:00:54,160 --> 00:00:56,960
-¸ü½üÒ»²½µÄ½øĞĞ·Ö½âÓÃÏàÓ¦µÄViewGroup
+è¿‘ä¸€æ­¥çš„åˆ†è§£ä¸ºä½ ç†Ÿæ‚‰çš„ViewGroupä¹ˆï¼Ÿ
 break it down even further with view groups you're familiar
 
 19
 00:00:56,960 --> 00:01:00,280
-Äã½«Ê¹ÓÃµ½Ç¶Ì×µÄview×é ÒâÎ¶×Åview×éÀïÃæÓĞ×Óview×é
+ä½ å°†ç”¨åˆ°åµŒå¥—çš„ViewGroupï¼Œä¹Ÿå°±æ˜¯åŒ…å«å­ViewGroupçš„ViewGroupã€‚
 with? You'll need nested view groups, which means view groups
 
 20
 00:01:00,280 --> 00:01:02,940
-ÌáÊ¾Ò»ÏÂ  ÕâĞ©Êı¾İÊÇ¶¯Ì¬¸Ä±äµÄ
+é¡ºå¸¦ä¸€æï¼Œè¿™äº›æ•°æ®åœ¨è¿è¡Œæ—¶ä¼šåŠ¨æ€æ”¹å˜ã€‚
 with children view groups. As a tip, this data will
 
 21
 00:01:02,940 --> 00:01:05,740
-µ«ÊÇÄã¿ÉÒÔ
+ä½†æ˜¯ä½ å¯ä»¥
 be populated dynamically at run time. But you can
 
 22
 00:01:05,740 --> 00:01:08,960
-ÎªÁË²âÊÔÏÈĞ´ËÀÒ»Ğ©Öµ¾ÍÏñÃ÷ÌìµÄÈÕÆÚ»òÕß
+å…ˆå†™æ­»ä¸€äº›å€¼ï¼Œæ¯”å¦‚
 test it by hard coding some text values such as
 
 23
 00:01:08,960 --> 00:01:12,420
-Çå³şµÄÆøÏóÌõ¼ş
+æ—¥æœŸä¸ºæ˜å¤©æˆ–è€…ç©ºæ°”çŠ¶å†µä¸ºè‰¯å¥½ï¼Œæ¥åšæµ‹è¯•ã€‚
 Tomorrow for the date or Clear for the weather condition.
 
 24
 00:01:12,420 --> 00:01:16,620
-¶ÔÓÚÍ¼Æ¬ ÎÒÃÇÖ¸¶¨Ò»¸ö½Ğ×öic_launcherµÄÎÄ¼şÃû
+å¯¹äºå›¾ç‰‡ æˆ‘ä»¬æŒ‡å®šä¸€ä¸ªå«åšic_launcherçš„æ–‡ä»¶å
 For images, we can specify a placeholder drawable called ic_launcher.
 
 25
 00:01:16,620 --> 00:01:20,850
-Ö®ËùÒÔÕâÑùÃüÃû ÒâÎ¶ËüÊÇÒ»¸öÆô¶¯µÄÍ¼±ê Ò²½Ğ×öÓ¦ÓÃµÄ
+ä¹‹æ‰€ä»¥è¿™æ ·å‘½åï¼Œæ˜¯å› ä¸ºå®ƒæ˜¯åº”ç”¨å¯åŠ¨çš„å›¾æ ‡ï¼Œä»–ä¹Ÿè¢«å«åšapp iconã€‚
 It's named this way, because it's the launcher icon, which is also
 
 26
 00:01:20,850 --> 00:01:23,820
-icon ÕâÒÑ¾­±»°üº¬µ½ÎÒÃÇµÄappÖĞÁË
+è¿™å·²ç»è¢«åŒ…å«åˆ°æˆ‘ä»¬çš„appä¸­äº†ã€‚
 known as the app icon. And this is already included in our
 
 27
 00:01:23,820 --> 00:01:26,500
-ÎÒÃÇ½«µÃµ½ÌìÆøµÄÍ¼±êÔÚÖ®ºóµÄ¿Î³ÌÀï
+æˆ‘ä»¬å°†åœ¨ä¹‹åçš„è¯¾ç¨‹é‡Œå¾—åˆ°å…¶ä»–å¤©æ°”å›¾æ ‡ã€‚
 app. We'll be getting the rest of our weather icons for our
 
 28
 00:01:26,500 --> 00:01:29,610
-Èç¹ûÄãÏë¿´ÏÂÕâ¸ö²¼¾ÖµÄÑù×Ó
+å¦‚æœä½ æƒ³çœ‹ä¸‹è¿™ä¸ªå¸ƒå±€çš„çœ‹èµ·æ¥å¦‚ä½•ï¼Œ
 app later in this lesson. If you want to see what this layout
 
 29
 00:01:29,610 --> 00:01:31,980
-Äã¿ÉÒÔµã»÷Éè±¸´°¸ñ¿´Ò»ÏÂÔ¤ÀÀ
+ä½ å¯ä»¥ç‚¹å‡»è®¾è®¡é¢æ¿æ¥çœ‹ä¸€ä¸‹é¢„è§ˆã€‚
 looks like, you can click on the design pane to see a
 
 30
 00:01:31,980 --> 00:01:34,970
-ÔÚÓÒ²à ÎÒÃÇ¿´µ½Ò»¸öÊ÷ĞÎÕ¹Ê¾ÁË²»Í¬µÄview
+åœ¨å³ä¾§ï¼Œæˆ‘ä»¬çœ‹åˆ°ä¸€ä¸ªç»„ä»¶æ ‘ï¼Œåˆ—å‡ºäº†å„ç§viewã€‚
 preview of it. On the right, we see a component tree listing
 
 31
 00:01:34,970 --> 00:01:37,830
-ÎÒÃÇÒ²¿ÉÒÔ¿´Ò»¸ö¸ø¶¨µÄviewµÄÊôĞÔºÍÖµ
+æˆ‘ä»¬ä¹Ÿå¯ä»¥çœ‹ä¸€ä¸ªç»™å®šçš„viewçš„å±æ€§å’Œå€¼
 out the different views. We can also see for a given view
 
 32
 00:01:37,830 --> 00:01:41,690
-ÎÒÃÇ¿ÉÒÔ¸Ä±äÉè±¸µÄ·½Ïòµ±ÄãÔ¤ÀÀµÄÊ±ºò
+æˆ‘ä»¬å¯ä»¥æ”¹å˜ä½ æ­£åœ¨é¢„è§ˆçš„è®¾å¤‡çš„æ–¹å‘ï¼Œ
 what the properties are, and their values. We can change the orientation
 
 33
 00:01:41,690 --> 00:01:43,890
-ÄãÒ²¿ÉÒÔÑ¡Ôñ²»Í¬µÄÉè±¸¾ÍÏñ
+ä½ ä¹Ÿå¯ä»¥é€‰æ‹©ä¸åŒçš„è®¾å¤‡æ¯”å¦‚
 of the device that your previewing, you can also
 
 34
 00:01:43,890 --> 00:01:47,900
-Nexus 7 »òNexusÏµÁĞµÄ
+Nexus 7æˆ–Nexus 10ã€‚
 select different devices such as Nexus 7, or Nexus
 
 35
 00:01:47,900 --> 00:01:50,630
-ÄãÒ²¿ÉÒÔÍ¬Ê±Ô¤ÀÀ¶à¸öÉè±¸
+ä½ ä¹Ÿå¯ä»¥åŒæ—¶é¢„è§ˆå¤šä¸ªè®¾å¤‡
 10. You can also preview multiple devices at the
 
 36
 00:01:50,630 --> 00:01:52,690
-µ±Äã¹¹½¨ÄãµÄ²¼¾ÖµÄÊ±ºò
+å½“ä½ ä¸ºè¿™ä¸ªä»»åŠ¡æ„å»ºä½ çš„å¸ƒå±€çš„æ—¶å€™
 same time. As you build out your layout for
 
 37
 00:01:52,690 --> 00:01:54,950
-²»Òªµ£ĞÄ×ÖÌåµÄÑÕÉ«»òÕß´óĞ¡
+å…ˆä¸è¦é¡¾è™‘å­—ä½“çš„é¢œè‰²æˆ–è€…å¤§å°
 this task, don't worry about the font color, or
 
 38
 00:01:54,950 --> 00:01:58,500
-»òÕßÖ®ºóµÄÈÎºÎÊÓ¾õÏ¸½Ú
+æˆ–è€…å…¶ä»–ä»»ä½•è§†è§‰ç»†èŠ‚ã€‚
 font size, or any other visual details until later.
 
 39
 00:01:58,500 --> 00:02:00,590
-µ±Äã±àÒë²¢ÇÒÔÊĞíºó Ó¦ÓÃÓ¦¸Ã¿´ÆğÀ´ÏñÕâÑù
+å½“ä½ ç¼–è¯‘å¹¶ä¸”è¿è¡Œåï¼Œåº”ç”¨åº”è¯¥çœ‹èµ·æ¥åƒè¿™æ ·ã€‚
 After you compile and run, the app should look
 
 40
 00:02:00,590 --> 00:02:03,780
-Ñ¡ÔñÕâ¸ö¿òµ±ÄãÍê³ÉµÄÊ±ºò
+å®Œæˆåå‹¾é€‰è¿™ä¸ªæ¡†ã€‚
 something like this. Check this box when you're done.
-

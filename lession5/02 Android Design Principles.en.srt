@@ -76,17 +76,17 @@ it look polished? Does it look professional? How easy is
 
 16
 00:00:48,330 --> 00:00:51,800
-有多容易用？不仅要看起来美美哒，整个
+有多容易使用？不仅要看起来美观大方，整个
 it to use? More than just looking pretty, the entire user
 
 17
 00:00:51,800 --> 00:00:55,490
-用户体验更是至关重要。因为只有30秒来户
+用户体验更是至关重要。因为只有30秒来
 experience is critically important. With 30 seconds to
 
 18
 00:00:55,490 --> 00:00:58,505
-争取用户，着陆过程变得尤为关键。
+争取用户，触达过程变得尤为关键。
 win users over, it's critical that that onboarding process
 
 19
@@ -101,7 +101,7 @@ your app to performing it's main function should be
 
 21
 00:01:04,420 --> 00:01:07,800
-尽可能的简短顺滑。
+尽可能的简短顺畅。
 as short and frictionless as possible. Not only
 
 22
@@ -126,12 +126,12 @@ ways through subtle animations and smooth transitions that contribute
 
 26
 00:01:20,590 --> 00:01:23,890
-这些都会带来强大且轻而易举的感受。
+这些都会给人带来强大且轻而易举的感受。
 to a feeling of power and effortlessness. It should
 
 27
 00:01:23,890 --> 00:01:27,000
-让用户直接与物件接触交互
+他应当让用户直接与物件接触互动
 let users touch and interact with objects directly rather
 
 28
@@ -141,17 +141,17 @@ than having to use buttons and menus. And it should
 
 29
 00:01:29,490 --> 00:01:31,660
-使用丰富的隐喻和图片来替代
+他同时应当使用丰富的隐喻和图片来替代
 use rich imagery and pictures in place of lots
 
 30
 00:01:31,660 --> 00:01:34,370
-过多的文字和长居。提供漂亮而敏感的默认项，使得用户
+过多的文字和长句。他允许用户
 of words and long sentences. It allows users to
 
 31
 00:01:34,370 --> 00:01:37,440
-可以个性化你的app，使之变成他们自己的。
+可以个性化你的app，使之变成他们自己的，同时提供美观且可感知的默认项。
 customize your app, to make it theirs while providing
 
 32
@@ -186,12 +186,12 @@ them available across every device. While it's good practice
 
 38
 00:01:58,750 --> 00:02:01,320
-是一个很好的实践。你可以通过创建与平台的样式主题相符的
+是一个很好的实践。你可以通过创建
 to create a familiar and welcoming experience by creating
 
 39
 00:02:01,320 --> 00:02:03,630
-外观和感受来达到这一点。
+与平台的样式主题相符的外观和感受来达到这一点。
 a look and feel that's consistent with the platforms
 
 40
@@ -216,6 +216,6 @@ own creative vision. Deviation from the guidelines is encouraged,
 
 44
 00:02:16,190 --> 00:02:19,500
-但若你真要这么干，那就带着决心偏离吧。
+但若你真要这么干，心里有数就好。
 but when you do do so, deviate with purpose.
 

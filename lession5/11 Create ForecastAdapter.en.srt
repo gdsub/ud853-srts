@@ -1,31 +1,31 @@
 ﻿1
 00:00:00,270 --> 00:00:02,310
-打开SunShine这个App，我们创建一个
+打开SunShine这个App，为我们的ForecastAdapter创建一个
 Open up the Sunshine app. And we'll create a
 
 2
 00:00:02,310 --> 00:00:06,400
-新的文件夹给我们的ForecastAdapter，扩展的游标适配器。我们
+新的文件，他扩展了游标适配器。我们
 new file for our ForecastAdapter, which extends CursorAdapter. We
 
 3
 00:00:06,400 --> 00:00:08,690
-提供了一个代码的列表来开始
+提供给你一个代码片段来开始
 provided you with a gist of code to get started
 
 4
 00:00:08,690 --> 00:00:12,450
-下面的部分。这些代码重载了newView类函数，实例化了
+下面的部分。这些代码重载了newView方法，实例化了
 below. The code overrides the newView method, where it inflates
 
 5
 00:00:12,450 --> 00:00:15,690
-list_item_forecast的布局分布XML。它同时提供了
+list_item_forecast布局XML。它同时提供了
 the list_item_forecast layout XML. It also provides
 
 6
 00:00:15,690 --> 00:00:18,380
-bindView函数的实现，从游标读取数据
+bindView方法的实现，从游标读取数据
 an implementation for bindView, where it reads from the cursor,
 
 7
@@ -35,42 +35,42 @@ and updates the layout. For example, from the cursor, we
 
 8
 00:00:21,770 --> 00:00:25,470
-读取了天气预报的描述，然后我们到
+读取了天气预报的描述，然后我们在列表项布局
 read the weather forecast description. Then we go and find
 
 9
 00:00:25,470 --> 00:00:28,430
-TextView     在列表的视图层次结构里
+的视图层级中，找到与之对应的TextView。
 the TextView for that within the view hierarchy of the
 
 10
 00:00:28,430 --> 00:00:30,975
-我们寻找了TextView 通过ID
+我们通过ID
 list item layout. We look for the TextView  with the id
 
 11
 00:00:30,975 --> 00:00:33,690
-list_item_forecast_textview。然后我们更新
+list_item_forecast_textview找到这个TextView。然后我们
 list_item_forecast_textview. Then we update the
 
 12
 00:00:33,690 --> 00:00:35,990
-TextView用正确的描述。我们
+用正确的描述 TextView。我们
 textview with the right description. We
 
 13
 00:00:35,990 --> 00:00:38,630
-也在代码里留下一些to do。所以，继续，
+也在代码里留下了一些to do。所以请你继续，
 also left some to dos in the code. So, go ahead and
 
 14
 00:00:38,630 --> 00:00:41,420
-复制文件的内容，完成这些to do。
+复制整个文件，完成这些to do。
 copy over the file and then finish the to dos. In
 
 15
 00:00:41,420 --> 00:00:44,928
-现有的实现中，所有的日期都是同样方式显示的。
+当前实现中，所有的日期都是同样方式显示的。
 the current implementation of the app, all dates are displayed the same.
 
 16
@@ -80,12 +80,12 @@ In the wireframes though, you'll notice that we have a more friendly
 
 17
 00:00:47,340 --> 00:00:50,670
-日期格式。在要点中我们也包含了一些辅助函数还有
+日期格式。在代码片段中我们也包含了一些辅助函数还有
 date format. In the gist we also included some helper methods and
 
 18
 00:00:50,670 --> 00:00:54,090
-日期格式化的字符串。这是由于在我们现有的
+日期格式化用的字符串。这是由于在我们的当前
 strings for date formatting. That's because in our current
 
 19
@@ -100,17 +100,17 @@ In the wireframes though, we have a more friendly date
 
 21
 00:01:00,036 --> 00:01:05,620
-类型，比如今天，明天，周三，周四等等。这是
+类型，比如今天，明天，周三，周四等等。这里是
 format. Such as today, tomorrow, Wednesday, Thursday, etc. Here's that
 
 22
 00:01:05,620 --> 00:01:07,680
-辅助方法的逻辑可以达到的
+要用辅助方法来实现友好的日期字符串的逻辑。
 logic for what the helper method does to get the
 
 23
 00:01:07,680 --> 00:01:11,300
-用户友好的字符串。如果是在这周，会显示今天
+如果是在这周，会显示今天
 friendly date string. If it's this week it says today,
 
 24
@@ -135,27 +135,27 @@ to dos and you added the helper methods and strings,
 
 28
 00:01:22,280 --> 00:01:25,110
-然后继续换掉简单的游标适配器，利用
+接着用ForecastAdapter替换掉简单的游标适配器。
 then go ahead and replace the simple CursorAdapter with
 
 29
 00:01:25,110 --> 00:01:28,660
-ForecastAdapter。当你完成并运行这个app，它会
+在你编译并运行这个app之后，它会
 a ForecastAdapter. After you compile and run the app it'll
 
 30
 00:01:28,660 --> 00:01:31,250
-看上去和之前一样，唯独有一个列表的项目
+看上去和之前一样，只有一种列表项
 look the same as before with only one list item
 
 31
 00:01:31,250 --> 00:01:34,870
-视图类型类型显示出来，尽管现在正在用的ForecastAdapter。
+视图类型类型显示出来，尽管现在已经在用ForecastAdapter，
 view type shown, except now it's using a ForecastAdapter and
 
 32
 00:01:34,870 --> 00:01:37,220
-现在有更好的日期描述。我记得我
+并且现在有了更好的日期描述。我记得我
 now it has better date descriptions. I know that I
 
 33
