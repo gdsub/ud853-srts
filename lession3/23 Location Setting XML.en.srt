@@ -5,17 +5,17 @@ We have our settings screen but no settings.
 
 2
 00:00:03,310 --> 00:00:06,550
-在接下来的几个阶段，你将会在我们的应用中添加两个设置选项
+在接下来的几个章节，你将会在我们的应用中添加两个设置选项
 In the next several sections you're going to be adding our two settings.
 
 3
 00:00:06,550 --> 00:00:08,510
-我将会带你学习如何添加地理位置，作为应用的第一个设置选项
+我将会带你学习如何添加第一个设置选项来设置
 I'll walk you through how we add our first setting for
 
 4
 00:00:08,510 --> 00:00:13,780
-紧接着你将自己动手添加温度的设置选项，所以接下来请仔细听讲
+地理位置，然后你将自己动手添加温度单位的设置选项，所以接下来请仔细听讲
 location, then you'll do the temperature setting on your own, so listen closely.
 
 5
@@ -25,27 +25,27 @@ First we design a preference XML file.
 
 6
 00:00:15,818 --> 00:00:18,320
-根节点需是一个preferencescreen
+根节点应该是一个PreferenceScreen元素
 The root element should be a preference screen.
 
 7
 00:00:19,320 --> 00:00:21,750
-在这个例子中，我们的应用中有一个checkboxpreference
-In this example we have a check box preference and
+在这个例子中，我们的应用中有一个CheckBoxPreference
+In this example we have a CheckBoxPreference and
 
 8
 00:00:21,750 --> 00:00:24,130
-和一个listpreerence
-a list preference inside of it.
+和一个ListPreerence
+a ListPreerence inside of it.
 
 9
 00:00:24,130 --> 00:00:27,260
-为了在应用中添加一个preferences XML文件，
+为了在应用中添加一个Preferences XML文件，
 In order to add the preferences XML file to our app,
 
 10
 00:00:27,260 --> 00:00:31,570
-首先我们需要在资源目录下创建一个XML文件夹
+首先我们需要在资源目录(res)下创建一个XML文件夹
 we first need to create an XML folder under the resources res directory.
 
 11
@@ -55,7 +55,7 @@ Right-click on the res folder, go to new Android resource directory and
 
 12
 00:00:36,680 --> 00:00:39,210
-接着输入XML作为目录的名字
+接着输入XML 作为目录的名字
 then type in XML as the name of the directory.
 
 13
@@ -67,6 +67,7 @@ For resource type you can use XML and then hit OK.
 00:00:44,250 --> 00:00:49,490
 在这个文件夹下，我们点击右键创建一个新的XML资源文件
 Inside this folder, we right-click to create a new XML resource file.
+
 15
 00:00:49,490 --> 00:00:50,650
 我们称之为pref_general
@@ -74,7 +75,7 @@ We call it pref_general,
 
 16
 00:00:50,650 --> 00:00:54,990
-根节点就是preference，就像我们在开发者这边看到的一样
+Root element就是PreferenceScreen，就像我们在开发者这边看到的一样
 and the root element is a preference screen as we saw on the developer's site.
 
 17

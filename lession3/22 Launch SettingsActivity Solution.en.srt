@@ -1,44 +1,44 @@
-1
+ï»¿1
 00:00:00,290 --> 00:00:03,118
-ÎªÁËÆô¶¯ÉèÖÃµÄactivity£¬ÎÒÃÇ½«ÔÚ
+ä¸ºäº†å¯åŠ¨SettingsActivityï¼Œæˆ‘ä»¬å°†ä¿®æ”¹
 In order to launch the SettingsActivity, we modify
 
 2
 00:00:03,118 --> 00:00:07,070
-Mainactivity.javaÎÄ¼şÖĞĞŞ¸Äº¯ÊıOnoptionsitemselectedÖĞµÄ·½·¨
-Mainactivity.java, in the On options item selected method.
+MainActivity.javaæ–‡ä»¶ä¸­çš„OnOptionsItemSelectedå‡½æ•°
+MainActivity.java, in the OnOptionsItemSelected method.
 
 3
 00:00:07,070 --> 00:00:09,360
-µ±ÉèÖÃ²Ëµ¥Ñ¡Ïî±»Ñ¡ÖĞºó£¬ÎÒÃÇ
+å½“è®¾ç½®èœå•é€‰é¡¹è¢«é€‰ä¸­åï¼Œæˆ‘ä»¬
 When the Settings Menu Item is selected, we
 
 4
 00:00:09,360 --> 00:00:13,590
-½«ÔÚSettingsActivityÀàÖĞ´´½¨Ò»¸öĞÂµÄ²¢ÇÒÃ÷È·µÄintent
+å°†åœ¨SettingsActivityç±»ä¸­åˆ›å»ºä¸€ä¸ªæ–°çš„æ˜ç¡®çš„Intent
 create a new, explicit intent, to the SettingsActivity Class.
 
 5
 00:00:13,590 --> 00:00:16,700
-ÎÒÃÇµ÷ÓÃStartactivityÈ¥Æô¶¯Õâ¸öintent
-We call Start activity, to launch this intent.
+æˆ‘ä»¬è°ƒç”¨startActivityå»å¯åŠ¨è¿™ä¸ªintent
+We call startActivity, to launch this intent.
 
 6
 00:00:16,700 --> 00:00:19,290
-ÎÒÃÇ²¢Ã»ÓĞµ÷ÓÃStartActivityÀ´µÃµ½Õâ¸ö½á¹û£¬ÒòÎªÎÒÃÇ
-We don't call StartActivity for result because we're
+æˆ‘ä»¬å¹¶æ²¡æœ‰è°ƒç”¨startActivityæ¥è·å–ä¸€ä¸ªè¿”å›å€¼ï¼Œå› ä¸ºæˆ‘ä»¬
+We don't call startActivity for result because we're
 
 7
 00:00:19,290 --> 00:00:22,640
-²¢²»Ï£Íû´ÓSettingsActivityÖĞµÃµ½½á¹û
+å¹¶ä¸å¸Œæœ›ä»SettingsActivityä¸­å¾—åˆ°ä¸€ä¸ªè¿”å›å€¼
 not expecting a result from the SettingsActivity. Similarly
 
 8
 00:00:22,640 --> 00:00:25,400
-Í¬ÑùµÄ£¬ÔÚÀàdetailactivityÖĞ£¬µ±ÉèÖÃ²Ëµ¥
-in the detail activity class, when the settings menu
+ç±»ä¼¼çš„ï¼Œåœ¨DetailActivityä¸­ï¼Œå½“è®¾ç½®èœå•
+in the DetailActivity class, when the settings menu
 
 9
 00:00:25,400 --> 00:00:28,550
-±»Ñ¡ÖĞÊ±£¬½«»áÎªSettingsActivityÔËĞĞÒ»¸öĞÂµÄintent
+è¢«é€‰ä¸­æ—¶ï¼Œå°†ä¼šè¿è¡Œä¸€ä¸ªæ–°çš„Intentæ¥è·³è½¬åˆ°SettingsActivity
 is selected, we launch a new intent to SettingsActivity.

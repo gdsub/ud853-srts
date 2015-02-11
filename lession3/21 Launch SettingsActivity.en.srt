@@ -1,44 +1,44 @@
-1
+ï»¿1
 00:00:00,390 --> 00:00:04,430
-ÏÖÔÚÎÒÃÇ¿ÉÒÔ´Ó²Ëµ¥ÖĞÆô¶¯SettingsActivity×é¼şÁË
+ç°åœ¨æˆ‘ä»¬å¯ä»¥ä»èœå•ä¸­å¯åŠ¨SettingsActivityç»„ä»¶äº†
 Now it's time to launch the SettingsActivity from the menu item.
 
 2
 00:00:04,430 --> 00:00:07,950
-ÎÒÃÇĞèÒª´ÓMainActivity×é¼şºÍDetailActivity×é¼şÁ½¸öµØ·½Æô¶¯Ëü
+æˆ‘ä»¬éœ€è¦ä»MainActivityç»„ä»¶å’ŒDetailActivityç»„ä»¶ä¸¤ä¸ªåœ°æ–¹å¯åŠ¨å®ƒ
 We need to launch it from two places, the MainActivity and the DetailActivity.
 
 3
 00:00:09,150 --> 00:00:13,000
-È»ºóÓÉ±àÒëÆ÷À´È·±£ËüµÄÕıÈ·ÔËĞĞ  Õâ¾ÍÊÇ
+ç„¶åç”±ç¼–è¯‘å™¨æ¥ç¡®ä¿å®ƒçš„æ­£ç¡®è¿è¡Œ  è¿™å°±æ˜¯
 Afterwards, compiler run the app to make sure that it works. This is what it
 
 4
 00:00:13,000 --> 00:00:16,883
-ÊµÏÖµÄĞ§¹û  Èç¹ûÄãµã»÷MainActivity×é¼şÖĞµÄÉèÖÃ²Ëµ¥
+å®ç°çš„æ•ˆæœ  å¦‚æœä½ ç‚¹å‡»MainActivityç»„ä»¶ä¸­çš„è®¾ç½®èœå•
 should look like. From the MainActivity, if you tap on settings menu,
 
 5
 00:00:16,883 --> 00:00:22,030
-Äã¾Í¿ÉÒÔÌø×ªµ½SettingsActivity×é¼şÁË  Ëü¿´ÆğÀ´ÊÇ¿Õ°×µÄ
+ä½ å°±å¯ä»¥è·³è½¬åˆ°SettingsActivityç»„ä»¶äº†  å®ƒçœ‹èµ·æ¥åº”è¯¥æ˜¯ç©ºç™½çš„
 it should bring you to the SettingsActivity. It is expected for it to be blank,
 
 6
 00:00:22,030 --> 00:00:26,320
-ÒòÎªÎÒÃÇ»¹Ã»ÓĞĞ´ÈÎºÎ¶«Î÷  ÏÖÔÚÈÃÎÒÃÇÊÔÊÔ´ÓDetailActivity×é¼ş½øĞĞÌø×ª
+å› ä¸ºæˆ‘ä»¬è¿˜æ²¡æœ‰å†™ä»»ä½•ä¸œè¥¿  ç°åœ¨è®©æˆ‘ä»¬è¯•è¯•ä»DetailActivityç»„ä»¶è¿›è¡Œè·³è½¬
 because we haven't populated it yet. Now let's try the DetailActivity.
 
 7
 00:00:26,320 --> 00:00:29,940
-Èç¹ûÄãµã»÷ÕâÀïµÄÌìÆøÔ¤¸æ  ¾Í¿ÉÒÔÌø×ªµ½DetailActivity×é¼şÁË
+å¦‚æœä½ ç‚¹å‡»è¿™é‡Œçš„å¤©æ°”é¢„å‘Š  å°±å¯ä»¥è·³è½¬åˆ°DetailActivityç»„ä»¶äº†
 If you tap on the forecast, you can go into the DetailActivity and
 
 8
 00:00:29,940 --> 00:00:33,710
-È»ºó¼ÌĞøÌø×ªµ½SettingsActivity×é¼ş   Íê³ÉÕâÀïµÄÈÎÎñ
+ç„¶åç»§ç»­è·³è½¬åˆ°SettingsActivityç»„ä»¶   å®Œæˆè¿™é‡Œçš„ä»»åŠ¡
 then, you can go into the SettingsActivity. Complete the task and
 
 9
 00:00:33,710 --> 00:00:35,710
-È·±£ÄãµÄAppÊÇÕâÑùÔËĞĞµÄ
+ç¡®ä¿ä½ çš„Appæ˜¯è¿™æ ·è¿è¡Œçš„
 then verify that your App behavior is like this.
