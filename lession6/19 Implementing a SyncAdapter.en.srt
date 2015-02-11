@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,240 --> 00:00:01,350
-让我们看看实现一个非常
+让我们看看实现一个
 Let's take a look at what it will
 
 2
@@ -15,27 +15,27 @@ to write two services. Each service serves the primary
 
 4
 00:00:09,430 --> 00:00:12,530
-目的是送一个表示Android Binder接口的对象
+目的是传递系统框架
 purpose of delivering an object that represents an Android
 
 5
 00:00:12,530 --> 00:00:15,780
-给一个系统框架
+一个实现了Android Binder接口的对象
 Binder interface to one of the system frameworks.
 
 6
 00:00:15,780 --> 00:00:19,400
-Binder实际上是低层次胶水 帮助在
+Binder实际上是较为底层的粘合物，帮助在
 A Binder is actually the low-level glue that implements
 
 7
 00:00:19,400 --> 00:00:23,400
-在Android系统里实现线程间的交流。每一次你使用
+在Android系统里实现跨进程间的交流。每一次你使用
 cross process communication in Android. You've been using Binders
 
 8
 00:00:23,400 --> 00:00:26,750
-Android系统服务时都有用到Binder
+Android系统服务时都会用到Binder
 every time you talk to an Android system service.
 
 9
@@ -55,7 +55,7 @@ as AIDL to help define these interfaces. We're not
 
 12
 00:00:37,290 --> 00:00:39,710
-在这里讲到所有的，但是利用服务和Binder
+在这里讲到所有的相关内容，但是利用服务和Binder
 going to cover all this here, but there's a lot
 
 13
@@ -75,7 +75,7 @@ Authenticator Service and an Authenticator. But it will only
 
 16
 00:00:48,960 --> 00:00:51,780
-被Android的账户框架用以允许我们
+被用于Android的账户框架以允许我们
 be used by the Android accounts framework to allow us
 
 17
@@ -90,7 +90,7 @@ And the account framework requires that there be
 
 19
 00:00:57,300 --> 00:01:00,780
-认证服务提供一个认证器
+有一个由认证服务提供的认证器
 an authenticator delivered by an authenticator Service. You'll
 
 20
@@ -100,17 +100,17 @@ see that our authenticator is just a series
 
 21
 00:01:02,890 --> 00:01:05,250
-的Stub。它们会在每次被调用时丢出
+的Stub。它们会在每次被调用时丢出异常
 of stubs, with exceptions that get thrown for
 
 22
 00:01:05,250 --> 00:01:07,290
-异常。这样没有异常的话就能证明
+以表明它没有被用到。
 each call just to prove that it isn't
 
 23
 00:01:07,290 --> 00:01:12,210
-它没有被用到。最后一点，这一个章节几乎
+最后一点，这一个章节几乎
 really used. One final note. This section approximately
 
 24
@@ -145,7 +145,7 @@ code that we're about to paste in really
 
 30
 00:01:33,200 --> 00:01:36,920
-完全从developer.android.com website拷贝的
+完全从developer.android.com 网站拷贝的
 just comes from the developer.android.com website, and as I
 
 31
@@ -155,37 +155,37 @@ mentioned earlier it's just a stub. You can tell
 
 32
 00:01:40,660 --> 00:01:43,100
-因为调用任何这些函数都会丢出一个异常
+因为除了构造函数
 because we throw exceptions for calling any of the
 
 33
 00:01:43,100 --> 00:01:46,970
-除了构造函数
+调用任何这些函数都会丢出一个异常
 functions except for the constructor. And one
 
 34
 00:01:46,970 --> 00:01:51,830
-然后另一个文件：SunshineAuthenticatorService 这个会有多一些
+然后创建另一个文件：SunshineAuthenticatorService 
 more file. Create SunshineAuthenticatorService. This is more code
 
 35
 00:01:51,830 --> 00:01:54,170
-代码是专门写来我们用的。它允许
+我们会用到很多这个里面的代码
 that is written for us. It allows
 
 36
 00:01:54,170 --> 00:01:57,260
-账户经理访问这个空的认证器
+账户管理通过我们刚刚粘贴进来的代码
 the account manager to access the empty authenticator
 
 37
 00:01:57,260 --> 00:02:03,430
-我们刚刚粘贴进来的那个。现在我们在strings.xml里添加账户类型
+访问这个空的认证器。现在我们在strings.xml里添加账户类型
 that we just pasted in. Now we add the account type in our strings.xml. The
 
 38
 00:02:03,430 --> 00:02:05,920
-这个账户类型字符串建议它是专门供
+这个账户类型字符串表明它是专门供
 account type string suggests that it is specific
 
 39
@@ -215,17 +215,17 @@ a content authority string. Note that this matches
 
 44
 00:02:19,370 --> 00:02:24,390
-我们的内容提供商字符串保持一致。我们一会会修整这个XML文件 让它们都用
+我们的Content Provider字符串保持一致。我们一会会修整这个XML文件 让它们都用
 our content provider string. We'll fix the XML file later so they both use
 
 45
 00:02:24,390 --> 00:02:29,081
-这同一个字符串。创建一个新的XML素材文件，文件名是
+同一个字符串。创建一个新的XML素材文件，文件名是
 this same string. We create a new XML resource file, filename
 
 46
 00:02:29,081 --> 00:02:34,950
-authenticator.xml，Root Element：account-authenticator
+authenticator.xml，创建一个元素Root Element内容为account-authenticator
 authenticator.xml, with root element account-authenticator.
 
 47
@@ -240,7 +240,7 @@ actually a service that needs to be registered
 
 49
 00:02:40,680 --> 00:02:44,810
-跟包经理注册。
+进行注册。
 with a package manager in AndroidManifest.xml. Here's
 
 50
@@ -280,7 +280,7 @@ this is all just so that the SyncAdapter can be
 
 57
 00:03:05,530 --> 00:03:08,350
-账户连接起来。你实际上并不会真正用到
+账户关联起来。你实际上并不会真正用到这些东西
 tied to an account. You don't actually use this
 
 58
@@ -305,7 +305,7 @@ the content provider with the server. Also, we'll set
 
 62
 00:03:20,799 --> 00:03:25,220
-android:exported=false。 我们在默认设置里设置了
+android:exported为false。 我们把它放在了默认设置里
 android:exported equals false. We had it at the default setting.
 
 63
@@ -320,32 +320,32 @@ let's change the authority to use our new string. Now
 
 65
 00:03:31,530 --> 00:03:34,930
-现在来做一些特殊的许可权。我们需要能
+现在来添加一些系统权限。我们需要能支持
 for some additional permissions. We need to be able to
 
 66
 00:03:34,930 --> 00:03:38,790
-读取和写入同步配置。这是能理解的。我们也
+读取和写入同步配置。这是比较合理的需求。我们也
 read and write sync settings. That makes sense. We also
 
 67
 00:03:38,790 --> 00:03:41,810
-必须验证用户， 尽管我们不会真正用到
+必须验证用户， 尽管我们大多数情况下
 have to authenticate accounts, even though we're not really using
 
 68
 00:03:41,810 --> 00:03:45,420
-这些在任何情况下。这些许可权都不是它的用户
+都用不到它们。这些许可权都不是它的用户
 them for anything. None of these permissions are one's users
 
 69
 00:03:45,420 --> 00:03:48,530
-应该关心的。但是作为开发者，我们总是想要
+应该关心的。但是作为开发者，当我们添加新的许可的时候
 should be concerned about. But as developers, we always want
 
 70
 00:03:48,530 --> 00:03:51,780
-非常小心 当我们添加新的许可的时候
+我们总是要非常小心 
 to be careful when we have to add new permissions.
 
 71
@@ -365,12 +365,12 @@ adapter class. Hit Ctrl+I and then Ctrl+O
 
 74
 00:04:00,683 --> 00:04:04,900
-这帮助我们在构建函数里创建所有需要的抽象函数
+这帮助我们在构建函数里创建所有需要重写的抽象方法
 to implement the necessary abstract methods in constructor.
 
 75
 00:04:04,900 --> 00:04:07,170
-我们会使用这第一个构建函数。我们会
+我们会使用第一个构造函数。我们会
 We'll use the first constructor. We'll fill
 
 76
@@ -415,7 +415,7 @@ need one more XML file. Create syncadapter.xml with
 
 84
 00:04:35,750 --> 00:04:39,120
-Root element：sync-adapter。重申一次，这个XML
+添加一个根元素sync-adapter。重申一次，这个XML
 root element sync-adapter. Once again, this XML
 
 85
@@ -435,7 +435,7 @@ syncs. Whether or not it's user visible. Whether it
 
 88
 00:04:48,890 --> 00:04:52,180
-是否支持上传。这会改变内容提供商
+是否支持上传。这会改变Content Provider
 supports uploading, which changes the way the content provider
 
 89
@@ -455,7 +455,7 @@ application, and I bet you know what comes next. You're
 
 92
 00:05:02,350 --> 00:05:05,100
-是的，你必须向包经理注册
+是的，你必须向包管理注册
 right. You have to register the sync adapter service
 
 93

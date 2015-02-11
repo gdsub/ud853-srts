@@ -1,16 +1,16 @@
 1
 00:00:00,160 --> 00:00:03,350
-好的，完成啦。看看我们结果如何。如果你
+好的，完成啦。看看我们结果如何。要是你能猜出来
 All right, you're done. Let's look at the solution. If you
 
 2
 00:00:03,350 --> 00:00:06,570
-猜我们要把代码加入在Sunshine sync adapter的里面
+我们会把代码加入在Sunshine sync adapter的里面
 guessed that we were going add this code to Sunshine sync adapter,
 
 3
 00:00:06,570 --> 00:00:09,570
-你可是再对不过了。我们就是要把代码加在那里面，
+那就太牛了！我们就是要把代码加在那里面，
 you would've been right. We're actually going to place the code right
 
 4
@@ -25,7 +25,7 @@ So what do we do? So we start off with the
 
 6
 00:00:14,840 --> 00:00:18,370
-当前的一天开始着手。然后我们在昨天的日期这个数据上
+当前的日期开始着手。然后我们在昨天的日期这个数据上
 calendar object, for the current day. Then we add negative 1 to
 
 7

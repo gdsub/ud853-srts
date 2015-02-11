@@ -5,7 +5,7 @@ All right, here's a big one. Finish
 
 2
 00:00:03,330 --> 00:00:06,290
-SynchAdapter 完成用它来获取天气数据，
+SynchAdapter 完成，用它来获取天气数据，
 the SynchAdapter, making it fetch the weather
 
 3
@@ -20,12 +20,12 @@ the updateWeather function within the ForecastFragment to
 
 5
 00:00:12,740 --> 00:00:17,710
-进行同步处理。这里需要注意一些，把处理意向的代码放进
+进行同步处理。这里需要注意一些，把onHandleIntent方法的代码放进
 start a sync with the SyncAdapter. Some things here. Pull the code from on
 
 6
 00:00:17,710 --> 00:00:21,070
-SyncAdapter中。处理意向的代码是
+SyncAdapter中。onHandleIntent方法的代码是
 handle intent into our SyncAdapter. On handle
 
 7
@@ -40,32 +40,32 @@ The good news is that abstract threaded
 
 9
 00:00:27,040 --> 00:00:29,510
-会提供一个后端线程，用来处理
+会提供一个后台线程，来处理
 sync adapter provides a background thread to
 
 10
 00:00:29,510 --> 00:00:31,460
-从服务器端的数据，就像是
+从服务器端获取的数据，就像是
 run the server fetch on, just like
 
 11
 00:00:31,460 --> 00:00:35,370
-意向(intent)服务一样。 同时会从utility类中
+Intent服务一样。 同时会从utility类中
 intent service does. Also, just fetch the location
 
 12
 00:00:35,370 --> 00:00:38,110
-获取地点数据。最终，我们
+获取位置数据。最终，我们
 query from our utility class. Eventually, we
 
 13
 00:00:38,110 --> 00:00:40,030
-的目的是通过运行同步功能就像没有涉及到
+的目的是在无用户参与的情况下进行同步操作
 want to run syncs like this without any
 
 14
 00:00:40,030 --> 00:00:42,690
-用户一样。最终，同步adaptor会在我们
+最终，同步adaptor会在我们
 involvement of the user. Finally, make the
 
 15

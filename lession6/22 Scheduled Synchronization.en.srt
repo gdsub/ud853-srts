@@ -5,42 +5,42 @@ Well, we're now using the sync adapter, and things are
 
 2
 00:00:03,469 --> 00:00:06,040
-工作差不多一样。我们想要这个应用能够
+工作差不多一样。我们希望这个应用能够
 working pretty much as before. We want the app to do
 
 3
 00:00:06,040 --> 00:00:08,710
-很好的进行同步，同时希望能看到我们的菜单栏里旧的内容得到
+很好的进行同步，同时我们不想再使用
 this synchronization cleverly, and we'd like to get rid of
 
 4
 00:00:08,710 --> 00:00:11,780
-刷新。让我们把其他这些我们需要同步的活动再来
+原来菜单里的刷新按钮。让我们把其他这些我们需要同步的活动
 that old Refresh menu item. Let's start by cleaning up all
 
 5
 00:00:11,780 --> 00:00:14,640
-整理一遍。发现其实可以确定，我们并不需要
+整理一下。我们其实并不需要
 the other routines we have to sync. So we certainly
 
 6
 00:00:14,640 --> 00:00:19,340
-其他像FetchWeatherTask这样的东西，还有些类似在
+像FetchWeatherTask所需完成的工作，还有些类似在
 don't need any of this other stuff like FetchWeatherTask, or all
 
 7
 00:00:19,340 --> 00:00:22,100
-Sunshine 服务中用过的那些东西， 同时我们将需要把manifest 文件进行
+Sunshine 服务要完成的任务， 同时我们需要把manifest 文件进行相应
 this stuff we did in Sunshine service, and we'll want to clean
 
 8
 00:00:22,100 --> 00:00:25,170
-一番整理。 我们再次确定，这些东西我们都用不了
+清理一下。这些东西我们都用不着了。
 up the manifest accordingly. We certainly don't need either one of
 
 9
 00:00:25,170 --> 00:00:28,430
-在偏好设置中，我们则需要把它设
+在偏好设置中，我们则可以立即把它设
 these anymore. And in Preferences, we can just change
 
 10
@@ -50,7 +50,7 @@ that to sync immediately. So now we're really using this
 
 11
 00:00:30,880 --> 00:00:34,380
-同步adapter。现在看看，似乎还有一点问题，这个处理似乎并不是那么
+同步adapter。现在看看，似乎还有一点问题，我们似乎并不是那么
 sync adapter everywhere. We have a problem though. We're not
 
 12
@@ -60,22 +60,22 @@ being very smart. The user still has all sorts of
 
 13
 00:00:36,800 --> 00:00:39,070
-一个空白的列表。我们真正想要的是一个更加
+一个空白的列表。我们希望的是同步能够更加智能。
 places where they see an empty list. We want to
 
 14
 00:00:39,070 --> 00:00:43,422
-智能的同步处理。在安卓2.2之后，安卓添加了一个周期性同步的
+在安卓2.2之后，安卓添加了一个周期性同步的
 sync more intelligently. In Android 2.2 Froyo, Android added the
 
 15
 00:00:43,422 --> 00:00:47,890
-功能呢。我们可以添加一个帮助方法
+功能。我们可以添加一个helper方法
 ability to have sync adapter's sync periodically. We can add
 
 16
 00:00:47,890 --> 00:00:50,580
-在同步adapter中。
+到syncAdapter中。
 a helper method to do this in our sync adapter.
 
 17
@@ -85,52 +85,52 @@ The problem is, this method isn't as smart as
 
 18
 00:00:53,270 --> 00:00:55,030
-聪明，它并不能很酷的来进行
+聪明，它并不能准确的提示用户
 we'd like it to be, it still won't do all
 
 19
 00:00:55,030 --> 00:00:57,800
-重复提示，就像我们期待的那样。
+并且在后台分批完成任务。
 that cool batching with exact repeating alarms that we'd
 
 20
 00:00:57,800 --> 00:01:01,390
-庆幸的是，我们们在API 第 19 版之后我们
+庆幸的是，我们这里增加了实现这个需求的代码。
 like it to. Fortunately, we've added something that does just
 
 21
 00:01:01,390 --> 00:01:04,010
-终于不需要在做这样的实现了。
+不过在API level 19之后是不支持的。
 that, but it's not available until API level 19.
 
 22
 00:01:04,010 --> 00:01:09,230
-弹性时间在处理不精确的重复警告的优势就是，
+为了利用弹性时间处理非精确的重复警告，
 Taking advantage of flexible time to do inexact repeating arms,
 
 23
 00:01:09,230 --> 00:01:12,780
-能够让我们在Sunshine同步adapter 中设置一些好的默认值。
+我们要在Sunshine同步adapter 中设置一些适当的默认值。
 let's set some nice defaults for our Sunshine sync adapter.
 
 24
 00:01:12,780 --> 00:01:15,665
-首先，我们添加这些常数。为了让我们的代码更
+首先，我们添加这些常量。为了让我们的代码更
 First we'll add these constants. To make things a little
 
 25
 00:01:15,665 --> 00:01:18,120
-清楚，我们需要增加另一个功能，
+清楚，我们需要增加另一个函数，
 clearer in our code let's add another function
 
 26
 00:01:18,120 --> 00:01:20,540
-当新的账户被创造以后来让我们调用。
+当新的账户被创建以后来让我们调用。
 that we'll call when a new account is created,
 
 27
 00:01:20,540 --> 00:01:23,148
-然后我们将把这些重要的参数设置一下。就像
+然后我们将设置一些重要的flag。就像
 and here we'll set some important flags. Such as
 
 28
@@ -150,7 +150,7 @@ our periodic sync will not be enabled. Since we're
 
 31
 00:01:32,890 --> 00:01:35,830
-让我们来做一个立即同步处理，然后我们
+让我们来执行一个同步处理，然后我们
 just starting off let's do an immediate sync, then
 
 32
@@ -160,47 +160,47 @@ we can call it from a strategic place and
 
 33
 00:01:37,790 --> 00:01:40,904
-同步账户。最后，通过添加一个initializeSyncAdapter 函数，
+同步账户。最后，
 get sync account. Finally, we can make the interface
 
 34
 00:01:40,904 --> 00:01:42,319
-我们就可以想外部提供一个界面，这使得我们
+通过添加一个initializeSyncAdapter 函数，
 to the world a little bit cleaner by
 
 35
 00:01:42,319 --> 00:01:46,880
-的代码变得更清楚了。 这就让账户被简单的确定是我们
+我们可以使UI更加简洁
 adding an initializeSyncAdapter function. That's simply makes sure
 
 36
 00:01:46,880 --> 00:01:49,170
-刚刚建立的那个账户。现在，我们来看onCreate函数，在
+这就确保了账户被成功建立了。现在，
 that an account has been created. And now
 
 37
 00:01:49,170 --> 00:01:51,620
-主要活动中的这个函数， 
+我们来看一下main Activity里的onCreate函数，
 inside of the main activity in the onCreate, we
 
 38
 00:01:51,620 --> 00:01:53,140
-我们可以调用这个新的函数
+我们可以在这里面调用刚刚创建的新函数
 can just make a call to that new
 
 39
 00:01:53,140 --> 00:01:55,570
-这样，这个函数将确定那些输给同步adapter 的参数是
+同时它会确保
 function. And it'll make sure that the parameters for
 
 40
 00:01:55,570 --> 00:01:57,990
-正确的。让我们打开模拟器来看看
+我们对syncAdapter所传递的参数是正确的。
 our sync adapter are set up correctly. Lets
 
 41
 00:01:57,990 --> 00:01:59,630
-这些有什么影响。
+让我们打开模拟器来看看这些有什么影响。
 see if this has any impact on our emulator.
 
 42
@@ -210,30 +210,30 @@ The new version of Sunshine right from the start shows all of current
 
 43
 00:02:05,040 --> 00:02:07,840
-天气。对于同步的
+天气。要使syncAdapter能够成功地
 weather. For a sync with a sync
 
 44
 00:02:07,840 --> 00:02:10,530
-adapter来说 ，它会周期性的在后台进行同步处理。
+在后台进行周期性的同步操作，
 adapter to happen successfully at periodic intervals
 
 45
 00:02:10,530 --> 00:02:12,038
-我们必须要由一个
+你需要一个可同步的ContentProvider
 in the background you must: have a
 
 46
 00:02:12,038 --> 00:02:15,620
-ContentProvider 来标记这些同步性，并且在SyncAdapter 中激活这个
+为SyncAdapter开启自动同步
 ContentProvider marked as syncable, enable automatic sync
 
 47
 00:02:15,620 --> 00:02:18,470
-自动同步，来完成一个初始化的立即同步
+初始化immediate sync
 for the SyncAdapter, do an initial immediate
 
 48
 00:02:18,470 --> 00:02:21,120
-或者设置一个微秒的时间段。
+最后设置一个同步的间隔时间
 sync, or set an interval in milliseconds.

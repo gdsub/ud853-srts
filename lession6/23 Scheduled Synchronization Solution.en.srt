@@ -1,25 +1,25 @@
 1
 00:00:00,530 --> 00:00:04,210
-你的确需要一个内容提供者用来标记同步运行，这个和激活
+你的确在SyncAdapter中需要一个可同步的Content Provider
 You indeed must have a content provider marked as syncable, as well as
 
 2
 00:00:04,210 --> 00:00:06,610
-自动同步是一样的。
+同时需要启用自动同步功能
 enable automatic sync for the sync adapter.
 
 3
 00:00:06,610 --> 00:00:08,250
-你就不需要去安排一个立即同步
+但你并不需要像我们这里一样
 You don't need to schedule an immediate
 
 4
 00:00:08,250 --> 00:00:12,290
-尽管对于用户来说这个做法不错。跟我做的一样，
+使用immediate sync，尽管对于用户来说这个做法不错。然后，还有个小地方需要注意
 sync, although it's nice for users, as we did. And, this is a minor
 
 5
 00:00:12,290 --> 00:00:17,060
-你不需要设置这个微秒时间段，你需要的是设置成秒时间段。
+在设置时间的时候单位不是微秒，而是秒。
 note, you don't set the interval in milliseconds, but instead set it in seconds.
 

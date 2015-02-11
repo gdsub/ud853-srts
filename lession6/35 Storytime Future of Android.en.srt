@@ -85,7 +85,7 @@ it possible. To facilitate this, we're seeing new approaches
 
 18
 00:00:58,850 --> 00:01:02,010
-上网的新途径，网格网，白色空间，或者甚至
+上网的新途径，网格网络，白色空间，或者甚至
 to getting online, mesh networks, white spaces, or even
 
 19
@@ -105,7 +105,7 @@ will start to disappear. In the same way that
 
 22
 00:01:12,490 --> 00:01:14,810
-洗盘机，汽车或者电视的一部分时
+洗碗机，汽车或者电视的一部分时
 we don't think of computers as computers once they
 
 23
@@ -125,12 +125,12 @@ watches and [UNKNOWN]. We'll come to expect that anything that
 
 26
 00:01:23,980 --> 00:01:26,800
-能够通过无线因特网连接能改善的东西
+每个领域都能产生一个能够通过无线因特网
 can be improved through the incorporation of a wireless internet
 
 27
 00:01:26,800 --> 00:01:30,820
-都会有那么一个。为了使这发生，我们需要
+来进行连接的设备。为了使这发生，我们需要
 connection will simply have one. For that to happen, we need
 
 28
@@ -160,7 +160,7 @@ without having to touch a screen or keyboard. Screen
 
 33
 00:01:46,470 --> 00:01:49,970
-屏幕正在变得过于锐利，
+屏幕正在变得更加锐利，
 themselves have become so   that pixel densities aren't
 
 34
@@ -240,7 +240,7 @@ are the same skills we'll use tomorrow
 
 49
 00:02:35,810 --> 00:02:38,620
-控制周遭一切时所使用的。我们已经
+控制周围一切时所使用的。我们已经
 to control everything around us. We've taken
 
 50

@@ -35,7 +35,7 @@ things we wanted to point out is how not to
 
 8
 00:00:21,870 --> 00:00:25,920
-怎么不会把我们的通知变成垃圾
+怎么避免把我们的通知变成垃圾消息
 be spammy with our notification. Our app will display at most
 
 9
@@ -45,7 +45,7 @@ a single notification. It really wouldn't make sense if these
 
 10
 00:00:29,080 --> 00:00:33,120
-排起长队真的没有什么意义。它们也没有足够的内容显示了
+排起长队真的没有什么意义。而且消息本身也不足以提供完成的上下文信息
 notifications stacked up anyhow. They don't display enough information to
 
 11
@@ -55,12 +55,12 @@ give context. The key thing with notifications is to deliver
 
 12
 00:00:36,250 --> 00:00:39,970
-并且以一种标准的方式格式化
+并且遵循一种标准的方式
 a useful morsel of information, formatted in a standard way, so
 
 13
 00:00:39,970 --> 00:00:42,760
-这样它可以与系统其它的通知协调
+这样它可以与系统其它的通知互相协调
 that it harmonizes with the rest of the system. We'll
 
 14
@@ -80,7 +80,7 @@ well as a format string for the body of the notification.
 
 17
 00:00:51,210 --> 00:00:54,610
-让我们实现通知的内部同步适配器
+让我们在SyncAdapter中实现通知的功能
 Let's implement the notification inside of our sync adapter.
 
 18
@@ -95,12 +95,12 @@ the database. So, we'll create projection and column indices
 
 20
 00:01:00,100 --> 00:01:04,110
-为天气id创建列索引值
+为数据库创建列标题和其在数组中对应的位置标号，包括Weather ID,
 value in our sync adapter, for the weather id. Description,
 
 21
 00:01:04,110 --> 00:01:07,320
-描述为max 和 min TEMP
+Description，Max_TEMP 和 Min_TEMP
 max and then temperature, let's add a function to
 
 22
@@ -185,11 +185,11 @@ sent with the NotificationManager. Hint: an
 
 38
 00:02:03,770 --> 00:02:06,860
-提示，显式intent是一个不错的主意
+提示：显式intent是一个不错的主意
 explicit intent to our main activity is
 
 39
 00:02:06,860 --> 00:02:11,280
-这里有你想读的一些文档
+关于该功能的相关内容，你可以参考这些文档
 a good idea here. There's lots of documentation on this you'll want to read.
 

@@ -35,27 +35,27 @@ The next thing to do is to move the function
 
 8
 00:00:21,270 --> 00:00:25,400
-在地图中打开偏好地址的方法移到ForecastFragmen里去。
+在地图中把openPreferredLocation方法移到ForecastFragmen里去。
 open preferred location in map over to forecast fragment. Instead of
 
 9
 00:00:25,400 --> 00:00:28,170
-我们不使用shared preference来获取这额值，而是
+我们不使用shared preference来获取这些值，而是
 using shared preferences to get these values, we can actually
 
 10
 00:00:28,170 --> 00:00:30,870
-从ForecastAdapter获取指针。我们
+从ForecastAdapter获取Cursor(游标)。我们
 get the cursor from the forecast adapter. We can get
 
 11
 00:00:30,870 --> 00:00:34,480
-可以让我们的指针移到一个合理的位置，
+可以让我们的游标移到一个合理的位置，
 our cursor moved to a reasonable position, and then build
 
 12
 00:00:34,480 --> 00:00:39,160
-然后创建经纬度冒号连接的字符串。
+然后创建经纬度以冒号连接的字符串。
 our new string which is just latitude colon longitude. We'll
 
 13
@@ -75,12 +75,12 @@ that's it. Well, at least for the code. We still
 
 16
 00:00:47,630 --> 00:00:51,600
-在XML里做一些事儿。让我们在选项被选中时候把R.ID.action映射
+在XML里做一些事儿。我们把R.ID.action映射
 need to do some work in XML. Let's move this R.ID.action
 
 17
 00:00:51,600 --> 00:00:55,300
-移动到ForecastFragment里。
+移动到ForecastFragment里的onOptionsItemSelected方法中。
 map now over to forecast fragment inside of it on
 
 18

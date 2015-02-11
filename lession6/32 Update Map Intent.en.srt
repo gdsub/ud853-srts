@@ -25,7 +25,7 @@ do the same thing with location queries. Unfortunately,
 
 6
 00:00:14,440 --> 00:00:18,680
-不幸的是，他们不总是同意。使用location表里存储的
+不幸的是，他们总是不一致。使用location表里存储的
 they don't always agree. Implement maps using the coordinates
 
 7

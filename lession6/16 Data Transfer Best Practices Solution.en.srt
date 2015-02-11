@@ -15,17 +15,17 @@ article. So you'd just be wasting a lot of bandwidth. Downloading
 
 4
 00:00:10,030 --> 00:00:13,270
-所有文章而不下载图片实际上并不会帮助我们提高效率
+所有文章而不下载图片实际上是不会帮助我们提高效率的，
 all the articles without pictures actually doesn't improve our efficiency if
 
 5
 00:00:13,270 --> 00:00:16,560
-如果你只是下载头版，因为你仍然需要
+比如你只是下载头版，因为当一篇文章被点开时
 you're just downloading the front page, because you'll still need to
 
 6
 00:00:16,560 --> 00:00:19,470
-启动网络连接来下载图片 当一篇文章被点开时
+你仍然需要启动网络连接来下载图片
 activate the radio to download those pictures whenever an article is
 
 7
@@ -40,21 +40,21 @@ articles linked to from that front page, 'cause they're the most likely
 
 9
 00:00:25,360 --> 00:00:27,010
-在用户打开APP后
+在用户打开APP后被读到的。
 to be read as the user starts
 
 10
 00:00:27,010 --> 00:00:29,280
-被读到的。之后你可以逐步
+之后你可以在用户移动到
 browsing through the app. You can then incrementally
 
 11
 00:00:29,280 --> 00:00:31,640
-下载更多的文章每当用户将页面
+未进行预读的页面时
 download more articles each time the user moves
 
 12
 00:00:31,640 --> 00:00:34,460
-移动到还没有提前下载的页面时
+逐步下载更多的文章
 into an area you haven't pre-fetched for yet.
 

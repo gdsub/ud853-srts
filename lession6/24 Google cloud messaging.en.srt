@@ -1,10 +1,11 @@
 ﻿1
 00:00:01,030 --> 00:00:04,939
+非准确重复警告虽然比准确重复警告要好一些，
 Inexact repeating alarms. Infinitely better than exact repeating alarms, but
 
 2
 00:00:04,939 --> 00:00:08,690
-任何类型的重复报警的问题是
+但是它仍然不是理想的。任何类型的重复报警的问题是
 still far from ideal. The problem with any kind of repeating
 
 3
@@ -19,7 +20,7 @@ for updates. So the more frequently you poll, the fresher the
 
 5
 00:00:14,530 --> 00:00:17,130
-你获得的数据也更新鲜，但是电池寿命成本越高
+你获得的数据也更新，但是电池寿命就越低
 data you can display, but the higher the cost in
 
 6
@@ -39,7 +40,7 @@ You could just let the user decide the update frequency themselves,
 
 9
 00:00:26,530 --> 00:00:29,140
-但这样做的话，你不再那么充满魔力了
+但这样做的话，程序就不再那么充满魔力了
 but then you lose the magic. If only there was
 
 10
@@ -59,7 +60,7 @@ directly when there's data ready to be downloaded. Or it
 
 13
 00:00:39,340 --> 00:00:41,550
-甚至它本身可以包括消息有效负载的新数据
+甚至它本身可以将新数据放入信息负载中
 can even include the new data in the message payload
 
 14
@@ -84,7 +85,7 @@ which will immediately improve battery life and also improve the
 
 18
 00:00:54,630 --> 00:00:58,036
-你的应用内容的新鲜度。需要同步数据时，
+你的应用内容的新鲜度。同时，
 freshness of your app. And instead, rely on your server
 
 19
@@ -99,12 +100,12 @@ be simple tickles, that trigger a sync adapter by notifying your
 
 21
 00:01:04,785 --> 00:01:07,350
-通知应用程序有新数据或需要下载
+来通知应用程序有新数据或需要下载
 app that there is new data or need to download.
 
 22
 00:01:07,350 --> 00:01:10,560
-也可以携带信息本身
+也可以将新数据放入消息的负载中发送出去。
 Or you can include the new data within the message payload.
 
 23

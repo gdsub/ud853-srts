@@ -5,22 +5,22 @@ The most important thing you have to remember is that
 
 2
 00:00:02,260 --> 00:00:05,850
-每次你传输数据，无论多小
+每次你传输数据的时候，无论数据量多小
 every time you transfer data, no matter how small, the radio
 
 3
 00:00:05,850 --> 00:00:10,130
-无线电就要运作至少半分钟
+无线电都要运作至少半分钟
 could stay powered up for nearly half a minute. So every
 
 4
 00:00:10,130 --> 00:00:12,790
-所以你的决策要基于最小化
+所以你的决策要基于
 decision you make will be based on minimizing the number of
 
 5
 00:00:12,790 --> 00:00:16,540
-它运作的时间。但是这里也需要平衡考虑
+尽量减少传输的次数的原则上。当然了也有一种折衷的选择
 times that this happens. But of course there's a balance here.
 
 6
@@ -50,12 +50,12 @@ downloading data that's never going to be used. Now I could go
 
 11
 00:00:31,980 --> 00:00:34,750
-这里展开来我能讲一小时，不过Dan快等不及了
+这里要是展开来我能讲一小时，不过Dan快等不及了
 on for hours on this topic, but Dan's getting impatient. And
 
 12
 00:00:34,750 --> 00:00:36,740
-你能从他那儿学到怎样才是最佳实践
+你能从他那儿学到怎样去实现上面这些关于传输优化的技能
 you can learn the details on how to implement each of
 
 13
@@ -100,7 +100,7 @@ I just described, let's consider what the best practice would be
 
 21
 00:00:58,940 --> 00:01:01,570
-什么才是最佳时间
+什么才是最佳的实现方法
 if you were building something like a news reader app. How
 
 22

@@ -15,17 +15,17 @@ Key, label, and something like true, false, and default.
 
 4
 00:00:10,278 --> 00:00:14,010
-我们将要添加一些偏好在之前的通用xml里， 
+然后我们将要添加一些额外的偏好在之前的通用xml里和
 Then we'll additional preference into pref general xnl, a check
 
 5
 00:00:14,010 --> 00:00:17,560
-一个检验栏被我们定义了。
+一些checkbox来对应我们所定义的这些设置项
 box preference that uses those strings we just defined.
 
 6
 00:00:17,560 --> 00:00:20,730
-让我们来打开我们sync adaptor。 在提示功能中，
+让我们来重新过一遍我们syncAdaptor。 在提示功能中，
 Let's go over to our sync adaptor. In the notify
 
 7
