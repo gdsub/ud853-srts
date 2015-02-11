@@ -10,7 +10,7 @@ jump in here. Catherine has already said that
 
 3
 00:00:04,110 --> 00:00:06,410
-刷新按钮只是为了debug
+刷新按钮只是为了调试
 the refresh button is for debugging only, but
 
 4
@@ -20,7 +20,7 @@ let's look at why. In real life, you
 
 5
 00:00:08,600 --> 00:00:10,720
-你应该总是将刷新按钮隐藏
+你应该尽量从应用中去掉刷新按钮
 should always seek to eliminate the refresh button
 
 6
@@ -74,7 +74,7 @@ and sync with the cloud should be a given. But like
 
 16
 00:00:43,300 --> 00:00:47,230
-但是就像我们之前说过的，这是为了debug。所以比起输出语句
+但是就像我们之前说过的，这是为了调试。所以就像代码中的输出打印语句一样
 we said, this is for debugging, so like print line it's
 
 17
