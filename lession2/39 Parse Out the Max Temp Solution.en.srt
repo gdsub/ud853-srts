@@ -1,11 +1,11 @@
 1
 00:00:00,340 --> 00:00:03,360
-我们来看看这个列表（list）
+我们来看看这个JSON中的叫list的数组来寻找答案
 For the solution we look for the list array.
 
 2
 00:00:03,360 --> 00:00:07,070
-列表中每个元素代表一天的天气预告
+list数组中每一项代表一天的天气预告
 Each element in the list represents one days forecast. Given
 
 3
@@ -25,12 +25,12 @@ look like. We change the JSON string into a JSON
 
 6
 00:00:15,340 --> 00:00:18,590
-然后我们来处理列表
+然后我们查找叫list的数组
 object. Then we look for the list array. Within that
 
 7
 00:00:18,590 --> 00:00:20,730
-在列表中我们找到了我们关注的那天
+在数组中我们找到了我们关注的那天
 we find the day we care about. Then we look
 
 8
