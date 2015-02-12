@@ -20,7 +20,7 @@ on the Udacity platform. And we'll be able to verify that
 
 5
 00:00:12,740 --> 00:00:16,420
-你的代码是否正确。在这个视频结束后，你会看到一个像这样的IDE
+你的代码是否正确。在这个视频结束后，你会看到一个像这样的IDE（集成开发环境）
 your code is correct. After this video, you'll see an IDE
 
 6
@@ -30,8 +30,8 @@ like this. Where it contains some starter code, as well as
 
 7
 00:00:18,870 --> 00:00:22,790
-旁边的标签页有一些Java单元测试（JUnit）代码
-some j unit tests in a separate tab. In particular, we
+旁边的标签页有一些Java单元测试（JUnit）代码  特别地
+some JUnit tests in a separate tab. In particular, we
 
 8
 00:00:22,790 --> 00:00:25,780
@@ -75,6 +75,6 @@ you paste your answer here. Or you can use
 
 16
 00:00:43,070 --> 00:00:45,800
-直接用Udacity的IDE。如果你喜欢的话。
+直接用Udacity的IDE。你更喜欢哪个就用哪个吧。
 the Udacity IDE. Whichever feels more natural to you.
 
