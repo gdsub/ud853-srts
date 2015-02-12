@@ -1,105 +1,105 @@
 1
 00:00:00,650 --> 00:00:02,960
-ÔÚ´´½¨×Ô¶¨ÒåÊÓÍ¼µÄ×îºóÒ»²½¾ÍÊÇÔö¼Óinteractivity
+åˆ›å»ºè‡ªå®šä¹‰è§†å›¾çš„æœ€åä¸€æ­¥æ˜¯å¢åŠ äº¤äº’æ€§
 The final step in your custom view creation
 
 2
 00:00:02,960 --> 00:00:05,860
-Äã¿ÉÒÔ¼àÌıÓÃ»§ÊäÈëÊÂ¼ş£¬°üÀ¨
+ä½ å¯ä»¥ç›‘å¬ç”¨æˆ·è¾“å…¥äº‹ä»¶ï¼ŒåŒ…æ‹¬
 is adding interactivity. You can listen for user
 
 3
 00:00:05,860 --> 00:00:08,790
-°´¼ü£¬¹ì¼£ÇòµÄÒÆ¶¯£¬
+æŒ‰é”®ï¼Œè½¨è¿¹çƒçš„ç§»åŠ¨ï¼Œ
 input events including key presses, trackball movement, and
 
 4
 00:00:08,790 --> 00:00:12,570
-»¹ÓĞ¸üÖØÒªµÄÊÇ£¬ÆÁÄ»´¥ÃşÊÂ¼ş
+è¿˜æœ‰æ›´é‡è¦çš„ï¼Œå±å¹•è§¦æ‘¸äº‹ä»¶
 most importantly, screen touch events, all by overriding the
 
 5
 00:00:12,570 --> 00:00:15,950
-ÕâĞ©¶¼ÊÇÍ¨¹ıÖØÔØÏàÓ¦µÄÊÂ¼ş´¦Àí³ÌĞòÊµÏÖµÄ£¬AndroidÖ§³Ö¶à´ï
+è¿™äº›éƒ½æ˜¯é€šè¿‡é‡è½½ç›¸åº”çš„äº‹ä»¶å¤„ç†ç¨‹åºå®ç°çš„ï¼ŒAndroidæ”¯æŒå¤šè¾¾
 corresponding event handlers. Android supports tracking of up
 
 6
 00:00:15,950 --> 00:00:18,570
-11¸ö½Ó´¥µãµÄ×·×Ù£¬ÎÒÃÇ
+11ä¸ªæ¥è§¦ç‚¹çš„è¿½è¸ªï¼Œæˆ‘ä»¬
 to 11 individual contact points in what we
 
 7
 00:00:18,570 --> 00:00:21,710
-³ÆÖ®Îª¡°¾ôÊ¿ÊÖ¡±Ä£Ê½£¬Ëü¿ÉÒÔ
+ç§°ä¹‹ä¸ºâ€œçˆµå£«æ‰‹â€æ¨¡å¼ï¼Œå®ƒå¯ä»¥
 like to call, jazz hands mode which enables
 
 8
 00:00:21,710 --> 00:00:25,550
-Ê¹ÄãÍê³É¸´ÔÓµÄ¶àÖ¸»¥¶¯Ä£Ê½
+ä½¿ä½ å®Œæˆå¤æ‚çš„å¤šæŒ‡äº’åŠ¨æ¨¡å¼
 you to complete complex and multi-finger interaction models. Now,
 
 9
 00:00:25,550 --> 00:00:28,400
-¶ø¶ÔÓÚ·çÏòÀ´Ëµ£¬ÏÖÔÚÕâÀïÃ»ÓĞ»¥¶¯µÄĞèÇó
+è€Œå¯¹äºé£é€Ÿè®¡æ¥è¯´ï¼Œç°åœ¨è¿™é‡Œæ²¡æœ‰äº’åŠ¨çš„éœ€æ±‚
 there's really no interaction required for a wind gauge, but
 
 10
 00:00:28,400 --> 00:00:31,130
-µ«ÊÇÄã¿ÉÒÔÍ¨¹ı²éÔÄÄÇĞ©ÃèÊö
+ä½†æ˜¯ä½ å¯ä»¥é€šè¿‡æŸ¥é˜…é‚£äº›æè¿°
 you can find out more about handling input events by checking
 
 11
 00:00:31,130 --> 00:00:34,170
-ÈçºÎ´´½¨Ó¦ÓÃµÄÍêÈ«»¥¶¯ÊÓÍ¼µÄÎÄµµ
+å¦‚ä½•åˆ›å»ºåº”ç”¨çš„äº’åŠ¨Viewçš„æ–‡æ¡£
 the motion event docs or the developer guide describing how to
 
 12
 00:00:34,170 --> 00:00:37,890
-»òÕß¿ª·¢ÕßÖ¸ÄÏµÃÖª¸ü¶àÓĞ¹Ø´¦ÀíÊäÈëÊÂ¼şµÄÖªÊ¶£¬
+æˆ–è€…å¼€å‘è€…æŒ‡å—å¾—çŸ¥æ›´å¤šæœ‰å…³å¤„ç†è¾“å…¥äº‹ä»¶çš„çŸ¥è¯†ï¼Œè§ä¸‹æ–¹é“¾æ¥
 create your own, fully interactive custom views, both from the [UNKNOWN]
 
 13
 00:00:37,890 --> 00:00:41,110
-ÏÖÔÚ£¬²»ÒªÈÃÕâ¸öĞÂ·¢ÏÖµÄÁ¦Á¿ÃÔ»èÁËÍ·ÄÔ
+ç°åœ¨ï¼Œä¸è¦è®©è¿™ä¸ªæ–°å‘ç°çš„åŠ›é‡å†²æ˜äº†å¤´è„‘
 below. Now, be careful not to let this new found power
 
 14
 00:00:41,110 --> 00:00:44,220
-ÒòÎªÄãµÄÓÃ»§ÓÀÔ¶²»»áÓöµ½
+è¦çŸ¥é“ä½ åšçš„Viewç”¨èµ·æ¥å¾ˆçƒ‚çš„è¯
 go to your head. By definition, your users will have never
 
 15
 00:00:44,220 --> 00:00:47,900
-ÄãÊ¹ÓÃµÄĞÂ¿Ø¼ş£¬ËùÒÔÑ§Ï°ÈçºÎÊ¹ÓÃËü¾ÍÊÇ
+ç”¨æˆ·å¯èƒ½æ°¸è¿œä¸ä¼šå»ç”¨å®ƒ
 encountered your brand spanking new control. So learning how to use
 
 16
 00:00:47,900 --> 00:00:50,550
-½«Ê¹ÄãµÄÓ¦ÓÃÊ¹ÓÃÆğÀ´¸ü°®²»ÊÍÊÖ
+è¿™ä¹Ÿä¼šé™ä½ç”¨æˆ·å¯¹ä½ çš„Appçš„è¯„ä»·å’Œä½¿ç”¨æ¬²æœ›
 it is going to add friction to the use of your app.
 
 17
 00:00:50,550 --> 00:00:53,650
-×îÆğÂë£¬ËüÓ¦¸ÃºÍÏµÍ³ÖĞµÄÆäËû²¿·Ö±íÏÖÒ»ÖÂ
+æœ€èµ·ç ï¼Œå®ƒåº”è¯¥å’Œç³»ç»Ÿä¸­çš„å…¶ä»–éƒ¨åˆ†è¡¨ç°ä¸€è‡´
 At the very least, it should behave consistently with the rest of the system
 
 18
 00:00:53,650 --> 00:00:55,310
-²¢ÇÒÄãÓ¦¸Ã±ÜÃâ×Ô¼º´´½¨ÏµÍ³¿Ø¼ş
+å¹¶ä¸”ä½ åº”è¯¥é¿å…è‡ªå·±åˆ›å»ºç³»ç»Ÿæ§ä»¶
 and you should avoid creating your own
 
 19
 00:00:55,310 --> 00:00:58,680
-Èç¹ûËü¿´ÆğÀ´Ïñ
+å¦‚æœå®ƒçœ‹èµ·æ¥åƒä¸€ä¸ªæŒ‰é’®
 versions of system controls. If it looks kind of
 
 20
 00:00:58,680 --> 00:01:03,140
-Ò»¸ö°´Å¥£¬¹¤×÷ÆğÀ´Ò²ÏñÒ»¸ö°´Å¥£¬ÄÇÄã»òĞíÓ¦¸Ã¼ÌĞøÊ¹ÓÃÒ»¸ö
+å·¥ä½œèµ·æ¥ä¹Ÿåƒä¸€ä¸ªæŒ‰é’®ï¼Œé‚£ä½ æˆ–è®¸åº”è¯¥å°±ä½¿ç”¨ä¸€ä¸ªæŒ‰é’®
 like a button and works kind of like a button, you should probably just go ahead
 
 21
 00:01:03,140 --> 00:01:07,620
-°´Å¥£¬µ«ÎÒÈÏÎªÕâÊÇ²»·ûºÏÂß¼­µÄ¼´Ê¹ËüÒÑ¾­³ÖĞøÁËºÜ³¤Ê±¼äÁË
+ä½†æ˜¯æ‚²å‰§çš„æ˜¯ç°åœ¨å¾ˆå¤šAppéƒ½æ²¡éµå¾ªè¿™æ¡è§„åˆ™
 and use a button, but I think this non sequitur has gone on long enough.
 

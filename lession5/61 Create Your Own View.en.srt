@@ -1,39 +1,39 @@
 1
 00:00:00,420 --> 00:00:03,070
-ÏÖÔÚÈÃÎÒÃÇ³ÃÕâ¸ö»ú»á¼ÌĞø´´½¨ÎÒÃÇµÄ
+ç°åœ¨è®©æˆ‘ä»¬è¶è¿™ä¸ªæœºä¼šç»§ç»­åˆ›å»ºæˆ‘ä»¬çš„
 Now let's take this opportunity to go ahead and create our
 
 2
 00:00:03,070 --> 00:00:05,960
-×Ô¶¨ÒåView  ÎÒÃÇ²¢Ã»ÓĞÃ÷È·ĞèÒªÄÄÖÖ
+è‡ªå®šä¹‰View  æˆ‘ä»¬å¹¶æ²¡æœ‰æ˜ç¡®éœ€è¦å“ªç§
 own custom view. And we don't need one in particular for
 
 3
 00:00:05,960 --> 00:00:09,320
-×Ô¶¨ÒåView  ËùÒÔÄã¿ÉÒÔ×ÔÓÉÑ¡Ôñ  ¶ÔÎÒÀ´Ëµ
+è‡ªå®šä¹‰View  æ‰€ä»¥ä½ å¯ä»¥è‡ªç”±é€‰æ‹©  å¯¹æˆ‘æ¥è¯´
 sunshine, so you can go ahead and choose anything. Personally, I'm
 
 4
 00:00:09,320 --> 00:00:12,240
-ÎÒÊÇÒ»¸öÖ¸ÄÏÕëµÄ·ÛË¿  ÕâÕıÊÇÎÒÔÚĞ´µÄ¶«Î÷
+æˆ‘æ˜¯ä¸€ä¸ªæŒ‡å—é’ˆçš„ç²‰ä¸  è¿™æ­£æ˜¯æˆ‘åœ¨å†™çš„ä¸œè¥¿
 a fan of compass control, so that's what I've been building. You'll
 
 5
 00:00:12,240 --> 00:00:15,820
-ÄãĞèÒªÈı¸ö¹¹Ôì·½·¨  ·Ö±ğÓÃÀ´Ö§³Ö´Ó´úÂë¶¯Ì¬´´½¨View
+ä½ éœ€è¦ä¸‰ä¸ªæ„é€ æ–¹æ³•  åˆ†åˆ«ç”¨æ¥æ”¯æŒä»ä»£ç åŠ¨æ€åˆ›å»ºView
 need to include three constructors to support your view being created
 
 6
 00:00:15,820 --> 00:00:19,660
-ÒÔ¼°Í¨¹ı×ÊÔ´ÎÄ¼ş»òÕßÀ©Õ¹²¼¾ÖµÄ·½·¨´´½¨View  È»ºó¼òµ¥µØ¸²Ğ´
+ä»¥åŠé€šè¿‡èµ„æºæ–‡ä»¶æˆ–è€…æ‰©å±•å¸ƒå±€çš„æ–¹æ³•åˆ›å»ºView  ç„¶åç®€å•åœ°è¦†å†™
 in code through a resource or through inflation, then simply override the
 
 7
 00:00:19,660 --> 00:00:23,550
-onMeasure()·½·¨²¢ÇÒÉèÖÃ´óĞ¡  Íê³ÉÒÔºó¹´Ñ¡ÉÏÕâÀï
+onMeasure()æ–¹æ³•å¹¶ä¸”è®¾ç½®å¤§å°  å®Œæˆä»¥åå‹¾é€‰ä¸Šè¿™é‡Œ
 onMeasure method and set your dimensions. Click here when you're done,
 
 8
 00:00:23,550 --> 00:00:26,280
-ÏÖÔÚÄã¿ÉÒÔÔÚÄãµÄgearÊÖ±íÉÏ»æÖÆÄÚÈİÁË
+ç°åœ¨ä½ å¯ä»¥åœ¨ä½ çš„gearæ‰‹è¡¨ä¸Šç»˜åˆ¶å†…å®¹äº†
 and, you're ready to get started drawing the contents of your gear.

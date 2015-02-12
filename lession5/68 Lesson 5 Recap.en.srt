@@ -1,45 +1,45 @@
 1
 00:00:00,480 --> 00:00:03,070
-ÔÚÕâ½Ú¿ÎÖĞ£¬ÎÒÃÇÑ§Ï°ÈçºÎ´´½¨Ò»¸ö
+åœ¨è¿™èŠ‚è¯¾ä¸­ï¼Œæˆ‘ä»¬å­¦ä¹ äº†å¦‚ä½•åˆ›å»ºä¸€ä¸ª
 In this lesson, we learned how to create rich, responsive
 
 2
 00:00:03,070 --> 00:00:06,030
-¿çÔ½²»Í¬Ó²¼şÀàĞÍºÍÆÁÄ»³ß´ç½øĞĞ¹¤×÷µÄ·á¸»
+è·¨è¶Šä¸åŒç¡¬ä»¶ç±»å‹å’Œå±å¹•å°ºå¯¸çš„æ¼‚äº®è€Œä¸”äº¤äº’æ€§å¾ˆå¼ºçš„UI
 user interfaces that work across a variety of different hardware
 
 3
 00:00:06,030 --> 00:00:09,180
-¶øÇÒ·´Ó¦ÁéÃôµÄÓÃ»§½çÃæ¡£ÎÒÃÇ»¹½«ÁË½âµ½¸ü¶àÓĞ¹Ø
+æˆ‘ä»¬è¿˜å°†äº†è§£åˆ°æ›´å¤šæœ‰å…³
 types and screen sizes. We also learned more details on
 
 4
 00:00:09,180 --> 00:00:12,020
-Android layout managersºÍ screen widget µÄÏ¸½Ú£¬ÉõÖÁ
+Android layout managerså’Œ screen widget çš„ç»†èŠ‚
 the Android layout managers and screen widgets and even had to
 
 5
 00:00:12,020 --> 00:00:15,500
-²»µÃ²»´ÓÍ·¿ªÊ¼¹¹½¨ÎÒÃÇµÄÊÓÍ¼¡£¼ÓÈëÎÒÃÇµÄ¿Î³ÌÁù
+ç”šè‡³ä¸å¾—ä¸ä»å¤´å¼€å§‹æ„å»ºæˆ‘ä»¬çš„Viewã€‚åŠ å…¥æˆ‘ä»¬çš„è¯¾ç¨‹å…­
 create our own views from scratch. Join us for lesson
 
 6
 00:00:15,500 --> 00:00:18,900
-ÎÒÃÇ½«»á¹¹½¨Ç°Ì¨Ó¦ÓÃ£¬²¢Ñ§»áÈçºÎÊ¹Ó¦ÓÃ¸üĞÂ
+æˆ‘ä»¬å°†ä¼šæ„å»ºå‰å°åº”ç”¨ï¼Œå¹¶å­¦ä¼šå¦‚ä½•ä½¿åº”ç”¨æ›´æ–°
 six where we take our foreground-only app and discover how to
 
 7
 00:00:18,900 --> 00:00:22,100
-ºÍ´¥·¢ºóÌ¨Í¨Öª¶ø²»ÏûºÄÌ«¶àµÄµçÁ¿
+å’Œè§¦å‘åå°é€šçŸ¥è€Œä¸æ¶ˆè€—å¤ªå¤šçš„ç”µé‡
 make it update and trigger notifications from the background, all
 
 8
 00:00:22,100 --> 00:00:25,650
-µ«Ê×ÏÈ£¬ºÍÎÒÒ»Æğ»Øµ½Google£¬
+ä½†é¦–å…ˆï¼Œå’Œæˆ‘ä¸€èµ·å›åˆ°Google
 without draining your battery. But first, join me back at Google
 
 9
 00:00:25,650 --> 00:00:28,110
-¿ªÊ¼ÊéĞ´AndroidÀúÊ·ÖĞµÄÁíÒ»¸ö¹ÊÊÂ
+å¼€å§‹Androidå†å²ä¸­çš„å¦ä¸€ä¸ªæ•…äº‹
 for another story from the Android history books.
 

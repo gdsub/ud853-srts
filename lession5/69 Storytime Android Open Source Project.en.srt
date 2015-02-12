@@ -1,260 +1,260 @@
 1
 00:00:00,520 --> 00:00:04,200
-Andy Rubin£¬2013Äê´øÁìGoogle's AndroidÍÅ¶Ó£¬
+Andy Rubinï¼Œ2013å¹´Googleçš„Androidå›¢é˜Ÿé¢†å¤´äºº
 Andy Rubin, head of Google's Android team in 2013,
 
 2
 00:00:04,200 --> 00:00:07,540
-ÔÚTwitterÉÏ·¢²¼Android's¿ª·ÅĞÔÕâ¸öÖøÃû¶¨Òå£¬
+å‘è¡¨çš„è¿™ä¸ªTweetå…¬å¸ƒAndroidå¼€æºäº†
 famously defined Android's openness with this Tweet, offering the
 
 3
 00:00:07,540 --> 00:00:10,500
-²¢Ìá¹©ÏÂÔØºÍ¹¹½¨AndroidµÄÔ´´úÂëºÍÖ¸Áî¡£
+å¹¶æä¾›ä¸‹è½½å’Œæ„å»ºAndroidçš„æºä»£ç å’ŒæŒ‡ä»¤ã€‚
 instructions for downloading and building the Android source code.
 
 4
 00:00:11,840 --> 00:00:14,020
-×÷Îª¿ª·¢ÈËÔ±£¬ÕâÈÃÎÒÃÇºÜÈİÒ×¾Í¿´µ½Ä»ºó£¬
+ä½œä¸ºå¼€å‘äººå‘˜ï¼Œè¿™è®©æˆ‘ä»¬å¾ˆå®¹æ˜“å°±çœ‹åˆ°åå°çš„
 As app developers, it's handy to be able to peep
 
 5
 00:00:14,020 --> 00:00:16,530
-¿´µ½Õâ¸ö¿ò¼ÜÊÇÈçºÎ¹¤×÷µÄ¡£
+æ¡†æ¶æ˜¯å¦‚ä½•å·¥ä½œçš„
 behind the curtains and see how the framework actually
 
 6
 00:00:16,530 --> 00:00:19,070
-¶ø¶ÑÕ»Òç³öÔòÊÇÕÒµ½´ğ°¸µÄ×î¼ÑÍ¾¾¶¡£
+è€ŒStack Overflowåˆ™æ˜¯æ‰¾ç­”æ¡ˆçš„æœ€ä½³é€”å¾„
 works. And it's an excellent way to find answers to
 
 7
 00:00:19,070 --> 00:00:22,230
-µ«ÊÇ¶ÔÓÚAndroid¿ªÔ´ÏîÄ¿£¬
+ä½†æ˜¯å¯¹äºAndroidå¼€æºé¡¹ç›®
 tricky, Stack Overflow questions. But the Android Open Source
 
 8
 00:00:22,230 --> 00:00:25,580
-»òÕß³ÆÎªAOSP£¬ËüµÄ¹¦ÄÜÔ¶²»Ö¹Èç´Ë¡£
+æˆ–è€…ç§°ä¸ºAOSPï¼Œå®ƒçš„åŠŸèƒ½è¿œä¸æ­¢å¦‚æ­¤ã€‚
 Project, or AOSP as its commonly known, is much more
 
 9
 00:00:25,580 --> 00:00:28,170
-Ô´´úÂëÊÇÔÚApache 2 Ğ­ÒéÏÂ¿ÉÓÃµÄ£¬
+æºä»£ç æ˜¯åœ¨Apache 2 åè®®ä¸‹å¯ç”¨çš„
 than that. The source code is available under the
 
 10
 00:00:28,170 --> 00:00:31,000
-ËùÒÔÈÎºÎÈË¶¼¿ÉÒÔ¿ª·¢ËüÀ´ÊµÏÖ×öÏë×öµÄÊÂ£¬
+æ‰€ä»¥ä»»ä½•äººéƒ½å¯ä»¥å¼€å‘å®ƒæ¥å®ç°åšæƒ³åšçš„äº‹
 Apache 2 license, so anyone can take it and do
 
 11
 00:00:31,000 --> 00:00:34,290
-°üÀ¨ÔÚÔ­ÓĞ»ù´¡ÉÏĞŞ¸ÄºÍÖØ¹¹¡£
+åŒ…æ‹¬åœ¨åŸæœ‰åŸºç¡€ä¸Šä¿®æ”¹å’Œé‡æ„ å¹¶ä¸”æœ‰äººå·²ç»è¿™æ ·åšäº†
 anything they want with it, including modifying it and redistributing
 
 12
 00:00:34,290 --> 00:00:37,830
-AndroidÒ»Ö±¶¼ÓĞÓÉmodders×é³ÉµÄ³äÂú¼¤ÇéµÄÉçÇø£¬
+Androidä¸€ç›´æœ‰ç€å……æ»¡å¼€å‘è€…çš„æ´»è·ƒç¤¾åŒº
 it. And they have. Android has always had a passionate
 
 13
 00:00:37,830 --> 00:00:40,945
-Steve Kondik ºÍ Cyanogen ÒÔ¼°Éç»á¸÷½çµÄXDA£¬
+Steve Kondik å’Œ Cyanogen ã€XDA
 community of modders, from Steve Kondik and the Cyanogen community
 
 14
 00:00:40,945 --> 00:00:44,240
-»¹ÓĞÆäËû¿ª·¢ÈËÔ±£¬Ò»Ö±ÔÚ³¢ÊÔ¡¢¿ª·¢¡¢·¢²¼£¬
+è¿˜æœ‰å…¶ä»–å¼€å‘äººå‘˜ï¼Œä¸€ç›´åœ¨å°è¯•å¼€å‘å¹¶å‘å¸ƒ
 to XDA and many others who have been distributing modified
 
 15
 00:00:44,240 --> 00:00:47,100
-¹ØÓÚ AndroidÊÖ»ú¶ËµÄÍ¼Æ¬ĞŞ¸Ä¡£
+å„ç§å„æ ·çš„Androidç³»ç»Ÿé•œåƒ
 images of Android for phone owners brave enough to try
 
 16
 00:00:47,100 --> 00:00:50,580
-ÉõÖÁÔÚÏñÑÇÂíÑ·ÕâÑùµÄ´ó¹«Ë¾£¬¶¼ÔÚÓÃAndroidµÄÔ´´úÂë£¬
+ç”šè‡³åœ¨åƒäºšé©¬é€Šè¿™æ ·çš„å¤§å…¬å¸ï¼Œéƒ½åœ¨ç”¨Androidçš„æºä»£ç 
 them. Even big companies like Amazon have taken the Android
 
 17
 00:00:50,580 --> 00:00:52,500
-½øĞĞĞŞ¸ÄºóÍ¶Èë×Ô¼ºµÄ²úÆ·ÏßÊ¹ÓÃ¡£
+è¿›è¡Œä¿®æ”¹åç”¨äºè‡ªå·±çš„äº§å“
 source code and modified it for use in their own
 
 18
 00:00:52,500 --> 00:00:56,420
-ÕâÖÖ¿ª·ÅĞÔµÄÀ©Õ¹ÒÑ¾­ÌåÏÖµ½Ó¦ÓÃ³ÌĞò±¾Éí£¬
+è¿™ç§å¼€æ”¾æ€§å·²ç»æ‰©å±•åˆ°åº”ç”¨ç¨‹åºæœ¬èº«
 line of products. That openness extends to the apps themselves, the
 
 19
 00:00:56,420 --> 00:00:59,790
-AOSP°üÀ¨²¦ºÅ³ÌĞò¡¢³ÌĞòÆô¶¯Æ÷¡¢
+AOSPåŒ…æ‹¬æ‹¨å·ç¨‹åºã€ç¨‹åºå¯åŠ¨å™¨ã€
 AOSP includes key mobile apps like the dialer, app launcher,
 
 20
 00:00:59,790 --> 00:01:03,170
-ÈÕÀú¡¢ÓÊ¼şÕâÀàµÄºËĞÄÓ¦ÓÃ³ÌĞò¡£Google»¹ÎªËûÃÇÌá¹©×Ô¼ºµÄ°æ±¾¡£
+æ—¥å†ã€é‚®ä»¶è¿™ç±»çš„æ ¸å¿ƒåº”ç”¨ç¨‹åºã€‚Googleè¿˜æä¾›äº†è‡ªå·±å¼€å‘çš„ç‰ˆæœ¬ã€‚
 calendar, and email. And Google offers it own versions of each
 
 21
 00:01:03,170 --> 00:01:06,000
-ÔÚÔçÆÚ£¬³ÌĞòÓë±¾µØ¿ò¼Ü½ôÃÜ½áºÏ£¬
+åœ¨æ—©æœŸï¼Œç¨‹åºä¸æ¡†æ¶ç´§å¯†ç»“åˆï¼Œ
 as well. In the early days those native apps were
 
 22
 00:01:06,000 --> 00:01:08,870
-Ö»ÄÜÔÚ¸ÃÆ½Ì¨¸üĞÂ¡£
+åªèƒ½éšç€å¹³å°æ›´æ–°è€Œæ›´æ–°
 tightly bound to the framework and could only get updated along
 
 23
 00:01:08,870 --> 00:01:12,170
-ÎŞ¿É·ñÈÏ£¬ÕâÊÇÔÚ³õÆÚ£¬´ó¸ÅÃ¿¸ô¼¸¸öĞÇÆÚ¸üĞÂÒ»´Î¡£
+åœ¨åˆæœŸï¼Œèƒ½æœ‰å¤§æ¦‚æ¯éš”å‡ ä¸ªæ˜ŸæœŸæ›´æ–°ä¸€æ¬¡ã€‚
 with the platform. Which admittedly in the early days seemed like
 
 24
 00:01:12,170 --> 00:01:16,230
-µ«ÊÇÕâ¸öÊ±¼ä¶ÔÓÚÆ½Ì¨¼äµÄ·¢ĞĞÀ´Ëµ¹ı³¤ÁË£¬
+ä½†æ˜¯éšç€æ—¶é—´æ¨ç§»è¿™ä¸ªæ›´æ–°å‘¨æœŸè¶Šæ¥è¶Šé•¿
 every few weeks. But as the time between platform releases grew,
 
 25
 00:01:16,230 --> 00:01:18,860
-ËùÒÔ½«³ÌĞòÓëÆ½Ì¨½â°ó£¬¶øÊÇÍ¨¹ı
+æ‰€ä»¥å°†ç¨‹åºä¸å¹³å°è§£ç»‘ï¼Œè€Œæ˜¯é€šè¿‡
 so did the efforts to unbundle those apps, allowing
 
 26
 00:01:18,860 --> 00:01:21,840
-Google PlayÀ´·¢²¼¸üĞÂ¡£
+Google Playæ¥æ›´æ–°
 them to be updated through Google Play. That was great
 
 27
 00:01:21,840 --> 00:01:23,670
-Õâ¶ÔÓÃ»§À´Ëµ£¬ÎŞÒÉÊÇ¸öºÃÏûÏ¢£¬
+è¿™å¯¹ç”¨æˆ·æ¥è¯´ï¼Œæ— ç–‘æ˜¯ä¸ªå¥½æ¶ˆæ¯ï¼Œ
 news for users, but it had an even better
 
 28
 00:01:23,670 --> 00:01:27,140
-µ«ÊÇÔÚ¿ª·¢ÈËÔ±¿´À´È´²»ÊÇÕâÑù¡£
+å¯¹äºå¼€å‘è€…æ¥è¯´æ›´æ˜¯ è€Œä¸”è¿˜æœ‰å…¶ä»–ç›Šå¤„
 side effect for us developers. Because apps like Gmail and
 
 29
 00:01:27,140 --> 00:01:30,170
-ÒòÎªÏñGmailºÍMapsÕâĞ©Ó¦ÓÃ³ÌĞòÒÀÀµÓÚÒ»Ğ©¹È¸è×¨ÓĞµÄAPI£¬
+å› ä¸ºåƒGmailå’ŒMapsè¿™äº›åº”ç”¨ç¨‹åºä¾èµ–äºä¸€äº›è°·æ­Œä¸“æœ‰çš„APIï¼Œ
 Maps depend on a number of proprietary Google APIs,
 
 30
 00:01:30,170 --> 00:01:34,140
-Google·¢²¼ÁËGoogle Play·şÎñ¡£Í¬Ê±Ò²ÒÔ²ÍÇ°µãĞÄÃüÃû£¬
+Googleå‘å¸ƒäº†Google PlayæœåŠ¡ã€‚åŒæ—¶ä¹Ÿä»¥é¤å‰ç‚¹å¿ƒå‘½åï¼Œ
 Google released Google Play Services. Also code named after food
 
 31
 00:01:34,140 --> 00:01:36,920
-ÓÃÀ´Ö§³ÖGoogleÓ¦ÓÃ³ÌĞò£¬²¢ÇÒÏò¿ª·¢ÈËÔ±¿ª·ÅAPI£¬
+ç”¨æ¥æ”¯æŒGoogleåº”ç”¨ç¨‹åºï¼Œå¹¶ä¸”å‘å¼€å‘äººå‘˜å¼€æ”¾APIï¼Œ
 to support the Google apps, while also giving us
 
 32
 00:01:36,920 --> 00:01:41,850
-ÏñMaps, Wallet, Drive ºÍ YouTube¡£
+åƒMaps, Wallet, Drive å’Œ YouTubeã€‚
 developers Google specific APIs, like Maps, Wallet, Drive, and YouTube.
 
 33
 00:01:41,850 --> 00:01:44,480
-ËùÒÔÏÖÔÚÎÒÃÇ»áÔÚÃ¿ÖÜÁù×óÓÒµÃµ½×îĞÂ×îºÃµÄGoogleÌØÓĞµÄAPI¡£
+æ‰€ä»¥ç°åœ¨æˆ‘ä»¬ä¼šåœ¨æ¯å‘¨å…­å·¦å³å¾—åˆ°æœ€æ–°æœ€å¥½çš„Googleç‰¹æœ‰çš„APIã€‚
 So now we get the latest and greatest Google specific APIs
 
 34
 00:01:44,480 --> 00:01:47,110
-¶ø²»ÊÇÒÀÀµÓÚÌØ¶¨µÄÆ½Ì¨£¬
+è€Œä¸æ˜¯ä¾èµ–äºç‰¹å®šçš„å¹³å°ï¼Œ
 every six weeks or so. And rather than being tied to
 
 35
 00:01:47,110 --> 00:01:51,540
-ËüÃÇ¿ÉÒÔÔÚÈÎÒâÉè±¸ÉÏÊ¹ÓÃ£¬¿ÉÒÔÈ¥ÁË½âÒ»ÏÂandroid 2.3¡£
+å®ƒä»¬å¯ä»¥åœ¨ä»»æ„è®¾å¤‡ä¸Šä½¿ç”¨ï¼Œå¯ä»¥å»äº†è§£ä¸€ä¸‹android 2.3ã€‚
 a specific platform, they're available on every device, back to Gingerbread.
 
 36
 00:01:51,540 --> 00:01:55,580
-Å¶£¬µ±È»£¬Ã¿Ò»¸öÔ­ÉúÓ¦ÓÃ³ÌĞòÒ²¶¼¿ÉÒÔÌæ»»¡£
+å“¦ï¼Œå½“ç„¶ï¼Œæ¯ä¸€ä¸ªåŸç”Ÿåº”ç”¨ç¨‹åºä¹Ÿéƒ½å¯ä»¥æ›¿æ¢ã€‚
 Oh, and of course every native app is also entirely replaceable.
 
 37
 00:01:55,580 --> 00:01:57,830
-ËùÒÔÄã¿ÉÒÔ·¢²¼Ò»Ğ©Ó¦ÓÃ³ÌĞòÀ´È¡´úÉè±¸×Ô´øµÄ¡£
+æ‰€ä»¥ä½ å¯ä»¥å‘å¸ƒä¸€äº›åº”ç”¨ç¨‹åºæ¥å–ä»£è®¾å¤‡è‡ªå¸¦çš„ã€‚
 So you can publish apps to replace any of the apps
 
 38
 00:01:57,830 --> 00:02:00,490
-ÎÒÃÇÒ²¿ÉÒÔ´´½¨×Ô¼ºµÄSMS apps¡¢
+æˆ‘ä»¬ä¹Ÿå¯ä»¥åˆ›å»ºè‡ªå·±çš„çŸ­ä¿¡Appã€
 shipped with the device. And we can build our own SMS
 
 39
 00:02:00,490 --> 00:02:03,910
-homescreens ºÍ maps apps£¬½«ËüÃÇ¹«¿ªÔÚÆ½Ì¨ÉÏ£¬
+ä¸»é¡µApp å’Œ åœ°å›¾Appï¼Œå°†å®ƒä»¬å‘å¸ƒåœ¨Playä¸Šï¼Œ
 apps, homescreens or maps apps, publish it on Play and give
 
 40
 00:02:03,910 --> 00:02:07,070
-ÈÃÓÃ»§×Ô¼ºÑ¡ÔñÊ¹ÓÃ¡£
+è®©ç”¨æˆ·è‡ªå·±é€‰æ‹©ä½¿ç”¨
 users the choice to make it their default. When Android was first
 
 41
 00:02:07,070 --> 00:02:10,550
-ÔÚAndroidµÚÒ»´Î·¢²¼µÄÊ±ºò£¬Andy RubinÊÇÕâÑùÃèÊöAOSPµÄ£¬
+åœ¨Androidç¬¬ä¸€æ¬¡å‘å¸ƒçš„æ—¶å€™ï¼ŒAndy Rubinæ˜¯è¿™æ ·æè¿°AOSPçš„ï¼Œ
 announced, Andy Rubin described the AOSP as, all the software
 
 42
 00:02:10,550 --> 00:02:13,340
-ËùÒÔÔËĞĞÔÚÊÖ»úÉÏµÄÈí¼şÃ»ÓĞÃ»Óöµ½¹ı×è°­µÄ£¬
+æ‰€æœ‰è½¯ä»¶éƒ½è·‘åœ¨ä¸€ä¸ªæ‰‹æœºä¸Šï¼Œä¸ä¼šæœ‰å„ç§å„æ ·çš„é™åˆ¶
 to run a mobile phone but without the proprietary obstacles
 
 43
 00:02:13,340 --> 00:02:16,860
-µ«´Ó²»»áÓĞÄÜ×è°­ÒÆ¶¯´´ĞÂ¡£
+æ¥é˜»ç¢ç§»åŠ¨åˆ›æ–°
 that have hindered mobile innovation. Today, Android runs on more
 
 44
 00:02:16,860 --> 00:02:19,580
-ÏÖÔÚ£¬ÓĞ²»Í¬µÄ°æ±¾ÔÚÒÆ¶¯¶Ë¹¤×÷£¬µ«ÊÇËüÃÇµÄºËĞÄ¶¼ÊÇÏàÍ¬µÄ¡£
+ç°åœ¨ï¼ŒAndroidä¸ä»…ä»…è¿è¡Œåœ¨æ‰‹æœºä¸Šï¼Œä½†æ˜¯ä»–ä»¬çš„ç›®çš„å’Œç†æƒ³ä»ç„¶æ²¡å˜
 than just mobiles, but the core of its purpose remains
 
 45
 00:02:19,580 --> 00:02:23,383
-ÔÚÒ»¸öÆ½Ì¨ÏµÍ³ÉÏ£¬ÔÊĞíÄ£ĞÍ¡¢ÔËÓªÉÌ¡¢
+åœ¨ä¸€ä¸ªå¹³å°ã€ç”Ÿæ€ç³»ç»Ÿä¸­ï¼Œå…è®¸ç³»ç»Ÿå¼€å‘è€…ã€è¿è¥å•†ã€
 the same. A platform and ecosystem that allows models, carriers,
 
 46
 00:02:23,383 --> 00:02:26,470
-Ô­Ê¼Éè±¸ÖÆÔìÉÌÒÔ¼°Ó¦ÓÃ³ÌĞò¿ª·¢ÈËÔ±Ò»Æğ´´ĞÂºÍ¾ºÕù¡£
+åŸå§‹è®¾å¤‡åˆ¶é€ å•†ä»¥åŠåº”ç”¨ç¨‹åºå¼€å‘äººå‘˜ä¸€èµ·åˆ›æ–°å’Œç«äº‰ã€‚
 OEMs and app developers to innovate and compete. So, armed
 
 47
 00:02:26,470 --> 00:02:29,560
-ËùÒÔ£¬Ó¦µ±¿ª·Å¡¢²»¶Ï·¢Õ¹ºÍÔö³¤µÄGoogle APIÆ½Ì¨£¬
+æ‰€ä»¥ï¼Œæ—¨åœ¨åˆ›å»ºä¸€ä¸ªå¼€æ”¾ã€é©æ–°çš„å¹³å°
 with an open, evolving platform enriched by a growing set
 
 48
 00:02:29,560 --> 00:02:32,380
-Í¬Ê±Ìá¹©¹¦ÄÜ·á¸»µÄÓ¦ÓÃ³ÌĞò£¬
+é€šè¿‡æŒç»­å¢é•¿çš„Google API ä¸æ­¤åŒæ—¶å¼€å‘å¾ˆå¤šè¶…æ£’çš„App
 of Google API's and the ability to create great apps
 
 49
 00:02:32,380 --> 00:02:34,470
-ÈÃÓÃ»§ÄÜ¹»×Ô¼º¶¨ÖÆ×Ô¼ºµÄÓÃ»§ÌåÑé£¬
+è®©ç”¨æˆ·èƒ½å¤Ÿè‡ªå·±å®šåˆ¶è‡ªå·±çš„ç”¨æˆ·ä½“éªŒï¼Œ
 that let users customize every aspect of
 
 50
 00:02:34,470 --> 00:02:37,270
-Äã»¹ÄÜÊ¹ÓÃËûÈËµÄ¹¤×÷³É¹û£¬
+ä½ è¿˜èƒ½ä½¿ç”¨ä»–äººçš„å·¥ä½œæˆæœ
 their user experience, you can use other people's
 
 51
 00:02:37,270 --> 00:02:39,640
-À´¿ª·¢È·¶¨ÒÔºóµÄ¿ª·ÅÆ½Ì¨¡£
+æ¥æ„å»ºæœªæ¥
 work to help define the computing platform of
 
 52
 00:02:39,640 --> 00:02:42,870
-Õâ¾ÍÊÇÎÒ¶Ô¿ª·ÅµÄ¶¨Òå¡£
+è¿™å°±æ˜¯æˆ‘å¯¹å¼€æ”¾çš„å®šä¹‰
 the future. And that's my definition of open.
 

@@ -1,164 +1,164 @@
 1
 00:00:00,160 --> 00:00:02,340
-ÏÖÔÚµ½ÁËÍ¨¹ıÏòÎÒÃÇµÄĞÂViewÖĞ»æÖÆÄÚÈİÀ´
+ç°åœ¨æ˜¯æ—¶å€™å‘æˆ‘ä»¬çš„æ–°Viewä¸­ç»˜åˆ¶å†…å®¹æ¥
 Now, it's time to finish creating our new view
 
 2
 00:00:02,340 --> 00:00:05,460
-Íê³ÉËüµÄÊ±ºòÁË  ÎÒÃÇÔÚ×Ô¶¨ÒåViewµÄ
+å®Œæˆå®ƒäº†  æˆ‘ä»¬åœ¨è‡ªå®šä¹‰Viewçš„
 by drawing its contents. And, we do that within our
 
 3
 00:00:05,460 --> 00:00:08,900
-onDraw()·½·¨ÖĞ½øĞĞ»æÖÆ  Ëæ×ÅAndroid»­²¼APIµÄ·¢Õ¹
+onDraw()æ–¹æ³•ä¸­è¿›è¡Œç»˜åˆ¶  éšç€Androidç”»å¸ƒAPIçš„å‘å±•
 Custom View's onDraw method. Now, the Android Canvas is pretty
 
 4
 00:00:08,900 --> 00:00:11,790
-ËüÏÖÔÚÒÑ¾­·Ç³£±ê×¼  ËüÊ¹ÓÃ
+å®ƒç°åœ¨å·²ç»éå¸¸æ ‡å‡†  å®ƒä½¿ç”¨
 standard as far as canvas API's go. It uses the
 
 5
 00:00:11,790 --> 00:00:14,320
-»­¼ÒËã·¨  ÕâÒâÎ¶×ÅÄãºó»æÖÆµÄĞÂÄÚÈİ»á
+ç”»å®¶ç®—æ³•  è¿™æ„å‘³ç€ä½ åç»˜åˆ¶çš„æ–°å†…å®¹ä¼š
 Painter's algorithm, meaning that each new thing you paint
 
 6
 00:00:14,320 --> 00:00:18,460
-¸²¸ÇÖ®Ç°µÄÄÚÈİ  CanvasºÍPaintÀà
+è¦†ç›–ä¹‹å‰çš„å†…å®¹  Canvaså’ŒPaintç±»
 will cover anything beneath it. The Canvas and Paint classes
 
 7
 00:00:18,460 --> 00:00:20,770
-Ìá¹©ºÜ¶àµÄ»­±ÊºÍÆäËü°ïÖúÀ´¸ù¾İ
+æä¾›å¾ˆå¤šçš„ç”»ç¬”å’Œå…¶å®ƒå¸®åŠ©æ¥æ ¹æ®
 offer a variety of brushes and helpers to draw and
 
 8
 00:00:20,770 --> 00:00:25,080
-ÑÕÉ«¡¢Í¼°¸¡¢ÇãĞ±¶ÈºÍÍ¼Æ¬À´»æÖÆ»òÕßÌî³äÏßÌõ¡¢·½¿ò¡¢Ô²ÒÔ¼°ÎÄ×Ö
+é¢œè‰²ã€å›¾æ¡ˆã€å€¾æ–œåº¦å’Œå›¾ç‰‡æ¥ç»˜åˆ¶æˆ–è€…å¡«å……çº¿æ¡ã€æ–¹æ¡†ã€åœ†ä»¥åŠæ–‡å­—
 fill lines, boxes, circles, and text with colors, patterns, gradients,
 
 9
 00:00:25,080 --> 00:00:28,050
-Í¬Ê±»¹Ìá¹©ÔÚÄã»æÖÆµÄÊ±ºò½øĞĞÒÆ¶¯¡¢Ğı×ªºÍ
+åŒæ—¶è¿˜æä¾›åœ¨ä½ ç»˜åˆ¶çš„æ—¶å€™è¿›è¡Œç§»åŠ¨ã€æ—‹è½¬å’Œ
 and images, as well as offering the ability to move, rotate,
 
 10
 00:00:28,050 --> 00:00:31,110
-·Å´óËõĞ¡»­²¼µÄ¹¦ÄÜ  ÎÒ¿ÉÒÔÔÚÕâÀï
+æ”¾å¤§ç¼©å°ç”»å¸ƒçš„åŠŸèƒ½  æˆ‘å¯ä»¥åœ¨è¿™é‡Œ
 and scale the canvas while you draw. I could spend a lot
 
 11
 00:00:31,110 --> 00:00:34,240
-»¨ºÜ¶àÊ±¼äÀ´½²Êöµ½µ×ÔõÃ´Ê¹ÓÃÕâĞ©¹¤¾ß
+èŠ±å¾ˆå¤šæ—¶é—´æ¥è®²è¿°åˆ°åº•æ€ä¹ˆä½¿ç”¨è¿™äº›å·¥å…·
 of time here detailing exactly how to use each of these tools,
 
 12
 00:00:34,240 --> 00:00:36,940
-µ«ÊÇAndroidÕâ·½ÃæµÄÄÚÈİÃ»ÓĞÊ²Ã´ÌØÊâµÄ  ¶øÇÒËüÃÇÔÚÏÂÃæÁ´½ÓµÄÎÄµµÖĞ
+ä½†æ˜¯Androidè¿™æ–¹é¢çš„å†…å®¹æ²¡æœ‰ä»€ä¹ˆç‰¹æ®Šçš„  è€Œä¸”å®ƒä»¬åœ¨ä¸‹é¢é“¾æ¥çš„æ–‡æ¡£ä¸­
 but there's nothing unique to Android and it's covered really well on
 
 13
 00:00:36,940 --> 00:00:41,380
-ÓĞºÜÏêÏ¸µÄÃèÊö  ÎÒÃÇ¿ÉÒÔÕâÑùÀ´´´½¨·Ç³£¸ß¼¶µÄ
+æœ‰å¾ˆè¯¦ç»†çš„æè¿°  æˆ‘ä»¬å¯ä»¥è¿™æ ·æ¥åˆ›å»ºéå¸¸é«˜çº§çš„
 the documentation link below. It is possible though to create pretty advanced
 
 14
 00:00:41,380 --> 00:00:44,550
-½çÃæ  ¾Ù¸öÀı×Ó  ±ÈÈçÎÒÃÇÏÈ»­Ò»¸öÔ²
+ç•Œé¢  ä¸¾ä¸ªä¾‹å­  æ¯”å¦‚æˆ‘ä»¬å…ˆç”»ä¸€ä¸ªåœ†
 UIs this way. For example, for example, if we start by drawing
 
 15
 00:00:44,550 --> 00:00:47,330
-ÔÙÌí¼ÓµÚ¶ş¸öÔ²  È»ºóÄãÖ»ĞèÒª
+å†æ·»åŠ ç¬¬äºŒä¸ªåœ†  ç„¶åä½ åªéœ€è¦
 a circle and then add a second circle and then you just
 
 16
 00:00:47,330 --> 00:00:50,120
-»æÖÆÊ£ÏÂµÄÖ¸ÄÏÕë  ÕâÊÇÎÒÔ¤ÏÈ×¼±¸µÄ
+ç»˜åˆ¶å‰©ä¸‹çš„æŒ‡å—é’ˆ  è¿™æ˜¯æˆ‘é¢„å…ˆå‡†å¤‡çš„
 need to finish drawing the rest of the compass. Here's an example
 
 17
 00:00:50,120 --> 00:00:52,780
-Ò»¸öÀı×Ó  Äã»æÖÆµÄÃ¿Ò»¸öViewµÄ¹æ¸ñ
+ä¸€ä¸ªä¾‹å­  ä½ ç»˜åˆ¶çš„æ¯ä¸€ä¸ªViewçš„ç»†èŠ‚
 I prepared earlier. The specifics of what you draw are
 
 18
 00:00:52,780 --> 00:00:55,700
-¶¼²»¾¡ÏàÍ¬  µ«ÊÇÓĞÒ»µãÏàÍ¬µÄÊÇ
+éƒ½ä¸å°½ç›¸åŒ  ä½†æ˜¯æœ‰ä¸€ç‚¹ç›¸åŒçš„æ˜¯
 different for every view, but one thing that is consistent
 
 19
 00:00:55,700 --> 00:00:58,650
-ÄãÒ»Ö±ÊÇÔÚÒ»¸ö×ÊÔ´ÊÜÏŞµÄÉè±¸ÉÏ½øĞĞ»æÖÆµÄ
+ä½ ä¸€ç›´æ˜¯åœ¨ä¸€ä¸ªèµ„æºå—é™çš„è®¾å¤‡ä¸Šè¿›è¡Œç»˜åˆ¶çš„
 is the resource constraint device you're drawing on. And that
 
 20
 00:00:58,650 --> 00:01:01,150
-onDraw()·½·¨ÔÚÃ¿´ÎÆÁÄ»Ë¢ĞÂµÄÊ±ºò¶¼»á±»µ÷ÓÃ
+onDraw()æ–¹æ³•åœ¨æ¯æ¬¡å±å¹•åˆ·æ–°çš„æ—¶å€™éƒ½ä¼šè¢«è°ƒç”¨
 the onDraw method be called every time the screen is
 
 21
 00:01:01,150 --> 00:01:04,739
-Ã¿ÃëÖÓ»áÓĞºÜ¶à´Î  ÕâÒâÎ¶×Å
+æ¯ç§’é’Ÿä¼šæœ‰å¾ˆå¤šæ¬¡  è¿™æ„å‘³ç€
 refreshed, potentially many times a second; that means any object
 
 22
 00:01:04,739 --> 00:01:08,130
-ÄãÔÚonDraw()·½·¨ÖĞ´´½¨µÄÈÎºÎ¶ÔÏó  °üÀ¨Paint¶ÔÏó
+ä½ åœ¨onDraw()æ–¹æ³•ä¸­åˆ›å»ºçš„ä»»ä½•å¯¹è±¡  åŒ…æ‹¬Paintå¯¹è±¡
 created here within your onDraw method, including things like Paint
 
 23
 00:01:08,130 --> 00:01:12,100
-¶¼»áÆµ·±µØ±»´´½¨ºÍÏú»Ù
+éƒ½ä¼šé¢‘ç¹åœ°è¢«åˆ›å»ºå’Œé”€æ¯
 objects, will be created and destroyed at an alarming frequency.
 
 24
 00:01:12,100 --> 00:01:15,680
-¶ÔÏóµÄ´´½¨ºÍÏú»ÙÔÚAndroidÉÏµÄ´ú¼Û»áºÜ´ó
+å¯¹è±¡çš„åˆ›å»ºå’Œé”€æ¯åœ¨Androidä¸Šçš„ä»£ä»·ä¼šå¾ˆå¤§
 Object creation and destruction can be expensive on Android; potentially
 
 25
 00:01:15,680 --> 00:01:19,110
-¿ÉÄÜÔÚÀ¬»ø»ØÊÕ¿ªÊ¼ÒÔºóÓ°Ïìµ½½çÃæµÄÁ÷³©ĞÔ
+å¤§é‡åƒåœ¾å›æ”¶å¯èƒ½ä¼šå½±å“åˆ°ç•Œé¢çš„æµç•…æ€§
 effecting the smoothness of your UI, when garbage collection is initiated.
 
 26
 00:01:19,110 --> 00:01:22,030
-½â¾öµÄ·½°¸¾ÍÊÇ½«ÈÎºÎ¶ÔÏóµÄÊ¹ÓÃ·¶Î§´Ó
+è§£å†³çš„æ–¹æ¡ˆå°±æ˜¯å°†onDraw()å¾ªç¯ä¸­çš„å¯¹è±¡
 The solution? Move the scope of any object used within the
 
 27
 00:01:22,030 --> 00:01:25,930
-onDraw()Ñ­»·ÖĞÒÆµ½ÀàµÄ×÷ÓÃÓòÖĞ  ¼ÌĞøÈ¥¸²Ğ´
+ç§»åˆ°ç±»ä¸­  
 onDraw loop, into the class scope. Go ahead and override the
 
 28
 00:01:25,930 --> 00:01:29,790
-ÄãµÄĞÂViewÖĞµÄonDraw()·½·¨  »æÖÆĞÂµÄ¿ØÖÆ½çÃæ
+å»è¦†å†™ä½ çš„æ–°Viewä¸­çš„onDraw()æ–¹æ³•  æ¥ç»˜åˆ¶æ–°çš„æ§åˆ¶ç•Œé¢
 onDraw method within your new view and draw the new control.
 
 29
 00:01:29,790 --> 00:01:32,380
-ÆäÊµ  ÎªÊ²Ã´²»³ÃÕâ¸ö»ú»á´´½¨Ò»¸ö
+å…¶å®  ä¸ºä»€ä¹ˆä¸è¶è¿™ä¸ªæœºä¼šåˆ›å»ºä¸€ä¸ª
 In fact, why not take this opportunity to create a custom
 
 30
 00:01:32,380 --> 00:01:35,400
-Í¬Ê±ÏÔÊ¾·çËÙ¡¢·çÏòºÍÑô¹âµÄ×Ô¶¨Òå¿ØÖÆ½çÃæÄØ
+åŒæ—¶æ˜¾ç¤ºé£é€Ÿã€é£å‘å’Œé˜³å…‰çš„è‡ªå®šä¹‰æ§åˆ¶ç•Œé¢å‘¢
 control that can display the wind speed and direction fused within
 
 31
 00:01:35,400 --> 00:01:38,070
-Íê³ÉÒÔºó  Äã¾Í¿ÉÒÔÊ¹ÓÃËüµÄÍêÈ«ÏŞ¶¨Ãû
+å®Œæˆä»¥å  ä½ å°±å¯ä»¥ä½¿ç”¨å®ƒçš„å®Œå…¨é™å®šå
 sunshine. Once you're done, you can add it to your layer
 
 32
 00:01:38,070 --> 00:01:40,830
-À´°ÑËüÌí¼Óµ½XMLÎÄ¼şµÄ²¼¾Ö²ã´ÎÖĞ
+æ¥æŠŠå®ƒæ·»åŠ åˆ°XMLæ–‡ä»¶çš„å¸ƒå±€å±‚æ¬¡ä¸­
 using it it's full package name and class name in the XML
 
 33
 00:01:40,830 --> 00:01:45,370
-¾ÍÏñÕâÑù  ÔËĞĞÒ»ÏÂ  È»ºó°ÑÄãµÄĞÂViewµÄ½ØÍ¼·¢µ½ÂÛÌ³ÖĞ
+å°±åƒè¿™æ ·  è¿è¡Œä¸€ä¸‹  ç„¶åæŠŠä½ çš„æ–°Viewçš„æˆªå›¾å‘åˆ°è®ºå›ä¸­
 like this. Run it and then post a screenshot of your new view into the forum.
