@@ -15,7 +15,7 @@ to turn on until it can start transmitting. That kind of
 
 4
 00:00:09,120 --> 00:00:12,430
-那种延迟会导致卡顿的网络浏览体验
+那种延迟就像令人讨厌的网页浏览体验一样
 latency makes for a sucky web browsing experience. So rather than
 
 5
