@@ -1,42 +1,42 @@
 1
 00:00:00,380 --> 00:00:02,715
-在ForecastFragment这个类里  我们去修改
-In the Forecast Fragment, we want to modify the
+在ForecastFragment这个类里  我们想要通过修改
+In the ForecastFragment, we want to modify the
 
 2
 00:00:02,715 --> 00:00:05,070
-FetchWeatherTask这个类  我们可以
+FetchWeatherTask这个类  以使我们在
 FetchWeatherTask, so that we can pass in the
 
 3
 00:00:05,070 --> 00:00:08,730
-把邮编这个参数传给它让它执行任务
+执行任务的时候可以把邮编作为参数传进去
 postal code parameter when we execute that task.
 
 4
 00:00:08,730 --> 00:00:11,370
-你可以通过快捷键或者点击
+你可以点击这个类名或者使用快捷键
 You can click on this class, to jump
 
 5
 00:00:11,370 --> 00:00:16,780
-找到它在哪定义的  然后你就能发现
+找到它定义的地方  然后你就能发现
 to where it's defined or you can use this shortcut. And here you see that we
 
 6
 00:00:16,780 --> 00:00:19,640
-我们修改了它的基础输入类型为 String
+我们把输入参数的泛型改为了String类型
 modified the generic input type, to be a
 
 7
 00:00:19,640 --> 00:00:25,080
-在doInBackground()方法里  调用变量params就能得到这个字符串
-string so that the doInBackground method receives string params.
+这样doInBackground()方法就会接收到String类型的参数
+String so that the doInBackground method receives String params.
 
 8
 00:00:25,080 --> 00:00:27,783
 现在我们只传入了一个字符串类型的参数
-Now, we only passed in one string param,
+Now, we only passed in one String param,
 
 9
 00:00:27,783 --> 00:00:30,923
@@ -45,32 +45,32 @@ Now, we only passed in one string param,
 
 10
 00:00:30,923 --> 00:00:33,816
-我们可以通过下标0  获取到数组params的数据
+我们可以读取参数数组下标为0的参数
 can read out the zeroth position in the params
 
 11
 00:00:33,816 --> 00:00:37,520
-进而我们就拿到了邮编
+来获得邮编
 array, to get that postal code. Notice that we're
 
 12
 00:00:37,520 --> 00:00:40,590
-注意我们这里使用了URiBuilder类  把参数一个一个加上去
+注意我们这里使用了URiBuilder类  把请求参数
 using the URiBuilder here, and we're appending query
 
 13
 00:00:40,590 --> 00:00:43,830
-我们为这些参数名预定义了一些常量
+一个一个加上去  我们为这些参数名预定义了一些常量
 parameters, one by one. We define constants for these
 
 14
 00:00:43,830 --> 00:00:47,100
-看这儿  还有这些值
+就像这里看到的这样  至于参数具体的值
 query params, as seen here. And for the values,
 
 15
 00:00:47,100 --> 00:00:50,300
-我们都在上面定义过了  你可以想到的是
+我们也定义在了上面  你可以想到的是
 we also define them up here. You can imagine
 
 16
@@ -85,7 +85,7 @@ of this class, but for now we're just going
 
 18
 00:00:54,580 --> 00:00:57,820
-为确保 URL 是正确的
+为验证 URL 是正确的
 to define them here. To verify that this URI
 
 19
@@ -105,13 +105,13 @@ the log we added actually shows up. In overflow
 
 22
 00:01:07,460 --> 00:01:10,350
-在右上角菜单栏我们点击刷新（Refresh）  然后
+在右上角更多菜单栏我们点击刷新（Refresh）  然后我们看到
 menu we tap Refresh. Then we see the log
 
 23
 00:01:10,350 --> 00:01:15,300
-我们看到标记着FetchWeatherTask的日志信息打印出来了
-tag FetchWeatherTask with our UI printed out. It says
+日志的标签FetchWeatherTask和我们的URI被打印出来了
+tag FetchWeatherTask with our URI printed out. It says
 
 24
 00:01:15,300 --> 00:01:19,610
