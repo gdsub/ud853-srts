@@ -20,7 +20,7 @@ parameters. S actually refers to our selection while our
 
 5
 00:00:13,370 --> 00:00:16,400
-在删除中一个
+在删除中有一个
 strings here are actually our selection Rs. One
 
 6
@@ -50,7 +50,7 @@ fine to just notify the change always, but I've decided
 
 11
 00:00:31,560 --> 00:00:34,140
-如果没有行被删除，你那么我们应该
+如果没有行被删除，那么我们应该
 if no rows have been deleted, then we should
 
 12
@@ -65,12 +65,12 @@ case we deleted all the rows, but again, it
 
 14
 00:00:40,940 --> 00:00:43,780
-通知改变是没问题的尽管
+通知改变是没问题的
 would be fine just to use notify change here even
 
 15
 00:00:43,780 --> 00:00:47,380
-没有行被删除。毕竟，意图是
+尽管没有行被删除。毕竟，我们的意图是
 if no rows are actually deleted. After all, the intention
 
 16
@@ -95,12 +95,12 @@ more useful like selection and selectionargs.
 
 20
 00:01:03,770 --> 00:01:07,090
-否则，update看起来几乎了delete一模一行。
+否则，update看起来几乎了delete一模一样。
 Other than that, update looks almost exactly like delete. Once
 
 21
 00:01:07,090 --> 00:01:10,080
-我们返回更新影响的行数。
+我们回来更新影响的行数。
 again, we are returning the number of rows impacted by
 
 22
@@ -275,7 +275,7 @@ validating our cursor, making sure that our update actually works.
 
 56
 00:02:58,980 --> 00:03:01,700
-最后，我们关闭我们的游标。全部
+最后，我们关闭我们的游标。一切
 And then finally, we close our cursor. It all
 
 57

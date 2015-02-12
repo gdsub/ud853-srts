@@ -20,11 +20,11 @@ in directly querying the database from the UI code?
 
 5
 00:00:16,129 --> 00:00:18,630
-第一，查询将会消耗很多时间
+查询将会消耗很多时间
 The query could take a long time. It could
 
 6
 00:00:18,630 --> 00:00:21,630
-第二，它可能会在完成之前被中止。第三，或者说它其实没有缺点
+它可能会在完成之前被中止。不然的话它是没有缺点的
 be terminated before it completes. Or there are no disadvantages.
 

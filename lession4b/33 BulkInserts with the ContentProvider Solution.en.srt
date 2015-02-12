@@ -40,6 +40,6 @@ end without introducing framerate jitter. Fortunately, Android
 
 9
 00:00:26,770 --> 00:00:29,040
-android提供了一种模式，叫做加速器。
+android提供了一种模式，叫做加载器。
 offers a pattern for that known as Loaders.
 

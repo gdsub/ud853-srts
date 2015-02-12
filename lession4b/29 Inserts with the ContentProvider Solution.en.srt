@@ -25,7 +25,7 @@ based upon the content URI. Remember that the
 
 6
 00:00:20,410 --> 00:00:23,390
-默认，location元组CONTENT_URI传递全部的
+默认的，location元组CONTENT_URI传递全部的
 default location entry CONTENT_URI passes all of the
 
 7
