@@ -1,40 +1,40 @@
 1
 00:00:00,590 --> 00:00:02,340
-Ò»Ğ©ºÃµÄ»Ø´ğ °üÀ¨
+ä¸€äº›å¥½çš„å›ç­” åŒ…æ‹¬
 Some good examples of answers include,
 
 2
 00:00:02,340 --> 00:00:06,990
-´«¸ĞÆ÷¼àÌı  Î»ÖÃ¸üĞÂ  ¶¯Ì¬¹ã²¥½ÓÊÕ
+ä¼ æ„Ÿå™¨ç›‘å¬  ä½ç½®æ›´æ–°  åŠ¨æ€å¹¿æ’­æ¥æ”¶
 sensor listeners, location updates, dynamic broadcast receivers. Or
 
 3
 00:00:06,990 --> 00:00:11,940
-ºÍÓÎÏ·Çı¶¯  ÄÇĞ©ÔÚÄãµÄActivity±»ÔİÍ£Ê±¶¼ĞèÒª±£³ÖÔËĞĞµÄÈÎÎñ
+å’Œæ¸¸æˆç‰©ç†å¼•æ“  é‚£äº›åœ¨ä½ çš„Activityè¢«æš‚åœæ—¶éƒ½éœ€è¦ä¿æŒè¿è¡Œçš„ä»»åŠ¡
 games physics engines. Any task that your application needs to keep happening,
 
 4
 00:00:11,940 --> 00:00:15,580
-ÊÇ²»ÄÜ·ÅÔÚActivityÖĞµÄ
+æ˜¯ä¸èƒ½æ”¾åœ¨Activityä¸­çš„
 even when your activity is paused. Shouldn't really happen within an activity at
 
 5
 00:00:15,580 --> 00:00:20,680
-ÎÒÃÇ½«ÔÚµÚÁù½Ú¿ÎÖĞÑ§Ï° ÈçºÎ½â¾öÕâ¸öÎÊÌâ
+æˆ‘ä»¬å°†åœ¨ç¬¬å…­èŠ‚è¯¾ä¸­å­¦ä¹  å¦‚ä½•è§£å†³è¿™ä¸ªé—®é¢˜
 all. We'll have a look at some solutions to that problem in lesson six.
 
 6
 00:00:20,680 --> 00:00:22,700
-Çë¼Ç×¡  µ±ÄãµÄActivity´¦ÓÚÔİÍ£×´Ì¬Ê±
+è¯·è®°ä½  å½“ä½ çš„Activityå¤„äºæš‚åœçŠ¶æ€æ—¶
 Keep in mind that when you're activity is paused,
 
 7
 00:00:22,700 --> 00:00:28,140
-Ëü»¹ÊÇ¿É¼ûµÄ  Ö»ÊÇ±»ÕÚ×¡ÁËÒ»²¿·Ö  Í¨³£ÊÇ±»¶Ô»°¿òÕÚ×¡
+å®ƒè¿˜æ˜¯å¯è§çš„  åªæ˜¯è¢«é®ä½äº†ä¸€éƒ¨åˆ†  é€šå¸¸æ˜¯è¢«å¯¹è¯æ¡†é®ä½
 it's still visible. It's just obscured by something else, usually a dialog box.
 
 8
 00:00:28,140 --> 00:00:32,990
-²¢Ã»ÓĞÍ£Ö¹  ËùÒÔ²»ÒªÔÚÔİÍ£µÄÊ±ºòÍ£Ö¹»æÖÆÄãµÄUI
+å¹¶æ²¡æœ‰åœæ­¢  æ‰€ä»¥ä¸è¦åœ¨æš‚åœçš„æ—¶å€™åœæ­¢ç»˜åˆ¶ä½ çš„UI
 But it's not stopped. So, don't stop drawing your UI when you receive on pause
 
