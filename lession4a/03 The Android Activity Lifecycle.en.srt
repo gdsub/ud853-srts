@@ -1,80 +1,80 @@
 1
 00:00:00,500 --> 00:00:04,510
-¶ÔÓÚÏñÎÒÒ»ÑùÏ°¹ßÓÚÊ¹ÓÃ×ÀÃæ´°¿Ú¿ª·¢µÄÈËÀ´Ëµ
+å¯¹äºåƒæˆ‘ä¸€æ ·ä¹ æƒ¯äºä½¿ç”¨æ¡Œé¢çª—å£å¼€å‘çš„äººæ¥è¯´
 A platform which terminates apps on its own is a pretty radical departure for
 
 2
 00:00:04,510 --> 00:00:07,920
-Æ½Ì¨×Ô¼ºÖÕÖ¹Ó¦ÓÃÊÇÒ»¸öºÜ´óµÄ¸Ä±ä
+å¹³å°è‡ªå·±ç»ˆæ­¢åº”ç”¨æ˜¯ä¸€ä¸ªå¾ˆå¤§çš„æ”¹å˜ã€‚
 anyone like me who cut their teeth on desktop Winforms development.
 
 3
 00:00:07,920 --> 00:00:10,910
-Èç¹ûÄãÓĞÏàËÆµÄ¿ª·¢±³¾°
+å¦‚æœä½ æœ‰ç›¸ä¼¼çš„å¼€å‘èƒŒæ™¯
 If you come from a similar background you probably have
 
 4
 00:00:10,910 --> 00:00:14,912
-ÄãºÜ¿ÉÄÜÒÑ¾­ÄÜºÜºÃµÄÀí½âÉúÃüÖÜÆÚµÄÊÂ¼ş´¦ÀíÊÇÓÃÀ´¸ÉÊ²Ã´µÄÁË
+ä½ å¾ˆå¯èƒ½å·²ç»èƒ½å¾ˆå¥½çš„ç†è§£ç”Ÿå‘½å‘¨æœŸçš„äº‹ä»¶å¤„ç†æ˜¯ç”¨æ¥å¹²ä»€ä¹ˆçš„äº†
 a pretty good idea of what to expect in terms of lifecycle event handles.
 
 5
 00:00:20,300 --> 00:00:24,380
-ÄãÍ¨¹ıonCreateº¯Êı´´½¨ÄãµÄÓÃ»§½çÃæ
+ä½ é€šè¿‡onCreateå‡½æ•°åˆ›å»ºä½ çš„ç”¨æˆ·ç•Œé¢
 You start with the onCreate call back where you build and wire up your UI.
 
 6
 00:00:24,380 --> 00:00:28,910
-Ò»µ©½çÃæ±»´´½¨ºÃ  ÄãµÄActivityÒ²¾ÍËæÖ®±»´´½¨³É¹¦ÁË  ²»ÄÑÀí½â 
+ä¸€æ—¦ç•Œé¢è¢«åˆ›å»ºå¥½  ä½ çš„Activityä¹Ÿå°±éšä¹‹è¢«åˆ›å»ºæˆåŠŸäº†  ä¸éš¾ç†è§£ 
 to you that there are also event handlers for when the activity becomes visible.
 
 7
 00:00:28,910 --> 00:00:32,650
-µ±ActivityÄÜ¹»±»¿´¼ûµÄÊ±ºò  »áÓĞÊÂ¼ş±»´¥·¢
+å½“Activityèƒ½å¤Ÿè¢«çœ‹è§çš„æ—¶å€™  ä¼šæœ‰äº‹ä»¶è¢«è§¦å‘
 Once that's done, your activity has been created. It likely won't be a surprise
 
 8
 00:00:32,650 --> 00:00:36,970
-Õâ¸ö¾ÍÊÇ¿ªÊ¼onStart¹ı³Ì  ÁíÒ»¸öÊÇ  µ±±»ÇĞ»»µ½Õâ¸öActivity  ´¦ÓÚÇ°Ì¨ÔËĞĞ×´Ì¬µÄÊ±ºò
+è¿™ä¸ªå°±æ˜¯å¼€å§‹onStartè¿‡ç¨‹  å¦ä¸€ä¸ªæ˜¯  å½“è¢«åˆ‡æ¢åˆ°è¿™ä¸ªActivity  å¤„äºå‰å°è¿è¡ŒçŠ¶æ€çš„æ—¶å€™
 Which is onStart and another for when it gets focus and becomes the active
 
 9
 00:00:36,970 --> 00:00:42,255
-´ËÊ±ÊÇ»Ö¸´onResume¹ı³Ì  µ±½áÊøµÄÊ±ºò  ¹ı³ÌÊÇ·´¹ıÀ´µÄ
+æ­¤æ—¶æ˜¯æ¢å¤onResumeè¿‡ç¨‹  å½“ç»“æŸçš„æ—¶å€™  è¿‡ç¨‹æ˜¯åè¿‡æ¥çš„
 [SOUND] onPause indicates that the activity has lost focus, followed by
 
 10
 00:00:42,255 --> 00:00:48,542
-ÔİÍ£onPause¹ı³Ì±íÊ¾ActivityÊ§È¥ÁË½¹µã  È»ºó½ÓÏÂÀ´
+æš‚åœonPauseè¿‡ç¨‹è¡¨ç¤ºActivityå¤±å»äº†ç„¦ç‚¹  ç„¶åæ¥ä¸‹æ¥
 foreground app, which is onResume. That same sequence, then happens in reverse.
 
 11
 00:00:48,542 --> 00:00:54,283
-ÊÇÍ£Ö¹onStop¹ı³Ì  ´ËÊ±Activity¾Í²»¿É¼ûÁË  ×îºóÊÇÏú»ÙonDestroy¹ı³Ì
+æ˜¯åœæ­¢onStopè¿‡ç¨‹  æ­¤æ—¶Activityå°±ä¸å¯è§äº†  æœ€åæ˜¯é”€æ¯onDestroyè¿‡ç¨‹
 onStop when the app is no longer visible. Finally, there's an onDestroy method,
 
 12
 00:00:54,283 --> 00:00:58,540
-ÉúÃüÖÜÆÚ½áÊø  µ±ÄãµÄÓ¦ÓÃ³ÌĞòµÚÒ»´ÎÆô¶¯Ê±
+ç”Ÿå‘½å‘¨æœŸç»“æŸ  å½“ä½ çš„åº”ç”¨ç¨‹åºç¬¬ä¸€æ¬¡å¯åŠ¨æ—¶
 indicating the end of the app lifecycle. When your app is first launched, you'll
 
 13
 00:00:58,540 --> 00:01:03,265
-Äã»á·Ç³£¿ìËÙµÄ¾­Àú½¨Á¢onCreate¿ªÊ¼  onStart»Ö¸´  onResumeÕâÈı¸ö¹ı³Ì
+ä½ ä¼šéå¸¸å¿«é€Ÿçš„ç»å†å»ºç«‹onCreateå¼€å§‹  onStartæ¢å¤  onResumeè¿™ä¸‰ä¸ªè¿‡ç¨‹
 quickly move through these states. Create, Start, Resume, one after the other
 
 14
 00:01:06,803 --> 00:01:10,985
-µ«ÊÇ  ÔÚÕâ¸öÓ¦ÓÃ³ÌĞòµÄÉúÃüÖÜÆÚÖĞ  ´Ó³ÌĞòµ÷ÓÃ´´½¨onCreate
+ä½†æ˜¯åœ¨è¿™ä¸ªåº”ç”¨ç¨‹åºçš„ç”Ÿå‘½å‘¨æœŸä¸­,ä»ç¨‹åºè°ƒç”¨åˆ›å»ºonCreate
 But within the full application lifetime, from when onCreate is first called and
 
 15
 00:01:10,985 --> 00:01:16,480
-µ½×îºó³ÌĞò½áÊø  ActivityµÄ»îÔ¾ÉúÃüÖÜÆÚºÍ
+åˆ°æœ€åç¨‹åºç»“æŸ  Activityçš„æ´»è·ƒç”Ÿå‘½å‘¨æœŸå’Œ
 till the app is finally terminated. It will move through the active lifetime and
 
 16
 00:01:16,480 --> 00:01:22,640
-¿ÉÊÓÉúÃüÖÜÆÚ¹ı³Ì»á·´¸´µ÷ÓÃºÜ¶à´Î  ÈÃÎÒÃÇ×ĞÏ¸µÄ·ÖÎöÒ»ÏÂ
+å¯è§†ç”Ÿå‘½å‘¨æœŸè¿‡ç¨‹ä¼šåå¤è°ƒç”¨å¾ˆå¤šæ¬¡  è®©æˆ‘ä»¬ä»”ç»†çš„åˆ†æä¸€ä¸‹
 the physical lifetime, many times. Let's look at those in a little more detail.
 
