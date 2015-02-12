@@ -1,39 +1,39 @@
 1
 00:00:00,330 --> 00:00:02,100
-ÏÖÔÚÄãÖªµÀÁËÈçºÎÊ¹ÓÃÄ£ÄâÊı¾İ½øĞĞUI¿ª·¢
+ç°åœ¨ä½ çŸ¥é“äº†å¦‚ä½•ä½¿ç”¨æ¨¡æ‹Ÿæ•°æ®è¿›è¡ŒUIå¼€å‘
 So now you've taken a UI with mock data
 
 2
 00:00:02,100 --> 00:00:04,390
-Ò²Ñ§»áÁË¸üĞÂÕæÊµµÄÊı¾İ
+ä¹Ÿå­¦ä¼šäº†æ›´æ–°çœŸå®çš„æ•°æ®
 and learned how to update with the real data. You
 
 3
 00:00:04,390 --> 00:00:06,955
-Äã»¹Ñ§»áÁËÊ¹ÓÃÈ¨ÏŞ  ½«ºÄÊ±²Ù×÷×ªÒÆµ½
+ä½ è¿˜å­¦ä¼šäº†ä½¿ç”¨æƒé™  å°†è€—æ—¶æ“ä½œè½¬ç§»åˆ°
 learned how to use permissions, move time consuming processes
 
 4
 00:00:06,955 --> 00:00:09,540
-UIÏß³ÌÖ®Íâ  ÁíÍâ»¹ÁË½âÁËÒ»Ğ©ÍøÂçI/OµÄ
-of the UI thread, and were introduced to the basics
+UIçº¿ç¨‹ä¹‹å¤–  å¦å¤–è¿˜äº†è§£äº†ä¸€äº›ç½‘ç»œI/Oçš„
+off the UI thread, and were introduced to the basics
 
 5
 00:00:09,540 --> 00:00:12,410
-»ù´¡ÖªÊ¶  À´²Î¼ÓÎÒÃÇµÄµÚ3¿Î°É
+åŸºç¡€çŸ¥è¯†  æ¥å‚åŠ æˆ‘ä»¬çš„ç¬¬3è¯¾å§
 of network I/O. Join us again in lesson three,
 
 6
 00:00:12,410 --> 00:00:14,990
-ÎÒÃÇ½«»á´´½¨¸ü¶àµÄActivity×é¼ş²¢ÇÒÑ§Ï°ÔõÑùÔÚËüÃÇÖ®¼ä
+æˆ‘ä»¬å°†ä¼šåˆ›å»ºæ›´å¤šçš„Activityç»„ä»¶å¹¶ä¸”å­¦ä¹ æ€æ ·åœ¨å®ƒä»¬ä¹‹é—´
 where we'll create more activities and learn how to navigate
 
 7
 00:00:14,990 --> 00:00:17,700
-½øĞĞÌø×ª  µ«ÊÇÊ×ÏÈ  ÈÃÎÒÀ´´øÁìÄã
+è¿›è¡Œè·³è½¬  ä½†æ˜¯é¦–å…ˆ  è®©æˆ‘æ¥å¸¦é¢†ä½ 
 between them. But first, come with me as I take
 
 8
 00:00:17,700 --> 00:00:20,190
-½øĞĞÒ»´ÎAndroidÀúÊ·Ö®ÂÃ
+è¿›è¡Œä¸€æ¬¡Androidå†å²ä¹‹æ—…
 you on another voyage in to the history of Android
