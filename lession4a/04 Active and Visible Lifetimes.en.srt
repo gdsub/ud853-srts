@@ -1,131 +1,131 @@
 1
 00:00:00,880 --> 00:00:03,650
-»îÔ¾ÉúÃüÖÜÆÚÊÇÖ¸µ±ÄãµÄActivity´¦ÓÚÇ°Ì¨²¢ÇÒ
+æ´»è·ƒç”Ÿå‘½å‘¨æœŸæ˜¯æŒ‡å½“ä½ çš„Activityå¤„äºå‰å°å¹¶ä¸”
 The active life cycle is when your activity is in the foreground and
 
 2
 00:00:03,650 --> 00:00:10,600
-»ñÈ¡ÁË½¹µã  ´ËÊ±Activity¿ÉÒÔÏìÓ¦ÓÃ»§µÄÊÂ¼ş  ²¢ÇÒ
+è¢«æ˜¾ç¤ºåœ¨å±å¹•ä¸Šã€‚  æ­¤æ—¶Activityå¯ä»¥å“åº”ç”¨æˆ·çš„äº‹ä»¶  å¹¶ä¸”
 has focus. Here it is actively receiving input from user events and
 
 3
 00:00:10,600 --> 00:00:16,140
-²»»á±»ÆäËûActivityËùÕÚµ²  ÁíÒ»·½Ãæ
-no other activities are obscuring it. On [UNKNOWN] and
+ä¸ä¼šè¢«å…¶ä»–Activityæ‰€é®æŒ¡  å½“ onPauses è°ƒç”¨æ—¶ï¼Œ
+no other activities are obscuring it. onPauses hold and
 
 4
 00:00:16,140 --> 00:00:20,570
-µ±ÄãµÄActivity±»ÕÚµ²Ê±  »îÔ¾ÉúÃüÖÜÆÚ½áÊø
+activeç”Ÿå‘½å‘¨æœŸç»“æŸ å¹¶ä¸”é‚£äº›æ˜¾ç¤ºactivityè¢«éƒ¨åˆ†é®æŒ¡ã€‚
 the active lifetime ends as soon as your activity is partially obscured,
 
 5
 00:00:20,570 --> 00:00:27,120
-ÏñÕâ¸öÀı×ÓÖĞ  ÓÉÓÚÄãÑ¡ÖĞÁËGoogleÉÌµêÖĞµÄÄ³¸öÓ¦ÓÃ  ²éÑ¯¶Ô»°¿òÌø³ö
+åƒè¿™ä¸ªä¾‹å­ä¸­  ç”±äºä½ é€‰ä¸­äº†Googleå•†åº—ä¸­çš„æŸä¸ªåº”ç”¨  æŸ¥è¯¢å¯¹è¯æ¡†è·³å‡º
 like in this example. [SOUND] You can see here the permissions dialogue
 
 6
 00:00:27,120 --> 00:00:31,828
-ÕÚ×¡ÁËGoogle Play³ÌĞò
+é®ä½äº†Google Playç¨‹åº
 is displayed in front of Google Play for
 
 7
 00:00:31,828 --> 00:00:36,826
-À´°²×°Õâ¸öÓ¦ÓÃ  ÔÙÀıÈç  ÁíÒ»¸öActivityÏëÒª
+æ¥å®‰è£…è¿™ä¸ªåº”ç”¨  å†ä¾‹å¦‚  å¦ä¸€ä¸ªActivityæƒ³è¦
 an app in store. Or the same thing happens when you have another activity trying
 
 8
 00:00:36,826 --> 00:00:41,290
-Ö´ĞĞÒ»¸öÒşÊ½µÄIntent  ²¢ĞèÒªÓÃ»§×ö³öÑ¡Ôñ  ËùÒÔ
+æ‰§è¡Œä¸€ä¸ªéšå¼çš„Intent  å¹¶éœ€è¦ç”¨æˆ·åšå‡ºé€‰æ‹©  æ‰€ä»¥
 to fulfill an implicit intent and the user needs to make a selection. So
 
 9
 00:00:41,290 --> 00:00:43,790
-ÎªÁËÓĞĞ§µÄÀûÓÃÓĞÏŞµÄ×ÊÔ´
+ä¸ºäº†æœ‰æ•ˆçš„åˆ©ç”¨æœ‰é™çš„èµ„æº
 to make efficient use of limited resources,
 
 10
 00:00:43,790 --> 00:00:46,590
-Äã»áÏëÒªÀûÓÃÕâĞ©ĞÅºÅÀ´µ÷Õû×Ô¼ºµÄÓ¦ÓÃµÄ×ÊÔ´Õ¼ÓÃÇé¿ö
+ä½ ä¼šæƒ³è¦åˆ©ç”¨è¿™äº›ä¿¡å·æ¥è°ƒæ•´è‡ªå·±çš„åº”ç”¨çš„èµ„æºå ç”¨æƒ…å†µ
 you'll want to use these signals to adjust your app's resource burden.
 
 11
 00:00:47,660 --> 00:00:52,140
-µ±»îÔ¾ÉúÃüÖÜÆÚ½áÊøµÄÊ±ºò  UIµÄ½»»¥¿ÉÒÔÔİÍ£
+å½“æ´»è·ƒç”Ÿå‘½å‘¨æœŸç»“æŸçš„æ—¶å€™  UIçš„äº¤äº’å¯ä»¥æš‚åœ
 So, most updates through a UI, can be paused when this lifetime ends,
 
 12
 00:00:52,140 --> 00:00:57,400
-ÕâÊÇÍ¨¹ıonPauseĞÅºÅÀ´´«´ïµÄ  µ«ÊÇÄã»á¿´µ½  Õâ¸öActivity»¹ÊÇ¿É¼ûµÄ
+è¿™æ˜¯é€šè¿‡onPauseä¿¡å·æ¥ä¼ è¾¾çš„  ä½†æ˜¯ä½ ä¼šçœ‹åˆ°  è¿™ä¸ªActivityè¿˜æ˜¯å¯è§çš„
 which is announced by onPause. But as you see, the app is still visible, so
 
 13
 00:00:57,400 --> 00:01:01,650
-ËùÒÔÄã²»ÄÜÔİÍ£ÈÎºÎ¸úÄãµÄUIÏÔÊ¾Ïà¹ØµÄ½ø³Ì
+æ‰€ä»¥ä½ ä¸èƒ½æš‚åœä»»ä½•è·Ÿä½ çš„UIæ˜¾ç¤ºç›¸å…³çš„è¿›ç¨‹
 you shouldn't pause any processes that are drawing your UI. The visible
 
 14
 00:01:01,650 --> 00:01:05,459
-¿ÉÊÓÉúÃüÖÜÆÚ±íÊ¾ÄãµÄÓ¦ÓÃÊÇ¿É¼ûµÄÈ«³Ì
+å¯è§†ç”Ÿå‘½å‘¨æœŸè¡¨ç¤ºä½ çš„åº”ç”¨æ˜¯å¯è§çš„å…¨ç¨‹
 lifetime on the other hand continues whenever the app is at all visible and
 
 15
 00:01:05,459 --> 00:01:11,112
-µ±ÄãµÄÓ¦ÓÃ±»±ğµÄÓ¦ÓÃÕÚ×¡Ê±  ¿ÉÊÓÉúÃüÖÜÆÚ½áÊø  ÏñÕâÑù
+å½“ä½ çš„åº”ç”¨è¢«åˆ«çš„åº”ç”¨é®ä½æ—¶  å¯è§†ç”Ÿå‘½å‘¨æœŸç»“æŸ  åƒè¿™æ ·
 ends as soon as it's completely obscured by another app. Like this.
 
 
 16
 00:01:11,112 --> 00:01:16,844
-ËùÒÔ  Ò»µ©Äã¿´µ½½áÊøĞÅºÅ²úÉúÊ±  Ó¦ÓÃ×ªµ½ºóÌ¨ 
+æ‰€ä»¥  ä¸€æ—¦ä½ çœ‹åˆ°onStopä¿¡å·äº§ç”Ÿæ—¶  åº”ç”¨è½¬åˆ°åå° 
 [SOUND] At this point, our app is moved to the background.
 
 17
 00:01:16,844 --> 00:01:22,000
-ÓÃ»§¾ÍÍêÈ«¿´²»µ½ÄãµÄÓ¦ÓÃÁË
-So when you see on stop, you know the user can't see your app at all. So, while
+ç”¨æˆ·å°±å®Œå…¨çœ‹ä¸åˆ°ä½ çš„åº”ç”¨äº†
+So when you see onStop, you know the user can't see your app at all. So, while
 
 18
 00:01:22,000 --> 00:01:26,410
-µ±ÄãµÄ³ÌĞòÔËĞĞÊ±  ´´½¨onCreateºÍÏú»ÙonDestroy´ó¶àÊıÊ±ºòÖ»»á±»µ÷ÓÃÒ»´Î
+å½“ä½ çš„ç¨‹åºè¿è¡Œæ—¶  åˆ›å»ºonCreateå’Œé”€æ¯onDestroyå¤§å¤šæ•°æ—¶å€™åªä¼šè¢«è°ƒç”¨ä¸€æ¬¡
 OnCreate and OnDestroy will be called at most once, each time your app is run,
 
 19
 00:01:26,410 --> 00:01:29,740
-µ«ÊÇÕâĞ©ÊÂ¼ş»á±»µ÷ÓÃ¶à´Î
+ä½†æ˜¯è¿™äº›äº‹ä»¶(onStart,onStop,onResume,onPause)ä¼šè¢«è°ƒç”¨å¤šæ¬¡
 these handlers are likely to be called many times, while the app is running.
 
 20
 00:01:29,740 --> 00:01:34,310
-ÕâÀï¾ÍÊÇ²»Í¬µÄµØ·½ÁË  »ù±¾ÉÏËùÓĞµÄÆ½Ì¨
+è¿™é‡Œå°±æ˜¯ä¸åŒçš„åœ°æ–¹äº†  åŸºæœ¬ä¸Šæ‰€æœ‰çš„å¹³å°
 Now, this is where things get a little different. On almost al platforms,
 
 21
 00:01:34,310 --> 00:01:38,260
-Ó¦ÓÃµÄÉúÃüÖÜÆÚ¶¼ÊÇ¿ÉÔ¤²âµÄ  ¾ßÌåÀ´Ëµ¾ÍÊÇ  ÄãÆô¶¯Ò»¸ö³ÌĞò
+åº”ç”¨çš„ç”Ÿå‘½å‘¨æœŸéƒ½æ˜¯å¯é¢„æµ‹çš„  å…·ä½“æ¥è¯´å°±æ˜¯  ä½ å¯åŠ¨ä¸€ä¸ªç¨‹åº
 app life cycles are deterministic. Generally, you'll start a program and
 
 22
 00:01:38,260 --> 00:01:42,140
-Ëü³ÖĞøµÄÖ´ĞĞ  ÖªµÀ³ÌĞò½áÊø»òÕßÓÃ»§µã»÷È¡Ïû
+å®ƒæŒç»­çš„æ‰§è¡Œ  çŸ¥é“ç¨‹åºç»“æŸæˆ–è€…ç”¨æˆ·ç‚¹å‡»å–æ¶ˆ
 it'll keep running, until it either completes or the user cancels it. You look
 
 23
 00:01:42,140 --> 00:01:45,660
-Äã¿ÉÒÔ²Î¿¼´«Í³µÄ×ÀÃæ¿ª·¢  ÄãµÄ³ÌĞòÒ»Ö±±£³ÖÔËĞĞ  Ö±µ½
+ä½ å¯ä»¥å‚è€ƒä¼ ç»Ÿçš„æ¡Œé¢å¼€å‘  ä½ çš„ç¨‹åºä¸€ç›´ä¿æŒè¿è¡Œ  ç›´åˆ°
 at traditional desktop development that means your app keeps running until your
 
 24
 00:01:45,660 --> 00:01:50,280
-ÓÃ»§ÔÚÎÄ¼ş²Ëµ¥ÖĞµãÍ£Ö¹»òÕßÍË³ö  ÕâÊ±Äã¿ÉÒÔÊÍ·Å×ÊÔ´
+ç”¨æˆ·åœ¨æ–‡ä»¶èœå•ä¸­ç‚¹åœæ­¢æˆ–è€…é€€å‡º  è¿™æ—¶ä½ å¯ä»¥é‡Šæ”¾èµ„æº
 user chooses quit or exit from the file menu. At that point you can say stay and
 
 25
 00:01:50,280 --> 00:01:55,350
-µ«ÊÇ  AndroidµÄÉúÃüÖÜÆÚ²»Í¬
+ä½†æ˜¯  Androidçš„ç”Ÿå‘½å‘¨æœŸä¸åŒ
 free resources. But as we know on Android life cycles work a little differently.
 
 26
 00:01:55,350 --> 00:01:58,010
-ÈÃÎÒÃÇ¿´¿´AndroidµÄÉúÃüÖÜÆÚµ½µ×ÊÇÔõÃ´¹¤×÷µÄ
+è®©æˆ‘ä»¬çœ‹çœ‹Androidçš„ç”Ÿå‘½å‘¨æœŸåˆ°åº•æ˜¯æ€ä¹ˆå·¥ä½œçš„
 So, let's take a closer look at exactly how that works now.
 
