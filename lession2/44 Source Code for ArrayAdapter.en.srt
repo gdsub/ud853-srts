@@ -1,269 +1,269 @@
 1
 00:00:00,190 --> 00:00:02,830
-´ó¼Ò»¹¼ÇµÃµÚ1½Ú¿ÎÖĞµÄÕâÕÅÍ¼Âğ£¿  ÊÊÅäÆ÷
+å¤§å®¶è¿˜è®°å¾—ç¬¬1èŠ‚è¯¾ä¸­çš„è¿™å¼ å›¾å—ï¼Ÿ  é€‚é…å™¨
 Do you remember this diagram from lesson one? The adapter
 
 2
 00:00:02,830 --> 00:00:05,520
-ÓĞÒ»¸öÖ¸ÏòÔ­Ê¼Êı¾İµÄÒıÓÃ  ÁíÍâ»¹ÓĞ
+æœ‰ä¸€ä¸ªæŒ‡å‘åŸå§‹æ•°æ®çš„å¼•ç”¨  å¦å¤–è¿˜æœ‰
 has a reference to the raw data. And has instructions on
 
 3
 00:00:05,520 --> 00:00:09,020
-ÈçºÎ´´½¨Ã¿Ò»¸öÁĞ±íÏî²¼¾ÖµÄ·½·¨  ÕâĞ©²¼¾Ö×îÖÕ
+å¦‚ä½•åˆ›å»ºæ¯ä¸€ä¸ªåˆ—è¡¨é¡¹å¸ƒå±€çš„æ–¹æ³•  è¿™äº›å¸ƒå±€æœ€ç»ˆ
 how to build each list item layout. These layouts eventually make
 
 4
 00:00:09,020 --> 00:00:11,840
-»á×é³ÉÕâÀïµÄListView¿Ø¼ş  µ«ÊÇÈç¹ûÕâÀïµÄÈÎºÎÒ»ÏîÊı¾İ¸Ä±äÁË
+ä¼šç»„æˆè¿™é‡Œçš„ListViewæ§ä»¶  ä½†æ˜¯å¦‚æœè¿™é‡Œçš„ä»»ä½•ä¸€é¡¹æ•°æ®æ”¹å˜äº†
 it into the ListView here. But what happens if any
 
 5
 00:00:11,840 --> 00:00:15,490
-»á·¢ÉúÊ²Ã´ÄØ  ÈÃÎÒÃÇÀ´¾Ù¸öÀı×Ó  ÏÖÔÚÓĞµÚËÄ¸ö
+ä¼šå‘ç”Ÿä»€ä¹ˆå‘¢  è®©æˆ‘ä»¬æ¥ä¸¾ä¸ªä¾‹å­  ç°åœ¨æœ‰ç¬¬å››ä¸ª
 of this data changes. Let's say for example, there's a fourth
 
 6
 00:00:15,490 --> 00:00:19,120
-ÁªÏµÈË½ĞDon  ÊÊÅäÆ÷ÖªµÀÈçºÎÎªDon´´½¨Ò»¸ö
+è”ç³»äººå«Don  é€‚é…å™¨çŸ¥é“å¦‚ä½•ä¸ºDonåˆ›å»ºä¸€ä¸ª
 contact named Don. The adapter knows how to create a list
 
 7
 00:00:19,120 --> 00:00:22,090
-ÁĞ±íÏî²¼¾Ö  µ«ÊÇÏÖÔÚµÄListView¿Ø¼şÊÇ¹ıÊ±µÄ
+åˆ—è¡¨é¡¹å¸ƒå±€  ä½†æ˜¯ç°åœ¨çš„ListViewæ§ä»¶çš„æ•°æ®æ˜¯è¿‡æ—¶çš„
 item layout for Don. But now the ListView is outdated
 
 8
 00:00:22,090 --> 00:00:26,170
-ÒòÎªËüÖ»ÓĞ3¸öÁĞ±íÏî  ²»¹ÜÔõÑù  ÎÒÃÇĞèÒªÊÊÅäÆ÷
+å› ä¸ºå®ƒåªæœ‰3ä¸ªåˆ—è¡¨é¡¹  ä¸ç®¡æ€æ ·  æˆ‘ä»¬éœ€è¦é€‚é…å™¨
 because it only has three items. Somehow, we need the adapter
 
 9
 00:00:26,170 --> 00:00:28,190
-À´Í¨ÖªListView¿Ø¼şÊı¾İ·¢ÉúÁË±ä»¯
+æ¥é€šçŸ¥ListViewæ§ä»¶æ•°æ®å‘ç”Ÿäº†å˜åŒ–
 to notify the ListView that things have
 
 10
 00:00:28,190 --> 00:00:31,728
-ĞÒÔËµÄÊÇ  ÓĞÒ»¸ö½Ğ
+å¹¸è¿çš„æ˜¯  æœ‰ä¸€ä¸ªå«
 changed. And lucky for us, there's a method
 
 11
 00:00:31,728 --> 00:00:37,590
-adapter.notifyDataSetChanged()µÄ·½·¨  Õâ¸ö·½·¨Í¨ÖªËùÓĞ¸½¼ÓµÄ¹Û²ìÕß
+adapter.notifyDataSetChanged()çš„æ–¹æ³•  è¿™ä¸ªæ–¹æ³•é€šçŸ¥æ‰€æœ‰é™„åŠ çš„è§‚å¯Ÿè€…
 called: adapter.notifyDataSetChanged(). This notifies any attached observers,
 
 12
 00:00:37,590 --> 00:00:40,460
-±ÈÈçÕâ¸ö  ÒÀÀµµÄÊÊÅäÆ÷Êı¾İ·¢ÉúÁË±ä»¯
+æ¯”å¦‚è¿™ä¸ª  ä¾èµ–çš„é€‚é…å™¨æ•°æ®å‘ç”Ÿäº†å˜åŒ–
 like this one, that the underlying adapter data has
 
 13
 00:00:40,460 --> 00:00:43,340
-Õâ¸öÊ±ºòListView¿Ø¼şĞèÒªÔÙ´Î¼ÆËã
+è¿™ä¸ªæ—¶å€™ListViewæ§ä»¶éœ€è¦å†æ¬¡è®¡ç®—
 changed. Then the ListView needs to populate
 
 14
 00:00:43,340 --> 00:00:46,100
-ËüµÄÁĞ±íÏî  ËùÒÔËüÎÊÊÊÅäÆ÷
+å®ƒçš„åˆ—è¡¨é¡¹  æ‰€ä»¥å®ƒé—®é€‚é…å™¨
 its children again. So it asks the adapter
 
 15
 00:00:46,100 --> 00:00:47,990
-ÓĞ¶àÉÙÁĞ±íÏî  ÊÊÅäÆ÷»Ø´ğËµ
+æœ‰å¤šå°‘åˆ—è¡¨é¡¹  é€‚é…å™¨å›ç­”è¯´
 how many items there are? And the adapter
 
 16
 00:00:47,990 --> 00:00:51,210
-ÓĞ4¸ö  È»ºóListView¿Ø¼ş»áÖğ¸ö»ñÈ¡Ã¿Ò»¸öÁĞ±íÏî
+æœ‰4ä¸ª  ç„¶åListViewæ§ä»¶ä¼šé€ä¸ªè·å–
 responds with four. Then the ListView goes and fetches
 
 17
 00:00:51,210 --> 00:00:53,940
-Ö±µ½Ëü×Ô¼ºÌîÂúÆÁÄ»
+æ¯ä¸€ä¸ªåˆ—è¡¨é¡¹ç›´åˆ°å®ƒè‡ªå·±å¡«æ»¡å±å¹•
 each one individually until it fills up the screen.
 
 18
 00:00:54,940 --> 00:00:57,300
-ListView¿Ø¼şÊÇÍ¨¹ıÕâ¸ö·½·¨
+ListViewæ§ä»¶æ˜¯é€šè¿‡è¿™ä¸ªæ–¹æ³•
 And it's through that method that the ListView is able
 
 19
 00:00:57,300 --> 00:01:00,250
-»ñÈ¡ËüËùÓĞµÄÁĞ±íÏîµÄ  µ«ÊÇÏÖÔÚ
+è·å–å®ƒæ‰€æœ‰çš„åˆ—è¡¨é¡¹çš„  ä½†æ˜¯ç°åœ¨
 to get all its list items. But now you
 
 20
 00:01:00,250 --> 00:01:03,270
-Äã¿Ï¶¨ÔÚÏë  ÎÒÃÇÈ·Êµ³É¹¦µØ¸üĞÂÁËListView¿Ø¼ş
+ä½ è‚¯å®šåœ¨æƒ³  æˆ‘ä»¬ç¡®å®æˆåŠŸåœ°æ›´æ–°äº†ListViewæ§ä»¶
 must be thinking. How did we actually update the ListView
 
 21
 00:01:03,270 --> 00:01:06,230
-µ«ÊÇÎÒÃÇ²¢Ã»ÓĞÔÚappÖĞÌí¼ÓÕâĞĞ´úÂëÑ½
+ä½†æ˜¯æˆ‘ä»¬å¹¶æ²¡æœ‰åœ¨appä¸­æ·»åŠ è¿™è¡Œä»£ç å‘€
 successfully, without adding this line of code in our
 
 22
 00:01:06,230 --> 00:01:09,290
-ÆäÊµÄØ  ÔÚÊ¹ÓÃArrayAdapterµÄÊ±ºò  ÎŞÂÛºÎÊ±ÄãÏòËüÌí¼Ó
+å…¶å®å‘¢  åœ¨ä½¿ç”¨ArrayAdapterçš„æ—¶å€™  æ— è®ºä½•æ—¶ä½ å‘å®ƒæ·»åŠ 
 app? Well, with ArrayAdapter, whenever you add or
 
 23
 00:01:09,290 --> 00:01:14,190
-»òÕßÒÆ³ıÔªËØ  Ëü×Ô¶¯ÔÚÄÚ²¿µ÷ÓÃÁËnotifyDataSetChanged()·½·¨  Ò²¾ÍÊÇËµ
+æˆ–è€…ç§»é™¤å…ƒç´   å®ƒè‡ªåŠ¨åœ¨å†…éƒ¨è°ƒç”¨äº†notifyDataSetChanged()æ–¹æ³•  ä¹Ÿå°±æ˜¯è¯´
 remove elements from it, it internally calls notifyDataSetChanged(). That means
 
 24
 00:01:14,190 --> 00:01:16,260
-ÎÒÃÇ²»ĞèÒª×öÈÎºÎÊÂÇé  µ«ÊÇÎÒÃÇÈçºÎÈ·ÈÏÕâÒ»µãÄØ
+æˆ‘ä»¬ä¸éœ€è¦åšä»»ä½•äº‹æƒ…  ä½†æ˜¯æˆ‘ä»¬å¦‚ä½•ç¡®è®¤è¿™ä¸€ç‚¹å‘¢
 we don't have to do anything. But how can be
 
 25
 00:01:16,260 --> 00:01:20,050
-ÎÒÃÇ¿ÉÒÔ²é¿´Ò»ÏÂArrayAdapterÀà
+æˆ‘ä»¬å¯ä»¥æŸ¥çœ‹ä¸€ä¸‹ArrayAdapterç±»
 confirm this? Well, we can check the actual implementation
 
 26
 00:01:20,050 --> 00:01:23,470
-ÔÚframeworkÖĞµÄÊµÏÖ  ÕâÀï¾ÍÊÇ
+åœ¨frameworkä¸­çš„å®ç°  è¿™é‡Œå°±æ˜¯
 of the ArrayAdapter class in the framework. And here's
 
 27
 00:01:23,470 --> 00:01:26,190
-ArrayAdapterÀàµÄ´úÂë  ËüÊÇÔÚAndroidµÄframework²ãÖĞµÄ
+ArrayAdapterç±»åœ¨Androidçš„frameworkå±‚ä¸­çš„ä»£ç 
 the code for the ArrayAdapter class within the Android
 
 28
 00:01:26,190 --> 00:01:29,930
-Äã¿ÉÒÔµã»÷ÏÂÃæµÄÁ´½ÓÀ´¼ÌĞø²é¿´ÏêÏ¸´úÂë
+ä½ å¯ä»¥ç‚¹å‡»ä¸‹é¢çš„é“¾æ¥æ¥ç»§ç»­æŸ¥çœ‹è¯¦ç»†ä»£ç 
 framework. You can follow along with the link below.
 
 29
 00:01:29,930 --> 00:01:32,910
-Ê×ÏÈÎÒÃÇÀ´ÕÒÒ»ÏÂadd()·½·¨  ¼Ç×¡
+é¦–å…ˆæˆ‘ä»¬æ¥æ‰¾ä¸€ä¸‹add()æ–¹æ³•  è®°ä½
 First, we're going to search for the add() method. Remember,
 
 30
 00:01:32,910 --> 00:01:35,730
-ÎÒÃÇÖ®Ç°¾ÍÊÇÓÃÕâ¸ö·½·¨ÏòÊÊÅäÆ÷ÖĞÌí¼Ó×Ö·û´®µÄ
+æˆ‘ä»¬ä¹‹å‰å°±æ˜¯ç”¨è¿™ä¸ªæ–¹æ³•å‘é€‚é…å™¨ä¸­æ·»åŠ å¤©æ°”é¢„æŠ¥çš„å­—ç¬¦ä¸²çš„
 we added forecast strings to the adapter using this
 
 31
 00:01:35,730 --> 00:01:38,790
-²¢ÇÒÎÒÃÇ¿ÉÒÔÈ·ÈÏµÄÊÇ
+å¹¶ä¸”æˆ‘ä»¬å¯ä»¥ç¡®è®¤çš„æ˜¯
 method. And sure enough we see that, the
 
 32
 00:01:38,790 --> 00:01:42,140
-notifyDataSetChanged()·½·¨ÔÚÄÚ²¿±»µ÷ÓÃÁË
+notifyDataSetChanged()æ–¹æ³•åœ¨å†…éƒ¨è¢«è°ƒç”¨äº†
 notifyDataSetChanged() method is called internally. But you
 
 33
 00:01:42,140 --> 00:01:44,740
-µ«ÊÇÄã¿ÉÄÜÔÚÏëÕâÀïµÄÕâ¸ö²¼¶ûĞÍ±äÁ¿ÊÇ×öÊ²Ã´µÄ
+ä½†æ˜¯ä½ å¯èƒ½åœ¨æƒ³è¿™é‡Œçš„è¿™ä¸ªå¸ƒå°”å‹å˜é‡æ˜¯åšä»€ä¹ˆçš„
 might be thinking what about this Boolean here. Well
 
 34
 00:01:44,740 --> 00:01:47,180
-ÈÃÎÒÃÇÀ´°ÑËüÕÒ³öÀ´  Èç¹ûÄã»¬¶¯µ½×îÉÏÃæ
+è®©æˆ‘ä»¬æ¥æŠŠå®ƒæ‰¾å‡ºæ¥  å¦‚æœä½ æ»‘åŠ¨åˆ°æœ€ä¸Šé¢
 let's look it up. If you scroll to the top
 
 35
 00:01:47,180 --> 00:01:50,270
-Äã»á¿´µ½mNotifyOnChange±äÁ¿Ò»¿ªÊ¼
+ä½ ä¼šçœ‹åˆ°mNotifyOnChangeå˜é‡ä¸€å¼€å§‹
 you'll see that, mNotifyOnChange is declared as
 
 36
 00:01:50,270 --> 00:01:53,640
-ÊÇ±»ÉùÃ÷ÎªtrueµÄ  Èç¹ûÄã²é¿´ËüÔÚÆäËüµØ·½µÄÊ¹ÓÃ»á·¢ÏÖ
+æ˜¯è¢«å£°æ˜ä¸ºtrueçš„  å¦‚æœä½ æŸ¥çœ‹å®ƒåœ¨å…¶å®ƒåœ°æ–¹çš„ä½¿ç”¨ä¼šå‘ç°
 true initially. As you go through your other references you'll
 
 37
 00:01:53,640 --> 00:01:56,800
-ËüÖ»ÔÚÕâ¸ö½ĞsetNotifyOnChange()µÄ·½·¨Àï
+å®ƒåªåœ¨è¿™ä¸ªå«setNotifyOnChange()çš„æ–¹æ³•é‡Œ
 see that it's only changed here in this
 
 38
 00:01:56,800 --> 00:02:01,410
-±»¸Ä±äÁË  ÒòÎªÎÒÃÇ²»»áÍ¨¹ı²ÎÊıfalse
+è¢«æ”¹å˜äº†  å› ä¸ºæˆ‘ä»¬ä¸ä¼šé€šè¿‡å‚æ•°false
 setNotifyOnChange() method. Since we don't call this public
 
 39
 00:02:01,410 --> 00:02:04,600
-µ÷ÓÃÕâ¸ö¹«¹²·½·¨  ÄÇÃ´Ã¿´ÎÊÊÅäÆ÷¸üĞÂµÄÊ±ºò
+è°ƒç”¨è¿™ä¸ªå…¬å…±æ–¹æ³•  é‚£ä¹ˆæ¯æ¬¡é€‚é…å™¨æ›´æ–°çš„æ—¶å€™
 method with the value false, then we know that we're
 
 40
 00:02:04,600 --> 00:02:07,440
-ÎÒÃÇ¶¼»á±»°²È«µØÍ¨Öªµ½
+æˆ‘ä»¬éƒ½ä¼šè¢«å®‰å…¨åœ°é€šçŸ¥åˆ°
 going to be safely notified each time the adapter updates.
 
 41
 00:02:08,850 --> 00:02:11,220
-ÏÖÔÚÔÙÈÃÎÒÃÇ»Øµ½add()·½·¨  ÎÒÏë¸øÄãÃÇ
+ç°åœ¨å†è®©æˆ‘ä»¬å›åˆ°add()æ–¹æ³•  æˆ‘æƒ³ç»™ä½ ä»¬
 Now let's go back to the add() method. I want to
 
 42
 00:02:11,220 --> 00:02:14,280
-ÔÙ¿´Ò»¼şÊÂÇé  Äã»á×¢Òâµ½
+å†çœ‹ä¸€ä»¶äº‹æƒ…  ä½ ä¼šæ³¨æ„åˆ°
 show you one more thing. You'll notice in the
 
 43
 00:02:14,280 --> 00:02:17,660
-ÔÚaddAll()·½·¨ÖĞ  ËüÖ»Í¨ÖªËüµÄ¹Û²ìÕßÒ»´Î  È»¶ø
+åœ¨addAll()æ–¹æ³•ä¸­  å®ƒåªé€šçŸ¥å®ƒçš„è§‚å¯Ÿè€…ä¸€æ¬¡  ç„¶è€Œ
 addAll() method, it only notifies its observers once. Whereas in
 
 44
 00:02:17,660 --> 00:02:20,930
-¶ÔÓÚadd()·½·¨Ã¿´ÎÄãµ÷ÓÃËü  Ëü¶¼»á¸üĞÂËüµÄ
+å¯¹äºadd()æ–¹æ³•æ¯æ¬¡ä½ è°ƒç”¨å®ƒ  å®ƒéƒ½ä¼šæ›´æ–°å®ƒçš„
 the add() method every time you call this it will update
 
 45
 00:02:20,930 --> 00:02:24,700
-¹Û²ìÕßÃÇ  Õâ±íÃ÷ÎÒÃÇµÄ´úÂëÃ¿´Î¶¼ÔÚ
+è§‚å¯Ÿè€…ä»¬  è¿™è¡¨æ˜æˆ‘ä»¬çš„ä»£ç æ¯æ¬¡è°ƒç”¨add()æ–¹æ³•éƒ½åœ¨
 it's observers. That means that our code actually is refreshing
 
 46
 00:02:24,700 --> 00:02:28,350
-Ë¢ĞÂÁĞ±í  Òò´Ë  Èç¹ûÄãµÄÄ¿±êÉè±¸ÊÇÔËĞĞHoneycomb»òÕß¸üĞÂµÄÏµÍ³
+åˆ·æ–°åˆ—è¡¨  å› æ­¤  å¦‚æœä½ çš„ç›®æ ‡è®¾å¤‡æ˜¯è¿è¡ŒHoneycombæˆ–è€…æ›´æ–°çš„ç³»ç»Ÿ
 the list every time. So, if you're targeting Honeycomb or above
 
 47
 00:02:28,350 --> 00:02:30,180
-Äã¿ÉÒÔÊ¹ÓÃÕâ¸ö·½·¨À´Ìá¸ßÒ»µãĞ§ÂÊ
+ä½ å¯ä»¥ä½¿ç”¨è¿™ä¸ªæ–¹æ³•æ¥æé«˜ä¸€ç‚¹æ•ˆç‡
 you can use this method to be a little more
 
 48
 00:02:30,180 --> 00:02:33,890
-×ÜÖ®  ²»Òªº¦ÅÂ³¢ÊÔ×Ô¼ºÈ¥×öÕâĞ©ÊÂÇé
+æ€»ä¹‹  ä¸è¦å®³æ€•å°è¯•è‡ªå·±å»åšè¿™äº›äº‹æƒ…
 efficient. In general don't be afraid to try and do this
 
 49
 00:02:33,890 --> 00:02:38,710
-ÕâÀï¸æËß´ó¼ÒÒ»¸ö×¨ÒµµÄĞ¡ÇÏÃÅ  ÈÎºÎÊ±ºòÈç¹ûÄã¶ÔÄ³¼şÊÂ²»È·¶¨
+å°çªé—¨  ä»»ä½•æ—¶å€™å¦‚æœä½ å¯¹æŸä»¶äº‹ä¸ç¡®å®š
 on your own. As a general pro tip, if you're ever unsure about something,
 
 50
 00:02:38,710 --> 00:02:39,930
-¾¡ÇéµØÈ¥²é¿´
+å°½æƒ…åœ°å»æŸ¥çœ‹
 feel free to go and check the
 
 51
 00:02:39,930 --> 00:02:42,760
-AndroidÔ´´úÂë°É  ²»Òª°Ñframework²ãµÄ´úÂëÏëÏó³É
+Androidæºä»£ç å§  ä¸è¦æŠŠframeworkå±‚çš„ä»£ç æƒ³è±¡æˆ
 Android source code. Don't treat the framework code
 
 52
 00:02:42,760 --> 00:02:47,320
-ÊÇÒ»¸öºÚºĞ×Ó  ³ä·ÖÀûÓÃAndroid¿ªÔ´µÄÓÅÊÆ
+æ˜¯ä¸€ä¸ªé»‘ç›’å­  å……åˆ†åˆ©ç”¨Androidå¼€æºçš„ä¼˜åŠ¿
 like a black box. Take advantage of the fact that Android is open source. The
 
 53
 00:02:47,320 --> 00:02:48,910
-Äã¸üÁË½âÕâ¸öÆ½Ì¨
+ä½ è¶Šäº†è§£è¿™ä¸ªå¹³å°
 more you learn about the platform the
 
 54
 00:02:48,910 --> 00:02:50,690
-Äã¾Í»á³ÉÎªÒ»¸ö¸üºÃµÄAndroid¿ª·¢Õß
+ä½ å°±ä¼šæˆä¸ºä¸€ä¸ªè¶Šå¥½çš„Androidå¼€å‘è€…
 better of an Android developer you can become.
