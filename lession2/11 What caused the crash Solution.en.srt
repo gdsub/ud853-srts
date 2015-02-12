@@ -1,80 +1,80 @@
 1
 00:00:00,450 --> 00:00:02,830
-如果你在手机上跑这个程序的话  你的应用程序将会崩溃
-If you run it on your phone, your app will crashed
+如果你的应用程序
+If you run it on your phone, your App crashed
 
 2
 00:00:02,830 --> 00:00:06,270
-因为报 NetworkOnMainException 异常了
-because of a NetworkOnMainException. We found
+因为NetworkOnMainException而崩溃了
+because of a network got main thread exception. We found
 
 3
 00:00:06,270 --> 00:00:08,990
-我们通过连接手机和电脑
+我们可以将设备和电脑连接
 this answer by connecting our device to our computer and
 
 4
 00:00:08,990 --> 00:00:12,790
-通过Android设备监视器来检查错误
+然后观察Android设备监视器上显示的错误信息
 then checking Android device monitor for the error. You can
 
 5
 00:00:12,790 --> 00:00:15,220
-左边你能看到的是我们的包名
+可以看到这里是我们的应用程序包名
 see here that this is our package name and this
 
 6
 00:00:15,220 --> 00:00:18,010
-和进程id  我们可以通过进程id
+这里是进程ID 如果你搜索这个进程ID
 is our process ID. If you search the logs for
 
 7
 00:00:18,010 --> 00:00:22,390
-过滤出错误信息  这个崩溃最终是由
+就会看到错误信息 这个错误是被NetworkOnMainThreadException引发的
 that process ID then our error appears. It's triggered ultimately
 
 8
 00:00:22,390 --> 00:00:25,700
-NetworkOnMainThreadException异常引起的
-by a NetworkOnMainThreadException. If you're curious
+也就是在主线程中进行了网络操作
+by a network on main thread exception. If you're curious
 
 9
 00:00:25,700 --> 00:00:28,560
-如果你想确定是哪行代码出错了
+如果你想知道是我们代码中的哪一行触发的
 as to what line of our code actually caused
 
 10
 00:00:28,560 --> 00:00:30,730
-你可以继续向下看调用栈来查看更多的信息
+你可以向下滚动这个堆栈信息
 this, you can scroll down the stack trace to
 
 11
 00:00:30,730 --> 00:00:33,940
-这一部分是系统的调用信息
+这些是系统库中代码引发的错误信息 你可以跳过
 read more. This is our framework code that you
 
 12
 00:00:33,940 --> 00:00:36,570
-你可以直接跳到我们自己代码的这个部分
+而这里是我们代码中触发错误的元凶
 can skip and here's where it actually hits our
 
 13
 00:00:36,570 --> 00:00:41,440
-在PlaceholderFragment这个类的onCreateView()方法里报错了
-app. It's within the PlaceholderFragment class, in the onCreateView method. And
+这行包含了错误发生的地点 在PlaceholderFragment.class中的onCreateView()方法中
+app. It's within the placeholder fragment class, in the onCreateView method. And
 
 14
 00:00:41,440 --> 00:00:46,680
-它在 MainActivity.java 这个文件的第116行
-it happens in MainActivity.java file, in line 116. So
+具体是在MainActivity.java的116行
+it happens in main activity.java file, in line 116. So
 
 15
 00:00:46,680 --> 00:00:51,650
-所以我们回到我们的代码里去  116行的urlConnection.connect()这个方法引起了错误
+回到代码 在这一行你可以看到urlConnection.connect()
 if we go back to the code, on that line you can see that urlConnection.connect
 
 16
 00:00:51,650 --> 00:00:55,210
-实际上我们不能在主线程上执行它喔
+实际上就是它引发了错误 我们不能在主线程里使用它
 actually caused the error, and that we can't do that on the main thread.
 
