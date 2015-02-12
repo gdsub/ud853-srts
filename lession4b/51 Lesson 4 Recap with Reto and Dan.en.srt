@@ -60,7 +60,7 @@ that work as well on tablets as they do on phones.
 
 13
 00:00:39,900 --> 00:00:42,100
-这似乎是方便的摄位车进入了历史
+这就好像方便的segway进入历史一样
 >> Which seems like a convenient segway
 
 14

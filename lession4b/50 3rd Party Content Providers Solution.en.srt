@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,090 --> 00:00:02,500
-有很多不同的内容提供者可以
+有很多不同的Content Providers可以
 There's a number of different content providers available to
 
 2

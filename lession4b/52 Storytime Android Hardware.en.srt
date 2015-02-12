@@ -1,6 +1,6 @@
 ﻿1
 00:00:00,610 --> 00:00:03,350
-在所有的Android设备里
+在所有搭载Android的设备里
 Of all the Android launch devices, the Nexus 1 will
 
 2
@@ -10,17 +10,17 @@ always hold a special place in my heart. That's not
 
 3
 00:00:06,560 --> 00:00:08,970
-我的第一台android设备，HTC G1
+我的第一台android设备，HTC G1的推出
 to take anything away from my first Android device, the
 
 4
 00:00:08,970 --> 00:00:11,970
-它的推出把android带到了这个世界，带有独特的
+把android带到了这个世界，带有独特的
 HTC G1, that launched Android into the world with its
 
 5
 00:00:11,970 --> 00:00:17,420
-下巴和滑出式键盘。
+下巴和滑出式键盘，或者说称它为HTC Magic
 distinctive chin and slide-out keyboard, or the HTC Magic. First
 
 6
@@ -85,7 +85,7 @@ Android devices that have since become standard. And it
 
 18
 00:00:54,150 --> 00:00:57,090
-它也是Verizon在美国发布的设备，
+它也是Verizon在美国发布的定制设备，
 was also the device whose release on Verizon here in
 
 19
@@ -190,17 +190,17 @@ just the start, Those changes paved the way for the
 
 39
 00:02:00,490 --> 00:02:02,740
-铺平了道路，成长为一切背后的大脑
+铺平了道路，
 Android mobile [UNKNOWN] west, to grow into what could be,
 
 40
 00:02:02,740 --> 00:02:06,450
-从手机到平板，再到电视，车载，可穿戴设备
+成长为从手机到平板，再到电视，车载，可穿戴设备比如Android wear，这所有一切的核心
 the brains behind anything, from phones and tablets, to TVs, cars
 
 41
 00:02:06,450 --> 00:02:10,508
-比如Android wear。很难想象下一个是什么
+很难想象下一个是什么
 and wearables, like Android wear. It's impossible to know, what comes
 
 42
