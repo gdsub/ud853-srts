@@ -1,365 +1,365 @@
 1
 00:00:00,350 --> 00:00:02,050
-回顾课程第四节，我们学习了
+回顾第四课，我们学到了
 Back in lesson four, we learned that the
 
 2
 00:00:02,050 --> 00:00:04,990
-Android Runtime(运行时)会杀掉那些activity处于不可见状态的app，
- Android Runtime will kill apps with no visible activities,
+Android·运行时会杀掉不可见的activity
+Android Runtime will kill apps with no visible activities,
 
 3
 00:00:04,990 --> 00:00:07,300
-来为前台的app释放需要的资源。
+来给前台可见的应用释放资源
 in order to free resources needed by the foreground
 
 4
 00:00:07,300 --> 00:00:10,110
-但要是你的程序中的一些任务需要在
+但是，如果我们的应用即使在不可见时
 app. But what if your app has tasks that
 
 5
 00:00:10,110 --> 00:00:12,820
-activity不可见的情况下继续执行肿么办，比如
+也需要继续任务呢？
 need to continue when the activity isn't visible, things
 
 6
 00:00:12,820 --> 00:00:17,150
-下载文件，上传相片，或者听音乐呢？
+比如下载文件，上传照片，播放音乐
 like downloading files, uploading photos, or playing music? Well,
 
 7
 00:00:17,150 --> 00:00:21,357
-针对这个有一个专门的程序组件：Service(服务)。我们已经
+有一个应用程序的组件就是为这种情况而生的
 there's an application component for that. Services. We've already
 
 8
 00:00:21,357 --> 00:00:23,224
-介绍了Activities,Content Providers,
+我们已经介绍了activity,content provider,broadcast 
 introduced Activities, Content Providers,
 
 9
 00:00:23,224 --> 00:00:25,230
-Broadcast Reciviers 和intents。
+recriver还有intent。
 Broadcast Receivers and Intents. Services,
 
 10
 00:00:25,230 --> 00:00:29,500
-Services是安卓应用组件整副拼图里的最后一块。
+Service（服务）就是Android组件的最后一部分
 are the final piece to the Android app component
 
 11
 00:00:29,500 --> 00:00:33,369
-启动Service和启动activity类似
+开始一个服务像极了activity，
 puzzle. You start services much like you do activities, by
 
 12
 00:00:33,369 --> 00:00:36,880
-通过调用startService方法，并向该方法传递一个intent对象。
+为startService方法传递一个intent参数就行了
 passing in an intent to a Start Service call.
 
 13
 00:00:36,880 --> 00:00:39,212
-停止服务也是相同的方式，通过调用
+你也可以用同样的办法停止它
 And you can stop services the same way, by calling
 
 14
 00:00:39,212 --> 00:00:40,930
-stopService，并传递你想要停止的
+调用stopService方法，传入你想停止的服务的名字
 Stop Service and passing in the name of the
 
 15
 00:00:40,930 --> 00:00:44,770
-服务的名字。不像activity，service没有
+不同于activity,服务没有用户界面
 service you want to stop. Unlike activities, services have no
 
 16
 00:00:44,770 --> 00:00:47,777
-交互界面，且他们比后台进程有更高的
+他们运行时，比后台activity有更高德优先级
 user interface and they run at a higher priority than
 
 17
 00:00:47,777 --> 00:00:50,490
-活动优先权。这意味着当系统资源不足的时候
+这就意味着运行着服务的应用程序
 background activities. This means that an app with a running
 
 18
 00:00:50,490 --> 00:00:52,690
-程序中的后台服务
+很少在运行时
 service is less likely to be killed by the run
 
 19
 00:00:52,690 --> 00:00:55,620
-更容易被runtime(运行时)所保留
+为了释放资源给前台可见activity而被杀掉
 time, in order to free resources for the foreground activities.
 
 20
 00:00:55,620 --> 00:00:58,350
-事实上，默认情况下，系统会重启
+实际上，如果服务在应用内部停止它之前
 In fact, by default, the system will attempt to restart
 
 21
 00:00:58,350 --> 00:01:01,180
-那些在程序终止他们之前被系统所终止的服务。
+就被中断的话，系统默认会重启这个服务
 services that are terminated before they are stopped from within
 
 22
 00:01:01,180 --> 00:01:05,129
-在这个简化的生命周期里面可以看出来。
+这是它简单的生命周期的映射。
 the app. This is reflected in this simplified life cycle.
 
 23
 00:01:05,129 --> 00:01:09,050
-和Activities相比,Services被设计来执行
+和activity相比，服务被设计成一个用来执行长时间操作的
 Compared to Activities, Services are designed to execute longer running
 
 24
 00:01:09,050 --> 00:01:12,340
-那些需要长时间运行的任务。典型地，你只需要
+不应被中断的任务。通常，你只需要
 tasks that shouldn't be interrupted. Typically, you'll only need to
 
 25
 00:01:12,340 --> 00:01:15,900
-重写onStartCommand，在这里添加你后台需要运行的任务代码
-override the onStartCommand handler, which is where you begin the background
+重写onStartCommad方法，这是你希望执行后台任务的地方
+override the onStartCommad handler, which is where you begin the background
 
 26
 00:01:15,900 --> 00:01:18,860
-想要执行的后台程序。但要注意的是，
+但是请注意
 task you wish to execute. But notice that there are
 
 27
 00:01:18,860 --> 00:01:21,880
-没有监管状态改变的处理程序来反映
+它们没有处理监控状态改变，来反映
 no handlers for monitoring changes in state, to reflect the
 
 28
 00:01:21,880 --> 00:01:24,600
-app移动到后台进程。这是因为
+应用被移到后台去了。这是因为
 app moving to the background. This is because the running
 
 29
 00:01:24,600 --> 00:01:27,250
-running service 自身发送了一个信号到框架那
+运行中的服务自己给framework层发送了一个信号
 service itself sends a signal to the framework that the
 
 30
 00:01:27,250 --> 00:01:30,930
-控制app要考虑到要比那些
+它包含了这个应用应该比
 containing app should be considered higher priority than other apps
 
 31
 00:01:30,930 --> 00:01:34,180
-在后台没有运行服务的其他app有更高的优先权。在一些
+其他后台未运行服务的程序拥有更高优先级
 in the background that don't have running services. In some
 
 32
 00:01:34,180 --> 00:01:37,150
-情况下，你的service可能会执行一个任务来使那些
+一些情况下，你的服务可能执行一个没有交互界面的任务
 cases your service may performing a task, that while not
 
 33
 00:01:37,150 --> 00:01:41,450
-没有UI，不能被中断的进程来干扰到用户体验。
+没有用户操作的话不能被中断
 having UI, can't be interrupted without interfering with the user experience.
 
 34
 00:01:41,450 --> 00:01:43,980
-例如，听音乐或者汽车导航的急救。
+比如，播放音乐或者汽车导航
 For example, playing music or helping with in car
 
 35
 00:01:43,980 --> 00:01:47,720
-在这些情形里，你能指明让你的
+这些情况下，你的服务应该
 navigation. In these cases, you can indicate that your
 
 36
 00:01:47,720 --> 00:01:49,410
-server通过开启Foreground被运行在前台。
+通过调用startForeground
 server should be considered to be running in the
 
 37
 00:01:49,410 --> 00:01:54,530
-你会发现这个通知里面包含了一个通告。
+来声明它要运行在前台。你会注意到这个调用是在通知里完成的
 foreground by calling startForeground. You'll notice that this call takes
 
 38
 00:01:54,530 --> 00:01:57,330
-它会被展示且不会被
+这将会被一直显示，不能取消
 in a notification. This will be displayed, and can't
 
 39
 00:01:57,330 --> 00:01:59,850
-解散直到服务终止，或者你
+直到任务停止或者你调用 stopForeground方法
 be dismissed until the service has stopped, or you
 
 40
 00:01:59,850 --> 00:02:03,680
-呼叫终止Foreground。稍后你将会和
+后面你会跟着Dan学到更多关于通知的部分
 call stopForeground. You'll learn more about notifications a little
 
 41
 00:02:03,680 --> 00:02:06,600
-Dan学习更多关于通告的知识。但是现在，请记住
+但现在，记住前台服务和前台activity有
 later, with Dan. But for now, note that a foreground
 
 42
 00:02:06,600 --> 00:02:10,440
-一个前台service和一个前台activity运行起来具有相同的优先权。
+同样的优先级就好了
 service runs at the same priority as a foreground
 
 43
 00:02:10,440 --> 00:02:13,330
-这使得run time不可能
+这会使得它不可能在运行时
 activity. Making it nearly impossible for the run time
 
 44
 00:02:13,330 --> 00:02:15,800
-杀掉进程来释放资源。现在，你
+为了释放更多的资源被杀掉
 to kill in order to free resources. Now, you
 
 45
 00:02:15,800 --> 00:02:18,460
-自己可能会想，我要解决掉大量
+现在你可能会考虑，我可以用生命周期
 may be thinking to yourself, I could save a lot
 
 46
 00:02:18,460 --> 00:02:21,020
-处理生命周期的麻烦，仅仅通过创建
+保持一些麻烦的处理，只创建长时间运行，
 of trouble dealing with life cycles, just by creating
 
 47
 00:02:21,020 --> 00:02:24,830
-long running或者甚至foreground services。嗯，我是在
+或者前台服务就好了
 long running, or even foreground services. Well, I grew up
 
 48
 00:02:24,830 --> 00:02:27,260
-澳大利亚沿岸长大的，所以我很早
+嗯...我生长在澳大利亚的海滨，所以
 along the coast in Australia, so I learned young
 
 49
 00:02:27,260 --> 00:02:32,160
-就知道逆流游泳容易疲劳而且最终是徒劳的。
+我自小学会的游泳对现在来说是辛苦并且最终没用的
 that swimming against the current is exhausting and ultimately futile.
 
 50
 00:02:32,160 --> 00:02:34,310
-在这个案例里，表明要使
+这种情况下，意味着会让系统管理资源变得
 In this case, that means making it more difficult
 
 51
 00:02:34,310 --> 00:02:37,060
-系统成功管理资源是很困难的，最终很易导致
+更加困难，最后导致
 for the system to manage resources, ultimately leading to a
 
 52
 00:02:37,060 --> 00:02:40,780
-一个坏的用户体验。要顺流游泳。使用前台
+比较差的用户体验
 worse user experience. Swim with the current. Use foreground
 
 53
 00:02:40,780 --> 00:02:45,500
-服务只在有绝对需求的情况下，
+服务只在绝对需要的时候才运行
 services only when and for as long as absolutely necessary,
 
 54
 00:02:45,500 --> 00:02:49,020
-然后尽快终止所有的服务。
+并且在不需要的时候要尽快关闭它
 and stop all services as quickly as possible. It's
 
 55
 00:02:49,020 --> 00:02:52,520
-记录像activity和receivers，services
+注意，就像activity和receiver一样，及时关闭运行在主线程里的服务
 also important to note that like activities and receivers, services
 
 56
 00:02:52,520 --> 00:02:54,490
-运行在主要路径上是很重要的。所以你将需要
+也同样重要。所以你需要
 run on the main thread. So you'll need to
 
 57
 00:02:54,490 --> 00:02:57,620
-使用一个后台路径或者一个思考任务来执行
+用后台线程或者异步任务来执行
 use a background thread or a think task to execute
 
 58
 00:02:57,620 --> 00:02:59,190
-你希望要使用的服务的long runningtasks。
+你希望在服务里处理的长时间运行的任务
 the long running tasks you wish to do
 
 59
 00:02:59,190 --> 00:03:02,410
-为了使生活更简便一些，你可以
+为了简单
 within your service. To make life easier, you can
 
 60
 00:03:02,410 --> 00:03:05,300
-使用指令服务类函数。
+你可以使用intent service类
 use the intent service class. Which implements the most
 
 61
 00:03:05,300 --> 00:03:07,920
-对于使用被执行在服务里的指令来说， 这是实施最普遍的最佳实践路径。
-common best practice pattern, for usi  ng intents, which are
+它实现了最通用的实践模式
+common best practice pattern, for using intents, which are
 
 62
 00:03:07,920 --> 00:03:10,640
-它创立了一个队列
+来在服务里使用intent。它创建了一个
 executed within a service. It creates a queue of
 
 63
 00:03:10,640 --> 00:03:14,630
-来容纳即将进入的指令，当开启服务被唤醒的时候传递进来。
+传入的intent的队列，并在服务被调用时传进去
 incoming intents, passed in when start service is called.
 
 64
 00:03:14,630 --> 00:03:17,970
-然后这些会在后台路径按次序的宣告进进程，
+这样，在你的intent service实现里的onHandleIntent方法里
 These are then, processed sequentially on a background thread,
 
 65
 00:03:17,970 --> 00:03:22,970
-包括onhandleintent处理程序，和你的指令服务实施。
+在后台按顺序执行
 within the onHandleIntent handler, within your intent service implementation.
 
 66
 00:03:22,970 --> 00:03:25,840
-当队列是空的时候，服务器自己会终止
+当是队列空了的时候，服务自己会终止
 When the queue is empty the service self terminates
 
 67
 00:03:25,840 --> 00:03:28,650
-直到收到一个新的指令和进程再次开始。
+直到接收到新的intent，进程才再次开启
 until a new intent is received and the process begins
 
 68
 00:03:28,650 --> 00:03:31,640
-services是一个很有用的工具，然后理解
+服务是一个强大的工具
 again. Services are a powerful tool and it's important
 
 69
 00:03:31,640 --> 00:03:34,980
-你能怎样使用他们是很重要的但在实践中
+理解怎么运用好它们是很重要的
 to understand how you can use them but in practice
 
 70
 00:03:34,980 --> 00:03:37,290
-经常有一个框架替代来转换你的
+但是在实践中，框架层经常会延压你自己的
 there's often a framework alternative to rolling your own
 
 71
 00:03:37,290 --> 00:03:40,770
-服务实施。你将会在后续的课程中学习到
+服务实现。不管它是一个后台任务的intent service
 service implementation. Whether that be an intent service for executing
 
 72
 00:03:40,770 --> 00:03:43,810
-关于是否执行后台任务和同步适配器。
+还是一个你将在后面学到的同步适配器
 background tasks or the sync adapter which you'll learn about
 
 73
 00:03:43,810 --> 00:03:47,620
-完美运行后台数据同步。
+它可以完美的执行后台数据同步
 later in this lesson. Perfect for performing background data synchronization
 
