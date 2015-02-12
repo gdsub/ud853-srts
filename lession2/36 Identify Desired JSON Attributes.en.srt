@@ -5,12 +5,12 @@ The URL that we built looks good and the JSON
 
 2
 00:00:03,360 --> 00:00:07,010
-看上去都不错。不过这字符串还是挺长的
+看上去都不错。不过这字符串
 string from the server also looks good. However, it still is
 
 3
 00:00:07,010 --> 00:00:09,840
-让我们仔细看看
+还是挺长的。让我们仔细看看
 one long string. Let's look at it more carefully to see
 
 4
@@ -45,7 +45,7 @@ result of the web query. Then, it formatted the output for
 
 10
 00:00:28,550 --> 00:00:32,549
-格式化过的JSON
+格式化过的JSON，展示了数据的层次结构。
 us showing us the hierarchy of these elements. Now based on
 
 11
@@ -55,12 +55,12 @@ the wireframes that you saw for the Sunshine app, can you
 
 12
 00:00:35,200 --> 00:00:38,780
-你能告诉我们这里哪些叶节点是我们所想要的吗？
+你能告诉我们这里哪些叶节点是我们所想要的？
 tell us which of these leaf nodes we care about extracting?
 
 13
 00:00:38,780 --> 00:00:41,660
-虽然我们需要从父节点经过
+虽然我们的数据遍历需要经过父节点
 Even though we will have to traverse through parent nodes, for
 
 14
@@ -75,6 +75,6 @@ looking at the leaf nodes. Make your selections below on which
 
 16
 00:00:47,870 --> 00:00:51,280
-我们需要在预报列表中显示的属性
+我们展示天气预报列表所需要的属性
 attributes we'll need in order to display the list of forecasts
 
