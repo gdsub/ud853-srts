@@ -20,22 +20,22 @@ instead of hard coding our post code in, we'd really
 
 5
 00:00:12,515 --> 00:00:15,726
-他们应该可以在设置里自定义位置信息
+他们应该可以在设置里自定义位置信息  我们要
 to change their location in the settings. So let's make
 
 6
 00:00:15,726 --> 00:00:19,183
-那我们就多加上一个邮编的参数  让我们这个类变得更贴心吧
+通过让FetchWeatherTask类接受一个邮编参数  来使它
 the FetchWeatherTask more flexible by having it take as input
 
 7
 00:00:19,183 --> 00:00:22,890
-鉴于我们要这么做  我们应该
+更易于使用  鉴于我们要这么做  我们应该
 a postal code parameter. While we're doing that, we should
 
 8
 00:00:22,890 --> 00:00:26,340
-通过这个机会给项目做一些重构
+通过这个机会先给项目做一些重构
 also take this opportunity to do a little bit of refactoring.
 
 9
@@ -45,32 +45,32 @@ Instead of concatenating the strings for the server query
 
 10
 00:00:29,600 --> 00:00:32,369
-取而代之的是UriBuilder这个类来组装这个URL
+取而代之的是通过UriBuilder这个类来组装这个URL
 URL, we should use a UriBuilder Class to build
 
 11
 00:00:32,369 --> 00:00:35,580
 我们可以定义一个基础的 URL 地址
-up he URL. We can declare a base URL
+up the URL. We can declare a base URL
 
 12
 00:00:35,580 --> 00:00:39,120
-然后把每个参数拼接组装上去
+然后把每组参数名和参数值
 and then append each pair of query PARAM and
 
 13
 00:00:39,120 --> 00:00:43,100
-这些参数包括邮编信息  
-PARAM values onto it. This includes PARAM's for post
+拼接组装上去  这些参数包括邮编信息、  
+PARAM values onto it. This includes PARAMs for post
 
 14
 00:00:43,100 --> 00:00:46,890
-输出JSON数据格式、使用公制单位以及天数
+返回JSON数据格式、使用公制单位以及天气预报的天数
 code. JSON format, metric units, and date count. This'll
 
 15
 00:00:46,890 --> 00:00:49,080
-未来我们允许用户自己设置这些信息
+未来如果我们允许用户自己设置这些信息
 make it easier in the future if we ever
 
 16
