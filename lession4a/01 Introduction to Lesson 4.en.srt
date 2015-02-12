@@ -1,10 +1,64 @@
 1
-00:00:36,300 --> 00:00:39,850
-���ǵ�Ŀ���Ǽ�ʹ������ǳ��������޷����������ʱ��
->> The goal is to ensure your app provides a seamless, efficient experience for
+00:00:00,299 --> 00:00:04,790
+Sunshine现在有多个activity
+finally sunshine has multiple activities and 
 
 2
-00:00:39,850 --> 00:00:42,890
-���Ӧ����Ȼ�ܹ���ʹ�����ṩ����ϵ�  ��Ӧ���ٵ�Ӧ������
-your users, even when networks may be slow or unavailable
+00:00:04,790 --> 00:00:05,670
+我们可以使用intent在各个activity之间切换
+we can move between then using intents
 
+3
+00:00:05,670 --> 00:00:09,840
+我们也学会了用显式intent调用其他应用中的intent
+we also know how to use implicit intends to integrate activities from other Apps
+
+4
+00:00:09,840 --> 00:00:13,429
+在这节课中，我们要学习Android系统是如何处理activity的
+in this lesson will dive into just how the android framework deals with your
+
+5
+00:00:13,429 --> 00:00:16,630
+特别是activity的生命周期的概念
+activities in particular how the activity light cycle may be different
+
+6
+00:00:16,630 --> 00:00:17,500
+跟你之前接触
+from what you use to
+
+7
+00:00:17,500 --> 00:00:21,800
+的平台处理方式有所不同  
+from other platforms and environments don't worry there's plenty of code for
+
+8
+00:00:21,800 --> 00:00:25,769
+你需要写很多的代码才能体会到
+you to write yes plenty of code blots lofts
+
+9
+00:00:25,769 --> 00:00:29,439
+下一步  我们要通过Sunshine中实现数据库存储
+and lots of code will move sunshine along implementing
+
+10
+00:00:29,439 --> 00:00:32,739
+介绍使用content provider来抓取数据
+underlying database and dropping that any content provider
+
+11
+00:00:32,739 --> 00:00:36,960
+以及如何使用一个持久的数据存储  我们的目标是  在网络非常慢或者
+everything you need to know to use persistent storage the goal is to ensure
+
+12
+00:00:36,960 --> 00:00:40,610
+无法连接的时候  你的应用依然能够给使用者
+your app provides a seamless efficient experience for your users
+
+13
+00:00:40,610 --> 00:00:43,000
+提供不间断的  响应快速的应用体验
+even when networks may be slow or unavailable
