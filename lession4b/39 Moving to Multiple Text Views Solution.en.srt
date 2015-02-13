@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,480 --> 00:00:03,540
 很好，你完成了。我们来看看答案
 Alright, you're done. Lets take a look at the solution.
@@ -10,12 +10,12 @@ Now we're going to need some text views. First of all lets
 
 3
 00:00:06,380 --> 00:00:09,430
-让我们看看LinearLayout。这是垂直的。我们希望它是
+让我们看看LinearLayout。这是垂直布局的。我们希望它是
 look at our linear layout. It's vertical. We're going to want it
 
 4
 00:00:09,430 --> 00:00:11,930
-水平的。接下来我们需要
+水平布局。接下来我们需要
 to be horizontal. The next thing we're going to want are a
 
 5
@@ -75,7 +75,7 @@ the same, this one doesn't need to have an ID. If you remember our
 
 16
 00:00:57,550 --> 00:01:02,880
-我们的设计是一个日期，接着一个短横线，
+我们的设计是有日期的，接着一个短横线，
 design had the date. Followed by a dash, followed
 
 17
@@ -100,7 +100,7 @@ create another text view next to that. Our
 
 21
 00:01:22,400 --> 00:01:25,560
-这个地方会显示一个天气预报，比如Clear
+这个地方会显示一个天气预报，比如晴天
 placeholder text will be a forecast, like clear.
 
 22

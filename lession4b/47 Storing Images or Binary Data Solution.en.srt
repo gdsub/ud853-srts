@@ -70,7 +70,7 @@ the third option is pretty good. Storing the files in a
 
 15
 00:00:43,580 --> 00:00:47,950
-私人的文件夹同时在参照一个数据库中的地址  这时  
+私人的文件夹同时在参照一个数据库中的地址  这是 
 private folder and then referencing the location in the database. Now,
 
 16

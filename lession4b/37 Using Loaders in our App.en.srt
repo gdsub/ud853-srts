@@ -1,31 +1,31 @@
 1
 00:00:00,150 --> 00:00:02,170
-作为这节课的开始，我们会在forecastfragment.java文件中
+这节课的开始，我们会在forecastfragment.java文件中
 We'll start by adding our call back functions
 
 2
 00:00:02,170 --> 00:00:05,040
-添加回调函数，现在对于loader来说，
+添加回调函数
 to our forecast fragment. Now know we have two
 
 3
 00:00:05,040 --> 00:00:07,230
-我们有两个不同的回调函数选项，我们要
+我们有两个不同的loaderCallBacks回调函数选项，我们要
 different options here for loader call backs. We want to
 
 4
 00:00:07,230 --> 00:00:11,260
-确保选中的是 "android.support.v4" 这个回调函数
+确保选中的是 "android.support.v4" 包里的这个回调函数
 make sure that we're choosing the android.support.v4 callback so
 
 5
 00:00:11,260 --> 00:00:13,780
-这样我们就能使得应用在 Gingerbread 系统上兼容，这是一个generic type
+这样我们就能使得应用在 Gingerbread（2.3版本） 系统上兼容。这是一个泛型类
 we're compatible with Gingerbread. These take a generic
 
 6
 00:00:13,780 --> 00:00:17,402
-我们将会使用 cursor，对的
+我们将会使用 cursor，是的，
 type. We're going to want to use cursor. And yes that
 
 7
@@ -45,7 +45,7 @@ and, of course, we use control I to actually insert.
 
 10
 00:00:28,390 --> 00:00:32,250
-我们把带参数cursor的loader pattern写的很漂亮
+我们把带参数cursor的加载器模式写的很漂亮了
 And there we have it beautifully, our loader pattern with cursor.
 
 11
@@ -60,7 +60,7 @@ we're [INAUDIBLE] of columns to the top of our forecast fragment.
 
 13
 00:00:38,270 --> 00:00:40,590
-这些是会在我们的查询中所使用的
+这些列是会在我们的查询中所使用的
 These are the columns that are going to be used in our
 
 14

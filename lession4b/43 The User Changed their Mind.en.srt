@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,370 --> 00:00:02,710
 好的，我知道了。你们实际上想要
 All right, I get the hint. You actually want
@@ -50,12 +50,12 @@ We're going to stop cheating here. In onPreferenceChange, if we're
 
 11
 00:00:30,930 --> 00:00:34,065
-我们还没有设置偏好，我们将执行一个新的
+我们还没有设置偏好，如果地址改变，我们将执行一个新的
 not actually binding preferences, we're going to execute a new
 
 12
 00:00:34,065 --> 00:00:37,710
-FetchWeatherTask，如果地址改变。否则，我们就
+FetchWeatherTask。否则，我们就
 FetchWeatherTask if there's a change in location. Otherwise, we'll just
 
 13
