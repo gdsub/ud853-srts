@@ -1,245 +1,245 @@
 1
 00:00:00,000 --> 00:00:03,320
-50  Õâ¸öÊı×ÖÊÇÔÚ±»Google PlayÃüÃûµÄAndroid Market
+50  è¿™ä¸ªæ•°å­—æ˜¯Androidåº”ç”¨å¸‚åœºGoogle Play
 50. That's how many apps were available in
 
 2
 00:00:03,320 --> 00:00:05,680
-µÚÒ»´ÎËæ×ÅµÚÒ»¿îAndroidÉè±¸ÔÚ2008ÄêÍÆ³öÊ±
+éšç€ç¬¬ä¸€æ¬¾Androidè®¾å¤‡çš„å‘å¸ƒ  åœ¨2008å¹´æ¨å‡ºæ—¶
 Android Market as Google Play was named when
 
 3
 00:00:05,680 --> 00:00:08,750
-µÄÉÌµêÖĞ¿ÉÓÃµÄÓ¦ÓÃ³ÌĞòµÄÊıÁ¿
+å®ƒæ‰€æ‹¥æœ‰çš„åº”ç”¨ç¨‹åºçš„æ•°é‡
 it first launched alongside the first Android device
 
 4
 00:00:08,750 --> 00:00:11,800
-ÔÚ¼¸ÌìÖ®ºó  Android Market
+åœ¨å‡ å¤©ä¹‹å  Androidåº”ç”¨å¸‚åœº
 in 2008. A few days later, Android Market
 
 5
 00:00:11,800 --> 00:00:14,200
-ÏòËùÓĞµÄ¿ª·¢Õß¿ª·Å×¢²á²¢ÇÒ
+å‘æ‰€æœ‰çš„å¼€å‘è€…å¼€æ”¾æ³¨å†Œå¹¶ä¸”
 opened for all app developers to register and
 
 6
 00:00:14,200 --> 00:00:17,150
-ÔÚÃ»ÓĞÈÎºÎÀ´×ÔGoogle OEMs
+åœ¨æ²¡æœ‰ä»»ä½•æ¥è‡ªGoogle OEMå‚å•†
 start publishing their apps without any review or
 
 7
 00:00:17,150 --> 00:00:21,910
-»òÔËÓªÉÌµÄÉó²é  ÑéÖ¤  ÒªÇó¾Í¿ªÊ¼·¢²¼ËüÃÇµÄÓ¦ÓÃ³ÌĞò
+æˆ–è¿è¥å•†çš„å®¡æŸ¥å’ŒéªŒè¯æƒ…å†µä¸‹  å°±å¼€å§‹å‘å¸ƒä»–ä»¬çš„åº”ç”¨ç¨‹åº
 validation requirements from Google, OEMs, or carriers. For
 
 8
 00:00:21,910 --> 00:00:25,065
-ÎÒÃÇ×÷ÎªÒ»¸ö¿ª·¢Õß  ·¢²¼Ó¦ÓÃµÄ¿ÉÄÜĞÔ
+æˆ‘ä»¬ä½œä¸ºä¸€ä¸ªå¼€å‘è€…  å‘å¸ƒåº”ç”¨çš„å¯èƒ½æ€§
 us as developers, the ability to distribute apps and
 
 9
 00:00:25,065 --> 00:00:28,300
-ºÍ´ÓÖĞ»ñÀûµÄ¿ÉÄÜÔÚÓ¦ÓÃ³ÌĞò¹ºÂò
+å’Œé€šè¿‡åº”ç”¨ä¸­æ”¯ä»˜ä»¥åŠç›´æ¥æŠŠå¹¿å‘Šæ¨å‘
 the possibility of monetizing them through up front payments
 
 10
 00:00:28,300 --> 00:00:31,320
-ºÍ¹ã¸æµÄÊÕÈëµ½Ó¦ÓÃ³ÌĞòµÄ¿ª·¢ÕßÄÒÖĞÔÚ³ÖĞøÉÏÉı
+è¶…è¿‡10äº¿çš„Androidè®¾å¤‡ç”¨æˆ·ç­‰é€”å¾„è¿›è¡Œç›ˆåˆ©
 in app billing and advertising directly to the owners of
 
 11
 00:00:31,320 --> 00:00:33,920
-²¢ÇÒÔÚAndroidÉúÌ¬ÏµÍ³ÖĞÓµÓĞ
+çš„å¯èƒ½æ€§  æ˜¯Androidç”Ÿæ€ç³»ç»Ÿ
 over a billion android devices is one of the
 
 12
 00:00:33,920 --> 00:00:38,860
-³¬¹ıÊ®ÒÚµÄAndroidÉè±¸ÊÇÓĞ·Ç³£¶àµÄ»ú»á»ñÈ¡ÊÕÈëµÄ
+æä¾›çš„æœ€æ¿€åŠ¨äººå¿ƒçš„æœºä¼šä¹‹ä¸€
 most exciting opportunities made possible by the android ecosystem. Growing
 
 13
 00:00:38,860 --> 00:00:41,830
-ÎÒÊÇ³É³¤ÔÚÃ»ÓĞ»¥ÁªÍøºÍÖÇÄÜÊÖ»úµÄÄê´ú
+åœ¨æˆ‘æˆé•¿çš„æ²¡æœ‰æ™ºèƒ½æ‰‹æœºå’Œäº’è”ç½‘çš„å¹´ä»£
 up the dark days before smartphones and the internet,
 
 14
 00:00:41,830 --> 00:00:43,770
-Èç¹ûÎÒÏëÊ¹ÓÃÒ»¸öĞÂµÄÓ¦ÓÃ³ÌĞò»òÕßÒ»¿îĞÂÓ´Ğí
+å¦‚æœæˆ‘æƒ³è¦ä¸€æ¬¾æ–°çš„æ¸¸æˆæˆ–è€…åº”ç”¨ç¨‹åº
 if I wanted a new game or app I had
 
 15
 00:00:43,770 --> 00:00:45,860
-ÎÒ²»µÃ²»È¥ÊµÌåµê²¢ÇÒ¹ºÂò
+æˆ‘ä¸å¾—ä¸å»å®ä½“åº—è´­ä¹°
 to go to a physical store and pay for a
 
 16
 00:00:45,860 --> 00:00:50,650
-ºĞ×°µÄÈíÅÌ»òÕß¹âÅÌ  ×÷Îª¿ª·¢Õß
+ç›’è£…çš„è½¯ç›˜æˆ–è€…å…‰ç›˜  ä½œä¸ºå¼€å‘è€…
 cardboard box filled with floppy disks or CDROMs. As developers
 
 17
 00:00:50,650 --> 00:00:52,680
-ºÜ´óÒ»²¿·ÖÎÒÃÇµÄÉÌÒµ¼Æ»®µ±Ê±ÊÇ
+å½“æ—¶æˆ‘ä»¬å•†ä¸šè®¡åˆ’çš„å¾ˆå¤§ä¸€éƒ¨åˆ†æ˜¯
 a big part of our business plan back then
 
 18
 00:00:52,680 --> 00:00:55,830
-ÈçºÎµÃµ½ÎÒÃÇµÄÈí¼şµÄ°ü×°ºĞ²¢°ÑÈí¼ş·Åµ½¼Ü×ÓÉÏ
+å¦‚ä½•æŠŠæˆ‘ä»¬è½¯ä»¶çš„åŒ…è£…ç›’æ”¾åˆ°é‚£äº›è´§æ¶ä¸Š
 was how to get those boxes of our software onto
 
 19
 00:00:55,830 --> 00:00:58,900
-»òÕßÔÚÒÆ¶¯Éè±¸µÄÊÀ½çÖĞ  ÈçºÎ
+æˆ–è€…åœ¨ç§»åŠ¨è®¾å¤‡çš„ä¸–ç•Œä¸­  å¦‚ä½•
 those shelves. Or in the world of mobile, how
 
 20
 00:00:58,900 --> 00:01:01,350
-ÈÃÔËÓªÉÌ»òOEMºÍÎÒÃÇ´ï³ÉĞ­Òé
+è®©è¿è¥å•†æˆ–OEMå‚å•†å’Œæˆ‘ä»¬è¾¾æˆåè®®
 to secure a carrier or OEM deal to get our
 
 21
 00:01:01,350 --> 00:01:05,500
-°ÑÎÒÃÇµÄÓ¦ÓÃ³ÌĞòÔ¤×°µ½Éè±¸ÉÏ
+æŠŠæˆ‘ä»¬çš„åº”ç”¨ç¨‹åºé¢„è£…åˆ°è®¾å¤‡ä¸Š  ä»Šå¤©æˆ‘å¯ä»¥å®‰è£…
 apps preloaded onto the devices. Today I can install
 
 22
 00:01:05,500 --> 00:01:07,992
-½ñÌìÎÒ¿ÉÒÔ°²×°Ò»°Ù¶àÍò¸öÓÉ³É°ÙÉÏÇ§µÄ¿ª·¢Õß
-over a million apps of games created by tens if
+ä¸€ç™¾å¤šä¸‡ä¸ª  ä¸æ˜¯ç”±æˆç™¾ä¸Šåƒçš„è€Œæ˜¯åªæœ‰å‡ åå¼€å‘è€…å¼€å‘çš„
+over a million apps or games created by tens if
 
 23
 00:01:07,992 --> 00:01:12,400
-Í¨¹ıGoogle PlayÌá¹©µÄÓ¦ÓÃ³ÌĞò»òÓÎÏ·
+é€šè¿‡Google Playæä¾›çš„åº”ç”¨ç¨‹åºæˆ–æ¸¸æˆ
 not hundreds and thousands of developers via Google Play, all
 
 24
 00:01:12,400 --> 00:01:16,010
-Ö»ĞèÒªµã»÷Ò»¸ö°´Å¥¼´¿ÉÍê³É  ÄÇ½«ÊÇÉÏ°ÙÒÚµÄÓ¦ÓÃ³ÌĞò°²×°Á¿
+åªéœ€è¦ç‚¹å‡»ä¸€ä¸ªæŒ‰é’®å³å¯å®Œæˆ  é‚£å°†æ˜¯ä¸Šç™¾äº¿çš„
 with a click of a button. That's translated into tens
 
 25
 00:01:16,010 --> 00:01:19,070
-·¢²¼ÍÆËÍÓ¦ÓÃ³ÌĞò¸øAndroidÓÃ»§¿ÉÒÔÔÚÊı°Ù¸ö¹ú¼Ò½øĞĞ
+åº”ç”¨ç¨‹åºå®‰è£…é‡  æ˜¯ä¸€ä¸ªå°†åº”ç”¨ç¨‹åºå‘å¸ƒåˆ°æ•°ç™¾ä¸ªå›½å®¶
 of billions of app installs. An incredible opportunity to
 
 26
 00:01:19,070 --> 00:01:23,000
-ÕâÊÇÒ»¼şÁîÈËÄÑÒÔÖÃĞÅµÄÊÂÇé
+ä¸­çš„Androidç”¨æˆ·ä¸­çš„éš¾ä»¥ç½®ä¿¡çš„æœºä¼š
 distribute apps to Android users in hundreds of countries.
 
 27
 00:01:23,000 --> 00:01:25,650
-ÔÚAndroidµÄÔçÆÚ°æ±¾  ¿ìËÙµÄ
+åœ¨Androidå‘å±•çš„æ—©æœŸ  å¿«é€Ÿå¼€å‘
 Now, in the early days of Android, being fast
 
 28
 00:01:25,650 --> 00:01:28,840
-³É¹¦ÔËĞĞµÚÒ»¸ö³ÌĞòÊÇÒ»¸öÏàµ±¼áÊµµÄ³É¹¦µÄ²ßÂÔ
+ç¬¬ä¸€ä¸ªå‘å¸ƒç¨‹åºæ˜¯ä¸€ä¸ªç›¸å½“åšå®çš„æˆåŠŸçš„ç­–ç•¥
 and launching first was a pretty solid strategy for success,
 
 29
 00:01:28,840 --> 00:01:31,910
-µ«ÊÇËæ×Å¿ªÊ¼µÄ50¸öÓ¦ÓÃ³ÌĞòÑ¸ËÙµÄÔö³¤µ½
+ä½†æ˜¯éšç€å¼€å§‹çš„50ä¸ªåº”ç”¨ç¨‹åºè¿…é€Ÿåœ°å¢é•¿åˆ°
 but as those first 50 apps quickly grew to
 
 30
 00:01:31,910 --> 00:01:35,300
-ÉÏ°Ù  ÉÏÇ§  ÉõÖÁÊÇÏÖÔÚ³¬¹ıÒ»°ÙÍòµÄÓ¦ÓÃ³ÌĞò
+ä¸Šç™¾  ä¸Šåƒ  ç”šè‡³æ˜¯ç°åœ¨è¶…è¿‡ä¸€ç™¾ä¸‡çš„åº”ç”¨ç¨‹åº
 hundreds, thousands, and now over a million apps, it takes
 
 31
 00:01:35,300 --> 00:01:37,710
-ĞèÒªÔÚÓ¦ÓÃÖĞÍÑÓ±¶ø³ö³ÉÎªÙ®Ù®ÕßĞèÒªµÄ²»½ö½öÊÇËÙ¶È
-a lot more than speed to stand out in
+éœ€è¦åœ¨åº”ç”¨ä¸­è„±é¢–è€Œå‡ºæˆä¸ºä½¼ä½¼è€…éœ€è¦çš„ä¸ä»…ä»…æ˜¯é€Ÿåº¦
+a lot more than speed to stand out from
 
 32
 00:01:37,710 --> 00:01:41,320
-×î½üµÄÓ¦ÓÃµÄÆ·ÖÊÊÂ¹ØÖØ´ó
+ç°åœ¨  åº”ç”¨çš„å“è´¨äº‹å…³é‡å¤§
 the crowd. These days the tables stakes are a base
 
 33
 00:01:41,320 --> 00:01:44,830
-²¢ÓĞÒ»¸öÔ¸ÒâÎªËùÓĞÓÃ»§Ìá¹©Á¼ºÃµÄÓÃ»§ÌåÑéµÄ»ùÏß
+ä½ éœ€è¦æ„¿æ„ä¸ºä½ æ‰€æœ‰çš„ç”¨æˆ·åˆ›é€ 
 line of quality and willingness to create great experiences
 
 34
 00:01:44,830 --> 00:01:48,500
-µ±È»Ó¦ÓÃµÄÖÊÁ¿ÊÇ¾ßÓĞÖ÷¹ÛĞÔµÄ
+ä¼˜ç§€çš„ç”¨æˆ·ä½“éªŒ  å½“ç„¶åº”ç”¨çš„è´¨é‡æ˜¯
 for all your users. Of course app quality can
 
 35
 00:01:48,500 --> 00:01:52,360
-µ«ÊÇ¶àÄêÀ´ÎÒÃÇÒÑ¾­È·¶¨ÁË
+å…·æœ‰ä¸»è§‚æ€§çš„  ä½†æ˜¯å¤šå¹´æ¥æˆ‘ä»¬å·²ç»ç¡®å®šäº†
 be somewhat subjective, but over the years we've identified
 
 36
 00:01:52,360 --> 00:01:55,200
-ÓÃ»§±æ±ğÒ»¸öÓ¦ÓÃÊÇ·ñÎª¸ßÖÊÁ¿Ó¦ÓÃµÄºËĞÄ±ê×¼
+ç”¨æˆ·è¾¨åˆ«ä¸€ä¸ªåº”ç”¨æ˜¯å¦ä¸ºé«˜è´¨é‡åº”ç”¨çš„æ ¸å¿ƒæ ‡å‡†
 the core criteria that users identify with apps of
 
 37
 00:01:55,200 --> 00:01:58,130
-ÎªÁËÈÃÄãä¯ÀÀÆğÀ´¸ü¼ÓÇáËÉ
+ä¸ºäº†è®©ä½ ä¸ç”¨æµªè´¹ç²¾åŠ›
 high quality. And to make your life easier, they're
 
 38
 00:01:58,130 --> 00:02:00,940
-ËüÃÇÒÑ¾­ÔÚAndroid DeveloperÕ¾µãÉÏÒÑ¾­¿ÉÒÔ¹©Äã¹Û¿´
+å®ƒä»¬å·²ç»åœ¨Androidå¼€å‘è€…ç½‘ç«™ä¸Šä¾›ä½ æµè§ˆäº†
 all available on the Android developer site for you
 
 39
 00:02:00,940 --> 00:02:03,440
-Google PlayµÄÓ¦ÓÃ¸ú×ÙÍÅ¶Ó
+è¿™ä»½æ¸…å•ä¹Ÿæ˜¯Google Playçš„é”€å”®å›¢é˜Ÿ
 to review. This is the same checklist that the
 
 40
 00:02:03,440 --> 00:02:06,590
-ÊÇÈ·±£Ó¦ÓÃµÄÖÊÁ¿ºÍÌØÉ«
+ç”¨æ¥ç¡®ä¿åªæœ‰é«˜è´¨é‡çš„åº”ç”¨
 merchandising team for Google Play used to ensure only apps
 
 41
 00:02:06,590 --> 00:02:09,130
-ÔÚ´ÙÏúºÍ±à¼­µÄÑ¡Ôñ·ÖÀàÖĞÊÇÏàÍ¬µÄ¼ì²éÇåµ¥
+æ‰ä¼šè¢«ä»–ä»¬æ¨èå¹¶ä¸”å‡ºç°åœ¨
 of quality are featured in their promotions and
 
 42
 00:02:09,130 --> 00:02:12,800
-²¢ÇÒËüÃÇ°üÀ¨Ò»ÇĞ  ´ÓÓ¦ÓÃ³ÌĞòÉè¼ÆÖ¸ÄÏ
+å•†åº—çš„ç¼–è¾‘æ¨èæ¿å—  æ¸…å•åŒ…æ‹¬äº†æ‰€æœ‰æ–¹é¢  ä»éµå¾ª
 editor's choice categories. And they include everything, from following
 
 43
 00:02:12,800 --> 00:02:16,130
-µ½Ö§³Ö²»Í¬µÄÆÁÄ»·½Ïò
+åº”ç”¨è®¾è®¡æŒ‡å—åˆ°æ”¯æŒä¸åŒçš„å±å¹•æ–¹å‘
 the app design guidelines to supporting different screen orientations,
 
 44
 00:02:16,130 --> 00:02:19,410
-Æ½°å  ºÍÆäËûÉè±¸  µ±È»ÊÇÒªÈ·±£
+å¹³æ¿å’Œå…¶ä»–è®¾å¤‡  å½“ç„¶è¿˜è¦ç¡®ä¿
 tablets, and other devices. And of course ensuring that
 
 45
 00:02:19,410 --> 00:02:22,860
-ÄãµÄÓ¦ÓÃ³ÌĞòÊ±ÎÈ¶¨µÄºÍ¸ßĞÔÄÜµÄ
+ä½ çš„åº”ç”¨ç¨‹åºçš„ç¨³å®šæ€§å’Œé«˜æ€§èƒ½
 your app is stable and performant. So, with over
 
 46
 00:02:22,860 --> 00:02:25,780
-ËùÒÔ  ÔÚGoogle PlayÓĞ³¬¹ıÒ»°ÙÍòµÄÓ¦ÓÃ³ÌĞò
+æ‰€ä»¥  åœ¨Google Playyiå·²ç»æœ‰è¶…è¿‡ä¸€ç™¾ä¸‡çš„åº”ç”¨ç¨‹åº
 a million apps already available in Google Play it's
 
 47
 00:02:25,780 --> 00:02:28,680
-ÒÑ¾­²»ÔÙÖ»ÊÇÒ»¸öÊı×ÖÓÎÏ·ÁË  ÎÒÃÇ²»ĞèÒª
+æˆ‘ä»¬ç°åœ¨ä¸ä»…ä»…æ˜¯ç©æ•°å­—æ¸¸æˆäº†  æˆ‘ä»¬ä¸åªæ˜¯éœ€è¦
 no longer just a numbers game. We don't need
 
 48
 00:02:28,680 --> 00:02:32,570
-¸ü¶àµÄÓ¦ÓÃºÍÓÎÏ·  ÉõÖÁ¸ü¶àµÄ¿ª·¢Õß
+æ›´å¤šçš„åº”ç”¨å’Œæ¸¸æˆ  ç”šè‡³æ›´å¤šçš„å¼€å‘è€…
 just more apps or games, or even more developers.
 
 49
 00:02:32,570 --> 00:02:36,770
-ÎÒÃÇËùĞèÒªµÄÊÇÏñÄãÒ»ÑùµÄ¸ßÖÊÁ¿µÄÎ°´óµÄÓ¦ÓÃ¿ª·¢Õß
+æˆ‘ä»¬æ‰€éœ€è¦çš„æ˜¯åƒä½ ä¸€æ ·çš„ä¼˜ç§€çš„å¼€å‘è€…å¼€å‘å‡ºæ¥çš„é«˜è´¨é‡çš„åº”ç”¨ç¨‹åº
 What we want is high quality apps from great developers, like you.
 
