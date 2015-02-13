@@ -1,215 +1,215 @@
 1
 00:00:00,160 --> 00:00:02,340
-ÕıÈçÄãËù¿´µ½µÄÄÇÑù  ½ÓÊÕÆ÷±¾ÉíÊÇºÜ¼òµ¥µÄ
+æ­£å¦‚ä½ æ‰€çœ‹åˆ°çš„é‚£æ ·  æ¥æ”¶å™¨æœ¬èº«æ˜¯å¾ˆç®€å•çš„
 As you can see, the receiver itself is pretty
 
 2
 00:00:02,340 --> 00:00:06,564
-ÄãÔÚÕâÀï¿ÉÒÔ¿´µ½Extends BroadcastReceiverÕâ¸öÀà²¢ÖØĞ´onReceive·½·¨
-simple. Extend the broadcast receiver class and override the
+å°±åƒä½ åœ¨è¿™é‡Œçœ‹åˆ°çš„  ç»§æ‰¿BroadcastReceiverè¿™ä¸ªç±»
+simple. Extend the BroadcastReceiver class and override the
 
 3
 00:00:06,564 --> 00:00:09,680
-½ÓÊÕÆ÷ÊÇÇáÁ¿¼¶µÄ×é¼ş  ÊÇÎªÁË½ÓÊÕ¹ã²¥
-onreceive handle as you can see here. Receivers are
+å¹¶é‡å†™onReceive()æ–¹æ³•  æ¥æ”¶å™¨æ˜¯  
+onReceive handle as you can see here. Receivers are
 
 4
 00:00:09,680 --> 00:00:13,520
-×ö³ö·´Ó¦²¢ÔÚÎåÃëÖÓÖ®ÄÚÍê³É
+ä¸ºäº†ç”¨æ¥ç›‘å¬å¹¿æ’­å¹¶åœ¨5ç§’å†…å®Œæˆç›¸åº”æ“ä½œçš„è½»é‡çº§ç»„ä»¶
 lightweight components meant to listen for broadcasts, reacts, and complete
 
 5
 00:00:13,520 --> 00:00:16,690
-ÕâÎåÃëÖÓÒâÎ¶×Å¼òµ¥µÄÆô¶¯Ò»¸ö·şÎñ»ò·¢ËÍÒ»¸öÍ¨ÖªÍê³É
+å®ƒé€šå¸¸ä¼šç®€å•åœ°å¯åŠ¨ä¸€ä¸ªæœåŠ¡
 within five seconds that usually means simply starting a
 
 6
 00:00:16,690 --> 00:00:19,350
-ÒªÊ¹ÄãµÄ½ÓÊÕÆ÷¿ªÊ¼½ÓÊÜ¹ã²¥
+æˆ–è€…å‘é€ä¸€ä¸ªé€šçŸ¥  è¦ä½¿ä½ çš„æ¥æ”¶å™¨
 service or sending a notification. To have your receiver
 
 7
 00:00:19,350 --> 00:00:22,470
-Äã¿ÉÒÔÍ¨¹ıÀàËÆÕâÑùµÄÁĞ±íÊ½½ÓÊÕÆ÷
+å¼€å§‹ç›‘å¬å¹¿æ’­  ä½ éœ€è¦æ³¨å†Œå®ƒ
 start listening for broadcasts, you need to register it
 
 8
 00:00:22,470 --> 00:00:25,260
-À´×¢²áĞÅÏ¢»òÕßÊÇÏñÕâÑùµÄ
+ä½ å¯ä»¥åƒè¿™æ ·åœ¨ä½ çš„manifestæ–‡ä»¶ä¸­è¿›è¡Œæ³¨å†Œ
 either through an entry in your manifest like this or
 
 9
 00:00:25,260 --> 00:00:29,240
-¶¯Ì¬µÄºÍÆäËûÓ¦ÓÃ³ÌĞòµÄ×é¼şÔÚÍ¨³£Çé¿öÏÂÊÇ»¥¶¯µÄ
+æˆ–è€…åƒè¿™æ ·åœ¨å¦å¤–ä¸€ä¸ªåº”ç”¨ç¨‹åºç»„ä»¶  æ¯”å¦‚ä¸€ä¸ªActivityä¸­åŠ¨æ€çš„è¿›è¡Œæ³¨å†Œ
 dynamically within another application component usually an activity,
 
 10
 00:00:29,240 --> 00:00:33,080
-È»ºóÄã¶¨ÒåIntent-Filter¿ÉÒÔÑ¡Ôñ
+ç„¶åä½ éœ€è¦å®šä¹‰æŒ‡å®šäº†ä½ æƒ³æ¥æ”¶çš„
 like this. Then you define the intent filter that
 
 11
 00:00:33,080 --> 00:00:36,370
-ÄãÏë½ÓÊÕµÄÌØ¶¨µÄ¹ã²¥ĞÅÏ¢
+å¹¿æ’­äº‹ä»¶çš„Intentè¿‡æ»¤å™¨
 specifies the broadcast event you want to receive.
 
 12
 00:00:36,370 --> 00:00:38,570
-Äã¿ÉÒÔÍê³É½ÓÊÕÌØ¶¨µÄĞÅÏ¢Í¨¹ıÏñÕâÀïµÄ´úÂëÕâÑù
+ä½ å¯ä»¥åœ¨manifestæ–‡ä»¶çš„è¿™é‡Œå®šä¹‰éœ€è¦è¿‡æ»¤çš„Intent
 You can do that either here in the manifest
 
 13
 00:00:38,570 --> 00:00:40,430
-»òÕßÄã¿ÉÒÔ×¢²áÄãµÄ´øÓĞÓ¦ÓÃ³ÌĞò×é¼şÀıÈçÒ»¸öActivityµÄ½ÓÊÕÆ÷
+æˆ–è€…å¦‚æœä½ æ˜¯åœ¨ä¸€ä¸ªåº”ç”¨ç¨‹åºç»„ä»¶  ä¾‹å¦‚ä¸€ä¸ªActivityä¸­
 or if you're registering your receiver with an
 
 14
 00:00:40,430 --> 00:00:43,690
-Äã¿ÉÒÔÏñÕâÑù´´½¨ÄãµÄĞÂµÄIntent-Filter
+æ³¨å†Œçš„ä½ çš„å¹¿æ’­æ¥æ”¶å™¨  ä½ å¯ä»¥åƒè¿™æ ·
 application component such as an activity, you can create
 
 15
 00:00:43,690 --> 00:00:46,630
-¶ÔÓÚÁĞ±íÊ½µÄ½ÓÊÕÆ÷ºÍ¶¯Ì¬µÄ½ÓÊÕÆ÷
+åˆ›å»ºä½ çš„æ–°çš„Intentè¿‡æ»¤å™¨  åœ¨manifestæ–‡ä»¶ä¸­é™æ€æ³¨å†Œ
 your new intent filter like this. The biggest difference
 
 16
 00:00:46,630 --> 00:00:50,460
-×î´óµÄÇø±ğ¾ÍÊÇµ±ËûÃÇÔÚ´¥·¢µÄÊ±ºò
+å’Œåœ¨ä»£ç ä¸­åŠ¨æ€æ³¨å†Œçš„å¹¿æ’­æ¥æ”¶å™¨çš„æœ€å¤§åŒºåˆ«å°±æ˜¯å®ƒä»¬æ˜¯ä½•æ—¶è¢«æ¿€æ´»çš„
 between manifest and dynamic receivers is when they're triggered.
 
 17
 00:00:50,460 --> 00:00:53,880
-Ò»¸ö¾­¹ı±à³ÌµÄ½ÓÊÕÆ÷»á½ö½öÔÚÓ¦ÓÃ³ÌĞòÔËĞĞµÄÊ±ºò
+ä¸€ä¸ªé€šè¿‡ä»£ç åŠ¨æ€æ³¨å†Œçš„æ¥æ”¶å™¨ä¼šä»…ä»…åœ¨åº”ç”¨ç¨‹åºè¿è¡Œçš„æ—¶å€™
 A programmatically-registered receiver will only receive broadcasts while
 
 18
 00:00:53,880 --> 00:00:57,890
-½ÓÊÕ¹ã²¥µÄÏûÏ¢  µ±Ò»¸öÁĞ±íÉùÃ÷ÁË½ÓÊÕÆ÷
+æ¥æ”¶å¹¿æ’­çš„æ¶ˆæ¯  è€Œä¸€ä¸ªåœ¨manifestæ–‡ä»¶ä¸­æ³¨å†Œçš„
 the app is running. While a manifest declared
 
 19
 00:00:57,890 --> 00:01:02,060
-½«»á¿ªÊ¼ÔËĞĞÄúµÄÓ¦ÓÃ²¢È¥½ÓÊÕ
+æ¥æ”¶å™¨å°†ä¼šç‰¹åœ°å¯åŠ¨ä½ çš„åº”ç”¨å¹¶å»æ¥æ”¶
 receiver will start your app specifically to receive
 
 20
 00:01:02,060 --> 00:01:05,069
-ÌØ¶¨µÄÄúµÄ¹ã²¥  ¾Ù¸öÀı×Ó
+ç‰¹å®šçš„å¹¿æ’­  ä¸¾ä¸ªä¾‹å­
 your broadcasts. For example, I usually code with
 
 21
 00:01:05,069 --> 00:01:07,610
-ÎÒ¾­³£ÔÚ´ø×ÅÎÒµÄ½µÔë¶ú»úµÄÊ±ºòCoding
+æˆ‘ç»å¸¸åœ¨æˆ´ç€æˆ‘çš„é™å™ªè€³æœºçš„æ—¶å€™Coding
 my noise cancelling headphones on, so a music
 
 22
 00:01:07,610 --> 00:01:10,160
-ËùÒÔÒ»¸öÒôÀÖÀàµÄÓ¦ÓÃ³ÌĞò¿ÉÄÜĞèÒª×¢²áÒ»¸ö
+æ‰€ä»¥ä¸€ä¸ªè¿™æ ·çš„éŸ³ä¹åº”ç”¨å¯èƒ½éœ€è¦æ³¨å†Œä¸€ä¸ª
 app like this might want to register a runtime
 
 23
 00:01:10,160 --> 00:01:12,710
-ÔËĞĞÊ±½ÓÊÕµÄÏµÍ³ÔÚ¶ú»úÃ»ÓĞ²åÈëµÄÊ±ºò
+åœ¨åº”ç”¨è¿è¡Œæ—¶ç›‘å¬ç³»ç»Ÿå‘å‡ºçš„
 receiver to listen to the system intent broadcast
 
 24
 00:01:12,710 --> 00:01:15,590
-ÏµÍ³Ó¦¸ÃÊÔÍ¼È¥¹ã²¥¶ú»úÃ»ÓĞ²åÈë
+è€³æœºæ‹”å‡ºçš„å¹¿æ’­
 that announces when headphones are unplugged. That will allow
 
 25
 00:01:15,590 --> 00:01:18,790
-Õâ½«Ê¹ËüÄÜ¹»×Ô¶¯µÄÔİÍ£²¥·Å  µ±ÄãµÄÒôÆµÂ·ÓÉ´Ó¶ú»úµ½Íâ·ÅÊ±
+è¿™å°†ä½¿åº”ç”¨åœ¨ä½ çš„éŸ³é¢‘ä»è€³æœºåˆ‡æ¢åˆ°å¤–æ”¾æ—¶
 it to automatically pause playback, when your audio routing switches
 
 26
 00:01:18,790 --> 00:01:21,950
-ÔÚÕâÖÖÇé¿öÏÂ  ÎÒÃÇ¿ÉÒÔÊ¹ÓÃ
+è‡ªåŠ¨åœæ­¢æ’­æ”¾  åœ¨è¿™ç§æƒ…å†µä¸‹  æˆ‘ä»¬å¯ä»¥ä½¿ç”¨
 from headphone to speakers. In this case, we can use
 
 27
 00:01:21,950 --> 00:01:24,750
-Ò»¸öÔÚÔËĞĞÊ±µÄ½ÓÊÕÆ÷  ÒòÎªÓ¦ÓÃ³ÌĞò±£Ö¤ÁË
+ä¸€ä¸ªåº”ç”¨è¿è¡Œæ—¶çš„æ¥æ”¶å™¨  å› ä¸ºéŸ³ä¹æ’­æ”¾çš„æ—¶å€™
 a runtime receiver, because the app is guaranteed to be
 
 28
 00:01:24,750 --> 00:01:28,250
-ÒôÀÖÔÚÕı³£²¥·ÅµÄÊ±ºò½ÓÊÕÆ÷ÔÚÔËĞĞ  ÁíÒ»·½Ãæ
+åº”ç”¨è‚¯å®šæ˜¯å¤„äºè¿è¡ŒçŠ¶æ€çš„  å¦ä¸€æ–¹é¢
 running if music is playing. On the other hand, if I'm
 
 29
 00:01:28,250 --> 00:01:30,790
-Èç¹ûÎÒÊ¹ÓÃGoogleÔÆÏûÏ¢´ÓÎÒµÄ·şÎñÆ÷ÉÏ¼àÌıµ½ĞÂµÄÊı¾İ
+å¦‚æœæˆ‘ä½¿ç”¨Googleäº‘æ¶ˆæ¯ä»æˆ‘çš„æœåŠ¡å™¨ä¸Šç›‘å¬æ–°çš„æ•°æ®
 using Google Cloud Messaging to listen for new data from
 
 30
 00:01:30,790 --> 00:01:34,730
-ÎÒÏëÒªÈ¥×¢²áÒ»¸öÁĞ±íÊ½µÄ½ÓÊÕÆ÷»á²»¶ÏµÄ´ÓÎÒµÄ·şÎñÆ÷
+æˆ‘æƒ³è¦åœ¨manifestæ–‡ä»¶ä¸­æ³¨å†Œä¸€ä¸ªå¹¿æ’­æ¥æ”¶å™¨  å®ƒèƒ½ä¸€ç›´
 my server, I want to register a manifest receiver that always listens
 
 31
 00:01:34,730 --> 00:01:37,420
-¼àÌı²»¶ÏµÄ´«ÈëµÄÊı¾İ  ²¢ÇÒËü½«»½ĞÑÎÒµÄ³ÌĞò
+ç›‘å¬æœåŠ¡å™¨ä¼ å…¥çš„æ•°æ®  å¹¶ä¸”åœ¨åº”ç”¨ç¨‹åºæ²¡æœ‰è¿è¡Œ
 for incoming tickles from my server and will wake up
 
 32
 00:01:37,420 --> 00:01:40,870
-Èç¹ûÓ¦ÓÃ³ÌĞò±»ÖÕÖ¹´¥·¢¸üĞÂÓ¦ÓÃ
+çš„æ—¶å€™å”¤é†’åº”ç”¨ä»¥æ‰§è¡Œæ•°æ®æ›´æ–°çš„ä»£ç 
 my app if it's being terminated to trigger the update code,
 
 33
 00:01:40,870 --> 00:01:43,130
-Í¨³£ÊÇÒ»¸öÍ¬²½ÊÊÅäÆ÷  ÕâÊÇÎÒÃÇ½«ÔÚºóÃæµÄµÚÁù¿Î
+é€šå¸¸æ˜¯ä¸€ä¸ªåŒæ­¥é€‚é…å™¨  è¿™æ˜¯æˆ‘ä»¬å°†åœ¨åé¢çš„ç¬¬å…­è¯¾
 usually a sync adapter, which is something we will discuss
 
 34
 00:01:43,130 --> 00:01:46,700
-ÒªÌÖÂÛµÄÄÚÈİ  ÓĞ·Ç³£¶àµÄ¹ã²¥ÏµÍ³¿ÉÒÔ°ïÖúÄãµÄÓ¦ÓÃ³ÌĞò
+è¦è®¨è®ºçš„å†…å®¹  ä½ å¯ä»¥ç›‘å¬éå¸¸å¤šçš„ç³»ç»Ÿå¹¿æ’­
 later in lesson six. There's a bunch of system broadcasts
 
 35
 00:01:46,700 --> 00:01:48,920
-ÔÚÏµÍ³ÖĞ×ö³ö±ä»¯²¢¼°Ê±µÄ·´Ó¦
+æ¥å¸®åŠ©ä½ çš„åº”ç”¨ç¨‹åºåº”å¯¹ç³»ç»Ÿçš„ä¸€äº›å˜åŒ–
 you can monitor to help your app react to changes
 
 36
 00:01:48,920 --> 00:01:51,880
-Äã¿ÉÒÔ¿´µ½ÏµÍ³¹ã²¥µÄ¶¯×÷ÔÚdeveloper.android.com
+ä½ å¯ä»¥åœ¨developer.android.comç½‘ç«™ä¸Šçš„Intentæ–‡æ¡£éƒ¨åˆ†
 in the system. You can see the system broadcast actions within
 
 37
 00:01:51,880 --> 00:01:56,515
-ÉÏÃæµÄIntentÎÄµµ²¿·Ö¹ã²¥½ÓÊÕÆ÷µÄÒ»´óÓÃÍ¾ÊÇ
+æŸ¥çœ‹åˆ°ç³»ç»Ÿå¹¿æ’­å¯¹åº”çš„Action  å¹¿æ’­æ¥æ”¶å™¨çš„ä¸€å¤§ç”¨é€”æ˜¯
 the intent documentation at developer.android.com. One great use for broadcast
 
 38
 00:01:56,515 --> 00:02:00,030
-¼à²â±ä»¯µÄ»¥ÁªÍøÁ¬½Ó»òÕßÊÇ·ñÊÇÔÚ³äµç×´Ì¬
+ç›‘å¬è”ç½‘çŠ¶æ€ä»¥åŠå……ç”µçŠ¶æ€çš„å˜åŒ–
 receivers is to monitor for changes to internet connectivity or
 
 39
 00:02:00,030 --> 00:02:03,230
-ÏëÏóÒ»ÏÂÄãµÄÓ¦ÓÃ³ÌĞòĞèÒªÉÏ´«Ò»²¿µçÓ°
+æƒ³è±¡ä¸€ä¸‹ä½ çš„åº”ç”¨ç¨‹åºéœ€è¦ä¸Šä¼ ä¸€éƒ¨ç”µå½±
 charging status. Imagine your app has to upload a movie
 
 40
 00:02:03,230 --> 00:02:06,170
-»ò¼ÆËãÏóÆåÓÎÏ·ÖĞ½ÓÏÂÀ´µÄ10,000²½
+æˆ–è®¡ç®—è±¡æ£‹æ¸¸æˆä¸­æ¥ä¸‹æ¥çš„10,000æ­¥
 or calculate the next 10,000 moves in a game of chess,
 
 41
 00:02:06,170 --> 00:02:09,620
-ÄãÈçºÎÊ¹ÓÃÒ»¸ö½ÓÊÕÆ÷È¥µÈ´ıÉè±¸
+ä½ å¦‚ä½•åœ¨æ‰‹æœºå¼€å§‹è¿™äº›æ“ä½œä¹‹å‰ä½¿ç”¨ä¸€ä¸ªå¹¿æ’­æ¥æ”¶å™¨ç›‘å¬
 how might you use a receiver to wait until the device is plugged in
 
 42
 00:02:09,620 --> 00:02:11,810
-²åÈëÖ®Ç°µÄÆô¶¯¹ı³Ì  ËüÓ¦¸ÃÊÇÒ»¸ö
+æ‰‹æœºæ˜¯å¦è¢«æ¥ä¸Šç”µæºå……ç”µ  å®ƒåº”è¯¥æ˜¯ä¸€ä¸ª
 before starting that process? Should it be
 
 43
 00:02:11,810 --> 00:02:13,870
-ÁĞ±íÊ½½ÓÊÕÆ÷»¹ÕßÊÇ¹ã²¥½ÓÊÕÆ÷
+manifesté™æ€æ³¨å†Œçš„æ¥æ”¶å™¨è¿˜æ˜¯ä¸€ä¸ªåœ¨ä»£ç ä¸­åŠ¨æ€æ³¨å†Œçš„æ¥æ”¶å™¨
 a manifest receiver or a broadcast receiver?
 
