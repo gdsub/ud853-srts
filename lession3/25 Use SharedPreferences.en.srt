@@ -1,48 +1,48 @@
-1
+ï»¿1
 00:00:00,210 --> 00:00:02,969
-µ±ÓÃ»§µÄlocation preference ±»´æ´¢ºó
+å½“ç”¨æˆ·çš„location preference è¢«å­˜å‚¨å
 Once the user's location preference has been stored. When do
 
 2
 00:00:02,969 --> 00:00:06,340
-ÎÒÃÇÊ²Ã´Ê±ºò¸ÃÓÃºÃËüÄØ£¿ÎÒÃÇĞèÒªÊ×Ñ¡µØÀíÎ»ÖÃÓÃÀ´
+æˆ‘ä»¬ä»€ä¹ˆæ—¶å€™è¯¥ä½¿ç”¨å®ƒå‘¢ï¼Ÿæˆ‘ä»¬éœ€è¦é¦–é€‰åœ°ç†ä½ç½®ç”¨æ¥
 we make use of it? We need the preferred location on
 
 3
 00:00:06,340 --> 00:00:10,380
-²éÑ¯ÆøÏó·şÎñ¡£ĞÒÔËµÄÊÇ£¬ÔÚµÚ¶ş½ÚÖĞ£¬ÎÒÃÇ
+æŸ¥è¯¢æ°”è±¡æœåŠ¡ã€‚å¹¸è¿çš„æ˜¯ï¼Œåœ¨ç¬¬äºŒèŠ‚ä¸­ï¼Œæˆ‘ä»¬
 we query the weather service. Luckily, in lesson 2, we
 
 4
 00:00:10,380 --> 00:00:14,390
-ĞŞ¸ÄÁËÌìÆøÈ¥½ÓÊÜµØÀíÎ»ÖÃ²ÎÊı¡£
+ä¿®æ”¹äº†å¤©æ°”å»æ¥å—åœ°ç†ä½ç½®å‚æ•°ã€‚
 modified fetch weather task to accept a location parameter. We hard
 
 5
 00:00:14,390 --> 00:00:16,550
-ÎÒÃÇ½«ËüÓ²½âÂëÎªMountain View zip code
+æˆ‘ä»¬å°†å®ƒç¡¬è§£ç ä¸ºå±±æ™¯åŸçš„é‚®ç¼–
 coded it to be the Mountain View zip code. But
 
 6
 00:00:16,550 --> 00:00:19,960
-µ«ÊÇÏÖÔÚÎÒÃÇĞèÒªÊ¹ÓÃ´æ´¢ÔÚSharePreferenceÖĞµÄµØÀíÎ»ÖÃ
+ä½†æ˜¯ç°åœ¨æˆ‘ä»¬éœ€è¦ä½¿ç”¨å­˜å‚¨åœ¨SharePreferenceä¸­çš„åœ°ç†ä½ç½®
 now we should use the location stored in shared preferences. We
 7
 00:00:19,960 --> 00:00:22,570
-ÎÒÃÇ²¢Ã»ÓĞÃ÷È·µØÏòÄãÕ¹Ê¾ÈçºÎÊµÏÖ£¬ËùÒÔÄã¿ÉÄÜĞèÒª
+æˆ‘ä»¬å¹¶æ²¡æœ‰æ˜ç¡®åœ°å‘ä½ å±•ç¤ºå¦‚ä½•å®ç°ï¼Œæ‰€ä»¥ä½ å¯èƒ½éœ€è¦
 haven't explicitly shown you how to do this. So you might
 
 8
 00:00:22,570 --> 00:00:25,210
-²éÔÄ×ÊÁÏ£¬¿ÉÒÔÔÚAndroid developerµÄÍøÖ·ÉÏ
+æŸ¥é˜…èµ„æ–™ï¼Œå¯ä»¥åœ¨Android developerçš„ç½‘å€ä¸Š
 need to do some digging around. On the Ander developer site
 
 9
 00:00:25,210 --> 00:00:27,550
-ÅªÇå³şÈçºÎÊµÏÖËü¡£µ±Äã
+å¼„æ¸…æ¥šå¦‚ä½•å®ç°å®ƒã€‚å½“ä½ 
 to figure out how to do it. Once
 
 10
 00:00:27,550 --> 00:00:29,790
-Íê³ÉÁËÕâ¸ö¸Ä±äºó£¬¹´Ñ¡Õâ¸ö·½¿ò²¢¼ÌĞø
+å®Œæˆäº†è¿™ä¸ªä»»åŠ¡åï¼Œå‹¾é€‰è¿™ä¸ªæ–¹æ¡†å¹¶ç»§ç»­
 you've made the change, check the box to continue.
