@@ -75,7 +75,7 @@ service you want to stop. Unlike activities, services have no
 
 16
 00:00:44,770 --> 00:00:47,777
-他们运行时，比后台activity有更高德优先级
+他们运行时，比后台activity有更高的优先级
 user interface and they run at a higher priority than
 
 17
@@ -130,12 +130,12 @@ task you wish to execute. But notice that there are
 
 27
 00:01:18,860 --> 00:01:21,880
-它们没有处理监控状态改变，来反映
+它们没有并不监控状态改变，而这些状态会反映
 no handlers for monitoring changes in state, to reflect the
 
 28
 00:01:21,880 --> 00:01:24,600
-应用被移到后台去了。这是因为
+应用是否被移到后台去了。这是因为
 app moving to the background. This is because the running
 
 29
@@ -210,12 +210,12 @@ service runs at the same priority as a foreground
 
 43
 00:02:10,440 --> 00:02:13,330
-这会使得它不可能在运行时
+这会使得它不可能被运行时引擎
 activity. Making it nearly impossible for the run time
 
 44
 00:02:13,330 --> 00:02:15,800
-为了释放更多的资源被杀掉
+为了释放更多的资源而杀掉
 to kill in order to free resources. Now, you
 
 45
@@ -240,7 +240,7 @@ along the coast in Australia, so I learned young
 
 49
 00:02:27,260 --> 00:02:32,160
-我自小学会的游泳对现在来说是辛苦并且最终没用的
+我自小就明白了逆着潮流游泳既费力而且最终都是徒劳。
 that swimming against the current is exhausting and ultimately futile.
 
 50
@@ -255,12 +255,12 @@ for the system to manage resources, ultimately leading to a
 
 52
 00:02:37,060 --> 00:02:40,780
-比较差的用户体验
+更差的用户体验。顺着潮流游泳。
 worse user experience. Swim with the current. Use foreground
 
 53
 00:02:40,780 --> 00:02:45,500
-服务只在绝对需要的时候才运行
+前台服务只在绝对需要的时候才运行
 services only when and for as long as absolutely necessary,
 
 54
@@ -270,18 +270,18 @@ and stop all services as quickly as possible. It's
 
 55
 00:02:49,020 --> 00:02:52,520
-注意，就像activity和receiver一样，及时关闭运行在主线程里的服务
+注意，就像activity和receiver一样，服务同样运行在主线程
 also important to note that like activities and receivers, services
 
 56
 00:02:52,520 --> 00:02:54,490
-也同样重要。所以你需要
+所以你需要
 run on the main thread. So you'll need to
 
 57
 00:02:54,490 --> 00:02:57,620
 用后台线程或者异步任务来执行
-use a background thread or a think task to execute
+use a background thread or a sync task to execute
 
 58
 00:02:57,620 --> 00:02:59,190
@@ -345,7 +345,7 @@ to understand how you can use them but in practice
 
 70
 00:03:34,980 --> 00:03:37,290
-但是在实践中，框架层经常会延压你自己的
+但是在实践中，总会有一个可选的开发框架来替换你自己的
 there's often a framework alternative to rolling your own
 
 71
