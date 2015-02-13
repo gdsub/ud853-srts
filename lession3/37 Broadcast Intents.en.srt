@@ -1,85 +1,85 @@
 1
 00:00:00,330 --> 00:00:04,098
-ÎÒÃÇÖ®Ç°Ëµµ½Ê¹ÓÃSunshineÖ¸ÁîÈ¥¿ªÆô»î¶¯È»ºó
+æˆ‘ä»¬ä¹‹å‰è¯´åˆ°ä½¿ç”¨åœ¨Sunshineåº”ç”¨ä¸­ä½¿ç”¨Intentæ¥å¯åŠ¨Activityå¹¶ä¸”
 We've talked about using intents within Sunshine to start activities and send
 
 2
 00:00:04,098 --> 00:00:07,390
-ÔÚÓ¦ÓÃ¼ä·¢ËÍÊı¾İ  µ«Èç¹ûÄãÒªÈº·¢ĞÅÏ¢¸ø
+åœ¨åº”ç”¨é—´å‘é€æ•°æ®  ä½†å¦‚æœä½ è¦ç¾¤å‘ä¿¡æ¯ç»™
 data between apps. But what if you want to broadcast a message to
 
 3
 00:00:07,390 --> 00:00:11,630
-¶à¸öÓ¦ÓÃÄØ  ¾Ù¸öÀı×Ó  ÏµÍ³Òª¹ã²¥Ò»¸öÏûÏ¢  Ëµ
+å¤šä¸ªåº”ç”¨å‘¢  ä¸¾ä¸ªä¾‹å­  ç³»ç»Ÿè¦å¹¿æ’­ä¸€ä¸ªæ¶ˆæ¯  è¯´
 many apps? For example, the system will broadcast a message, saying that the
 
 4
 00:00:11,630 --> 00:00:16,180
-Éè±¸ÕıÔÚ³äµç»òÕß¼´½«ÖØÆô  ÎÒÃÇµÄ·½·¨ÊÇ
+è®¾å¤‡æ­£åœ¨å……ç”µæˆ–è€…åˆšåˆšé‡å¯å®Œ  æˆ‘ä»¬çš„æ–¹æ³•æ˜¯
 device is charging or that it's just finished rebooting. To do that ourselves,
 
 5
 00:00:19,780 --> 00:00:24,350
-Ê¹ÓÃsendbroadcastµÄ·½·¨À´¹ã²¥Ò»¸öÖ¸Áî  È»ºóÕâĞ©¹ã²¥
+ä½¿ç”¨sendBroadcast()æ–¹æ³•æ¥å¹¿æ’­ä¸€ä¸ªIntent  ç„¶åè¿™äº›å¹¿æ’­
 we use the SendBroadcast method to broadcast an intent. And those broadcasts
 
 6
 00:00:24,350 --> 00:00:26,900
-¾Í»á±»¹ã²¥½ÓÊÕÕß½ÓÊÜ  Í¨³£
+å°±ä¼šè¢«å¹¿æ’­æ¥æ”¶å™¨æ¥æ”¶åˆ°  é€šå¸¸
 are received by broadcast receivers, typically
 
 7
 00:00:26,900 --> 00:00:30,430
-¾Í»á¼òÃ÷Ö¸Ïò½ÓÊÜÕß  Ê¹ÓÃÖ¸Áî
+ç®€ç§°ä¸ºæ¥æ”¶å™¨  ä½¿ç”¨Intent
 referred to as simply, receivers. Using intent
 
 8
 00:00:30,430 --> 00:00:34,010
-¹ıÂËÆ÷  ¾ÍÏñÖ®Ç°Ò»Ñù  ËüÃÇ»á±íÃ÷ÄÇĞ©¹ã²¥ÊÇ×Ô¼º
+è¿‡æ»¤å™¨  å°±åƒæˆ‘ä»¬ä¹‹å‰çœ‹åˆ°çš„ä¸€æ ·  å®ƒä»¬ä¼šè¡¨æ˜å“ªäº›å¹¿æ’­æ˜¯è‡ªå·±
 filters, like the ones we saw earlier, they indicate which broadcast they're
 
 9
 00:00:34,010 --> 00:00:37,960
-¸ĞĞËÈ¤µÄ  ËùÒÔÈç¹ûÎÒÃÇ·´À¡µÄÊÇÖ®Ç°µÄ·â×°µÄ°µÓ÷
+æ„Ÿå…´è¶£çš„  æ‰€ä»¥å¦‚æœæˆ‘ä»¬è¿”å›åˆ°ä¹‹å‰ä¿¡å°çš„æ¯”å–»
 interested in. So if we return to our envelope metaphor from earlier, in
 
 10
 00:00:41,070 --> 00:00:43,080
-ÔÚÊÇ¹ã²¥Ö¸ÁîµÄÇé¿öÏÂ  ÄãµÄ
+åœ¨å¹¿æ’­Intentçš„æƒ…å†µä¸‹  ä½ çš„
 the case of a broadcast intent, your
 
 11
 00:00:43,080 --> 00:00:47,140
-·â×°»á±»Ğ´µØÖ·´«µİ¸øÈÎÒ»
+ä½ çš„ä¿¡å°ä¼šè¢«å‘é€ç»™ä»»ä¸€
 envelope is basically addressed to any broadcast receiver
 
 12
 00:00:47,140 --> 00:00:49,170
-¸ĞĞËÈ¤ÖªµÀ»á´ËÊÂ¼şµÄ¹ã²¥½ÓÊÕÕß
+å¯¹æ­¤äº‹ä»¶æ„Ÿå…´è¶£çš„å¹¿æ’­æ¥æ”¶å™¨
 that's interested in knowing that this event has
 
 13
 00:00:49,170 --> 00:00:51,940
-¶øËüÕıÊÇÍ¨¹ıÖ¸Áî¹ıÂËÆ÷À´ÊµÏÖµÄ
+è€Œå®ƒæ­£æ˜¯é€šè¿‡Intentè¿‡æ»¤å™¨æ¥å®ç°çš„
 happened. And it does that using intent filter.
 
 14
 00:00:56,490 --> 00:00:59,670
-ËùÒÔ¹ã²¥Ö¸ÁîÕıÊÇÍ¨¹ıÃ¿Ò»¸ö
+æ‰€ä»¥Intent  ä¹Ÿå°±æ˜¯å¹¿æ’­  ä¼šè¢«ä¼ é€ç»™
 So intents, which are broadcast, are transmitted to every
 
 15
 00:00:59,670 --> 00:01:01,980
-º¬ÓĞ¹ã²¥½ÓÊÜ×°ÖÃÖĞµÄÖ¸Áî
+å¸¦æœ‰ç‰¹å®šå¹¿æ’­æ¥æ”¶å™¨çš„åº”ç”¨  å®ƒä»¬çš„å¹¿æ’­æ¥æ”¶å™¨çš„
 app with a broadcast receiver that has an intent
 
 16
 00:01:01,980 --> 00:01:05,349
-¹ıÂËÆ÷µÄ¹ã²¥½ÓÊÕ×÷ÓÃÀ´¸æËßÏµÍ³ÄãµÄÏë·¨  ÕâÕæµÄÈÃÎÒ¾õµÃºÜÓĞÈ¤
+Intentè¿‡æ»¤å™¨ä¼šå‘Šè¯‰ç³»ç»Ÿå“ªäº›æ¶ˆæ¯æ˜¯å®ƒæ„Ÿå…´è¶£
 filter telling the system your ideas are intriguing to
 
 17
 00:01:05,349 --> 00:01:08,341
-È»ºóÎÒÏ£ÍûÄÜ·Ö·¢¸øÖÕ¶ËÊ¹ÓÃÕß
+å› è€Œä¼šä¸ºç»ˆç«¯ç”¨æˆ·è®¢é˜…è¿™äº›æ¶ˆæ¯
 me and I wish to subscribe to end user.
 
