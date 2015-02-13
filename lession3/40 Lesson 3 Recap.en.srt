@@ -1,40 +1,40 @@
 1
 00:00:00,410 --> 00:00:02,440
-ÔÚÕâÒ»¿ÎÖĞ  ÎÒÃÇÔÚÎÒÃÇµÄÓ¦ÓÃÖĞÌí¼ÓÁËĞÂµÄActivities
+åœ¨è¿™ä¸€è¯¾ä¸­  æˆ‘ä»¬åœ¨æˆ‘ä»¬çš„åº”ç”¨ä¸­æ·»åŠ äº†æ–°çš„Activity
 In this lesson we added new activities to our
 
 2
 00:00:02,440 --> 00:00:05,950
-²¢ÇÒÌ½ÌÖ¹¹ÔìµÄ·½·¨ÒÔ¼°ËüÃÇÖ®¼äÈçºÎµ¼º½
+å¹¶ä¸”æ¢è®¨äº†å®ƒä»¬ä¹‹é—´çš„ç»“æ„å±‚æ¬¡ä»¥åŠå¦‚ä½•å¯¼èˆª
 apps and explored ways to structure and navigate between them.
 
 3
 00:00:05,950 --> 00:00:08,370
-¶øÕâÒâÎ¶×ÅÑ§Ï°ÓĞ¹ØËüÃÇÊÇÈçºÎÊ¹ÓÃAndroidµÄÒâÏò
+è€Œè¿™æ„å‘³ç€æˆ‘ä»¬å­¦ä¹ äº†Intentçš„ç›¸å…³çŸ¥è¯†ä»¥åŠå®ƒä»¬
 And that meant learning all about intents and how
 
 4
 00:00:08,370 --> 00:00:12,150
-ÔÚÏÂÒ»½ÚLesson 4ÖĞ  ÎÒÃÇ½«ÒªÑ§µ½
+åœ¨Androidä¸­æ˜¯å¦‚ä½•ä½¿ç”¨çš„  åœ¨ä¸‹é¢çš„ç¬¬4è¯¾ä¸­  æˆ‘ä»¬å°†è¦å­¦åˆ°
 they're used in Android. Next up in Lesson 4, we're
 
 5
 00:00:12,150 --> 00:00:14,740
-ActivityµÄÉúÃüÖÜÆÚ  ²¢ÇÒ
+Activityçš„ç”Ÿå‘½å‘¨æœŸ  å¹¶ä¸”
 going to learn about the activity life cycle and make
 
 6
 00:00:14,740 --> 00:00:18,150
-Ê¹ÎÒÃÇµÄÓ¦ÓÃ³ÌĞòÄÜ¹»¸üºÃµÄ±£´æÊı¾İ
+é€šè¿‡ä¿å­˜æ•°æ®ä½¿æˆ‘ä»¬çš„åº”ç”¨ç¨‹åºæ›´å¥½ç”¨
 our apps that much more useful by saving data. We'll
 
 7
 00:00:18,150 --> 00:00:20,620
-ÎÒÃÇ½«¿ªÊ¼Ñ§Ï°Êı¾İ¿âºÍÄÚÈİÌá¹©µÄÓĞ¹ØÖªÊ¶
+æˆ‘ä»¬å°†å¼€å§‹å­¦ä¹ æ•°æ®åº“å’ŒContentProviderï¼ˆå†…å®¹æä¾›è€…ï¼‰çš„ç›¸å…³çŸ¥è¯†
 begin to databases and learn about content providers, but
 
 8
 00:00:20,620 --> 00:00:24,230
-Ê×ÏÈÈÃÎÒÃÇÌ¤ÉÏAndroidÀúÊ·µÄÁíÒ»¶ÎÂÃ³Ì
+ä½†æ˜¯é¦–å…ˆè®©æˆ‘ä»¬è¸ä¸ŠAndroidå†å²çš„å¦ä¸€æ®µæ—…ç¨‹
 first let's take another journey into the history of Android.
 
