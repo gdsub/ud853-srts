@@ -1,300 +1,300 @@
 1
 00:00:00,320 --> 00:00:03,420
-ÄÇÃ´ÄãÊÇÈçºÎ°ÑUI·Ö¸î³ÉÒ»¸öÒ»¸öµÄĞ¡¿éµÄÄØ£¿
+é‚£ä¹ˆä½ æ˜¯å¦‚ä½•æŠŠUIåˆ†å‰²æˆä¸€ä¸ªä¸€ä¸ªçš„å°å—çš„å‘¢ï¼Ÿ
 So how did you break up the UI into smaller components?
 
 2
 00:00:03,420 --> 00:00:06,730
-Äã¿ÉÄÜÈÏÎªÕâÀïÊÇÁ½ÁĞ£¬
+ä½ å¯èƒ½è®¤ä¸ºè¿™é‡Œæ˜¯ä¸¤åˆ—ï¼Œ
 Well, you might have thought that this could be two columns, but
 
 3
 00:00:06,730 --> 00:00:09,080
-µ«ÊÇÕâÀïµÄÔªËØÈ´ÊÇºÜÄÑ¶¨Î»µÄ¡£
+ä½†æ˜¯è¿™é‡Œçš„å…ƒç´ å´æ˜¯å¾ˆéš¾å®šä½çš„ã€‚
 then it would be hard to position the elements here. You
 
 4
 00:00:09,080 --> 00:00:12,140
-Äã´ÓÆÁÄ»¸ß¶È¿´ËüÊÇ´¹Ö±¾ÓÖĞµÄ£¬
+ä½ ä»å±å¹•é«˜åº¦çœ‹å®ƒæ˜¯å‚ç›´å±…ä¸­çš„ï¼Œ
 could center them vertically within the height of the screen, but it
 
 5
 00:00:12,140 --> 00:00:14,820
-µ«ËüÈ´²»Ò»¶¨Óë×ó²àµÄÎÂ¶ÈÊÓÍ¼¶ÔÆë¡£
+ä½†å®ƒå´ä¸ä¸€å®šä¸å·¦ä¾§çš„æ¸©åº¦è§†å›¾å¯¹é½ã€‚
 wouldn't necessarily line up with the temperature views on the left-hand
 
 6
 00:00:14,820 --> 00:00:18,980
-·´¶ø£¬Õâ¸üÏñË®Æ½ÏßĞÔ²¼¾Ö½á¹¹¡£
+åè€Œï¼Œè¿™æ›´åƒæ°´å¹³çº¿æ€§å¸ƒå±€ç»“æ„ã€‚
 side. Instead, this looks more like a horizontal linear layout. Then, the
 
 7
 00:00:18,980 --> 00:00:21,660
-¶øÆäËû²¿·ÖµÄÔªËØ¿ÉÒÔÊ¹ÓÃ´¹Ö±ÏßĞÔ²¼¾Ö¡£
+è€Œå…¶ä»–éƒ¨åˆ†çš„å…ƒç´ å¯ä»¥ä½¿ç”¨å‚ç›´çº¿æ€§å¸ƒå±€ã€‚
 rest of the elements could be laid out by using a vertical
 
 8
 00:00:21,660 --> 00:00:25,410
-´¹Ö±ÏßĞÔ²¼¾Ö½«ÓĞ6¸ö×ÓÔªËØ¡£
+å‚ç›´çº¿æ€§å¸ƒå±€å°†æœ‰6ä¸ªå­å…ƒç´ ã€‚
 linear layout. The vertical linear layout would have six children. The third
 
 9
 00:00:25,410 --> 00:00:29,460
-µÚÈı¸öÔªËØ»¹²ÉÓÃÁËË®Æ½ÏßĞÔ²¼¾Ö£¬²¢°üÀ¨Á½¸ö×ÓÔªËØ¡£
+ç¬¬ä¸‰ä¸ªå…ƒç´ è¿˜é‡‡ç”¨äº†æ°´å¹³çº¿æ€§å¸ƒå±€ï¼Œå¹¶åŒ…æ‹¬ä¸¤ä¸ªå­å…ƒç´ ã€‚
 element would be a horizontal linear layout, composed of two children.
 
 10
 00:00:29,460 --> 00:00:32,685
-ÕâÁ½¸öÔªËØ£¬Ò»¸öÊÇÓÉÁ½¸öÎÄ±¾ÊÓÍ¼´¹Ö±×é³ÉµÄ£¬
+è¿™ä¸¤ä¸ªå…ƒç´ ï¼Œä¸€ä¸ªæ˜¯ç”±ä¸¤ä¸ªæ–‡æœ¬è§†å›¾å‚ç›´ç»„æˆçš„ï¼Œ
 The first would be another vertical linear layout with these two texts
 
 11
 00:00:32,685 --> 00:00:35,680
-Ò»¸öÔòÊÇÓÉÁíÍâÁ½¸ö´¹Ö±ÊÓÍ¼×é³ÉµÄ¡£
+ä¸€ä¸ªåˆ™æ˜¯ç”±å¦å¤–ä¸¤ä¸ªå‚ç›´è§†å›¾ç»„æˆçš„ã€‚
 views, and the second element would be another vertical linear layout
 
 12
 00:00:35,680 --> 00:00:38,540
-ÎªÁËÆÁÄ»ÄÚÈİÄÜ¹»´¹Ö±¹ö¶¯£¬
+ä¸ºäº†å±å¹•å†…å®¹èƒ½å¤Ÿå‚ç›´æ»šåŠ¨ï¼Œ
 composed of these two 2 elements. To make the contents of the
 
 13
 00:00:38,540 --> 00:00:42,520
-ÎÒ½«ÕâĞ©ÔªËØ¶¼·ÅÈëscroll viewÖĞ¡£
+æˆ‘å°†è¿™äº›å…ƒç´ éƒ½æ”¾å…¥scroll viewä¸­ã€‚
 screen vertically scrollable, we put it inside a scroll view. Using
 
 14
 00:00:42,520 --> 00:00:45,090
-ÕâÀïÎÒÃÇÓÃÁĞ±íÊÓÍ¼¾Í»áÏÔµÃÀË·Ñ£¬ÒòÎªÎÒÃÇ²»ĞèÒª½«ÁĞ±íÏîÀ©Õ¹µ½ÎŞÏŞÌõ£¬
+è¿™é‡Œæˆ‘ä»¬ç”¨åˆ—è¡¨è§†å›¾å°±ä¼šæ˜¾å¾—æµªè´¹ï¼Œå› ä¸ºæˆ‘ä»¬ä¸éœ€è¦å°†åˆ—è¡¨é¡¹æ‰©å±•åˆ°æ— é™æ¡ï¼Œ
 a list view here would be overkill, because we don't need to
 
 15
 00:00:45,090 --> 00:00:48,310
-ÎÒÃÇÒ²²»»áÔÙ´ÎÊ¹ÓÃÕâĞ©ÁĞ±íÏî¡£
+æˆ‘ä»¬ä¹Ÿä¸ä¼šå†æ¬¡ä½¿ç”¨è¿™äº›åˆ—è¡¨é¡¹ã€‚
 scale to an infinite number of item and we don't need recycling.
 
 16
 00:00:48,310 --> 00:00:50,730
-ÕâÓĞÔÚÆÁÄ»ÉÏÏÔÊ¾µÄÈ·¶¨Êı×Ö£¬ËùÒÔscroll viewÊÇ¸üºÃµÄÑ¡Ôñ¡£
+è¿™æœ‰åœ¨å±å¹•ä¸Šæ˜¾ç¤ºçš„ç¡®å®šæ•°å­—ï¼Œæ‰€ä»¥scroll viewæ˜¯æ›´å¥½çš„é€‰æ‹©ã€‚
 There's a fixed number of fields on the screen, so a scroll
 
 17
 00:00:50,730 --> 00:00:53,800
-ÎÒ½«ÏòÄãÕ¹Ê¾ÊµÏÖÕâĞ©ÔªËØµÄ¾ßÌåXML²¼¾Ö´úÂë¡£
+æˆ‘å°†å‘ä½ å±•ç¤ºå®ç°è¿™äº›å…ƒç´ çš„å…·ä½“XMLå¸ƒå±€ä»£ç ã€‚
 view is the perfect choice. I can show you our implementation for
 
 18
 00:00:53,800 --> 00:00:57,165
-ÎÒÃÇ½«Ò»Ğ©Êı¾İ¹Ì¶¨±àÂëÔÚlayout£¬
+æˆ‘ä»¬å°†ä¸€äº›æ•°æ®å›ºå®šç¼–ç åœ¨layoutï¼Œ
 the fragment detail XML layout. We hard coded some data in the
 
 19
 00:00:57,165 --> 00:00:59,270
-ÕâÑù¾ÍÄÜÔÚÉè¼ÆÃæ°åÉÏÔ¤ÀÀÁË¡£
+è¿™æ ·å°±èƒ½åœ¨è®¾è®¡é¢æ¿ä¸Šé¢„è§ˆäº†ã€‚
 layout, so that it would show up as a preview in the
 
 20
 00:00:59,270 --> 00:01:02,160
-ÕâÀïÎÒÃÇ¿ÉÒÔ¿´¼û¸ùÄ¿Â¼ÊÇScroll View¡£
+è¿™é‡Œæˆ‘ä»¬å¯ä»¥çœ‹è§æ ¹èŠ‚ç‚¹æ˜¯Scroll Viewã€‚
 Design Pane. At the root of the View hierarchy, we have a Scroll
 
 21
 00:01:02,160 --> 00:01:05,680
-Scroll Views×î¶àÖ»ÄÜÓĞÒ»¸ö×ÓÏî¡£
+Scroll Viewsæœ€å¤šåªèƒ½æœ‰ä¸€ä¸ªå­é¡¹ã€‚
 View. Scroll Views can only have max one child. So we set
 
 22
 00:01:05,680 --> 00:01:09,050
-ËùÒÔÎÒÃÇÉèÎª´¹Ö±ÏßĞÔ²¼¾Ö¡£ÔÚÕâ¸ö²¼¾ÖÖĞ£¬
+æ‰€ä»¥æˆ‘ä»¬å°†ä¹‹è®¾ä¸ºå‚ç›´çº¿æ€§å¸ƒå±€ã€‚åœ¨è¿™ä¸ªå¸ƒå±€ä¸­ï¼Œ
 that to be the vertical linear layout. Inside of this layout, we have
 
 23
 00:01:09,050 --> 00:01:11,960
-ÎÒÃÇÓĞÎÄ±¾ÊÓÍ¼ÏÔÊ¾µÄÊÇÒ»ÖÜÖĞµÄÒ»Ìì£¬»¹ÓĞÈÕÀú£¬
+æˆ‘ä»¬æœ‰æ–‡æœ¬è§†å›¾æ˜¾ç¤ºä¸€å‘¨ä¸­çš„ä¸€å¤©ï¼Œæ—¥å†æ—¥æœŸï¼Œ
 a text view for the day of the week, the calendar date,
 
 24
 00:01:11,960 --> 00:01:16,000
-ÕâÊÇË®Æ½ÏßĞÔ²¼¾ÖµÄ¡£½ÓÏÂÀ´µÄÊÇÊª¶ÈÎÄ±¾ÊÓÍ¼£¬
+ç„¶åæ˜¯ä¸€ä¸ªæ°´å¹³çº¿æ€§å¸ƒå±€çš„ã€‚éšåæ˜¯æ¹¿åº¦æ–‡æœ¬è§†å›¾ï¼Œ
 and then a horizontal linear layout. This is followed by the humidity text
 
 25
 00:01:16,000 --> 00:01:19,320
-·çÁ¦ÎÄ±¾ÊÓÍ¼ºÍÆøÑ¹ÎÄ±¾ÊÓÍ¼¡£
+é£åŠ›æ–‡æœ¬è§†å›¾å’Œæ°”å‹æ–‡æœ¬è§†å›¾ã€‚
 view, wind text view and pressure text view. In the XML
 
 26
 00:01:19,320 --> 00:01:22,200
-ÔÚXML´úÂëÖĞ£¬ÓĞ²âÊÔÓÃµÄÏßĞÔ²¼¾ÖÔÚscroll viewÖĞ¡£
+åœ¨XMLä»£ç ä¸­ï¼Œæˆ‘ä»¬çœ‹åˆ°scroll viewä¸­åŒ…å«äº†é¢„è§ˆç”¨çš„çº¿æ€§å¸ƒå±€ã€‚
 code, we see the scroll view with the trial linear layout. We
 
 27
 00:01:22,200 --> 00:01:24,830
-ÎÒÃÇÊ¹ËüµÄpaddingÎª16dp£¬
+æˆ‘ä»¬ä½¿å®ƒçš„paddingä¸º16dpï¼Œ
 give it some padding of 16dp, so that the content does
 
 28
 00:01:24,830 --> 00:01:27,660
-ÕâÑù²»ÓÃË¢ĞÂÄÚÈİÒ²»á¿¿ÔÚÆÁÄ»±ßÔµ¡£
+è¿™æ ·å†…å®¹å°±ä¸ä¼šå†²é åœ¨å±å¹•è¾¹ç¼˜ã€‚
 not flush up against the edge of the screen. Then we see
 
 29
 00:01:27,660 --> 00:01:31,510
-ÎÒÃÇÍ¨¹ıË®Æ½ÏßĞÔ²¼¾Ö¿´µ½ÎÄ±¾ÊÓÍ¼¡£
+ç„¶åæˆ‘ä»¬çœ‹åˆ°æ–‡æœ¬è§†å›¾ï¼Œæ¥ç€æ˜¯æ°´å¹³çº¿æ€§å¸ƒå±€ã€‚
 the text views followed by the horizontal linear layout. We specify
 
 30
 00:01:31,510 --> 00:01:35,050
-ÎÒÃÇÖ¸¶¨layout margin topÎª16dp£¬ÈÃÎÄ±¾ÊÓÍ¼µÄµ×²¿ÓĞ¸ü¶à¿Õ¼ä¡£
+æˆ‘ä»¬æŒ‡å®šlayout margin topä¸º16dpï¼Œè®©æ–‡æœ¬è§†å›¾çš„åº•éƒ¨æœ‰æ›´å¤šç©ºé—´ã€‚
 layout margin top of 16dp to give it some more space from
 
 31
 00:01:35,050 --> 00:01:38,090
-ÔÚË®Æ½ÏßĞÔ²¼¾ÖÖĞ£¬
+åœ¨è¿™ä¸ªæ°´å¹³çº¿æ€§å¸ƒå±€ä¸­ï¼Œ
 the bottom of this text view. Within this horizontal linear layout, we
 
 32
 00:01:38,090 --> 00:01:41,290
-ÎÒÃÇÓĞÒ»¸ö´¹Ö±ÏßĞÔ²¼¾Ö£¬ËüµÄwidthÎª0 weightÎª1¡£
+æˆ‘ä»¬æœ‰ä¸€ä¸ªå‚ç›´çº¿æ€§å¸ƒå±€ï¼Œå®ƒçš„widthä¸º0 weightä¸º1ã€‚
 have one vertical linear layout which has a width of zero and
 
 33
 00:01:41,290 --> 00:01:43,980
-ÁíÒ»¸öÏßĞÔ²¼¾ÖÒ²ÊÇÕâÑù£¬
+å¦ä¸€ä¸ªçº¿æ€§å¸ƒå±€ä¹Ÿæ˜¯è¿™æ ·ï¼Œ
 a weight of one. And another linear layout with the
 
 34
 00:01:43,980 --> 00:01:46,170
-widthÎª0 weightÎª1 ¡£
+widthä¸º0 weightä¸º1 ã€‚
 width at zero and a weight of one. That means that
 
 35
 00:01:46,170 --> 00:01:49,690
-ÒâË¼ÊÇÕâÁ½¸ö×ÓÏî¾ßÓĞÏàÍ¬µÄ¿í¶È¡£
+æ„æ€æ˜¯è¿™ä¸¤ä¸ªå­é¡¹å…·æœ‰ç›¸åŒçš„å®½åº¦ã€‚
 both of these children have equal width. For this linear layout,
 
 36
 00:01:49,690 --> 00:01:52,980
-¶ÔÓÚÕâ¸öÏßĞÔ²¼¾Ö£¬ÎÒÃÇÈÃgravityÎªcenter horizontal¡£
+å¯¹äºè¿™ä¸ªçº¿æ€§å¸ƒå±€ï¼Œæˆ‘ä»¬è®©gravityä¸ºcenter_horizontalã€‚
 we specified gravity to be center horizontal. That means that the
 
 37
 00:01:52,980 --> 00:01:56,670
-Õâ¾äÒâË¼ÊÇ£¬ÔÚÕâ¸ö²¼¾ÖÖĞ£¬ÄÚÈİ½«±»Ë®Æ½¾ÓÖĞ·ÅÖÃ£¬°üÀ¨Í¼±ê
+æ„å‘³ç€ï¼Œåœ¨è¿™ä¸ªå¸ƒå±€ä¸­ï¼Œå†…å®¹å°†è¢«æ°´å¹³å±…ä¸­æ”¾ç½®ï¼ŒåŒ…æ‹¬å›¾æ ‡
 contents inside of it will be centered horizontally, which includes
 
 38
 00:01:56,670 --> 00:01:59,850
-ÒÔ¼°Ô¤²âÎÄ±¾µÄÊÓÍ¼¡£
+ä»¥åŠé¢„æŠ¥æ–‡æœ¬çš„è§†å›¾ã€‚
 the icon, as well as the forecast text view. Lastly, we
 
 39
 00:01:59,850 --> 00:02:03,180
-×îºó£¬ÎÒÃÇ½«Ê£ÓàµÄÎÄ±¾ÊÓÍ¼ÓÃÀ´ÏÔÊ¾ÆäËûµÄÌìÆøÇé¿ö¡£
+æœ€åï¼Œæˆ‘ä»¬å°†å‰©ä½™çš„æ–‡æœ¬è§†å›¾ç”¨æ¥æ˜¾ç¤ºå…¶ä»–çš„å¤©æ°”æƒ…å†µã€‚
 have the remaining text views for the other weather details. When
 
 40
 00:02:03,180 --> 00:02:06,330
-µ±ÎÒÃÇ¸üĞÂ¸üÏêÏ¸µÄÄÚÈİÊ±£¬²¼¾Ö»á¿´ÆğÀ´¸üºÃÒ»µã¡£
+å½“æˆ‘ä»¬æ›´æ–°æ›´è¯¦ç»†çš„å†…å®¹æ—¶ï¼Œå¸ƒå±€ä¼šçœ‹èµ·æ¥æ›´å¥½ä¸€ç‚¹ã€‚
 the layout looks good, we update the detail fragment. At this
 
 41
 00:02:06,330 --> 00:02:09,184
-Õâ¸öÊ±ºò£¬ÎÒÃÇ¿ÉÒÔ½«ÆäÒÆ¶¯µ½×Ô¼ºµÄÎÄ¼şÖĞ¡£
+è¿™ä¸ªæ—¶å€™ï¼Œæˆ‘ä»¬å¯ä»¥å°†å…¶ç§»åŠ¨åˆ°è‡ªå·±çš„æ–‡ä»¶ä¸­ã€‚
 point, we also move it into its own file. In the
 
 42
 00:02:09,184 --> 00:02:11,950
-ÔÚonload finish·½·¨ÖĞ£¬ÎÒÃÇÔøÓÃ´óÁ¿µÄID callsÈ¥Find You¡£
-onload finish method, we used to have a lot of Find You
+åœ¨onLoadFinishæ–¹æ³•ä¸­ï¼Œæˆ‘ä»¬æ›¾ç”¨å¤§é‡çš„findViewByIdè°ƒç”¨ã€‚
+onload finish method, we used to have a lot of find view
 
 43
 00:02:11,950 --> 00:02:15,770
-È»¶ø£¬ÎÒÃÇÖ»ÓĞÒ»´Î¾Í»ñÈ¡ÄÚÈİ²ÅÄÜ¼°Ê±µÄÏÔÊ¾ÊÓÍ¼¡£
-by ID calls. However, we can cash those views earlier so that
+ç„¶è€Œï¼Œæˆ‘ä»¬æˆ‘ä»¬å¯ä»¥æ›´æ—©çš„ç¼“å­˜ä½ä»–ä»¬ï¼Œè¿™æ ·å°±åªè¦æŸ¥æ‰¾ä¸€æ¬¡ã€‚
+by ID calls. However, we can cache those views earlier so that
 
 44
 00:02:15,770 --> 00:02:19,230
-ÔÚonCreateView·½·¨ÖĞ£¬
+åœ¨onCreateViewæ–¹æ³•ä¸­ï¼Œ
 we only have to fetch them once. In the onCreateView method, once
 
 45
 00:02:19,230 --> 00:02:21,560
-µ±Ôö¼ÓÒ»¸öĞÂÊÓÍ¼Ê±£¬
+ä¸€æ—¦è§†å›¾è¢«è§£æï¼Œæˆ‘ä»¬å°±å¯ä»¥
 the view is inflated, we can go and find a reference
 
 46
 00:02:21,560 --> 00:02:24,420
-ÎÒÃÇ¿ÉÒÔÔÚËùÓĞÊÓÍ¼ÖĞÕÒµ½Ò»¸öĞèÒªµÄ²ÎÕÕ¡£
+æ‰¾åˆ°æ‰€æœ‰åç»­è¦ä½¿ç”¨çš„è§†å›¾çš„å¼•ç”¨ã€‚
 to all the views we'll need later. We store these views as
 
 47
 00:02:24,420 --> 00:02:27,640
-ÎÒÃÇÔÚÀàÖĞ½«ÕâĞ©ÊÓÍ¼µ±×ö³ÉÔ±±äÁ¿À´±£´æ¡£
+æˆ‘ä»¬æŠŠè¿™äº›è§†å›¾ä½œä¸ºç±»çš„æˆå‘˜å˜é‡æ¥ä¿å­˜ã€‚
 member variables in a class. Which is why they start with the
 
 48
 00:02:27,640 --> 00:02:31,450
-Õâ¾ÍÊÇÎªÊ²Ã´ËûÃÇÔÚonCreateLoaded·½·¨ÖĞÒÔm¿ªÍ·Ê¹ÓÃÊÓÍ¼£¬
+æ‰€ä»¥ä»–ä»¬éƒ½ä»¥må¼€å¤´ã€‚åœ¨onCreateLoadedæ–¹æ³•ä¸­ï¼Œ
 letter M. In the onCreateLoaded method, we make sure that the projection
 
 49
 00:02:31,450 --> 00:02:34,930
-ÎÒÃÇ¿ÉÒÔÈ·±£ÄÚÈİÌá¹©µÄÇëÇóÄÜ¹»Ó³Éä³öÎÒÃÇĞèÒªµÄĞÅÏ¢¡£
+æˆ‘ä»¬ç¡®ä¿ä»å†…å®¹æä¾›å™¨ä¸­æŸ¥è¯¢çš„æ˜ å°„åŒ…å«äº†æ‰€æœ‰æˆ‘ä»¬éœ€è¦çš„ä¿¡æ¯ã€‚
 that we're requesting from the content provider contains all the information
 
 50
 00:02:34,930 --> 00:02:38,200
-ÌØ±ğÒªËµµÄÊÇ£¬ÎÒÃÇÖ»ÊÇÔÚĞÂÓòÖĞÌí¼ÓĞÂÊÓÍ¼¡£
+ç‰¹åˆ«æ˜¯ï¼Œæˆ‘ä»¬åˆšåˆšä¸ºæ­¢æ·»åŠ äº†è§†å›¾çš„é‚£å‡ ä¸ªæ–°çš„å­—æ®µã€‚
 that we need. Especially the new fields that we just added views
 
 51
 00:02:38,200 --> 00:02:40,960
-ÔÚonload Finish·½·¨ÖĞ£¬
+ç„¶ååœ¨onLoadFinishæ–¹æ³•ä¸­ï¼Œ
 for. Then in the onload Finish method, we get the cursor
 
 52
 00:02:40,960 --> 00:02:43,920
-ÎÒÃÇ»ñÈ¡¹â±êÎ»ÖÃ·µ»ØµÄÓĞÓÃµÄĞÅÏ¢¡£ÎÒÃÇÍ¨¹ı¹â±ê¶ÁÈ¡weather IDÄÚÈİ¡£
+æˆ‘ä»¬ç”¨æ¸¸æ ‡è¿”å›æˆ‘ä»¬éœ€è¦çš„ä¿¡æ¯ã€‚æˆ‘ä»¬é€šè¿‡æ¸¸æ ‡è¯»å–å¤©æ°”æƒ…å†µIDã€‚
 back with the data we need. We read the weather condition ID
 
 53
 00:02:43,920 --> 00:02:46,610
-ÎÒÃÇÒÔºó½«»áÓÃµ½Õâ¸öÀ´È·¶¨ÕıÈ·µÄÍ¼±ê¡£
+æˆ‘ä»¬ä»¥åå°†ä¼šç”¨åˆ°è¿™ä¸ªæ¥ç¡®å®šæ­£ç¡®çš„å›¾æ ‡ã€‚
 from the cursor. And we're going to need this later to determine
 
 54
 00:02:46,610 --> 00:02:49,500
-ÏÖÔÚ£¬ÎÒÃÇÖ»ÊÇĞèÒªÔÚÕâÀïÓĞÒ»¸öÕ¼Î»Í¼±ê¡£
+ä½†ç°åœ¨ï¼Œæˆ‘ä»¬å¯ä»¥å…ˆç”¨ä¸€ä¸ªå ä½å›¾æ ‡ã€‚
 the right icon. But for now, we can just use a placeholder
 
 55
 00:02:49,500 --> 00:02:52,990
-ÎÒÃÇ¼ÌĞø¶ÁÈ¡¹â±êÎ»ÖÃÀ´¸üĞÂÊÓÍ¼ÄÚÈİ£¬
+æˆ‘ä»¬ç»§ç»­ä»æ¸¸æ ‡ä¸­è¯»å–æ•°æ®æ›´æ–°è§†å›¾ï¼Œ
 icon. We continue reading from the cursor and updating the views such
 
 56
 00:02:52,990 --> 00:02:56,670
-±ÈÈçÈÕÆÚ¡¢¼ò½éºÍÎÂ¶È¡£
+æ¯”å¦‚æ—¥æœŸã€ç®€ä»‹å’Œæ¸©åº¦ã€‚
 as for the date and description and temperatures. For the new views
 
 57
 00:02:56,670 --> 00:02:59,360
-¶ÔÓÚÊª¶È¡¢·çÁ¦¡¢ÆøÑ¹ÕâĞ©ĞÂÊÓÍ¼£¬
+å¯¹äºæ¹¿åº¦ã€é£åŠ›ã€æ°”å‹è¿™äº›æ–°è§†å›¾ï¼Œ
 for humidity, wind, and pressure, we read the
 
 58
 00:02:59,360 --> 00:03:01,860
-ÎÒÃÇ¶ÁÈ¡¹â±êÎ»ÖÃµÄĞÅÏ¢£¬È»ºóÕıÈ·µÄÎªUI¸ñÊ½»¯ĞÅÏ¢¡£
+æˆ‘ä»¬è¯»å–å…‰æ ‡ä½ç½®çš„ä¿¡æ¯ï¼Œç„¶åæ­£ç¡®çš„ä¸ºUIæ ¼å¼åŒ–ä¿¡æ¯ã€‚
 information from the cursor, and then we format it
 
 59
 00:03:01,860 --> 00:03:04,680
-ÕâÉæ¼°µ½
+è¿™å°±æ¶‰åŠä»ä»£ç ç‰‡æ®µä¸­æ‹·è´
 properly for the UI. This involved copying over
 
 60
 00:03:04,680 --> 00:03:07,520
-¶ÔÒÑÓĞµÄ×Ö·û´®µÄĞÅÏ¢ÌáÈ¡¡£
+å­—ç¬¦ä¸²å’Œå·¥å…·æ–¹æ³•äº†ã€‚
 the strings and the utility method from the gist.
 

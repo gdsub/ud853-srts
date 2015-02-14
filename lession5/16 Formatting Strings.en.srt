@@ -10,27 +10,27 @@ it would be nice if we could show the degree
 
 3
 00:00:04,689 --> 00:00:08,310
-最好的实现方法就是用如上所示的语句。
+最佳实践就是使用这个标注。
 symbol for these temperature values. Using this notation is best
 
 4
 00:00:08,310 --> 00:00:11,580
-它可以帮助翻译器重新排列文本和参数
+它可以帮助翻译器了解如何重排文本和参数
 practice. It will help the translator know how to reorder the
 
 5
 00:00:11,580 --> 00:00:14,290
-来最大限度的复合本地语言习惯。
+来符合本地语言习惯。
 text and the parameters so that it fits the local
 
 6
 00:00:14,290 --> 00:00:16,790
-那么接下来我们看一下
+那么接下来我们看一下如何用这个办法
 language. Now let's look at how we can use this
 
 7
 00:00:16,790 --> 00:00:20,930
-如何在程序中构造规范的温度数据显示。在string.xml文件中
+在我们的应用中格式化温度数据。在string.xml文件中
 method to format temperatures within our app. Within the string.xml
 
 8
@@ -40,7 +40,7 @@ file, we declared the format temperature string resource. We use xliff
 
 9
 00:00:25,400 --> 00:00:28,250
-来代表十进制温度数据
+来指明这是十进制温度数据的位置，
 tag to denote that this is where the decimal temperature
 
 10
@@ -50,7 +50,7 @@ value will go. This is followed by the unicode
 
 11
 00:00:30,850 --> 00:00:33,940
-在utility类中，
+在Utility类中，
 character for the degrees symbol. In the utility class, in
 
 12
@@ -115,7 +115,7 @@ in the forecast list, as well in the detail page. So we
 
 24
 00:01:13,290 --> 00:01:15,740
-所以我们也需要更新相关代码，在调用方法的地方加入新的调用参数。
+所以我们也要在那里更新相关代码，这样他就会以新的参数编译。
 also had to update the code there so that it would compile
 
 25

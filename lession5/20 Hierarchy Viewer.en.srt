@@ -1,175 +1,175 @@
 1
 00:00:00,300 --> 00:00:03,240
-Äã¿ÉÒÔÑ¡Ôñ×ó²àÁĞ±íÉÏµÄÉè±¸£¬
+ä½ å¯ä»¥çœ‹åˆ°HierarchyViewè®©ä½ èƒ½åœ¨å·¦ä¾§
 Here you can see hierarchy view lets you select from
 
 2
 00:00:03,240 --> 00:00:06,400
-´ÓÎïÀíºÍĞéÄâÉÏ¿´µ½²ã´Î½á¹¹ÊÓÍ¼£¬
+åˆ—è¡¨ä¸­é€‰æ‹©ç‰©ç†å’Œè™šæ‹Ÿçš„è®¾å¤‡ï¼Œ
 a list of devices with physical and virtual on the left,
 
 3
 00:00:06,400 --> 00:00:08,720
-Ã¿Ò»¸ö¶¼°üº¬ÆäÔËĞĞ»î¶¯£¬
+æ¯ä¸€ä¸ªéƒ½åŒ…å«è¿è¡Œä¸­çš„Activityï¼Œ
 each of which then contains each of the running activities
 
 4
 00:00:08,720 --> 00:00:12,880
-¿ÉÒÔÔÚÉè±¸ÁĞ±íÖĞÑ¡Ôñ¡£
+å’Œåº”ç”¨ã€‚ä½ åªéœ€è¦
 and applications running on that device. You simply select the activity
 
 5
 00:00:12,880 --> 00:00:15,810
-ÄãÖ»ĞèÒªÑ¡ÔñÄãÏë·ÖÎöµÄÓ¦ÓÃ³ÌĞòµÄactivity¡£
+é€‰æ‹©ä½ æƒ³åˆ†æçš„åº”ç”¨ç¨‹åºçš„activityã€‚
 from the application that you want to profile. Then, hit
 
 6
 00:00:15,810 --> 00:00:19,430
-È»ºó£¬µã»÷ÕâÀïµÄLoad View hierarchy°´Å¥£¬
+ç„¶åï¼Œç‚¹å‡»è¿™é‡Œçš„Load View hierarchyæŒ‰é’®ï¼Œä½ å°†ä¼šçœ‹è§æ‰€é€‰çš„
 the Load View hierarchy button here, and you'll see a representation
 
 7
 00:00:19,430 --> 00:00:23,250
-Äã½«»á¿´¼ûËùÑ¡µÄactivityµÄÊÓÍ¼²ã´Î£¬ÒÔÊ÷×´Í¼ĞÎÊ½´Ó×óÖÁÓÒ±íÏÖÔÚÕâÀï¡£
+Activityçš„è§†å›¾å±‚æ¬¡ï¼Œä»¥æ ‘çŠ¶å›¾å½¢å¼
 of the selected activity's entire view hierarchy represented here in the
 
 8
 00:00:23,250 --> 00:00:25,400
-Äã¿ÉÒÔ¿´µ½£¬
+ä»å·¦è‡³å³è¡¨ç°åœ¨è¿™é‡Œã€‚ä½ å¯ä»¥çœ‹åˆ°
 Tree View, from left to right. You can see that the
 
 9
 00:00:25,400 --> 00:00:28,780
-Õû¸ö²ã´Î½á¹¹ÔÚÕâÀïÕ¹Ê¾£¬ÔÚÏß¿ò¼ÜÖĞ³ÌĞòµÄ¸ÅÀÀºÍ²¼¾Ö±¾ÉíÒ²»áÏÔÊ¾³öÀ´¡£
+æ•´ä¸ªå±‚çº§ä¹Ÿåœ¨çš„æ¦‚è§ˆä¸­å±•ç¤ºï¼Œå¸ƒå±€æœ¬èº«
 entire hierarchy is also shown here, in the overview and the layout
 
 10
 00:00:28,780 --> 00:00:32,030
-µã»÷²ã´Î½á¹¹ÖĞµÄÈÎºÎÊÓÍ¼£¬
+ä¼šåœ¨è¿™é‡Œçš„çº¿æ¡†å›¾ä¸­å±•ç¤ºå‡ºæ¥ã€‚åœ¨å±‚çº§ä¸­
 itself is shown in a wire frame here. Clicking on any view,
 
 11
 00:00:32,030 --> 00:00:34,910
-½«»áÕ¹Ê¾ÎÒÃÇËùµãµÄÊÓÍ¼µÄ¾ßÌåÏÔÊ¾ÄÚÈİ£¬
+ç‚¹å‡»ä»»ä½•è§†å›¾ï¼Œä¼šå±•ç¤ºæ˜¾ç¤ºçš„æ˜¯ä»€ä¹ˆï¼Œ
 at any point within the hierarchy, will show you what is displayed,
 
 12
 00:00:34,910 --> 00:00:37,889
-²¢Õ¹Ê¾ÔÚÕâ¸ö²ã´Î½á¹¹ÖĞ£¬Ö¸ÏòÏÂÒ»¸öÊÓÍ¼µÄÊıÁ¿¡£
+å¹¶å±•ç¤ºè¿™ä¸ªå±‚æ¬¡ç»“æ„ä¸­ï¼Œæ‰€åŒ…å«çš„å­è§†å›¾çš„æ•°é‡ã€‚
 showing us the number of views which are contained within the hierarchy
 
 13
 00:00:37,889 --> 00:00:42,310
-ÄãÒ²¿ÉÒÔ»ñÈ¡performance metrics£¬
+ä½ ä¹Ÿå¯ä»¥å¾—åˆ°æ€§èƒ½è¯„ä¼°ï¼Œ
 from this point onwards. You can also obtain the performance metrics to
 
 14
 00:00:42,310 --> 00:00:45,230
-ÓÃÀ´²âÊÔ²¼¾ÖºÍ»æÖÆ²ã´Î½á¹¹ÖĞµÄÃ¿Ò»¸öÔªËØĞèÒª¶à³¤Ê±¼ä¡£
-find out how long it takes to measure, layout and draw each
+æ¥äº†è§£åº¦é‡å¸ƒå±€å¹¶ç»˜åˆ¶å±‚æ¬¡ç»“æ„ä¸­çš„æ¯ä¸€ä¸ªå…ƒç´ éœ€è¦å¤šé•¿æ—¶é—´ã€‚
+find out how long it takes to measure layout and draw each
 
 15
 00:00:45,230 --> 00:00:48,480
-ÕâÊÇÒ»¸öÇ¿´óµÄ¹¤¾ß£¬
+è¿™æ˜¯ä¸€ä¸ªå¼ºå¤§çš„å·¥å…·ï¼Œ
 element of the hierarchy. It's a powerful tool and you can find
 
 16
 00:00:48,480 --> 00:00:50,750
-Äã¿ÉÒÔ´ÓÏÂ·½µÄÁ´½ÓÕÒµ½ÊÓÆµÓëÊ¹ÓÃÖ¸ÄÏ½øĞĞÑ§Ï°£¬
+ä½ å¯ä»¥ä»ä¸‹æ–¹çš„é“¾æ¥æ‰¾åˆ°è§†é¢‘ä¸ä½¿ç”¨æŒ‡å—è¿›è¡Œå­¦ä¹ ï¼Œ
 out more about how to use it to optimize your layouts and
 
 17
 00:00:50,750 --> 00:00:52,720
-À´ÓÅ»¯ÄãµÄ²¼¾ÖÓëÊÓÍ¼¡£
+æ¥å¸®åŠ©ä½ äº†è§£å¦‚ä½•ä¼˜åŒ–ä½ çš„å¸ƒå±€ä¸è§†å›¾ã€‚
 views in the videos and guides linked to from the
 
 18
 00:00:52,720 --> 00:00:55,680
-ÏÖÔÚ£¬ÎÒÃÇ½«ÓÃÕâ¸ö¹¤¾ßÀ´ÕÒµ½£¬
+ç°åœ¨ï¼Œæˆ‘ä»¬å¯ä»¥è¿™ä¸ªå·¥å…·æ¥æ‰¾åˆ°ï¼Œ
 instructor notes below. For now, note that we can use
 
 19
 00:00:55,680 --> 00:00:59,230
-Ò»¸öĞèÒª±»Õ¹Æ½µÄÉî¶ÈÇ¶Ì×²¼¾Ö¡£
+ä¸€ä¸ªéœ€è¦è¢«å±•å¹³çš„æ·±åº¦åµŒå¥—å¸ƒå±€ã€‚
 it to find surprisingly deeply nested layouts that need to
 
 20
 00:00:59,230 --> 00:01:01,780
-¾Ù¸öÀı×Ó£¬ÕâÓĞÒ»¸ö²¼¾Ö£¬
+ä¸¾ä¸ªä¾‹å­ï¼Œè¿™æœ‰ä¸€ä¸ªå¸ƒå±€ï¼Œ
 be flattened. For example, here we have a layout we
 
 21
 00:01:01,780 --> 00:01:05,150
-ÎÒÃÇ¿ÉÒÔÊ¹ÓÃÒÔÏÂÁ½ÖÖ·½·¨ÖĞµÄÒ»ÖÖ¡£
+æˆ‘ä»¬å¯ä»¥ä½¿ç”¨ä»¥ä¸‹ä¸¤ç§æ–¹æ³•ä¸­çš„ä¸€ç§ã€‚
 can describe using one of two techniques. One solution is
 
 22
 00:01:05,150 --> 00:01:09,530
-Ò»ÖÖ½â¾ö·½°¸ÊÇÊ¹ÓÃÁ½¸öÇ¶Ì×ÏßĞÔ²¼¾Ö¡£
+ä¸€ç§è§£å†³æ–¹æ¡ˆæ˜¯ä½¿ç”¨ä¸¤ä¸ªåµŒå¥—çº¿æ€§å¸ƒå±€ã€‚ä½†æ›´å¥½çš„åŠæ³•æ˜¯
 using two nested linear layouts. But a better solution would
 
 23
 00:01:09,530 --> 00:01:12,576
-µ«¸üºÃµÄ°ì·¨ÊÇÊ¹ÓÃÏà¶Ô²¼¾Ö¡£Ïà¶Ô²¼¾ÖµÄ²ã´Î»á¸üÇ³Ò»µã¡£
+ä½¿ç”¨ç›¸å¯¹å¸ƒå±€ã€‚ç›¸å¯¹å¸ƒå±€çš„å±‚æ¬¡ä¼šæµ…ä¸€çº§ã€‚
 be using a relative layout. The relative layout is one
 
 24
 00:01:12,576 --> 00:01:16,010
-ÁíÒ»ÖÖ¼¼ÇÉÊÇ±ÜÃâÔÚ¸ù²¼¾ÖÏÂÊ¹ÓÃ¿ò¼Ü²¼¾Ö£¬
+å¦ä¸€ç§æŠ€å·§æ˜¯é¿å…æŠŠæ¡†æ¶å¸ƒå±€ï¼Œä½œä¸º
 level shallower. Another tip is to avoid using the frame layout
 
 25
 00:01:16,010 --> 00:01:18,200
-¿ÉÒÔ½«ÊÓÍ¼ÒÔ×ÓÊÓÍ¼µÄ·½Ê½²åÈëÆäÖĞ¡£
+æ€»ä¼šå½“ä½œå­èŠ‚ç‚¹æ’å…¥å…¶ä»–è§†å›¾çš„èŠ‚ç‚¹çš„æ ¹èŠ‚ç‚¹ã€‚
 as the root for layout that will always be inserted
 
 26
 00:01:18,200 --> 00:01:21,940
-ÔÚÕâÖÖÇé¿öÏÂ£¬ºÏ²¢±êÇ©ÊÇÒ»¸ö¸üºÃµÄÑ¡Ôñ¡£
+åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œ<merge>ï¼ˆåˆå¹¶ï¼‰æ ‡ç­¾æ˜¯ä¸€ä¸ªæ›´å¥½çš„é€‰æ‹©ã€‚
 as a child into another one. In these circumstances, the merge
 
 27
 00:01:21,940 --> 00:01:24,790
-µ±²¼¾Ö±»·ÅÔÚparents hierarchyÖĞ£¬±êÇ©½«±»Ïû³ı¡£
+å½“å¸ƒå±€è¢«æ”¾åœ¨çˆ¶å±‚çº§ä¸­ï¼Œæ ‡ç­¾
 tag is a better alternative. This will be eliminated when the
 
 28
 00:01:24,790 --> 00:01:28,090
-ÎªÁË°ïÖúÄã¼Ç×¡ËùÓĞµÄ¼¼ÇÉºÍÌáÊ¾£¬
+å°†è¢«æ¶ˆé™¤ã€‚ä¸ºäº†å¸®åŠ©ä½ è®°ä½
 layout is included into the parents hierarchy. To help you remember
 
 29
 00:01:28,090 --> 00:01:30,630
-AndroidÌá¹©ÁËÒ»¸öÇ¿´óµÄ¾²Ì¬·ÖÎö¹¤¾ß£¬³ÆÎªLint¡£
+æ‰€æœ‰çš„æŠ€å·§å’Œæç¤ºï¼ŒAndroidæä¾›äº†ä¸€ä¸ªå¼ºå¤§çš„
 all of these tips and tips, Android has a powerful static
 
 30
 00:01:30,630 --> 00:01:33,410
-Äã¿ÉÒÔÔÚÕâÀï¿´¼ûLintµÄ´°¿Ú£¬
+é™æ€åˆ†æå·¥å…·ï¼Œç§°ä¸ºLintã€‚ä½ å¯ä»¥åœ¨è¿™é‡Œçœ‹è§
 analysis tool called Lint. As you can see here in the
 
 31
 00:01:33,410 --> 00:01:36,790
-³ıÁËÎÒÃÇÒÑ¾­Ëµ¹ıµÄ²¼¾Ö¾¯¸æÎÊÌâ£¬
+Lintçš„çª—å£ï¼Œé™¤äº†æˆ‘ä»¬å·²ç»è¯´è¿‡çš„å¸ƒå±€è­¦å‘Šé—®é¢˜ï¼Œ
 lint window, in addition to the layout warnings we've already talked
 
 32
 00:01:36,790 --> 00:01:37,990
-ÕâÀïÒ²¿ÉÒÔ¼ì²éÎÊÌâ£¬
+è¿™é‡Œä¹Ÿå¯ä»¥æ£€æŸ¥é—®é¢˜ï¼Œ
 about, it also checks from
 
 33
 00:01:37,990 --> 00:01:40,990
-°üÀ¨¿É·ÃÎÊĞÔ¡¢·­ÒëÊÇ·ñÍêÕû¡¢Ó²±àÂë×Ö·û´®µÈÎÊÌâ¡£
+åŒ…æ‹¬å¯è®¿é—®æ€§ã€ç¿»è¯‘æ˜¯å¦å®Œæ•´ã€ç¡¬ç¼–ç å­—ç¬¦ä¸²ç­‰é—®é¢˜ã€‚
 everything from accessibility problems, missing translations,
 
 34
 00:01:40,990 --> 00:01:44,210
-ÔÚÌá¹©µÄ±Ê¼ÇÁ´½ÓÖĞ£¬
+ä½ å¯ä»¥åœ¨å¼€å‘è€…å·¥å…·é¡µæ‰¾åˆ°æ‰€æœ‰
 and hard coded strings. You can find all the things lint checks
 
 35
 00:01:44,210 --> 00:01:47,510
-Äã¿ÉÒÔÕÒµ½Lint¼ì²éµÄ¿ª·¢Õß¹¤¾ßÒ³ÃæĞÅÏ¢¡£
+Lintä¼šæ£€æŸ¥çš„é¡¹ï¼Œè®²å¸ˆç¬”è®°ä¸­ç»™å‡ºäº†é“¾æ¥ã€‚
 for at the developer tools page linked to in the instructor notes
 

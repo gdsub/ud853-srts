@@ -1,39 +1,40 @@
 1
 00:00:00,270 --> 00:00:03,114
-Äã¿ÉÒÔÔÚÍøÉÏ£¬ÕÒµ½ÈçºÎÊ¹ÆÁÄ»Ö§³ÖÍøÂçÒ³Ãæ£¬
+ä½¿ç”¨Screen Supporté¡µé¢æˆ–ä»»ä½•ä½ èƒ½åœ¨ç½‘ä¸Š
 Using the screen support page, and whatever technical
 
 2
 00:00:03,114 --> 00:00:06,078
-»¹ÓÐËùÓÐ¼¼Êõ¹æ·¶µÄÏ¸½Ú
+æ‰¾åˆ°çš„æŠ€æœ¯ç»†èŠ‚ï¼Œæ¥æ‰¾åˆ°
 specification details you can find on the internet, what
 
 3
 00:00:06,078 --> 00:00:08,619
-ÄÇÃ´Nexus One ºÍ the Nexus 5ÕâÁ½¿îÉè±¸µÄ³ß´çºÍÃÜ¶ÈÊÇ¶àÉÙ?
+Nexus One å’Œ the Nexus 5è¿™ä¸¤æ¬¾è®¾å¤‡
 are the sizes and densities of these two devices,
 
 4
 00:00:08,619 --> 00:00:11,190
+çš„å°ºå¯¸å’Œç²¾åº¦æ˜¯å¤šå°‘?
 the Nexus One and the Nexus 5? For these
 
 5
 00:00:11,190 --> 00:00:13,080
-¹ØÓÚÕâÐ©£¬ÎÒÃÇ¿ÉÒÔÖªµÀÆÁÄ»³ß´çÊÇÓÐ±ê×¼µÄ£¬
+å¯¹äºŽè¿™äº›é—®é¢˜ï¼Œå±å¹•å°ºå¯¸å¯ä»¥æ˜¯
 purposes, the screen size should be one of
 
 6
-00:00:13,080 --> 00:00:17,580
-Ð¡ ÖÐ ´ó ÌØ´ó¡£
+00:00:13,080 - -> 00:00:17,580
+å° ä¸­ å¤§ ç‰¹å¤§ä¹‹ä¸€ã€‚
 the available buckets, small, normal, large, or extra large.
 
 7
 00:00:17,580 --> 00:00:19,580
-»¹ÓÐÏñËØµÄ´óÐ¡Ò²Ó¦µ±²ÎÕÕÆÁÄ»´óÐ¡¹æ¸ñ£¬
+è¿˜æœ‰åƒç´ çš„å¤§å°ä¹Ÿåº”å½“ä¸ºæˆ‘ä»¬çš„åˆ†ç»„ä¹‹ä¸€
 And, the pixel density should always refer to one
 
 8
 00:00:19,580 --> 00:00:25,540
-LDPI MDPI HDPI XHDPI ºÍ XXHDPI
+LDPIï¼ŒMDPIï¼ŒHDPIï¼ŒXHDPI å’Œ XXHDPI
 of our buckets, LDPI, MDPI, HDPI, XHDPI, or XXHDPI.
 

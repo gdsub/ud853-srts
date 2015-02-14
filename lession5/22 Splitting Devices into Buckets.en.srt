@@ -15,22 +15,22 @@ where do we begin? Well, we can start by grouping them
 
 4
 00:00:07,680 --> 00:00:10,930
-大小来区分他们  我们把手机
+大小来区分他们  我们把手机放一个桶里
 into buckets based on physical size. We can have a bucket for
 
 5
 00:00:10,930 --> 00:00:15,390
-和7寸、10寸的平板
+7寸平板放一个桶里，
 phones and a bucket for seven inch tablets. And a bucket
 
 6
 00:00:15,390 --> 00:00:19,320
-分成三类  你也可以根据屏幕宽度
+10寸的再放一个桶里。你也可以以屏幕宽度为粒度
 for ten inch tablets as well. You can go even more granular
 
 7
 00:00:19,320 --> 00:00:22,060
-来区分他们  不过这都是一些较为常见的
+来区分他们  不过这是最为常见的
 based on screen width. But these are the most common buckets
 
 8
@@ -65,7 +65,7 @@ known as LDPI devices. It has about 120 dots
 
 14
 00:00:42,120 --> 00:00:45,870
-再高一点的是 MDPI、HDPI 再高的就是 
+再高一点的是 MDPI、HDPI 再高的就是
 per inch, then it increases to medium density, high density
 
 15

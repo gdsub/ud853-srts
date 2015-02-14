@@ -1,250 +1,250 @@
 1
 00:00:00,310 --> 00:00:01,870
-ÄÇÃ´£¬ÎÒÖªµÀÎÒÃÇĞèÒª´´½¨²¼¾Ö£¬
+é‚£ä¹ˆï¼Œæˆ‘çŸ¥é“æˆ‘ä»¬éœ€è¦åˆ›å»ºå¸ƒå±€ï¼Œ
 So, we know we need to create layouts
 
 2
 00:00:01,870 --> 00:00:04,770
-²¢Îª²»Í¬³ß´çºÍÏñËØµÄÆÁÄ»ÓÅ»¯×ÊÔ´¡£
+å¹¶ä¸ºä¸åŒå°ºå¯¸å’Œåƒç´ çš„å±å¹•ä¼˜åŒ–èµ„æºã€‚
 and assets optimized for different screen pixel densities
 
 3
 00:00:04,770 --> 00:00:07,320
-ÏÖÔÚ¾ÍÊÇ¸öºÜºÃµÄÊ±»ú£¬
+ç°åœ¨å°±æ˜¯ä¸ªå¾ˆå¥½çš„æ—¶æœºï¼Œ
 and sizes. So, now's a great time to
 
 4
 00:00:07,320 --> 00:00:12,130
-ÏòÄã½éÉÜAndroidµÄ¿ò¼Ü×ÊÔ´¡£
+å‘ä½ ä»‹ç»Androidçš„æ¡†æ¶èµ„æºã€‚
 introduce you to the Android resource framework. All externalized
 
 5
 00:00:12,130 --> 00:00:15,660
-ËùÒÔµÄAndroidÍâ²¿×ÊÔ´£¬°üÀ¨×Ö·û´®²¼¾Ö¡¢»æÖÆÇø¡¢¶¯»­
+æ‰€ä»¥çš„Androidå¤–éƒ¨èµ„æºï¼ŒåŒ…æ‹¬å­—ç¬¦ä¸²å¸ƒå±€ã€ç»˜åˆ¶åŒºã€åŠ¨ç”»
 Android resources, everything from strings to layouts to
 
 6
 00:00:15,660 --> 00:00:19,200
-¶¼´¢´æÔÚÄãÏîÄ¿µÄresÎÄ¼ş¼ĞÖĞ¡£
+éƒ½å‚¨å­˜åœ¨ä½ é¡¹ç›®çš„resæ–‡ä»¶å¤¹ä¸­ã€‚
 drawables and animations are all stored within your project's
 
 7
 00:00:19,200 --> 00:00:22,490
-Äã½«ÄãµÄ×Ö·û´®×ÊÔ´·ÅÔÚstrings.xmlÎÄ¼şÖĞ£¬
+ä½ å°†ä½ çš„å­—ç¬¦ä¸²èµ„æºæ”¾åœ¨strings.xmlæ–‡ä»¶ä¸­ï¼Œ
 res folder. You've already been putting your strings
 
 8
 00:00:22,490 --> 00:00:25,500
-¸ÃÎÄ¼ş´¢´æÔÚÖµÎÄ¼ş¼ĞÖĞ¡£
+è¯¥æ–‡ä»¶å‚¨å­˜åœ¨å€¼æ–‡ä»¶å¤¹ä¸­ã€‚
 in the strings.xml file stored in the values folder.
 
 9
 00:00:25,500 --> 00:00:27,550
-Í¬Ñù£¬Äã½«ÄãµÄ²¼¾Ö´æÔÚ²¼¾ÖÎÄ¼ş¼ĞÖĞ¡£
+åŒæ ·ï¼Œä½ å°†ä½ çš„å¸ƒå±€å­˜åœ¨å¸ƒå±€æ–‡ä»¶å¤¹ä¸­ã€‚
 And you've been putting your layouts into the layout
 
 10
 00:00:27,550 --> 00:00:31,320
-µ±ÄãÒıÓÃÄãµÄ×ÊÔ´Ê±£¬
+å½“ä½ å¼•ç”¨ä½ çš„èµ„æºæ—¶ï¼Œ
 folder. And you know to reference your resources using
 
 11
 00:00:31,320 --> 00:00:34,450
-ĞèÒªÔÚXMLÎÄ¼şºÍµ÷ÓÃ´úÂëÖĞ±êÊ¶³öÀ´¡£
+éœ€è¦åœ¨XMLæ–‡ä»¶å’Œè°ƒç”¨ä»£ç ä¸­æ ‡è¯†å‡ºæ¥ã€‚
 at notation within both your xml or within the
 
 12
 00:00:34,450 --> 00:00:36,617
-ÕâÑùÔÚ³ÌĞòÔËĞĞµÄÊ±ºò£¬Android²Å»á¸ø³ÌĞò·ÖÅäÊÊµ±µÄ×ÊÔ´¡£
+è¿™æ ·åœ¨ç¨‹åºè¿è¡Œçš„æ—¶å€™ï¼ŒAndroidæ‰ä¼šç»™ç¨‹åºåˆ†é…é€‚å½“çš„èµ„æºã€‚
 code. And then at runtime, Android will insert the
 
 13
 00:00:36,617 --> 00:00:40,520
-Ä¿Ç°£¬Ò»ÇĞ¶¼ºÜË³Àû¡£
+ç›®å‰ï¼Œä¸€åˆ‡éƒ½å¾ˆé¡ºåˆ©ã€‚
 appropriate resource for you. So far, so good. And
 
 14
 00:00:40,520 --> 00:00:43,475
-µ½Õâ£¬Çé¿ö»á±äµÃÓĞÒâË¼Ò»µã¡£
+åˆ°è¿™ï¼Œæƒ…å†µä¼šå˜å¾—æœ‰æ„æ€ä¸€ç‚¹ã€‚
 here's where things get a little more interesting. Android
 
 15
 00:00:43,475 --> 00:00:46,740
-AndroidÔÊĞíÎªÃ¿Ò»¸ö×ÊÔ´´´½¨Ìæ´ú°æ±¾£¬
+Androidå…è®¸ä¸ºæ¯ä¸€ä¸ªèµ„æºåˆ›å»ºæ›¿ä»£ç‰ˆæœ¬ï¼Œ
 allows you to create alternative versions of every resource
 
 16
 00:00:46,740 --> 00:00:51,040
-²¢ÔÊĞíËüÃÇ±»·ÅÖÃÔÚ²»Í¬µÄÎÄ¼ş¼ĞÖĞ¡£
+å¹¶å…è®¸å®ƒä»¬è¢«æ”¾ç½®åœ¨ä¸åŒçš„æ–‡ä»¶å¤¹ä¸­ã€‚
 by placing them into folders with different qualifiers. We separate
 
 17
 00:00:51,040 --> 00:00:54,130
-ÎÒÃÇÓÃÁ¬×Ö·û·Ö¸îÕâ¸öÊ¹ÓÃµÄ×ÊÔ´¡£
+æˆ‘ä»¬ç”¨è¿å­—ç¬¦åŒºåˆ†è¿™ä¸ªä½¿ç”¨çš„èµ„æºã€‚
 each of those using a hyphen. And we can
 
 18
 00:00:54,130 --> 00:00:57,320
-ÎÒÃÇ¿ÉÒÔ»ùÓÚÓïÑÔ»òÕß·½ÑÔÌí¼ÓÏŞ¶¨·û£¬
+æˆ‘ä»¬å¯ä»¥åŸºäºä»»ä½•äº‹ç‰©ï¼Œä»è¯­è¨€æˆ–è€…æ–¹è¨€
 add those qualifiers based on anything from language and
 
 19
 00:00:57,320 --> 00:01:00,640
-ÅĞ¶ÏÉè±¸ÊÇ·ñ±»Í£ÖÍ£¬
+åˆ°è®¾å¤‡æ˜¯å¦ç½®å…¥æ’æ§½ä¸­ï¼Œ
 or dialect to whether the device is docked, the
 
 20
 00:01:00,640 --> 00:01:02,930
-ÒÔ¼°´¥ÃşÆÁÀàĞÍ¡¢ÏÔÊ¾Æ÷ÏñËØ¡¢
+ä»¥åŠè§¦æ‘¸å±ç±»å‹ï¼Œæ˜¾ç¤ºå™¨åƒç´ å¯†åº¦ï¼Œ
 type of touch screen, the pixel density of the
 
 21
 00:01:02,930 --> 00:01:06,820
-ÆÁÄ»·½Ïò¡¢
+å±å¹•æ–¹å‘ï¼Œ
 display, the orientation of the screen, and most importantly
 
 22
 00:01:06,820 --> 00:01:09,830
-»¹ÓĞ×îÖØÒªµÄÏìÓ¦Éè¼Æ£¬
+è¿˜æœ‰å¯¹å“åº”å¼è®¾è®¡å°¤å…¶é‡è¦çš„ï¼Œè¿™ä¸€
 for a responsive design in particular, the smallest available
 
 23
 00:01:09,830 --> 00:01:12,055
-×îĞ¡ÆÁ¿íÒÔ¼°²¼¾ÖÖ§³ÖµÄ³ß´ç´óĞ¡¡£
+å¸ƒå±€æ‰€èƒ½æ”¯æŒçš„æœ€å°å±å¹•å®½åº¦ã€‚
 screen width which you can support with that layout.
 
 24
 00:01:12,055 --> 00:01:16,270
-³ÌĞòÔËĞĞÊ±£¬Android»á¼ì²é¼ÆÊıÉè±¸ÅäÖÃ£¬
-At runtime, Android will check the count device configuration,
-
+ç¨‹åºè¿è¡Œæ—¶ï¼ŒAndroidä¼šæ£€æŸ¥å½“å‰è®¾å¤‡é…ç½®ï¼Œ
+At runtime, Android will check the current device configuration,
+count
 25
 00:01:16,270 --> 00:01:20,030
-ÓïÑÔ£¬ÆÁÄ»³ß´ç£¬ÏñËØ´óĞ¡£¬µÈµÈ£¬
+è¯­è¨€ï¼Œå±å¹•å°ºå¯¸ï¼Œåƒç´ å¤§å°ï¼Œç­‰ç­‰ï¼Œ
 it's language, it's screen size, pixel density, everything,
 
 26
 00:01:20,030 --> 00:01:22,790
-È»ºóÔÙ¼ÓÔØÏàÓ¦µÄ²¼¾Ö£¬×Ö·û´®ÒÔ¼°»æÖÆÆÁÄ»¡£
+ç„¶åå†ä¾æ­¤åŠ è½½ç›¸åº”çš„å¸ƒå±€ï¼Œå­—ç¬¦ä¸²ä»¥åŠç»˜åˆ¶å±å¹•ã€‚
 and then load the right layout strings and drawables
 
 27
 00:01:22,790 --> 00:01:26,410
-ÄãÉõÖÁ¿ÉÒÔ½«ÕâĞ©ÏŞ¶¨·ûÁ´½ÓÔÚÒ»Æğ¡£
+ä½ ç”šè‡³å¯ä»¥å°†è¿™äº›é™å®šè¯é“¾æ¥åœ¨ä¸€èµ·ã€‚
 accordingly. You can even chain these qualifiers together. For
 
 28
 00:01:26,410 --> 00:01:29,460
-ÀıÈç£¬Òª¸øµÂ¹úÈË×öÓ¦ÓÃµÄÊ±ºò£¬
+ä¾‹å¦‚ï¼Œé’ˆå¯¹å¾·è¯­ç”¨æˆ·åˆ›å»ºä¸€ä¸ªä¸åŒçš„å¸ƒå±€ï¼Œ
 example, to create a different layout for German language
 
 29
 00:01:29,460 --> 00:01:31,660
-¾ÍÒª¿¼ÂÇµ½ÓĞĞ©ºÜ³¤µÄµÂÓïµ¥´Ê£¬
+å°±è¦è€ƒè™‘åˆ°æœ‰äº›çœŸçš„å¾ˆé•¿çš„å¾·è¯­å•è¯ï¼Œ
 users to account for all of those really long
 
 30
 00:01:31,660 --> 00:01:34,960
-¿ÉÒÔÓĞµÄÌØ¶¨ÆÁÄ»³ß´çºÍÉè±¸ÅäÖÃ¡£
+æˆ–æ›´å…¸å‹çš„ï¼Œé’ˆå¯¹ç‰¹å®šå±å¹•å°ºå¯¸å’Œè®¾å¤‡é…ç½®çš„ç»„åˆã€‚
 German words, or more typically for a combination of
 
 31
 00:01:34,960 --> 00:01:38,660
-ÏÖÔÚ£¬Çë¼Ç×¡£¬
+ç°åœ¨ï¼Œè¯·è®°ä½ï¼Œ
 screen size and device configuration. Now, keep in mind
 
 32
 00:01:38,660 --> 00:01:41,610
-ÏÂÃæµÄÕâĞ©Öµ¶¼ÊÇ¿ÉÒÔÔÚÔËĞĞµÄÊ±ºò¸ü¸ÄµÄ¡£
+ä¸‹é¢çš„è¿™äº›å€¼éƒ½æ˜¯å¯ä»¥åœ¨è¿è¡Œçš„æ—¶å€™æ›´æ”¹çš„ã€‚
 that many of these values can change at runtime.
 
 33
 00:01:41,610 --> 00:01:44,630
-×î³£¼ûµÄ¸ü¸Ä¾ÍÊÇ³¤¿íµÄÀ­Éì¡£
+æœ€å¸¸è§çš„æ›´æ”¹å°±æ˜¯é•¿å®½çš„æ‹‰ä¼¸ã€‚
 The most common change being that of orientation. And
 
 34
 00:01:44,630 --> 00:01:47,190
-Ò²¾ÍÊÇÕâ¸öÔ­Òò£¬Ã¿µ±Éè±¸ÅäÖÃ±»¸ü¸ÄµÄÊ±ºò£¬
+ä¹Ÿå°±æ˜¯è¿™ä¸ªåŸå› ï¼Œæ¯å½“è®¾å¤‡é…ç½®è¢«æ›´æ”¹çš„æ—¶å€™ï¼Œ
 it's for this reason that Android activities are destroyed
 
 35
 00:01:47,190 --> 00:01:51,360
-Android activities ¶¼Òª±»ÆÆ»µ²¢ÖØĞÂ´´½¨¡£
+Android activities éƒ½è¦è¢«ç ´åå¹¶é‡æ–°åˆ›å»ºã€‚
 and recreated whenever the device configuration changes. And that's
 
 36
 00:01:51,360 --> 00:01:53,940
-ÕâÊÇÒòÎª¼òµ¥µÄÆÁÄ»·½ÏòµÄ¸Ä±ä£¬
+è¿™æ˜¯å› ä¸ºè¯¸å¦‚å±å¹•æ–¹å‘æ”¹å˜è¿™æ ·ç®€å•çš„äº‹æƒ…ï¼Œ
 because the layout and all of the resources within it
 
 37
 00:01:53,940 --> 00:01:56,880
-¾Í»áµ¼ÖÂ²¼¾ÖºÍ×ÊÔ´·ÖÅä³öÏÖÍêÈ«²»Í¬µÄÇé¿ö¡£
+å°±ä¼šå¯¼è‡´å¸ƒå±€å’Œèµ„æºåˆ†é…å‡ºç°å®Œå…¨ä¸åŒçš„æƒ…å†µã€‚
 could be completely different based on something as simple
 
 38
 00:01:56,880 --> 00:02:00,640
-ÏÖÔÚ£¬ÕâÊÇÒ»¸öºÜºÃµÄ×ö·¨£¬
+ç°åœ¨ï¼Œæœ‰äº†è¿™æ ·ä¸€ç§æœºåˆ¶ï¼Œ
 as screen orientation change. Now it's good practice, as
 
 39
 00:02:00,640 --> 00:02:03,660
-±¾µØ»¯ÄãµÄÓ¦ÓÃ£¬
+ä½ å¯ä»¥å¾ˆå¥½çš„æœ¬åœ°åŒ–ä½ çš„åº”ç”¨ï¼Œ
 well, to localize your apps and provide translated strings
 
 40
 00:02:03,660 --> 00:02:06,720
-²¢ÎªËùÓĞÕâÖÖÅäÖÃµÄÓÃ»§Ìá¹©ÊÊºÏµÄÏÔÊ¾Êı¾İ¡£
+å¹¶ä¸ºä½ æ‰€æœ‰çš„ç”¨æˆ·æä¾›ç¿»è¯‘å¥½çš„å­—ç¬¦ä¸²ã€‚
 for all of your users using this mechanism. And that's
 
 41
 00:02:06,720 --> 00:02:08,530
-ÕâÑù¾Í³ÉÁËÒ»¸öºÜ¼òµ¥µÄÈÎÎñÁË¡£
+è¿™æ ·å°±æˆäº†ä¸€ä¸ªå¾ˆç®€å•çš„ä»»åŠ¡äº†ã€‚
 a task made a lot easier. Thanks to Google
 
 42
 00:02:08,530 --> 00:02:12,270
-¸ĞĞ»Google Play Publisher siteÌá¹©ÕâÑùµÄ·şÎñ¡£
+æ„Ÿè°¢Google Play Publisherç«™ç‚¹æä¾›è¿™æ ·çš„æœåŠ¡ã€‚
 Play Publisher site that can offer you this service. It's
 
 43
 00:02:12,270 --> 00:02:15,230
-ÕâÓĞÒ»¸öºÃµÄ½â¾ö°ì·¨£¬
+ä¸ºä¸åŒçš„åƒç´ åˆ†è¾¨ç‡æä¾›ä¸åŒçš„å¯ç»˜åˆ¶åŒºåŸŸï¼Œ
 also a really good idea to provide different drawables
 
 44
 00:02:15,230 --> 00:02:17,800
-¾ÍÊÇÎª²»Í¬µÄÏñËØÌá¹©²»Í¬µÄ¿É»æÖÆÇøÓò£¬
+åŒæ ·æ˜¯ä¸€ä¸ªå¥½ä¸»æ„ï¼Œ
 at the appropriate pixel density, so you can get a
 
 45
 00:02:17,800 --> 00:02:21,440
-ÈÃËüÔÚÈÎÒâÉè±¸ÉÏ¶¼ÄÜÏÔÊ¾½ÏÎªÇåÎúµÄ»­Ãæ¡£
+è¿™æ ·ä½ å°±å¯ä»¥åœ¨æ¯ä¸ªè®¾å¤‡ä¸Šéƒ½å¾—åˆ°æ¸…æ™°ç¾è§‚çš„ç…§ç‰‡ã€‚
 nice crisp image on every device. And when it
 
 46
 00:02:21,440 --> 00:02:24,480
-µ±Ëü¿ªÊ¼Éæ¼°µ½¿ÉÑ¡Ôñ²¼¾ÖÊ±£¬AndroidÒÑ¾­Íê³ÉÁË¼¸¸ö¿ÉÌæ´úÄ£ĞÍÁË¡£
+å½“å®ƒå¼€å§‹æ¶‰åŠåˆ°å¯é€‰æ‹©å¸ƒå±€æ—¶ï¼ŒAndroidå·²ç»å®Œæˆäº†å‡ ä¸ªå¯æ›¿ä»£æ¨¡å‹äº†ã€‚
 comes to providing alternative layouts, Android has gone through a
 
 47
 00:02:24,480 --> 00:02:28,130
-ÔÚ³õÆÚ£¬
+åœ¨åˆæœŸï¼Œ
 few alternative models. Starting in the early days, with this
 
 48
 00:02:28,130 --> 00:02:32,110
-ÓĞ¼¸¸öÑ¡ÔñÊÇ£¬Ğ¡ÆÁ£¬ÖĞÆÁ£¬´óÆÁ¡£
+æœ‰å‡ ä¸ªé€‰æ‹©æ˜¯ï¼Œå°å±ï¼Œå¤§å±ï¼Œè¶…å¤§å±ã€‚
 screen buckets idea of small, normal large, and extra large.
 
 49
 00:02:32,110 --> 00:02:36,130
-µ±·¢Õ¹µ½Android 3.2Ê±£¬Ìá¹©ÁË¸ü¾«È·µÄÆÁÄ»¿í¶È£¬
+ä½†è‡ªä»Android 3.2å¼€å§‹ï¼Œæ–°æä¾›çš„æœ€å°å®½åº¦é™å®šè¯
 But, since Android 3.2, the new smallest width qualifier has
 
 50
 00:02:36,130 --> 00:02:39,830
-ÕâÑù¸ü±ãÓÚÎÒÃÇÔÚ²¼¾ÖÉÏµÄ¿ØÖÆ¡£
+ä½¿å¾—æˆ‘ä»¬èƒ½æ›´å¥½çš„çš„æ§åˆ¶æˆ‘ä»¬çš„å¸ƒå±€ã€‚
 given us much more fine grain control over our layouts.
 
