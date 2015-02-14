@@ -1,235 +1,235 @@
-1
+ï»¿1
 00:00:00,550 --> 00:00:02,492
-Õâ¾ÍÊÇÎÒÃÇµÄ·ÖÏíĞĞÎªÌáÊ¾µÄ´úÂëµÄ½â¾ö·½·¨
+è¿™å°±æ˜¯æˆ‘ä»¬çš„å…³äºShareActionProviderçš„ä»£ç å®ç°
 Here's our coding solution for the share action
 
 2
 00:00:02,492 --> 00:00:07,140
-ÈÃÎÒÃÇ´ÓÌí¼Ó×Ö·û´®À´×÷Îª¿ªÊ¼
+è®©æˆ‘ä»¬ä»æ·»åŠ ä¸€ä¸ªå­—ç¬¦ä¸²æ¥ä½œä¸ºå¼€å§‹
 provider. Lets start by adding a string. The
 
 3
 00:00:07,140 --> 00:00:12,590
-×Ö·û´®»á³ÉÎªÎÒÃÇµÄĞĞÎªµÄ±êÇ©ÏÖÔÚÎÒÃÇÒªÌí¼ÓÒ»¸öĞÂµÄ
+è¿™ä¸ªå­—ç¬¦ä¸²ä¼šæˆä¸ºæˆ‘ä»¬çš„è¡Œä¸ºçš„æ ‡ç­¾ ç°åœ¨æˆ‘ä»¬è¦æ·»åŠ ä¸€ä¸ªæ–°çš„
 string will be used for the label for our action. Now we're going to add a new
 
 4
 00:00:12,590 --> 00:00:15,250
-²Ëµ¥×ÊÔ´  ÕâĞ©×ÊÔ´»á³ÉÎª
+èœå•èµ„æº  è¿™äº›èµ„æºä¼šè¢«ç”¨äº
 menu resource. This resource will be for the
 
 5
 00:00:15,250 --> 00:00:18,360
-ÏêÏ¸µÄÆ¬¶ÎÖ¡  ÎÒÃÇ½«´ÓÌí¼ÓÃû×Ö¿Õ¼ä¿ªÊ¼
+DetailFragment  æˆ‘ä»¬å°†ä»æ·»åŠ åå­—åŸŸå¼€å§‹
 detail fragment. We'll start by adding the name
 
 6
 00:00:18,360 --> 00:00:20,780
-ÕâĞ©Ãû×Ö¿Õ¼ä±»ÓÃÓÚÖ§³Ö°²×¿ÓïÑÔÉè¼ÆµÄĞ¡²¿¼ş¿ÉÀ©ÕÅ±ê¼ÇÓïÑÔ
+è¿™äº›åå­—åŸŸä¼šè¢«Androidçš„æ”¯æŒåº“ç”¨åˆ° åœ¨å®ƒçš„æè¿°å°éƒ¨ä»¶çš„XMLé‡Œ
 space used by the Android support library for
 
 7
 00:00:20,780 --> 00:00:24,390
-×îÖÕ  ÎÒÃÇÌí¼Óµ½Êµ¼ÊÏîÄ¿ÖĞÈ¥
+æœ€å  æˆ‘ä»¬æ·»åŠ è¿™ä¸ªæˆ‘ä»¬å®é™…éœ€è¦çš„Item
 it's widget XML. Finally, we add the actual item.
 
 8
 00:00:25,640 --> 00:00:28,340
-Õâ¸ö²Ëµ¥ÏîÄ¿°üº¬ÎÒÃÇ´Ó
+è¿™ä¸ªèœå•é¡¹ç›®åŒ…å«æˆ‘ä»¬ä»
 This menu item contains the string that we
 
 9
 00:00:28,340 --> 00:00:31,200
-×Ö·û´®ÎÄ¼şÀïÃæÌí¼ÓµÄ×Ö·û´®
+å­—ç¬¦ä¸²æ–‡ä»¶é‡Œé¢æ·»åŠ çš„å­—ç¬¦ä¸²
 just added from the strings file. It's always
 
 10
 00:00:31,200 --> 00:00:33,130
-Ëü×÷ÎªÒ»¸öĞĞÎª±»Õ¹Ê¾³öÀ´ËùÒÔËü»á³öÏÖÔÚ
+å®ƒæ€»æ˜¯ä½œä¸ºä¸€ä¸ªActionè¢«å±•ç¤ºå‡ºæ¥ æ‰€ä»¥å®ƒä¼šå‡ºç°åœ¨
 shown as an action. So it appears on
 
 11
 00:00:33,130 --> 00:00:37,499
-ĞĞÎª°ôÖĞËüÊÇÒ»ĞĞÎªÌáÊ¾·Ö¼¶  ÊÇ°²×¿Ö§³ÖµÄ¿âÀïÃæµÄÒ»¸ö·ÖÏíĞĞÎªÌáÊ¾
-the action bar. And it's actionProviderClass, is the ShareActionProvider
+æ“ä½œæ ä¸­ å®ƒçš„actionProviderClassæ˜¯Androidæ”¯æŒåº“
+the action bar. And its actionProviderClass is the ShareActionProvider
 
 12
 00:00:37,499 --> 00:00:40,710
-°²×¿Ö§³ÖµÄ¿â
+é‡Œé¢çš„ShareActionProviderã€‚Androidæ”¯æŒåº“
 from the Android support library. The Android support
 
 13
 00:00:40,710 --> 00:00:44,000
-ÔÊĞí·ÖÏíĞĞÎªÌáÊ¾ÄÜ±»Ê¹ÓÃÓÚ±È
+å…è®¸ShareActionProviderèƒ½è¢«ä½¿ç”¨äºæ¯”
 library allows the ShareActionProvider to be used on earlier
 
 14
 00:00:44,000 --> 00:00:46,530
-Android 4.0Ö®Ç°µÄ°æ±¾  µ±Ëü
+Android 4.0ä¹‹å‰çš„ç‰ˆæœ¬  4.0æ˜¯å®ƒ
 versions of Android then 4.0. When it was
 
 15
 00:00:46,530 --> 00:00:50,550
-±»¹Ù·½Ìí¼Óµ½¿ò¼ÜÖĞÈ¥½ÓÏÂÀ´  ÈÃÎÒÃÇ½øÈë
+è¢«å®˜æ–¹æ·»åŠ åˆ°æ¡†æ¶ä¸­æ—¶çš„Androidç‰ˆæœ¬ã€‚æ¥ä¸‹æ¥ï¼Œè®©æˆ‘ä»¬è¿›å…¥
 officially added to the framework. Next, let's go to
 
 16
 00:00:50,550 --> 00:00:53,704
-ÏêÏ¸»î¶¯Ä£¿é  ÎÒÃÇ¼´½«ÁË½â
+DetailAactivity  æˆ‘ä»¬è¦çœ‹çœ‹
 the DetailAactivity. We're going to be looking at the
 
 17
 00:00:53,704 --> 00:00:57,750
-°üº¬ÏêÏ¸»î¶¯µÄÏ¸½ÚÆ¬¶ÎÖ¡  ËùÒÔÎÒÃÇÒª×öµÄµÚÒ»¼şÊÂ
+DetailActivityä¸­çš„DetailFragmentã€‚ æ‰€ä»¥æˆ‘ä»¬èƒ½åœ¨è¿™ä¸ªFragmenté‡Œ
 DetailFragment within the DetailActivity. So the first thing
 
 18
 00:00:57,750 --> 00:01:01,860
-ÊÇÔÚÎÒÃÇµÄÆ¬¶ÎÖ¡ÀïÃæÌí¼ÓÒ»Ğ©ÓĞÓÃµÄ¶«Î÷  ÈÃÎÒÃÇÌí¼Ó
+åšçš„ç¬¬ä¸€ä»¶äº‹æ˜¯æ·»åŠ ä¸€äº›æœ‰ç”¨çš„ä¸œè¥¿  è®©æˆ‘ä»¬æ·»åŠ 
 we can do in our fragment is to add a few useful things. Let's add a log
 
 19
 00:01:01,860 --> 00:01:05,590
-Ò»¸öÄú¿ÉÒÔ  Ò»¸öÓÃÀ´·ÖÏíµÄ¾®ºÅ±êÇ©  ¾®ºÅ±êÇ©Ñô¹âÓ¦ÓÃ×Ö·û´®  
+ä¸€ä¸ªè®°å½•æ ‡ç­¾ï¼Œä¸€ä¸ªæ ‡è®°ä»å“ªåˆ†äº«çš„å­—ç¬¦ä¸²ï¼Œ 
 tag, a string for the share hashtag, hashtag
 
 20
 00:01:05,590 --> 00:01:08,840
-È»ºóÌí¼ÓÒ»¸öÔ¤Ê¾×Ö·û´®
+#SunchineApp, ç„¶åæ·»åŠ ä¸€ä¸ªå‚¨å­˜å¤©æ°”ä¿¡æ¯çš„å­—ç¬¦ä¸²å˜é‡
 sunshineApp, and we're going to take the forecast
 
 21
 00:01:08,840 --> 00:01:12,430
-Ê¹Ëü³ÉÎªÒ»¸öÓĞĞ§³ÉÔ±½ÓÏÂÀ´
+ä½œä¸ºè¿™ä¸ªç±»çš„æˆå‘˜ã€‚æ¥ä¸‹æ¥
 string and make it a member variable. Next
 
 22
 00:01:12,430 --> 00:01:17,070
-ÔÚonCreate´°¿Ú  ÎÒÃÇÈÃÓĞĞ§³ÉÔ±Êµ¼ÊÉú³É
-in onCreate view, let's actually populate our member variable.
+åœ¨onCreateViewé‡Œï¼Œæˆ‘ä»¬ç»™å¤©æ°”å˜é‡èµ‹äºˆå®é™…çš„å€¼
+in onCreateView, let's actually populate our member variable.
 
 23
 00:01:17,070 --> 00:01:20,330
-×îºó  Ê¹ÓÃËüÉèÖÃÎÄ±¾
+æœ€å ç”¨å®ƒæ¥è®¾ç½®è¦æ˜¾ç¤ºçš„æ–‡æœ¬å†…å®¹
 And then finally, use it to set the text.
 
 24
 00:01:20,330 --> 00:01:24,610
-ÎÒÃÇ´´½¨Ò»¸ö·ÖÏíÖ¸ÁîÕâ¸öÖ¸ÁîÊ¹ÓÃACTION_SEND
-Lets create a share intent. This intent uses ACTION_SEND.
+æˆ‘ä»¬åˆ›å»ºä¸€ä¸ªshareIntentã€‚è¿™ä¸ªIntentä½¿ç”¨ACTION_SEND
+Lets create a shareIntent. This intent uses ACTION_SEND.
 
 25
 00:01:24,610 --> 00:01:28,120
-ÔÚÒ»Ğ©ÖØÒªÊ±¿Ìµ±ÈÎÎñ±»ÖØÖÃÊ±  ÕâĞ©±êÖ¾»î¶¯»á±»Çå³ı
-This flag activity cleared when task reset is somewhat
+è¿™ä¸ªFLAG_ACTIVITY_CLEARED_WHEN_TASK_RESETæ˜¯å¾ˆé‡è¦çš„
+This FLAG_ACTIVITY_CLEARED_WHEN_TASK_RESET is somewhat
 
 26
 00:01:28,120 --> 00:01:31,470
-Ëü×èÖ¹ÎÒÃÇÕıÒª·ÖÏíµÄ»î¶¯
+è®¾ç½®äº†è¿™ä¸ªFlagï¼Œæˆ‘ä»¬è¦åˆ†äº«å»çš„Activityæ‰
 important. It prevents the activity we're sharing to from
 
 27
 00:01:31,470 --> 00:01:34,970
-±»·ÅÈë»î¶¯Õ»
+ä¸ä¼šè¢«æ·»åŠ è¿›Activityå †æ ˆã€‚
 being place onto the activity stack. What will happen,
 
 28
 00:01:34,970 --> 00:01:36,740
-Èç¹ûÎÒÃÇÃ»ÓĞÕâ¸ö±êÖ¾  ½ÓÏÂÀ´»á·¢ÉúµÄÊÇ
+å¦‚æœæˆ‘ä»¬æ²¡æœ‰è¿™ä¸ªæ ‡å¿—  æ¥ä¸‹æ¥ä¼šå‘ç”Ÿçš„æ˜¯
 if we don't have this flag, is when you
 
 29
 00:01:36,740 --> 00:01:39,230
-µ±ÎÒÃÇµã»÷Ä£¿é·µ»ØÓ¦ÓÃÊ±  
+ä¸€ä¼šå„¿å½“ä½ ç‚¹å‡»è¿”å›é”®æ—¶  
 click on the icon to return to the application
 
 30
 00:01:39,230 --> 00:01:42,550
-Äã¿ÉÄÜÊµ¼Ê½áÊøÁËÁíÒ»¸öÓ¦ÓÃ
+ä½ å¯èƒ½å®é™…ä¸Šä¼šç•™åœ¨é‚£ä¸ªå¤„ç†è¿™ä¸ªshareIntentçš„APPé‡Œ
 later, you may actually end up in another application.
 
 31
 00:01:42,550 --> 00:01:45,060
-ÕæÕıÕÆÎÕ·ÖÏíÖ¸ÁîÊÇ
+è€Œæ— æ³•å›åˆ°æˆ‘ä»¬è‡ªå·±çš„APPã€‚
 The one that's actually handling the share intent. When
 
 32
 00:01:45,060 --> 00:01:50,500
-µ±ÄãÊ¹ÓÃ  FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESETÊ±  Ëü»áÕæÕı·µ»ØÄã
+å½“ä½ ä½¿ç”¨FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESETæ—¶ï¼Œå®ƒä¼šçœŸæ­£è¿”å›ä½ 
 FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET is used, it'll actually return you to your
 
 33
 00:01:50,500 --> 00:01:54,410
-µÄµ±Ç°Ó¦ÓÃÎÒÃÇÒÑ¾­ÉèÖÃÀàĞÍ  test/plain  ÈÃ
+çš„å½“å‰åº”ç”¨ã€‚æˆ‘ä»¬è®¾ç½®Intentç±»å‹ä¸ºâ€œtest/plainâ€
 application instead. We've set the type, test/plain, to let
 
 34
 00:01:54,410 --> 00:01:57,380
-°²×¿ÖªµÀÎÒÃÇ¼´½«·ÖÏíÇåÎúµÄÎÄ±¾
+ä»¥è®©ç³»ç»ŸçŸ¥é“æˆ‘ä»¬å³å°†åˆ†äº«çš„æ˜¯çº¯ç²¹çš„æ–‡æœ¬
 Android know we're going to be sharing plain text. And
 
 35
 00:01:57,380 --> 00:02:00,460
-È»ºóÌí¼ÓÎÒÃÇ·ÖÏíµÄÔ¤Ê¾×Ö·û´®µ½¾®ºÅ±êÇ©
+ç„¶åæ·»åŠ æˆ‘ä»¬è¦åˆ†äº«çš„å¤©æ°”ä¿¡æ¯å­—ç¬¦ä¸²å’Œæˆ‘ä»¬çš„äº•å·æ ‡ç­¾
 then we share our forecast string plus our hashtag.
 
 36
 00:02:00,460 --> 00:02:02,820
-×îºóÖ»Ê£ÏÂÒ»¼şÊÂÒª×öÁËÎÒÃÇ
+æœ€ååªå‰©ä¸‹ä¸€ä»¶äº‹è¦åšäº†ã€‚æˆ‘ä»¬
 Only one more thing left to do. We have
 
 37
 00:02:02,820 --> 00:02:05,450
-ÒªÌí¼ÓÒ»¸ö²Ëµ¥µ½Æ¬¶ÎÖ¡×öÍêÕâ¸ö  
+è¦æŠŠè¿™ä¸ªèœå•æ·»åŠ åˆ°è¿™ä¸ªFragmenté‡Œ  
 to add the menu to the fragment. To do
 
 38
 00:02:05,450 --> 00:02:07,690
-ÎÒÃÇÔÙÌí¼ÓÒ»¸ö±êÖ¾¸øÕâ¸öÆ¬¶ÎÖ¡¸³Óè
+ä¸ºæ­¤ï¼Œæˆ‘ä»¬å¿…é¡»è¦è®¾ç½®ä¸€ä¸ªFlagï¼Œå®ƒæ ‡ç¤ºè¿™ä¸ªFragment
 this, we have to set a flag that this fragment
 
 39
 00:02:07,690 --> 00:02:09,940
-ÆäÒ»¸öÑ¡Ôñ²Ëµ¥·ñÔò  
+æœ‰ä¸€ä¸ªé€‰é¡¹èœå•ã€‚å¦åˆ™ï¼Œ
 has an options menu at all. Otherwise, it
 
 40
 00:02:09,940 --> 00:02:12,260
-Ëü²»»áÓĞonCreate¿ÉÑ¡²Ëµ¥³ÉÔ±½á¹¹
+å®ƒä¸ä¼šè°ƒç”¨onCreateOpitionsMenuè¿™ä¸ªæˆå‘˜å‡½æ•°
 won't actually call the onCreate options menu member
 
 41
 00:02:12,260 --> 00:02:16,350
-×îºó  Õâ¾ÍÊÇÎÒÃÇµÄon create¿ÉÑ¡³ÉÔ±
+æœ€å  è¿™å°±æ˜¯æˆ‘ä»¬çš„onCreateOpitionsMenuæˆå‘˜å‡½æ•°
 function. Finally, here's our on creat options member
 
 42
 00:02:16,350 --> 00:02:18,555
-½á¹¹ÕıÈçÄãËù¼ûµÄ  ÎÒÃÇÊ¹Ò»¸ö
+æ­£å¦‚ä½ æ‰€è§çš„  æˆ‘ä»¬æ‰©å……äº†
 function. As you can see, we're inflating the
 
 43
 00:02:18,555 --> 00:02:21,846
-ÎÒÃÇÔçÇ°´´½¨µÄÆ¬¶ÎÖ¡²Ëµ¥ÉúĞ§ÕÒµ½
+æˆ‘ä»¬æ—©å‰åˆ›å»ºçš„detailfragmentèœå•
 detailfragment menu that we created earlier. Finding the
 
 44
 00:02:21,846 --> 00:02:25,644
-·ÖÏíÄ¿Â¼  ½Ó×Åµã»÷·ÖÏíĞĞÎªÌáÊ¾  È»ºóÁ´½ÓÎÒÃÇµÄ
+æ‰¾åˆ°â€œåˆ†äº«â€é€‰é¡¹ï¼Œæ‹¿åˆ°ShareActionProviderï¼Œç„¶åé“¾æ¥æˆ‘ä»¬çš„
 share item, getting the ShareActionProvider, and attaching our
 
 45
 00:02:25,644 --> 00:02:29,360
-Ö¸Áîµ½·ÖÏíĞĞÎªÌáÊ¾  ÎŞÂÛÊ²Ã´Ê±ºòÄã
+Intentåˆ°è¿™ä¸ªShareActionProviderã€‚æ— è®ºä»€ä¹ˆæ—¶å€™ä½ 
 intent to this ShareActionProvider. You'll want to update
 
 46
 00:02:29,360 --> 00:02:32,700
-Òª·ÖÏíµÄÊı¾İ¸Ä±äÁË  Ëü¶¼»á¼°Ê±¸üĞÂ
+è¦åˆ†äº«çš„æ•°æ®æ”¹å˜äº†  å®ƒéƒ½ä¼šåŠæ—¶æ›´æ–°
 this whenever the data you want to share changes.
 
 47
 00:02:32,700 --> 00:02:36,480
-Õâ¾ÍÊÇÈ«²¿ÄÚÈİÁË  ÄãÏÖÔÚ¾Í¿ÉÒÔÌí¼ÓÒ»¸ö·ÖÏíĞĞÎªÌáÊ¾µ½SunshineÁË
+è¿™å°±æ˜¯å…¨éƒ¨å†…å®¹äº†  ä½ ç°åœ¨æ·»åŠ äº†ä¸€ä¸ªShareActionProvideråˆ°Sunshineé‡Œ
 And that's it. You've now added a ShareActionProvider into Sunshine.
 
