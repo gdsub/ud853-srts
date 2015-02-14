@@ -1,140 +1,140 @@
-1
+ï»¿1
 00:00:00,830 --> 00:00:03,070
-Ò»¸ö±»Ê¹ÓÃ×î¶àµÄ°²×¿°µÊ¾Ö¸ÁîÊÇ
+ä¸€ä¸ªåœ¨Androidé‡Œè¢«ä½¿ç”¨æœ€å¤šçš„implicit intentsæ˜¯
 One of the most used implicit intents
 
 2
 00:00:03,070 --> 00:00:05,490
-ÊÇ·ÖÏíÖ¸Áî  Õâ¸öÖ¸Áî
+æ˜¯è¿™ä¸ªåˆ†äº«Intent
 in Android is the share intent. It's [LAUGH]
 
 3
 00:00:05,490 --> 00:00:07,560
-ºÜ°ô  ÕâÊÇÒ»¸öÄãºÍÄãÅóÓÑ
+å®ƒéå¸¸æ£’  è¿™æ˜¯ä¸€ä¸ªä½ å’Œä½ æœ‹å‹
 awesome. It's a great way to waste time
 
 4
 00:00:07,560 --> 00:00:11,356
-ÓÃÀ´ÏûÄ¥Ê±¼äµÄÒ»¸öºÜºÃµÄ·½Ê½
+ç”¨æ¥æ¶ˆç£¨æ—¶é—´çš„ä¸€ä¸ªå¾ˆå¥½çš„æ–¹å¼
 for both you and your friends. [SOUND] [LAUGH].
 
 5
 00:00:11,356 --> 00:00:12,720
-µ¤
+ä¸¹
 >> Dan!
 
 6
 00:00:12,720 --> 00:00:15,780
-ÄúÄÜÊ¹ÓÃÄã×îÏ²»¶µÄÓ¦ÓÃÈ¥·ÖÏíÏàÆ¬  ÎÄ¼ş
+ä½ èƒ½ä½¿ç”¨ä½ æœ€å–œæ¬¢çš„åº”ç”¨å»åˆ†äº«ç›¸ç‰‡  æ–‡å­—
 >> You can leverage your favorite apps to share photos, texts,
 
 7
 00:00:15,780 --> 00:00:18,910
-ÊÓÆµºÍÆÕÍ¨Á´½Ó  ¶øÕâ×îÓÅÊÆµÄ²¿·Ö¾ÍÊÇÄãÉõÖÁÎŞĞè
+è§†é¢‘å’Œæ™®é€šé“¾æ¥  è€Œè¿™æœ€æ£’çš„éƒ¨åˆ†å°±æ˜¯ä½ ç”šè‡³æ— éœ€
 videos and general links. And the best part is you don't have
 
 8
 00:00:18,910 --> 00:00:21,990
-ÖªµÀÊ¹ÓÃÕß×îÏ²»¶µÄÓ¦ÓÃÊÇÊ²Ã´  ½öĞèÒª¸æÖª
+çŸ¥é“ä½¿ç”¨è€…æœ€å–œæ¬¢çš„åº”ç”¨æ˜¯ä»€ä¹ˆ  ä»…éœ€è¦å‘ŠçŸ¥
 to even know what the user's favorite apps are. Just tell
 
 9
 00:00:21,990 --> 00:00:25,840
-ÄãÏëÒª·ÖÏíµÄAndroidµÄÊ²Ã´Êı¾İÈ»ºóÏÔÊ¾ÄãµÄÊ¹ÓÃÕß
+ç³»ç»Ÿä½ æƒ³è¦åˆ†äº«çš„æ˜¯ä»€ä¹ˆæ•°æ® ç„¶åç»™ä½ çš„ç”¨æˆ·æ˜¾ç¤º
 Android what data you want to share and it shows your users
 
 10
 00:00:25,840 --> 00:00:28,050
-Ò»ÏµÁĞÓ¦ÓÃÀ´·ÖÏíËü  µ±ÄãÔÚĞ´µÄ
+ä¸€ç³»åˆ—èƒ½åˆ†äº«å®ƒçš„åº”ç”¨  æœ‰ä¸€äº›APPå¯èƒ½è¿˜
 a list of apps that will share it. Apps that
 
 11
 00:00:28,050 --> 00:00:30,680
-Ó¦ÓÃËü¿ÉÄÜ¶¼²»ĞèÒª³öÏÖ  ÎªÁË
+å¹¶ä¸å­˜åœ¨ï¼Œå½“ä½ çš„APPæ­£åœ¨è¢«å¼€å‘æ—¶  ä¸ºäº†
 may not have existed when you app was written. To
 
 12
 00:00:30,680 --> 00:00:33,660
-Ê¹ËüÄÜ¹»¸üºÃµØÔÚ°²×¿4.0ÉÏÊµÏÖ·ÖÏí
+ä½¿åˆ†äº«æ›´åŠ å®¹æ˜“ï¼ŒAndroid 4.0æ·»åŠ äº†
 make it even easier to share Android 4.0 added the
 
 13
 00:00:33,660 --> 00:00:37,070
-Ìí¼ÓÒ»¸ö·ÖÏíĞĞÎªÌáÊ¾  ÎÒÃÇÈÃËü³ÉÎªÒ»¸ö°²×¿µÄ
+ShareActionProvider  åŒæ—¶æˆ‘ä»¬ä¹ŸæŠŠå®ƒåŠ å…¥åˆ°äº†æ—©å…ˆçš„Androidç‰ˆæœ¬
 share action provider and we have it for previous releases of
 
 14
 00:00:37,070 --> 00:00:40,270
-ÓÅÏÈÏÔÊ¾µÄ¿ª·ÅÖ§³Ö²¿·Ö  Ê¹ÓÃ·¢ËÍ
+ä»¥æ”¯æŒåº“çš„å½¢å¼  å®ƒé€šè¿‡ä½¿ç”¨Intent
 Android as part of a support library. It operates using
 
 15
 00:00:40,270 --> 00:00:44,890
-Ö¸Áî¾Í¿ÉÒÔÊµÏÖÕâ¸öĞĞÎª
+çš„ACTION_SENDæ¥å®ç°è¿™ä¸ªæ“ä½œ
 the action send intent. 
 
 16
 00:00:44,890 --> 00:00:47,510
-Ö»ÒªÄãÊ¹ÓÃ·¢ËÍ  µØÖ·¾Í»á±»·¢ËÍ¸øÈÎºÎÄãÏëÒª·¢ËÍµÄÈË
+å®ƒä¼šæŠŠè¯·æ±‚å‘é€ç»™æ¯ä¸€ä¸ªèƒ½æ‰§è¡Œçš„ACTION_SENDçš„Activity
 it would be addressed to anyone who could perform action
 
 17
 00:00:47,510 --> 00:00:51,490
-Êı¾İÏÂ½µ°üº¬¶îÍâµÄÏñ
-send. The data descend would be included with it as extras
+è¦å‘é€çš„æ•°æ®ä¼šä»¥extrasçš„å½¢å¼è¢«åŒ…å«åœ¨Intenté‡Œ
+send. The data it sent would be included with it as extras
 
 18
 00:00:51,490 --> 00:00:55,060
-ÎÄ±¾»òÕß¶ş½øÖÆÊı¾İµÄÍøÖ·
+è¦ä¹ˆä½œä¸ºæ–‡æœ¬æˆ–è€…äºŒè¿›åˆ¶æ•°æ®çš„URI
 either as text, or URI to the binary data. And
 
 19
 00:00:55,060 --> 00:00:57,600
-MIMEÀàĞÍ»áÖ¸Ã÷ÍøÖ·µÄÖ¸Ïò
+MIME(å¤šç”¨é€”ç½‘ç»œé‚®ä»¶æ‰©å±•ï¼‰ç±»å‹ä¼šæ ‡æ˜è¿™ä¸ªURIæŒ‡å‘çš„å†…å®¹
 the MIME type would indicate what the URI points to.
 
 20
 00:01:01,220 --> 00:01:03,470
-Õâ¾ÍÊÇ·ÖÏíĞĞÎªÌáÊ¾Ëù´ø¸ø
+è¿™å°±æ˜¯ShareActionProvideræ‰€å¸¦ç»™
 Here's what the share action provider will bring to
 
 21
 00:01:03,470 --> 00:01:06,850
-ÎÒÃÇµÄÓ¦ÓÃ  ¹âÈÙ½ÓÏß¿ò  µ±ÎÒÃÇ
+æˆ‘ä»¬çš„åº”ç”¨ã€‚ è®©äººå–œæ¬¢çš„çº¿æ¡†å›¾  
 our app: the glorious wire frame. There will be
 
 22
 00:01:06,850 --> 00:01:09,270
-µã»÷ÓĞÌáÊ¾×÷ÓÃµÄÇ±ÔÚµÄ·ÖÏíĞĞÎªÊ±
+è¿™é‡Œå¤šå‡ºä¸€ä¸ªå›¾æ ‡åœ¨æ“ä½œæ é‡Œ å½“ç‚¹å‡»è¿™ä¸ªå›¾æ ‡æ—¶
 an additional icon in the action bar which will
 
 23
 00:01:09,270 --> 00:01:11,980
-ÔÚĞĞÎª¼¯ºÏ°ô»áÓĞÒ»¸ö¶îÍâµÄ²Ëµ¥ÌøÏÂÀ´
+æœ‰ä¸€ä¸ªä¸‹æ‹‰èœå•ä¼šå¼¹å‡ºæ¥å±•ç¤ºæ‰€æœ‰å¯èƒ½
 drop down a menu when clicked to reveal potential
 
 24
 00:01:11,980 --> 00:01:15,150
-°üº¬ÓĞ×î½ü·ÖÏíµÄÓ¦ÓÃ½«»á±»
+çš„åˆ†äº«æ“ä½œã€‚å¦ä¸€ä¸ªå›¾æ ‡ä¼šè¢«æ·»åŠ åœ¨
 share actions. Another icon will be added to the
 
 25
 00:01:15,150 --> 00:01:17,640
-Ìí¼Ó½øÀ´²¢·ÖÏí
+è¿™ä¸ªå›¾æ ‡çš„å³è¾¹ï¼Œå®ƒæ˜¯ä¸Šä¸€æ¬¡åˆ†äº«æ‰€ä½¿ç”¨çš„APP
 right of this one that contains the last application
 
 26
 00:01:17,640 --> 00:01:22,450
-´Ó¶øÌí¼ÓÒ»¸ö·ÖÎöĞĞÎªÌáÊ¾µ½º¬ÏêÏ¸ĞĞÎªµÄÆ¬¶ÎÖĞÈ¥
+æ·»åŠ ä¸€ä¸ªShareActionProvideråˆ°DetailActivityçš„
 shared to. Add a ShareActionProvider to the fragment within
 
 27
 00:01:22,450 --> 00:01:27,000
-ÔÚ½Ó×ÅµÄ¸ñÊ½ÀïÃæ·ÖÏíÌìÆø
+Fragmenté‡Œé¢ã€‚å®ƒèƒ½æŒ‰ç…§è¿™ä¸ªæ ¼å¼åˆ†äº«å¤©æ°”
 DetailActivity. It will share weather in the following format.
 
 28
 00:01:27,000 --> 00:01:32,844
-ÊÇµÄ  Õâ¾ÍÊÇÎÒÃÇ´«µİ½øÈ¥µÄ²é¿´×Ö·û´®#SunshineÓ¦ÓÃ
+æ˜¯çš„  å°±ä»…ä»…æ˜¯æˆ‘ä»¬ä¼ é€’è¿›è¿™ä¸ªViewçš„å­—ç¬¦ä¸²åŠ ä¸Š#SunshineApp
 Yes, it's just the string we passed into the view plus #SunshineApp.
 
