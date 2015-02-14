@@ -1,85 +1,85 @@
 1
 00:00:00,390 --> 00:00:01,770
-ÏÖÔÚÄãÒÑ¾­ÖªµÀ
+ç°åœ¨ä½ å·²ç»çŸ¥é“
 Now that you know how to create an
 
 2
 00:00:01,770 --> 00:00:05,410
-ÈçºÎ½¨Á¢Ò»¸ö¸´ÔÓµÄÈÎÒâÇ¶Ì×²¼¾Ö£¬ÖØÒªµÄÊÇÃ÷°×£¬
+å¦‚ä½•å»ºç«‹ä¸€ä¸ªä»»æ„å¤æ‚çš„åµŒå¥—å¸ƒå±€ï¼Œé‡è¦çš„æ˜¯æ˜ç™½ï¼Œ
 arbitrarily complex nested layout, it's important to understand
 
 3
 00:00:05,410 --> 00:00:08,109
-Ëü²¢²»ÊÇºÁÎŞÏŞÖÆµÄ¡£ÔÙ´ÎÇ¿µ÷£¬
+å®ƒå¹¶ä¸æ˜¯æ¯«æ— é™åˆ¶çš„ã€‚å†æ¬¡å¼ºè°ƒï¼Œ
 that they don't come for free. Once again,
 
 4
 00:00:08,109 --> 00:00:10,965
-ÕâÊÇ¶ÔÆ½Ì¨×ÊÔ´µÄÔ¼Êø£¬·ÀÖ¹¶ñÒâÆÆ»µ¡£
+å¹³å°å¯¹èµ„æºçš„çº¦æŸé˜»æ­¢äº†è¿™ä¸€ç‚¹ã€‚
 the resource constraints of the platform spoil the party.
 
 5
 00:00:10,965 --> 00:00:15,351
-¡¾ÉùÒô¡¿À©´ó¸´ÔÓ²¼¾Ö¿ÉÄÜ»¨·ÑºÜ¸ß£¬
+è§£æå¤æ‚å¸ƒå±€å¯èƒ½èŠ±è´¹å¾ˆé«˜ï¼Œ
 [SOUND] Inflating complex layouts can be expensive, potentially
 
 6
 00:00:15,351 --> 00:00:19,427
-Ò²¿ÉÄÜÓ°ÏìÄãµÄ³ÌĞòµÄÔËĞĞËÙ¶ÈºÍÏìÓ¦Ê±¼ä¡£
+ä¹Ÿå¯èƒ½å½±å“ä½ çš„ç¨‹åºçš„è¿è¡Œé€Ÿåº¦å’Œå“åº”æ—¶é—´ã€‚
 impacting the performance and responsiveness of your app.
 
 7
 00:00:19,427 --> 00:00:21,765
-Òò´Ë£¬ÕâÓĞÁ½¸ö¾­ÑéÖ®Ì¸¡£
+å› æ­¤ï¼Œè¿™æœ‰ä¸¤ä¸ªç»éªŒä¹‹è°ˆã€‚
 So there are two good rules of thumb
 
 8
 00:00:21,765 --> 00:00:25,620
-Ò»¡¢ÈÃÄãµÄ²¼¾ÖÇ³¶ø¿í£¬
+ä¸€ã€è®©ä½ çš„å¸ƒå±€æµ…è€Œå®½ï¼Œ
 to help. First, keep your layout shallow and wide,
 
 9
 00:00:25,620 --> 00:00:28,930
-¶ø²»ÊÇÉî¶øÕ­¡£ÕâÒâË¼ÊÇ£¬
+è€Œä¸æ˜¯æ·±è€Œçª„ã€‚è¿™æ„æ€æ˜¯ï¼Œ
 rather than deep and narrow. That means you're better
 
 10
 00:00:28,930 --> 00:00:32,490
-×îºÃ¶àÒ»µãÍ¬¼¶¹ØÏµ£¬¶ø²»ÊÇ¸¸×Ó¹ØÏµ¡£
+æœ€å¥½å¤šä¸€ç‚¹åŒçº§å…³ç³»ï¼Œè€Œä¸æ˜¯çˆ¶å­å…³ç³»ã€‚
 off with more siblings and fewer children. Because it's
 
 11
 00:00:32,490 --> 00:00:34,970
-ÒòÎªËü²¢²»ÕâÃ´¼òµ¥£¬ÎÒÏàĞÅÄãÒ²Ïë±ÜÃâ¹ı¶àµÄÊÓÍ¼¡£
+å› ä¸ºå®ƒå¹¶ä¸è¿™ä¹ˆç®€å•ï¼Œæˆ‘ç›¸ä¿¡ä½ ä¹Ÿæƒ³é¿å…è¿‡å¤šçš„è§†å›¾ã€‚
 never as simple as that, you also want to
 
 12
 00:00:34,970 --> 00:00:38,930
-×î»ù±¾µÄÌõ¼şÊÇ£¬
+é€šå¸¸æƒ…å†µä¸‹ï¼Œ
 avoid having excessive views. In the most general terms, that
 
 13
 00:00:38,930 --> 00:00:42,430
-ÔÚÄãµÄÕû¸öactivity²ã´ÎÖĞ£¬²»Ó¦¸ÃÓĞ³¬¹ı10²ãµÄÇ¶Ì×ÊÓÍ¼£¬
+åœ¨ä½ çš„æ•´ä¸ªactivityå±‚æ¬¡ä¸­ï¼Œä¸åº”è¯¥æœ‰è¶…è¿‡10å±‚çš„åµŒå¥—è§†å›¾ï¼Œ
 means your activities' full hierarchy should never have more
 
 14
 00:00:42,430 --> 00:00:45,450
-»òÕßÈ«²¿ÊÓÍ¼Êı²»ÄÜ³¬¹ı80¸ö¡£
+æˆ–è€…å…¨éƒ¨è§†å›¾æ•°ä¸èƒ½è¶…è¿‡80ä¸ªã€‚
 than ten nested views or over 80 views in
 
 15
 00:00:45,450 --> 00:00:48,590
-ÕâÌıÆğÀ´ÏñÊÇÓĞºÜ¶àÒªÇó£¬
+è¿™å¬èµ·æ¥åƒæ˜¯æœ‰å¾ˆå¤šè¦æ±‚ï¼Œ
 total. That probably sounds like a lot, but let's
 
 16
 00:00:48,590 --> 00:00:51,350
-ÈÃÎÒÃÇ´ò¿ªAndroid studioÖĞµÄHierarchy Viewer£¬
+ä¸è¿‡è®©æˆ‘ä»¬æ‰“å¼€Android studioä¸­çš„Hierarchy Viewerï¼Œ
 open up the Hierarchy Viewer tool in Android studio and
 
 17
 00:00:51,350 --> 00:00:53,170
-À´¿´¿´ÊÓÍ¼¶àÉÙºÍËÙ¶ÈµÄ¹ØÏµÊÇÔõÑùµÄ¡£
+æ¥çœ‹çœ‹è§†å›¾å¤šå°‘å’Œé€Ÿåº¦çš„å…³ç³»æ˜¯æ€æ ·çš„ã€‚
 see just how quickly that can add up
 

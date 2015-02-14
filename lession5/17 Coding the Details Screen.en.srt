@@ -1,125 +1,125 @@
 1
 00:00:00,090 --> 00:00:02,840
-ÄãÒÑ¾­ÊµÏÖÁËÖ÷activityµÄÏß¿ò¹¹¼Ü¡£ÄÇÃ´ÏÖÔÚÈÃÎÒÃÇÀ´
+ä½ å·²ç»å®ç°äº†ä¸»activityçš„çº¿æ¡†æ„æ¶ã€‚é‚£ä¹ˆç°åœ¨è®©æˆ‘ä»¬æ¥
 You've implemented the main activity wireframe. So, now, we can move
 
 2
 00:00:02,840 --> 00:00:05,800
-ÊµÏÖ×ÓactivityµÄÊÂ¼ş¿ò¼Ü¡£Õâ¾ÍÊÇËüµÄÊµÏÖÍ¼¡£
+å®ç°å­activityçš„çº¿æ¡†å›¾ï¼Œä»–çœ‹èµ·æ¥æ˜¯è¿™æ ·çš„ã€‚
 on to the detail activity wireframe. This is what it looks
 
 3
 00:00:05,800 --> 00:00:08,440
-ÕâÓĞÈÕÆÚ¡¢×î¸ß×îµÍÆøÎÂ£¬
+è¿™æœ‰æ—¥æœŸã€æœ€é«˜æœ€ä½æ°”æ¸©ï¼Œ
 like. We have the date, the high and low temperatures, and
 
 4
 00:00:08,440 --> 00:00:11,690
-»¹ÓĞ²¹³äµÄÌìÆøĞÅÏ¢¡£ÎÒÃÇ»¹ÓĞÌìÆøÍ¼ÏñºÍÌìÆøÔ¤±¨¡£
+è¿˜æœ‰é¢å¤–çš„å¤©æ°”ä¿¡æ¯ã€‚æˆ‘ä»¬è¿˜æœ‰å¤©æ°”å›¾åƒ
 then additional weather information. We also have the weather icon and
 
 5
 00:00:11,690 --> 00:00:14,870
-ÕâĞ©Ë®Æ½¶ÔÆë¡£
+å’Œå¤©æ°”é¢„æŠ¥ã€‚è¿™äº›æ°´å¹³å¯¹é½ã€‚
 the weather forecast. And these line up horizontally. Build up the
 
 6
 00:00:14,870 --> 00:00:19,020
-ÎÒÃÇÔÚlayout XMLÀï¹¹½¨Ïß¿ò²¼¾Ö¡£È»ºó¶ÔÄãËùÌî³äµÄĞÅÏ¢
+æˆ‘ä»¬åœ¨layout XMLé‡Œæ„å»ºçº¿æ¡†å¸ƒå±€ã€‚ ç„¶åä¿®æ”¹DetailFragment
 layout XML for this wireframe. Then modify the detail fragments that
 
 7
 00:00:19,020 --> 00:00:22,640
-ºÍĞÂÊÓÍ¼½øĞĞÏ¸½ÚÉÏµÄĞŞ¸Ä¡£
+ä½¿å…¶å¯ä»¥å±•ç¤ºæ‰€æœ‰è¿™äº›ä¿¡æ¯ï¼ŒåŒ…æ‹¬è¿™äº›æ–°çš„è§†å›¾ã€‚
 you can populate all this information, including these new views. While
 
 8
 00:00:22,640 --> 00:00:25,220
-µ±ÈçÉÏ²Ù×÷Ê±£¬Äã¿ÉÒÔ°ÑÕâ¿é´úÂëÒÆ¶¯µ½×Ô¼ºµÄÎÄ¼şÀï£¬
+å½“ä½ è¿™ä¹ˆåšæ—¶ï¼Œä½ ä¹Ÿå¯ä»¥æŠŠè¿™å—ä»£ç ç§»åŠ¨åˆ°è‡ªå·±çš„æ–‡ä»¶é‡Œï¼Œ
 you're doing that, you might as well move the detail fragment
 
 9
 00:00:25,220 --> 00:00:28,550
-ÈÃËü¶ÀÁ¢ÓÚ¾ßÌåµÄactivity¡£
+è®©å®ƒç‹¬ç«‹äºDetailActivityã€‚
 into its own file, so it's separate from the detail activity. At
 
 10
 00:00:28,550 --> 00:00:31,380
-µ±Äã°ÑËüÒÆµ½×Ô¼ºµÄÎÄ¼şÀïÊ±£¬Õâ¸öÀà¾Í¿ÉÒÔĞ´µÄºÜ³¤¡£
+æ­¤æ—¶DetailFragmentä¼šå˜å¾—å¾ˆé•¿ï¼Œæ‰€ä»¥ä½ å¯ä»¥æŠŠä»–ç§»åˆ°ç‹¬ç«‹æ–‡ä»¶ä¸­å»ã€‚
 this point the detail fragment class is getting pretty long so you can
 
 11
 00:00:31,380 --> 00:00:34,450
-ÔÚ¿ªÊ¼Ö®Ç°£¬ÎÒÏëËµ£¬
+åœ¨å¼€å§‹ä¹‹å‰ï¼Œæˆ‘æƒ³è¯´ï¼Œ
 move that into it its own file. Before you get started, I want
 
 12
 00:00:34,450 --> 00:00:37,530
-ÕâÀïµÄ²¼¾ÖĞÅÏ¢»áÕ¼ÓÃÁË´óÁ¿µÄ´¹Ö±¿Õ¼ä¡£
+è¿™é‡Œçš„å¸ƒå±€ä¿¡æ¯ä¼šå ç”¨äº†å¤§é‡çš„å‚ç›´ç©ºé—´ã€‚
 to point out that this layout has information taking up a lot of
 
 13
 00:00:37,530 --> 00:00:41,270
-µ±ÄãĞı×ªÉè±¸ÇĞ»»³ÉºáÆÁ£¬ËµÕß»»³ÉÒ»¸ö¸úÓ¦ÓÃ³ÌĞòÏÔÊ¾²»Ò»ÖÂµÄÉè±¸Ê±£¬
+å½“ä½ æ—‹è½¬è®¾å¤‡åˆ‡æ¢æˆæ¨ªå±ï¼Œè¯´è€…ä½ çš„è®¾å¤‡é«˜åº¦æ¯”è¾ƒå°çš„æ—¶å€™ï¼Œ
 vertical space. If you rotate your device into landscape mode, or you have
 
 14
 00:00:41,270 --> 00:00:44,350
-²¼¾ÖÖĞÒÔÒ»Ğ©ÄÚÈİ¾Í¿ÉÄÜ±»¸ô¶Ï¡£
+å¸ƒå±€ä¸­ä»¥ä¸€äº›å†…å®¹å°±å¯èƒ½è¢«éš”æ–­ã€‚
 a smaller height device, some of the content could get cut off. So
 
 15
 00:00:44,350 --> 00:00:47,720
-ÄÇÃ´ÎÒÃÇÏë¸ö°ì·¨ÈÃ²¼¾Ö¿ÉÒÔ´¹Ö±¹ö¶¯¡£
+æ‰€ä»¥æƒ³æƒ³çœ‹è¯¥å¦‚ä½•è®©è¿™ä¸ªå¸ƒå±€å¯ä»¥å‚ç›´æ»šåŠ¨ã€‚
 think about how you can make this layout be vertically scrollable. To show
 
 16
 00:00:47,720 --> 00:00:50,280
-¸ø´ó¼ÒËµÒ»ÏÂÎÒµÄÏë·¨£¬ÎÒÌí¼ÓÁËÒ»¶Ô¶àÎÄ±¾ĞĞÔÚ²¼¾ÖµÄµ×²¿¡£
+ä¸ºäº†è®©ä½ ä»¬æ˜ç™½æˆ‘çš„æ„æ€ï¼Œæˆ‘åœ¨å¸ƒå±€çš„åº•éƒ¨å¤šåŠ äº†å‡ è¡Œæ–‡å­—ã€‚
 you what I mean, I added a couple more lines of text at
 
 17
 00:00:50,280 --> 00:00:53,240
-½ÓÏÂÀ´ÉèÖÃÄÚÈİ´¹Ö±¹ö¶¯£¬
+æ¥ä¸‹ä½¿å¾—å†…å®¹å¯ä»¥å‚ç›´æ»šåŠ¨ï¼Œ
 the bottom of the layout. Then I made the content vertically scrollable
 
 18
 00:00:53,240 --> 00:00:55,930
-ÕâÑùÄãÃÇ¾ÍÄÜ¿´µ½È«²¿ÄÚÈİÁË¡£
+è¿™æ ·ä½ ä»¬å°±èƒ½çœ‹åˆ°å…¨éƒ¨ä¿¡æ¯äº†ã€‚
 so you can see all the information. So go ahead and make that
 
 19
 00:00:55,930 --> 00:00:58,340
-¼ÌĞø£¬Ò²¸Ä±äÄãµÄ²¼¾Ö°É¡£µ±ÄãÍê³ÉÒÔÉÏ²½ÖèÊ±£¬
+ç»§ç»­ï¼Œä¹Ÿæ”¹å˜ä½ çš„å¸ƒå±€å§ã€‚å½“ä½ å®Œæˆä»¥ä¸Šæ­¥éª¤æ—¶ï¼Œ
 change to your layout as well. When you're done with all these
 
 20
 00:00:58,340 --> 00:01:00,910
-ÄãµÄapp»áÊÇÕâÑù¡£ÏÖÔÚ£¬ÎÒÃÇ²¢²»¹ØĞÄ
+ä½ çš„appä¼šæ˜¯è¿™æ ·ã€‚ç°åœ¨ï¼Œæˆ‘ä»¬å¹¶ä¸å…³å¿ƒ
 steps, this is what the app should look like. We don't care about
 
 21
 00:01:00,910 --> 00:01:04,000
-»­ÃæµÄÏ¸½ÚĞ§¹û¡£ÎÒÃÇÖ»ÊÇÒªÈ·±£¹¦ÄÜÊµÏÖ£¬
+ç”»é¢çš„ç»†èŠ‚æ•ˆæœã€‚æˆ‘ä»¬åªæ˜¯è¦ç¡®ä¿åŠŸèƒ½å®ç°ï¼Œ
 the visual details now. We just want to make sure the functionality is
 
 22
 00:01:04,000 --> 00:01:07,210
-ÄÜ½«ËùÓĞĞÅÏ¢ÕıÈ·µÄÏÔÊ¾ÔÚÆÁÄ»ÉÏ¡£
+èƒ½å°†æ‰€æœ‰ä¿¡æ¯æ­£ç¡®çš„æ˜¾ç¤ºåœ¨å±å¹•ä¸Šã€‚
 hooked up, so all the right information is displayed on screen. You can
 
 23
 00:01:07,210 --> 00:01:08,930
-Äã¿ÉÒÔÊ¹ÓÃÏÂÃæÌá¹©µÄ´úÂë£¬
+ä½ å¯ä»¥ä½¿ç”¨ä¸‹é¢æä¾›çš„ä»£ç ï¼Œ
 use the code snippets provided below
 
 24
 00:01:08,930 --> 00:01:10,860
-À´°ïÖúÄãµÄº¯ÊıºÍ×Ö·û´®¡£
+æ¥è·å–è¾…åŠ©å‡½æ•°å’Œä½ ä¼šç”¨åˆ°çš„å­—ç¬¦ä¸²ã€‚
 for helper functions and strings that you're
 
 25
 00:01:10,860 --> 00:01:14,520
-ÏÖÔÚÁôÒ»¸öÕ¼Î»Í¼£¬»á¶Ô½ÓÏÂÀ´µÄ¿ª·¢ÓĞºÃ´¦¡£
+å¹¶ä¸”ç°åœ¨ç•™ä¸€ä¸ªå ä½å›¾åœ¨é‚£å„¿ä¾ç„¶æ˜¯okçš„ã€‚
 going to need. And again, leaving a placeholder image is fine for now
 
