@@ -1,150 +1,150 @@
-1
+ï»¿1
 00:00:00,590 --> 00:00:02,710
-ÎÒÈÏÎª¿ÉÒÔ°ÑÒâÍ¼¿´×÷Ò»¸öĞÅ·â£¬
+æˆ‘è®¤ä¸ºå¯ä»¥æŠŠIntentçœ‹ä½œä¿¡å°ï¼Œ
 I like to think of intents as envelopes
 
 2
 00:00:04,920 --> 00:00:08,109
-Àï±ß°üÀ¨ÁËÃ¿Ò»¸öÈË£¬»òÕßËµÔÚÕâÖÖÇé¿öÏÂ£¬ÄãÏë°Ñ×é¼şËÍµ½ÄÄÀï¡£
+é‡Œè¾¹åŒ…å«äº†ä¸€ä¸ªç›®æ ‡ï¼Œæ¯”å¦‚åœ¨è¿™é‡Œè¡¨ç¤ºä½ æƒ³æŠŠæ¶ˆæ¯å‘é€ç»™å“ªä¸ªç»„ä»¶
 each one includes who, or in this case, which component you want it
 
 3
 00:00:08,109 --> 00:00:11,290
-Õâ»¹ÓĞÉÙÁ¿µÄ¿Õ¼äÊı¾İ£¬
+è€Œä¸”Intenté‡Œé¢è¿˜æœ‰ç©ºé—´å¯ä»¥
 delivered to. And there's room for a small amount of data to be delivered,
 
 4
 00:00:13,360 --> 00:00:14,409
-°ÑËû´ò°üÎªÁÙÊ±µÄ¡£
+ä»¥Extraçš„æ–¹å¼å­˜å‚¨ä¸€äº›å°‘é‡çš„æ•°æ®
 packaged as extras.
 
 5
 00:00:16,870 --> 00:00:19,000
-Ô­Ê¼µÄÔª×æ½«±»Ìá¹©¸øÓ¦ÓÃ³ÌĞò×é¼ş£¬
+åº”ç”¨ç¨‹åºä¸­æœ‰æ•ˆçš„åŸå§‹æ•°æ®ç»“æ„
 Primitive tuples that will be available to the application
 
 6
 00:00:19,000 --> 00:00:23,550
-×îÖÕµÃµ½²¢´ò¿ªÕâ¸öÒâÍ¼¡£ËùÒÔÄã¾Í»áÔÚĞÅ·âÉÏ
+æ‰èƒ½æœ€ç»ˆå¾—åˆ°å¹¶æ‰“å¼€è¿™ä¸ªIntentå¯¹è±¡ã€‚
 component that ultimately receives and opens this intent. So an
 
 7
 00:00:23,550 --> 00:00:26,910
-¿´µ½Ò»¸öÇå³şµÄÒâÍ¼£¬¼´±»Ã÷È·Ö¸¶¨µÄÈİÆ÷Ãû×Ö¡£
+æ‰€ä»¥ä¸€ä¸ªæ˜¾å¼å£°æ˜çš„Intentéœ€è¦æ˜¾ç¤ºå£°æ˜æ¥æ”¶è€…çš„åç§°ï¼Œ
 explicit intent, explicitly specifies the name of the recipient, as
 
 8
 00:00:26,910 --> 00:00:29,900
-Òş²ØÒâÍ¼¸üÓĞÒâË¼¡£
+å°±åƒä½ åœ¨è¿™ä¸ªä¿¡å°ä¸Šçœ‹åˆ°çš„ä¸€æ ·ã€‚éšå¼Intentå°±æ›´æœ‰æ„æ€äº†ã€‚
 you can see on this envelope. Implicit intents are a
 
 9
 00:00:29,900 --> 00:00:33,800
-À´£¬¿´ÕâÀï£¬ÎÒÃÇ²¢²»Ö¸¶¨Õâ¸öÀàµÄÃû³Æ¡£
+è¿™é‡Œï¼Œæˆ‘ä»¬å¹¶ä¸æŒ‡å®šè¿™ä¸ªç±»çš„åç§°ã€‚
 lot more interesting. Here, we don't specify the name of
 
 10
 00:00:33,800 --> 00:00:36,550
-ÎÒÃÇÉõÖÁ²»ÖªµÀËûÊÇÊ²Ã´¡£ËùÒÔ£¬
+æˆ‘ä»¬ç”šè‡³ä¸çŸ¥é“ä»–æ˜¯ä»€ä¹ˆã€‚æ‰€ä»¥ï¼Œ
 the class. We don't even know what it is. So,
 
 11
 00:00:36,550 --> 00:00:39,500
-ÎÒÃÇÓ¦¸ÃÈçºÎÏÔÊ¾³öÄÇ¸ö»î¶¯±»ÍÆËÍÁËÄØ£¿ºÃ£¬
+é‚£æˆ‘ä»¬å¦‚ä½•çŸ¥é“éœ€è¦æ‰“å¼€å“ªä¸ªactivityå‘¢ï¼Ÿ
 how do we indicate which activity to launch? Well, you
 
 12
 00:00:39,500 --> 00:00:42,230
-ÄãÒ²ĞíÖªµÀÕâÑùµÄ¹ÊÊÂ£¬ÄãÊÇ·ñÓĞÊ±ºòÌıËµÓÃÕâĞ©×ÖÄ¸
+ä½ ä¹Ÿè®¸çŸ¥é“è¿™æ ·çš„æ•…äº‹ï¼Œä½ æ˜¯å¦æœ‰æ—¶å€™å¬è¯´è¿‡æœ‰çš„ä¿¡ç”¨çš„æ˜¯
 know those stories you sometimes hear about letters with fake
 
 13
 00:00:42,230 --> 00:00:47,890
-×÷Îª¼ÙµØÖ·£¬µ«ÊÇÒÀ¾É¿ÉÒÔÒÔÄ³ÖÖ·½Ê½ÕÒµ½ÊÕ¼şÈË£¿
+å‡åœ°å€ï¼Œä½†æ˜¯ä¾æ—§å¯ä»¥æ‰¾åˆ°å»å¾€æ”¶ä»¶äººåœ°å€çš„è·¯çº¿ï¼Ÿ
 addresses like these that somehow still find their way to the intended
 
 14
 00:00:47,890 --> 00:00:52,410
-°²×¿ÏµÍ³µÄÒâÍ¼¾öÒéÒ²ÊÇÕâÑù¹¤×÷µÄ¡£
+å®‰å“ç³»ç»Ÿçš„Intentè§£æä¹Ÿæ˜¯ä¸€æ ·çš„å·¥ä½œåŸç†ã€‚
 recipient? Well the intent resolution system on Android, works the same way.
 
 15
 00:00:54,660 --> 00:00:56,940
-ÕÒµ½Ò»¸ö»î¶¯£¬ÈÃËûÄÜ¹»Ö´ĞĞÒ»¸öÄã
+æ‰¾åˆ°ä¸€ä¸ªactivityï¼Œå®ƒèƒ½å¤Ÿæ‰§è¡Œä¸€ä¸ªä½ 
 Finding an activity, capable of performing an action
 
 16
 00:00:56,940 --> 00:01:00,920
-Ö¸¶¨Ïà¹ØÊı¾İµÄ¶¯×÷¡£ËùÒÔ£¬²¢²»ÊÇÖ¸¶¨
+å¯¹ç›¸å…³æ•°æ®çš„æ“ä½œã€‚æ‰€ä»¥ï¼Œä¸å…¶æŒ‡å®š
 you specify on the associated data. So, rather than
 
 17
 00:01:00,920 --> 00:01:03,420
-Ò»¸öÀàÃû³Æ£¬È»ºóÄã±íÃ÷Ò»¸öÄãÏëÒªÒ»¸ö»î¶¯Íê³É
+ä¸€ä¸ªç±»åç§°ï¼Œä½ è¦æŒ‡å®š
 specifying the name of a class, you indicate
 
 18
 00:01:03,420 --> 00:01:05,930
-µÄ¶¯×÷£¬»¹ÓĞ
+ä¸€ä¸ªactivityè¦æ‰§è¡Œçš„æ“ä½œ
 an action you'd like an activity to perform, and
 
 19
 00:01:05,930 --> 00:01:09,000
-Ö´ĞĞ¶¯×÷µÄÊı¾İ¾Í¿ÉÒÔµÄ¡£
+å’Œå®ƒå¯¹æ•°æ®è¦è¿›è¡Œçš„æ“ä½œã€‚
 on what data that action should be performed.
 
 20
 00:01:09,000 --> 00:01:13,210
-ÏñÕâÑù£¬ÎÒÃÇÏëÒª½â¾öÒ»¸ö»î¶¯£¬
+å°±åƒè¿™æ ·ï¼Œæˆ‘ä»¬æƒ³è¦æ‰“å¼€ä¸€ä¸ªactivityï¼Œ
 Like this, where we want to address an activity
 
 21
 00:01:13,210 --> 00:01:16,450
-Õâ¸ö»î¶¯¾ÍÊÇÒª¾ßÓĞä¯ÀÀÒ»¸öÍøÕ¾µÄÄÜÁ¦¡£ÒòÎªÒâÍ¼¿ÉÒÔ
+å®ƒèƒ½ç”¨æ¥æµè§ˆç½‘é¡µã€‚å› ä¸ºIntentå¯ä»¥
 that's capable of viewing a website. And because intents
 
 22
 00:01:16,450 --> 00:01:20,200
-¿çÔ½³ÌĞòµÄ½çÏß£¬ËùÒÔÕâ¸ö»î¶¯¼´Ê¹¿ªÊ¼ÁË£¬
+å¯ä»¥è·¨è¶Šç¨‹åºè¿›è¡Œä¼ é€’ï¼Œè€Œæ‰€æ‰“å¼€çš„activity
 can cross through application boundaries, the activity that started,
 
 23
 00:01:20,200 --> 00:01:22,900
-Ò²ºÜ¿ÉÄÜ²»ÊÇÄãµÄÓ¦ÓÃ³ÌĞòµÄÒ»²¿·Ö¡£ËùÒÔ£¬
+å¾ˆå¯èƒ½éƒ½ä¸æ˜¯ä½ çš„åº”ç”¨ç¨‹åºçš„activityã€‚æ‰€ä»¥ï¼Œ
 may not be part of your app. So,
 
 24
 00:01:22,900 --> 00:01:27,270
-Äã¿ÉÒÔÏñÕâÑù°Ñ¹¦ÄÜ°üÀ¨ÆğÀ´£¬Äã¿ÉÒÔ
+ä½ å¯ä»¥åƒè¿™æ ·æ·»åŠ åŠŸèƒ½ï¼Œæ¯”å¦‚æµè§ˆç½‘é¡µã€
 you can include functionality like this, browsing websites or
 
 25
 00:01:29,480 --> 00:01:35,750
-ä¯ÀÀÍøÕ¾»òÕß´òµç»°»òÕß´ÓÄãµÄµØÖ·±¡ÀïÑ¡ÔñÒ»¸öÁªÏµÈË¡£ÔÚÄãµÄÓ¦ÓÃ³ÌĞò
+æ‰“ç”µè¯æˆ–æ˜¯ä»ç”µè¯æœ¬é‡Œé€‰æ‹©è”ç³»äººã€‚
 making phone calls or choosing a contact from your address book. All
 
 26
 00:01:35,750 --> 00:01:39,150
-ÀïµÄËùÓĞ¶«Î÷£¬²»ĞèÒªÄãÇ××ÔÈ¥Ö´ĞĞËû¡£
+è¿™äº›åŠŸèƒ½éƒ½å¯ä»¥ä»ä½ çš„åº”ç”¨é‡Œæ‰“å¼€ï¼Œè€Œä½ ä¸ç”¨å»å®ç°è¿™äº›åŠŸèƒ½ã€‚
 from within your app, without you having to implement any of it yourself.
 
 27
 00:01:41,160 --> 00:01:42,520
-ÄãÉõÖÁ²»ĞèÒªÖªµÀÕâ¸ö
+ä½ ç”šè‡³ä¸éœ€è¦çŸ¥é“å“ªä¸ªåº”ç”¨
 You don't even need to know about the app
 
 28
 00:01:42,520 --> 00:01:45,530
-×îÖÕ·şÎñÄãµÄÇëÇóµÄÓ¦ÓÃ³ÌĞò¡£Äã¿ÉÒÔÔÚ°²×¿¿ª·¢ÕßµÄÍøÕ¾ÉÏÕÒµ½
+æœ€ç»ˆå®Œæˆäº†ä½ çš„è¯·æ±‚ã€‚ä½ å¯ä»¥åœ¨
 that will ultimately service your request. You can find
 
 29
 00:01:45,530 --> 00:01:47,850
-Ò»Ğ©ÆäËûÓµÓĞÓëÄãÏàÍ¬ÒâÍ¼Ò³ÃæµÄ±¾µØÓ¦ÓÃ£¬
+å®‰å“å¼€å‘è€…çš„ç½‘ç«™çš„ Common Intents é¡µé¢é‡Œäº†è§£åˆ°
 details of some of the intents supported by native
 
 30
 00:01:47,850 --> 00:01:50,970
-²¢´ÓÖĞÁË½âÒ»Ğ©ÒâÍ¼µÄÏ¸½Ú¡£
+åŸç”Ÿç¨‹åºæ‰€æ”¯æŒçš„intentã€‚
 apps in Common Intents page of the Android developer site.
 

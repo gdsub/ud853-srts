@@ -1,60 +1,60 @@
-1
+ï»¿1
 00:00:00,300 --> 00:00:03,360
-Õâ¸ö½â¾ö·½°¸¾ÍÊÇÎª»î¶¯Ï¸½ÚÀàÆô¶¯Ò»¸öÃ÷È·µÄÒâÍ¼¡£
+è§£å†³æ–¹æ¡ˆå°±æ˜¯ä¸ºDetailActivityç±»å‘é€ä¸€ä¸ª
 The solution is to lauch an explicit intent to
 
 2
 00:00:03,360 --> 00:00:07,750
-È»ºóÎÒÃÇµ½ĞÂ½¨½çÃæ£¬
+æ˜¾å¼å£°æ˜çš„Intentã€‚æˆ‘ä»¬å…ˆè½¬åˆ°onCreateView,
 the Detail Activity Class. We'll go to On Create View,
 
 3
 00:00:07,750 --> 00:00:10,610
-ÎÒÃÇ¾Í»áÔÚÕâ¶¨ÒåÎÒÃÇµÄÏîÄ¿µã»÷¼àÌıÆ÷¡£ÓÃËıÀ´
+è¿™é‡Œæˆ‘ä»¬å®šä¹‰äº†onItemClickListeneræ–¹æ³•ã€‚
 where our On Item click listener is defined. To
 
 4
 00:00:10,610 --> 00:00:13,460
-´«µİÌìÆøÔ¤±¨µÄĞÅÏ¢£¬ÎÒÃÇ¿ÉÒÔÓÃÒ»¸ö¶îÍâµÄÒâÍ¼£¬
+æˆ‘ä»¬å¯ä»¥ä½¿ç”¨Intentçš„Extraæ¥ä¼ é€’å¤©æ°”é¢„æŠ¥çš„ä¿¡æ¯ï¼Œ
 pass in the Weather Forecast information, we can use an
 
 5
 00:00:13,460 --> 00:00:16,000
-Õâ¸öÒâÍ¼Àï´æ·ÅµÄÊÇÒ»¸ö¼üÖµ¶Ô¡£
+åœ¨Intentä¸­å®ƒæ˜¯ä»¥é”®å€¼å¯¹çš„æ–¹å¼å­˜å‚¨çš„ã€‚
 intent extra, which is a key value pair in
 
 6
 00:00:16,000 --> 00:00:20,090
-ÎÒÃÇÊ¹ÓÃÕâ¸öÃÜÔ¿Ãû£¬extratextÒâÍ¼£¬µ«ÆäÊµÎÒÃÇ
+è¿™é‡Œæˆ‘ä»¬ä½¿ç”¨key:Intent.EXTRA_TEXTï¼Œä½†å…¶å®æˆ‘ä»¬
 the Intent. We use the key name, Intent.extratext, but we
 
 7
 00:00:20,090 --> 00:00:22,800
-ÄÜÓÃµÄÊÇÃÜÔ¿Àï±ßµÄËùÓĞ×Ö·û´®¡£Ö»Òª
+å¯ä»¥ä½¿ç”¨ä»»ä½•å­—ç¬¦ä¸²ã€‚åªè¦
 can use any string for the key. As long as
 
 8
 00:00:22,800 --> 00:00:26,110
-ÎÒÃÇ¶ÁÈ¡ĞÅÏ¢Ê±¾Í»áÓÃµ½ÏàÍ¬µÄÃÜÔ¿¡£
+æˆ‘ä»¬è¯»å–ä¿¡æ¯æ—¶å°±ä¼šç”¨åˆ°ç›¸åŒçš„keyå°±å¥½ã€‚
 we use the same key when reading the information out.
 
 9
 00:00:26,110 --> 00:00:29,150
-¾ÍÏñ¿¾Ãæ°ü£¬ÎÒÃÇ¿ÉÒÔÔÚÊÊÅäÆ÷
+æ€»è€Œè¨€ä¹‹ï¼Œæˆ‘ä»¬ä»
 Just as in the toast, we obtain the forecast
 
 10
 00:00:29,150 --> 00:00:31,850
-¸ø¶¨µÄÎ»ÖÃÍ¨¹ıµ÷ÓÃ»î¶¯Ïî,È»ºó´Óµ±Ç°ÁĞ±íÏîµÃµ½Ô¤²âÊı¾İ
+å½“å‰çš„åˆ—è¡¨é¡¹è·å¾—é¢„æŠ¥æ•°æ®ï¼Œåªè¦åœ¨æ‰€ç»™çš„ä½ç½®è°ƒç”¨
 data from the current list item, by calling get
 
 11
 00:00:31,850 --> 00:00:34,600
-È»ºó´Óµ±Ç°ÁĞ±íÏîµÃµ½Ô¤²âÊı¾İ.Ò»µ©
+adapterä¸­çš„getItemæ–¹æ³•å³å¯ã€‚
 item on the adapter at the given position. Once
 
 12
 00:00:34,600 --> 00:00:37,320
-ÎÒÃÇÌí¼ÓÁËÒâÍ¼£¬ÎÒÃÇ¾Í¿ªÊ¼ÁËÕâ¸ö»î¶¯¡£
+å½“æˆ‘ä»¬æ·»åŠ äº†Intentåï¼Œæˆ‘ä»¬å°±èƒ½å¯åŠ¨activityäº†ã€‚
 we've added the intent, we just start the activity.
 
