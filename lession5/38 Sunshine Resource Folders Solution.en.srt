@@ -60,7 +60,7 @@ this layout on the phone. This layout applies to
 
 13
 00:00:37,840 --> 00:00:40,840
-手机横向和纵向两张情况，所以不需要
+手机横向和纵向两种情况，所以不需要
 both phone, portrait, and landscape, so we don't need
 
 14
