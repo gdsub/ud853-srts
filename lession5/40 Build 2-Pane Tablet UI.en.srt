@@ -85,7 +85,7 @@ fragment is a static fragment because we're defining it the XML
 
 18
 00:00:53,940 --> 00:00:56,980
-无论这个设备的大小如何，我们都知道在主要的activity 中我们
+无论这个设备的大小如何或者屏幕的放置方向怎样，我们都知道在main activity 中我们
 layout. No matter what orientation or device size, we know that
 
 19
@@ -105,77 +105,77 @@ the detail fragment, but not the actual fragment. It's initialized with
 
 22
 00:01:06,080 --> 00:01:09,440
-不同的参数，因为是一个动态的fragment，于是最好
+不同的参数，因为它是一个动态的fragment，于是最好
 different arguments each time, as a dynamic fragment, so it's better
 
 23
 00:01:09,440 --> 00:01:12,820
-用动态方法来构建一个fragment 在
+用动态方法来构建一个fragment,然后将这个fragment添加到
 to dynamically create and add that fragment in a fragment transaction
 
 24
 00:01:12,820 --> 00:01:16,030
-java的程序的主要活动里。 这样的话fragment管理器
+main activity的java代码里。 这样的话fragment管理器
 in the main activity Java code. That way the fragment manager
 
 25
 00:01:16,030 --> 00:01:19,800
-可以持续的检查初始化的参数并把参数根据我们转动设备而进行
+可以持续的检查初始化的参数并把参数根据我们旋转设备屏幕的方向而进行调整
 can keep track of those initialization arguments and pass those
 
 26
 00:01:19,800 --> 00:01:23,750
-调整。然后我们需要更新。
+然后我们需要更新单面板布局
 back to us after device rotation. Then we need to update
 
 27
 00:01:23,750 --> 00:01:26,820
-一个窗口布局，从而保证两个窗口布局保持一致。
+从而保证两个窗口布局保持一致。
 the one pane UI layouts so that they are consistent with
 
 28
 00:01:26,820 --> 00:01:29,840
-这样activity_main文件就作为一个基础
+在默认文件夹中的activity_main文件
 the two pane case. So in the activity_main file for the
 
 29
 00:01:29,840 --> 00:01:32,820
-布局文件夹，也就是我们说的框架布局。
+的根布局之前是FrameLayout
 base layout folder, this used to be a frame layout. We're
 
 30
 00:01:32,820 --> 00:01:35,640
-我们现在要声明一个forecast fragment，这样
+我们现在要声明一个forecast fragment
 going to declare it as a forecast fragment, that way it will
 
 31
 00:01:35,640 --> 00:01:38,160
-与两个界面吻合并且与XML声明的
+这样一来它就和双面板的布局相吻合并且与XML声明的一致
 match the two pin UI where this is also declared as
 
 32
 00:01:38,160 --> 00:01:41,120
-一致。 这样的话主要活动会一直
+这样的话main activity就可以
 a fragment in the XML. That way the main activity never
 
 33
 00:01:41,120 --> 00:01:44,740
-处于动态环境下去添加forecast fragment。
+动态添加forecast fragment。
 has to worry about dynamically adding the forecast fragment.
 
 34
 00:01:44,740 --> 00:01:47,540
-同时主要活动的onCreate view 方法，既然
+同时在main activity的onCreateView 方法
 And the main activity onCreate view method, since the
 
 35
 00:01:47,540 --> 00:01:49,930
-fragment已经从我们刚刚移除的布局
+既然fragment已经在布局中了
 fragment is already inside this layout we can just
 
 36
 00:01:49,930 --> 00:01:53,370
-中了所以我们不需要动态再次添加它。 同样的
+所以我们可以把它删掉，避免动态再次添加它。 同样的
 remove this so we don't dynamically add it again. Similar,
 
 37
@@ -185,27 +185,27 @@ we've modified the activity_detail layout in the base layout
 
 38
 00:01:56,660 --> 00:01:59,510
-让我们来修个这个框架的ID，
+让我们将FrameLayout的ID改成weather_detail_container
 folder. We change the frame that ID, to be
 
 39
 00:01:59,510 --> 00:02:02,340
-为了显示天气详细情况； 让它的名字与容器的名称吻合，在这个
+让它的名字与
 weather detail container; so that it matches the container
 
 40
 00:02:02,340 --> 00:02:06,130
-双窗口的界面中。这个特点
+双面板布局里的容器的名称吻合
 view ID in the two pane UI case,. The pattern
 
 41
 00:02:06,130 --> 00:02:08,220
-是detail fragment 总是会被添加
+而detail_fragment会被添加到
 here is that the detail fragment will always be
 
 42
 00:02:08,220 --> 00:02:11,770
-在weather_detail_container的容器中，无论是双窗口
+weather_detail_container的容器中，无论是双窗口
 added to a container called weather_detail_container, both in the two
 
 43
@@ -215,37 +215,37 @@ pane and one pane case. Since we changed the name
 
 44
 00:02:14,710 --> 00:02:18,120
-我们也需要同时更新DetailActivity。这个特点只是为了
+我们也需要同时更新DetailActivity。
 of the container we should also update the DetailActivity. This
 
 45
 00:02:18,120 --> 00:02:20,500
-单窗口的。我们来
+这个仅仅用在单面板模式下的。
 is only used in one pane mode. Here's where we
 
 46
 00:02:20,500 --> 00:02:24,055
-改变容器名称。 在其中一个窗口模型中， 
+我们在这修改容器名称。 在单面板模式中， 
 change the container name. In the one pane mode, the
 
 47
 00:02:24,055 --> 00:02:28,580
-DetailActivity将会动态的增加DetailFragment。在
+DetailActivity将会动态的将DetailFragment加入容器。
 DetailActivity will add the DetailFragment, dynamically to this container. After
 
 48
 00:02:28,580 --> 00:02:31,650
-我们修改了布局之后我们需要更新下主要活动，
+我们修改了布局之后我们需要更新下main activity，
 we modify the layout we should update the main activities,
 
 49
 00:02:31,650 --> 00:02:35,527
-这样我们能够动态的添加DetailFragment。 在主要活动类中
+这样我们能够动态的添加DetailFragment。 在MainActivity中
 that we dynamically add the DetailFragment. In the MainActivity
 
 50
 00:02:35,527 --> 00:02:39,250
-在onCreate方法里，我们需要去检查weather_detail_container是否存在
+的onCreate方法里，我们需要检查weather_detail_container是否存在
 onCreate method, we check for the presence of the weather_detail_container
 
 51
@@ -255,22 +255,22 @@ in the layout to know whether this is a two
 
 52
 00:02:41,350 --> 00:02:44,360
-窗口界面。 我们需要一直检查这个信息
+面板界面。 我们通过一个布尔变量mTwoPanel
 pane UI or not. We keep track of this information
 
 53
 00:02:44,360 --> 00:02:47,490
-通过添加一个mTwoPane的布尔值。记得我们开始时用的
+一直检查这个信息。记得我们开始时用的
 in a bullion called mTwoPane. Remember that we start with
 
 54
 00:02:47,490 --> 00:02:50,020
-变量是以M打头的。在这里
+变量是以M打头的。因为它是成员变量。
 the letter M because it's a member variable. In this
 
 55
 00:02:50,020 --> 00:02:52,480
-布尔值应该是正值。所以我们
+这里布尔值应该是真。所以我们
 case, the bullion should be true. So we go ahead
 
 56
@@ -280,7 +280,7 @@ and create a DetailFragment and add it to the weather_detail_container.
 
 57
 00:02:56,570 --> 00:02:59,690
-当我们完成这一系列的变化之后，
+当我们完成Rato所说的修改之后，将修改通过fragment transaction完成
 We commit the change by using a fragment transaction, which
 
 58
@@ -295,27 +295,27 @@ present in the layout, then the boolean should be false,
 
 60
 00:03:06,320 --> 00:03:09,210
-说明这个界面是一个单窗口。
+说明这个界面是一个单面板模式的。
 meaning that this is a one pane UI for phones.
 
 61
 00:03:09,210 --> 00:03:11,830
-这样的话，详细活动会负责显示
+这样的话，detail activity会负责显示
 In this case, the detail activity will handle showing the
 
 62
 00:03:11,830 --> 00:03:15,080
-详细fragment。主要如果是在双窗口的情况我们需要检查
+detail fragment。主要如果是在双面板的情况下，我们需要检查
 detail fragment. Notice for the two pane case that we
 
 63
 00:03:15,080 --> 00:03:19,060
-一下，是否savedInstanceState的值是null。 如果savedInstanceState
+savedInstanceState的值是null。 如果savedInstanceState
 check, if the savedInstanceState bundle is null. If the savedInstanceState
 
 64
 00:03:19,060 --> 00:03:21,830
-不是null，我们不需要创造新的。
+不是null，我们就不需要创造新的。
 bundle is not null, then we don't create a new one.
 
 65
@@ -335,17 +335,17 @@ we store information in saved state bundles. Then after the
 
 68
 00:03:31,070 --> 00:03:35,220
-在完成这些变化之后，系统会吧这些活动与fragments还原。
+在屏幕旋转之后，系统通过传递相同的参数，
 orientation change, the system restores the activity and the fragments
 
 69
 00:03:35,220 --> 00:03:37,480
-这样我们就能够
+把这些activity与fragments还原，这样一来
 by passing back the same bundle so that it can
 
 70
 00:03:37,480 --> 00:03:40,560
-重新创建这个窗口。这意味着，
+系统重新创建这个界面布局并还原了之前的状态。这意味着，
 be re-created with the same state. That means if the
 
 71
@@ -355,7 +355,7 @@ bundle exists then we should let the system handle restoring
 
 72
 00:03:43,670 --> 00:03:46,840
-细节fragment重置并且可以跳过这些程序了。这样一旦
+detail fragment重置并且可以跳过这部分代码了。这样一旦
 the detail fragment and we can skip this code. Once the
 
 73
@@ -365,12 +365,12 @@ detail fragment is added dynamically make it show some placeholder
 
 74
 00:03:50,260 --> 00:03:53,910
-，这仅仅是测试的一部分。 我们还将过一遍对的
+，不过仅仅用于测试需要。 我们还将过一遍右侧的
 data just for testing purposes. Later we'll plumb through the right
 
 75
 00:03:53,910 --> 00:03:56,580
-逻辑这样它就能在选择了左边的时间之后
+逻辑这样它就能正确显示左侧所选择项目的数据
 logic so that it can display the right information for
 
 76
@@ -380,22 +380,22 @@ the selected date on the left. Modify the DetailFragment so that
 
 77
 00:04:00,060 --> 00:04:03,800
-这样它就可以预估那些即将出现的意图来获取DATE_KEY。
+传入的Intent就不会包含key为DATE_KEY的数据。
 it doesn't expect the incoming intent to have the DATE_KEY.
 
 78
 00:04:03,800 --> 00:04:06,320
-这时它不会启动一个loader，没什么问题，
+如此一来它就不会启动detail loader
 In this case it doesn't start the loader, which is fine,
 
 79
 00:04:06,320 --> 00:04:08,730
-它只是会退回一些placeholder
+它只是会转向在xml所定义的placeholder中的数据
 and it just falls back to some placeholder data that we
 
 80
 00:04:08,730 --> 00:04:12,310
-在xml里的数据。 onResume方法做的是同样的事。
+onResume方法做的是同样的事。
 have in our XML. The same goes for the onResume method.
 
 81
@@ -405,41 +405,41 @@ We don't restart the loader if the intent is blank.
 
 82
 00:04:15,670 --> 00:04:18,550
-intent是空的原因是，detail
+intent可以是空的原因是，
 The reason the Intent could be blank, is because the detail
 
 83
 00:04:18,550 --> 00:04:22,360
-fragment可以在主要活动中存在了。这样
+detail fragment被正确添加到main activity。所以main activity
 fragment can now exist within the main activity. So the main
 
 84
 00:04:22,360 --> 00:04:25,650
-主要活动不需要同样的Intent Key，从而DetailActivity
+也没有DetailActivity启动时附带的Intent Key，
 activity doesn't have the same Intent key, that the DetailActivity was
 
 85
 00:04:25,650 --> 00:04:29,060
-被启动。一旦你做了这些变动，
+一旦你做了这些变动，
 launched with. Once you make the changes for the wireframes,
 
 86
 00:04:29,060 --> 00:04:31,050
-这就是我们的应用现在的样子。它不会
+我们的应用就会变成这样。它不会
 this is what the app should look like. The reason it
 
 87
 00:04:31,050 --> 00:04:34,680
-显示图标的原因是我们移动了图标，使图标不在
+显示图标的原因是我们从默认布局之内删除了图标
 doesn't show an icon here is because we removed the icon
 
 88
 00:04:34,680 --> 00:04:37,810
-默认的布局之内了。不过如果我们的数据是以动态方式呈现的
+不过一旦数据在之后的章节被填满后，
 from being hardcoded in the layout. But once this data's populated
 
 89
 00:04:37,810 --> 00:04:40,290
-图标还是会再次出现
+它会重新出现。
 dynamically in a later section, it should show up again.
 
