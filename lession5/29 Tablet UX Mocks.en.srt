@@ -1,160 +1,160 @@
 1
 00:00:00,120 --> 00:00:02,600
-µ±ÎÒÃÇÑ§Ï°ÏìÓ¦Ê½Éè¼ÆÊ±ºò£¬ÎÒÃÇ¿ÉÒÔ¿´µ½
+å½“æˆ‘ä»¬å­¦ä¹ å“åº”å¼è®¾è®¡æ—¶å€™ï¼Œæˆ‘ä»¬å¯ä»¥çœ‹åˆ°
 When we were learning that response in design, we saw that
 
 2
 00:00:02,600 --> 00:00:05,360
-³£¼ûµÄÄ£Ê½¶¼ÊÇÊ¹ÓÃ master detail flow£¬¾ÍºÍÎÒÃÇ
+å¸¸è§çš„æ¨¡å¼éƒ½æ˜¯ä½¿ç”¨ master detail flowï¼Œå°±å’Œæˆ‘ä»¬
 a common pattern was to use the master detail flow, which
 
 3
 00:00:05,360 --> 00:00:08,410
-½«ÒªÔÚsunshineÕâ¸öÓ¦ÓÃÖĞÊ¹ÓÃµÄÒ»Ñù¡£ÕâÊÇÔÚÆ½°åÉÏµÄ
+å°†è¦åœ¨sunshineè¿™ä¸ªåº”ç”¨ä¸­ä½¿ç”¨çš„ä¸€æ ·ã€‚è¿™æ˜¯åœ¨å¹³æ¿ä¸Šçš„
 is what were going to use for sunshine. Here are the
 
 4
 00:00:08,410 --> 00:00:11,580
-Ğ§¹û¡£ÔÚ×ó±ßÓĞforecastÁĞ±í£¬
+æ•ˆæœã€‚åœ¨å·¦è¾¹æœ‰forecaståˆ—è¡¨ï¼Œ
 tablet mocks. We have a list of forecasts on the left, and
 
 5
 00:00:11,580 --> 00:00:14,220
-µ±Ñ¡ÖĞËüÃÇµÄÊ±ºò£¬ÎÒÃÇ¿ÉÒÔÔÚÓÒ±ß¿´µ½ÏêÏ¸µÄĞÅÏ¢¸ñ×Ó
+å½“é€‰ä¸­å®ƒä»¬çš„æ—¶å€™ï¼Œæˆ‘ä»¬å¯ä»¥åœ¨å³è¾¹çœ‹åˆ°è¯¦ç»†ä¿¡æ¯é¢æ¿
 then for the selected item, we see the detail pane on
 
 6
 00:00:14,220 --> 00:00:18,080
-ÎŞÂÛÊÇ×İÏò»¹ÊÇºáÏò£¬ÕâÖÖ·½·¨¶¼ÊÊÓÃÓÚ
+æ— è®ºæ˜¯çºµå‘è¿˜æ˜¯æ¨ªå‘ï¼Œè¿™ç§æ–¹æ³•éƒ½é€‚ç”¨äº
 the right. This applies for a seven inch and ten inch tablets.
 
 7
 00:00:18,080 --> 00:00:22,380
-7Ó¢´çºÍÊ®Ó¢´çµÄÆ½°åµçÄÔ¡£ÔÚ×İÏòÄ£Ê½ÏÂ£¬ÁĞÏî
+7è‹±å¯¸å’Œåè‹±å¯¸çš„å¹³æ¿ç”µè„‘ã€‚åœ¨çºµå‘æ¨¡å¼ä¸‹ï¼Œåˆ—é¡¹
 Both portrait and landscape orientations. In portrait mode, the columns are
 
 8
 00:00:22,380 --> 00:00:25,670
-Ö»ÊÇÓĞÒ»µãµãÕ­¶øÒÑ£¬µ«ËüÈÔÈ»ÊÇÁ½¸ö´°¿ÚµÄUI½çÃæ
+åªæ˜¯æœ‰ä¸€ç‚¹ç‚¹çª„è€Œå·²ï¼Œä½†å®ƒä»ç„¶æ˜¯ä¸¤ä¸ªçª—å£çš„UIç•Œé¢
 just a little bit narrower, but it's still a two pane UI.
 
 9
 00:00:25,670 --> 00:00:28,220
-ÕâĞ©¶¼»áÔÚmain activityÏÂÊµÏÖ
+è¿™äº›éƒ½ä¼šåœ¨main activityä¸‹å®ç°
 In terms of implementation, all of this will be under the
 
 10
 00:00:28,220 --> 00:00:31,020
-ÔÚ×ó±ßÊÇforecast fragment
+åœ¨å·¦è¾¹æ˜¯forecast fragment
 main activity. Then on the left, we have the forecast fragment.
 
 11
 00:00:31,020 --> 00:00:34,070
-ÔÚÓÒ±ßÊÇdetail fragment
+åœ¨å³è¾¹æ˜¯detail fragment
 And then on the right, we have the detail fragment. On
 
 12
 00:00:34,070 --> 00:00:36,846
-¶øÔÚÊÖ»úÉÏ£¬ÎÒÃÇÔÚmain activityÏÂÖ»ÓĞ×ó±ßµÄÕâ¸öÔ¤±¨ÁĞ±í
+è€Œåœ¨æ‰‹æœºä¸Šï¼Œæˆ‘ä»¬åœ¨main activityä¸‹åªæœ‰å·¦è¾¹çš„è¿™ä¸ªé¢„æŠ¥åˆ—è¡¨
 the phone, we would still have the main activity with the list
 
 13
 00:00:36,846 --> 00:00:39,580
-µ±Ñ¡ÖĞÆäÖĞµÄÒ»¸öÏîÊ±£¬»áÌø×ªµ½
+å½“é€‰ä¸­å…¶ä¸­çš„ä¸€ä¸ªé¡¹æ—¶ï¼Œä¼šè·³è½¬åˆ°
 of forecast. And then selecting an item would still launch the
 
 14
 00:00:39,580 --> 00:00:44,480
-detail activity¡£ÕâÊÇÁíÒ»ÖÖÕ¹Ê¾·½Ê½¡£ÔÚÆ½°åµçÄÔÉÏ£¬
+detail activityã€‚è¿™æ˜¯å¦ä¸€ç§å±•ç¤ºæ–¹å¼ã€‚åœ¨å¹³æ¿ç”µè„‘ä¸Šï¼Œ
 detail activity. Here's another way to visualize it. On the tablet, we
 
 15
 00:00:44,480 --> 00:00:47,630
-ÔÚÒ»¸öactivityÉÏÓĞÁ½¸ö½ô½Ó×ÅµÄfragment£¬¶øÔÚÊÖ»úÉÏ
+åœ¨ä¸€ä¸ªactivityä¸Šæœ‰ä¸¤ä¸ªç´§æ¥ç€çš„fragmentï¼Œè€Œåœ¨æ‰‹æœºä¸Š
 have two fragments side by side under one activity. And then
 
 16
 00:00:47,630 --> 00:00:51,030
-ÎÒÃÇµÄµÚÒ»¸öactivity°üº¬ÁËµÚÒ»¸öfragment
+æˆ‘ä»¬çš„ç¬¬ä¸€ä¸ªactivityåŒ…å«äº†ç¬¬ä¸€ä¸ªfragment
 on the phone, we have the first activity containing the first fragment.
 
 17
 00:00:51,030 --> 00:00:54,080
-µ±Ñ¡ÖĞÁËÒ»¸öÏîºó£¬»áÌø×ªµ½°üº¬µÚ¶ş¸öfragmentµÄactivity
+å½“é€‰ä¸­äº†ä¸€ä¸ªé¡¹åï¼Œä¼šè·³è½¬åˆ°åŒ…å«ç¬¬äºŒä¸ªfragmentçš„activity
 Selecting an item will launch the second activity containing the second
 
 18
 00:00:54,080 --> 00:00:57,640
-ÎÒÃÇ½«°ÑÕâĞ©·Ö³É¶à¸ö±àÂëÈÎÎñ
+æˆ‘ä»¬å°†æŠŠè¿™äº›åˆ†æˆå¤šä¸ªç¼–ç ä»»åŠ¡
 fragment. We're going to break this up into multiple coding tasks until
 
 19
 00:00:57,640 --> 00:01:00,140
-Ö±µ½ÎÒÃÇ½¨Á¢×îºóÒ»¸ölayout²¼¾Ö¡£Ê×ÏÈ£¬ÎÒÃÇÎªÆ½°åµçÄÔ½¨Á¢Á½¸ö
+ç›´åˆ°æˆ‘ä»¬å»ºç«‹æœ€åä¸€ä¸ªlayoutå¸ƒå±€ã€‚é¦–å…ˆï¼Œæˆ‘ä»¬ä¸ºå¹³æ¿ç”µè„‘å»ºç«‹ä¸¤ä¸ª
 we build up the final layout. First we'll build up the
 
 20
 00:01:00,140 --> 00:01:03,460
-´°¿ÚUI½çÃæ¡£½ÓÏÂÀ´ÎÒÃÇ½«Á½¸öfragment
+çª—å£UIç•Œé¢ã€‚æ¥ä¸‹æ¥æˆ‘ä»¬å°†ä¸¤ä¸ªfragment
 two pane UI for tablets. Then we'll hook up the communication
 
 21
 00:01:03,460 --> 00:01:07,070
-Ö®¼ä½øĞĞÍ¨ĞÅ£¬¼´Ñ¡ÔñÒ»ÏîÔÚÓÒ±ßµÄ´°¿Ú
+ä¹‹é—´è¿›è¡Œé€šä¿¡ï¼Œå³é€‰æ‹©ä¸€é¡¹åœ¨å³è¾¹çš„çª—å£
 between the two fragments, so that's selecting an item replaces the
 
 22
 00:01:07,070 --> 00:01:09,530
-ÏÔÊ¾ÏêÏ¸ĞÅÏ¢¡£½Ó×ÅÎÒÃÇ»áÑ§Ï°ÈçºÎ
+æ˜¾ç¤ºè¯¦ç»†ä¿¡æ¯ã€‚æ¥ç€æˆ‘ä»¬ä¼šå­¦ä¹ å¦‚ä½•
 detail pane on the right. Then we'll learn how to show
 
 23
 00:01:09,530 --> 00:01:12,590
-ÔÚÒ»¸ö±»Ñ¡ÖĞÏîÉÏÕ¹Ê¾Æä×´Ì¬£¬ËùÒÔ
+åœ¨ä¸€ä¸ªè¢«é€‰ä¸­é¡¹ä¸Šå±•ç¤ºå…¶çŠ¶æ€ï¼Œæ‰€ä»¥
 an activated state on the currently selected item, so we know
 
 24
 00:01:12,590 --> 00:01:16,100
-ÎÒÃÇ¾Í»áÖªµÀÏêÏ¸ĞÅÏ¢ÓëÄÄÒ»¸öÏà¶ÔÓ¦¡£ÎÒÃÇ»¹ĞèÒªÈ·±£
+æˆ‘ä»¬å°±ä¼šçŸ¥é“è¯¦ç»†ä¿¡æ¯ä¸å“ªä¸€ä¸ªç›¸å¯¹åº”ã€‚æˆ‘ä»¬è¿˜éœ€è¦ç¡®ä¿
 what the details pane corresponds to. We'll also need to make
 
 25
 00:01:16,100 --> 00:01:18,630
-¹ö¶¯µÄÎ»ÖÃ±»Î¬³ÖÔÚÒ»¸ö·½Ïò
+æ»šåŠ¨çš„ä½ç½®è¢«ç»´æŒåœ¨ä¸€ä¸ªæ–¹å‘
 sure that the scroll position is maintained across
 
 26
 00:01:18,630 --> 00:01:22,430
-ÉÏ±ä»¯¡£×öÍêÕâĞ©ÒÔºó£¬ÎÒÃÇ½«¸üĞÂdetail layout
+ä¸Šå˜åŒ–ã€‚åšå®Œè¿™äº›ä»¥åï¼Œæˆ‘ä»¬å°†æ›´æ–°detail layout
 orientation changes. After that, we'll update the detail layout
 
 27
 00:01:22,430 --> 00:01:24,730
-È¥ÓÅ»¯ÕâĞ©¸ü¿íµÄÆÁÄ»¡£
+å»ä¼˜åŒ–è¿™äº›æ›´å®½çš„å±å¹•ã€‚
 so it's optimized for these wider screens. And
 
 28
 00:01:24,730 --> 00:01:27,370
-È»ºó£¬ÎÒÃÇ½«ĞŞ¸ÄadapterËùÒÔÔÚÕâÀï£¬¡°½ñÌì¡±µÄ²¼¾ÖºÍ
+ç„¶åï¼Œæˆ‘ä»¬å°†ä¿®æ”¹adapterï¼Œä½¿å¾—â€œä»Šå¤©â€çš„å¸ƒå±€å’Œ
 then we'll modify the adapter so that today's layout
 
 29
 00:01:27,370 --> 00:01:29,340
-¡°ÆäËûÌì¡±µÄ²¼¾Ö¿´ÆğÀ´ÊÇÒ»ÑùµÄ¡£ÔÚÆ½°åÉÏ£¬¡°today¡±µÄ²¼¾Ö
+â€œå…¶ä»–å¤©â€çš„å¸ƒå±€çœ‹èµ·æ¥æ˜¯ä¸€æ ·çš„ã€‚åœ¨å¹³æ¿ä¸Šï¼Œâ€œtodayâ€çš„å¸ƒå±€
 looks like the other days. There's no special
 
 30
 00:01:29,340 --> 00:01:31,980
-²¢Ã»ÓĞÊ²Ã´ÌØÊâÖ®´¦¡£ËùÒÔ³äÂúÏ£ÍûµÄÊÇ
+å¹¶æ²¡æœ‰ä»€ä¹ˆç‰¹æ®Šä¹‹å¤„ã€‚æ‰€ä»¥å¸Œæœ›å¤§å®¶éƒ½æ¸…æ¥šäº†
 today layout on the tablet. So hopefully it's clear
 
 31
 00:01:31,980 --> 00:01:34,930
-ÎÒÃÇÈçºÎÊµÏÖÕâ¸öÔÚÆ½°åÉÏµÄ±íÏÖĞĞÎªµÄË¼Â·ÊÇºÜÇåÎúµÄ
+æˆ‘ä»¬å°†è¦å¦‚ä½•å®ç°è¿™ä¸ªåœ¨å¹³æ¿ä¸Šçš„è¡¨ç°è¡Œä¸ºã€‚
 how we're going to approach implementing this tablet behavior and
 
 32
 00:01:34,930 --> 00:01:36,660
-ÎÒÃÇ½«»áÒ»¸ö½ÓÒ»¸öµØÈ¥ÂıÂıÊµÏÖ
+æˆ‘ä»¬å°†ä¼šä¸€ä¸ªæ¥ä¸€ä¸ªåœ°å»æ…¢æ…¢å®ç°
 we're going to step through it slowly, one by one
 

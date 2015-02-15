@@ -1,240 +1,240 @@
 1
 00:00:00,990 --> 00:00:02,810
-ËùÒÔÏÖÔÚÄãÒÑ¾­Ã÷°×ÁËfragmentÊÇÔÚÄÄÀïÊ¹ÓÃµÄ
+æ‰€ä»¥ç°åœ¨ä½ å·²ç»æ˜ç™½äº†fragmentæ˜¯åœ¨å“ªé‡Œä½¿ç”¨çš„
 So now you know, where fragments are used and
 
 2
 00:00:02,810 --> 00:00:05,700
-²¢ÇÒÖªµÀÁËÎÒÃÇ½«»áÔÚÎÒÃÇµÄÓ¦ÓÃÄÄ¸öµØ·½ÖĞÈ¥Ê¹ÓÃËü
+å¹¶ä¸”çŸ¥é“äº†æˆ‘ä»¬å°†ä¼šåœ¨æˆ‘ä»¬çš„åº”ç”¨å“ªä¸ªåœ°æ–¹ä¸­å»ä½¿ç”¨å®ƒ
 where we're going to use them in our app. You're
 
 3
 00:00:05,700 --> 00:00:09,070
-Äã¿ÉÄÜ»á¿ªÊ¼ÎÊ£¬¾¿¾¹ÎªÊ²Ã´ÒªÊ¹ÓÃfragmentÄØ£¿
+ä½ å¯èƒ½ä¼šå¼€å§‹é—®ï¼Œç©¶ç«Ÿä¸ºä»€ä¹ˆè¦ä½¿ç”¨fragmentå‘¢ï¼Ÿ
 probably starting to ask, why use fragments at all?
 
 4
 00:00:09,070 --> 00:00:11,810
-Èç¹ûÄãÏëÒª×öÒ»¸öUI×é¼ş£¬ÄÑµÀÎÒÃÇ²»ÄÜÖ»ÊÇ´´½¨Ò»¸ö
+å¦‚æœè¦æŠŠUIç»„ä»¶å‡‘åˆ°ä¸€å—å„¿ï¼Œéš¾é“æˆ‘ä»¬ä¸èƒ½åªæ˜¯åˆ›å»ºä¸€ä¸ª
 If we want to group UI components, couldn't we just create
 
 5
 00:00:11,810 --> 00:00:14,520
-View Group»òÕßÒ»¸öÖØÓÃµÄXML²¼¾Ö¶¨ÒåÂğ£¿
+View Groupæˆ–è€…ä¸€ä¸ªå¯é‡ç”¨çš„XMLå¸ƒå±€å®šä¹‰å—ï¼Ÿ
 a View Group or maybe a re-usable XML layout
 
 6
 00:00:14,520 --> 00:00:19,240
-µ±È»¿ÉÒÔ£¬µ«ÊÇ£¬fragmentµÄÕæÊµÄÜÁ¦ÊÇ¸ßÓÚ
+å½“ç„¶å¯ä»¥ï¼ä½†æ˜¯ï¼Fragmentçš„çœŸå®èƒ½åŠ›æ˜¯è¶…å‡º
 definition? Yes. But, the real power in fragments goes
 
 7
 00:00:19,240 --> 00:00:22,220
-grouping UI elementµÄ£¬fragment¿ÉÒÔÊ¹activity
+ç»„åˆUIå…ƒç´ çš„ï¼Œfragmentå¯ä»¥ä½¿activity
 beyond grouping UI elements. They allow us to fully
 
 8
 00:00:22,220 --> 00:00:26,350
-³ä·ÖÄ£¿é»¯£¬°üÀ¨ËüÃÇ´Ó±£³ÖµÄÓ¦ÓÃ×´Ì¬
+å……åˆ†æ¨¡å—åŒ–ï¼ŒåŒ…æ‹¬ä»ä»–ä»¬æŒæœ‰çš„åº”ç”¨çŠ¶æ€
 modularize our activities, including the life cycle events they receive
 
 9
 00:00:26,350 --> 00:00:28,990
-ÖĞ½ÓÊÕµ½µÄÉúÃüÖÜÆÚÊÂ¼ş£¬fragmentÊÇ´ÓHoneycombµÄÊ±ºò¿ªÊ¼
+ä¸­æ¥æ”¶åˆ°çš„ç”Ÿå‘½å‘¨æœŸäº‹ä»¶ã€‚Fragmentæ˜¯ä»Honeycombçš„æ—¶å€™å¼€å§‹
 in the app state that they maintain. Fragments were
 
 10
 00:00:28,990 --> 00:00:33,090
-ÓÃÀ´½â¾öÕâ¸öÌØ±ğµÄÎÊÌâµÄ¡£
+å¼•å…¥ä»¥è§£å†³ä¸€ä¸ªç‰¹å®šé—®é¢˜çš„ã€‚
 first introduced in Honeycomb to solve a particular problem. Honeycomb
 
 11
 00:00:33,090 --> 00:00:36,390
-HoneycombÊÇµÚÒ»¸öÖ§³ÖÆ½°åµÄAndroid°æ±¾¡£
+Honeycombæ˜¯ç¬¬ä¸€ä¸ªæ”¯æŒå¹³æ¿çš„Androidç‰ˆæœ¬ã€‚
 was the first Android release to support tablets, and
 
 12
 00:00:36,390 --> 00:00:38,680
-ÊÂÊµÖ¤Ã÷£¬È¥´´½¨Æ½°åUI½çÃæ
+äº‹å®è¯æ˜ï¼Œå»åˆ›å»ºå¹³æ¿UIç•Œé¢
 it turned out, the best way for most apps to
 
 13
 00:00:38,680 --> 00:00:41,780
-µÄ×îºÃ·½Ê½ÊÇ½«Á½¸ö»òÕß
+çš„æœ€å¥½æ–¹å¼æ˜¯å°†ä¸¤ä¸ªæˆ–è€…
 create a great tablet UI. Is put two or
 
 14
 00:00:41,780 --> 00:00:46,910
-¶à¸öphone activity²¢ÅÅ¡£¾Ù¸öÀõ×Ó
+å¤šä¸ªæ‰‹æœºactivityå¹¶æ’ã€‚ä¸¾ä¸ªæ —å­
 more, of their phone activities alongside each other. For example,
 
 15
 00:00:46,910 --> 00:00:48,710
-Èç¹ûÄãÓĞÒ»¸öÊÖ»úÓ¦ÓÃÊÇÊ¹ÓÃlist activityÆô¶¯µÄ
+å¦‚æœä½ æœ‰ä¸€ä¸ªæ‰‹æœºåº”ç”¨æ˜¯ä½¿ç”¨list activityå¯åŠ¨çš„
 if you had a phone app that started with a
 
 16
 00:00:48,710 --> 00:00:51,520
-¾ÍÏñÕâÑù£¬µ±Äãµã»÷Ò»¸öÏî»á
+å°±åƒè¿™æ ·ï¼Œå½“ä½ ç‚¹å‡»ä¸€ä¸ªé¡¹ä¼š
 list activity like this, which you then clicked an item
 
 17
 00:00:51,520 --> 00:00:54,570
-´ò¿ªdetail activity£¬¾ÍÏñÕâ¸öÎÒÃÇ
+æ‰“å¼€detail activityï¼Œå°±åƒè¿™ä¸ªæˆ‘ä»¬
 would open a detailed activity like this one. What
 
 18
 00:00:54,570 --> 00:00:57,840
-³ÆÎªmaster detail flowµÄÒ»Ñù
+ç§°ä¸ºmaster detail flowçš„ä¸€æ ·
 we call a master detail flow. A good tablet
 
 19
 00:00:57,840 --> 00:01:01,060
-Ò»¸öºÃµÄÆ½°åUI½çÃæ»á½«ËüÃÇ²¢ÅÅ£¬¾ÍÏñÕâÑù
+ä¸€ä¸ªå¥½çš„å¹³æ¿UIç•Œé¢ä¼šå°†å®ƒä»¬å¹¶æ’ï¼Œå°±åƒè¿™æ ·
 UI would put them side by side like this.
 
 20
 00:01:01,060 --> 00:01:04,760
-´Ó¹¦ÄÜÉÏ½²£¬µã»÷Õâ¸öÁĞ±íÉÏµÄÏî£¬½«Õâ¸öactivity·ÅÔÚÓÒ±ß
+ä»åŠŸèƒ½ä¸Šè®²ï¼Œç‚¹å‡»è¿™ä¸ªåˆ—è¡¨ä¸Šçš„é¡¹ï¼Œå°†è¿™ä¸ªactivityæ”¾åœ¨å³è¾¹
 Functionally, clicking an item on this list, now replaces this
 
 21
 00:01:04,760 --> 00:01:07,310
-¶ø²»ÊÇºÍÔÚÊÖ»úÉÏÒ»Ñù
+è€Œä¸æ˜¯å’Œåœ¨æ‰‹æœºä¸Šä¸€æ ·
 activity on the right, rather than starting a new
 
 22
 00:01:07,310 --> 00:01:08,680
-´ò¿ªÒ»¸öĞÂµÄactivity
+æ‰“å¼€ä¸€ä¸ªæ–°çš„activity
 one, as it would have done on the phone.
 
 23
 00:01:09,760 --> 00:01:13,940
-²»ĞÒµÄÊÇ£¬Android²¢²»×ÜÊÇÖ§³ÖÔÚÆäËûactivityÖĞÇ¶Èëactivity
+ä¸å¹¸çš„æ˜¯ï¼ŒAndroidå¹¶ä¸æ€»æ˜¯æ”¯æŒåœ¨å…¶ä»–activityä¸­åµŒå…¥activity
 Now unfortunately, Android didn't always support embedding activities within
 
 24
 00:01:13,940 --> 00:01:18,410
-ÖÁÉÙ²¢²»ÄÜ£¬Ö±µ½ÎÒÃÇ½éÉÜÁËfragment
+è‡³å°‘åœ¨æˆ‘ä»¬ä»‹ç»äº†fragmentä¹‹å‰ä¸è¡Œã€‚
 other activities. At least, it didn't until we introduced fragments.
 
 25
 00:01:18,410 --> 00:01:20,260
-ÏÖÔÚÈç¹ûÄãÖ»ÊÇ¿´ÁËÒ»ÏÂUIÔªËØ
+ç°åœ¨å¦‚æœä½ çœ‹ä¸€ä¸‹UIå…ƒç´ 
 Now if you just look at the UI elements, you could
 
 26
 00:01:20,260 --> 00:01:23,470
-Äã¿ÉÒÔË¼¿¼Ò»ÏÂÄã¿ÉÒÔÊ¹ÓÃU GroupºÍlayout¹¹½¨µÄ
+ä½ å¯ä»¥æ€è€ƒä¸€ä¸‹ä½¿ç”¨view Groupå’Œlayoutæ„å»ºçš„
 be excused for thinking you could achieve much the same thing
 
 27
 00:01:23,470 --> 00:01:27,870
-activityÀ´´ïµ½Í¬ÑùµÄÊÂÇé
-using an activity that was built using U Groups and layouts,
+activityæ¥è¾¾åˆ°åŒæ ·çš„äº‹æƒ…
+using an activity that was built using view groups and layouts,
 
 28
 00:01:27,870 --> 00:01:32,630
-¶ø²»ÊÇÊ¹ÓÃfragment£¬ÔÚÒ»¶¨³Ì¶ÈÉÏÕâÊÇ¶ÔµÄ
+è€Œä¸ç”¨æ“å¿ƒfragmentï¼Œåœ¨ä¸€å®šç¨‹åº¦ä¸Šè¿™æ˜¯å¯¹çš„
 without bothering the fragments, which is true up to a point.
 
 29
 00:01:32,630 --> 00:01:34,712
-µ«ÊÇ£¬Äã½«±ØĞëÍ¨¹ıËùÓĞactivityµÄÉúÃüÖÜÆÚÊÂ¼ş
+ä½†æ˜¯ï¼Œä½ å°†ä¼ é€’æ‰€æœ‰activityçš„ç”Ÿå‘½å‘¨æœŸäº‹ä»¶
 But then you'd have to pass through all of the activity
 
 30
 00:01:34,712 --> 00:01:37,860
-¹ÜÀíÃ¿Ò»¸öUIµÄ×´Ì¬
+ç®¡ç†æ¯ä¸€ä¸ªUIçš„çŠ¶æ€
 life cycle events, manage the state of each piece of the
 
 31
 00:01:37,860 --> 00:01:40,390
-µ±ËüÃÇ¸Ä±äµÄÊ±ºò£¬¸ú×ÙËûÃÇµÄÃ¿Ò»²¿·Ö
+å½“å®ƒä»¬æ”¹å˜çš„æ—¶å€™ï¼Œè·Ÿè¸ªä»–ä»¬çš„æ¯ä¸€éƒ¨åˆ†çš„çŠ¶æ€ã€‚
 UI, keep track of the state of each of the portions
 
 32
 00:01:40,390 --> 00:01:43,770
-²¢ÇÒÒª¼Ç×¡£¬ÎªÁËÎ¬³ÖÓ¦ÓÃµÄ×´Ì¬£¬
+å¹¶ä¸”è¿˜è¦åœ¨ä»»æ„ç»™å®šæ—¶åˆ»è®°ä½ï¼Œ
 as they changed. And remember, which screen elements were on screen
 
 33
 00:01:43,770 --> 00:01:46,710
-ÔÚÈÎºÎÌØ¶¨µÄÊ±¼äÉÏ£¬ÆÁÄ»ÉÏµÄÔªËØ¶¼ÊÇÏÔÊ¾ÔÚÆÁÄ»ÉÏµÄ
+å±å¹•ä¸Šæœ‰å“ªäº›å…ƒç´ ï¼Œä»¥æ­¤æ¥ä¿æŒåº”ç”¨çŠ¶æ€ã€‚
 at any given time, in order to maintain app state.
 
 34
 00:01:47,740 --> 00:01:50,470
-ÕâËùÓĞµÄÒ»ÇĞ£¬¾ÍÊÇµ±ÄãÊ¹ÓÃfragmentÊ±Fragment¹ÜÀíÆ÷
+è¿™æ‰€æœ‰çš„ä¸€åˆ‡ï¼Œå®Œå…¨å°±æ˜¯ä½ ä½¿ç”¨Fragmentçš„æ—¶å€™FragmentManger
 All of which, is exactly what the Fragment Manager does
 
 35
 00:01:50,470 --> 00:01:53,500
-ÌæÄã×öµÄÊÂÇé¡£¶øÕâÊ¹ÄãÍËºóÒ»²½
+æ›¿ä½ åšçš„äº‹æƒ…ã€‚è¿™ä½¿ä½ èƒ½é€€åä¸€æ­¥ï¼Œ
 for you, when you use Fragments. And that lets you
 
 36
 00:01:53,500 --> 00:01:56,230
-°ÑÃ¿Ò»¸öfragmentµ±×ö»¹Ò»¸öĞ¡µÄactivity
+æŠŠæ¯ä¸€ä¸ªfragmentå½“åšä¸€ä¸ªè¿·ä½ activityæ¥å¤„ç†ã€‚
 take a step back and, and treat each fragment as though
 
 37
 00:01:56,230 --> 00:01:59,240
-¾Ù¸öÀõ×Ó£¬ÔÚactivityµÄÊÀ½çÖĞ
+ä¸¾ä¸ªæ —å­ï¼Œåœ¨activityçš„ä¸–ç•Œä¸­
 it were a mini activity. For example, in the world
 
 38
 00:01:59,240 --> 00:02:02,400
-Äã´ÓÒ»¸öactivityÖĞÆô¶¯ÁíÒ»¸öactivity£¬¾Í»áÔÚºóÌ¨µÄ¶ÑÖĞ
+ä½ ä»ä¸€ä¸ªactivityä¸­å¯åŠ¨å¦ä¸€ä¸ªactivityï¼Œè¿™ä¸ªäº‹ç‰©
 of activities, you start one activity from the other, and that
 
 39
 00:02:02,400 --> 00:02:05,400
-¼ÇÂ¼ÏÂtransaction¡£ËùÒÔ£¬µã»÷·µ»Ø°´Å¥£¬
+å°±ä¼šåœ¨åå°çš„æ ˆä¸­è®°å½•ä¸‹æ¥ã€‚æ‰€ä»¥ï¼Œç‚¹å‡»è¿”å›æŒ‰é’®ï¼Œ
 transaction is recorded on the back stack. So, hitting the
 
 40
 00:02:05,400 --> 00:02:09,090
-ÎÒÃÇ½«³·Ïútransaction²¢ÇÒ½«µÚÒ»¸öactivity
+æˆ‘ä»¬å°†æ’¤é”€é‚£ä¸ªäº‹ç‰©å¹¶ä¸”å°†ç¬¬ä¸€ä¸ªactivity
 Back button, we'll undo that transaction and bring the first activity
 
 41
 00:02:09,090 --> 00:02:11,310
-·ÅÖÃÔÚÇ°Ãæ¡£¶øÏÖÔÚ¿ÉÒÔÓÃfragment transaction
+æ”¾ç½®åœ¨å‰é¢ã€‚è€Œç°åœ¨å¯ä»¥ç”¨fragment transaction
 to the front. Now the same thing can
 
 42
 00:02:11,310 --> 00:02:13,870
-ÊµÏÖÍ¬ÑùµÄÊÂÇé¡£ÔÚÕâ¸öÀı×ÓÖĞ£¬
+å®ç°åŒæ ·çš„äº‹æƒ…ã€‚åœ¨è¿™ä¸ªä¾‹å­ä¸­ï¼Œ
 happen with fragment transactions. In this case, rather
 
 43
 00:02:13,870 --> 00:02:16,580
-ÎÒÃÇÖ»ĞèÒªÓÃdetail activityÌæ»» list activity
+ä½ ä¸å¿…å¼€å§‹ä¸€ä¸ªæ–°çš„activityï¼Œæˆ‘ä»¬åªéœ€è¦
 than starting a new activity, we simply replace
 
 44
 00:02:16,580 --> 00:02:19,480
-¶ø²»ÊÇ¿ªÊ¼Ò»¸öĞÂµÄactivity¡£
+ç”¨detail activityæ›¿æ¢list activityã€‚
 the list fragment with the detail fragment. And then
 
 45
 00:02:19,480 --> 00:02:21,740
-È»ºó·µ»Ø°´Å¥»á³·ÏúÕâ¸ötransaction²¢·´¹ıÀ´
+ç„¶åè¿”å›æŒ‰é’®ä¼šæ’¤é”€è¿™ä¸ªäº‹ç‰©å¹¶åè¿‡æ¥ã€‚
 the back button will undo that transaction and
 
 46
 00:02:21,740 --> 00:02:24,210
-ËùÒÔ£¬ÔÚÀíÂÛÉÏÀ´Ëµ£¬Äã¿ÉÒÔ
+æ‰€ä»¥ï¼Œåœ¨ç†è®ºä¸Šæ¥è¯´ï¼Œä½ çœŸçš„å¯ä»¥
 reverse it. So in theory, you can really take
 
 47
 00:02:24,210 --> 00:02:26,880
-²ÉÓÃÈÎºÎÓĞ¶àÖØactivityµÄ·½·¨²¢ÇÒÓÃ
+æŠŠæ‰€æœ‰ä½¿ç”¨å¤šä¸ªActivityåšçš„äº‹æƒ…æ¢æˆ
 any act with multiple activities and replace it
 
 48
 00:02:26,880 --> 00:02:29,950
-Ò»¸öµ¥¸öµÄactivity´úÌæËü
+ç”¨æŒæœ‰å¤šä¸ªFragmentçš„å•ä¸€Activityæ¥å®ç°ã€‚
 with a single activity that's host to multiple fragments.
 
