@@ -45,12 +45,12 @@ wondering, layout large is for backward compatibility purposes for
 
 10
 00:00:28,380 --> 00:00:32,280
-之前的大尺寸设备做向后兼容的，那之后
+之前的大尺寸设备做向后兼容的，从那之后
 large devices prior to Android 3.2, that's when the SW
 
 11
 00:00:32,280 --> 00:00:35,340
-SW限定语才被引入。所以回到刚才。
+SW限定语才被引入。回到重点。
 qualifiers were introduced. So back to the point. To
 
 12

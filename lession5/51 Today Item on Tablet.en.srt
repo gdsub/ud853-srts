@@ -20,12 +20,12 @@ other items, because we have an expanded detail pane here. To do
 
 5
 00:00:11,970 --> 00:00:15,320
-要在ForecastAdapter的newView方法中这么做，我们应当为返回
+要在ForecastAdapter的newView方法中这么做，我们应当为列表项返回
 this in the forecast adapter new view method, we should return
 
 6
 00:00:15,320 --> 00:00:19,060
-列表项目的布局，而非today布局
+布局，而非为today返回
 the layout for a list item forecast not for the today layout.
 
 7
@@ -45,7 +45,7 @@ get controlled by the return value of the getItemViewType method. Therefore,
 
 10
 00:00:29,140 --> 00:00:32,830
-因此，我们修改getItemViewType方法，这样在零的位置上，
+因此，我们修改getItemViewType方法，这样在0的位置上，
 we modify the getItemViewType method so that at the zero position,
 
 11
@@ -60,7 +60,7 @@ return view type today. Otherwise, if we shouldn't use the special
 
 13
 00:00:38,240 --> 00:00:40,620
-特别的今日布局，那我们只要返回所有将来日
+特别的today布局，那我们只要返回所有将来日期
 today layout, then we should just return the view type for
 
 14
@@ -90,7 +90,7 @@ or two pane UI. So, it can decide whether
 
 19
 00:00:54,730 --> 00:00:56,650
-我们该不该特殊的today布局。
+我们该不该使用特定的today布局。
 we should use the special today layout or not.
 
 20
