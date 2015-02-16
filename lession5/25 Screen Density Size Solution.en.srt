@@ -1,35 +1,36 @@
 1
 00:00:00,600 --> 00:00:05,640
-Nexus One ÊÇ3.7´çÆÁÄ»£¬Nexus 5ÊÇ4.9´çÆÁ£¬
+Nexus One çš„å±å¹•æ˜¯3.7è‹±å¯¸ï¼ŒNexus 5æ˜¯4.9è‹±å¯¸ï¼Œ
 The Nexus One has a 3.7 inch screen, and the Nexus 5, a 4.9 inch display, so
 
 2
 00:00:05,640 --> 00:00:07,560
-Õâ¸öÆÁÄ»³ß´çµÄÕı³£·¶Î§Ò²ÈÃÎÒÃÇºÜÊæ·ş¡£
+è¿™ä¸¤æ¬¾æ‰‹æœºçš„å±å¹•å°ºå¯¸ç”¨æˆ·ä½“éªŒéƒ½å¾ˆä¸é”™ã€‚
 they both fall comfortably within the normal range
 
 3
 00:00:07,560 --> 00:00:10,190
-Nexus OneµÄ
+Nexus Oneçš„
 for screen size. The Nexus One has a screen
 
 4
 00:00:10,190 --> 00:00:15,110
-ÆÁÄ»ÃÜ¶ÈÊÇ252hdpi£¬È»¶ø£¬
+å±å¹•å¯†åº¦æ˜¯252dpiï¼Œå±äºhdpiï¼Œ
 density of 252 dpi, which is hdpi, whereas
 
 5
 00:00:15,110 --> 00:00:17,370
-Nexus 5ÊÇÔÚNexus One·¢²¼ÈıÄêÖ®ºó²Å·¢²¼µÄ¡£
+è€Œåœ¨Nexus Oneå‘å¸ƒä¸‰å¹´åæ‰å‘å¸ƒçš„Nexus 5ï¼Œ
 the Nexus 5, which was released three years after
 
 6
 00:00:17,370 --> 00:00:19,880
-ËûµÄÆÁÄ»ÃÜ¶È±ÈNexus One ¸ü¸ß£¬
+å…¶å±å¹•å¯†åº¦æ›´é«˜ï¼Œ
 the Nexus One, has a much higher screen
 
 7
 00:00:19,880 --> 00:00:24,910
-ËûµÄÊÇ445dpi¡£ÄÇ±ä³ÉÁËxxhdpi¡£
+ä¸º445dpiï¼Œå±äºxxhdpiåˆ†è¾¨ç‡ ã€‚
 density, 445 dots per inch. That makes it xxhdpi.
+
 
