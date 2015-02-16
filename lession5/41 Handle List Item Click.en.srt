@@ -1,161 +1,161 @@
 1
 00:00:00,070 --> 00:00:02,270
-一旦两个窗口在平板中显示了，让我们来
+一旦两个面板在平板电脑中显示了，
 Once the two panes are showing up on a tablet, let's
 
 2
 00:00:02,270 --> 00:00:05,390
-把我们的程序修改修改，这样当列表被选择了，我们就可以响应。
+把我们的代码进行修改来处理列表项的点击事件。
 modify our code to handle the list item click. On the phone,
 
 3
 00:00:05,390 --> 00:00:08,050
-在手机里，如果是前端选项被点击，我们需要
+在手机上，如果forecast fragment里的表项被点击，
 if an item is clicked in the forecast fragment, then we
 
 4
 00:00:08,050 --> 00:00:11,430
-启动详细的活动。 在平板的界面里，如果一个选项
+detail activity就会被打开。 在平板的界面里，如果一个表项
 must launch the detail activity. On the tablet UI, once an item
 
 5
 00:00:11,430 --> 00:00:14,720
-是在前段被选择了，我们需要通知主要活动，
+是在forecast fragment被选择了，我们就通知main activity，
 in the forecast fragment is clicked, we notify the main activity,
 
 6
 00:00:14,720 --> 00:00:18,360
-这样详细的界面会代替。原因是这两个fragments
+detail fragment就会被替换。这两个fragments
 which goes and replaces the detail fragment. The reason the two fragments
 
 7
 00:00:18,360 --> 00:00:21,730
-不会互相交流。因为们需要来维持一个虚拟抽象的概念。
+之所以不会互相传递数据是因为我们希望它们之间能需要来维持一个虚拟抽象的概念。
 don't talk to each other is because we want to maintain abstraction from
 
 8
 00:00:21,730 --> 00:00:25,100
-如果我们设想前端列知道了详细列表总是在它
+如果预报列表的fragment从一开始就知道detail fragment在它旁边
 each other. If the forecast list fragment started assuming that the detail
 
 9
 00:00:25,100 --> 00:00:28,360
-右边，这个设想就会被破坏。
+这个设想就会被破坏。
 fragment was always right next to it, then the assumption would break.
 
 10
 00:00:28,360 --> 00:00:31,360
-例如，手机里详细的fragment 不在
+例如，手机里detail fragment 不在main activity中。
 For example, on the phone where the detail fragment is not inside
 
 11
 00:00:31,360 --> 00:00:35,170
-主要活动中。 这时我们的fragment必须要通过自身的活动来
+那么我们的fragment必须通过它本身所属的activity
 the main activity. Therefore our fragment must go through its activity and
 
 12
 00:00:35,170 --> 00:00:37,990
-分配事件来支持其他的
+将表项的点击事件传递到其它的fragment。
 the activity must know how to dispatch the event to the other
 
 13
 00:00:37,990 --> 00:00:41,000
-fragment。 让我们保持这样的想法，我们的fragment不一定总是在同样的
+记住fragment不一定非得在同一个activity中，
 fragments. Keep in mind that our fragment doesn't always have to be
 
 14
 00:00:41,000 --> 00:00:43,860
-活动中工作， 为了能够让前段的fragment可以和
+为了能够让forecast fragment可以和
 used in the same activity, in order for the forecast fragment to
 
 15
 00:00:43,860 --> 00:00:47,280
-主要活动沟通，我们必须创建一个反馈接口。
+main activity进行交互，我们必须创建一个回调接口。
 talk to the main activity we should create a callback interface. It's
 
 16
 00:00:47,280 --> 00:00:50,390
-最好来设想fragment将会一直跟一个
+更好的说法是fragment总是属于实现了
 a better assumption to say that the fragment will always be within
 
 17
 00:00:50,390 --> 00:00:53,730
-活动互动，并且这样反馈可以说明
+这个回调函数的activity中，
 an activity that implements this callback than to say that
 
 18
 00:00:53,730 --> 00:00:56,980
-前段fragment将会总在主要活动之内。
+而不是说它总是在main activity。
 the forecast fragment will always be inside the main activity. The
 
 19
 00:00:56,980 --> 00:00:59,660
-这时有一个好的例子就是详细fragment如何在两个不同的
+detail fragment就是fragment在两个不同activity被调用
 detail fragment is a good example of how a fragment can
 
 20
 00:00:59,660 --> 00:01:02,170
-活动中被使用了。 主要活动和详细
+的很好的例子, main activity和detail activity。
 be used in two different activities. The main activity and the
 
 21
 00:01:02,170 --> 00:01:05,120
-活动。所以我们不能够仅仅依靠活动反馈的
+所以我们并不依靠activity返回特定的activity类
 detail activity. So don't rely on get activity returning a
 
 22
 00:01:05,120 --> 00:01:08,830
-类。我们需要用gist，用
+使用我们这里提供的实现要点，
 specific activity class. Using the gist that we provided, use a
 
 23
 00:01:08,830 --> 00:01:11,750
-反馈类来通知活动列表被
+使用回调类来通知activity：一个列表项被选定。
 callback class to notify the activity that a list item has
 
 24
 00:01:11,750 --> 00:01:15,310
-选择了。看看下面关于选项监听的提示。
+注意一下关于表项点击的监听函数的提示
 been selected. See the hint below on the item click listener.
 
 25
 00:01:15,310 --> 00:01:18,622
-这样，活动就可以被启动详细活动或者
+之后activity要么打开detail activity，要么替换detail fragment
 Then the activity can either launch the detail activity or
 
 26
 00:01:18,622 --> 00:01:21,230
-去替换详细fragment，基于设备是一个手机还是一个
+主要看当前设备是一个手机还是一个平板电脑
 replace the detail fragment, based on whether it's a phone or
 
 27
 00:01:21,230 --> 00:01:23,460
-平板。当你在做这类事情的时候，你可能面临这样
+当你在完成这个功能的时候，你可能面临这样
 tablet. When you work on this task, you'll run into
 
 28
 00:01:23,460 --> 00:01:25,860
-iGetter问题，如何把选择的数据传入
+一个问题：如何把选择的数据传入
 an issue of how to pass the selected date to the
 
 29
 00:01:25,860 --> 00:01:29,120
-详细fragment。 你本能的会想要创建一个
+detail fragment。 你会本能地去创建一个
 detail fragment. Now your instinct might say to create a
 
 30
 00:01:29,120 --> 00:01:32,910
-自定义的构造器来传入你的数据。然而，我们
+自定义的构造函数来传入你的数据。但是，我们
 custom constructor where you can pass in the date. However, we
 
 31
 00:01:32,910 --> 00:01:37,130
-不需要这样的做法。如果你从没转动过
+通常不自定义fragment的构造函数。如果你从没转动过
 don't normally create custom fragment constructors. If you ever rotate the
 
 32
 00:01:37,130 --> 00:01:40,790
-设备的视角，系统更不不会去执行你的构造器
+设备的视角，系统就不会去执行自定义的构造函数
 device, for example, the system can't call your custom fragment constructor
 
 33
@@ -165,27 +165,27 @@ with the right parameters, however it can use the
 
 34
 00:01:42,980 --> 00:01:46,270
-空的构造器，并且会用你之前使用的一些数据来进行初始化
+空的构造方法，并且会用你之前使用的一些数据来进行初始化
 empty fragment constructor and initialize it with the same bundle
 
 35
 00:01:46,270 --> 00:01:48,930
-所以，如果你想要把对的信息代入并
+所以，如果你想要把信息代入并
 of arguments you used earlier. So to pass information to
 
 36
 00:01:48,930 --> 00:01:52,950
-初始化一个fragment，你就创建一个键值对的bundel，
+初始化一个fragment，你就创建键值对的bundel，
 initialize a fragment, create a bundle of key value pairs,
 
 37
 00:01:52,950 --> 00:01:54,480
-同时把他们设置成fragment的内容。
+同时把他们设置成fragment的参数。
 and then set that as the arguments on the
 
 38
 00:01:54,480 --> 00:01:57,330
-不用被这些arguments bundle和 savedInstanceState bundle
+别把arguments bundle和 savedInstanceState bundle
 fragment. Don't confuse this arguments
 
 39
@@ -200,56 +200,56 @@ Once a fragment has been initialized, you can't change the
 
 41
 00:02:02,350 --> 00:02:06,460
-内容。你可以读取内容。
+参数。你只能读它们，就像这里写的一样。
 arguments. You can only read from them, as seen here.
 
 42
 00:02:06,460 --> 00:02:09,500
-换句话说就是那些储存了的bundle是为了储存fragment变化时的
+换句话说savedInstanceState是为了储存fragment运行时的
 On the other hand the saved state bundle is for storing information
 
 43
 00:02:09,500 --> 00:02:11,900
-信息的。你可以把它植入进
+状态信息的。你可以把它放入
 once a fragment has been running. And you can populate it in
 
 44
 00:02:11,900 --> 00:02:13,980
-savedInstanceState 方法中。这bundle
+savedInstanceState 方法中。这个bundle
 the on savedInstanceState method. The bundle
 
 45
 00:02:13,980 --> 00:02:16,510
-可以预留一个位置如果设备的方向改变或者
+可以在屏幕发生旋转时，
 can preserve state across orientation changes
 
 46
 00:02:16,510 --> 00:02:19,270
-那个fragment或活动被系统关闭了。 这就是
+或者fragment或activity被系统释放的时候保存设备状态。
 or if the fragment or activity gets killed by the system. That's why
 
 47
 00:02:19,270 --> 00:02:22,950
-为什么你再次从onCreate 或者 onCreateView 方法中得到它。 这就是
+为什么你会再次从onCreate 或者 onCreateView 方法中得到它。 
 you receive it back again in the onCreate or onCreateView methods. This
 
 48
 00:02:22,950 --> 00:02:25,030
-我们的应用应该有的功能。当你触碰了
+当你完成后，程序应该是介个样子滴。
 is what the app should look like when you're done. When you
 
 49
 00:02:25,030 --> 00:02:28,170
-不同的日期，应用会更新详细信息。你可以
+当你选择了不同的日期，应用会更新detail 面板。你可以
 tap on a different date, it updates the detail pane. You can
 
 50
 00:02:28,170 --> 00:02:29,970
-把默认的数据移除因为
+删除之前代码里的写死的页面数据了，
 remove any hard coded data because
 
 51
 00:02:29,970 --> 00:02:31,880
-这些布局现在时动态实施的。
+因为这个布局现在可以动态更新了。
 the layout should be populated dynamically now.
 

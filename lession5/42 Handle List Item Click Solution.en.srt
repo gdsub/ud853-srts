@@ -1,21 +1,21 @@
 1
 00:00:00,170 --> 00:00:02,516
-在前端的Fragment类里，我们在gist里面加上一个
+在Forecast Fragment类里，
 In the Forecast Fragment class, we add the callback
 
 2
 00:00:02,516 --> 00:00:06,020
-反馈机制。然后在onCreateView的方法中
+我们添加一个要点里列出的回调函数。然后在onCreateView的方法中
 that was provided in the gist. Then in the onCreateView
 
 3
 00:00:06,020 --> 00:00:09,200
-我们修改以下点击的行为。 当一个项目被
+我们修改表项被点击的操作。 当一个项目被
 method, we modify the item click behavior. When an
 
 4
 00:00:09,200 --> 00:00:11,660
-点击之后，我们移动光标至那个点击后的位置，
+点击之后，将Cursor移动至那个所点击 的位置，
 item is clicked, we move the cursor to that position
 
 5
@@ -25,236 +25,236 @@ and then we read out the date string. We
 
 6
 00:00:14,060 --> 00:00:17,300
-使用getActivity并且把这个加入进反馈的
+调用getActivity方法，并且把它类型转换为Callback对象
 call getActivity and then we cast it to a Callback
 
 7
 00:00:17,300 --> 00:00:20,410
-目标。然后我们再把字符串数据跟onItemSelected一起
+然后我们调用onItemSelected方法，并将日期字符作为参数传递。
 object. And then we call onItemSelected, with that date
 
 8
 00:00:20,410 --> 00:00:25,450
-调用。然后在MainActivity中，我们写出反馈接口的代码。
+然后在MainActivity中，我们实现回调函数的代码。
 string. Then in the MainActivity, we implement this Callback interface.
 
 9
 00:00:25,450 --> 00:00:28,700
-在onItemSelected方法中，我们延续这种我们之
+在onItemSelected方法中，
 In the onItemSelected method, we fork behavior based on
 
 10
 00:00:28,700 --> 00:00:31,530
-前定义过的双窗口的特性。如果我们是在双
+我们根据之前定义的TwoPane的值来决定接下来的操作。如果我们是在双
 the TwoPane variable that we defined earlier. If we're
 
 11
 00:00:31,530 --> 00:00:34,650
-窗口状态中，我们需要创建一个新的DetailFragment
+面板状态中，我们需要创建一个新的DetailFragment
 in TwoPane mode, then we create a new DetailFragment
 
 12
 00:00:34,650 --> 00:00:37,180
-来使用arguments bundle的日期数据。 然后我们
+来使用arguments bundle的日 期数据。 然后我们
 using the date in the arguments bundle. And then
 
 13
 00:00:37,180 --> 00:00:41,420
-把weather_detail_container的数据替换成已经有的fragment。然而，
+用weather_detail_container替换已经有的fragment。不过，
 we replace the existing fragment in the weather_detail_container. Otherwise,
 
 14
 00:00:41,420 --> 00:00:43,900
-在单窗口状态中，我们需要创建一个新的意向来
+在单面板状态中，我们需要创建一个新的意向来
 in OnePane mode, we create a new intent to
 
 15
 00:00:43,900 --> 00:00:46,500
-启动这个详细活动，去把日期设置成一个额外意向
+启动detail activity，并把日期数据放到Intent Extra里
 launch the detail activity setting the date as an
 
 16
 00:00:46,500 --> 00:00:50,720
-。在详细的活动里，需要修改一下onCreate方法，
+。在detail activity里，需要修改一下onCreate方法，
 intent extra. In the detail activity, we modify the onCreate
 
 17
 00:00:50,720 --> 00:00:53,950
-目的是来读取从主要活动中的
+目的是来读取从main activity传入的intent数据
 method to read the intent extras from the intent that
 
 18
 00:00:53,950 --> 00:00:56,840
-一些额外的意向。我们把这些日期记下来并且
+我们把这些日期数据放入bundle中，
 came from the main activity. We take this date and set
 
 19
 00:00:56,840 --> 00:00:59,700
-在arguments bundle用作初始化详细fragment
+用这个bundle来初始化detail fragment
 it in the arguments bundle to initialize the detail fragment.
 
 20
 00:00:59,700 --> 00:01:03,500
-同时详细fragment被动态的加入进这个显示框内。在
+同时将detail fragment动态的加入进这个容器内。在
 And we dynamically add the detail fragment to this container. In
 
 21
 00:01:03,500 --> 00:01:06,730
-这个详细fragment中，创建loader的方法被修改，
+detail fragment中，修改onCreateLoader方法
 the detail fragment, we modify the on create loader method
 
 22
 00:01:06,730 --> 00:01:09,710
-用来读取那些输入的参数。我们需要这些
+来读取那些传入的参数。我们使用
 to read from the arguments that were passed in. We get
 
 23
 00:01:09,710 --> 00:01:12,270
-日期的字符串并且跟地点字符串一起来
+日期的字符串并且用它
 the date string out and use it with the location
 
 24
 00:01:12,270 --> 00:01:15,760
-创建一个URI，最后查询获取这个内容提供者(content provider).
+和地点字符串一起组成一个URI来请求Content provider。
 string to build up the Uri to query the content provider.
 
 25
 00:01:15,760 --> 00:01:18,790
-我们还需要移除一些对于将要进入的一些intent。
+我们还需要移除一些对于传入Intent的依赖。
 We also remove any reliance on the incoming intent.
 
 26
 00:01:18,790 --> 00:01:21,480
-通过替代使用一个arguments bundle可以完成。举个例子
+使用一个arguments bundle来替代它。举个例子
 We switch it to use the arguments bundle, instead. For
 
 27
 00:01:21,480 --> 00:01:25,220
-在onActivityCreated方法中， 需要去初始化一个loader
+在onActivityCreated方法中，只有在参数不为空时
 example, in the onActivityCreated method, we only initialize the loader
 
 28
 00:01:25,220 --> 00:01:28,620
-如果那个arguments的值不是null。在 onResume 方法中，
+我们才会初始化loader。在 onResume 方法中，
 if the arguments is not null. In the onResume method,
 
 29
 00:01:28,620 --> 00:01:31,060
-我们也需要修改一些条件，这样程序会帮忙检查这个
+我们也需要修改一些条件，这样程序会检查这个
 we also modify the condition so that it checks that
 
 30
 00:01:31,060 --> 00:01:34,520
-参数不是null值。 当你在平板上
+bundle是不是空。 当你在平板上
 the arguments bundle is not null. When you try it
 
 31
 00:01:34,520 --> 00:01:36,990
-测试的时候，这是就会出现一个我们必须要
+测试的时候，会出现一个页面导航相关的bug
 out on the tablet, there is one bug related to
 
 32
 00:01:36,990 --> 00:01:40,810
-修复的bug。这个bug会说我们选择了明天的日期。
+比如我们选择了未来的日期
 navigation that we should fix. Say we select tomorrows date.
 
 33
 00:01:40,810 --> 00:01:43,210
-当你选择了设置功能同时触碰了
+如果你转向设置页面
 If you navigate to the settings activity and then hit
 
 34
 00:01:43,210 --> 00:01:46,980
-向上的按键，这个详细的fragment就成空白的。 这是因为
+然后点击向上的按键，detail fragment就变成空白的。 这是因为
 the up button, the detail fragment is blank. That's because
 
 35
 00:01:46,980 --> 00:01:49,840
-一个全新的主要活动的实例被触发并且
+系统重新实例化了一个main activity
 a brand new instance of main activity got launched and
 
 36
 00:01:49,840 --> 00:01:52,880
-在这个全新的实例中，没有任何能被选择的东西。 我们要来修复
+而在新的实例中，我们什么都没选择。 
 for a brand new instance, nothing is selected yet. To fix
 
 37
 00:01:52,880 --> 00:01:56,170
-这个bug，需要注意，在设置活动按键被按下之后，
+要解决这个bug，在设置页面的上键被按下之后，
 this, when the settings activity up button is pressed, we
 
 38
 00:01:56,170 --> 00:01:58,690
-必须要把之前运行的那个实例在主要活动中来
+必须要把之前运行的main activity实例找出来
 want to navigate to the previous running instance of the
 
 39
 00:01:58,690 --> 00:02:02,370
-找出来，这个实例就是日期选项中被选择的明天选项。千万不要
+找出来，而且这时选择了未来的事件。而不去
 main activity, where the tomorrow item is selected. And not
 
 40
 00:02:02,370 --> 00:02:06,600
-去创建一个新的实例。 在设置活动里，
+创建一个新的main activity实例。 在设置页面里，
 create a new instance of main activity. In the settings activity,
 
 41
 00:02:06,600 --> 00:02:09,620
-重写这个方法。这就使系统来调用这个方法，
+重写这个方法。系统通过调用这个方法，
 overwrite this method. Which the system will call in
 
 42
 00:02:09,620 --> 00:02:12,430
-目的是来使用父类的活动意向来满足向上按键的
+来获得上一级activity的intent来响应上按键的操作。
 order to get the parent activity intent for the up
 
 43
 00:02:12,430 --> 00:02:15,310
-行为需求。当我们拿到父类的活动意
+当我们拿到父activiyt的Intent后
 button behaviour. Get the parent activity intent from the
 
 44
 00:02:15,310 --> 00:02:18,160
-向之后，我们就必须在主要活动中创建一个新的
+它会在main activity中创建一个新的
 super class, this should create a new intent to main
 
 45
 00:02:18,160 --> 00:02:23,500
-活动意向。然后加入一个意向标志，叫做 FLAG_ACTIVITY_CLEAR_TOP。
+Intent。然后加入一个意向标志，叫做 FLAG_ACTIVITY_CLEAR_TOP。
 activity. Then add the intent flag, called FLAG_ACTIVITY_CLEAR_TOP. This
 
 46
 00:02:23,500 --> 00:02:26,080
-这个标志会告诉我们是否主要活动已经在我们
+这个标志会告诉我们main activity是否已经在我们
 flag indicates that we should check if the main activity
 
 47
 00:02:26,080 --> 00:02:28,400
-的任务中运行。我们如果要使用这个
+的任务中运行。我们要使用这个
 is already running in our task. And to use
 
 48
 00:02:28,400 --> 00:02:31,890
-标志，我们除了必须要创建一个新的活动实例外。
+标志，来避免必须要创建一个新的活动实例外。
 that one, instead of creating a new main activity instance.
 
 49
 00:02:31,890 --> 00:02:34,730
-同时这个方法不能在在之前出现。所以我们
+同时这个方法不能在Jelly Bean之前安卓系统上使用。所以我们
 Also, this method didn't exist prior to jelly bean, so we need
 
 50
 00:02:34,730 --> 00:02:39,120
-在目标API里加入这个声明。所以如果你已经查找了一些关于
+需要在目标API里加入这个声明。所以如果你已经查找了一些关于
 to add this at target API annotation. If you check the documentation
 
 51
 00:02:39,120 --> 00:02:44,240
-活动类的文档，getParentActivityIntent 方法仅有在API 16级之后才被加入。
+activity类的文档，getParentActivityIntent 方法仅有在API 16级之后才被加入。
 for the activity class, the getParentActivityIntent method was only added in API
 
 52
 00:02:44,240 --> 00:02:48,110
-你可以在那个16版本中的找的到
+你可以在16版本中的找到该方法。
 level 16. And you can check that version 16 maps to jelly bean.
 
