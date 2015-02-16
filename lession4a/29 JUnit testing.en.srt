@@ -1,216 +1,216 @@
-1
+ï»¿1
 00:00:00,470 --> 00:00:04,600
-µ«ÊÇÎÒÃÇĞèÒªµÈÒ»»á²ÅÄÜ²âÊÔÎÒÃÇµÄ´úÂë  ÎÒÃÇÈÔÈ»ĞèÒª
+ä½†æ˜¯æˆ‘ä»¬éœ€è¦ç­‰ä¸€ä¼šæ‰èƒ½æµ‹è¯•æˆ‘ä»¬çš„ä»£ç   æˆ‘ä»¬ä»ç„¶éœ€è¦
 But it will be a while before we can test this in our code. We still are going
 
 2
 00:00:04,600 --> 00:00:08,870
-ÊµÏÖºÜ¶àµÄ´úÂë  °üÀ¨UI½çÃæ
+å®ç°å¾ˆå¤šçš„ä»£ç   åŒ…æ‹¬UIç•Œé¢çš„æ”¹å˜
 to implement a whole layer on top of it along with a bunch of UI changes.
 
 3
 00:00:08,870 --> 00:00:13,740
-ĞÒÔËµÄÊÇ  ÎÒÃÇ¿ÉÒÔÈÃJUnit²âÊÔ°ïÖúÎÒÃÇÍê³ÉÕâĞ©  ´ó¼Ò×ĞÏ¸¿´
+å¹¸è¿çš„æ˜¯  æˆ‘ä»¬å¯ä»¥è®©JUnitæµ‹è¯•å¸®åŠ©æˆ‘ä»¬å®Œæˆè¿™äº›  å¤§å®¶ä»”ç»†çœ‹
 Fortunately, we can implement JUnit test here to help. And now for
 
 4
 00:00:13,740 --> 00:00:18,610
-ÎÒµÄ²Ù×÷  ÎÒÃÇÏÈÔÚAndroid Studio¹¤³ÌµÄsrcÎÄ¼ş¼ĞÏÂ´´½¨Ò»¸ö
+æˆ‘çš„æ“ä½œ  æˆ‘ä»¬å…ˆåœ¨Android Studioå·¥ç¨‹çš„srcæ–‡ä»¶å¤¹ä¸‹åˆ›å»ºä¸€ä¸ª
 some magic. We'll add a directory to the source directory of our Android Studio
 
 5
 00:00:18,610 --> 00:00:23,640
-androidTestÎÄ¼ş¼Ğ  È»ºóÔÚËüµÄÏÂÃæÔÙ¼ÌĞø´´½¨Ò»¸öjavaÎÄ¼ş¼Ğ
+androidTestæ–‡ä»¶å¤¹  ç„¶ååœ¨å®ƒçš„ä¸‹é¢å†ç»§ç»­åˆ›å»ºä¸€ä¸ªå«Javaçš„æ–‡ä»¶å¤¹
 project called androidTest. And then, another one underneath it called java.
 
 6
 00:00:25,460 --> 00:00:29,380
-ÕâÑùAndroid Studio¾ÍÖªµÀÎÒÃÇÓĞÒ»¸öÕë¶ÔAppµÄ²âÊÔ
+è¿™æ ·Android Studioå°±çŸ¥é“æˆ‘ä»¬æœ‰ä¸€ä¸ªé’ˆå¯¹Appçš„æµ‹è¯•
 This is the way we tell Android Studio there's a test target in gradle for
 
 7
 00:00:29,380 --> 00:00:34,400
-ÏÖÔÚÎÒÃÇ´´½¨Ò»¸ö²âÊÔ°ü  Õâ¸ö²âÊÔ°üµÄ°üÃûÊÇÖ÷°üÃûºóÃæ
+ç°åœ¨æˆ‘ä»¬åˆ›å»ºä¸€ä¸ªæµ‹è¯•åŒ…  è¿™ä¸ªæµ‹è¯•åŒ…çš„åŒ…åæ˜¯ä¸»åŒ…ååé¢
 our App. Now we create a test package that matches our main package with
 
 8
 00:00:34,400 --> 00:00:39,650
-ÔÙ¼ÓÉÏtestºó×º  ÔÚÕâ¸ö²âÊÔ°üÖĞ´´½¨Ò»¸öĞÂµÄ
+å†åŠ ä¸Šteståç¼€  åœ¨è¿™ä¸ªæµ‹è¯•åŒ…ä¸­åˆ›å»ºä¸€ä¸ªæ–°çš„
 an extra test directory on the end. Create a new class called
 
 9
 00:00:39,650 --> 00:00:46,300
-½ĞfullTestSuiteµÄÀà  Ìí¼ÓÉÏÕâĞ©´úÂë
+å«fullTestSuiteçš„ç±»  æ·»åŠ ä¸Šè¿™äº›ä»£ç 
 fullTestSuite in the test package. Add this code. This
 
 10
 00:00:46,300 --> 00:00:49,970
-ÕâÊÇÒ»Ğ©¿ÉÒÔÈÃÎÒÃÇ½«ÆäËüÀàÌí¼Óµ½²âÊÔÖĞµÄÄ£°å´úÂë
+è¿™æ˜¯ä¸€äº›å¯ä»¥è®©æˆ‘ä»¬å°†å…¶å®ƒç±»æ·»åŠ åˆ°æµ‹è¯•ä¸­çš„æ¨¡æ¿ä»£ç 
 is some boiler plate code that will allow us to add tests in additional classes.
 
 11
 00:00:52,350 --> 00:00:59,747
-ÏÂÃæÎÒÃÇÀ´´´½¨Ò»¸ö¼Ì³Ğ×ÔAndroidTestCaseµÄTestDbÀà
+ä¸‹é¢æˆ‘ä»¬æ¥åˆ›å»ºä¸€ä¸ªç»§æ‰¿è‡ªAndroidTestCaseçš„TestDbç±»
 Next, we'll create a TestDb class that extends AndroidTestCase [NOISE] and
 
 12
 00:00:59,747 --> 00:01:04,824
-Ìí¼ÓÒ»¸ö´´½¨Êı¾İ¿âµÄ²âÊÔ  ¿ÉÒÔÕâÑù½øĞĞ²âÊÔÊÇÒòÎªTestRunner»á
+æ·»åŠ ä¸€ä¸ªåˆ›å»ºæ•°æ®åº“çš„æµ‹è¯•  å¯ä»¥è¿™æ ·è¿›è¡Œæµ‹è¯•æ˜¯å› ä¸ºTestRunnerä¼š
 add a test that creates our Db. The way this works is that the TestRunner
 
 13
 00:01:04,824 --> 00:01:08,822
-°´ÕÕ¶¨ÒåµÄË³ĞòÖ´ĞĞÕâ¸öÀàÖĞµÄ
+æŒ‰ç…§å®šä¹‰çš„é¡ºåºæ‰§è¡Œè¿™ä¸ªç±»ä¸­çš„
 will execute every function in our class that begins with test in the order that
 
 14
 00:01:08,822 --> 00:01:12,950
-ÒÔtest¿ªÍ·µÄ·½·¨  Ã¿¸ö²âÊÔ¶¼ĞèÒªÓĞÒ»ÖÖµ¼ÖÂ¶ÏÑÔÊ§°Ü
+ä»¥testå¼€å¤´çš„æ–¹æ³•  æ¯ä¸ªæµ‹è¯•éƒ½éœ€è¦æœ‰ä¸€ç§å¯¼è‡´æ–­è¨€å¤±è´¥
 they are declared in the class. Each test should have a failure path that
 
 15
 00:01:12,950 --> 00:01:17,810
-µÄÇé¿ö  ÔÚ½øĞĞ²âÊÔÖ®Ç°ÎÒÃÇÏÈÉ¾³ıÊı¾İ¿â  ÕâÑù
+çš„æƒ…å†µ  åœ¨è¿›è¡Œæµ‹è¯•ä¹‹å‰æˆ‘ä»¬å…ˆåˆ é™¤æ•°æ®åº“  è¿™æ ·
 uses an assert. We start by deleting the database before testing it. So,
 
 16
 00:01:17,810 --> 00:01:24,180
-ÎÒÃÇ¿ÉÒÔ½øĞĞ¼ò½àµÄ²âÊÔ  ÎÒÃÇÏÈµ½ÔËĞĞappµÄÏÂÀ­²Ëµ¥ÖĞÀ´Æô¶¯²âÊÔ
+æˆ‘ä»¬å¯ä»¥è¿›è¡Œç®€æ´çš„æµ‹è¯•  æˆ‘ä»¬å…ˆåˆ°è¿è¡Œappçš„ä¸‹æ‹‰èœå•ä¸­æ¥å¯åŠ¨æµ‹è¯•
 we have a clean test. Now, to run the test we go to the app start drop down.
 
 17
 00:01:24,180 --> 00:01:28,740
-Ñ¡Ôñ±à¼­ÅäÖÃ  ÔÙÑ¡ÔñÌí¼ÓÀ´Ìí¼ÓÒ»¸öĞÂµÄÅäÖÃ
+é€‰æ‹©ç¼–è¾‘é…ç½®  å†é€‰æ‹©æ·»åŠ æ¥æ·»åŠ ä¸€ä¸ªæ–°çš„é…ç½®
 And select Edit Configurations. We select Plus to add a new configuration. And
 
 18
 00:01:28,740 --> 00:01:34,710
-Ñ¡ÔñÕë¶ÔAppÄ£¿éµÄAndroid Tests  ²¢¶ÔËü½øĞĞÃüÃû
+é€‰æ‹©é’ˆå¯¹Appæ¨¡å—çš„Android Tests  å¹¶å¯¹å®ƒè¿›è¡Œå‘½å
 select Android Tests Against Module App. Now we name the test.
 
 19
 00:01:34,710 --> 00:01:38,190
-×¢ÒâÒ»ÏÂÕâÀïÄ¬ÈÏÊÇÔËĞĞÄ£ÄâÆ÷µÄ  ËùÒÔ
+æ³¨æ„ä¸€ä¸‹è¿™é‡Œé»˜è®¤æ˜¯è¿è¡Œæ¨¡æ‹Ÿå™¨çš„  æ‰€ä»¥
 Now note that it tends to target the emulator by default. So,
 
 20
 00:01:38,190 --> 00:01:42,000
-ÒªÊ¹ÓÃÕæÊµµÄÉè±¸µÄ»°ÎÒÃÇÒªÑ¡ÔñÏÔÊ¾Ñ¡Ôñ¶Ô»°¿òµÄÑ¡Ïî
+è¦ä½¿ç”¨çœŸå®çš„è®¾å¤‡çš„è¯æˆ‘ä»¬è¦é€‰æ‹©æ˜¾ç¤ºé€‰æ‹©å¯¹è¯æ¡†çš„é€‰é¡¹
 I want to use an actual device I'm going to select Show Chooser Dialogue.
 
 21
 00:01:42,000 --> 00:01:48,680
-ÏÖÔÚÎÒÃÇ¾Í¿ÉÒÔÔÚÎÒÃÇµÄÉè±¸ÉÏ½øĞĞ²âÊÔÁË  ÕâÀïÏÔÊ¾²âÊÔÍ¨¹ıÁË
+ç°åœ¨æˆ‘ä»¬å°±å¯ä»¥åœ¨æˆ‘ä»¬çš„è®¾å¤‡ä¸Šè¿›è¡Œæµ‹è¯•äº†  è¿™é‡Œæ˜¾ç¤ºæµ‹è¯•é€šè¿‡äº†
 Now we can just run the test against our device. And, it passes. So
 
 22
 00:01:48,680 --> 00:01:54,160
-ÎÒÃÇÔÙÀ´½øĞĞÒ»ÏÂÊı¾İ¿âµÄ²åÈëºÍ¶ÁÈ¡²âÊÔ  ×÷Îª¿ªÊ¼
+æˆ‘ä»¬å†æ¥è¿›è¡Œä¸€ä¸‹æ•°æ®åº“çš„æ’å…¥å’Œè¯»å–æµ‹è¯•  ä½œä¸ºå¼€å§‹
 let's create a database insert and read test. At the beginning of it,
 
 23
 00:01:54,160 --> 00:01:58,270
-ÎÒÃÇÏòÃ¿Ò»¸ö±íÖĞ²åÈëÒ»ĞĞÊı¾İ  ÎÒÃÇÏÈÊ¹ÓÃÒ»Ğ©ĞéÄâµÄ
+æˆ‘ä»¬å‘æ¯ä¸€ä¸ªè¡¨ä¸­æ’å…¥ä¸€è¡Œæ•°æ®  æˆ‘ä»¬å…ˆä½¿ç”¨ä¸€äº›è™šæ‹Ÿçš„
 we'll insert a single record into each table. We'll begin with some dummy
 
 24
 00:01:58,270 --> 00:02:04,450
-Î»ÖÃĞÅÏ¢  ÎÒÃÇÊ¹ÓÃdbHelper¶ÔÏó»ñÈ¡Ò»¸ö¿ÉĞ´Êı¾İ¿âÊµÀı
+ä½ç½®ä¿¡æ¯  æˆ‘ä»¬ä½¿ç”¨dbHelperå¯¹è±¡è·å–ä¸€ä¸ªå¯å†™æ•°æ®åº“å®ä¾‹
 data for our location. We'll use the dbHelper to get a writeable database.
 
 25
 00:02:04,450 --> 00:02:08,180
-Õâ¾ÍÊÇÎÒÃÇÖ®Ç°ÔÚÏîÄ¿ÖĞÉè¼ÆµÄÊ¹ÓÃÊı¾İ¿âµÄ·½Ê½
+è¿™å°±æ˜¯æˆ‘ä»¬ä¹‹å‰åœ¨é¡¹ç›®ä¸­è®¾è®¡çš„ä½¿ç”¨æ•°æ®åº“çš„æ–¹å¼
 This is exactly how we will use the database when we code it up in our project.
 
 26
 00:02:09,870 --> 00:02:14,110
-È»ºó´´½¨Ò»¸öContentValues¶ÔÏó  ËüÔÚAndroidÖĞ¿ÉÒÔÓÃÀ´·½±ãµØ
+ç„¶ååˆ›å»ºä¸€ä¸ªContentValueså¯¹è±¡  å®ƒåœ¨Androidä¸­å¯ä»¥ç”¨æ¥æ–¹ä¾¿åœ°
 We'll then create a ContentValues object, which is a handy helper object that
 
 27
 00:02:14,110 --> 00:02:18,280
-´æ´¢¼üÖµ¶Ô  ÎÒÃÇ»á°ÑÕâĞ©ĞéÄâÊı¾İ´æÈë
+å­˜å‚¨é”®å€¼å¯¹  æˆ‘ä»¬ä¼šæŠŠè¿™äº›è™šæ‹Ÿæ•°æ®å­˜å…¥
 Android uses to store values and keys. We'll store our dummy data into
 
 28
 00:02:18,280 --> 00:02:22,870
-LocationEntryÀàÖĞ¶¨ÒåµÄ¶ÔÓ¦ÁĞÖĞ  ×¢Òâµ½ÎªÁËÖ±½ÓÍ¨¹ıÀàÃû
+LocationEntryç±»ä¸­å®šä¹‰çš„å¯¹åº”åˆ—ä¸­  æ³¨æ„åˆ°ä¸ºäº†ç›´æ¥é€šè¿‡ç±»å
 the columns from our LocationEntry contract. Note that in order to make it
 
 29
 00:02:22,870 --> 00:02:26,870
-½øĞĞ±àÂë  ÎÒÔÚÕâÀï×öÁËÒ»Ğ©¶îÍâµÄµ¼Èë°üÖĞµÄÀàµÄ²Ù×÷
+è¿›è¡Œç¼–ç   æˆ‘åœ¨è¿™é‡Œåšäº†ä¸€äº›é¢å¤–çš„å¯¼å…¥åŒ…ä¸­çš„ç±»çš„æ“ä½œ
 work with this abbreviated syntax, I did have to add some extra imports up here.
 
 30
 00:02:28,320 --> 00:02:33,490
-È»ºóÎÒÃÇ°ÑÊı¾İ²åÈëÊı¾İ¿â  ²¢ÑéÖ¤²åÈëÕâÒ»ĞĞÊı¾İ³É¹¦ÁË
+ç„¶åæˆ‘ä»¬æŠŠæ•°æ®æ’å…¥æ•°æ®åº“  å¹¶éªŒè¯æ’å…¥è¿™ä¸€è¡Œæ•°æ®æˆåŠŸäº†
 We then insert the data into our database, and verified that we got a row back.
 
 31
 00:02:33,490 --> 00:02:37,180
-ÎÒ·¢ÏÖÔÚ²âÊÔÀàÖĞ´òÓ¡Ò»Ğ©logĞÅÏ¢ÊÇ·Ç³£ÓĞÓÃµÄ
+æˆ‘å‘ç°åœ¨æµ‹è¯•ç±»ä¸­æ‰“å°ä¸€äº›logä¿¡æ¯æ˜¯éå¸¸æœ‰ç”¨çš„
 Now I find that it's helpful to put log messages into my test cases.
 
 32
 00:02:38,500 --> 00:02:43,170
-ÏÖÔÚÎÒÃÇÔÙÓÃÊı¾İ¿âµÄ¶Á²Ù×÷´ÓÊı¾İ¿âÖĞ¶ÁÈ¡³öÎÒÃÇÖ®Ç°´æÈëµÄ
+ç°åœ¨æˆ‘ä»¬å†ç”¨æ•°æ®åº“çš„è¯»æ“ä½œä»æ•°æ®åº“ä¸­è¯»å–å‡ºæˆ‘ä»¬ä¹‹å‰å­˜å…¥çš„
 Now we'll use the database read operations to pull our dummy data back out of
 
 33
 00:02:43,170 --> 00:02:47,930
-ĞéÄâÊı¾İ  ÎÒÃÇÔÚÕâÀïÊ¹ÓÃÒ»¸ö×Ô¶¨ÒåµÄÓ³Éä  ÀíÂÛÉÏ½²
+è™šæ‹Ÿæ•°æ®  æˆ‘ä»¬åœ¨è¿™é‡Œä½¿ç”¨ä¸€ä¸ªè‡ªå®šä¹‰çš„æ˜ å°„  ç†è®ºä¸Šè®²
 the database. We're making use of a custom projection here which, in theory,
 
 34
 00:02:47,930 --> 00:02:52,470
-Õâ»áÊ¹ÎÒÃÇ¸ü·½±ãµØ²éÕÒÎÒÃÇĞèÒªµÄÊı¾İ¼¯
+è¿™ä¼šä½¿æˆ‘ä»¬æ›´æ–¹ä¾¿åœ°æŸ¥æ‰¾æˆ‘ä»¬éœ€è¦çš„æ•°æ®é›†
 would make it easy to use our database cursor to query for the values we want.
 
 35
 00:02:52,470 --> 00:02:56,260
-ËäÈ»ÎÒÃÇÓÃÁË×Ô¶¨ÒåµÄÓ³Éä  µ«ÊÇËü²¢²»ÊÇ±ØĞëµÄ
+è™½ç„¶æˆ‘ä»¬ç”¨äº†è‡ªå®šä¹‰çš„æ˜ å°„  ä½†æ˜¯å®ƒå¹¶ä¸æ˜¯å¿…é¡»çš„
 We use a custom projection here. Although, it's not required.
 
 36
 00:02:56,260 --> 00:02:59,580
-Èç¹û²»Ê¹ÓÃ×Ô¶¨ÒåÓ³Éä  ÄÇÃ´»á·µ»Ø°üº¬ËùÓĞÁĞµÄÊı¾İ¼¯
+å¦‚æœä¸ä½¿ç”¨è‡ªå®šä¹‰æ˜ å°„  é‚£ä¹ˆä¼šè¿”å›åŒ…å«æ‰€æœ‰åˆ—çš„æ•°æ®é›†
 If the custom projection wasn't there, we would simply return all columns.
 
 37
 00:03:00,730 --> 00:03:04,220
-Ò»¸öÊı¾İ¿âÓÎ±êÊÇÓÃÀ´¶ÔÊı¾İ¿âÖĞµÄÊı¾İ¼¯½øĞĞ±éÀú²Ù×÷µÄ
+ä¸€ä¸ªæ•°æ®åº“æ¸¸æ ‡æ˜¯ç”¨æ¥å¯¹æ•°æ®åº“ä¸­çš„æ•°æ®é›†è¿›è¡Œéå†æ“ä½œçš„
 A database cursor is a control structure that enables traversal over
 
 38
 00:03:04,220 --> 00:03:09,220
-¿ØÖÆ½á¹¹  ÔÚAndroidÖĞ  ÕâÊÇÓÃÒ»¸öCursor¶ÔÏóÀ´±íÊ¾µÄ
+æ§åˆ¶ç»“æ„  åœ¨Androidä¸­  è¿™æ˜¯ç”¨ä¸€ä¸ªCursorå¯¹è±¡æ¥è¡¨ç¤ºçš„
 the records in a database. In Android, this is represented by a Cursor object.
 
 39
 00:03:10,530 --> 00:03:14,380
-Cursor¶ÔÏó¿ÉÒÔÈÃÎÒÃÇÔÚ²éÑ¯µÄ½á¹û¼¯ÖĞ½øĞĞ±éÀú²Ù×÷
+Cursorå¯¹è±¡å¯ä»¥è®©æˆ‘ä»¬åœ¨æŸ¥è¯¢çš„ç»“æœé›†ä¸­è¿›è¡Œéå†æ“ä½œ
 The Cursor object allows one to traverse between records in a query and
 
 40
 00:03:14,380 --> 00:03:17,360
-Ò²¿ÉÒÔ»ñÈ¡½á¹û¼¯ÖĞµÄÈÎÒâÊı¾İÏî
+ä¹Ÿå¯ä»¥è·å–ç»“æœé›†ä¸­çš„ä»»æ„æ•°æ®é¡¹
 get the contents of any individual column from a query.
 
 41
 00:03:18,920 --> 00:03:24,330
-ÏÖÔÚ  ÎÒÃÇÊ¹ÓÃcursor.moveToFirst()·½·¨À´ÒÔĞĞÎªµ¥Î»¶Ôcursor¶ÔÏó½øĞĞ²Ù×÷
+ç°åœ¨  æˆ‘ä»¬ä½¿ç”¨cursor.moveToFirst()æ–¹æ³•æ¥ä»¥è¡Œä¸ºå•ä½å¯¹cursorå¯¹è±¡è¿›è¡Œæ“ä½œ
 Now, we use cursor.moveToFirst() to populate our cursor with our row of data.
 
 42
 00:03:24,330 --> 00:03:29,790
-È»ºó¿ÉÒÔÔÙÍ¨¹ıÃ¿ÁĞµÄË÷Òı»ñÈ¡Êı¾İÏî  ×îºó
+ç„¶åå¯ä»¥å†é€šè¿‡æ¯åˆ—çš„ç´¢å¼•è·å–æ•°æ®é¡¹  æœ€å
 We can then pull out our data by index. Finally assert
 
 43
 00:03:29,790 --> 00:03:35,049
-¶ÔÕâĞ©Êı¾İºÍÖ®Ç°µÄĞéÄâÊı¾İÊÇ·ñÒ»Ñù½øĞĞ¶ÏÑÔ  ÏÖÔÚÔÙÔËĞĞÒ»ÏÂÎÒÃÇµÄ²âÊÔ
+å¯¹è¿™äº›æ•°æ®å’Œä¹‹å‰çš„è™šæ‹Ÿæ•°æ®æ˜¯å¦ä¸€æ ·è¿›è¡Œæ–­è¨€  ç°åœ¨å†è¿è¡Œä¸€ä¸‹æˆ‘ä»¬çš„æµ‹è¯•
 if it doesn't match our dummy data. And now, we get to run our tests again.
 
 44
@@ -219,5 +219,5 @@ if it doesn't match our dummy data. And now, we get to run our tests again.
 
 45
 00:03:39,620 --> 00:03:40,570
-ÕâÀïÏÔÊ¾²âÊÔÍ¨¹ıÁË
+è¿™é‡Œæ˜¾ç¤ºæµ‹è¯•é€šè¿‡äº†
 And they passed.

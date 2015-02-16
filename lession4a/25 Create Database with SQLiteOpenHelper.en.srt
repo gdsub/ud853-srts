@@ -1,11 +1,11 @@
-1
+﻿1
 00:00:00,220 --> 00:00:05,400
 关系弄清楚了。但是我们仍然没有数据库
 Now that's a contract. But we still don't have a database.
 
 2
 00:00:05,400 --> 00:00:10,960
-我们的数据库类会继承一个安卓类————SQLITEOpenHELPER
+我们的数据库类会继承一个安卓类-—SQLITEOpenHELPER
 Our database class will extend an Android class. SQLITEOpenHELPER.
 
 3
@@ -25,7 +25,7 @@ tables. For many apps, being able to upgrade to a new version without data loss
 
 6
 00:00:28,510 --> 00:00:34,585
-让我们来中data包中创建一个继承SQLITEOpenHelper
+让我们来data包中创建一个继承SQLITEOpenHelper
 is critical. Let's create a WeatherDBHelper class within the data package and
 
 7
@@ -95,12 +95,12 @@ location entry, I would normally write location entry first, but
 
 20
 00:01:30,100 --> 00:01:34,180
-但是天气条目很复杂。所以更好的做法是我解释下我们在做什么
+但是天气条目非常复杂。所以更好的做法是我解释下我们在做什么
 weather entry is pretty complicated. So I'd rather explain what we've done and
 
 21
 00:01:34,180 --> 00:01:38,890
-然后将地点条目交给你写。我们准备用原始SQL
+然后将地点条目交给你们写。我们准备用原始SQL
 leave location entry up to you. We're going to use raw SQL for
 
 22
@@ -115,7 +115,7 @@ At this point, it's helpful to import WeatherContract.locationentry and
 
 24
 00:01:47,612 --> 00:01:51,590
-WeatherContract.weatherentry。这会使我们的语句更容易读懂。我们从
+WeatherContract.weatherentry。这会使我们的SQL语句更容易读懂。我们从
 weather entry. It makes our query so much easier to read. We'll start with
 
 25
@@ -265,8 +265,8 @@ Our date text plus location must be unique. On conflict, replace the data.
 
 54
 00:03:56,140 --> 00:04:00,050
-这让我们从open weather EPI添加数据更轻松
-This allows us to insert new data from the open weather EPI easily.
+这让我们从open weather API添加数据更轻松
+This allows us to insert new data from the open weather API easily.
 
 55
 00:04:00,050 --> 00:04:04,080

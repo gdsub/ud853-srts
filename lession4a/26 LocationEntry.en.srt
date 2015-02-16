@@ -1,4 +1,4 @@
-1
+﻿1
 00:00:00,490 --> 00:00:05,280
 用地点条目关系中的数据构造一个语句来创建地点条目表
 Create a matching location entry table-creating query from the location entry

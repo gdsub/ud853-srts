@@ -1,17 +1,17 @@
-1
+﻿1
 00:00:00,260 --> 00:00:05,120
-现在我们要做的就是在onCreate()函数最下面
+现在我们已经完成一些了。接下来要做的就是在onCreate()函数最后面
 Well now we're getting somewhere. All we have to do is run those table creation
 
 2
 00:00:05,120 --> 00:00:10,274
-执行这些表的创建语句。等一下
-queries by calling exact sequel at the end of our on create function. But wait,
+调用execSQL来执行这些表的创建语句。等一下
+queries by calling execSQL at the end of our on create function. But wait,
 
 3
 00:00:10,274 --> 00:00:15,220
-在这里有SQliteOpenHelper的另一个函数，onUpgrade()。你可能会想
-there's another function in our SQliteOpenHelper, onUpgrade. You might think,
+在这里有SQLiteOpenHelper的另一个函数，onUpgrade()。你可能会想
+there's another function in our SQLiteOpenHelper, onUpgrade. You might think,
 
 4
 00:00:15,220 --> 00:00:16,830
@@ -25,7 +25,7 @@ I'm not upgrading anything yet. To make our development lives easier we're
 
 6
 00:00:21,040 --> 00:00:24,270
-我们准备在这里实现下标准类型的更新
+我们准备在这里实现下标准的onUpgrade()
 going to implement the most standard kind of onUpgrade there is.
 
 7
@@ -35,7 +35,7 @@ You see onUpgrade only fires if you change the version of your database.
 
 8
 00:00:29,265 --> 00:00:34,480
-注意，我们将版本传递进了SQliteOpenHelper的基本构造器
+注意，我们之前就把版本传递进了SQliteOpenHelper的基本构造器
 Now remember, we passed that version into the SQliteOpenHelper base constructor,
 
 9
