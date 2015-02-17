@@ -30,7 +30,7 @@ put it in the Layout and put it in the Layout-sw600dp folder.
 
 7
 00:00:19,870 --> 00:00:23,460
-更好的解决方案是声明一个style，这样，我们只有一个布局文件
+更好的解决方案是声明一个style，这样，我们虽然只有一个布局文件
 A better solution is to declare a style. So, we have one layout file but
 
 8
@@ -60,6 +60,6 @@ The two files have a different number of styles. If it's not declared in
 
 13
 00:00:43,840 --> 00:00:46,410
-它会退回基本style
+系统会默认选择Base Style中的定义。
 a higher folder, then it will just fall back to the Base style.
 

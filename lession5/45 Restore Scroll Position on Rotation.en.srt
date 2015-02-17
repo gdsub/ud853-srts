@@ -10,17 +10,17 @@ the bottom of the list and then you rotate the device, the selected
 
 3
 00:00:05,952 --> 00:00:08,888
-被选项不会重新被滚动到可见，你需要手动管理一下列表
+被选项不会重新被滚动到可见，你需要手动管理一下滑动列表
 item is no longer scrolled into view. You have to manually scroll the
 
 4
 00:00:08,888 --> 00:00:12,270
-这意味着我们要存储被选项的位置
+这意味着我们要存储被选表项的位置
 list. That means we should store the position of the selected item in
 
 5
 00:00:12,270 --> 00:00:14,430
-存入到savedInstanceState Bundle里
+并存入到savedInstanceState Bundle里
 the savedInstanceState Bundle. If the app
 
 6
