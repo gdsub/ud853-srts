@@ -1,34 +1,34 @@
-1
+ï»¿1
 00:00:00,100 --> 00:00:04,560
-¸ù¾İ×¢ÊÍËùËµ  ÎÒÃÇÒÑ¾­ÓĞÁËÎ»ÖÃĞÅÏ¢  ÈÃÎÒÃÇÔÙ¼ÓÉÏÒ»Ğ©ÌìÆøĞÅÏ¢
+æ ¹æ®æ³¨é‡Šæ‰€è¯´  æˆ‘ä»¬å·²ç»æœ‰äº†ä½ç½®ä¿¡æ¯  è®©æˆ‘ä»¬å†åŠ ä¸Šä¸€äº›å¤©æ°”ä¿¡æ¯
 All right, as the comment says below, now that we have a location let's add some
 
 2
 00:00:04,560 --> 00:00:09,270
-ÈÃÎÒÃÇÀ´ÊµÏÖÌìÆøĞÅÏ¢ÔÚÊı¾İ¿âÖĞµÄ²åÈëºÍ¶ÁÈ¡²âÊÔ  ÎÒ»á
+è®©æˆ‘ä»¬æ¥å®ç°å¤©æ°”ä¿¡æ¯åœ¨æ•°æ®åº“ä¸­çš„æ’å…¥å’Œè¯»å–æµ‹è¯•  æˆ‘ä¼š
 weather. Let's implement the weather part of our insert read db test. I'm going to
 
 3
 00:00:09,270 --> 00:00:14,700
-Ìá¹©Ò»Ğ©ĞéÄâÊı¾İ¸øÄãÃÇ  ×¢Òâµ½ÌìÆøµÄÎ»ÖÃĞÅÏ¢µÄkey¾ÍÊÇÖ®Ç°ÎÒÃÇ²åÈëµÄÎ»ÖÃ
+æä¾›ä¸€äº›è™šæ‹Ÿæ•°æ®ç»™ä½ ä»¬  æ³¨æ„ å¤©æ°”çš„ä½ç½®ä¿¡æ¯çš„keyå°±æ˜¯ä¹‹å‰æˆ‘ä»¬æ’å…¥çš„ä½ç½®
 give you some dummy data to help you out. Note that the location key is the row
 
 4
 00:00:14,700 --> 00:00:19,540
-Êı¾İµÄID  ÁíÍâ×¢ÒâÒ»µã  ÎÒÖ®ËùÒÔ¿ÉÒÔÖ±½ÓÊ¹ÓÃWeatherEntryÀàÃû
+æ•°æ®çš„ID  å¦å¤–æ³¨æ„ä¸€ç‚¹  æˆ‘ä¹‹æ‰€ä»¥å¯ä»¥ç›´æ¥ä½¿ç”¨WeatherEntryç±»å
 ID of the data we just inserted. Also note that I can use this short syntax for
 
 5
 00:00:19,540 --> 00:00:22,668
-ÊÇÒòÎªÎÒÔÚ×îÉÏÃæ¼ÓÁËimportµÄµ¼ÈëÓï¾ä
+æ˜¯å› ä¸ºæˆ‘åœ¨æœ€ä¸Šé¢åŠ äº†importçš„å¯¼å…¥è¯­å¥
 WeatherEntry, because I added this import at the top of the file.
 
 6
 00:00:22,668 --> 00:00:26,910
-ÏÖÔÚÎÒÃÇÒÑ¾­°ÑÎÒÌá¹©µÄÊı¾İ²åÈëÁËÄãÃÇµÄÊı¾İ¿âÖĞ
+ç°åœ¨æˆ‘ä»¬è¦æŠŠæˆ‘æä¾›çš„æ•°æ®æ·»åŠ è¿›æ•°æ®åº“ä¸­
 Alright, so we insert that provided data that I gave you into our database, and
 
 7
 00:00:26,910 --> 00:00:28,770
-²âÊÔÒ»ÏÂÎÒÃÇÊÇ·ñ»¹¿ÉÒÔ¶ÁÈ¡ÕâĞ©Êı¾İ
+ç„¶åæµ‹è¯•ä¸€ä¸‹æˆ‘ä»¬æ˜¯å¦è¿˜å¯ä»¥è¯»å–è¿™äº›æ•°æ®
 verify that we can read it back out again.

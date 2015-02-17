@@ -1,164 +1,164 @@
-1
+ï»¿1
 00:00:00,210 --> 00:00:05,060
-ÏÂÃæÊÇÎÒÈçºÎ¶Ô²âÊÔ´úÂë½øÐÐ¾«¼òµÄ  ÎÒÏ²»¶¿´µ½ÓÅÐãµÄ¹ØÓÚ²âÊÔµÄÏë·¨
-Here's how I ended up simplifying things. I'd love to see great testing ideas.
+ä¸‹é¢æ˜¯æˆ‘å¦‚ä½•å¯¹æµ‹è¯•ä»£ç è¿›è¡Œç²¾ç®€çš„  æˆ‘å–œæ¬¢çœ‹åˆ°ä¼˜ç§€çš„å…³äºŽæµ‹è¯•çš„æƒ³æ³•
+Here 's how I ended up simplifying things. I'd love to see great testing ideas.
 
 2
 00:00:05,060 --> 00:00:08,540
-Èç¹ûÄãºÜÏ²»¶Äã´´ÔìµÄ²âÊÔ´úÂë  ¿ÉÒÔ°ÑËüÃÇ·¢²¼µ½
+å¦‚æžœä½ å¯¹ä½ åˆ›é€ çš„ä¸œè¥¿å¾ˆè®²ç©¶  å¯ä»¥æŠŠå®ƒä»¬å‘å¸ƒåˆ°
 So, if you're particular to what you've created, post your solution to
 
 3
 00:00:08,540 --> 00:00:13,280
-ÂÛÌ³ÖÐ  ÎÒÒª¿ªÊ¼¶Ô²âÊÔ´úÂë½øÐÐÒ»Ð©ÖØ¹¹µÄ¹¤×÷ÁË
+è®ºå›ä¸­  æˆ‘è¦å¼€å§‹å¯¹æµ‹è¯•ä»£ç è¿›è¡Œä¸€äº›é‡æž„çš„å·¥ä½œäº†
 the forums. I'm starting off refactoring things a little bit. What I'm
 
 4
 00:00:13,280 --> 00:00:17,242
-ÎÒ»áÌí¼ÓÒ»¸ö»ñÈ¡°üº¬Î»ÖÃÐÅÏ¢µÄContentValues¶ÔÏóµÄ·½·¨
+æˆ‘æŽ¥ä¸‹æ¥è¦åšçš„æ˜¯æ·»åŠ ä¸€ä¸ªèŽ·å–åŒ…å«ä½ç½®ä¿¡æ¯çš„ContentValueså¯¹è±¡çš„å‡½æ•°
 going to do is I'm going to add a function to get the location ContentValues.
 
 5
 00:00:17,242 --> 00:00:19,850
-Èç¹ûÎÒÃÇºóÃæÔÚÆäËüµØ·½Ê¹ÓÃµ½ÕâÐ©²âÊÔ
+è¿™å¯¹æˆ‘ä»¬åŽé¢åœ¨å…¶å®ƒåœ°æ–¹ä½¿ç”¨åˆ°è¿™äº›æµ‹è¯•
 This will be useful when we actually try to use these tests for
 
 6
 00:00:19,850 --> 00:00:23,650
-Õâ»áºÜÓÐÓÃ  ´ó¼Ò¿´ÕâÀï¾ÍÊÇÎÒÃÇ´´½¨µÄ¿ÉÒÔ»ñÈ¡
+ä¼šå¾ˆæœ‰ç”¨  è¿™äº›å°±æ˜¯äº† ä¸€ä¸ªä¼šè¿”å›ž
 some other things later on. And there we are. A function that'll
 
 7
 00:00:23,650 --> 00:00:28,650
-°üº¬Î»ÖÃÐÅÏ¢µÄContentValues¶ÔÏóµÄ·½·¨  ÁíÍâÎÒÒª½«³ÇÊÐÃûµÄ±äÁ¿¶¨ÒåÔÚÍâÃæ
+åŒ…å«ä½ç½®ä¿¡æ¯çš„ContentValuesçš„å‡½æ•°  å¦å¤–æˆ‘è¦å°†åŸŽå¸‚åçš„å˜é‡å®šä¹‰åœ¨å¤–é¢
 return location content values. I'm also going to pull the city name out so
 
 8
 00:00:28,650 --> 00:00:33,690
-ÕâÑùºóÃæ¾Í¿ÉÒÔÔÚÒ»Ð©ÑéÖ¤²½ÖèÖÐÊ¹ÓÃµ½Ëü  ¾ÍÏñÕâÑù
+è¿™æ ·åŽé¢å°±å¯ä»¥åœ¨ä¸€äº›éªŒè¯æ­¥éª¤ä¸­ä½¿ç”¨åˆ°å®ƒ  å°±åƒè¿™æ ·
 we can use that for some validation steps later on. And there we are. It's now
 
 9
 00:00:33,690 --> 00:00:37,010
-ÎÒÃÇÏÖÔÚÔÚ²âÊÔ·½·¨ÖÐ  ÎÒÃÇ¿ÉÒÔÖ±½Óµ÷ÓÃ¸Õ²ÅµÄ·½·¨À´
+æˆ‘ä»¬çŽ°åœ¨åœ¨æµ‹è¯•å‡½æ•°ä¸­  æˆ‘ä»¬å¯ä»¥ç›´æŽ¥è°ƒç”¨åˆšæ‰çš„å‡½æ•°æ¥
 inside of the function. And then we're simply going to call that function to
 
 10
 00:00:37,010 --> 00:00:40,680
-»ñÈ¡°üº¬Î»ÖÃÐÅÏ¢µÄContentValues¶ÔÏó  ÕâÐ©´úÂë¶¼¿ÉÒÔÉ¾³ýÁË
+èŽ·å–åŒ…å«ä½ç½®ä¿¡æ¯çš„ContentValueså¯¹è±¡  è¿™äº›ä»£ç éƒ½å¯ä»¥åˆ é™¤äº†
 get our location content values and we can delete all those lines of code.
 
 11
 00:00:40,680 --> 00:00:45,610
-ÎÒÖ®Ç°Ëµ¹ýÕâÀïµÄÕâÐ©ÁÐµÄ±äÁ¿²¢²»ÊÇºÜÖØÒª
+æˆ‘ä¹‹å‰è¯´è¿‡è¿™é‡Œçš„è¿™äº›åˆ—çš„å˜é‡å¹¶ä¸æ˜¯å¾ˆé‡è¦
 Now, all of these columns, as I said before, are not very important, so
 
 12
 00:00:45,610 --> 00:00:50,360
-ËùÒÔÎÒÃÇ¿ÉÒÔÉ¾³ýµô  È»ºóÔÚ²éÑ¯µÄ²ÎÊýÖÐ´«Èënull
+æ‰€ä»¥æˆ‘ä»¬å¯ä»¥åˆ é™¤æŽ‰  ç„¶åŽåœ¨æŸ¥è¯¢çš„å‚æ•°ä¸­ä¼ å…¥null
 we can delete them. And we can also null out the value in our query.
 
 13
 00:00:50,360 --> 00:00:53,674
-ÎÒÒª×öµÄÏÂÒ»¼þÊÂÊÇÐÞ¸ÄÕâ¸öÑéÖ¤²½Öè  ÎÒÃÇ¿ÉÒÔ
+æˆ‘è¦åšçš„ä¸‹ä¸€ä»¶äº‹æ˜¯ä¿®æ”¹è¿™ä¸ªéªŒè¯æ­¥éª¤  æˆ‘ä»¬å¯ä»¥
 The next thing I want to do is actually fix this validation step. What we can do
 
 14
 00:00:53,674 --> 00:00:57,866
-¸ù¾Ý´ÓContentValues¶ÔÏóÖÐ»ñÈ¡µ½µÄ¼üÖµ¶ÔµÄ¼¯ºÏ
+æ ¹æ®ä»ŽContentValueså¯¹è±¡ä¸­èŽ·å–åˆ°çš„é”®å€¼å¯¹çš„é›†åˆ
 is we can create a function that relies on the fact we can get the map and
 
 15
 00:00:57,866 --> 00:01:02,300
-À´´´½¨Ò»¸ö·½·¨  ÕâÑùÎÒÃÇ¿ÉÒÔºÜÈÝÒ×µÄ±éÀúËüÃÇ
+æ¥åˆ›å»ºä¸€ä¸ªæ–¹æ³•  è¿™æ ·æˆ‘ä»¬å¯ä»¥å¾ˆå®¹æ˜“çš„éåŽ†å®ƒä»¬
 set from our content values. And then we can simply iterate through those.
 
 16
 00:01:02,300 --> 00:01:05,838
-È»ºóÎÒÃÇ¿ÉÒÔ¿´µ½´Ócursor¶ÔÏóÖÐ·µ»ØµÄÖµÊÇ·ñºÍÎÒÃÇÓÃÀ´
+ç„¶åŽæˆ‘ä»¬å¯ä»¥çœ‹åˆ°ä»Žcursorå¯¹è±¡ä¸­è¿”å›žçš„å€¼æ˜¯å¦å’Œæˆ‘ä»¬ç”¨æ¥
 Then we can see if the values that we used to create the record actually past
 
 17
 00:01:05,838 --> 00:01:10,410
-´´½¨¼ÇÂ¼µÄÖµÊÇÒ»ÑùµÄ  ÏÖÔÚ»Øµ½ÎÒÃÇµÄ²âÊÔÖÐ
+åˆ›å»ºè®°å½•çš„å€¼æ˜¯ä¸€æ ·çš„  çŽ°åœ¨å›žåˆ°æˆ‘ä»¬çš„æµ‹è¯•ä¸­
 the values in the cursor that are returned. Now, back to our test. So,
 
 18
 00:01:10,410 --> 00:01:16,105
-ÏÖÔÚÕâÀïÓÐºÜ¶àÃ»ÓÐ±ØÒªµÄ´úÂë  ÎÒÃÇÐèÒª×öµÄÖ»ÊÇÊ¹ÓÃvaluesºÍcursor
+çŽ°åœ¨è¿™é‡Œæœ‰å¾ˆå¤šæ²¡æœ‰å¿…è¦çš„ä»£ç   æˆ‘ä»¬éœ€è¦åšçš„åªæ˜¯ä½¿ç”¨valueså’Œcursor
 there's a lot of unnecessary code here now. All we have to do is call
 
 19
 00:01:16,105 --> 00:01:21,710
-×÷Îª²ÎÊýµ÷ÓÃvalidateCursor()·½·¨  ºÃÁË  ÎÒÃÇÒÑ¾­
+ä½œä¸ºå‚æ•°è°ƒç”¨validateCursor()æ–¹æ³•  å¥½äº†  æˆ‘ä»¬å·²ç»
 validateCursor() with our values and our cursor. All right. So now we've
 
 20
 00:01:21,710 --> 00:01:25,850
-¸ÄºÃÁËµÚÒ»¸ö²âÊÔ  ÎÒÃÇÒ²¿ÉÒÔ¶ÔµÚ¶þ¸ö²âÊÔ×öÍ¬ÑùµÄÊÂÇé
+æ”¹å¥½äº†ç¬¬ä¸€ä¸ªæµ‹è¯•  æˆ‘ä»¬ä¹Ÿå¯ä»¥å¯¹ç¬¬äºŒä¸ªæµ‹è¯•åšåŒæ ·çš„äº‹æƒ…
 converted the first test. We can do the same thing with the second test as well.
 
 21
 00:01:25,850 --> 00:01:29,140
-Ê×ÏÈ  ÈÃÎÒÃÇÔÙ×öÒ»±éÖ®Ç°Ëù×öµÄ³éÏóµÄ¹¤×÷  µ±È»ÁË
+é¦–å…ˆ  è®©æˆ‘ä»¬å†åšä¸€éä¹‹å‰æ‰€åšçš„æŠ½è±¡çš„å·¥ä½œ  å½“ç„¶äº†
 First of all, let's do the same abstraction we did before. Now, of course,
 
 22
 00:01:29,140 --> 00:01:32,400
-ÕâÀïµÄÕâÐ©Öµ²»»á±£³Ö²»±ä  ËùÒÔÎÒÃÇÖ±½ÓÌí¼ÓÕâÐ©Öµ
+è¿™é‡Œçš„è¿™äº›å€¼ä¸ä¼šä¿æŒä¸å˜  æ‰€ä»¥æˆ‘ä»¬ç›´æŽ¥æ·»åŠ è¿™äº›å€¼
 one of these values isn't going to be static, so we have to add that in.
 
 23
 00:01:32,400 --> 00:01:39,250
-ÏÖÔÚÎÒÃÇ¿ÉÒÔÕâÑù×ö  °ÑgetWeatherContentValues()·µ»ØµÄ¶ÔÏó¸³¸øweatherValues±äÁ¿
+çŽ°åœ¨æˆ‘ä»¬å¯ä»¥è¿™æ ·åš  æŠŠgetWeatherContentValues()è¿”å›žçš„å¯¹è±¡èµ‹ç»™weatherValueså˜é‡
 So now we can say, ContentValues equals getWeatherContentValues().
 
 24
 00:01:39,250 --> 00:01:45,240
-²ÎÊý´«µÝµÄÊÇ·Ç³£ÖØÒªµÄlocationRowId  ¼Ç×¡  ±íÖ®¼äÊÇÏà»¥¹ØÁªµÄ
+å‚æ•°ä¼ é€’çš„æ˜¯éžå¸¸é‡è¦çš„locationRowId  è®°ä½  è¡¨ä¹‹é—´æ˜¯ç›¸äº’å…³è”çš„
 With our all important locationRowId. Remember, our tables are linked.
 
 25
 00:01:45,240 --> 00:01:48,830
-È»ºóÎÒÃÇ¿ÉÒÔ°ÑÕâÌõÊý¾Ý²åÈëÊý¾Ý¿â  ÔÙ²éÑ¯Ëü
+ç„¶åŽæˆ‘ä»¬å¯ä»¥æŠŠè¿™æ¡æ•°æ®æ’å…¥æ•°æ®åº“  å†æŸ¥è¯¢å®ƒ
 And then we can insert it into the database. Query for it.
 
 26
 00:01:48,830 --> 00:01:53,160
-Èç¹û²éÑ¯³É¹¦  ÎÒÃÇ¾ÍÓÖ¿ÉÒÔÍ¨¹ýweatherValuesºÍweatherCursor×÷Îª²ÎÊýµ÷ÓÃ
+å¦‚æžœæŸ¥è¯¢æˆåŠŸ  æˆ‘ä»¬å°±åˆå¯ä»¥é€šè¿‡weatherValueså’ŒweatherCursorä½œä¸ºå‚æ•°è°ƒç”¨
 If the query is successful we can just call validateCursor() again on our
 
 27
 00:01:53,160 --> 00:01:58,620
-validateCursor()·½·¨  ÕâÑù¿ÉÒÔ¼õÉÙ·Ç³£¶àµÄ´úÂë
+validateCursor()æ–¹æ³•  è¿™æ ·å¯ä»¥å‡å°‘éžå¸¸å¤šçš„ä»£ç 
 weatherValues with our weatherCursor. So much less code.
 
 28
 00:01:58,620 --> 00:02:03,870
-ºÃÁË  ÎÒÃÇµÄ²âÊÔµÃµ½´ó´óµÄ¾«¼ò
+å¥½äº†  æˆ‘ä»¬çš„æµ‹è¯•å¾—åˆ°å¤§å¤§çš„ç²¾ç®€
 And that's it. Our test is vastly simplified and
 
 29
 00:02:03,870 --> 00:02:08,520
-Õâ»á¶ÔºóÃæµÄ¹¤×÷´øÀ´°ïÖú  ÎÒÃÇÏÖÔÚ¿ÉÒÔÔÙ´ÎÔËÐÐÕâ¸ö²âÊÔ
+è¿™ä¼šå¯¹åŽé¢çš„å·¥ä½œå¸¦æ¥å¸®åŠ©  æˆ‘ä»¬çŽ°åœ¨å¯ä»¥å†æ¬¡è¿è¡Œè¿™ä¸ªæµ‹è¯•
 it will be useful to us later on. So now we can try running this test again to
 
 30
 00:02:08,520 --> 00:02:13,318
-¿´¿´ËüÔÚÖØ¹¹ÒÔºó»¹ÄÜ²»ÄÜÕý³£¹¤×÷  ½á¹ûÊÇ²âÊÔÍ¨¹ýÁË
+çœ‹çœ‹å®ƒåœ¨é‡æž„ä»¥åŽè¿˜èƒ½ä¸èƒ½æ­£å¸¸å·¥ä½œ  ç»“æžœæ˜¯æµ‹è¯•é€šè¿‡äº†
 see if it still works after the refactoring. And there we are, test passed. Now,
 
 31
 00:02:13,318 --> 00:02:15,710
-Ò²Ðí¶àÐ´Ò»Ð©´úÂë¿ÉÒÔ°ïÖúÎÒÃÇ¸üºÃµØ
+ä¹Ÿè®¸å¤šå†™ä¸€äº›ä»£ç å¯ä»¥å¸®åŠ©æˆ‘ä»¬æ›´å¥½åœ°
 it'd probably be useful for us to actually print out some more data so
 
 32
 00:02:15,710 --> 00:02:19,340
-¹Û²ì²âÊÔµÄÄÚÈÝ  µ«ÊÇ  Õâ´Î¶Ô²âÊÔµÄ¾«¼ò
+è§‚å¯Ÿæµ‹è¯•çš„å†…å®¹  ä½†æ˜¯  è¿™æ¬¡å¯¹æµ‹è¯•çš„ç²¾ç®€
 we can see what was being tested. But, this simplification to our
 
 33
 00:02:19,340 --> 00:02:23,260
-ÔÚÎÒÃÇ½øÐÐºóÃæµÄ¹¤×÷µÄÊ±ºò»á´óÓÐñÔÒæ  ¹ØÓÚ²âÊÔµÄ²¿·ÖÎÒÃÇ»¹Ã»ÓÐ½²Íê
+åœ¨æˆ‘ä»¬è¿›è¡ŒåŽé¢çš„å·¥ä½œçš„æ—¶å€™ä¼šå¤§æœ‰è£¨ç›Š  å…³äºŽæµ‹è¯•çš„éƒ¨åˆ†æˆ‘ä»¬è¿˜æ²¡æœ‰è®²å®Œ
 test is going to help us as we move forward. We're not done with testing yet.
