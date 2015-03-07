@@ -1,0 +1,508 @@
+1
+00:00:00,190 --> 00:00:01,400
+Now that's a contract.
+
+2
+00:00:02,600 --> 00:00:05,270
+At this point, we defined
+the names of the columns we want.
+
+3
+00:00:05,270 --> 00:00:07,730
+But we still don't have a database.
+
+4
+00:00:08,800 --> 00:00:14,080
+To actually make a database, we're going
+to extend Android's SQLiteOpenHelper.
+
+5
+00:00:14,080 --> 00:00:17,470
+SQLiteOpenHelper contains cool
+stuff to create the database and
+
+6
+00:00:17,470 --> 00:00:19,500
+help us handle database versioning.
+
+7
+00:00:19,500 --> 00:00:22,110
+As we make changes to our
+database in the future,
+
+8
+00:00:22,110 --> 00:00:24,490
+it will help us modify our tables.
+
+9
+00:00:24,490 --> 00:00:25,320
+For many apps,
+
+10
+00:00:25,320 --> 00:00:28,730
+being able to upgrade to a new
+version without data loss is critical.
+
+11
+00:00:28,730 --> 00:00:32,540
+For Sunshine, we just want to make sure
+that upgrades that involve database
+
+12
+00:00:32,540 --> 00:00:34,730
+schema changes happens smoothly.
+
+13
+00:00:34,730 --> 00:00:38,825
+Let's take a look at SQLiteOpenHelper
+more closely in action.
+
+14
+00:00:38,825 --> 00:00:41,735
+We're going to be working in the
+WeatherDBHelper class that you've been
+
+15
+00:00:41,735 --> 00:00:44,815
+given which extends SQLiteOpenHelper.
+
+16
+00:00:44,815 --> 00:00:48,780
+It contains code to create and
+initialize the weather database.
+
+17
+00:00:48,780 --> 00:00:49,880
+Let's examine it.
+
+18
+00:00:49,880 --> 00:00:53,460
+At the beginning of the DBHelper, you
+can see that we've defined constants for
+
+19
+00:00:53,460 --> 00:00:55,970
+database version and database name.
+
+20
+00:00:55,970 --> 00:01:00,450
+The database version typically starts
+at version one, and must be manually
+
+21
+00:01:00,450 --> 00:01:04,790
+incremented each time we release an
+updated ABK with a new database schema.
+
+22
+00:01:04,790 --> 00:01:09,150
+The database name is the name of the
+actual database file in the file system,
+
+23
+00:01:09,150 --> 00:01:11,680
+which will be weather.db, in our case.
+
+24
+00:01:11,680 --> 00:01:13,280
+Note that we're using version 2.
+
+25
+00:01:13,280 --> 00:01:17,660
+Since this revision of the course
+uses an updated database version.
+
+26
+00:01:17,660 --> 00:01:21,130
+These values get passed
+into the constructor
+
+27
+00:01:21,130 --> 00:01:23,580
+to initialize the database helper.
+
+28
+00:01:23,580 --> 00:01:26,220
+Next we have the on create method.
+
+29
+00:01:26,220 --> 00:01:28,900
+This is where the SQL we've
+been talking about and
+
+30
+00:01:28,900 --> 00:01:31,760
+our new contract class
+are used together.
+
+31
+00:01:31,760 --> 00:01:35,730
+The first time the database
+is used SQLiteOpenHelpers
+
+32
+00:01:35,730 --> 00:01:37,920
+on create will be called.
+
+33
+00:01:37,920 --> 00:01:40,550
+We need to write the correct
+SQL statement strings so
+
+34
+00:01:40,550 --> 00:01:43,300
+that we can create
+the table Sunshine needs.
+
+35
+00:01:43,300 --> 00:01:48,960
+We then have the system execute
+this SQL by calling db.execSQL.
+
+36
+00:01:48,960 --> 00:01:52,565
+Note how we're using all of the weather
+entry constants to write our
+
+37
+00:01:52,565 --> 00:01:53,890
+SQL statements.
+
+38
+00:01:53,890 --> 00:01:57,870
+Also note that we use lots of not
+null constraints on this table.
+
+39
+00:01:57,870 --> 00:02:01,800
+These constraints help prevent us from
+inserting records without columns being
+
+40
+00:02:01,800 --> 00:02:05,770
+filled out to the database and
+that helps prevent bugs.
+
+41
+00:02:05,770 --> 00:02:09,070
+Here is the implementation of the
+foreign key constraint from the not yet
+
+42
+00:02:09,070 --> 00:02:11,039
+created LocationEntry table.
+
+43
+00:02:11,039 --> 00:02:14,280
+This means that we cannot insert
+a WeatherEntry into the database until
+
+44
+00:02:14,280 --> 00:02:17,450
+a LocationEntry for
+the weather location has been inserted.
+
+45
+00:02:17,450 --> 00:02:19,970
+And we cannot delete
+locations while there exists
+
+46
+00:02:19,970 --> 00:02:21,680
+WeatherEntrys that point to them.
+
+47
+00:02:21,680 --> 00:02:24,410
+That being said,
+it's going to be awhile before we
+
+48
+00:02:24,410 --> 00:02:27,810
+have UI that can demonstrate that
+our database code is working.
+
+49
+00:02:27,810 --> 00:02:31,190
+Fortunately, there's a way we can
+have Android run any code we want,
+
+50
+00:02:31,190 --> 00:02:32,920
+even if there's no UI yet ready.
+
+51
+00:02:33,990 --> 00:02:37,970
+Android has a built-in testing framework
+that allows us to create a test APK that
+
+52
+00:02:37,970 --> 00:02:42,580
+executes a JUnit test that call
+into classes in our main APK.
+
+53
+00:02:42,580 --> 00:02:44,970
+If you aren't already
+familiar with JUnit,
+
+54
+00:02:44,970 --> 00:02:47,970
+it is a testing framework that allows
+you to write automated test suites.
+
+55
+00:02:51,400 --> 00:02:53,730
+You can run your automated tests easily.
+
+56
+00:02:53,730 --> 00:02:57,630
+You can find your tests in this
+section of the Android Studio project.
+
+57
+00:02:57,630 --> 00:03:01,290
+Just right-click on the test package and
+select Run.
+
+58
+00:03:01,290 --> 00:03:02,730
+Once the tests pass or
+
+59
+00:03:02,730 --> 00:03:06,720
+fail, you'll see the output down
+here at the bottom of the screen.
+
+60
+00:03:06,720 --> 00:03:09,660
+I'm not going to display the emulator
+in our screen because it won't actually
+
+61
+00:03:09,660 --> 00:03:11,180
+show that we're doing anything.
+
+62
+00:03:11,180 --> 00:03:13,720
+The tests we're running don't
+have any user interface.
+
+63
+00:03:13,720 --> 00:03:17,350
+But you can see here in the test runner,
+we're instantiating tests.
+
+64
+00:03:17,350 --> 00:03:21,950
+An empty window and
+a green result means the test succeeded.
+
+65
+00:03:21,950 --> 00:03:24,480
+Let's look at the TestPractice class.
+
+66
+00:03:24,480 --> 00:03:28,150
+You can see it sits in the data
+package of our TestProject and
+
+67
+00:03:28,150 --> 00:03:30,090
+extends AndroidTestCase.
+
+68
+00:03:30,090 --> 00:03:31,650
+When you extend AndroidTestCase,
+
+69
+00:03:31,650 --> 00:03:36,720
+you can implement the setup method,
+which will be run before each test.
+
+70
+00:03:36,720 --> 00:03:40,770
+You can also implement tearDown
+which will be run after each test.
+
+71
+00:03:40,770 --> 00:03:42,085
+Similar to JUnit test,
+
+72
+00:03:42,085 --> 00:03:45,450
+you simply add new methods in
+the class with the prefix test.
+
+73
+00:03:46,478 --> 00:03:48,822
+Such as
+testThatDemonstrationsAssertions, and
+
+74
+00:03:48,822 --> 00:03:51,387
+those will automatically be
+run by the test processor.
+
+75
+00:04:06,084 --> 00:04:07,849
+Some other things to note.
+
+76
+00:04:07,849 --> 00:04:12,742
+The FullTestSuite class contains code
+to include all of the java test classes
+
+77
+00:04:12,742 --> 00:04:16,300
+in its package into a suite
+of tests that JUnit will run.
+
+78
+00:04:16,300 --> 00:04:20,149
+This allows us to easily add additional
+tests by just adding additional java
+
+79
+00:04:20,149 --> 00:04:22,230
+class files to our test directory.
+
+80
+00:04:22,230 --> 00:04:25,370
+You'll likely have a class like
+this in each test project you make.
+
+81
+00:04:25,370 --> 00:04:29,850
+They aren't typically product specific,
+so you can literally just copy this one.
+
+82
+00:04:29,850 --> 00:04:33,370
+Each test should have at least
+one check which uses an assert
+
+83
+00:04:33,370 --> 00:04:36,360
+to see if the program
+supplies the correct output.
+
+84
+00:04:36,360 --> 00:04:40,250
+And assert is just that, it's a
+declaration that the outcome after part
+
+85
+00:04:40,250 --> 00:04:43,590
+of a test is run matches
+our expectation.
+
+86
+00:04:43,590 --> 00:04:46,430
+If the assert does not match,
+the test will fail.
+
+87
+00:04:46,430 --> 00:04:48,990
+Let's look at our
+testThatDemonstratesAssertions
+
+88
+00:04:48,990 --> 00:04:50,850
+in test practice at java.
+
+89
+00:04:50,850 --> 00:04:55,220
+A assertEquals asserts that the expected
+value equals the actual value.
+
+90
+00:04:55,220 --> 00:04:56,150
+If they are not equal,
+
+91
+00:04:56,150 --> 00:04:59,680
+then an assertion fail there is
+thrown with a given string message.
+
+92
+00:04:59,680 --> 00:05:05,442
+Other useful methods include
+assertEquals, assertFalse, assertNull.
+
+93
+00:05:10,458 --> 00:05:13,000
+Or, we can just call fail.
+
+94
+00:05:13,000 --> 00:05:15,680
+The certain code path should
+never have been reached.
+
+95
+00:05:15,680 --> 00:05:19,000
+Feel free to write your own test
+cases to play with assertions.
+
+96
+00:05:19,000 --> 00:05:21,730
+Let's see what happens
+when we make a test fail.
+
+97
+00:05:21,730 --> 00:05:23,830
+As you can see,
+our results are now red, and
+
+98
+00:05:23,830 --> 00:05:27,590
+we can see exactly where in
+the test our application failed.
+
+99
+00:05:27,590 --> 00:05:32,700
+Let's uncomment out the test create DB
+function inside of the TestDb class.
+
+100
+00:05:32,700 --> 00:05:36,190
+You might have to import a few
+classes to get this to compile.
+
+101
+00:05:36,190 --> 00:05:40,509
+Let's also uncomment out
+the createNorthPoleLocationValues, and
+
+102
+00:05:40,509 --> 00:05:45,910
+the insertNorthPoleLocationValues
+functions from within test utilities.
+
+103
+00:05:45,910 --> 00:05:48,680
+This is the last chance to fix
+up your location contract if
+
+104
+00:05:48,680 --> 00:05:49,430
+things don't compile.
+
+105
+00:05:49,430 --> 00:05:52,515
+So let's run our new
+test with our Testdb.
+
+106
+00:05:53,660 --> 00:05:57,560
+As you can see, we get a pretty good
+error message back, that our database
+
+107
+00:05:57,560 --> 00:06:01,120
+was created without both the location
+entry and weather entry tables.
+
+108
+00:06:01,120 --> 00:06:02,720
+Don't worry, we can fix it.
+

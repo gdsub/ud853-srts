@@ -1,0 +1,146 @@
+1
+00:00:00,260 --> 00:00:02,580
+When we first defined our tables,
+
+2
+00:00:02,580 --> 00:00:06,320
+we defined the relationship between
+them in terms of constraints.
+
+3
+00:00:06,320 --> 00:00:08,880
+I'm going to show how we implemented
+that relationship into our
+
+4
+00:00:08,880 --> 00:00:10,140
+query using a join.
+
+5
+00:00:11,420 --> 00:00:13,900
+This join allows us to
+query the weather table for
+
+6
+00:00:13,900 --> 00:00:17,450
+values from a specific location setting.
+
+7
+00:00:17,450 --> 00:00:21,170
+In Sunshine's case,
+the user sets this in preferences.
+
+8
+00:00:21,170 --> 00:00:24,340
+You'll notice that there's a SQ
+lite query builder class for
+
+9
+00:00:24,340 --> 00:00:26,240
+able at the top of weather provider.
+
+10
+00:00:26,240 --> 00:00:29,940
+As you might guess,
+this class helps construct queries and
+
+11
+00:00:29,940 --> 00:00:31,700
+is actually used as the basis for
+
+12
+00:00:31,700 --> 00:00:35,730
+the query functions you've already
+used in the SQLite database class.
+
+13
+00:00:35,730 --> 00:00:40,350
+We initialize the SQLite query builder
+in the static constructor of the class.
+
+14
+00:00:40,350 --> 00:00:42,825
+Describing the join between both tables.
+
+15
+00:00:42,825 --> 00:00:48,230
+Set.Tables fills out the content
+in the from part of the SQL query.
+
+16
+00:00:48,230 --> 00:00:52,890
+Note, since both tables
+have a field with an _ID,
+
+17
+00:00:52,890 --> 00:00:56,840
+we must explicitly use the table
+name in order to disambiguate
+
+18
+00:00:56,840 --> 00:00:59,940
+which ID we are talking
+about in the join.
+
+19
+00:00:59,940 --> 00:01:02,050
+Then we define the selection.
+
+20
+00:01:02,050 --> 00:01:06,090
+The selection is defined using
+the question mark or placement syntax.
+
+21
+00:01:06,090 --> 00:01:09,830
+The selection parameters
+will replace these values.
+
+22
+00:01:09,830 --> 00:01:13,570
+As you can see,
+our selection has 2 parameters,
+
+23
+00:01:13,570 --> 00:01:16,150
+a location setting and a date.
+
+24
+00:01:16,150 --> 00:01:19,340
+Then we have a function to get the
+weather by location setting using this
+
+25
+00:01:19,340 --> 00:01:21,010
+same query builder.
+
+26
+00:01:21,010 --> 00:01:23,910
+Note that we fetch
+the parameters from the URI.
+
+27
+00:01:23,910 --> 00:01:27,640
+And build the string array and
+build the string array so
+
+28
+00:01:27,640 --> 00:01:30,050
+that they can be
+substituted into our query.
+
+29
+00:01:30,050 --> 00:01:34,110
+We do that for both of the queries
+that we're creating this way.
+
+30
+00:01:34,110 --> 00:01:38,570
+Finally, we added the functions into the
+query routine of the content provider
+
+31
+00:01:38,570 --> 00:01:42,160
+for both weather with location and
+date and weather with location.
+

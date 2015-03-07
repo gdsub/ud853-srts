@@ -1,0 +1,136 @@
+1
+00:00:00,496 --> 00:00:03,930
+In the ForecastAdapter bindView method,
+we have to traverse
+
+2
+00:00:03,930 --> 00:00:07,480
+the view hierarchy to find the views
+in order to set data onto them.
+
+3
+00:00:07,480 --> 00:00:08,890
+If it's a recycled view,
+
+4
+00:00:08,890 --> 00:00:12,450
+meaning it's been used in the list
+previously to display other data,
+
+5
+00:00:12,450 --> 00:00:16,129
+we still have to traverse the view
+hierarchy to find all the views.
+
+6
+00:00:16,129 --> 00:00:18,930
+To remove unnecessary
+findViewById calls,
+
+7
+00:00:18,930 --> 00:00:20,810
+we can use the View Holder Pattern.
+
+8
+00:00:20,810 --> 00:00:23,290
+For a list item layout that
+contains different views,
+
+9
+00:00:23,290 --> 00:00:25,270
+we can create a View Holder object.
+
+10
+00:00:25,270 --> 00:00:28,740
+It contains member variables that
+reference each View in the layout.
+
+11
+00:00:28,740 --> 00:00:32,250
+The View Holder object is stored
+in the tag field of the View.
+
+12
+00:00:32,250 --> 00:00:34,330
+The next time that
+the View is recycled and
+
+13
+00:00:34,330 --> 00:00:38,800
+used again, we can just immediately
+set the data on to these fields.
+
+14
+00:00:38,800 --> 00:00:40,940
+You don't have to go
+find all the views again.
+
+15
+00:00:40,940 --> 00:00:42,600
+This is our ViewHolder class.
+
+16
+00:00:42,600 --> 00:00:43,680
+You can name it anything you want.
+
+17
+00:00:43,680 --> 00:00:45,250
+It's just a Java class.
+
+18
+00:00:45,250 --> 00:00:49,090
+Given the list item layout,
+we do all the findViewById calls.
+
+19
+00:00:49,090 --> 00:00:51,778
+That way we can hold references
+to all the child views.
+
+20
+00:00:51,778 --> 00:00:54,800
+In the newView method after
+we've inflated the view,
+
+21
+00:00:54,800 --> 00:00:57,620
+we create a new viewHolder
+object from that view.
+
+22
+00:00:57,620 --> 00:01:00,190
+Then we set that viewHolder
+as the tag of the view.
+
+23
+00:01:00,190 --> 00:01:02,260
+The tag can be used to store any object.
+
+24
+00:01:02,260 --> 00:01:04,361
+But don't abuse it because
+when you read it back you,
+
+25
+00:01:04,361 --> 00:01:05,866
+have to know what you stored in there.
+
+26
+00:01:07,435 --> 00:01:09,363
+Then in the adaptor bindView call,
+
+27
+00:01:09,363 --> 00:01:13,170
+we read from the tag to get
+back the viewHolder object.
+
+28
+00:01:13,170 --> 00:01:16,300
+Now we immediately have references to
+all the individual views that we need to
+
+29
+00:01:16,300 --> 00:01:20,040
+update, such as icon view, date view,
+description view and so on.
+

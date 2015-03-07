@@ -1,0 +1,341 @@
+1
+00:00:00,330 --> 00:00:03,420
+So how did you break up the UI
+into smaller components?
+
+2
+00:00:03,420 --> 00:00:06,640
+Well, you might've thought that
+this could be two columns.
+
+3
+00:00:06,640 --> 00:00:08,970
+But then it would be hard to
+position the elements here.
+
+4
+00:00:08,970 --> 00:00:11,960
+You could center them vertically
+within the height of the screen.
+
+5
+00:00:11,960 --> 00:00:14,650
+But it wouldn't necessarily line up
+with the temperature views on the left
+
+6
+00:00:14,650 --> 00:00:15,520
+hand side.
+
+7
+00:00:15,520 --> 00:00:18,620
+Instead this looks more like
+a horizontal linear layout.
+
+8
+00:00:18,620 --> 00:00:21,660
+Then the rest of the elements could
+be laid out by using a vertical
+
+9
+00:00:21,660 --> 00:00:22,720
+linear layout.
+
+10
+00:00:22,720 --> 00:00:25,000
+The vertical linear layout
+would have six children.
+
+11
+00:00:25,000 --> 00:00:29,460
+The third element would be a horizontal
+linear layout composed of two children.
+
+12
+00:00:29,460 --> 00:00:32,990
+The first would be another vertical
+linear layout with these two text views
+
+13
+00:00:32,990 --> 00:00:36,450
+and the second element would be another
+vertical linear layout composed of.
+
+14
+00:00:36,450 --> 00:00:37,350
+These two elements.
+
+15
+00:00:37,350 --> 00:00:40,330
+To make the contents of the whole
+screen vertically scrollable
+
+16
+00:00:40,330 --> 00:00:42,250
+we put it inside a scroll view.
+
+17
+00:00:42,250 --> 00:00:45,470
+Using a list view her would be overkill
+because we don't need to scale
+
+18
+00:00:45,470 --> 00:00:48,300
+to an infinite number of item and
+we don't need recycling.
+
+19
+00:00:48,300 --> 00:00:50,340
+There's a fixed number of
+fields on the screen so
+
+20
+00:00:50,340 --> 00:00:52,170
+the scroll view is the perfect choice.
+
+21
+00:00:52,170 --> 00:00:55,740
+I can show you our implementation for
+the fragment detail XML layout.
+
+22
+00:00:55,740 --> 00:00:57,580
+We hardcoded some data in the layout.
+
+23
+00:00:57,580 --> 00:01:00,250
+So that it would show up as
+a preview in the Design pane.
+
+24
+00:01:00,250 --> 00:01:02,960
+At the root of the view hierarchy,
+we have a ScrollView.
+
+25
+00:01:02,960 --> 00:01:05,260
+ScrollViews can only have max one child.
+
+26
+00:01:05,260 --> 00:01:07,470
+So we set that to be
+the vertical LinearLayout.
+
+27
+00:01:07,470 --> 00:01:10,960
+Inside of this layout, we have
+a TextView for the day of the week.
+
+28
+00:01:10,960 --> 00:01:14,010
+The calendar date and
+then a horizontal linear layout.
+
+29
+00:01:14,010 --> 00:01:16,260
+This is followed by
+the humidity text view,
+
+30
+00:01:16,260 --> 00:01:18,750
+wind text view, and pressure text view.
+
+31
+00:01:18,750 --> 00:01:22,120
+In the XMO code we see the scroll
+view with the child linear layout.
+
+32
+00:01:22,120 --> 00:01:23,590
+We give it some padding of 16 dips so
+
+33
+00:01:23,590 --> 00:01:27,180
+that the content is not flesh up
+against the edge of the screen.
+
+34
+00:01:27,180 --> 00:01:30,850
+Then we see the text views followed
+by the horizontal linear layout.
+
+35
+00:01:30,850 --> 00:01:33,710
+We specify layout margin top of 16 dip
+
+36
+00:01:33,710 --> 00:01:36,450
+to give it some more space from
+the bottom of this text view.
+
+37
+00:01:36,450 --> 00:01:40,070
+Within this horizontal linear layout
+we have one vertical linear layout.
+
+38
+00:01:40,070 --> 00:01:42,540
+Which has a width of 0 and
+a weight of 1, and
+
+39
+00:01:42,540 --> 00:01:45,570
+another linear layout with
+a width of 0 and a weight of 1.
+
+40
+00:01:45,570 --> 00:01:48,240
+That means that both of these
+children have equal width.
+
+41
+00:01:48,240 --> 00:01:52,320
+For this linear layout, we specify
+gravity to be center horizontal.
+
+42
+00:01:52,320 --> 00:01:56,110
+That means that the contents inside
+of it will be centered horizontally.
+
+43
+00:01:56,110 --> 00:01:59,340
+Which includes the icon as well
+as the forecast text view.
+
+44
+00:01:59,340 --> 00:02:03,260
+Lastly we have the remaining text
+views for the other weather details.
+
+45
+00:02:03,260 --> 00:02:06,320
+When the layout looks good,
+we update the detail fragment.
+
+46
+00:02:06,320 --> 00:02:08,460
+At this point,
+we also move it into its own file.
+
+47
+00:02:09,660 --> 00:02:10,910
+In the unload finish method,
+
+48
+00:02:10,910 --> 00:02:14,890
+we used to have a find view by
+ID call to find the text view.
+
+49
+00:02:14,890 --> 00:02:17,520
+Now that the detail fragment
+has a lot more views
+
+50
+00:02:17,520 --> 00:02:20,940
+we don't want to continue adding even
+more fine view by ID calls here.
+
+51
+00:02:20,940 --> 00:02:23,740
+Because it will have to traverse
+the view hierarchy every time that
+
+52
+00:02:23,740 --> 00:02:25,790
+the loader refreshes.
+
+53
+00:02:25,790 --> 00:02:28,590
+Instead we modify the on create method.
+
+54
+00:02:28,590 --> 00:02:31,120
+Once the fragment is
+inflated we go ahead and
+
+55
+00:02:31,120 --> 00:02:34,410
+find a reference to all the views
+we are going to need later on.
+
+56
+00:02:34,410 --> 00:02:37,420
+We store these views as member
+variables of the class,
+
+57
+00:02:37,420 --> 00:02:40,130
+which is why the name
+starts with the letter m.
+
+58
+00:02:40,130 --> 00:02:43,520
+In the on create loader method we
+make sure that the projection for
+
+59
+00:02:43,520 --> 00:02:46,950
+our content provider query contains
+all the information that we need.
+
+60
+00:02:48,050 --> 00:02:49,860
+It's declared at the top of the file.
+
+61
+00:02:49,860 --> 00:02:52,430
+Before we had it called
+forecast columns, but
+
+62
+00:02:52,430 --> 00:02:54,600
+we just renamed it to detail columns.
+
+63
+00:02:54,600 --> 00:02:57,860
+And we also added some more columns
+because now we're displaying more
+
+64
+00:02:57,860 --> 00:02:59,590
+information on the screen.
+
+65
+00:02:59,590 --> 00:03:03,510
+Then in the onLoadFinished method we get
+a cursor back with the data we need.
+
+66
+00:03:03,510 --> 00:03:06,050
+We read the weather
+condition ID from the cursor
+
+67
+00:03:06,050 --> 00:03:09,790
+because we're going to need it to
+determine which image to display but for
+
+68
+00:03:09,790 --> 00:03:11,300
+now we can use a place order icon.
+
+69
+00:03:11,300 --> 00:03:15,550
+We continue reading from the cursor
+to get the date, the description and
+
+70
+00:03:15,550 --> 00:03:16,672
+the other fields.
+
+71
+00:03:16,672 --> 00:03:20,730
+To format the data properly for the user
+we also copied over the strings and
+
+72
+00:03:20,730 --> 00:03:22,425
+the utility method from the gist.
+

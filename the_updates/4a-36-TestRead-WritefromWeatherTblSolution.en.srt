@@ -1,0 +1,49 @@
+1
+00:00:00,360 --> 00:00:03,530
+Let's look at our solution for reading
+and writing from the Weather Table.
+
+2
+00:00:03,530 --> 00:00:06,400
+First, we take advantage of
+testLocationTable returning
+
+3
+00:00:06,400 --> 00:00:09,140
+the locationRowId to save
+us a bit of drudgery.
+
+4
+00:00:10,150 --> 00:00:14,420
+But we assert just in case that function
+didn't set the return value correctly.
+
+5
+00:00:14,420 --> 00:00:19,460
+We then follow the same steps we did
+last time, except we create the weather
+
+6
+00:00:19,460 --> 00:00:24,020
+values with the locationRowId
+we got from the location insert.
+
+7
+00:00:24,020 --> 00:00:28,290
+We then insert the record,
+query to get our cursor,
+
+8
+00:00:28,290 --> 00:00:32,030
+validate our cursor,
+and close the database.
+
+9
+00:00:32,030 --> 00:00:35,220
+Now, let's run those tests again,
+and they pass.
+
+10
+00:00:35,220 --> 00:00:37,750
+Our database tests are done.
+
