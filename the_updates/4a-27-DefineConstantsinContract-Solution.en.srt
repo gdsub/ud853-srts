@@ -1,32 +1,39 @@
 1
 00:00:00,120 --> 00:00:01,340
+这就是我们的解决方案
 Here's our solution.
 
 2
 00:00:01,340 --> 00:00:03,540
+这里给了你一个唯一的表名
 You are given the unique table name.
 
 3
 00:00:03,540 --> 00:00:06,320
+在下面这个内部类列出了
 The rest of this inner class
 lists the columns we're going
 
 4
 00:00:06,320 --> 00:00:07,350
+我们将要用来存储数据的列项。
 to use to store our data.
 
 5
 00:00:08,788 --> 00:00:13,110
+再说一次，你将会使用我在这个解决方案中使用的相同常量名
 Once again, you'll want to use the same
 constant names that I used in this
 
 6
 00:00:13,110 --> 00:00:16,700
+因为在其他类的代码中你已经得到了这些常量
 solution, since the code in
 the other classes you've received,
 
 7
 00:00:16,700 --> 00:00:20,790
+比如说 weather DBHelper这个类，使用了这些相同的常量名
 such as the weather DBHelper,
 uses these same constant names.
 
