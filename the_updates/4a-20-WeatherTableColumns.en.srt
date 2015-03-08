@@ -1,6 +1,6 @@
 1
 00:00:00,340 --> 00:00:04,340
-现在我们重新回顾一下我们的最终细节框架
+现在让我们重新回顾一下我们的最终细节框架
 This is a good time to revisit
 our final detail wireframe.
 

@@ -1,6 +1,6 @@
 1
 00:00:00,292 --> 00:00:04,470
-SQLite的高效查询能力，使得数据行的删除，
+SQLite的高效查询能力，使得数据行的删除
 Using SQLite makes it easy to delete,
 update, and
 

@@ -16,7 +16,7 @@ lists the columns we're going
 
 4
 00:00:06,320 --> 00:00:07,350
-我们将要用来存储数据的列项
+我们将要用来存储数据的列项。
 to use to store our data.
 
 5
