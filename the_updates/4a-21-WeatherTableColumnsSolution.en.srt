@@ -1,92 +1,111 @@
 1
 00:00:00,250 --> 00:00:02,940
+好吧，看看我们是怎么做的
 All right, let's see how we did.
 
 2
 00:00:02,940 --> 00:00:08,452
+如果你勾选了 record ID，风速
 If you checked record ID, weather
 condition ID, minimum temperature,
 
 3
 00:00:08,452 --> 00:00:13,003
+湿度，最高温
 wind speed, humidity,
 maximum temperature,
 
 4
 00:00:13,003 --> 00:00:16,920
+日期，方位还有气压，是的，你当然可以这么做
 date, weather direction and
 pressure, you've got this right.
 
 5
 00:00:16,920 --> 00:00:19,910
+从技术层面上说，我们可以包含日期或者时间
 Now technically,
 one could have included either date or
 
 6
 00:00:19,910 --> 00:00:23,040
+就像时间其实包含着日期
 time, as time includes date.
 
 7
 00:00:23,040 --> 00:00:25,250
+月份在这里没有多大的必要
 Month doesn't really
 make any sense here.
 
 8
 00:00:25,250 --> 00:00:28,900
+但由于我们真的显示日期，所以对于数据库来说，
 But since we're really displaying the
 date, it makes sense for the database to
 
 9
 00:00:28,900 --> 00:00:32,540
+尽可能多地复制那些显示的着的项是有意义的
 actually replicate what's on
 the display as much as possible.
 
 10
 00:00:32,540 --> 00:00:35,640
+单位应该存储在一个单独的表中
 Units should be stored in
 a separate table with preferences.
 
 11
 00:00:35,640 --> 00:00:38,800
+我们没有任何理由去存储我们不想显示的东西，比如说
 There's no reason to store things
 we aren't displaying, such as,
 
 12
 00:00:38,800 --> 00:00:41,790
+你懂的，降雨量或者平均温度
 you know, rainfall or
 average temperature.
 
 13
 00:00:41,790 --> 00:00:45,560
+除此之外，我们并不能从Openweather API中获取到这些
 And besides, we cannot get these
 from the OpenWeatherMap API.
 
 14
 00:00:45,560 --> 00:00:48,820
+我们确实需要 weather condition ID，因为我们需要用它去
 We do need weather condition ID,
 since we use this to
 
 15
 00:00:48,820 --> 00:00:52,850
+显示天气预报，并确定需要显示的画面
 both display the forecast, and
 determine the image to display.
 
 16
 00:00:52,850 --> 00:00:56,100
+最后，当它在我们的UI界面中不显示的时候
 And finally,
 while it's not displayed in our UI,
 
 17
 00:00:56,100 --> 00:00:59,140
+我们需要一个ID列用来唯一地标示每一行
 we need an ID column to
 uniquely identify each row.
 
 18
 00:01:00,260 --> 00:01:02,440
+正如我们讨论的，它需要
 As discussed, it's required for
 
 19
 00:01:02,440 --> 00:01:06,410
+所有的SQLite 数据库表显示在Android list views视图中
 all SQLI database tables that are going
 to be displayed in Android list views.
 
