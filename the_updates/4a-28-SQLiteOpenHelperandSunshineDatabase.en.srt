@@ -505,4 +505,3 @@ entry and weather entry tables.
 108
 00:06:01,120 --> 00:06:02,720
 Don't worry, we can fix it.
-
