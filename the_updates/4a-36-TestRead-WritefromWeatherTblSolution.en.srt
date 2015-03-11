@@ -1,49 +1,58 @@
 1
 00:00:00,360 --> 00:00:03,530
+让我们看一下从天气表中读写数据的解答
 Let's look at our solution for reading
 and writing from the Weather Table.
 
 2
 00:00:03,530 --> 00:00:06,400
+首先  我们利用testLocationTable()方法返回的
 First, we take advantage of
 testLocationTable returning
 
 3
 00:00:06,400 --> 00:00:09,140
+locationRowId来少做一些苦差事
 the locationRowId to save
 us a bit of drudgery.
 
 4
 00:00:10,150 --> 00:00:14,420
+但是以防万一  我们还是断言这个方法没有正确返回值
 But we assert just in case that function
 didn't set the return value correctly.
 
 5
 00:00:14,420 --> 00:00:19,460
+然后我们遵照和上次一样的步骤  但是使用
 We then follow the same steps we did
 last time, except we create the weather
 
 6
 00:00:19,460 --> 00:00:24,020
+从插入位置返回的locationRowId来创建天气数据
 values with the locationRowId
 we got from the location insert.
 
 7
 00:00:24,020 --> 00:00:28,290
+然后我们插入数据  查询获取Cursor对象
 We then insert the record,
 query to get our cursor,
 
 8
 00:00:28,290 --> 00:00:32,030
+验证Cursor对象并且关闭数据库
 validate our cursor,
 and close the database.
 
 9
 00:00:32,030 --> 00:00:35,220
+现在让我们再次运行这些测试  它们都通过了
 Now, let's run those tests again,
 and they pass.
 
 10
 00:00:35,220 --> 00:00:37,750
+我们的数据库测试结束了
 Our database tests are done.
-
