@@ -1,29 +1,34 @@
 1
 00:00:00,250 --> 00:00:03,661
+这里是创建位置表的语句的解答
 Here's the solution for
 the location table creation statement.
 
 2
 00:00:03,661 --> 00:00:07,553
+就像我之前提到的  我们把位置环境设置为唯一的
 As I mentioned before,
 we make the location setting unique.
 
 3
 00:00:07,553 --> 00:00:12,204
+这非常重要  因为现存位置的ID
 This is particularly important because
 the ID of the existing location is
 
 4
 00:00:12,204 --> 00:00:17,700
+是天气表的外键  因此必须不能更改
 used as a foreign key in our weather
 table, and therefore must not change.
 
 5
 00:00:17,700 --> 00:00:20,590
+这个约束也会限制同一个位置环境
 And this constraint will prevent
 the same location setting
 
 6
 00:00:20,590 --> 00:00:21,840
+拥有多个ID
 from having multiple IDs.
-
