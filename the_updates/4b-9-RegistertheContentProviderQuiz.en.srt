@@ -1,101 +1,133 @@
-1
+﻿1
 00:00:00,173 --> 00:00:05,478
 The URIMatcher we just coded is central
-to coding our Content Provider.
+to coding our ContentProvider.
+我们刚刚编写的URIMatcher是我们编写
+ContentProvider的核心
 
 2
 00:00:05,478 --> 00:00:09,652
 And will be used in the implementation
-of our core Content Provider methods.
+of our core ContentProvider methods.
+将会用于实现我们的ContentProvider方法中
 
 3
 00:00:09,652 --> 00:00:13,936
 We've given you Tests to help you along
-the way as you code Weather Provider.
+the way as you code WeatherProvider.
+我们已经给了你测试来帮助你
+在你编写WeatherProvider的过程中
 
 4
 00:00:13,936 --> 00:00:17,169
 Since several of these tests
 have been re-purposed from
+因为部分测试已经改过了用途
 
 5
 00:00:17,169 --> 00:00:19,264
 the database test you helped write.
+从你写过的数据库测试中
 
 6
 00:00:19,264 --> 00:00:23,411
-You may want to look at how the content
-provider calls replace the SQL
+You may want to look at how the 
+ContentProvider calls replace the SQL
+你有可能想看ContentProvider如何
+调用替换SQL
 
 7
 00:00:23,411 --> 00:00:28,088
 database calls in tasks such as test
 location table and test weather table.
+数据库调用在任务里的
+比如测试位置表格和测试天气表格。
 
 8
 00:00:28,088 --> 00:00:31,888
 But before we can start implementing
 step four in testing our content
+但是在我们开始实现第四步
+测试我们的Content
 
 9
 00:00:31,888 --> 00:00:35,295
 provider, we need to register
 it to the AndroidManifest, so
+Provider时，我们需要将其注册到
+AndroidManifest中，这样
 
 10
 00:00:35,295 --> 00:00:36,945
 that Android knows about it.
+Android系统才知道它的存在。
 
 11
 00:00:36,945 --> 00:00:41,191
-Once the weather provider has been
+Once the Weather Provider has been
 registered with the package manager, we
+一旦Weather Provider向
+package manager登记，我们
 
 12
 00:00:41,191 --> 00:00:45,450
 can use an Android utility class called
 the ContentResolver to refer to it.
+可以使用一个Android Utility Class
+名为ContentResolver参考。
 
 13
 00:00:45,450 --> 00:00:50,455
 The ContentResolver locates our class
 using the Content Authority and
+ContentResolver利用Content Authority
+定位我们的类，然后
 
 14
 00:00:50,455 --> 00:00:54,555
-makes direct calls to the weather
-provider on our behalf.
+makes direct calls to the Weather
+Provider on our behalf.
+直接以我们的名义调用Weather Provider
 
 15
 00:00:54,555 --> 00:00:58,897
 Add a provider tag into
 the androidmanifest.xml file to register
+在androidmanifest.xml文件中加入一个
+提供者标签用于注册
 
 16
 00:00:58,897 --> 00:01:03,317
 the WeatherProvider class with
 the Content Authority as defined in
+带ContentAuthority的
+WeatherProvider类就像
 
 17
 00:01:03,317 --> 00:01:04,881
 the WeatherContract.
+在WeatherContract中定义的。
 
 18
 00:01:04,881 --> 00:01:09,500
 Note that the two fields you need
 to populate in the provider tag
+记住有两个领域你需要填充在provider标签内
 
 19
 00:01:09,500 --> 00:01:12,915
 are android:name and android:authority.
+是android:name和android:authority
 
 20
 00:01:12,915 --> 00:01:16,552
-On comment, the test provider
-registry test within test provider,
+On common, the test provider
+registry test within test provider
+通常来说，在test provider内
+注册测试
 
 21
 00:01:16,552 --> 00:01:19,005
 to test to see if you've
 done this correctly.
-
+来测试你是否正确完成了。
