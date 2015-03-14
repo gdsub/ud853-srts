@@ -1,136 +1,165 @@
 1
 00:00:00,496 --> 00:00:03,930
+在ForecatsAdapter的bindView方法中我们必须便利
 In the ForecastAdapter bindView method,
 we have to traverse
 
 2
 00:00:03,930 --> 00:00:07,480
+视图层级来找到视图，以往里设置数据。
 the view hierarchy to find the views
 in order to set data onto them.
 
 3
 00:00:07,480 --> 00:00:08,890
+如果是一个回收的视图，
 If it's a recycled view,
 
 4
 00:00:08,890 --> 00:00:12,450
+也就是说他之前在列表中被用来显示过其他数据，
 meaning it's been used in the list
 previously to display other data,
 
 5
 00:00:12,450 --> 00:00:16,129
+我们也还是需要遍历视图层级来找到所有视图。
 we still have to traverse the view
 hierarchy to find all the views.
 
 6
 00:00:16,129 --> 00:00:18,930
+要删除不必要的findViewById调用，
 To remove unnecessary
 findViewById calls,
 
 7
 00:00:18,930 --> 00:00:20,810
+我们可以使用ViewHolder模式。
 we can use the View Holder Pattern.
 
 8
 00:00:20,810 --> 00:00:23,290
+对于一个包含了不同视图的列表项布局，
 For a list item layout that
 contains different views,
 
 9
 00:00:23,290 --> 00:00:25,270
+我们可以创建一个ViewHolder对象。
 we can create a View Holder object.
 
 10
 00:00:25,270 --> 00:00:28,740
+他包含了指向布局中每一个视图的成员变量。
 It contains member variables that
 reference each View in the layout.
 
 11
 00:00:28,740 --> 00:00:32,250
+ViewHolder对象存在视图的Tag域中。
 The View Holder object is stored
 in the tag field of the View.
 
 12
 00:00:32,250 --> 00:00:34,330
+下一次视图被回收利用时，
 The next time that
 the View is recycled and
 
 13
 00:00:34,330 --> 00:00:38,800
+我们只要直接把数据设进这些域中。
 used again, we can just immediately
 set the data on to these fields.
 
 14
 00:00:38,800 --> 00:00:40,940
+你不必再去找一遍所有视图了。
 You don't have to go
 find all the views again.
 
 15
 00:00:40,940 --> 00:00:42,600
+这是我们的ViewHolder类。
 This is our ViewHolder class.
 
 16
 00:00:42,600 --> 00:00:43,680
+你可以将它命名为任何你喜欢的。
 You can name it anything you want.
 
 17
 00:00:43,680 --> 00:00:45,250
+他只是一个Java类
 It's just a Java class.
 
 18
 00:00:45,250 --> 00:00:49,090
+给到列表项布局，我们执行所有的findViewById调用。
 Given the list item layout,
 we do all the findViewById calls.
 
 19
 00:00:49,090 --> 00:00:51,778
+这样我们可以持有所有子视图的引用。
 That way we can hold references
 to all the child views.
 
 20
 00:00:51,778 --> 00:00:54,800
+在我们是出乎啊视图之后的newView方法中，
 In the newView method after
 we've inflated the view,
 
 21
 00:00:54,800 --> 00:00:57,620
+我们根据此视图创建一个新的viewHolder对象。
 we create a new viewHolder
 object from that view.
 
 22
 00:00:57,620 --> 00:01:00,190
+然后我们将那个viewHolder作为view的tag。
 Then we set that viewHolder
 as the tag of the view.
 
 23
 00:01:00,190 --> 00:01:02,260
+tag可以被用来存放任何对象。
 The tag can be used to store any object.
 
 24
 00:01:02,260 --> 00:01:04,361
+但不要滥用，因为当你从中读取时，
 But don't abuse it because
 when you read it back you,
 
 25
 00:01:04,361 --> 00:01:05,866
+必须知道你在那儿存了写什么。
 have to know what you stored in there.
 
 26
 00:01:07,435 --> 00:01:09,363
+然后在适配器的bindView调用中，
 Then in the adaptor bindView call,
 
 27
 00:01:09,363 --> 00:01:13,170
+我们从tag中读取viewHolder对象。
 we read from the tag to get
 back the viewHolder object.
 
 28
 00:01:13,170 --> 00:01:16,300
+现在我们立刻得到了对我们需要更新的所有独立视图的引用
 Now we immediately have references to
 all the individual views that we need to
 
 29
 00:01:16,300 --> 00:01:20,040
+例如icon视图，日期视图，描述视图等等。
 update, such as icon view, date view,
 description view and so on.
 
