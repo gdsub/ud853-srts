@@ -1,19 +1,23 @@
 1
 00:00:00,320 --> 00:00:04,550
+实现天气的和位置的查询在content provider里
 Implement the queries for weather and
 location in our content provider.
 
 2
 00:00:04,550 --> 00:00:07,240
+注意这些都是基本的查询
 Note that these are both basic queries.
 
 3
 00:00:07,240 --> 00:00:11,270
+取消注释test provider中的基本的测试位置查询的方法
 Un comment out the test basic location
 query function within test provider.
 
 4
 00:00:11,270 --> 00:00:13,700
+然后运行代码 确保一切运行良好
 And, run the code to make sure
 all of this is working well.
 

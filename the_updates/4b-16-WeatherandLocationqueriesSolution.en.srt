@@ -1,47 +1,57 @@
 1
 00:00:00,340 --> 00:00:01,710
+恩 你已经完成了
 Alright, you're done!
 
 2
 00:00:02,800 --> 00:00:04,540
+我们看一下解决方案
 Let's take a look at the solution.
 
 3
 00:00:04,540 --> 00:00:07,200
+对于天气(content provider)我们仅仅获得一个可读的数据库和
 For weather,
 we just get a readable database and
 
 4
 00:00:07,200 --> 00:00:11,040
+传递请求content provider来的所有参数
 pass all of these parameters
 from the content provider call.
 
 5
 00:00:11,040 --> 00:00:15,000
+天气和位置的实现方法是相当类似的
 The solution for weather and
 location is pretty much the same.
 
 6
 00:00:15,000 --> 00:00:18,810
+对于每一个 我们传递从content provider来的参数
 For each one, we're going to pass the
 parameters that come through the content
 
 7
 00:00:18,810 --> 00:00:22,380
+到可读的数据库中的查询方法
 provider into the query function
 of our readable database.
 
 8
 00:00:22,380 --> 00:00:25,860
+再次提醒 这些参数是从content provider中来的
 Again, these are the parameters that
 come through the content provider, and
 
 9
 00:00:25,860 --> 00:00:29,630
+这些参数的我们要传递给数据库的
 these are the parameters that
 we pass into the database.
 
 10
 00:00:29,630 --> 00:00:31,330
+位置(的content provider)看起来是类似的
 Location looks approximately the same.
 
