@@ -106,35 +106,42 @@ the loadInBackground function, and
 
 23
 00:01:19,430 --> 00:01:24,100
+当处理完成后，activity会在onLoadFinished回调中被通知
 once it finishes the activity gets
 notified through onLoadFinished.
 
 24
 00:01:24,100 --> 00:01:27,250
+CursorLoader虽然继承自AsyncTaskLoader
 CursorLoader is derived
 from Async Task Loader but
 
 25
 00:01:27,250 --> 00:01:29,620
+但它有一定的额外优化。
 has an additional optimization.
 
 26
 00:01:29,620 --> 00:01:31,870
+如果Cursor已经完成了读取操作，并且
 If the cursor has already
 finished loading and
 
 27
 00:01:31,870 --> 00:01:34,890
+在activity重启之前在后台读取完成
 load in background before
 the activity restarts,
 
 28
 00:01:34,890 --> 00:01:39,080
+CursorLoader会在初始化时确认cursor的更新。
 the CursorLoader recognizes this
 during the loader initialization.
 
 29
 00:01:39,080 --> 00:01:42,655
+并将cursor通过onLoadFinished方法传给UI线程。
 And the cursor is immediately delivered
 to the UI through onLoadFinished
 
