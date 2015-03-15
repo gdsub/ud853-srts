@@ -1,95 +1,126 @@
 1
 00:00:00,130 --> 00:00:03,160
+如果希望你的app的 content provider 
 It's actually quite straightforward 
+被第三方的apps能够使用，其实是
 to make your apps content provider
 
 2
 00:00:03,160 --> 00:00:05,560
+很容易的。
 available to third party apps.
 
 3
 00:00:05,560 --> 00:00:11,240
+关键就是要把manifest 文件里 export 参数值
 The key is to modify the export flag
+设置成"true"。
 in the manifest entry here to "true".
 
 4
 00:00:11,240 --> 00:00:12,572
+zai简单不过了。
 As simple as that.
 
 5
 00:00:12,572 --> 00:00:15,264
+任何一个知道 content URI 的 app,
 Any app that knows the content URI,
+都可以使用 content 来
 can use the content resolve
 
 6
 00:00:15,294 --> 00:00:17,587
+让你访问这些内容.
 would access it
 the same way that you do.
 
 7
 00:00:17,587 --> 00:00:20,290
+现在由于你的app里数据的敏感程度，
 Now depending on 
 the sensitivity of your data,
 
 8
 00:00:20,290 --> 00:00:23,000
+你需要保护数据，通过设置一个
 you may want to protect it 
+访问允许值。
 by requiring specific permissions
 
 9
 00:00:23,000 --> 00:00:24,820
+从而可以读写这些数据。
 to read or write to the database.
 
 10
 00:00:24,820 --> 00:00:27,060
+这样，就可以有效的限制
 So if you want to, you can 
+你的数据访问者。
 effectively limit access
 
 11
 00:00:27,060 --> 00:00:29,960
+只有那些你自己创建的app,或者是
 only to other apps you've created,
+一些有访问权限的第三方apps 
 or to third party apps
 
 12
 00:00:29,960 --> 00:00:33,260
+才能够被允许来访问你的app
 which know the permissions 
 and users agree to.
 
 13
 00:00:33,260 --> 00:00:34,970
+然后你只需要发布一下
 Then you just need 
+这个访问合约
 to publish this contract
 
 14
 00:00:34,970 --> 00:00:39,630
+这样可以让content provider 和 URI 互动
 to interact with the content provider, 
+特别注意的是URI 和 column 的名字。
 specifically the URI and column names.
 
 15
 00:00:39,630 --> 00:00:42,690
+这样你已经创建了一个简单的API
 And you've created a simple API 
+来为你的app 数据。
 for all of your data.
 
 16
 00:00:42,690 --> 00:00:45,100
+就是这么简单，你创建了新的
 And as simple as that, 
+API，
 you've created a new API,
 
 17
 00:00:45,100 --> 00:00:46,930
+来支持你的数据访问。
 just for your data.
 
 18
 00:00:46,930 --> 00:00:48,456
+这个解决方案呢恰恰是被
 This is exactly the same approach
 
 19
 00:00:48,456 --> 00:00:50,702
+许多本地的content provider 使用的，
 used by many of the 
 native content providers,
 
 20
 00:00:50,702 --> 00:00:54,460
+这些数据包括了联系人数据，
 including the Contacts Database, 
+媒体库，日历和呼叫日志。
 Media Store, Calendar and Call Log.
 
