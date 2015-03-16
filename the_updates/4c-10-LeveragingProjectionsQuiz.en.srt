@@ -1,15 +1,18 @@
 1
 00:00:00,500 --> 00:00:02,203
+好，现在该你动手了
 All right.
 Now it's your turn.
 
 2
 00:00:02,203 --> 00:00:06,656
+在CursorLoader和ForecastAdapter中使用projection
 Use a projection in your implementation
 of the CursorLoader and ForecastAdapter
 
 3
 00:00:06,656 --> 00:00:10,653
+来让代码更有效率
 to make your code a bit more efficient
 in its use of the content provider and
 
@@ -19,35 +22,42 @@ database.
 
 5
 00:00:11,312 --> 00:00:12,955
+在ForecastAdapter里面
 In the ForecastAdapter,
 
 6
 00:00:12,955 --> 00:00:17,870
+你要修改convertCursorRowToUXFormat()函数
 you'll be modifying the convert
 cursor row to UX format function.
 
 7
 00:00:17,870 --> 00:00:21,819
+因为我们之后的教学要用到这个projection
 Because our code will be making use of
 this projection in future sessions,
 
 8
 00:00:21,819 --> 00:00:24,980
+所以我们已经为你做好了第一步和第二步
 we've done step one and
 step two for you.
 
 9
 00:00:24,980 --> 00:00:27,550
+查看下面的笔记
 See the instructor notes for
 the string array you should use for
 
 10
 00:00:27,550 --> 00:00:30,620
+把它们用在你的代码中
 our projection and the constants for
 the column indices.
 
 11
 00:00:30,620 --> 00:00:33,770
+注意，比起现在UI中用到的数据，我们获取了更多点的数据
 Note that we get more data than
 we are using in the UI right now.
 

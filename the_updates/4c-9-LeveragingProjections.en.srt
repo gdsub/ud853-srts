@@ -1,37 +1,45 @@
 1
 00:00:00,210 --> 00:00:05,300
+当我们查询数据库时，它会返回一个包含着很多列的cursor
 Whenever we query the database, we get
 a cursor back that contains columns.
 
 2
 00:00:05,300 --> 00:00:08,550
+每一列都有其对应的整数序号
 Each column has an integer
 index assigned to it.
 
 3
 00:00:08,550 --> 00:00:11,730
+之前，我们是对每一列调用getColumnIndex()
 Up until now,
 we've had to call getColumnIndex for
 
 4
 00:00:11,730 --> 00:00:14,180
+来得到这个序号的
 each column in order to get this index.
 
 5
 00:00:14,180 --> 00:00:16,129
+不过，可以不这么麻烦
 But, there is a way to avoid doing that.
 
 6
 00:00:17,300 --> 00:00:21,300
+我们可以创建一个包含着我们想获取的列的列名的数组
 We can create a projection which is
 just an array of the columns we want to
 
 7
 00:00:21,300 --> 00:00:22,710
+将它填入查询语句的projection参数
 return in our cursor.
 
 8
 00:00:22,710 --> 00:00:25,560
+这样做效率更高，因为我们只会获取到我们需要的数据
 This is more efficient because we
 are only fetching the data from
 
@@ -41,35 +49,42 @@ the database that we need to use and
 
 10
 00:00:28,480 --> 00:00:32,290
+而且因为数据库返回的数据是以
 since the database always returns
 the columns in the order we specify,
 
 11
 00:00:32,290 --> 00:00:36,030
+我们在projection中自定义的列顺序来组织的
 we can rely on the indices matching
 the order from our projection.
 
 12
 00:00:36,030 --> 00:00:40,600
+所以很方便我们调用
 So we can then just use these indices
 to get information from our cursor.
 
 13
 00:00:40,600 --> 00:00:41,910
+一个小提示：
 One minor note.
 
 14
 00:00:41,910 --> 00:00:45,620
+因为我们在查询语句中做了个表连接（查询了两个表）
 Since we are doing a join on our
 weather with location queries,
 
 15
 00:00:45,620 --> 00:00:50,510
+我们必须来指定哪一个ID是我们需要的
 we have to specify which ID we want
 explicitly in our projection by adding
 
 16
 00:00:50,510 --> 00:00:55,140
+在projection里用表名+点+列名来指定我们需要的那个表的ID
 the table name followed by a dot before
 the column name, as in this example.
 
