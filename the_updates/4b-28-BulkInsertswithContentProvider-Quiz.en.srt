@@ -1,58 +1,70 @@
 1
 00:00:01,310 --> 00:00:05,210
+我们实际上仍然没有插入天气数据到Content Provider
 We're still not actually inserting
 weather data into the ContentProvider.
 
 2
 00:00:05,210 --> 00:00:08,270
+所以 这个是一个好时机说说BulkInserts(BulkInsert是ContentProvider的一个方法)
 So, this is a good time to
 talk about BulkInserts.
 
 3
 00:00:08,270 --> 00:00:11,380
+记住 这个BulkInert允许我们插入多行(数据)
 Remember, that BulkInsert allows
 us to insert multiple rows
 
 4
 00:00:11,380 --> 00:00:14,840
+比使用数据库事物更加高效
 far more efficiently by using
 a database transaction.
 
 5
 00:00:14,840 --> 00:00:18,130
+我们可以使用这个当我们需要插入14天的天气数据
 We can apply this when we need to
 insert 14 days worth of weather data
 
 6
 00:00:18,130 --> 00:00:19,720
+到数据库中的时候
 into the table.
 
 7
 00:00:19,720 --> 00:00:24,650
+使用Content Provider来批量插入内容数据到
 Use the ContentProvider to BulkInsert
 the vector of content values into
 
 8
 00:00:24,650 --> 00:00:26,250
+数据库
 the database.
 
 9
 00:00:26,250 --> 00:00:30,995
+注意 在这个区域下方有几行提示在你添加BulkInsert代码
 Note, there are a few lines underneath
 the area where you add your BulkInsert
 
 10
 00:00:30,995 --> 00:00:35,280
+后使用它来测试显示你插入后的数据
 code that you can use to test displaying
 the values you just inserted.
 
 11
 00:00:35,280 --> 00:00:39,300
+它会从数据库中读出这些数据 为他们创建ContentValues(ContentProvider的专用数据集合)
 It will read those values out of
 the data base, create content values for
 
 12
 00:00:39,300 --> 00:00:42,520
+和传给我们已经有的显示方法
 them, and pass them into the same
 display function we already have.
 
