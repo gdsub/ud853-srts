@@ -1,9 +1,0 @@
-1
-00:00:00,250 --> 00:00:02,590
-谢谢大家  现在来浏览一下论坛
-Thanks. Now take the opportunity to browse the forum
-
-2
-00:00:02,590 --> 00:00:04,630
-看看其它同学的成果
-and see what other students have managed to create.

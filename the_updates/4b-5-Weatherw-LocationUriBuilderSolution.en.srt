@@ -1,14 +1,17 @@
-1
+﻿1
 00:00:00,240 --> 00:00:01,940
+这一段视频非常的短
 This one is pretty short.
 
 2
 00:00:01,940 --> 00:00:05,768
+我们仅仅需要为了地址扩展Weather URI的路径
 We just need to append the path segment
 for the location to the weather URI,
 
 3
 00:00:05,768 --> 00:00:09,410
+使用URI类里面得buildUpon函数
 using the buildUpon
 function from the URI class
 

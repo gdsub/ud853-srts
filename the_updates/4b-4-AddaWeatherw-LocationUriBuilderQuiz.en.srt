@@ -1,29 +1,35 @@
-1
+﻿1
 00:00:00,380 --> 00:00:03,540
+写代码来构建URI来查询天气
 Write code to build a URI
 to query the weather
 
 2
 00:00:03,540 --> 00:00:08,200
+通过WeatherContract里WeatherEntry里的地址
 with location within the weatherEntry
 inner class within weatherContract.
 
 3
 00:00:08,200 --> 00:00:11,690
+讲师的注释讲解了如何
 Look at the instructor notes for
 a link to the URI builder classes for
 
 4
 00:00:11,690 --> 00:00:13,370
+连接去URIBuilder的类
 how to do this.
 
 5
 00:00:13,370 --> 00:00:16,370
+取消掉这个用于测试的WeatherLocation函数的注释
 Uncomment out the test
 weatherLocation function within
 
 6
 00:00:16,370 --> 00:00:19,560
+来检验你的实现。那个函数在测试的WeatherContract里。
 test weatherContract to
 verify your implementation.
 

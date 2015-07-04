@@ -1,9 +1,0 @@
-1
-00:00:00,330 --> 00:00:03,300
-思考一下这个方法是如何工作的，你不想在你的应用中只创建一个
-Think about how that might work. What are some of the reasons
-
-2
-00:00:03,300 --> 00:00:06,860
-activity的原因有哪些呢？
-you may not want to create only a single activity within your application?

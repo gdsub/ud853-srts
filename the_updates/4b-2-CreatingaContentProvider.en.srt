@@ -384,140 +384,169 @@ a single item.
 
 67
 00:03:55,380 --> 00:03:58,430
+这些URIs怎么构建取决于不同的程序
 How these URIs are structured
 is up to each application.
 
 68
 00:03:58,430 --> 00:04:02,290
+但是Android也能帮助了把一个ID扩展成一个URI
 But Android provides support, for
 appending an ID to the URI path,
 
 69
 00:04:02,290 --> 00:04:05,560
+来指明程序想要的一个特定数据
 to indicate that the application is
 interested in a specific record,
 
 70
 00:04:05,560 --> 00:04:07,320
+而不是一个范围数据
 rather than a range of records.
 
 71
 00:04:07,320 --> 00:04:10,000
+在Sunshine里，特定的日期时间
 In Sunshine, the value for
 a specific date and time,
 
 72
 00:04:10,000 --> 00:04:13,550
+被用来查询一个指定地址的天气
 is appended to the query for
 weather at a specific location.
 
 73
 00:04:13,550 --> 00:04:16,470
+这就需要返回一个指定的天气数据
 And that causes a single
 weather record to be returned.
 
 74
-00:04:16,470 --> 00:04:18,870
+00:04:16,470 --> 00:04:18,870 
+所以，定义URIs
 So, defining URIs.
 
 75
 00:04:18,870 --> 00:04:19,740
+来让我们的工作变得简单吧
 To make it easy for
 
 76
 00:04:19,740 --> 00:04:23,360
+我已经定义了这些我们将要支持的数据URIs
 us, I've defined these data
 URIs that we'll be supporting.
 
 77
 00:04:23,360 --> 00:04:24,530
+有一些URIs
 Some of these URIs,
 
 78
 00:04:24,530 --> 00:04:29,060
+存在是因为某个特定的数据需要在屏幕上被显示出来
 exist because the UI has a view that
 needs to expose that particular data.
 
 79
 00:04:29,060 --> 00:04:30,980
+例如被用来显示天气预报主菜单
 Such as weather with location,
 
 80
 00:04:30,980 --> 00:04:34,380
+的天气和地址
 which will be used to display
 the main list of forecasts.
 
 81
 00:04:34,380 --> 00:04:37,410
+当然还有用来显示详细天气信息的
 And of course,
 weather with location and date.
 
 82
 00:04:37,410 --> 00:04:40,730
+具体地址和时间的天气
 Which would be used to display
 the detailed forecast information.
 
 83
 00:04:40,730 --> 00:04:45,030
+其他的URIs主要被用来写入数据库，插入、更新
 Others, are used primarily for writing
 the database, inserts, updates and
 
 84
 00:04:45,030 --> 00:04:46,190
+和删除
 deletes.
 
 85
 00:04:46,190 --> 00:04:49,880
+这些基础的URIs对于测试也是有帮助的
 Having these base URIs,
 is also useful for testing.
 
 86
 00:04:49,880 --> 00:04:53,170
+现在是时候回到我们的WeatherContract了
 Now it's time to go back
 to our weather contract.
 
 87
 00:04:53,170 --> 00:04:56,160
+我们之前描述到什么是WeatherContract的时候
 When we first described
 what a weather contract is,
 
 88
 00:04:56,160 --> 00:05:00,540
+我们说过那是一个数据模型，储存和界面之前的一个协议
 we said that it is an agreement between
 the data models, storage and views.
 
 89
 00:05:00,540 --> 00:05:03,620
+Presentation描述那些信息时如何被访问的
 Presentation describing how
 information is accessed.
 
 90
 00:05:03,620 --> 00:05:06,940
+原来，除了通过数据库的列名称，
 It turns out,
 that in addition to the column names for
 
 91
 00:05:06,940 --> 00:05:11,270
+这些Contract也是可以被用来定义URIs的
 our database, the contract is also
 a great place to define the URIs,
 
 92
 00:05:11,270 --> 00:05:14,100
+我们的程序会用它们来访问数据
 that our application will be
 using to access its data.
 
 93
 00:05:14,100 --> 00:05:17,050
+下面，我们会解释你需要怎么构建你的WeatherContract
 Next, we'll explain what you need
 to add to your weather contract.
 
 94
 00:05:17,050 --> 00:05:19,890
+当你完全添加这段代码进你的程序后，
 When you've completed adding
 this code to your project,
 
 95
 00:05:19,890 --> 00:05:21,580
+我会来解释你做的是什么。
 I'll explain a bit
 about what you've done
 
