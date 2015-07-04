@@ -1,0 +1,50 @@
+1
+00:00:00,170 --> 00:00:02,180
+These are the attributes
+that we care about.
+这些是我们关心的属性。
+
+2
+00:00:02,180 --> 00:00:04,660
+You might be wondering
+why time is not included.
+你可能想知道为什么时间不包括在里面.
+
+3
+00:00:04,660 --> 00:00:06,750
+The weather API provides the date and
+weather API 提供了日期和 GMT 时间，
+
+4
+00:00:06,750 --> 00:00:10,380
+GMT time, but doesn't provide
+time zones for the location.
+但是并不提供地区的时区。
+
+5
+00:00:10,380 --> 00:00:13,820
+So unfortunately, the date could be
+incorrect in some cases depending on
+因此不幸运的是，日期在某些情况下根据
+
+6
+00:00:13,820 --> 00:00:15,900
+your location and time of day.
+你的地区和时间的不同而不同。
+
+7
+00:00:15,900 --> 00:00:16,570
+Instead, for
+反而，为了
+
+8
+00:00:16,570 --> 00:00:20,200
+a more accurate experience, we'll be
+computing the date ourselves based on
+一个更加精确的体验，我们将自己计算日期基于
+
+9
+00:00:20,200 --> 00:00:23,150
+the device time of when you fetched
+the weather forecast from the server.
+你从服务器拿到数据时的设备时间。

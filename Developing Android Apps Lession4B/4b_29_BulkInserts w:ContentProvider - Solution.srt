@@ -1,0 +1,99 @@
+1
+00:00:00,440 --> 00:00:01,830
+好了  已经完成了
+All right, you're done.
+
+2
+00:00:01,830 --> 00:00:03,690
+让我们看一下写好的代码
+Let's take a look at the solution.
+
+3
+00:00:03,690 --> 00:00:06,390
+由于我们不能直接插入一个Vector对象
+While we cannot insert a vector directly,
+
+4
+00:00:06,390 --> 00:00:09,180
+我们可以把Vector对象转换成数组
+we can easily convert a vector to an array.
+
+5
+00:00:09,180 --> 00:00:13,520
+完成转换以后  bulkInsert方法可以实现高效的数据插入
+Once we've done this, the bulk insert method will insert very efficiently.
+
+6
+00:00:13,520 --> 00:00:17,300
+看这里  我们放开了这些之前注释掉的代码
+As you can see, we've uncommented out this next series of lines.
+
+7
+00:00:17,300 --> 00:00:20,250
+这些代码可以让我们测试一下
+This allows us to test our output to make sure
+
+8
+00:00:20,250 --> 00:00:22,749
+是否向数据库中插入了正确的数据
+that we've actually inserted the right thing into the database.
+
+9
+00:00:24,420 --> 00:00:25,550
+让我们运行一下应用
+Let's actually run our app.
+
+10
+00:00:27,090 --> 00:00:29,990
+如你所见  我们将之前插入到数据库中的数据
+And as you can see, we're actually reading the data out of the database
+
+11
+00:00:29,990 --> 00:00:32,536
+全部正确地读取了出来
+that we just inserted all correctly.
+
+12
+00:00:32,536 --> 00:00:36,750
+现在我们的后台会高效地更新数据  我们确实需要
+Now our back end will update efficiently, but we really need to be
+
+13
+00:00:36,750 --> 00:00:40,100
+在请求网络数据之前就可以查询本地的数据
+querying things before requesting them from the internet.
+
+14
+00:00:40,100 --> 00:00:43,210
+总之  重点是设计一个响应式的应用
+After all, the main point is to have a responsive application.
+
+15
+00:00:43,210 --> 00:00:45,770
+直到我们已经从网络请求到了数据以后
+We're still not even updating the screen until we've
+
+16
+00:00:45,770 --> 00:00:47,650
+再更新屏幕
+pulled data down from the web.
+
+17
+00:00:47,650 --> 00:00:51,170
+同时也要避免在UI线程查询数据
+We also want to avoid doing our query on the UI thread,
+
+18
+00:00:51,170 --> 00:00:55,250
+因为在UI线程进行诸如查询数据库的操作会导致Android系统不能
+because doing operations like queries on the UI thread cause Android to not be
+
+19
+00:00:55,250 --> 00:00:59,470
+足够快速地刷新屏幕  也就是帧抖动现象
+able to draw frames fast enough, which introduces frame rate jitter.
+
+20
+00:00:59,470 --> 00:01:03,460
+好消息是  Android提供了一种叫装载器（Loader）的模式
+Fortunately, Android offers a pattern for that known as Loaders.

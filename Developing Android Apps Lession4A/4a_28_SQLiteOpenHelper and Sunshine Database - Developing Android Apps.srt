@@ -1,0 +1,539 @@
+﻿1
+00:00:00,190 --> 00:00:01,400
+这是份合约
+Now that's a contract.
+
+2
+00:00:02,600 --> 00:00:05,270
+此时  我们定义出我们想要的列名称
+At this point, we define the names of the columns we want,
+
+3
+00:00:05,270 --> 00:00:08,535
+但是我们仍然没有数据库
+but we still don't have a database.
+
+4
+00:00:08,535 --> 00:00:14,080
+为真做一个数据库  我们要去继承 Android 的SQLiteOpenHelper 
+To actually make a database, we're gong to extend Android's SQLiteOpenHelper.
+
+5
+00:00:14,080 --> 00:00:17,470
+SQLiteOpenHelper 包含了很棒的工具  用于创建数据库并
+SQLiteOpenHelper contains cool stuff to create the database and
+
+6
+00:00:17,470 --> 00:00:19,500
+帮助我们处理数据库的版本控制
+help us handle database versioning.
+
+7
+00:00:19,500 --> 00:00:21,735
+当未来我们对数据库做一些改变的时候
+As we make changes to our database in the future,
+
+8
+00:00:21,735 --> 00:00:24,490
+它将会帮助我们改动这些表格
+tt will help us modify our tables.
+
+9
+00:00:24,490 --> 00:00:25,320
+对于很多应用来说
+For many apps,
+
+10
+00:00:25,320 --> 00:00:28,730
+在不损失任何数据的前提下更新到新版本是很关键的
+being able to upgrade to a new version without data loss is critical.
+
+11
+00:00:28,730 --> 00:00:32,500
+对于Sunshine数据库来说  我们的目的是确保升级引发的
+For Sunshine, we just want to make sure that upgrades in that involve
+
+12
+00:00:32,500 --> 00:00:34,730
+数据表改变可以平滑的发生
+schema changes happen smoothly.
+
+13
+00:00:34,730 --> 00:00:38,825
+让我们从应用上更近的观察SQLiteOpenHelper
+Let's take a look at SQLiteOpenHelper more closely in action.
+
+14
+00:00:38,825 --> 00:00:41,735
+我们要在WeatherDBHelper类中做些事情  此类是SQLiteOpenHelper的继承
+We're going to be working in the WeatherDBHelper class that you've been
+
+15
+00:00:41,735 --> 00:00:44,815
+我们要在WeatherDBHelper类中做些事情  此类是SQLiteOpenHelper的继承
+given which extends SQLiteOpenHelper.
+
+16
+00:00:44,815 --> 00:00:48,780
+它包含创建和初始化天气数据库的代码
+It contains code to create and initialize the weather database.
+
+17
+00:00:48,780 --> 00:00:49,880
+让我们试验一下
+Let's examine it.
+
+18
+00:00:49,880 --> 00:00:53,465
+在DbHelper的开始  可以见到我们定义了两个常量
+At the beginning of the DbHelper, you can see that we've defined constants for
+
+19
+00:00:53,465 --> 00:00:55,682
+DATABASE_VERSION 和 DATABASE_NAME
+DATABASE_VERSION and DATABASE_NAME.
+
+20
+00:00:55,682 --> 00:01:00,450
+典型的  DATABASE_VERSION 从版本1开始并且在我们
+The DATABASE_VERSION typically starts at version 1 and must be manually
+
+21
+00:01:00,450 --> 00:01:04,790
+发布带有新数据库表的更新APK时必须手动增加
+incremented each time we release an updated APK with a new database schema.
+
+22
+00:01:04,790 --> 00:01:09,150
+DATABASE_NAME 是文件系统中数据库文件的真实名称
+The DATABASE_NAME is the name of the actual database file in the file system,
+
+23
+00:01:09,150 --> 00:01:11,680
+在我们的例子中是 weather.db
+which will be weather.db in our case.
+
+24
+00:01:11,680 --> 00:01:15,810
+注意我们使用的是版本2  因为课程的这个修订版使用了更新的数据库版本
+Note that we're using version 2 since this revision of the course uses
+
+25
+00:01:15,810 --> 00:01:17,660
+注意我们使用的是版本2  因为课程的这个修订版使用了更新的数据库版本
+an updated database version.
+
+26
+00:01:17,660 --> 00:01:21,130
+这些值被传送到构造函数来初始化数据库帮助类
+These values get passed into the constructor
+
+27
+00:01:21,130 --> 00:01:23,580
+这些值被传送到构造函数来初始化数据库帮助类
+to initialize the database helper.
+
+28
+00:01:23,580 --> 00:01:26,220
+接下来是 onCreate 方法
+Next we have the onCreate method.
+
+29
+00:01:26,220 --> 00:01:28,900
+这是我们讨论的 SQL 和我们新的合约类被一起使用的地方
+This is where the SQL we've been talking about and
+
+30
+00:01:28,900 --> 00:01:31,760
+这是我们讨论的 SQL 和我们新的合约类被一起使用的地方
+our new contract class are used together.
+
+31
+00:01:31,760 --> 00:01:34,582
+数据库被第一次被用到时
+The first time the database is used,
+
+32
+00:01:34,582 --> 00:01:37,920
+SQLiteOpenHelper 的 onCreate 方法被调用
+SQLiteOpenHelper's onCreate will be called.
+
+33
+00:01:37,920 --> 00:01:40,550
+我们需要写正确的SQL语句字符串
+We need to write the correct SQL statement string so
+
+34
+00:01:40,550 --> 00:01:43,300
+这样我们才能创造sunshine需要的表
+that we can create the table sunshine needs.
+
+35
+00:01:43,300 --> 00:01:48,960
+然后系统执行这个 SQL 通过调用 db.execSQL
+We then have the system execute this SQL by calling db dot execSQL.
+
+36
+00:01:48,960 --> 00:01:52,540
+注意我是如何利用所有天气实体常量来写sql语句的
+Note how we're using all of the weather entry constants to write our
+
+37
+00:01:52,540 --> 00:01:53,890
+注意我是如何利用所有天气实体常量来写sql语句的
+sequel statements.
+
+38
+00:01:53,890 --> 00:01:57,870
+同时注意我们在这个表上使用了很多非空约束
+Also note that we use lots of not null constraints on this table.
+
+39
+00:01:57,870 --> 00:02:01,800
+这些约束有助于防止插入未填充列的记录到数据库中  防止bug
+These constraints help prevent us from inserting records without columns being
+
+40
+00:02:01,800 --> 00:02:05,770
+这些约束有助于防止插入未填充列的记录到数据库中  防止bug
+filled out into the database, and that helps to prevent bugs.
+
+41
+00:02:05,770 --> 00:02:09,070
+这是来自将要创建的位置实体表的 FOREIGN KEY 约束的实现
+Here is the implementation of the FOREIGN KEY constraint from the not yet
+
+42
+00:02:09,070 --> 00:02:11,038
+这是来自将要创建的位置实体表的 FOREIGN KEY 约束的实现
+created location entry table.
+
+43
+00:02:11,038 --> 00:02:14,280
+这意味必须有一个天气位置的位置实体被插到库里后
+This means that we cannot insert a weather entry into the database until
+
+44
+00:02:14,280 --> 00:02:17,450
+我们才能插入一个天气实体到数据库中
+a location entry for the weather location has been inserted.
+
+45
+00:02:17,450 --> 00:02:20,270
+同时当存在指向位置的天气实体时  我们不能删除位置
+And we cannot delete locations while there exist weather
+
+46
+00:02:20,270 --> 00:02:21,680
+同时当存在指向位置的天气实体时  我们不能删除位置
+entries that point to them.
+
+47
+00:02:21,680 --> 00:02:24,410
+话虽这样说  还要等一会我们才能做出UI来展示
+That being said, it's going to be a while before we
+
+48
+00:02:24,410 --> 00:02:27,810
+数据库代码的工作
+have UI that can demonstrate that our database code is working.
+
+49
+00:02:27,810 --> 00:02:31,190
+幸运的是  我们有一个办法让 Android 运行我们想要的任何代码
+Fortunately, there's a way we can have Android run any code we want,
+
+50
+00:02:31,190 --> 00:02:32,920
+甚至没有UI也行
+even if there's no UI yet ready.
+
+51
+00:02:33,990 --> 00:02:37,970
+Android 在测试框架中有一个编译选项允许我们创建测试APK
+Android has a built in testing framework that allows us to create a test APK that
+
+52
+00:02:37,970 --> 00:02:42,580
+执行 JUnit 测试来调用我们主 APK 中的类
+executes a JUnit test that call into classes in our main APK.
+
+53
+00:02:42,580 --> 00:02:44,970
+如果你还不是特别熟悉JUnit
+If you aren't already familiar with JUnit,
+
+54
+00:02:44,970 --> 00:02:48,730
+简单说就是一个允许你写自动测试工具的测试框架
+it is a testing framework that allows you to write automated test suites.
+
+55
+00:02:48,730 --> 00:02:51,060
+你可以很轻易的运行自己的自动测试
+You can run your automated tests easily.
+
+56
+00:02:51,060 --> 00:02:54,960
+你可以在Android Studio 项目节中找到你的测试
+You can find your tests in this section of the Android Studio project.
+
+57
+00:02:54,960 --> 00:02:58,630
+右键测试包并且选择 Run
+Just right-click on the test package and select Run.
+
+58
+00:02:58,630 --> 00:03:00,060
+一旦测试通过或者失败
+Once the test pass or
+
+59
+00:03:00,060 --> 00:03:04,050
+你会看到结果输出在屏幕的底端
+fail, you'll see the output down here at the bottom of the screen.
+
+60
+00:03:04,050 --> 00:03:06,990
+我将不在我们的屏幕上显示模拟器了  
+I'm not going to display the emulator on our screen because it won't actually
+
+61
+00:03:06,990 --> 00:03:08,540
+因为它无法真实显示我们做的任何事情
+show that we're doing anything.
+
+62
+00:03:08,540 --> 00:03:11,050
+我们运行的测试没有任何的用户界面
+The tests we're running don't have any user interface.
+
+63
+00:03:11,050 --> 00:03:14,680
+但是在测试运行中你可以看这里  我们正实例化测试
+But you can see here in the test runner, we're instantiating tests.
+
+64
+00:03:14,680 --> 00:03:19,280
+一个空的窗口和绿色的结果意味着测试成功了
+An empty window and a green result means the test succeeded.
+
+65
+00:03:19,280 --> 00:03:21,800
+我们看看 TestPractice 类
+Let's look at the TestPractice class.
+
+66
+00:03:21,800 --> 00:03:25,470
+你可以看到它在我们测试工程的数据包中
+You can see it sits in the data package of our test project and
+
+67
+00:03:25,470 --> 00:03:27,420
+从AndroidTestCase类继承
+extends AndroidTestCase.
+
+68
+00:03:27,420 --> 00:03:29,020
+当你继承 AndroidTestaCase 时
+When you extend AndroidTestaCase,
+
+69
+00:03:29,020 --> 00:03:34,050
+你可以实现 setUp 方法  它会在每次测试前运行
+you can implement the setUp method which will be run before each test.
+
+70
+00:03:34,050 --> 00:03:38,100
+你也可实现 tearDown 方法  它会在每次测试后运行
+You can also implement tearDown which we run after each test.
+
+71
+00:03:38,100 --> 00:03:42,866
+和Junit测试很类似  你只要添加新方法到类中  这些方法以test为前缀  
+Similar to JUnit test, you simply add new methods in the class with the prefix
+
+72
+00:03:42,866 --> 00:03:46,310
+例如 testThatDemonstratesAssertions
+test such as testThatDemonstratesAssertions.
+
+73
+00:03:46,310 --> 00:03:49,430
+接下来他们会被测试进程自动的运行
+And those will automatically be run by the test processor.
+
+74
+00:03:49,430 --> 00:03:51,055
+还有些事情要注意的
+Some other things to note.
+
+75
+00:03:51,055 --> 00:03:54,855
+FullTestSuite 类含有这样的代码  包含了所有的在它包里的Java测试类到
+The FullTestSuite class contains code to include all of the Java
+
+76
+00:03:54,855 --> 00:03:59,315
+一个测试工具中  JUnit将会运行这个工具
+test classes in its package into a suite of tests the JUnit will run.
+
+77
+00:03:59,315 --> 00:04:01,815
+这让我们很容易的添加附加测试
+This allows us to easily add additional tests,
+
+78
+00:04:01,815 --> 00:04:05,255
+只需要添加附加的 Java 类文件到我们的测试目录中即可
+by just adding additional Java class files to our test directory.
+
+79
+00:04:05,255 --> 00:04:08,385
+你很有可能在你的每一个测试项目中都有这样一个类
+You'll likely have a class like this in each test project you make.
+
+80
+00:04:08,385 --> 00:04:10,555
+这些类并不是特定项目指定的
+They aren't typically project specific.
+
+81
+00:04:10,555 --> 00:04:12,870
+所以你可以直接拷贝这个类文件
+So you can literally just copy this file.
+
+82
+00:04:12,870 --> 00:04:16,380
+每一个测试至少有一个检查
+Each test should have at least one check which uses an assert
+
+83
+00:04:16,380 --> 00:04:19,390
+检查使用一个 assert（断言） 来查看程序是否应用了正确的输出
+to see if the program applies the correct output.
+
+84
+00:04:19,390 --> 00:04:22,170
+assert就是那样  声明在一部分测试运行
+An assert is just that, it's a declaration that
+
+85
+00:04:22,170 --> 00:04:26,600
+符合我们的预期后的输出
+the outcome after part of a test is run matches our expectations.
+
+86
+00:04:26,600 --> 00:04:29,450
+如果 assert 不匹配  测试失败
+If the assert does not match, the test will fail.
+
+87
+00:04:29,450 --> 00:04:32,211
+我们看看在TestPractice.java类中的testThatDemonstratesAssertions 
+Let's look at our testThatDemonstratesAssertions in
+
+88
+00:04:32,211 --> 00:04:33,890
+我们看看在TestPractice.java类中的testThatDemonstratesAssertions 
+TestPractice.java.
+
+89
+00:04:33,890 --> 00:04:38,240
+AssertEquals 确保输出值和实际值相符合
+AssertEquals asserts that the expected value equals the actual value.
+
+90
+00:04:38,240 --> 00:04:40,770
+如果他们不相等  那么一个 assertion 失败的错误
+If they are not equal than an assertion failed error is
+
+91
+00:04:40,770 --> 00:04:42,700
+被带着给出的字符串信息抛出
+thrown with the given string message.
+
+92
+00:04:42,700 --> 00:04:49,530
+其他有用的方法包括assertEquals  assertFalse  assertNull
+Other useful methods include assertEquals, assertFalse, assertNull, or
+
+93
+00:04:49,530 --> 00:04:53,660
+或者如果一个特定代码路径绝对不应被触及时  我们能调用失败
+we can just call fail if a certain code path should never have been reached.
+
+94
+00:04:53,660 --> 00:04:56,970
+随心所欲地写你自己的测试例来运用assertions
+Feel free to write your own test cases to play with assertions.
+
+95
+00:04:56,970 --> 00:04:59,700
+我们来看看当我们做了一个测试失败后发生了什么
+Let's see what happens when we make a test fail.
+
+96
+00:04:59,700 --> 00:05:01,810
+如你所见  结果为红色了
+As you can see our results are now red, and
+
+97
+00:05:01,810 --> 00:05:05,560
+我们可以准确的看到应用在测试的那个地方失败
+we can see exactly where in the test are application failed.
+
+98
+00:05:05,560 --> 00:05:10,680
+让我们在 TestDb 类中把 testCreateDb 函数注释出来
+Let's uncomment out the testCreateDb function inside of the TestDb class.
+
+99
+00:05:10,680 --> 00:05:13,528
+你可能不得不导入一些类使其可编译
+You might have to import a few classes to get this to compile.
+
+100
+00:05:13,528 --> 00:05:18,069
+我们也把 createNorthPoleLocationValues 和 insertNorthPoleLocationValues 
+Let's also uncomment out the createNorthPoleLocationValues and
+
+101
+00:05:18,069 --> 00:05:23,900
+从TestUtilities中注释掉
+the insertNorthPoleLocationValues functions from within TestUtilities.
+
+102
+00:05:23,900 --> 00:05:26,690
+如果他们不能编译 这是最后修改你的位置合约的机会
+This is the last chance to fix up your location contract if
+
+103
+00:05:26,690 --> 00:05:28,270
+如果他们不能编译 这是最后修改你的位置合约的机会
+things don't compile.
+
+104
+00:05:28,270 --> 00:05:30,495
+让我们用TestDb运行我们新的测试
+So let's run our new test with our TestDb.
+
+105
+00:05:31,640 --> 00:05:35,540
+如你所见  我们得到了一个很好的错误信息返回  
+As you can see, we get a pretty good error message back, that our database
+
+106
+00:05:35,540 --> 00:05:39,010
+我们的数据库被创建时缺少位置实体和天气实体表
+was created without both the location entry and weather entry tables.
+
+107
+00:05:39,010 --> 00:05:40,010
+别担心
+Don't worry.
+
+108
+00:05:40,010 --> 00:05:40,700
+我们可以修复它
+We can fix it.

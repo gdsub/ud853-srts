@@ -1,0 +1,34 @@
+1
+00:00:00,740 --> 00:00:02,990
+我们已经测试过位置数据表 所以
+We've tested the location table so
+
+2
+00:00:02,990 --> 00:00:06,760
+现在我们应该以天气数据表该有的方式来测试它
+now we should test the weather table in a test weather table method.
+
+3
+00:00:06,760 --> 00:00:09,600
+按照步骤来创建一个测试以插入一行数据
+Follow the steps to create a test to insert a row of data
+
+4
+00:00:09,600 --> 00:00:11,470
+到天气数据表中
+into the weather database table.
+
+5
+00:00:11,470 --> 00:00:15,360
+请注意我们必须先插入位置表以获得位置键值 
+Noting that we have to first insert into the location table to get the location
+
+6
+00:00:15,360 --> 00:00:17,010
+才能用于天气查询
+key for the weather query.
+
+7
+00:00:17,010 --> 00:00:19,370
+再然后查询该数据表并验证数据值即可
+Then query the table and validate the values.

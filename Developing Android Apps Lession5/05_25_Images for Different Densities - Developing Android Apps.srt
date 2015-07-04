@@ -1,0 +1,120 @@
+﻿1
+00:00:00,000 --> 00:00:03,300
+Beto提到我们应该为不同分辨率的手机提供多种位图图标
+Beto mentioned that we should provide bitmaps at different resolutions.
+
+2
+00:00:03,300 --> 00:00:07,700
+在我们的应用程序中  Nexus S使用的48dpi的图标
+In our app, the 48dp icon on the Nexus S looks to be about the same size
+
+3
+00:00:07,700 --> 00:00:10,760
+看起来与Nexus 4和Nexus 5使用的图标尺寸一样大
+as on the Nexus 4, and on the Nexus 5.
+
+4
+00:00:10,760 --> 00:00:13,420
+但是实际上  用像素来计算的话
+However, in reality, this asset that's being displayed,
+
+5
+00:00:13,420 --> 00:00:17,090
+这个图标显示的尺寸要大得多
+is actually a lot bigger in terms of pixels compared to this one.
+
+6
+00:00:17,090 --> 00:00:20,000
+为了确认这一点  我们可以查看应用程序的资源文件夹
+To confirm, we can check out the app resource folders.
+
+7
+00:00:20,000 --> 00:00:24,930
+在drawable文件夹中  我们看到应用程序为mdpi的设备提供了一个48×48像素的启动图标
+In the drawable folders, we see that our app has a 48 x 48 pixel launcher icon
+
+8
+00:00:24,930 --> 00:00:28,598
+它被放在drawable-mdpi文件夹中
+for mdpi devices located in the drawable mdpi folder.
+
+9
+00:00:28,598 --> 00:00:31,900
+对已分辨率更高的设备  为了达到同样的效果
+To make an equivalent icon, for the higher density devices,
+
+10
+00:00:31,900 --> 00:00:34,420
+我们需要这个图标变得更大
+we need to make that icon progressively larger.
+
+11
+00:00:34,420 --> 00:00:36,900
+为了弄清这些图片究竟要多大
+To know exactly how big to make these images
+
+12
+00:00:36,900 --> 00:00:39,680
+以及如何将它们转换为像素更高的图片
+and what the dp pixel conversion should be,
+
+13
+00:00:39,680 --> 00:00:42,430
+我们使用mdpi分辨率屏幕的设备作为基准
+we use an mdpi device as the baseline.
+
+14
+00:00:42,430 --> 00:00:45,223
+这里一个dp相当于一个像素
+This is where one dp equals one pixel.
+
+15
+00:00:45,223 --> 00:00:49,633
+然而在HDPI分辨率的设备上 一个dp等于1.5个像素
+Then on the HDPI device, one dp equals 1.5 pixels.
+
+16
+00:00:49,633 --> 00:00:53,530
+以此类推  对于XXHDPI分辨率的设备
+And then it increases from there, all the way to an XXHDPI device,
+
+17
+00:00:53,530 --> 00:00:55,810
+一个dp等于4个像素
+where one dp equals four pixels.
+
+18
+00:00:55,810 --> 00:00:58,211
+更多的换算  可以查看下面的链接
+For more info on the conversions, see the link below.
+
+19
+00:00:58,211 --> 00:01:01,181
+遵循这些规则  我们可以在drawable文件夹中
+Following those rules, these are the sizes of the launcher icon
+
+20
+00:01:01,181 --> 00:01:02,779
+查看不同尺寸大小的启动图标
+in our drawable folders.
+
+21
+00:01:02,779 --> 00:01:06,670
+MDPI分辨率的屏幕使用的图标像素是48×48
+The MDPI one is 48 pixels x 48 pixels.
+
+22
+00:01:06,670 --> 00:01:11,000
+HDPI的是这个的1.5倍
+The one for HDPI is 1.5 times the size of this one.
+
+23
+00:01:11,000 --> 00:01:16,510
+在XHDPI的设备上  图标像素是mdpi的2倍
+For an XHDPI device, the icon is two times the size of the MDPI one,
+
+24
+00:01:16,510 --> 00:01:21,340
+对于XXHDPI分辨率的设备  图标像素是这个的3倍大小
+And for an XXHDPI device, the icon is three times the size of this one.
+

@@ -1,0 +1,129 @@
+?1
+00:00:00,100 --> 00:00:04,010
+这个问题的答案是ListPreference.当设置
+The solution to this question is ListPreference. When the setting
+
+2
+00:00:04,010 --> 00:00:06,070
+被点击后，一列选择被展示出来作为
+is tapped, it presents a list of choices as a
+
+3
+00:00:06,070 --> 00:00:09,470
+一个对话框，当用户选择一个选项，它被保存进入
+dialogue. When a user selects an option, it's saved into
+
+4
+00:00:09,470 --> 00:00:12,645
+SharedPreferences。这是做这件事的步骤：在
+SharedPreferences. Here are the steps to do this. Within
+
+5
+00:00:12,645 --> 00:00:16,190
+pref_general.xml这个文件里我们加入一个ListPreference。我们给
+the pref_general.xml file we add a list preference. We give
+
+6
+00:00:16,190 --> 00:00:18,970
+它设置一个title(标题），这与气温单位匹配。
+it a title, and this maps to the string temperature
+
+7
+00:00:18,970 --> 00:00:21,770
+我们还需要给它一个key(键)用于
+units. We also need to give it a key for
+
+8
+00:00:21,770 --> 00:00:25,600
+SharedPreferences。然后我们指明是作为单位的。
+the SharedPreferences. And so we specify that to be units.
+
+9
+00:00:25,600 --> 00:00:28,310
+如果SharedPreferences中没有值，它将会
+If there is no value in SharedPreferences, then it
+
+10
+00:00:28,310 --> 00:00:31,950
+使用默认值：公制单位。这个Preference
+falls back to a default value of metric. The preference
+
+11
+00:00:31,950 --> 00:00:34,870
+也需要知道所有可能的值。
+also wants to know the list of all possible values
+
+12
+00:00:34,870 --> 00:00:38,370
+我们现在有两个可能的值：公制单位或英制单位。所以我们
+here. The two possible values are metric or imperial. So we
+
+13
+00:00:38,370 --> 00:00:41,580
+把他们以数组的形式传递给entryValues。现在
+pass those in as an array, into entry values. Now
+
+14
+00:00:41,580 --> 00:00:44,430
+这些仅仅是常量 用于程序的逻辑中
+these are just constants for use within the logic of our
+
+15
+00:00:44,430 --> 00:00:47,600
+并非用户可见的字符串。所以我们
+app, these are not the user visible strings. So we
+
+16
+00:00:47,600 --> 00:00:50,880
+需要创建用户可见的选项 它是一个用户可见字符串的数组
+need to create entries which is an array of user visible
+
+17
+00:00:50,880 --> 00:00:54,230
+这个数组将每一个可能的值都加在里面
+strings that maps to each one of these possible values. To
+
+18
+00:00:54,230 --> 00:00:57,460
+为了使气温单位选项在SettingsActivity里显示
+have the temperature unit preference show up in the settings activity,
+
+19
+00:00:57,460 --> 00:00:59,970
+我们在onCreate方法中进行修改。我们添加这一行
+we modify the on create method. We add this line of
+
+20
+00:00:59,970 --> 00:01:02,640
+代码在气温单位设定里。当用户在对话框中
+code for the temperature units setting. When the user makes a
+
+21
+00:01:02,640 --> 00:01:05,489
+做出一个选择，我们给PreferenceSummary设置
+selection in the dialog, we set the preference summary to be
+
+22
+00:01:05,489 --> 00:01:09,570
+一个新的值：公制或英制。这里，当我们
+the new value of either metric or imperial. Here, when we
+
+23
+00:01:09,570 --> 00:01:13,110
+得到一个最高气温一个最低气温，我们从SharedPreferences中
+receive a high and low temperature, we read from SharedPreferences
+
+24
+00:01:13,110 --> 00:01:16,200
+得知气温是否要被转成英制或者
+to know whether the temperature should be converted to imperial units or
+
+25
+00:01:16,200 --> 00:01:20,220
+直接保留为公制。然后我们将特定格式的字符串返回用以显示在
+left as metric. Then we return the formatted string for display in
+
+26
+00:01:20,220 --> 00:01:23,810
+用户界面。保存天气单位设定的代码完成。
+the UI. That completes the code for saving the temperature unit setting.

@@ -1,0 +1,20 @@
+1
+00:00:00,090 --> 00:00:02,110
+对了，当这个App运行时
+That's right, whenever this app is running, it's
+
+2
+00:00:02,110 --> 00:00:05,260
+它会使无线电一直处在运行状态
+keeping the cell radio powered on continuously. In
+
+3
+00:00:05,260 --> 00:00:08,140
+实际上，这些无线电更新就足以使
+fact, the radio updates alone are enough to
+
+4
+00:00:08,140 --> 00:00:10,640
+无线电永远回不了空闲状态
+prevent the radio from ever returning to idle.
+

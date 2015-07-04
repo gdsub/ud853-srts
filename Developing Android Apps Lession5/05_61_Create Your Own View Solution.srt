@@ -1,0 +1,9 @@
+1
+00:00:00,410 --> 00:00:02,080
+太棒了  现在让我们开始
+Excellent. Now let's get started putting
+
+2
+00:00:02,080 --> 00:00:04,740
+在自定义View中放入一些内容
+some actual content into our custom view.

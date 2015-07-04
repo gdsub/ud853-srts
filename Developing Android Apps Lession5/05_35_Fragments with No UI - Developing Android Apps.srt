@@ -1,0 +1,80 @@
+﻿1
+00:00:00,230 --> 00:00:03,650
+Fragment的最后一个好处与用户界面完全无关
+The final advantage of fragments, doesn't involve user interfaces at
+
+2
+00:00:03,650 --> 00:00:07,505
+你知道的。如你所知，作为可视元件，Activity会在设备配置
+all. As you know, as visual components, activities are destroyed and
+
+3
+00:00:07,505 --> 00:00:10,970
+发生任何变化的时候被销毁然后重建。最常见的是
+re-created, whenever the device configuration changes. Most notably, when the
+
+4
+00:00:10,970 --> 00:00:14,200
+当屏幕转向时。这很合理，因为我们很
+screen orientation switches. That makes sense, because there's a good chance
+
+5
+00:00:14,200 --> 00:00:16,200
+有可能希望创建一个不同的布局来适应
+we'll want to create a different layout, to better suit the
+
+6
+00:00:16,200 --> 00:00:19,000
+新的配置。但是如果我们可以使用Fragment来
+new configuration. But if we can use fragments to break up
+
+7
+00:00:19,000 --> 00:00:22,340
+打碎视觉上的Activity模块，而找出逻辑上的模块，
+visual activity modules, and find out logical ones as well,
+
+8
+00:00:22,340 --> 00:00:25,270
+事实证明我们完全可以做到。并且因为这些
+it turns out we can do exactly that. And because these
+
+9
+00:00:25,270 --> 00:00:27,770
+Fragment是不可视的，也就不需要重新创建它们
+fragments are non-visual, there's no need to recreate them
+
+10
+00:00:27,770 --> 00:00:30,640
+每当用户界面需要更新时。在不可视的Fragment的
+every time the UI needs updating. Within the onCreate
+
+11
+00:00:30,640 --> 00:00:35,640
+onCreate函数里，调用setRetainInstance，传入true，
+handler of your non-UI fragment, call setRetainInstance, passing in
+
+12
+00:00:35,640 --> 00:00:40,220
+并且让onCreateView函数返回null
+true, and return null in your onCreateView handler.
+
+13
+00:00:40,220 --> 00:00:42,550
+然后只要它所属的Activity一创建好，
+Then, once the parent activity is created, you can
+
+14
+00:00:42,550 --> 00:00:45,180
+你就可以断掉它们之间的任何联系，包括
+kick off any connections, threads, or tasks that are
+
+15
+00:00:45,180 --> 00:00:47,520
+与这个Activity生命周期联系在一起的Thread或Task
+bound to the lifetime of the activity, which don't
+
+16
+00:00:47,520 --> 00:00:49,750
+不需要每次设备转向时都被中断
+need to be interrupted every time the device rotates.
+

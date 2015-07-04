@@ -1,0 +1,100 @@
+﻿1
+00:00:00,260 --> 00:00:03,510
+通常当我们谈论数据传输效率的时候，我们总是在谈论
+Typically when we talk about data transfer efficiency, we're talking
+
+2
+00:00:03,510 --> 00:00:06,590
+限制数据的传输。它降低了带宽
+about limiting the amount of data being transferred. That reduces
+
+3
+00:00:06,590 --> 00:00:08,990
+还有成本，这很正常的一种思路。
+the bandwidth and the cost and is generally a pretty
+
+4
+00:00:08,990 --> 00:00:13,020
+但是在移动设备上那是一个额外因素。当你看到时，
+good idea. But on mobile there's an extra factor. As you
+
+5
+00:00:13,020 --> 00:00:15,500
+事实证明，移动网络接收模块是
+can see, it turns out that the cell radio is
+
+6
+00:00:15,500 --> 00:00:18,430
+设备中最耗电的硬件之一的。所以
+one of the biggest battery drainers on the device. So making
+
+7
+00:00:18,430 --> 00:00:21,840
+让你的数据传输更高效。到头来解决方案就是提高电池的寿命。
+your data transfers more efficient. Will also result in improved
+
+8
+00:00:21,840 --> 00:00:25,430
+现在，要是程序运行更高效
+battery life. Now, the basic level being more efficient means spending
+
+9
+00:00:25,430 --> 00:00:29,320
+就意味着花更少的时间传输数据，减少你的负载，更少的更新
+less time transferring less data, reducing your payloads, and updating
+
+10
+00:00:29,320 --> 00:00:31,560
+通常可以给你省下一些资源。
+less often can take you some of the way there,
+
+11
+00:00:31,560 --> 00:00:34,650
+但是那又如何？时间上能有什么区别？
+but then what? Can timing make a difference? It turns
+
+12
+00:00:34,650 --> 00:00:36,890
+事实证明可以，这个地方我想把他
+out that it can, and it's a situation I like
+
+13
+00:00:36,890 --> 00:00:39,700
+看做"饼干与安卓"问题。
+to think of as the cookie Droid conundrum. Do we
+
+14
+00:00:39,700 --> 00:00:44,190
+我们是否真的用了更大的有效负载来完成更少的下载？或者我们
+perform fewer downloads with larger payloads? Or do we perform
+
+15
+00:00:44,190 --> 00:00:46,830
+是否在恰当的时机用了大量较小的数据传输操作？
+lots of small transfers just in time for when we
+
+16
+00:00:46,830 --> 00:00:50,000
+一个巨大的饼干还是许多小的饼干？
+need them? One big cookie or lots of little cookies?
+
+17
+00:00:51,200 --> 00:00:52,750
+所以，你是怎样认为的呢？
+So, what do you think? Should we have
+
+18
+00:00:52,750 --> 00:00:55,620
+我们是应该用少量的大饼干表示的庞大下载呢？
+a smaller number of large downloads illustrated by
+
+19
+00:00:55,620 --> 00:00:57,870
+还是用大量的小饼干
+this big cookie? Or a large number of
+
+20
+00:00:57,870 --> 00:01:01,880
+表示的小的下载呢？
+small downloads, as illustrated by lots of little cookies.
+

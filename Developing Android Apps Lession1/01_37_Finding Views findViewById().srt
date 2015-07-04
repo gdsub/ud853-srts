@@ -1,0 +1,144 @@
+1
+00:00:00,090 --> 00:00:03,670
+一旦Adapter被初始化  让我们把它绑定到ListView上
+Once the adapter is initialized, let's bind it to the list view. But
+
+2
+00:00:03,670 --> 00:00:06,980
+但是我们还没有ListView的引用
+you may notice that we don't have a reference to the list view in our fragment.
+
+3
+00:00:06,980 --> 00:00:10,360
+只是把它定义在了布局XML中
+It was only defined in the layout XML. The system takes and
+
+4
+00:00:10,360 --> 00:00:12,370
+系统会实现XML中的布局
+inflates layout XML files. And
+
+5
+00:00:12,370 --> 00:00:17,000
+并将它们转换成一个倒树状的结构
+turns them into a full view hierarchy with a root layout of the main activity at
+
+6
+00:00:17,000 --> 00:00:21,750
+Main Activity在树顶（或者说树根） 我们可以给树上的每个View设一个ID
+the very top of the view tree. We can also assign IDs to each view in the tree,
+
+7
+00:00:21,750 --> 00:00:26,320
+不过你用不到的View可以不给它设
+but it's not required if you don't need a reference to an individual view.
+
+8
+00:00:26,320 --> 00:00:29,790
+例如 这个图像View没有ID完全没问题
+For example, this image view doesn't have an ID associated with it and
+
+9
+00:00:29,790 --> 00:00:33,640
+在Java代码中对应的Activity或Fragment中
+that's okay. Within the Java code of the associated activity or
+
+10
+00:00:33,640 --> 00:00:38,660
+如果我们需要这个按钮的引用 可以调用findViewById
+fragment. If we need a reference to the button, we can simply call findViewById,
+
+11
+00:00:38,660 --> 00:00:43,370
+它会一直向下遍历这个树直到它找到有这个ID的按钮
+which will traverse down the hierarchy until it finds a view with the ID button.
+
+12
+00:00:43,370 --> 00:00:48,050
+然后会返回它 同样 我们可以遍历
+And then it will return that. Similarly, we can traverse down the view
+
+13
+00:00:48,050 --> 00:00:53,620
+去用ID找LinearLayout这个容器
+hierarchy to find the linear layout with the ID container, and then return that.
+
+14
+00:00:53,620 --> 00:00:57,030
+同样的 可以用ID来找这个TextView
+We could do the same to find a reference to this TextView by traversing down
+
+15
+00:00:57,030 --> 00:01:00,830
+但是想必你已经注意到了 它的父元素容器的引用我们已经有了
+the view hierarchy. But you'll notice that we already have a reference to
+
+16
+00:01:00,830 --> 00:01:06,055
+所以我们能直接对父元素调用findViewById
+the container which is a direct parent of this TextView. Hence, we can just call
+
+17
+00:01:06,055 --> 00:01:12,420
+然后用ID找到它对应的子元素
+container.findViewById to search this subtree to find the TextView with this ID,
+
+18
+00:01:12,420 --> 00:01:17,480
+然后返回它  使用这个方法  我们要搜索的树
+and then return it. With this method, we have a smaller sub-tree to search for
+
+19
+00:01:17,480 --> 00:01:22,060
+比起整个书更小
+a given view, as opposed to searching the entire view hierarchy.
+
+20
+00:01:22,060 --> 00:01:25,890
+在Android Java文档中对于View这个类的说明（下面有链接）
+In the Android Java doc for the View class, which is linked below if you want to
+
+21
+00:01:25,890 --> 00:01:30,020
+这里有个XML中定义好的按钮
+follow along, it contains an example where the button with Define in Layout XML.
+
+22
+00:01:30,020 --> 00:01:36,350
+ID是my_button  在Activity当中
+It was assigned an ID My Button. Then in the Activity, we can use the find
+
+23
+00:01:36,350 --> 00:01:40,990
+我们可以使用ID查找这个View  得到按钮的应用
+view by ID method, with that ID, so that we can get a reference to the button.
+
+24
+00:01:40,990 --> 00:01:45,510
+然后我们可以动态地修改按钮 例如给它加一个监听器
+Then we can change it dynamically, such as by adding a click listener to it.
+
+25
+00:01:46,770 --> 00:01:50,560
+在PlaceholderFragment.class中 将Adapter与ListView绑定
+Now in the placeholder fragment class, bind the adapter to the list view.
+
+26
+00:01:50,560 --> 00:01:54,230
+幸运的是  我们已经给ListView分配了一个ID  所以很容易找到它
+Luckily, we did assign an ID to the list view earlier. So, we can find it
+
+27
+00:01:54,230 --> 00:01:58,430
+使用最小的树来遍历找到它
+easily now. Think about the smallest sub-tree in the view hierarchy that you
+
+28
+00:01:58,430 --> 00:02:03,640
+然后给它设一个Adapter 如果你想要点提示
+can call find view by ID on. Then set the adapter on it. If you want an example,
+
+29
+00:02:03,640 --> 00:02:07,430
+可以看看下面的链接 做完后勾上复选框
+you can see one in the link below. Check the boxes when you're done.

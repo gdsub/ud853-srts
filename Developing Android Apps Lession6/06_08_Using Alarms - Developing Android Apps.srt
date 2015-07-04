@@ -1,0 +1,228 @@
+1
+00:00:00,640 --> 00:00:02,820
+那么现在我们创建了一个简单的服务
+So now we have a simple service.
+
+2
+00:00:02,820 --> 00:00:04,350
+简不简单？
+Wasn't that easy?
+
+3
+00:00:04,350 --> 00:00:06,840
+但是它仍然不能自己唤醒自己
+But it still doesn't wake itself up.
+
+4
+00:00:06,840 --> 00:00:09,710
+幸运的是，android的一个系统服务可以完成这个功能
+Fortunately, there's
+a system service for that.
+
+5
+00:00:09,710 --> 00:00:12,860
+现在可以介绍一下alarm manager
+This is a good opportunity to
+introduce the alarm manager.
+
+6
+00:00:12,860 --> 00:00:15,570
+Alarm Manager允许你通知系统
+The alarm manager allows you to
+tell the system that you want it to
+
+7
+00:00:15,570 --> 00:00:18,740
+在过一段时间后启动你应用程序的某个组件
+wake a component of your application
+up after a period of time and
+
+8
+00:00:18,740 --> 00:00:20,980
+并在后台进行一些处理操作
+do some processing in the background.
+
+9
+00:00:20,980 --> 00:00:24,170
+你甚至可以通过它隔一段时间唤醒你的应用程序
+You can even have it wake up your
+application periodically, but
+
+10
+00:00:24,170 --> 00:00:26,780
+那么我们在后台唤醒了什么呢？
+what do we wake up in the background?
+
+11
+00:00:26,780 --> 00:00:29,560
+它是我们之前没接触过的一个Android组件，
+That would be an Android
+component we haven't seen before,
+
+12
+00:00:29,560 --> 00:00:31,700
+叫做Broadcast Receiver(广播接收)
+called a broadcast receiver.
+
+13
+00:00:31,700 --> 00:00:35,250
+Broadcast Receiver是专门用来接收Intent广播的类
+A broadcast receiver is a special
+class that is used to receive
+
+14
+00:00:35,250 --> 00:00:38,750
+这些广播常常来自于其他应用程序
+intent broadcasts,
+often from other applications.
+
+15
+00:00:38,750 --> 00:00:42,030
+通常，Broadcast Receiver会设置一个IntentFilter
+Typically, a broadcast receiver
+will register an intent filter for
+
+16
+00:00:42,030 --> 00:00:43,610
+来过滤所接收的广播
+these broadcasts.
+
+17
+00:00:43,610 --> 00:00:47,320
+这也是应用程序监听警告提醒的一种方法
+It's also one way the application
+will listen in on alarms.
+
+18
+00:00:47,320 --> 00:00:51,560
+警告提醒利用另外一种Intent，叫做PendingIntent
+Alarms take advantage of a new kind
+of intent, called a PendingIntent.
+
+19
+00:00:51,560 --> 00:00:54,170
+PendingIntent是一种特殊的Intent
+A PendingIntent is
+a special kind of intent
+
+20
+00:00:54,170 --> 00:00:57,470
+它从一个应用程序传递到另一个应用程序
+that is handed from one
+application to another.
+
+21
+00:00:57,470 --> 00:01:01,310
+PendingIntent和普通Intent最大的不同在于
+The big difference between
+a PendingIntent and a regular intent
+
+22
+00:01:01,310 --> 00:01:05,970
+PendingIntent允许程序利用与该intent相关的权限和
+is that a PendingIntent gives permission
+for the app using it to send data with
+
+23
+00:01:05,970 --> 00:01:10,650
+程序标识来发送数据。
+the same permissions and application
+identity as the app that created it.
+
+24
+00:01:10,650 --> 00:01:15,520
+在Android中，系统进程可以通过它从后台异步
+In Android this allows the system
+process to call your application back
+
+25
+00:01:15,520 --> 00:01:20,770
+调用你的应用程序而不用遵循Android安全模型
+in a specific asynchronous way without
+compromising the Android security model.
+
+26
+00:01:20,770 --> 00:01:24,830
+在警告信息中，PendingIntent是在AlarmManager中被用来
+In alarms a pending intent
+is used by the alarm manager
+
+27
+00:01:24,830 --> 00:01:27,330
+和我们所创建的BroadcastReceiver进行交互用的
+to talk to the broadcast
+receiver we create.
+
+28
+00:01:28,960 --> 00:01:30,790
+下面我们来添加一些警告相关的东东。
+Let's add some alarm stuff.
+
+29
+00:01:30,790 --> 00:01:34,475
+首先，我们在SunshineService中添加一个
+First, I'm going to add
+a BroadcastReceiver as a static inner
+
+30
+00:01:34,475 --> 00:01:36,970
+内部静态类，它继承BroadcastReceiver。
+class of SunshineService.
+
+31
+00:01:36,970 --> 00:01:39,060
+因为它是Android组件，
+Since this is an Android component,
+
+32
+00:01:39,060 --> 00:01:41,630
+所以需要在Manifest文件中进行注册。
+I'll register this broadcast
+receiver in the manifest.
+
+33
+00:01:42,980 --> 00:01:46,590
+注意内部静态类的表示方法
+Note the way a static
+inner class is notated.
+
+34
+00:01:46,590 --> 00:01:47,490
+Okay
+Okay.
+
+35
+00:01:47,490 --> 00:01:51,570
+我这里已经给出了BroadcastReceiver处理警告的基本框架
+I've given you the bones of a broadcast
+receiver that can handle an alarm.
+
+36
+00:01:51,570 --> 00:01:52,450
+接下来就该轮你了
+But now it's your turn.
+
+37
+00:01:53,520 --> 00:01:56,920
+你可以通过显式Intent来创建一个PendingIntent
+You can create a PendingIntent
+from an explicit intent
+
+38
+00:01:56,920 --> 00:02:00,580
+用它通过alarm manager来激活你的BroadcastReceiver
+to have the alarm manager
+activate your broadcast receiver.
+
+39
+00:02:00,580 --> 00:02:03,920
+我建议你把警报间隔设置短点
+I recommend setting the alarm
+to something absurdly short,
+
+40
+00:02:03,920 --> 00:02:06,910
+比如5秒，这样你就能看出它的效果了
+like five seconds, so
+you can easily test that it's working.
+

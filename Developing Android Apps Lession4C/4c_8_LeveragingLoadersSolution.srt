@@ -1,0 +1,84 @@
+1
+00:00:00,480 --> 00:00:02,029
+不错！  搞定！
+Alright, you're done.
+
+2
+00:00:02,029 --> 00:00:03,370
+我们来看一眼我的解决方法
+Let's take a look at my solution.
+
+3
+00:00:04,780 --> 00:00:09,160
+第一步  我们创建一个整型常量作为loader ID
+For our first step, we created a loader ID integer constant.
+
+4
+00:00:09,160 --> 00:00:12,890
+在activity里使用的时候要保证这些常量是唯一的
+These just have to be unique for every loader you're using in your activity.
+
+5
+00:00:12,890 --> 00:00:16,465
+然后我们按照CursorLoader的需求在ForecastFragment中
+Then we had forecast fragment implement the loader manager loader
+
+6
+00:00:16,465 --> 00:00:20,920
+实现了LoaderManager.LoaderCallbacks  数据类型为Cursor  
+callbacks with type cursor, as required by CursorLoader.
+
+7
+00:00:20,920 --> 00:00:24,448
+我们这里加上了三个LoaderCallbacks的接口方法
+We added our three loader callback functions.
+
+8
+00:00:24,448 --> 00:00:28,570
+对于onCreateLoader  我们将用于创建cursor的ContentProvider的请求
+For on CreateLoader we move the ContentProvider query we had for
+
+9
+00:00:28,570 --> 00:00:33,330
+放进来  然后用它来初始化CursorLoader
+creating the cursor, and use this to initialize the CursorLoader.
+
+10
+00:00:33,330 --> 00:00:34,420
+在onLoadFinish
+In onLoadFinish,
+
+11
+00:00:34,420 --> 00:00:39,070
+我们将ForecastAdapter的cursor和新的cursor交换
+we swap the cursor in our ForcastAdapter with our new loaded one.
+
+12
+00:00:39,070 --> 00:00:44,500
+在onLoaderReset  我们会释放之前所用的资源
+In onLoader reset, we want to release any resources that we might be using.
+
+13
+00:00:44,500 --> 00:00:45,680
+就这样
+And that's it.
+
+14
+00:00:45,680 --> 00:00:48,870
+运行一下  保证一切功能正常
+Let's run this, and make sure it's all working correctly.
+
+15
+00:00:48,870 --> 00:00:51,740
+正如你看到的  屏幕上显示一些天气信息
+And, as you can see, some fabulous weather.
+
+16
+00:00:52,810 --> 00:00:56,970
+虽然看上去和上一章节我们实现的效果完全一样  但是
+This is actually using the loader, even though it looks exactly like the output
+
+17
+00:00:56,970 --> 00:00:59,030
+这里的确是用的是loader
+from the last section that we completed.

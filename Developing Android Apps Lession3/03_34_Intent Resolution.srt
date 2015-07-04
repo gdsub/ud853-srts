@@ -1,0 +1,80 @@
+﻿1
+00:00:00,330 --> 00:00:02,330
+所以  系统是如何知道地图软件能够处理某个Intent的呢
+So, how did the system know that the Maps
+
+2
+00:00:02,330 --> 00:00:05,564
+地图软件的每个Activity
+app could handle this Intent? The activity within the
+
+3
+00:00:05,564 --> 00:00:09,720
+都会包含这样一个Intent过滤器
+Maps app included an intent filter like this one
+
+4
+00:00:09,720 --> 00:00:13,140
+在它的manifest里  它指明了
+within its manifest entry. It indicates that the Maps
+
+5
+00:00:13,140 --> 00:00:17,100
+地图软件能够执行这个view action
+app is capable of performing this view action on
+
+6
+00:00:17,100 --> 00:00:19,980
+在scheme为geo的所有数据上  你可以
+all data which has a geo scheme. You can
+
+7
+00:00:19,980 --> 00:00:22,250
+使用Intent过滤器为你的Activity定义一个
+use intent filters for your activities to define the
+
+8
+00:00:22,250 --> 00:00:25,470
+它能胜任的行为 可选择地 还可以定义
+actions they're capable of performing, and optionally, the kind
+
+9
+00:00:25,470 --> 00:00:27,700
+它能处理的数据类型
+of data that they can perform it on. So,
+
+10
+00:00:27,700 --> 00:00:30,194
+当你使用一个implicit intent去
+when you use an implicit intent to address or
+
+11
+00:00:30,194 --> 00:00:32,630
+请求启动一个Activity  很像你对
+request to start an activity, much like you did
+
+12
+00:00:32,630 --> 00:00:37,600
+Catherine以及openweathermap.org链接做的一样，Android会解析这类请求
+with Catherine and the openweathermap.org link, Android resolves this request
+
+13
+00:00:37,600 --> 00:00:40,850
+通过检查每个安装在该设备上的Activity的Intent过滤器
+by checking the intent filters of every activity that's
+
+14
+00:00:40,850 --> 00:00:44,150
+直到系统找到可能的最佳
+installed on the device until it finds the best possible
+
+15
+00:00:44,150 --> 00:00:47,880
+匹配  如果有多种匹配方式  就根据网址域名的实际情形
+match. If multiple activities match, as in the case
+
+16
+00:00:47,880 --> 00:00:50,570
+使用者有选择的机会
+with the web url, the user is given a choice.
+

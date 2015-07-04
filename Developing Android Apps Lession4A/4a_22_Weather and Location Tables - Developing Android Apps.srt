@@ -1,0 +1,109 @@
+1
+00:00:00,310 --> 00:00:03,050
+我们并没有在我们的天气表中存储任何
+We're not storing a key piece of data in our weather table,
+
+2
+00:00:03,050 --> 00:00:05,850
+当地天气将要呈现的情况
+the location at which the weather is going to occur.
+
+3
+00:00:05,850 --> 00:00:10,140
+这是因为我们将要为天气位置使用一个分离的表
+This is because we are going to use a separate table for weather locations.
+
+4
+00:00:10,140 --> 00:00:13,070
+使用一个分离的表有很多优势
+Using a separate table has several advantages.
+
+5
+00:00:13,070 --> 00:00:16,875
+因为我们没有给每一条记录增加一条位置信息所以会很高效
+In addition to being more efficient because we do not duplicate our location
+
+6
+00:00:16,875 --> 00:00:20,503
+并且这使得我们在更新位置信息的时候
+data with each record, it also allows us to update information about our
+
+7
+00:00:20,503 --> 00:00:23,906
+不需要更新所有的天气预报记录
+location without having to update every weather forecast record.
+
+8
+00:00:23,906 --> 00:00:27,975
+为了达成这一目标  我们要创建我们的天气和位置数据库之间的关联
+To implement this, we're going to create a relation between our weather and
+
+9
+00:00:27,975 --> 00:00:31,856
+而这个关联是通过在天气表中添加一个关联到
+location tables by adding a column to the weather table that refers to an ID
+
+10
+00:00:31,856 --> 00:00:33,750
+位置表的ID的列
+in the location table.
+
+11
+00:00:33,750 --> 00:00:37,820
+这个列通过一个约束条件来创建并指定它是一个
+This column is created with a constraint that identifies it as a foreign key,
+
+12
+00:00:37,820 --> 00:00:40,290
+与其他的表相独立的ID的外键
+which is a unique ID from another table.
+
+13
+00:00:40,290 --> 00:00:42,120
+这像什么呢
+What does this look like?
+
+14
+00:00:42,120 --> 00:00:45,400
+我们的天气表中的列有一个位置ID
+Our list of columns in the weather table has a location ID,
+
+15
+00:00:45,400 --> 00:00:48,410
+这个ID指向位置表的相应ID
+which points to IDs in the location table.
+
+16
+00:00:48,410 --> 00:00:53,315
+我们可以使用这个位置ID来进行内连接操作
+We can use this location ID to perform an operation known as an inner join.
+
+17
+00:00:53,315 --> 00:00:57,190
+内连接把在不同表中查询的两个行数据结合到
+Inner joins combine the data queried from two rows in different tables into
+
+18
+00:00:57,190 --> 00:00:58,720
+结果的一行
+one row in the results.
+
+19
+00:00:58,720 --> 00:01:02,070
+当我们通过这种方式创建我们的表我可以得到
+When we create our tables in this way we can get any combination of
+
+20
+00:01:02,070 --> 00:01:03,150
+两个表的任意结合的列
+columns from both tables.
+
+21
+00:01:04,150 --> 00:01:08,090
+在这个例子中我们可以在位置表中进行位置查询
+In this case we're getting the location query from the location table, and
+
+22
+00:01:08,090 --> 00:01:11,700
+以及从天气表中得到数据  描述  最低和最高温度
+the date, description, and min and max temperature from the weather table

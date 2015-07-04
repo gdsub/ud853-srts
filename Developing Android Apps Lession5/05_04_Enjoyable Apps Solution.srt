@@ -1,0 +1,10 @@
+1
+00:00:00,270 --> 00:00:03,280
+感谢在论坛里提交你最喜欢的app，我们会
+Thank you for posting your favorite apps on the forum, we'll be checking
+
+2
+00:00:03,280 --> 00:00:06,830
+定期查看他们。不过现在，让我们回来继续打造Sunshine。
+in on them periodically. But for now, let's get back to building Sunshine.
+

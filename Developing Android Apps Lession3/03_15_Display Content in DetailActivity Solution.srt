@@ -1,0 +1,60 @@
+﻿1
+00:00:00,450 --> 00:00:03,660
+在fragment_detail布局中，已经定义了一个TextView
+In the fragment detailed layout, a text view
+
+2
+00:00:03,660 --> 00:00:06,160
+我们必须给它指定一个id
+is already defined. We have to assign it an
+
+3
+00:00:06,160 --> 00:00:09,200
+这样的话在DetailActivity的DetailFragment中
+ID so that within the detail fragment of detail
+
+4
+00:00:09,200 --> 00:00:12,120
+我们就能够用findViewById()
+activity we can use findViewById to
+
+5
+00:00:12,120 --> 00:00:15,180
+来找到这个TextView。为了取得这个TextView
+find the TextView. To determine the forecast
+
+6
+00:00:15,180 --> 00:00:18,150
+所要展示的天气预报信息
+info that the text view should display. We can
+
+7
+00:00:18,150 --> 00:00:20,770
+我们可以在启动DetailActivity的Intent中找到它
+access the intent that the DetailActivity was launched
+
+8
+00:00:20,770 --> 00:00:25,255
+我们准备在onCreateView()里这么做
+by. We're going to use this inside of onCreateView.
+
+9
+00:00:25,255 --> 00:00:30,565
+因为我们已经向Intent的Extra添加了天气预报信息
+[SOUND] Since we added an intent extra with the forecast
+
+10
+00:00:30,565 --> 00:00:35,461
+所以我们可以从Intent的Extra中读取出来，把它显示出来
+data there. We can read that intent extra back to display in the text
+
+11
+00:00:35,461 --> 00:00:39,289
+如你所见，我们将预报信息从Intent中拉出来
+view, as you can see we pulled the forecast string from the
+
+12
+00:00:39,289 --> 00:00:43,840
+找到rootView，然后将TextView的文字设置为预报信息
+intent find our rootView and then set the text to that forecast string
+

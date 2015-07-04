@@ -1,0 +1,209 @@
+﻿1
+00:00:00,440 --> 00:00:03,310
+我们的应用有设置界面但是没有设置选项
+We have our settings screen but no settings.
+
+2
+00:00:03,310 --> 00:00:06,550
+在接下来的几个章节，你将会在我们的应用中添加两个设置选项
+In the next several sections you're going to be adding our two settings.
+
+3
+00:00:06,550 --> 00:00:08,510
+我将会带你学习如何添加第一个设置选项来设置
+I'll walk you through how we add our first setting for
+
+4
+00:00:08,510 --> 00:00:13,780
+地理位置，然后你将自己动手添加温度单位的设置选项，所以接下来请仔细听讲
+location, then you'll do the temperature setting on your own, so listen closely.
+
+5
+00:00:13,780 --> 00:00:15,818
+首先我们设计一个界面 XML文件
+First we design a preference XML file.
+
+6
+00:00:15,818 --> 00:00:18,320
+根节点应该是一个PreferenceScreen
+The root element should be a preference screen.
+
+7
+00:00:19,320 --> 00:00:21,750
+在这个例子中，我们有一个CheckBoxPreference
+In this example we have a CheckBoxPreference and
+
+8
+00:00:21,750 --> 00:00:24,130
+和一个ListPreference在这个xml文件里
+a ListPreference inside of it.
+
+9
+00:00:24,130 --> 00:00:27,260
+为了在应用中添加一个Preferences XML文件，
+In order to add the preferences XML file to our app,
+
+10
+00:00:27,260 --> 00:00:31,570
+首先我们需要在资源目录(res)下创建一个XML文件夹
+we first need to create an XML folder under the resources res directory.
+
+11
+00:00:31,570 --> 00:00:36,680
+在资源文件夹上点击右键，选择新建Android resource directory
+Right-click on the res folder, go to new Android resource directory and
+
+12
+00:00:36,680 --> 00:00:39,210
+接着输入XML 作为目录的名字
+then type in XML as the name of the directory.
+
+13
+00:00:40,220 --> 00:00:42,905
+对于Resource Type(资源类型)你可以选择XML，然后点击OK
+For resource type you can use XML and then hit OK.
+
+14
+00:00:44,250 --> 00:00:49,490
+在这个文件夹下，我们点击右键创建一个新的XML资源文件
+Inside this folder, we right-click to create a new XML resource file.
+
+15
+00:00:49,490 --> 00:00:50,650
+我们称之为pref_general
+We call it pref_general,
+
+16
+00:00:50,650 --> 00:00:54,990
+Root element就是PreferenceScreen，就像我们在开发者这边看到的一样
+and the root element is a preference screen as we saw on the developer's site.
+
+17
+00:00:54,990 --> 00:00:57,020
+这样我们的preferences文件就创建完成了
+And then our preferences file is created.
+
+18
+00:00:57,020 --> 00:00:58,980
+然后增添我们的地址首选项
+Then add the location preference.
+
+19
+00:00:58,980 --> 00:01:03,420
+由于线框里面需要显示一个可用来输入用户地理位置的字符串
+Since the wireframes showed an editable text field to input user location as
+
+20
+00:01:03,420 --> 00:01:06,318
+我们将使用EditTextPreference来进行编码
+a string, we make this an EditTextPreference.
+
+21
+00:01:06,318 --> 00:01:10,620
+如果你想学习更多有关 XML 的其他属性
+If you want to learn more about all the possible XML attributes,
+
+22
+00:01:10,620 --> 00:01:13,370
+你可以 Google 一下 EditTextPreference
+you can google for EditTextPreference.
+
+23
+00:01:13,370 --> 00:01:14,890
+首先我们为preference指定一个标题
+First we specify a title for
+
+24
+00:01:14,890 --> 00:01:18,230
+将用是这个preference向用户展示的标签
+the preference which will be the label that's displayed to the user.
+
+25
+00:01:18,230 --> 00:01:20,170
+然后我们指定一个key
+Then we specify a key.
+
+26
+00:01:20,170 --> 00:01:25,690
+而这个key实际上就是SharedPreferences的key value
+And this key is actually the key value in SharedPreferences.
+
+27
+00:01:25,690 --> 00:01:29,610
+回到代码中，我们增加了一些属性，用来描述一些在线框中显示的
+Going back to the code, we also add these attributes to describe the Edit Text
+
+28
+00:01:29,610 --> 00:01:32,780
+对话框中的EditText
+field in the pop up dialog that was shown in the wire frames.
+
+29
+00:01:34,120 --> 00:01:38,440
+在代码中，我们也可以编辑 Edit Text field 的属性
+Going back to the code, we can also configure properties of the Edit Text field.
+
+30
+00:01:38,440 --> 00:01:42,890
+我们指定输入类型为text，并且设置为单行显示文本
+We specify the input type to be text, and we cap it to a single line of text.
+
+31
+00:01:42,890 --> 00:01:45,790
+在这里硬编码这些字符串是不好的编码习惯
+It's bad practice to hard code these strings here,
+
+32
+00:01:45,790 --> 00:01:50,290
+所以我们把它们定义为string.xml文件中的常量
+so we declare them as constants in the strings.XML file.
+
+33
+00:01:50,290 --> 00:01:51,970
+这就是我们定义的字符串
+These are the strings we declared.
+
+34
+00:01:51,970 --> 00:01:54,520
+这是preference标签的名字
+This is the name of the label of the preference.
+
+35
+00:01:54,520 --> 00:01:58,390
+这是用户可见的，为了转义我们增加了字符限制
+It's user-visible, so we add a char limit for translation purposes.
+
+36
+00:01:58,390 --> 00:02:02,840
+你也可以指定那个在Sharepreferences中被命名为location的key
+You also specify location which is the name of the key in Shared Preferences.
+
+37
+00:02:02,840 --> 00:02:05,730
+我们并不翻译它因为我们经常通过这个名字
+We don't want to translate it because we always want to find the key based
+
+38
+00:02:05,730 --> 00:02:07,060
+寻找 key
+on this name.
+
+39
+00:02:07,060 --> 00:02:10,169
+我们也可以指定一个常量作为默认的location
+We also specify a constant for the default location.
+
+40
+00:02:10,169 --> 00:02:13,690
+我们这里也不翻译它因为我们需要将它输送给 server API
+We also don't translate this because we need to send it to the server API
+
+41
+00:02:13,690 --> 00:02:14,750
+就像这样
+like this.
+
+42
+00:02:14,750 --> 00:02:17,540
+当你把这些步骤都做完了的时候，将下面的选项勾选，并继续
+When you're done with these steps check them off and continue

@@ -1,0 +1,74 @@
+1
+00:00:00,280 --> 00:00:03,960
+首先将TextView标签改为ListView标签
+You should have changed the TextView into a ListView element.
+
+2
+00:00:03,960 --> 00:00:07,180
+然后将text属性删掉  因为我们不再需要它了
+Then you can remove this text attribute because you don't need it anymore.
+
+3
+00:00:07,800 --> 00:00:11,790
+之前我们讲过Sunshine的布局框架  你一定还记得天气列表要占据整个屏幕吧
+Now from the UX Mocks, you'll remember that the list takes up the whole screen,
+
+4
+00:00:11,790 --> 00:00:15,480
+所以我们要将layout_width和layout_height的属性设置成match_parent
+so we want to set the width and height to be match_parent.
+
+5
+00:00:15,480 --> 00:00:18,378
+这样可以使ListView填满
+That will make the ListView match the dimensions of its parent,
+
+6
+00:00:18,378 --> 00:00:20,316
+RelativeLayout父布局
+which is this RelativeLayout.
+
+7
+00:00:20,316 --> 00:00:22,875
+那又要去哪找到这个RelativeLayout的父布局呢
+And to find out the parent of this RelativeLayout,
+
+8
+00:00:22,875 --> 00:00:25,526
+它实际上是在activity_main.xml里
+it's actually in this activity_main XML file
+
+9
+00:00:25,526 --> 00:00:29,477
+因为该Activity会包含fragment_main.xml里的内容
+because the fragment is contained within the activity.
+
+10
+00:00:29,477 --> 00:00:34,560
+在activity_main.xml中  我们看到layout_height和layout_width的值也是match_parent
+Within this file, we see that this view is also match_parent for height and width.
+
+11
+00:00:34,560 --> 00:00:38,440
+现在我们就可以肯定  天气ListView一定会占据整个屏幕
+So now we can confirm that the ListView actually will take up the full screen.
+
+12
+00:00:39,060 --> 00:00:42,626
+回到fragment_main.xml  我们向ListView加一个id属性
+Going back to the fragment_main file, we can add the id,
+
+13
+00:00:42,626 --> 00:00:45,270
+值为listview_forecast
+listview_forecast, onto the ListView.
+
+14
+00:00:45,270 --> 00:00:48,085
+既然父布局只包含了一个子控件
+And then, since this layout only contains one child,
+
+15
+00:00:48,093 --> 00:00:52,093
+我们可将RelativeLyout改为FrameLayout来简化布局
+we can simplify the layout by changing this into a FrameLayout.

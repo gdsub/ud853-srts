@@ -1,0 +1,130 @@
+1
+00:00:00,460 --> 00:00:04,250
+在复制了所有图片之后，需要在安卓的manifest文件中更新桌面启动图标
+After copying over the assets, updating the launcher icon in the Android
+
+2
+00:00:04,250 --> 00:00:07,890
+并且在Utility类中添加辅助函数
+manifest, and adding the helper methods to the utility class,
+
+3
+00:00:07,890 --> 00:00:12,410
+为此，我们需要修改DetailFragment和 ForecastAdapter这两个类
+we need to modify to detail fragment and forecast it after classes.
+
+4
+00:00:12,410 --> 00:00:15,050
+在DetailFragment类的方法中
+In the detail fragment onload finished method,
+
+5
+00:00:15,050 --> 00:00:17,350
+我们通过获取cursor的位置来读取指定的天气情况
+we read the weather condition code from the cursor.
+
+6
+00:00:17,350 --> 00:00:21,670
+然后将它传递给辅助函数
+Then we pass this into the utility helper method to get the resource ID for
+
+7
+00:00:21,670 --> 00:00:25,610
+来获取填充视图的彩色图标
+the colored icon in order to set it on the image view.
+
+8
+00:00:25,610 --> 00:00:28,730
+因为对于今天的天气我们想使用彩色图标
+The ForecasterAdapter change is a little trickier because we want to use
+
+9
+00:00:28,730 --> 00:00:32,610
+而对于未来的天气又想使用灰色的
+a colored icon for the today layout and we want to use a gray icon for
+
+10
+00:00:32,610 --> 00:00:33,590
+图标
+the other days.
+
+11
+00:00:33,590 --> 00:00:35,660
+为了将这两者区分开来
+In order to distinguish between the two,
+
+12
+00:00:35,660 --> 00:00:38,880
+我们可以根据当前cursor的位置来确定获取视图的类型
+we call getItemViewType given the current cursor position.
+
+13
+00:00:38,880 --> 00:00:40,410
+如果视图类型是今天
+If the view type is today.
+
+14
+00:00:40,410 --> 00:00:42,970
+我们就从光标处获取今天的天气情况
+Then we get the weather condition code from the cursor.
+
+15
+00:00:42,970 --> 00:00:47,010
+我们就从光标处获取今天的天气情况并从辅助函数中获取彩色图标的资源ID
+Then we get the resource ID for the colored image from the helper method.
+
+16
+00:00:47,010 --> 00:00:48,820
+最后在视图中加载彩色图标
+And then we set that on to the image view.
+
+17
+00:00:48,820 --> 00:00:49,800
+如果视图类型是未来的某一天
+If the view type is for
+
+18
+00:00:49,800 --> 00:00:53,740
+同样，我们先从光标处获取未来的天气情况
+a future day, then we read the weather condition code from the cursor.
+
+19
+00:00:53,740 --> 00:00:56,900
+接着从辅助函数中获取灰色图标的资源ID
+Then we pass it into the helper method to get the resource ID for
+
+20
+00:00:56,900 --> 00:01:00,270
+最终在视图中加载灰色图标
+the gray icon and then we set that on to the image view.
+
+21
+00:01:00,270 --> 00:01:03,290
+如果你先前使用硬编码图像在视图中添加了一个image
+If you previously hard coded an image into the layout,
+
+22
+00:01:03,290 --> 00:01:05,160
+现在你应该将它删除
+then you should remove that value now.
+
+23
+00:01:05,160 --> 00:01:08,590
+否则，在app启动时
+它会先加载图像占位符然后
+Otherwise on app launch, it will load up the placeholder image and
+
+24
+00:01:08,590 --> 00:01:10,280
+跳出当前图标
+then flash to the actual icon.
+
+25
+00:01:11,320 --> 00:01:12,950
+既然手机用户界面的的框架已经很完善了
+Now that the wire frame implementation for
+
+26
+00:01:12,950 --> 00:01:16,350
+让我们来看看平板的用户界面
+the phone UI is pretty much complete, let's look at the tablet UI.

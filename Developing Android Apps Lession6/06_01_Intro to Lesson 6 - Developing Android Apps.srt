@@ -1,0 +1,60 @@
+﻿1
+00:00:00,430 --> 00:00:02,540
+既然我们已经完成了对应用程序UI的实现，
+Now that we've finished build the UI for our app,
+
+2
+00:00:02,540 --> 00:00:04,660
+现在需要考虑当应用不在前台的时候，
+it's time to think about how it should operate when it's
+
+3
+00:00:04,660 --> 00:00:08,280
+该如何运行。安卓最厉害的一点就是
+not in the foreground. One of the most powerful features of
+
+4
+00:00:08,280 --> 00:00:10,930
+它能让任何app在后台运行。
+Android, is the ability for any app to run in the
+
+5
+00:00:10,930 --> 00:00:15,070
+但责任越大能力就越大。所以你需要
+background. But with great power comes great responsibility. So, you need
+
+6
+00:00:15,070 --> 00:00:18,920
+非常重视它对资源的消耗。在这门
+to be very conscious of how it's consuming resources. In this
+
+7
+00:00:18,920 --> 00:00:22,820
+课程里，你将会学习安卓框架是如何管理后台程序的
+lesson, you'll learn more about how the Android framework manages background
+
+8
+00:00:22,820 --> 00:00:25,470
+然后你会学到service类，它会帮你实现后台程序的功能
+apps and you'll be introduced to the service class to help
+
+9
+00:00:25,470 --> 00:00:28,480
+实现它。你也会学到通过同步适配器
+make that happen. You'll also learn techniques for efficient
+
+10
+00:00:28,480 --> 00:00:31,920
+和谷歌云消息来进行有效的数据转换。以及
+data transfers using sync adapters and Google Cloud messaging. And
+
+11
+00:00:31,920 --> 00:00:34,520
+学习当你的app没有运行在前台的时候，
+be introduced to the notification framework to send messages
+
+12
+00:00:34,520 --> 00:00:36,820
+notification框架如何发送信息给你的app用户。
+to your users when your app isn't in the foreground.
+

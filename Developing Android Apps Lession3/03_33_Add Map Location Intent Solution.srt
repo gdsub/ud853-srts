@@ -1,0 +1,70 @@
+﻿1
+00:00:00,390 --> 00:00:05,689
+已经完成了。让我们来看看答案。在main activity的菜单排版文件里
+Done already. Let's go to the solution. In the menu layout file for the main
+
+2
+00:00:05,689 --> 00:00:10,540
+也叫做main.xml，添加一个菜单选项
+activity, called main.xml, we add another menu item
+
+3
+00:00:10,540 --> 00:00:12,740
+它总是会在溢出菜单里
+that will always be in the overflow menu.
+
+4
+00:00:14,010 --> 00:00:20,280
+也要在string.xml里定义一个字符串。这个菜单要添加在
+We also define the string in the strings.xml file. The menu will be inflated in
+
+5
+00:00:20,280 --> 00:00:22,770
+main activity里。这样我们就可以操作
+the main activity class, so we can handle
+
+6
+00:00:22,770 --> 00:00:25,550
+这个新添加的菜单选项，通过调用
+the map menu item being inflated. By calling
+
+7
+00:00:25,550 --> 00:00:28,230
+一个叫openPreferredLocationInMap的协助函数
+helper method called openPreferredLocationInMap
+
+8
+00:00:28,230 --> 00:00:31,650
+这个协助函数从SharedPreferences
+The helper method reads the users
+
+9
+00:00:31,650 --> 00:00:35,650
+读取用户的偏好地址信息。然后
+preferred location from SharedPreferences. Then we
+
+10
+00:00:35,650 --> 00:00:39,240
+我们创建一个View Intent。把地址信息放进
+create a view intent, indicating it's location
+
+11
+00:00:39,240 --> 00:00:44,460
+它的数据URI。数据URI的格式可以在通用Intent的文档里找到
+in the data URI. The format of the data URI was from the documentation
+
+12
+00:00:44,460 --> 00:00:49,150
+你还可以添加一个邮编号码作为地址的查询参数
+page on common intents. Where you can append a postal code as a query parameter.
+
+13
+00:00:50,490 --> 00:00:54,479
+最后，我们用这个Intent做参数调用startActivity
+Finally, we start an activity with [SOUND] this intent. Note
+
+14
+00:00:54,479 --> 00:00:58,560
+注意，只有当这个Activity能被成功分解时，我们才开始这个Activity
+that we only start the activity, if the activity resolves successfully.
+
