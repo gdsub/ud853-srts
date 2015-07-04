@@ -1,25 +1,9 @@
-# studyjam
-Developing Android Apps 中文srt发布区。
+# Developing Android Apps 中文 SRT 发布区
 
-Android Fundamentals Study Jam - 是 Google Developer 部门与 udacity 联合推出的一个 Android 开发者在线培训活动，为了方便更多国内的开发者，我们特别在这里开一个repo，希望有能力的朋友协助翻译字幕。
+Android Fundamentals Study Jam - 是 Google Developer 部门与 udacity 联合推出的一个 Android 开发者在线培训活动，大家可以根据课程进度对 Android 开发能力进行进一步提升。
 
-全球活动官网：http://developerstudyjams.com/
-
-教程名称：Developing Android Apps - Android Fundamentals
-
-参与学习的方式见这个[文档](https://www.gdgdocs.org/document/preview?hgd=1&id=1mMNwueUmV6U9KdJ3RRIQy9PtfTWWnagAsHqjAv4x8ig)。
+Udacity 课程官网： https://www.udacity.com/course/developing-android-apps--ud853 
 
 我们为国内的学习者提供了这样一个学习论坛 [StudyJamsCN.com](http://StudyJamsCN.com) 欢迎大家到访并无私的分享你的学习经验。
 
-如果你想参与翻译，请发送以下格式的邮件给我：
-
-姓名/昵称：
-
-技术开发经验：
-
-Github 用户名：
-
-紧急联系方式：
-
-
-请将以上内容发给 chenglu99@gmail.com 谢谢！
+该翻译项目自 2014 年年底开始，2015 年 3 月课程大面积更新之后我们又更新了一批字幕，目前翻译志愿者中大部分核心译者已经加入 GDG 字幕组，如果您希望对该课程字幕进行贡献，请加入 GDG 字幕组： http://www.gfansub.com/join_translator
