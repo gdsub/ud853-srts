@@ -1,0 +1,120 @@
+1
+00:00:00,920 --> 00:00:03,860
+All right, you're done. Let's go look at the
+好的， 你做完了这些。我们来看看
+2
+00:00:03,860 --> 00:00:06,520
+solution. Where we left off last time as you can
+结果。当我们上次退出的时候我们有
+3
+00:00:06,520 --> 00:00:10,316
+see we have two empty queries for LOCATION_ID and
+两个空白的查询， 分别是LOCATION_ID和
+4
+00:00:10,316 --> 00:00:13,390
+LOCATION. These two queries look a lot like the queries
+LOCATION。 这两个查询跟我们之前做的
+5
+00:00:13,390 --> 00:00:17,191
+we have for weather. For LOCATION_ID this looks almost
+关于天气的查询很像.  特别是 LOCATION_ID这个查询简直
+6
+00:00:17,191 --> 00:00:20,430
+exactly like what we do for weather. Except we use
+跟我们做的天气的查询一样。 除了我们使用了一个
+7
+00:00:20,430 --> 00:00:23,090
+a hard coded query, rather than relying on the one
+硬编码的默认查询, 而不是在函数中带入一
+8
+00:00:23,090 --> 00:00:25,920
+passed into the function. Since we know that this is
+参数。既然我们知道这个参数
+9
+00:00:25,920 --> 00:00:28,800
+always going to be a long integer value, it is
+一直是一个长整型的数值， 这就让我们创建
+10
+00:00:28,800 --> 00:00:32,439
+easy to just build the value into the query string. Location,
+这个查询的字符串变的比较容易了。
+11
+00:00:32,439 --> 00:00:35,950
+on the other hand, looks almost exactly like the weather
+所以从另外一方面看， 这个查询就和天气的那个非常相似了
+12
+00:00:35,950 --> 00:00:39,580
+query. We just pass all the parameters into the database. You
+我们仅仅需要把所有的参数都放进数据库。 你
+13
+00:00:39,580 --> 00:00:42,540
+didn't think you're going to get away without testing, did you?
+该不会是想在没有任何测试之前就闪人吧？
+14
+00:00:42,540 --> 00:00:45,370
+Don't worry, it's really easy to add this test. It turns
+别担心， 这个测试非常容易添加。只
+15
+00:00:45,370 --> 00:00:48,490
+out that calling our function within the provider, works almost
+需要在 provider 里面调用我们的函数，这个几乎
+16
+00:00:48,490 --> 00:00:50,670
+exactly the same as the way we did the weather table.
+跟我们之前调用那个天气的表格的方法一样呀。
+17
+00:00:51,680 --> 00:00:55,241
+All we have to do is replace WeatherEntry.CONTENT_URI with
+我们仅仅需要做一个小变化，把WeatherEntry.CONTENT_URI 和
+18
+00:00:55,241 --> 00:01:00,445
+LocationEntry.CONTENT_URI. And of course we still have to delete the
+LocationEntry.CONTENT_URI 互换。 当然我们还是需要删除
+19
+00:01:00,445 --> 00:01:03,160
+two columns that we can't support. Now that will actually
+两列我们不能支出的表格。 现在这个就能完完全全
+20
+00:01:03,160 --> 00:01:05,379
+work. So, let's test that to make sure that works.
+工作了。让我测试一下啊。
+21
+00:01:06,620 --> 00:01:10,010
+And our test passed, as expected. The interesting thing about
+一如既往的，我们测试通过了。 有趣的事是
+22
+00:01:10,010 --> 00:01:12,170
+this test is that it's just only testing the first
+这些测试只是检测了第一个
+23
+00:01:12,170 --> 00:01:14,490
+query and it just happens to work because we deleted
+查询同时它能够通过测试是因为我们在测试之前删除了那个
+24
+00:01:14,490 --> 00:01:16,890
+the database before the start. It'd be much more interesting
+数据库。查询这个行是非常有趣的，
+25
+00:01:16,890 --> 00:01:19,950
+to query for the row that we just inserted. And this will test the
+因为它会同时测试其他的
+26
+00:01:19,950 --> 00:01:25,450
+other query. Now, let's run the test again. And those also passed. So, we have
+查询呢。 现在，让我们再次来检测一下。 发现了什么？ 全部通过啦。 所以呢，
+27
+00:01:25,450 --> 00:01:26,870
+some of our queries from our content
+这些查询其中的一些是从provider的功能里
+28
+00:01:26,870 --> 00:01:29,800
+provider functioning. But, unfortunately, we still have
+附带的。 但是， 我们依然需要做
+29
+00:01:29,800 --> 00:01:31,140
+to do some of the more complicated
+一些更复杂的事情
+30
+00:01:31,140 --> 00:01:33,680
+things in the provider. Let's talk about joins.
+这些复杂的事就是 joins

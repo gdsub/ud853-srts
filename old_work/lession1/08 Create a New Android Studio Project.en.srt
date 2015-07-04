@@ -1,0 +1,160 @@
+1
+00:00:00,470 --> 00:00:03,160
+一旦你成功安装了Android Studio  
+Once you install Android Studio, you can open it and
+
+2
+00:00:03,160 --> 00:00:08,240
+打开Android Studio并且在你进行下一步之前请检查更新  然后我们就可以开始设置Android Studio了
+check for updates before proceeding. Then we can configure Android Studio.
+
+3
+00:00:08,240 --> 00:00:12,470
+打开Android SDK Manager查看我们已经安装的工具  平台版本和组件
+Open up the Android SDK Manager to see what tools, platform versions, and
+
+4
+00:00:12,470 --> 00:00:15,330
+截止到本次录制视频的时候
+components we have installed. At the time of this recording,
+
+5
+00:00:15,330 --> 00:00:19,900
+Android L平台已经可用  但它仍然处在开发者预览模式
+the Android L platform is available but it's still in developer preview mode.
+
+6
+00:00:19,900 --> 00:00:23,770
+这意味着它需要一直更改直到正式版发布  如果它是为Android L平台设计的
+That means it's subject to change until the official release. You can't upload
+
+7
+00:00:23,770 --> 00:00:27,928
+那么您不能将此应用上传到Google Play Store
+your app to Google Play if it's targeting this L platform version.
+
+8
+00:00:27,928 --> 00:00:31,670
+所以  我们需要使用最新的稳定版本  即Android KITKAT或者是API level 19
+Hence, we want to use the latest stable platform version which is KITKAT or
+
+9
+00:00:31,670 --> 00:00:36,830
+API level20是为Android Wear或手表而适用的  而不是为手机和平板电脑所适用的
+API level 19. API level 20 is for Android ware or watches and not for
+
+10
+00:00:36,830 --> 00:00:40,836
+取消选择其他所有的包  只选择API level 19的包
+phones or tablets. Deselect all the other packages. And just choose the ones for
+
+11
+00:00:40,836 --> 00:00:45,470
+我们需要给模拟器提供SDK以及系统镜像
+API level 19. We want the SDK as well as the system images for the emulator.
+
+12
+00:00:45,470 --> 00:00:48,690
+我们同样希望Android支持库是向后兼容的
+We also want the Android Support Library for backwards compatibility. For
+
+13
+00:00:48,690 --> 00:00:51,640
+对于最新的版本你需要安装的所有的软件包
+the most up-to-date version of all the packages you need to install,
+
+14
+00:00:51,640 --> 00:00:55,160
+请检查下面的链接  否则  请继续安装软件包
+check the link below. Otherwise, continue with installing the packages.
+
+15
+00:00:55,160 --> 00:00:58,370
+选择接受许可然后选择安装  然后我们可以点击创建一个新项目
+Accept the license and then install. Then we can click and
+
+16
+00:00:58,370 --> 00:01:02,860
+在项目向导中  我们把应用程序的名称设置为Sunshine
+create a new project. In the Project Wizard, we set the app name to be Sunshine.
+
+17
+00:01:02,860 --> 00:01:06,200
+然后我们提供对应的包名称  为了能让应用正式发布
+Then we provide a corresponding package name. For distribution purposes,
+
+18
+00:01:06,200 --> 00:01:10,190
+包名是在Android上应用程序安装时的唯一标识
+the package name should be globally unique across packages installed on Android.
+
+19
+00:01:10,190 --> 00:01:14,190
+为了避免冲突  你可以反向使用你自己的域名地址
+To avoid conflicts, you can use the reverse of the internet domain that you own.
+
+20
+00:01:14,190 --> 00:01:18,240
+这与Java包的命名规则是一致的  请注意
+This follows the Java package naming conventions. Note that we're also using
+
+21
+00:01:18,240 --> 00:01:22,150
+我们为我们的Sunshine应用也使用了com.的示例命名
+the com dot example namespace for our Sunshine app since it's a sample, but
+
+22
+00:01:22,150 --> 00:01:26,010
+因为Sunshine应用仅仅是示例  所以你不能用这个包名把应用发布到GooglePlay上
+you cannot publish an app on Google play that uses this namespace.
+
+23
+00:01:26,010 --> 00:01:30,020
+通常情况下使用默认的建议的包名称是没有问题的  然而
+Usually leaving the default package name that's suggested is fine. However,
+
+24
+00:01:30,020 --> 00:01:33,410
+这个类原本被老版本的Android Studio记录下来
+this class was originally filmed with an older version of Android Studio which
+
+25
+00:01:33,410 --> 00:01:37,280
+并在包名称的末尾添加.app的包名
+added the app module at the end of the package name. So go ahead and
+
+26
+00:01:37,280 --> 00:01:40,160
+在本课程中如果你想让你的代码与本课程的代码一样的话，请立刻修改这个设置
+make this change now if you want your code to match the rest of the code in
+
+27
+00:01:40,160 --> 00:01:42,580
+然后我们确认项目的位置
+the course. Then we do the project location and
+
+28
+00:01:42,580 --> 00:01:47,030
+并选择下一步  现在  我们需要选择我们的最低SDK版本
+we hit next. Now, we need to choose our minimum SDK version.
+
+29
+00:01:47,030 --> 00:01:49,880
+在Android Studio的之前的版本中  你必须选择目标的应用的SDK
+In previous versions of Android Studio, you would also have to
+
+30
+00:01:49,880 --> 00:01:54,510
+但是现在的项目向导会自动将目标SDK设置为最新的版本
+select the target SDK. But now the Project Wizard automatically sends the target
+
+31
+00:01:54,510 --> 00:01:58,870
+尽管目标SDK已经为你选择好了
+SDK to be the latest version. Even though target SDK is already selected for
+
+32
+00:01:58,870 --> 00:02:02,800
+但是重要的是要知道最低SDK和目标SDK的区别
+you, it's important to know the distinction between min and target SDK
+

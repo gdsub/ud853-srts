@@ -1,0 +1,25 @@
+1
+00:00:00,460 --> 00:00:04,330
+从刚才的模拟中  我们可以看到当一个列表项被点击时
+From the mocks, we can see when a list item is clicked we should
+
+2
+00:00:04,330 --> 00:00:08,720
+我们应该执行一个打开天气预报详情页的动作
+perform an action to open up the details page for the forecast. How do
+
+3
+00:00:08,720 --> 00:00:11,870
+那我们该怎样实施对点击事件的监听行为呢
+we implement the click listener behavior? Take
+
+4
+00:00:11,870 --> 00:00:14,740
+让我们看一下ListView的文档
+a look at the ListView documentation. What
+
+5
+00:00:14,740 --> 00:00:18,250
+当一个列表项被点击时  哪一个方法被用来连接行为呢
+method is used to wire up behavior on a list item when it is clicked?
+

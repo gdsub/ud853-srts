@@ -1,0 +1,250 @@
+﻿1
+00:00:01,090 --> 00:00:04,000
+那么如果我们把Fragment当做迷你Activity，每一个都
+So if we treat fragments as mini activities, each with
+
+2
+00:00:04,000 --> 00:00:07,510
+有其独立的生命周期，它和
+its own independent life cycle in UI, how does that compare
+
+3
+00:00:07,510 --> 00:00:10,200
+真正的Activity的生命周期有什么区别呢？
+to the life cycle of a real activity? Well as
+
+4
+00:00:10,200 --> 00:00:13,490
+正如你所期望的 基本的生命周期事件和他的上层Activity
+you might expect the basic life cycle events are much the
+
+5
+00:00:13,490 --> 00:00:16,140
+是一样的。并且当它在切换
+same as the parent activity, and as it moves through
+
+6
+00:00:16,140 --> 00:00:20,288
+它的生命周期，开始、恢复、暂停、停止，状态时，相同的
+the cycles of starts, resumes, pauses, and stops those same life
+
+7
+00:00:20,288 --> 00:00:23,930
+生命周期事件也会在Fragment当中触发。所以
+cycle events will be triggered within the fragment itself. So,
+
+8
+00:00:23,930 --> 00:00:26,140
+在大多数情况下，你可以简单地把
+in most cases, you can simply move anything that you would
+
+9
+00:00:26,140 --> 00:00:29,080
+本来放在Activity生命周期响应里的代码
+have put into the activities life cycle handles,
+
+10
+00:00:29,080 --> 00:00:32,259
+移动到相对应的Fragment里面。当然，
+into the corresponding fragment handles. With, of course, a
+
+11
+00:00:32,259 --> 00:00:35,460
+也有一些例外。与其在这onCreate里创建用户界面
+couple of exceptions. Rather than building your UI here
+
+12
+00:00:35,460 --> 00:00:40,990
+Fragment为这个引入了一个新的特殊事件
+and onCreate, fragments introduced a new event specifically for
+
+13
+00:00:40,990 --> 00:00:44,260
+onCreateView是用于创建或解析
+this. OnCreateView is where you construct or inflate
+
+14
+00:00:44,260 --> 00:00:46,470
+你的用户界面，与数据进行挂钩
+your UI, hook up to any data sources, and
+
+15
+00:00:46,470 --> 00:00:48,440
+并且将其返回给上层的Activity。然后它就可以
+return it to the parent activity, which can then
+
+16
+00:00:48,440 --> 00:00:51,692
+集成到它的View的层次里。相对应的
+integrate it into its view hierarchy. There's a corresponding
+
+17
+00:00:51,692 --> 00:00:54,630
+还有一个onDestroyView处理函数。它会在Fragment
+onDestroyView handler, which is called immediately before the
+
+18
+00:00:54,630 --> 00:00:57,240
+被加入进后台堆栈之前被立即调用，独立于
+fragment is added to the back stack, independent of the
+
+19
+00:00:57,240 --> 00:01:00,060
+它的上层Activity。现在记住Fragment
+parent activity. Now keep in mind that the fragment
+
+20
+00:01:00,060 --> 00:01:04,450
+管理器可以添加任意的Fragment事务，添加、移除、或替换
+manager can add any fragment transactions adding, removing, or replacing
+
+21
+00:01:04,450 --> 00:01:06,720
+到后台栈里面，只要简简单单一个上层
+fragments to the back stack, with a single parent
+
+22
+00:01:06,720 --> 00:01:10,040
+Activity的动作。所以一个Fragment能够独立于
+activity's actives. So a fragment can move through this
+
+23
+00:01:10,040 --> 00:01:13,484
+所属的Activity进行多次生命周期循环。
+cycle multiple times independent of the host activity. So
+
+24
+00:01:13,484 --> 00:01:16,570
+所以在onDestroyView中，你应该清除所有的资源调用
+onDestroyView is, where you should clean up any resources,
+
+25
+00:01:16,570 --> 00:01:19,870
+特别是与用户界面相关的，例如内存中的图片，
+specifically related to the UI, such as bitmaps in
+
+26
+00:01:19,870 --> 00:01:23,470
+数据的游标，所有这类东西，来确保
+memory, cursors to data, anything like that to help ensure
+
+27
+00:01:23,470 --> 00:01:26,060
+你的APP不会被不可见的Fragment
+that your app's memory footprint isn't bloated by data that's
+
+28
+00:01:26,060 --> 00:01:29,950
+的数据占掉太多内存。现在只要
+not needed when the fragment isn't visible. Now as soon
+
+29
+00:01:29,950 --> 00:01:32,860
+Fragment被从后台堆栈返回，onCreateView
+as the fragment is returned from the back stack, onCreate
+
+30
+00:01:32,860 --> 00:01:35,360
+就会被调用到，然后你就可以赶在
+view is called, and you can re-create the UI and
+
+31
+00:01:35,360 --> 00:01:38,820
+在你的Fragment将要变成Activity，也还没经过其他生命周期之前，
+reconnect data sources before your fragment transitions through the rest
+
+32
+00:01:38,820 --> 00:01:41,810
+重新创建用户界面，并连接数据源。因为
+of the life cycle to become active again. And because
+
+33
+00:01:41,810 --> 00:01:43,870
+一个Fragment只能存在于一个Activity里
+a fragment can only exist within an activity,
+
+34
+00:01:45,480 --> 00:01:47,280
+我们还需要一个回调函数来告诉我们
+we also need callbacks to tell us when a
+
+35
+00:01:47,280 --> 00:01:51,900
+一个Fragment何时被从它的上层Activity连接和分离。onAttach
+fragment is attached and detached from its parent. onAttach
+
+36
+00:01:51,900 --> 00:01:53,930
+是获得它上层Activity引用的好机会。
+is your opportunity to get a reference to the
+
+37
+00:01:53,930 --> 00:01:57,360
+而onDetach是最后发生的一个事件，
+parent activity. While, onDetach is the last thing that
+
+38
+00:01:57,360 --> 00:02:01,430
+甚至在Fragment被销毁之后。
+happens, even after your fragment has technically been destroyed.
+
+39
+00:02:01,430 --> 00:02:03,779
+现在这个难题的最后一块就是onActivityCreated
+Now, the final piece of the puzzle is onActivity
+
+40
+00:02:03,779 --> 00:02:07,060
+它通知我们的Fragment上层Activity
+created. This notifies our fragment that the parent activity
+
+41
+00:02:07,060 --> 00:02:09,990
+已经完成了它自己的创建处理函数并且标志着
+has completed its own create handler and represents the point
+
+42
+00:02:09,990 --> 00:02:12,900
+我们可以安全地与其UI进行交互的时间点。潜在的，
+at which we can safely interact with its UI. Potentially
+
+43
+00:02:12,900 --> 00:02:16,460
+也包括了其他Fragment。现在，就和我们在第三课讨论
+including other fragments. Now, just like the activity lifecyle we
+
+44
+00:02:16,460 --> 00:02:19,410
+的Activity生命周期一样，一旦Fragment不再
+discussed in lesson three, once the fragment is no longer
+
+45
+00:02:19,410 --> 00:02:22,040
+可见，它就有可能被终止
+visible, there's a chance it will be terminated with no
+
+46
+00:02:22,040 --> 00:02:25,730
+而无需任何其他代码被执行。这可能在onStop之后发生，
+further code being executed. That can happen, after onStop, in
+
+47
+00:02:25,730 --> 00:02:28,680
+当这个所属的Activity被终止了，而Fragment在他的
+the case of the activity being terminated while the fragment
+
+48
+00:02:28,680 --> 00:02:32,270
+视图层级中的时候，或者在onDestroyView之后
+is part of that activity's view hierarchy, or after onDestroy
+
+49
+00:02:32,270 --> 00:02:34,360
+当其所属Activity被销毁，而此时Fragment已经被放进了
+view, if the fragment has already been placed
+
+50
+00:02:34,360 --> 00:02:36,500
+后台堆栈，也会如此。
+in the back stack, once the activity is destroyed.
+

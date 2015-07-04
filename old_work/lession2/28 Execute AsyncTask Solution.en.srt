@@ -1,0 +1,50 @@
+1
+00:00:00,470 --> 00:00:02,880
+在ForecaseFragment类中，我们修改了
+In the ForecaseFragment class, we modify the
+
+2
+00:00:02,880 --> 00:00:08,134
+onOptionsItemSelected()方法。当点击Refresh按钮时，
+onOptionsItemSelected method. When the Refresh menu item is selected,
+
+3
+00:00:08,134 --> 00:00:11,129
+我们创建了一个新的FetchWeatherTask对象，并且我们调用
+we create a new FetchWeatherTask and then we call
+
+4
+00:00:11,129 --> 00:00:13,489
+它的execute()方法。尽管由于使用的是AsyncTask
+execute on it. While the call is no longer
+
+5
+00:00:13,489 --> 00:00:16,487
+调用并不会阻塞UI线程，
+blocking the UI thread because it's an AsyncTask, the
+
+6
+00:00:16,487 --> 00:00:19,390
+但是应用仍然会崩溃。如果你查看日志，
+app will still crash. If we check the logs,
+
+7
+00:00:19,390 --> 00:00:21,920
+我们会看到应用这一次是由于一个SecurityException（安全异常）
+we see that the app crashed, this time though,
+
+8
+00:00:21,920 --> 00:00:26,030
+崩溃的。它说权限被拒绝，并且问
+with a SecurityException. It says Permission denied and
+
+9
+00:00:26,030 --> 00:00:29,810
+是不是没有申请INTERNET权限。确实，
+ask if you're missing the INTERNET permission or not. And indeed,
+
+10
+00:00:29,810 --> 00:00:32,670
+我们没申请INTERNET权限，因此我们需要申请它。
+we are missing the INTERNET permission, so we need to request it.
+

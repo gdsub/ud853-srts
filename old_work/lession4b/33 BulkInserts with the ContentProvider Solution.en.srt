@@ -1,0 +1,45 @@
+1
+00:00:00,930 --> 00:00:04,075
+好的。你已经完成全部了。那就让我们一起
+All right. You're all done. Let's go
+
+2
+00:00:04,075 --> 00:00:06,450
+复习一下如何用ContentProvider解决bulkInserts。
+over the solution to bulkInserts with the ContentProvider.
+
+3
+00:00:08,460 --> 00:00:12,710
+虽然我们不能直接插入一个向量，但是我们可以很随意的就把向量转换成一个数组
+While we cannot insert a vector directly, we can easily convert a vector into
+
+4
+00:00:12,710 --> 00:00:15,097
+一旦我们完成了这个，
+an array. Once we've done this, the
+
+5
+00:00:15,097 --> 00:00:18,450
+方法bulkInsert就可以很快地插入到里边。现在，
+the bulkInsert method will insert very efficiently. Now,
+
+6
+00:00:18,450 --> 00:00:21,100
+我们的后台将会很快更新。但是我们
+our backend will update efficiently. But we
+
+7
+00:00:21,100 --> 00:00:22,620
+真心需要一种方式，就是在不需要
+really need a way to update the front
+
+8
+00:00:22,620 --> 00:00:26,770
+引入framerate jitter的情况下更新前端。幸运的是，
+end without introducing framerate jitter. Fortunately, Android
+
+9
+00:00:26,770 --> 00:00:29,040
+android提供了一种模式，叫做加载器。
+offers a pattern for that known as Loaders.
+

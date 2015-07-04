@@ -1,0 +1,108 @@
+1
+00:00:00,480 --> 00:00:04,500
+All right. You're done. Let's look at the solution. All
+好的，完成啦，让我们看看结果。 
+2
+00:00:04,500 --> 00:00:08,270
+right. We'll move to WeatherProvider. We start by creating a
+我们回来WeatherProvider。 让我们在来provider顶部
+3
+00:00:08,270 --> 00:00:10,830
+third selection query up at the top of our provider,
+创建第三个选项查询，
+4
+00:00:10,830 --> 00:00:13,670
+much like the second query except that we search for
+跟第二个查询差不多一样，是一个需要特定日期的
+5
+00:00:13,670 --> 00:00:16,420
+the exact date. Rather than a greater than or equal
+查询。 我们这次不要放大于或等于输入
+6
+00:00:16,420 --> 00:00:18,850
+date. We then add a function that uses the weather
+日期。 我们加入一个用天气合约的
+7
+00:00:18,850 --> 00:00:21,690
+contract. Functions to get the date and postal code from
+函数。 这些函数会通过URI来获取时期和
+8
+00:00:21,690 --> 00:00:25,810
+the URI. We use the new query we just wrote.
+邮编。我们来调用我们刚刚写新查询。
+9
+00:00:25,810 --> 00:00:30,100
+And the same SQLI query builder we used before, since it only defines the join.
+同时我们会使用我们之前使用的SQLI查询创建者，这个创建者是用来定义join的。
+10
+00:00:32,200 --> 00:00:33,920
+And then we just call this function in the
+然后我们就调用这个函数。这个函数
+11
+00:00:33,920 --> 00:00:36,500
+weather with location and date switch statement in our
+通过天气与地点，同时包括日期进行交换
+12
+00:00:36,500 --> 00:00:40,670
+query. That's it. Those are all the queries we
+查询。 就这么简单。 这就是我们所有的用来
+13
+00:00:40,670 --> 00:00:43,760
+plan to use for Sunshine, but we still need to
+查询Sunshine的计划了。 但是别高兴太早，我们还需要
+14
+00:00:43,760 --> 00:00:47,000
+test. Let's go back to test provider. As you
+检查一下。 调回test provider类。
+15
+00:00:47,000 --> 00:00:51,020
+can see, our test has a very, very good model
+你看，我们已经有了一个非常，非常赞的模型。
+16
+00:00:51,020 --> 00:00:53,620
+already. Let's fix up some of these old tests
+现在我们需要来修改一些久的测试
+17
+00:00:53,620 --> 00:00:57,510
+and close the weather cursor. Now, we can simply copy
+同时我们关闭天气光标。 然后我们就轻松复制这些
+18
+00:00:57,510 --> 00:01:00,490
+this test over. It turns out that the exact
+测试。 看这些数据跟我们新的URI里
+19
+00:01:00,490 --> 00:01:03,910
+same data is required for our new URI. All
+要求的数据意义。 最后我们
+20
+00:01:03,910 --> 00:01:06,000
+we have to do is to build weather location
+只需要做的是创建一个天气地点和时间的
+21
+00:01:06,000 --> 00:01:08,790
+with date, instead of saying weather location with start
+参数，而不是天气地点和开始时间的参数
+22
+00:01:08,790 --> 00:01:12,010
+date, and we should get the same result. Let's
+，结果应该是一样的。 下一步的测试就是见证
+23
+00:01:13,210 --> 00:01:15,754
+see if that's really true by running our tests.
+奇迹的时刻。
+24
+00:01:15,754 --> 00:01:20,216
+[SOUND] And our test passed. So, we've now implemented
+我们的测试成功通过。 所以哪，我们所有的执行的
+25
+00:01:20,216 --> 00:01:22,627
+all of the queries, but we're not done with our
+查询都过通过了，不过我们还有一点关于 content provider
+26
+00:01:22,627 --> 00:01:25,920
+content provider yet. After all, we're not writing
+需要处理。毕竟，我们还没通过我么的
+27
+00:01:25,920 --> 00:01:28,000
+any data into the database through our content provider
+content provider 把任何的数据放入我们的数据库。 

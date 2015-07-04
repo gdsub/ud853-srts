@@ -1,0 +1,30 @@
+1
+00:00:00,120 --> 00:00:03,900
+在我们继续之前，花点时间考虑一些你最喜欢的app。
+Before we move on, take a moment to consider some of your favorite apps.
+
+2
+00:00:03,900 --> 00:00:08,430
+他们有什么共同点？是什么使得他们用起来那么令人享受？
+What do they have in common? What about them makes them enjoyable to use? Select
+
+3
+00:00:08,430 --> 00:00:10,420
+选择你最喜欢的案例，在论坛提交截屏。
+your favorite examples and post screenshots in
+
+4
+00:00:10,420 --> 00:00:12,300
+描述这些app的设计是如何
+the forum. Describe how the design of
+
+5
+00:00:12,300 --> 00:00:14,180
+使你使用愉悦的。
+the app contributes to your enjoyment using
+
+6
+00:00:14,180 --> 00:00:15,740
+完成后点击这个框框
+it and click this box when you're done.
+

@@ -1,0 +1,60 @@
+﻿1
+00:00:00,260 --> 00:00:05,120
+现在我们已经完成一些了。接下来要做的就是在onCreate()函数最后面
+Well now we're getting somewhere. All we have to do is run those table creation
+
+2
+00:00:05,120 --> 00:00:10,274
+调用execSQL来执行这些表的创建语句。等一下
+queries by calling execSQL at the end of our on create function. But wait,
+
+3
+00:00:10,274 --> 00:00:15,220
+在这里有SQLiteOpenHelper的另一个函数，onUpgrade()。你可能会想
+there's another function in our SQLiteOpenHelper, onUpgrade. You might think,
+
+4
+00:00:15,220 --> 00:00:16,830
+为什么我要在意这个？
+why should I care about those?
+
+5
+00:00:16,830 --> 00:00:21,040
+我还没更新任何东西呢。为了让我们的开发更简单
+I'm not upgrading anything yet. To make our development lives easier we're
+
+6
+00:00:21,040 --> 00:00:24,270
+我们准备在这里实现下标准的onUpgrade()
+going to implement the most standard kind of onUpgrade there is.
+
+7
+00:00:24,270 --> 00:00:29,265
+你看，onUpgrade()只会在你改变数据库版本时候触发
+You see onUpgrade only fires if you change the version of your database.
+
+8
+00:00:29,265 --> 00:00:34,480
+注意，我们之前就把版本传递进了SQliteOpenHelper的基本构造器
+Now remember, we passed that version into the SQliteOpenHelper base constructor,
+
+9
+00:00:34,480 --> 00:00:39,110
+因为我们将数据库用作一个缓存来保存网络数据
+ages ago. Since we are going to be using our database as a cache for web data
+
+10
+00:00:39,110 --> 00:00:44,360
+而不是用户产生数据，所以我们会扔掉这个表。如果我们以后想修改数据库
+and not for user generated content, we'll drop the tables. This is helpful if we
+
+11
+00:00:44,360 --> 00:00:48,500
+这很有用处。如果我们用用户数据
+want to change the database in the future. If we were using user data, we'd do
+
+12
+00:00:48,500 --> 00:00:53,610
+我们不会这么做，而是比如说改变下表，加一个新列之类的。所以，数据库完成了。
+something like use alter table to add new columns. So, now we have a database.
+

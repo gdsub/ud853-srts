@@ -1,0 +1,85 @@
+1
+00:00:00,330 --> 00:00:04,098
+我们之前说到使用在Sunshine应用中使用Intent来启动Activity并且
+We've talked about using intents within Sunshine to start activities and send
+
+2
+00:00:04,098 --> 00:00:07,390
+在应用间发送数据  但如果你要群发信息给
+data between apps. But what if you want to broadcast a message to
+
+3
+00:00:07,390 --> 00:00:11,630
+多个应用呢  举个例子  系统要广播一个消息  说
+many apps? For example, the system will broadcast a message, saying that the
+
+4
+00:00:11,630 --> 00:00:16,180
+设备正在充电或者刚刚重启完  我们的方法是
+device is charging or that it's just finished rebooting. To do that ourselves,
+
+5
+00:00:19,780 --> 00:00:24,350
+使用sendBroadcast()方法来广播一个Intent  然后这些广播
+we use the SendBroadcast method to broadcast an intent. And those broadcasts
+
+6
+00:00:24,350 --> 00:00:26,900
+就会被广播接收器接收到  通常
+are received by broadcast receivers, typically
+
+7
+00:00:26,900 --> 00:00:30,430
+简称为接收器  使用Intent
+referred to as simply, receivers. Using intent
+
+8
+00:00:30,430 --> 00:00:34,010
+过滤器  就像我们之前看到的一样  它们会表明哪些广播是自己
+filters, like the ones we saw earlier, they indicate which broadcast they're
+
+9
+00:00:34,010 --> 00:00:37,960
+感兴趣的  所以如果我们返回到之前信封的比喻
+interested in. So if we return to our envelope metaphor from earlier, in
+
+10
+00:00:41,070 --> 00:00:43,080
+在广播Intent的情况下  你的
+the case of a broadcast intent, your
+
+11
+00:00:43,080 --> 00:00:47,140
+你的信封会被发送给任一
+envelope is basically addressed to any broadcast receiver
+
+12
+00:00:47,140 --> 00:00:49,170
+对此事件感兴趣的广播接收器
+that's interested in knowing that this event has
+
+13
+00:00:49,170 --> 00:00:51,940
+而它正是通过Intent过滤器来实现的
+happened. And it does that using intent filter.
+
+14
+00:00:56,490 --> 00:00:59,670
+所以Intent  也就是广播  会被传送给
+So intents, which are broadcast, are transmitted to every
+
+15
+00:00:59,670 --> 00:01:01,980
+带有特定广播接收器的应用  它们的广播接收器的
+app with a broadcast receiver that has an intent
+
+16
+00:01:01,980 --> 00:01:05,349
+Intent过滤器会告诉系统哪些消息是它感兴趣
+filter telling the system your ideas are intriguing to
+
+17
+00:01:05,349 --> 00:01:08,341
+因而会为终端用户订阅这些消息
+me and I wish to subscribe to end user.
+

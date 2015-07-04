@@ -1,0 +1,215 @@
+1
+00:00:00,160 --> 00:00:02,340
+正如你所看到的那样  接收器本身是很简单的
+As you can see, the receiver itself is pretty
+
+2
+00:00:02,340 --> 00:00:06,564
+就像你在这里看到的  继承BroadcastReceiver这个类
+simple. Extend the BroadcastReceiver class and override the
+
+3
+00:00:06,564 --> 00:00:09,680
+并重写onReceive()方法  接收器是  
+onReceive handle as you can see here. Receivers are
+
+4
+00:00:09,680 --> 00:00:13,520
+为了用来监听广播并在5秒内完成相应操作的轻量级组件
+lightweight components meant to listen for broadcasts, reacts, and complete
+
+5
+00:00:13,520 --> 00:00:16,690
+它通常会简单地启动一个服务
+within five seconds that usually means simply starting a
+
+6
+00:00:16,690 --> 00:00:19,350
+或者发送一个通知  要使你的接收器
+service or sending a notification. To have your receiver
+
+7
+00:00:19,350 --> 00:00:22,470
+开始监听广播  你需要注册它
+start listening for broadcasts, you need to register it
+
+8
+00:00:22,470 --> 00:00:25,260
+你可以像这样在你的manifest文件中进行注册
+either through an entry in your manifest like this or
+
+9
+00:00:25,260 --> 00:00:29,240
+或者像这样在另外一个应用程序组件  比如一个Activity中动态的进行注册
+dynamically within another application component usually an activity,
+
+10
+00:00:29,240 --> 00:00:33,080
+然后你需要定义指定了你想接收的
+like this. Then you define the intent filter that
+
+11
+00:00:33,080 --> 00:00:36,370
+广播事件的Intent过滤器
+specifies the broadcast event you want to receive.
+
+12
+00:00:36,370 --> 00:00:38,570
+你可以在manifest文件的这里定义需要过滤的Intent
+You can do that either here in the manifest
+
+13
+00:00:38,570 --> 00:00:40,430
+或者如果你是在一个应用程序组件  例如一个Activity中
+or if you're registering your receiver with an
+
+14
+00:00:40,430 --> 00:00:43,690
+注册的你的广播接收器  你可以像这样
+application component such as an activity, you can create
+
+15
+00:00:43,690 --> 00:00:46,630
+创建你的新的Intent过滤器  在manifest文件中静态注册
+your new intent filter like this. The biggest difference
+
+16
+00:00:46,630 --> 00:00:50,460
+和在代码中动态注册的广播接收器的最大区别就是它们是何时被激活的
+between manifest and dynamic receivers is when they're triggered.
+
+17
+00:00:50,460 --> 00:00:53,880
+一个通过代码动态注册的接收器会仅仅在应用程序运行的时候
+A programmatically-registered receiver will only receive broadcasts while
+
+18
+00:00:53,880 --> 00:00:57,890
+接收广播的消息  而一个在manifest文件中注册的
+the app is running. While a manifest declared
+
+19
+00:00:57,890 --> 00:01:02,060
+接收器将会特地启动你的应用并去接收
+receiver will start your app specifically to receive
+
+20
+00:01:02,060 --> 00:01:05,069
+特定的广播  举个例子
+your broadcasts. For example, I usually code with
+
+21
+00:01:05,069 --> 00:01:07,610
+我经常在戴着我的降噪耳机的时候Coding
+my noise cancelling headphones on, so a music
+
+22
+00:01:07,610 --> 00:01:10,160
+所以一个这样的音乐应用可能需要注册一个
+app like this might want to register a runtime
+
+23
+00:01:10,160 --> 00:01:12,710
+在应用运行时监听系统发出的
+receiver to listen to the system intent broadcast
+
+24
+00:01:12,710 --> 00:01:15,590
+耳机拔出的广播
+that announces when headphones are unplugged. That will allow
+
+25
+00:01:15,590 --> 00:01:18,790
+这将使应用在你的音频从耳机切换到外放时
+it to automatically pause playback, when your audio routing switches
+
+26
+00:01:18,790 --> 00:01:21,950
+自动停止播放  在这种情况下  我们可以使用
+from headphone to speakers. In this case, we can use
+
+27
+00:01:21,950 --> 00:01:24,750
+一个应用运行时的接收器  因为音乐播放的时候
+a runtime receiver, because the app is guaranteed to be
+
+28
+00:01:24,750 --> 00:01:28,250
+应用肯定是处于运行状态的  另一方面
+running if music is playing. On the other hand, if I'm
+
+29
+00:01:28,250 --> 00:01:30,790
+如果我使用Google云消息从我的服务器上监听新的数据
+using Google Cloud Messaging to listen for new data from
+
+30
+00:01:30,790 --> 00:01:34,730
+我想要在manifest文件中注册一个广播接收器  它能一直
+my server, I want to register a manifest receiver that always listens
+
+31
+00:01:34,730 --> 00:01:37,420
+监听服务器传入的数据  并且在应用程序没有运行
+for incoming tickles from my server and will wake up
+
+32
+00:01:37,420 --> 00:01:40,870
+的时候唤醒应用以执行数据更新的代码
+my app if it's being terminated to trigger the update code,
+
+33
+00:01:40,870 --> 00:01:43,130
+通常是一个同步适配器  这是我们将在后面的第六课
+usually a sync adapter, which is something we will discuss
+
+34
+00:01:43,130 --> 00:01:46,700
+要讨论的内容  你可以监听非常多的系统广播
+later in lesson six. There's a bunch of system broadcasts
+
+35
+00:01:46,700 --> 00:01:48,920
+来帮助你的应用程序应对系统的一些变化
+you can monitor to help your app react to changes
+
+36
+00:01:48,920 --> 00:01:51,880
+你可以在developer.android.com网站上的Intent文档部分
+in the system. You can see the system broadcast actions within
+
+37
+00:01:51,880 --> 00:01:56,515
+查看到系统广播对应的Action  广播接收器的一大用途是
+the intent documentation at developer.android.com. One great use for broadcast
+
+38
+00:01:56,515 --> 00:02:00,030
+监听联网状态以及充电状态的变化
+receivers is to monitor for changes to internet connectivity or
+
+39
+00:02:00,030 --> 00:02:03,230
+想象一下你的应用程序需要上传一部电影
+charging status. Imagine your app has to upload a movie
+
+40
+00:02:03,230 --> 00:02:06,170
+或计算象棋游戏中接下来的10,000步
+or calculate the next 10,000 moves in a game of chess,
+
+41
+00:02:06,170 --> 00:02:09,620
+你如何在手机开始这些操作之前使用一个广播接收器监听
+how might you use a receiver to wait until the device is plugged in
+
+42
+00:02:09,620 --> 00:02:11,810
+手机是否被接上电源充电  它应该是一个
+before starting that process? Should it be
+
+43
+00:02:11,810 --> 00:02:13,870
+manifest静态注册的接收器还是一个在代码中动态注册的接收器
+a manifest receiver or a broadcast receiver?
+

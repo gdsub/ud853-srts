@@ -1,0 +1,170 @@
+﻿1
+00:00:00,440 --> 00:00:02,790
+谢谢Raido  有了这种概念之后  让我们
+Thanks Raido, with that in mind let's add
+
+2
+00:00:02,790 --> 00:00:05,450
+在我们的应用上添加一个刷新菜单按钮
+a Refresh Menu button to our app. For temporary
+
+3
+00:00:05,450 --> 00:00:07,920
+这只是暂时的  否则Raido会和我们生气的
+purposes only though, otherwise Raido would be mad at
+
+4
+00:00:07,920 --> 00:00:11,882
+在Android上  菜单的选项是定义在XML文件里面的
+us. On Android, menu options are defined in XML
+
+5
+00:00:11,882 --> 00:00:14,440
+而且它们可以被Fragment或者Activity使用
+and they can be declared for fragments or
+
+6
+00:00:14,440 --> 00:00:18,390
+当Fragment或者Activity创建的时候  它们会
+activities. When the fragment or activity is created, it
+
+7
+00:00:18,390 --> 00:00:21,790
+将XML文件扩展成应用中真正的菜单选项
+inflates this XML into the actual menu items in
+
+8
+00:00:21,790 --> 00:00:25,440
+你会看到这里有操作按钮  也就是菜单选项
+the app. You'll see that there are Action buttons
+
+9
+00:00:25,440 --> 00:00:28,230
+并且它们显示在ActionBar（控制栏）中
+which are menu items that appear in the Action bar,
+
+10
+00:00:28,230 --> 00:00:31,670
+比如这个搜索菜单项  这个地方是保留给
+such as this Search Menu item. This space is reserved
+
+11
+00:00:31,670 --> 00:00:34,550
+你的应用中最重要的操作的  然后其余不是很重要的菜单项  
+for the most prominent actions in your app. Then anything
+
+12
+00:00:34,550 --> 00:00:37,990
+将会放入更多菜单里  
+else that's less important falls into the overflow menu by
+
+13
+00:00:37,990 --> 00:00:40,790
+通过单击这个三个点的按钮你就能看到它们
+tapping on this button with the three dots. These menu
+
+14
+00:00:40,790 --> 00:00:44,560
+这些菜单项是按照最常用到最不常用的方式来排序的
+items are ordered from most frequently used to least frequently
+
+15
+00:00:44,560 --> 00:00:47,550
+在拥有更多屏幕显示区域的大屏设备上
+used. And on larger devices that have more screen real
+
+16
+00:00:47,550 --> 00:00:50,710
+你可以指定在ActionBar还有足够空间的情况下
+estate, you can specify that some of these menu items can
+
+17
+00:00:50,710 --> 00:00:54,120
+让这些菜单显示在ActionBar上
+actually go into the Action bar if there's room. If
+
+18
+00:00:54,120 --> 00:00:57,160
+如果你回过来看下我们项目的叫做res的
+you go back to our project in the Resources folder
+
+19
+00:00:57,160 --> 00:00:59,660
+资源文件夹  这里有一个菜单文件夹  
+which is called res, there is a Menu folder and
+
+20
+00:00:59,660 --> 00:01:03,990
+在里面有一个main.xml的文件  如果你打开这个文件  
+inside that there's a main.xml file. If you open that up
+
+21
+00:01:03,990 --> 00:01:06,360
+你可以看到菜单的XML布局文档  这其中
+you see the menu layout XML, and that there's a
+
+22
+00:01:06,360 --> 00:01:10,130
+只定义了一个设置菜单选项  它不会在
+single menu option defined for Settings. It will never show up
+
+23
+00:01:10,130 --> 00:01:12,350
+ActionBar里面作为一个操作项来显示  也就是说  
+as an action in the Action bar, meaning that it
+
+24
+00:01:12,350 --> 00:01:15,780
+它会被放入更多菜单里  你可以通过在手机上查看你的应用
+will be in the Overflow menu. You can verify this by
+
+25
+00:01:15,780 --> 00:01:18,880
+来确定这一点  为了定义菜单项的顺序  
+checking the app on your phone. To define the ordering
+
+26
+00:01:18,880 --> 00:01:22,200
+你可以加入多个菜单选项到这个XML文件里面  
+of menu items, you can just add multiple items to this
+
+27
+00:01:22,200 --> 00:01:24,580
+然后它们会按照定义的顺序显示在你的应用里面
+XML file, and then they will show up in that order
+
+28
+00:01:24,580 --> 00:01:27,680
+如果你不喜欢这种顺序  而
+in the app. If you don't like the order though, and
+
+29
+00:01:27,680 --> 00:01:30,460
+你想要明确地设置它们  你可以指定
+you want to explicitly set it, then you can specify
+
+30
+00:01:30,460 --> 00:01:34,030
+orderInCategory属性的值  目前的数值设置的是100
+this orderInCategory value. Right now it's set as 100,
+
+31
+00:01:34,030 --> 00:01:37,460
+所以设置选项就会出现在所有的
+so that the Settings menu will be at the bottom of
+
+32
+00:01:37,460 --> 00:01:40,040
+我们在应用中定义的其他菜单项的最下面
+all the other menu options that we define in our app.
+
+33
+00:01:41,080 --> 00:01:44,250
+唯一应该出现在设置菜单的下面的  
+The only Menu option that should show up below the Settings
+
+34
+00:01:44,250 --> 00:01:47,450
+就是帮助菜单  请点击这个链接来了解更多的细节
+menu is the Help menu. Check out the link for more details.
+

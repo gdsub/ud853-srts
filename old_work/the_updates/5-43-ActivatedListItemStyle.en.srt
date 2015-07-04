@@ -1,0 +1,347 @@
+1
+00:00:00,270 --> 00:00:03,070
+在平板的结构里，当列表项被点击的时候
+In the tablet wire frames,
+when a list item is selected,
+
+2
+00:00:03,070 --> 00:00:05,790
+被激活的状态显示了蓝色背景
+it shows this blue
+activated state background.
+
+3
+00:00:05,790 --> 00:00:08,430
+这可以通过设置列表项的背景为一个
+This can be done by setting
+the background of the list item to be
+
+4
+00:00:08,430 --> 00:00:09,590
+drawable来完成
+a state drawable.
+
+5
+00:00:09,590 --> 00:00:10,900
+我们可以看一下StateListDrawable的文档
+We can look at the documentation for
+
+6
+00:00:10,900 --> 00:00:12,988
+连接在下面
+this StateListDrawable,
+which is linked below.
+
+7
+00:00:12,988 --> 00:00:16,590
+事实上，StateListDrawable允许你根据视图不同的状态
+Essentially, a StateListDrawable allows
+you to specify different drawables
+
+8
+00:00:16,590 --> 00:00:18,740
+来指定不同的drawable
+based on the state of the view.
+
+9
+00:00:18,740 --> 00:00:21,120
+我们提供了一些代码
+We provide you a code for
+the StateListDrawable.
+
+10
+00:00:21,120 --> 00:00:24,520
+顺便看一下。在 res 目录下创建一个drawable文件夹
+Drop it in by creating a drawable
+folder under the res directory.
+
+11
+00:00:24,520 --> 00:00:28,580
+当设置为列表项的背景时，我们看到背景默认是透明的
+When set as the background of a list
+item, we see that the background is just
+
+12
+00:00:28,580 --> 00:00:32,330
+就像这里的today_layout
+transparent by default such
+as this today lay out here.
+
+13
+00:00:32,330 --> 00:00:34,970
+当视图被按下，我们看到一个灰色的背景
+When the view is pressed,
+then we see a grey background.
+
+14
+00:00:34,970 --> 00:00:38,640
+当视图被激活，我们看到的是蓝色
+When the view is activated,
+then we see this blue color.
+
+15
+00:00:38,640 --> 00:00:42,940
+这也意味着被选中的列表项在两个窗格模式下
+This is also indicating that it's
+the selected item in the two pane mode.
+
+16
+00:00:42,940 --> 00:00:45,970
+对于5.0及以上的api我们还有第二个
+We also have a second version
+of the touch_selector file for
+
+17
+00:00:45,970 --> 00:00:48,000
+版本的touch_selector文件
+Lollipop devices and above.
+
+18
+00:00:48,000 --> 00:00:50,630
+它保存在drawable-v21文件夹下
+This is saved in
+the drawable-v21 folder.
+
+19
+00:00:50,630 --> 00:00:52,950
+把api设置为21及以上
+Set on platforms API level 21 and
+
+20
+00:00:52,950 --> 00:00:56,490
+它将使用这个版本的touch_selector
+above, it will use this
+version of the touch_selector.
+
+21
+00:00:56,490 --> 00:01:00,050
+在旧设备上，它会向下兼容的使用
+On older devices it will fall back
+to the touch_selector in the base
+
+22
+00:01:00,050 --> 00:01:01,300
+基本drawable文件夹
+drawable folder.
+
+23
+00:01:01,300 --> 00:01:05,250
+material design 的一个主要原则就是易响应的交互
+One of the main principles of material
+design is responsive interaction.
+
+24
+00:01:05,250 --> 00:01:08,950
+实现它的一个途径就是当用户触摸了设备的时候
+One way to accomplish this is that
+when a user touches a device,
+
+25
+00:01:08,950 --> 00:01:10,770
+设备可以响应这个交互
+the device will acknowledge
+the interaction, and
+
+26
+00:01:10,770 --> 00:01:13,690
+一个波纹从触摸点开始向外扩散
+a ripple will radiate out
+from the touch point.
+
+27
+00:01:13,690 --> 00:01:15,880
+ripple drawable 可以做到这些
+This is done with a ripple drawable.
+
+28
+00:01:15,880 --> 00:01:19,480
+你要在drawable 的xml文件里添加ripple元素
+You can add a ripple element in
+your state list drawable xml.
+
+29
+00:01:19,480 --> 00:01:25,160
+对于v21的touch selector，除了按下的状态，其余都是一样的
+For the v21 touch selector, it's the
+same except that for the pressed state,
+
+30
+00:01:25,160 --> 00:01:28,890
+我们有一个灰色触摸回馈的ripple drawable
+we have a ripple drawable with
+a grey color for touch feedback.
+
+31
+00:01:28,890 --> 00:01:31,070
+在5.0设备上，你会看到波纹
+And on a Lollypop device,
+you can see the ripple.
+
+32
+00:01:31,070 --> 00:01:34,350
+在list item layout里，我们设置背景为这个touch_selector
+In the list item layout, we set the
+background to be this touch_selector.
+
+33
+00:01:34,350 --> 00:01:37,530
+同样也为list_item_forecast_today布局设置好
+We do the same for
+the list_item_forecast_today layout.
+
+34
+00:01:37,530 --> 00:01:41,460
+回到touch_selector文件中，我希望在这标记一些颜色
+Back in the touch_selector file, I want
+to note that there's some colors here.
+
+35
+00:01:41,460 --> 00:01:45,800
+@android color 是系统框架定义好的颜色
+The @android color notation is for
+a framework defined color.
+
+36
+00:01:45,800 --> 00:01:50,250
+其它的颜色是我们定义在 colors.xml文件里的
+The other colors are ones that we
+defined in the colors.xml file.
+
+37
+00:01:50,250 --> 00:01:53,740
+这个文件在应用里的Values文件夹下
+This file is located in
+the Values folder of your app.
+
+38
+00:01:53,740 --> 00:01:56,570
+在重要的位置存储一些颜色值是必要的
+It's useful to store colors
+in a central location
+
+39
+00:01:56,570 --> 00:01:59,590
+特别是你需要在应用里多次引用它的时候
+if you need a reference colors
+multiple times in your app.
+
+40
+00:01:59,590 --> 00:02:00,410
+As a hint.
+
+41
+00:02:00,410 --> 00:02:04,090
+为了使列表项显示被激活的状态，你可以看一下
+to make a list item show its activated
+state, you can look at the documentation
+
+42
+00:02:04,090 --> 00:02:07,400
+listView的属性里的choiceMode的文档
+for the XML attribute choiceMode for
+the ListView.
+
+43
+00:02:07,400 --> 00:02:09,949
+当你找到正确的属性，你就会意识到你对于不同的窗格模式，
+Once you find the right attribute,
+you'll realize that you want different
+
+44
+00:02:09,949 --> 00:02:11,880
+需要不一样的行为
+behavior for
+one pane versus two pane mode.
+
+45
+00:02:11,880 --> 00:02:15,760
+你可以在java代码里更改这些行为
+While you could change the behaviour
+programatically in the Java code,
+
+46
+00:02:15,760 --> 00:02:19,748
+我们更倾向于你只使用xml资源的style来实现它
+we'd like you to do it purely via
+the resource XML files using a style.
+
+47
+00:02:19,748 --> 00:02:22,960
+读一下这个文档，看看你可以定义哪些style
+Read this doc to learn about how
+styles can be defined in XML.
+
+48
+00:02:22,960 --> 00:02:26,320
+以及使用你之前学过的哪些方法
+And use what you learned earlier about
+defining alternative resources for
+
+49
+00:02:26,320 --> 00:02:27,850
+为不用尺寸的设备定义可选资源
+different size devices.
+
+50
+00:02:27,850 --> 00:02:31,090
+总的来说，style是一种你可以把视图的属性集合在一起的
+In general, styles are a way that
+you can group together attributes
+
+51
+00:02:31,090 --> 00:02:31,960
+方式
+for a view.
+
+52
+00:02:31,960 --> 00:02:36,072
+比如，这些text的属性被style的codeFont替换掉了
+For example, these text attributes
+are replaced by this style CodeFont.
+
+53
+00:02:36,072 --> 00:02:39,540
+CodeFont是定义在styles.xml文件里的style
+The CodeFont style is defined
+in the styles.xml file
+
+54
+00:02:39,540 --> 00:02:41,580
+它在Vaules文件夹下
+located in the Values folder.
+
+55
+00:02:41,580 --> 00:02:45,240
+你也能让style继承其它的style,只要指定一个父style就可以
+You can also have styles inherit other
+styles by specifying the parent.
+
+56
+00:02:45,240 --> 00:02:48,740
+你可以查看这个页面上其它的例子
+There are a couple of other examples
+you can check out on this page.
+
+57
+00:02:48,740 --> 00:02:50,880
+这才是当你完成这个app时它应有的样子
+This is what the app should
+look like when you're done.
+
+58
+00:02:50,880 --> 00:02:53,940
+在单窗格模式里，我们看不到激活的状态
+In one pane mode,
+we don't see the activated state.
+
+59
+00:02:53,940 --> 00:02:56,570
+但是仍然有规则的按下状态，
+But there's still the regular
+press state with the ripple and
+
+60
+00:02:56,570 --> 00:02:57,250
+波纹扩散然后消失
+then it goes away
+

@@ -1,0 +1,20 @@
+﻿1
+00:00:00,570 --> 00:00:05,130
+修改intent的调用来打开我们的详细信息界面，
+Fix the intent call, to lauch our detail activity, by pulling
+
+2
+00:00:05,130 --> 00:00:09,830
+从光标输入获取数据，然后使用格式化辅助函数来
+data from the cursor and using our formatting utility functions to
+
+3
+00:00:09,830 --> 00:00:15,180
+创建EXTRA_TEXT字符串。我们可以使用这个adapter来获取光标输入信息。
+build our EXTRA_TEXT string. We can use the adapter to get
+
+4
+00:00:15,180 --> 00:00:20,430
+这个adapter实例会被传递给OnItemClickListener
+our cursor. This adapter is passed into our On Item click listener.
+

@@ -1,0 +1,105 @@
+1
+00:00:00,650 --> 00:00:02,960
+创建自定义视图的最后一步是增加交互性
+The final step in your custom view creation
+
+2
+00:00:02,960 --> 00:00:05,860
+你可以监听用户输入事件，包括
+is adding interactivity. You can listen for user
+
+3
+00:00:05,860 --> 00:00:08,790
+按键，轨迹球的移动，
+input events including key presses, trackball movement, and
+
+4
+00:00:08,790 --> 00:00:12,570
+还有更重要的，屏幕触摸事件
+most importantly, screen touch events, all by overriding the
+
+5
+00:00:12,570 --> 00:00:15,950
+这些都是通过重载相应的事件处理程序实现的，Android支持多达
+corresponding event handlers. Android supports tracking of up
+
+6
+00:00:15,950 --> 00:00:18,570
+11个接触点的追踪，我们
+to 11 individual contact points in what we
+
+7
+00:00:18,570 --> 00:00:21,710
+称之为“爵士手”模式，它可以
+like to call, jazz hands mode which enables
+
+8
+00:00:21,710 --> 00:00:25,550
+使你完成复杂的多指互动模式
+you to complete complex and multi-finger interaction models. Now,
+
+9
+00:00:25,550 --> 00:00:28,400
+而对于风速计来说，现在这里没有互动的需求
+there's really no interaction required for a wind gauge, but
+
+10
+00:00:28,400 --> 00:00:31,130
+但是你可以通过查阅那些描述
+you can find out more about handling input events by checking
+
+11
+00:00:31,130 --> 00:00:34,170
+如何创建应用的互动View的文档
+the motion event docs or the developer guide describing how to
+
+12
+00:00:34,170 --> 00:00:37,890
+或者开发者指南得知更多有关处理输入事件的知识，见下方链接
+create your own, fully interactive custom views, both from the [UNKNOWN]
+
+13
+00:00:37,890 --> 00:00:41,110
+现在，不要让这个新发现的力量冲昏了头脑
+below. Now, be careful not to let this new found power
+
+14
+00:00:41,110 --> 00:00:44,220
+要知道你做的View用起来很烂的话
+go to your head. By definition, your users will have never
+
+15
+00:00:44,220 --> 00:00:47,900
+用户可能永远不会去用它
+encountered your brand spanking new control. So learning how to use
+
+16
+00:00:47,900 --> 00:00:50,550
+这也会降低用户对你的App的评价和使用欲望
+it is going to add friction to the use of your app.
+
+17
+00:00:50,550 --> 00:00:53,650
+最起码，它应该和系统中的其他部分表现一致
+At the very least, it should behave consistently with the rest of the system
+
+18
+00:00:53,650 --> 00:00:55,310
+并且你应该避免自己创建系统控件
+and you should avoid creating your own
+
+19
+00:00:55,310 --> 00:00:58,680
+如果它看起来像一个按钮
+versions of system controls. If it looks kind of
+
+20
+00:00:58,680 --> 00:01:03,140
+工作起来也像一个按钮，那你或许应该就使用一个按钮
+like a button and works kind of like a button, you should probably just go ahead
+
+21
+00:01:03,140 --> 00:01:07,620
+但是悲剧的是现在很多App都没遵循这条规则
+and use a button, but I think this non sequitur has gone on long enough.
+

@@ -1,0 +1,90 @@
+1
+00:00:00,270 --> 00:00:01,900
+这个App，我们使用了大饼干模型
+In this app, we see an example of a
+
+2
+00:00:01,900 --> 00:00:05,630
+将网络传输合并到一块
+defragmented network traffic that uses the big cookie model. All
+
+3
+00:00:05,630 --> 00:00:08,490
+所有的高频率的传输被捆绑到一起
+the repeating transfers have been bundled together, and all
+
+4
+00:00:08,490 --> 00:00:10,150
+间歇性的传输
+the intermittent transfers have been
+
+5
+00:00:10,150 --> 00:00:12,200
+都被主动预读取所取代
+largely replaced with aggressive prefetching.
+
+6
+00:00:13,220 --> 00:00:16,440
+很显然，你不能完全地预测用户可能需要的信息
+Obviously, you usually can't entirely predict what data users
+
+7
+00:00:16,440 --> 00:00:19,840
+并且也不能忽略客户端或者服务器端
+might need, nor can you ignore either client or service
+
+8
+00:00:19,840 --> 00:00:22,380
+需要被同步的变化
+site changes the need to be synchronized. You can
+
+9
+00:00:22,380 --> 00:00:25,270
+你可以通过一系列主动的预读操作
+aim to minimize the number of radio state transitions through
+
+10
+00:00:25,270 --> 00:00:28,140
+和对非实时传输进行排序
+a combination of aggressive prefetching in addition to batching
+
+11
+00:00:28,140 --> 00:00:31,300
+然后把他们和用户在初始化时所需的传输
+and queueing any transfers that aren't time critical and
+
+12
+00:00:31,300 --> 00:00:35,080
+捆绑到一起
+bundling these with user initiated time critical transfers, or
+
+13
+00:00:35,080 --> 00:00:38,050
+如果我们把大饼干模型所造成的影响
+those initiated from the server. If we compare the impact
+
+14
+00:00:38,050 --> 00:00:40,320
+和之前的小饼干模型
+on the radio of the big cookie model compared
+
+15
+00:00:40,320 --> 00:00:43,150
+进行比较的话，可以发现
+to the previous on demand approach, you can see it's
+
+16
+00:00:43,150 --> 00:00:46,500
+现在的空闲状态几乎是占三分之二时间
+now idle nearly two thirds of the time. Even
+
+17
+00:00:46,500 --> 00:00:50,420
+甚至无线电处于活跃状态的百分比都显著减少
+the active radio percentage has significantly dropped, thanks to improved
+
+18
+00:00:50,420 --> 00:00:54,250
+由于提高了下载效率而能够在一次操作中传输更多数据
+download efficiency as a result of transmitting more data in one shot
+

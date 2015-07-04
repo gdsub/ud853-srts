@@ -1,0 +1,80 @@
+1
+00:00:00,500 --> 00:00:03,360
+我们合成的URL和从服务器获取的JSON字符串
+The URL that we built looks good and the JSON
+
+2
+00:00:03,360 --> 00:00:07,010
+看上去都不错。不过这字符串
+string from the server also looks good. However, it still is
+
+3
+00:00:07,010 --> 00:00:09,840
+还是挺长的。让我们仔细看看
+one long string. Let's look at it more carefully to see
+
+4
+00:00:09,840 --> 00:00:12,770
+我们应该从中提取什么数据
+what data we should extract from it. In order to make
+
+5
+00:00:12,770 --> 00:00:15,500
+为了更直观地观察从服务器取回的字符串
+sense of the string that comes back from the server, we
+
+6
+00:00:15,500 --> 00:00:20,090
+我们可以用JSON格式化器或者说是美化器来处理下
+can put it through a JSON formatter or a JSON prettifier.
+
+7
+00:00:20,090 --> 00:00:22,420
+如果你用Google搜索下，你可以找到
+If you Google for those terms, you'll be able to find
+
+8
+00:00:22,420 --> 00:00:25,530
+一些有用的工具，例如这个。我们把查询结果
+a helpful tool such as this one. Here, we pasted the
+
+9
+00:00:25,530 --> 00:00:28,550
+粘贴到这里。然后它输出一个
+result of the web query. Then, it formatted the output for
+
+10
+00:00:28,550 --> 00:00:32,549
+格式化过的JSON，展示了数据的层次结构。
+us showing us the hierarchy of these elements. Now based on
+
+11
+00:00:32,549 --> 00:00:35,200
+现在，基于之前给出的Sunshine的框架图
+the wireframes that you saw for the Sunshine app, can you
+
+12
+00:00:35,200 --> 00:00:38,780
+你能告诉我们这里哪些叶节点是我们所想要的？
+tell us which of these leaf nodes we care about extracting?
+
+13
+00:00:38,780 --> 00:00:41,660
+虽然我们的数据遍历需要经过父节点
+Even though we will have to traverse through parent nodes, for
+
+14
+00:00:41,660 --> 00:00:43,960
+但是为了下一屏幕的小测验
+the purposes of the quiz on the next screen, we're just
+
+15
+00:00:43,960 --> 00:00:47,870
+我们只关注这些叶节点。在下面选择你认为
+looking at the leaf nodes. Make your selections below on which
+
+16
+00:00:47,870 --> 00:00:51,280
+我们展示天气预报列表所需要的属性
+attributes we'll need in order to display the list of forecasts
+

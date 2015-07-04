@@ -1,0 +1,552 @@
+﻿1
+00:00:00,130 --> 00:00:01,100
+在SunShine里
+In Sunshine,
+
+2
+00:00:01,100 --> 00:00:05,330
+我们将使用ContentProvider来帮助我们高效地从互联网同步数据
+we'll using content providers to help us
+efficiently sync data from the Internet.
+
+3
+00:00:05,330 --> 00:00:07,890
+再加上Android框架里的一些辅助功能
+Combined with utilities
+in the Android framework.
+
+4
+00:00:07,890 --> 00:00:12,410
+它还简化了与用户界面交流数据库里的内容
+It also simplifies getting database
+content to and from our user interface.
+
+5
+00:00:12,410 --> 00:00:16,740
+我们通过扩展一个ContentProvider类来实现一个新的类
+We implement a content provider,
+by extending the content provider class.
+
+6
+00:00:16,740 --> 00:00:19,890
+在SunShine里，我们叫这个类WeatherProvider
+In Sunshine,
+we'll call this class WeatherProvider.
+
+7
+00:00:19,890 --> 00:00:23,790
+我们将使用这个WeatherProvider来读写我们刚创建的数据库
+We'll use the weatherprovider to read
+and write the database we just created.
+
+8
+00:00:23,790 --> 00:00:27,540
+你大概已经急于开始创建这个WeatherProvider了
+You're probably excited to get started
+on building our weather provider, but
+
+9
+00:00:27,540 --> 00:00:30,470
+但是如果你仍不确定什么是ContentProvider
+if you're still unsure about
+what content providers are and
+
+10
+00:00:30,470 --> 00:00:34,550
+它们怎么工作的，我们做了一个非常棒的演练来演示
+how they work, we've built a great
+exercise that demonstrates how to take
+
+11
+00:00:34,550 --> 00:00:37,220
+如何利用这个趠級棒的东西
+advantage of all this
+gnarlishious goodness.
+
+12
+00:00:37,220 --> 00:00:38,370
+为什么说趠級棒呢？
+Why gnarlishious?
+
+13
+00:00:38,370 --> 00:00:42,530
+因为这个演练充分利用了UserDictionary这个Provider
+Because, this exercise leverages
+the user dictionary provider.
+
+14
+00:00:42,530 --> 00:00:46,730
+所以如果你曾想让你自己的奇怪の詞匯
+So, if you ever wanted to make your
+radicaloutius vocabulariousness
+
+15
+00:00:46,730 --> 00:00:50,410
+被你的手機倗叐所理解当学习更多关于内容Provider的
+understood by your mobile friendpanion
+while learning more about content
+
+16
+00:00:50,410 --> 00:00:55,260
+看看下面的指示，有一个额外奖励的课程链接
+providers, check the instructor notes
+below, for a link to the bonus lesson.
+
+17
+00:00:55,260 --> 00:00:58,100
+创建一个内容Provider有几个步骤
+Building a content provider,
+involves several steps.
+
+18
+00:00:58,100 --> 00:01:01,440
+确定你的程序需要支持的URI
+Determining the URIs your
+application will need to support.
+
+19
+00:01:01,440 --> 00:01:04,543
+更新这个Contract使之包括这些URI
+Updating the contract
+to include these URIs,
+
+20
+00:01:04,543 --> 00:01:08,599
+填写一个URIMatcher，它支持所有这些URI
+filling out a URIMatcher that
+supports each of these URIs and
+
+21
+00:01:08,599 --> 00:01:12,907
+最后实现这六个需要的Content-Provider函数
+implementing the six required
+content-provider functions.
+
+22
+00:01:12,907 --> 00:01:18,980
+好了，现在的任务是确定URI。但是到底什么是URI？
+Okay, the task is determining URIs,
+but, what's a URI anyhow?
+
+23
+00:01:18,980 --> 00:01:22,260
+一个内容Provider允许我们把数据和我们的View
+A content provider allows us to think
+of the data associated with our
+
+24
+00:01:22,260 --> 00:01:26,390
+联系起来通过统一资源标识符，也叫做URI。
+views in terms of universal
+resource identifiers or URIs.
+
+25
+00:01:26,390 --> 00:01:29,180
+URI的作用和它的名字表示的一样
+URIs do exactly what their name implies.
+
+26
+00:01:29,180 --> 00:01:33,140
+它们标识一个资源。我们这里的情况是数据库里的一行数据
+They identify a resource, in our
+case a row, or rows, in a database.
+
+27
+00:01:34,330 --> 00:01:37,710
+你们几乎完全熟悉URI这个概念
+You're almost certainly familiar
+with the concept of a URI.
+
+28
+00:01:37,710 --> 00:01:42,450
+因为用作所有网页地址的URL实际上是URI的一种
+Since the URL used for every web
+address, is actually a type of URI.
+
+29
+00:01:42,450 --> 00:01:46,530
+网页这种情况，URI是被用来标识一个网页内容
+In the case of the web,
+it's a URI used to identify web content,
+
+30
+00:01:46,530 --> 00:01:49,880
+通过一个HTTP或者HTTPS格式
+with an HTTP or HTTPS scheme.
+
+31
+00:01:49,880 --> 00:01:56,540
+在这个例子里，SunShine用URI来询问94043这个地点的天气信息
+In this example, sunshine is using a URI
+to query the weather for 94043 location.
+
+32
+00:01:56,540 --> 00:01:59,090
+内容Provider返回一个Cursor
+Our content provider returns a cursor,
+
+33
+00:01:59,090 --> 00:02:02,730
+它包含这个URI所指的一行数据库里的数据
+containing the database rows
+that correspond to the URI.
+
+34
+00:02:02,730 --> 00:02:05,460
+通过改变这个URI询问的值
+By changing the query value of the URI,
+
+35
+00:02:05,460 --> 00:02:09,000
+我们能让SunShine显示这个国家不同地方的天气
+we can have Sunshine display weather
+from different parts of the country.
+
+36
+00:02:09,000 --> 00:02:12,280
+每一个URI能包含这个Content格式
+Each URI can contain the content scheme.
+
+37
+00:02:12,280 --> 00:02:15,940
+格式是URI的第一部分，在冒号前面
+A scheme is the first part of a URI,
+that precedes the colon, and
+
+38
+00:02:15,940 --> 00:02:19,170
+它指明这个URI将使用的协议
+it identifies the protocol
+that the URI will be using.
+
+39
+00:02:19,170 --> 00:02:23,600
+你们常看到像HTTP，FTP这样的格式在URI里
+You are used to seeing schemes
+such as HTTP and FTP in URIs.
+
+40
+00:02:23,600 --> 00:02:27,270
+“Content:”表示这个URI指向一个内容Provider
+Content colon implies that the URI
+refers to a content provider.
+
+41
+00:02:28,860 --> 00:02:32,920
+中间这一段，是一个唯一的字符串用来定位你的内容Provider
+A content authority, which is a unique
+string used to locate your content
+
+42
+00:02:32,920 --> 00:02:37,590
+它应该几乎总是这个程序的包的名字
+provider and it should almost always
+be the package name of the application.
+
+43
+00:02:37,590 --> 00:02:42,720
+位置，通常指向程序里数据库的一个表
+A location, which typically points to
+a database table within the application.
+
+44
+00:02:42,720 --> 00:02:47,760
+最后是可选的Query，它既可以是URI路径的一部分，
+And optional query, this query can
+either be part of the URI path or
+
+45
+00:02:47,760 --> 00:02:51,850
+它也可以是传统URI加问号的形式
+it can take the form of a traditional
+URI query following a question mark.
+
+46
+00:02:51,850 --> 00:02:55,230
+根据目前情况，一个URI是数据的主要部分
+As it turns out,
+a URI is the primary piece of data,
+
+47
+00:02:55,230 --> 00:02:59,580
+它被传递进那些Intent。Ray已经非常好地描述过了。
+that is passed in these intents that
+Ray To so gloriously described.
+
+48
+00:02:59,580 --> 00:03:03,080
+在SunShine里，我们将充分利用这来打开详细信息界面
+In Sunshine, we'll leverage
+this to start the detail view,
+
+49
+00:03:03,080 --> 00:03:07,075
+伴随一个URI指向特定一天的天气信息
+with a URI that points to the weather,
+on a specific day.
+
+50
+00:03:07,075 --> 00:03:10,515
+详细信息界面，用这个URI来询问WeatherProvider
+The detail view, uses this URI
+to query weather provider and
+
+51
+00:03:10,515 --> 00:03:12,185
+并且获得正确的天气数据来显示
+get the right weather data to display.
+
+52
+00:03:12,185 --> 00:03:15,495
+另外，这些ContentProvider URI也被用来
+Another thing that these content
+provider URIs, is used for
+
+53
+00:03:15,495 --> 00:03:18,822
+通知用户界面某个正显示
+in android is to notify the user
+interface that a piece of the data it is
+
+54
+00:03:18,822 --> 00:03:19,852
+的数据发送了改变
+displaying has changed.
+
+55
+00:03:19,852 --> 00:03:24,132
+这个代码用到了Android里一个叫ContentObserver的东西
+The code registers an Android
+construct called a content observer,
+
+56
+00:03:24,132 --> 00:03:28,052
+来针对那个正在被显示的URI。
+during our initial query,
+against the URI that is being displayed.
+
+57
+00:03:28,052 --> 00:03:31,642
+当运行一个数据库更新程序时，通常是在另一个线程上。
+When running a database update routine,
+likely on another thread.
+
+58
+00:03:31,642 --> 00:03:34,772
+那个程序会告诉Android这个和这个URI相联接
+That routine will tell Android that
+the data associated with the URI
+
+59
+00:03:34,772 --> 00:03:36,032
+的数据改变了
+has changed.
+
+60
+00:03:36,032 --> 00:03:39,282
+最终，这个URI应该重新读取数据库
+And ultimately, that the URI
+should requery the database, and
+
+61
+00:03:39,282 --> 00:03:40,742
+并且刷新显示内容
+refresh the display.
+
+62
+00:03:40,742 --> 00:03:44,100
+这会引起界面刷新并且显示最新的数据
+This will cause the display to refresh,
+and show the latest data.
+
+63
+00:03:44,100 --> 00:03:47,480
+尽管你能看到这里，URI还没有改变
+Even though as you can see here,
+the URI hasn't changed.
+
+64
+00:03:47,480 --> 00:03:49,990
+内容Provider能提供各种排序的数据
+Content providers,
+can return all sorts of data.
+
+65
+00:03:49,990 --> 00:03:53,920
+但是Abstract的函数要么返回一个Cursor包含一个列表的物品
+But the abstract functions return either
+a cursor containing a list of items or
+
+66
+00:03:53,920 --> 00:03:55,380
+或一个单独的物品
+a single item.
+
+67
+00:03:55,380 --> 00:03:58,430
+这些URIs怎么构建取决于不同的程序
+How these URIs are structured
+is up to each application.
+
+68
+00:03:58,430 --> 00:04:02,290
+但是Android也能帮助了把一个ID扩展成一个URI
+But Android provides support, for
+appending an ID to the URI path,
+
+69
+00:04:02,290 --> 00:04:05,560
+来指明程序想要的一个特定数据
+to indicate that the application is
+interested in a specific record,
+
+70
+00:04:05,560 --> 00:04:07,320
+而不是一个范围数据
+rather than a range of records.
+
+71
+00:04:07,320 --> 00:04:10,000
+在Sunshine里，特定的日期时间
+In Sunshine, the value for
+a specific date and time,
+
+72
+00:04:10,000 --> 00:04:13,550
+被用来查询一个指定地址的天气
+is appended to the query for
+weather at a specific location.
+
+73
+00:04:13,550 --> 00:04:16,470
+这就需要返回一个指定的天气数据
+And that causes a single
+weather record to be returned.
+
+74
+00:04:16,470 --> 00:04:18,870 
+所以，定义URIs
+So, defining URIs.
+
+75
+00:04:18,870 --> 00:04:19,740
+来让我们的工作变得简单吧
+To make it easy for
+
+76
+00:04:19,740 --> 00:04:23,360
+我已经定义了这些我们将要支持的数据URIs
+us, I've defined these data
+URIs that we'll be supporting.
+
+77
+00:04:23,360 --> 00:04:24,530
+有一些URIs
+Some of these URIs,
+
+78
+00:04:24,530 --> 00:04:29,060
+存在是因为某个特定的数据需要在屏幕上被显示出来
+exist because the UI has a view that
+needs to expose that particular data.
+
+79
+00:04:29,060 --> 00:04:30,980
+例如被用来显示天气预报主菜单
+Such as weather with location,
+
+80
+00:04:30,980 --> 00:04:34,380
+的天气和地址
+which will be used to display
+the main list of forecasts.
+
+81
+00:04:34,380 --> 00:04:37,410
+当然还有用来显示详细天气信息的
+And of course,
+weather with location and date.
+
+82
+00:04:37,410 --> 00:04:40,730
+具体地址和时间的天气
+Which would be used to display
+the detailed forecast information.
+
+83
+00:04:40,730 --> 00:04:45,030
+其他的URIs主要被用来写入数据库，插入、更新
+Others, are used primarily for writing
+the database, inserts, updates and
+
+84
+00:04:45,030 --> 00:04:46,190
+和删除
+deletes.
+
+85
+00:04:46,190 --> 00:04:49,880
+这些基础的URIs对于测试也是有帮助的
+Having these base URIs,
+is also useful for testing.
+
+86
+00:04:49,880 --> 00:04:53,170
+现在是时候回到我们的WeatherContract了
+Now it's time to go back
+to our weather contract.
+
+87
+00:04:53,170 --> 00:04:56,160
+我们之前描述到什么是WeatherContract的时候
+When we first described
+what a weather contract is,
+
+88
+00:04:56,160 --> 00:05:00,540
+我们说过那是一个数据模型，储存和界面之前的一个协议
+we said that it is an agreement between
+the data models, storage and views.
+
+89
+00:05:00,540 --> 00:05:03,620
+Presentation描述那些信息时如何被访问的
+Presentation describing how
+information is accessed.
+
+90
+00:05:03,620 --> 00:05:06,940
+原来，除了通过数据库的列名称，
+It turns out,
+that in addition to the column names for
+
+91
+00:05:06,940 --> 00:05:11,270
+这些Contract也是可以被用来定义URIs的
+our database, the contract is also
+a great place to define the URIs,
+
+92
+00:05:11,270 --> 00:05:14,100
+我们的程序会用它们来访问数据
+that our application will be
+using to access its data.
+
+93
+00:05:14,100 --> 00:05:17,050
+下面，我们会解释你需要怎么构建你的WeatherContract
+Next, we'll explain what you need
+to add to your weather contract.
+
+94
+00:05:17,050 --> 00:05:19,890
+当你完全添加这段代码进你的程序后，
+When you've completed adding
+this code to your project,
+
+95
+00:05:19,890 --> 00:05:21,580
+我会来解释你做的是什么。
+I'll explain a bit
+about what you've done
+

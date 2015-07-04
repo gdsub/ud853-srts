@@ -1,0 +1,170 @@
+﻿1
+00:00:00,350 --> 00:00:02,410
+让后台事务有效率的进行，我们有很多
+There's a lot to learn with making background
+
+2
+00:00:02,410 --> 00:00:05,610
+东西需要学习。但是好消息是Android
+transactions efficient. But the good news is that Android
+
+3
+00:00:05,610 --> 00:00:08,070
+为我们提供了同步管理框架，它使用了
+gives you the Sync Manager framework that implements
+
+4
+00:00:08,070 --> 00:00:11,190
+很多优化的设计方法。你通过实现SyncAdapter
+many of these best practices. You utilize that framework
+
+5
+00:00:11,190 --> 00:00:14,480
+就能使用这个框架。这个框架最早
+by implementing a sync adapter. The framework, originally
+
+6
+00:00:14,480 --> 00:00:18,235
+在Android 2.0 Eclair或者Android API第五级中被引入
+introduced in Android 2.0 Eclair or Android API level
+
+7
+00:00:18,235 --> 00:00:21,880
+它允许Android程序使用和Google APP所使用的一样
+5, allows Android applications to leverage the same
+
+8
+00:00:21,880 --> 00:00:25,610
+的基础框架来进行高效的同步
+basic framework that Google apps use for efficient synchronization.
+
+9
+00:00:25,610 --> 00:00:27,990
+最后，它是一个把设备所有交换数据
+Ultimately, it's a centralized place to put all
+
+10
+00:00:27,990 --> 00:00:31,060
+集中处理的地方
+of the device data transfers in one place.
+
+11
+00:00:31,060 --> 00:00:33,310
+这样所有的同步任务都能被系统智能地计划
+So that they all be scheduled intelligently by
+
+12
+00:00:33,310 --> 00:00:38,460
+换句话说，这是一块大饼干
+the OS. In other words, that's one big cookie.
+
+13
+00:00:38,460 --> 00:00:42,250
+Android Sync Manager使用SyncAdapter来处理同步请求
+Android Sync Manager handles synchronization requests using sync
+
+14
+00:00:42,250 --> 00:00:45,100
+Sync Manager尽可能的把那些请求进行分批
+adapters. The Sync Manager batches and time shifts
+
+15
+00:00:45,100 --> 00:00:47,480
+和分时处理来是你的数据传输
+these requests when possible to allow your data
+
+16
+00:00:47,480 --> 00:00:50,770
+以此把当前APP和其他APP的数据传输一起被合理地计划
+transfers to be scheduled with transfers from other apps,
+
+17
+00:00:50,770 --> 00:00:52,930
+最终目的是减少
+all working towards the goal of reducing the
+
+18
+00:00:52,930 --> 00:00:55,040
+系统打开和关闭网络连接的次数
+number of times the system has to switch on
+
+19
+00:00:55,040 --> 00:00:58,100
+如果你的设备只有较少的内存空间
+the radio. If your device has less memory,
+
+20
+00:00:58,100 --> 00:01:01,890
+它会安排较少的同时进行的同步。
+it will schedule fewer simultaneous synchs. The Synch Manager
+
+21
+00:01:01,890 --> 00:01:03,950
+Sync Manager也会在初始化数据传输前检查
+also takes care of things like checking for
+
+22
+00:01:03,950 --> 00:01:07,980
+网络连接并在连接中断时尝试
+network connectivity before initiating transfers and retrying downloads when
+
+23
+00:01:07,980 --> 00:01:12,520
+重新连接。这个同步框架和内容提供方合作
+connectivity is dropped. The synchronization framework works with content
+
+24
+00:01:12,520 --> 00:01:16,020
+提供双向同步。并且能利用Android的账户管理
+providers for two way synchronization and leverages the Android
+
+25
+00:01:16,020 --> 00:01:18,500
+来提供与账户相关的同步服务
+account manager to provide synchronization services that are
+
+26
+00:01:18,500 --> 00:01:21,290
+这两件事我们的程序都不需要做
+tied to accounts. Our application will do neither
+
+27
+00:01:21,290 --> 00:01:23,110
+但是我们还是必须
+of these things, but we'll still have to
+
+28
+00:01:23,110 --> 00:01:25,710
+接触一些和这些特性相关的复杂内容
+deal with some of the complexity of these features.
+
+29
+00:01:25,710 --> 00:01:29,170
+一开始这会让SyncAdapter令人望而却步
+This can make SyncAdapter seem daunting at first.
+
+30
+00:01:29,170 --> 00:01:32,680
+SyncManager做了什么来帮助你从
+What does the SyncManager do to help you fetch
+
+31
+00:01:32,680 --> 00:01:36,480
+网络提取数据？它会把你的网络任务
+data from the network? Does it schedule your
+
+32
+00:01:36,480 --> 00:01:42,410
+与其他APP的计划在一起吗？会实施一个同步协议吗？
+network jobs with other apps, implement a synchronization protocol,
+
+33
+00:01:42,410 --> 00:01:46,550
+会存储账户信息吗？或者会重新尝试
+store account information, or has logic to retry
+
+34
+00:01:46,550 --> 00:01:49,650
+你的请求？选择所有表达正确的选项。
+your request? Select all of these that match.
+

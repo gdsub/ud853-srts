@@ -1,0 +1,114 @@
+﻿1
+00:00:00,008 --> 00:00:06,010
+很好，你完成了。我们从取消掉这段代码的注释开始
+Alright, you're done. Let's start by uncommenting out that text.
+
+2
+00:00:06,010 --> 00:00:07,860
+你能看到，你需要这个forecast字符串
+As you can see, you need that forecast string
+
+3
+00:00:07,860 --> 00:00:10,550
+传递给DetailActivity。
+to pass on to our DetailActivity. So what do
+
+4
+00:00:10,550 --> 00:00:13,920
+所以我们要怎样获得这个forecast字符串呢？我们很幸运
+we use to get that forecast string? Well we're lucky
+
+5
+00:00:13,920 --> 00:00:16,520
+因为我们实际上已经把这个AdapterView传递进来了
+here, because we actually get the AdapterView passed in.
+
+6
+00:00:17,580 --> 00:00:19,100
+我们需要做的只是把它转化成SimpleCursorAdapter
+All we have to do is cast it at simple
+
+7
+00:00:19,100 --> 00:00:22,190
+然后我们就能得到这个光标(cursor)
+cursor adaptor and then we can get the cursor. We
+
+8
+00:00:22,190 --> 00:00:25,650
+我们把它移动到指定的地方。然后我们可以使用String.format
+can move it to our position. Then, we can use string.format
+
+9
+00:00:25,650 --> 00:00:27,870
+基于列数来获得一个格式化的字符串
+to get a formatted string based on the values
+
+10
+00:00:27,870 --> 00:00:30,460
+注意，这里的数列编号
+of our columns. Note, once again the nice use
+
+11
+00:00:30,460 --> 00:00:34,800
+使用的很好。这是一个右花括号
+of our column indexes. One ending curly brace and
+
+12
+00:00:34,800 --> 00:00:38,640
+把这些intent的东西移动到里面。这就完成了
+let's move that intent stuff into there. And that's it.
+
+13
+00:00:39,990 --> 00:00:41,860
+现在我们要在屏幕上点击
+Now we'll be able to click on it again
+
+14
+00:00:41,860 --> 00:00:44,490
+然后就会跳转到详细信息界面
+and it'll actually go to our normal detail view.
+
+15
+00:00:44,490 --> 00:00:47,990
+我们来试一试。
+Let's try it out. So here we are, there's
+
+16
+00:00:47,990 --> 00:00:51,542
+这是我们的列表界面，然后我们进到了详细信息。
+our list view and we go right into details. Pretty
+
+17
+00:00:51,542 --> 00:00:56,180
+太酷了。但是如果我们把温度单位改成英制的
+cool. However, if we change our temperature units to imperial here
+
+18
+00:00:57,280 --> 00:01:00,560
+这里却不会更新。要是它能够
+doesn't actually update. It would be nice if that, it was
+
+19
+00:01:00,560 --> 00:01:03,480
+像这里一样使用相同的cursor模型，就更好了。
+based on the same kind of cursor model we have here.
+
+20
+00:01:03,480 --> 00:01:04,837
+用某种方法监测设置
+Something that was observing with the
+
+21
+00:01:04,837 --> 00:01:06,501
+然后相应的更新数据
+content observer and would actually update.
+
+22
+00:01:06,501 --> 00:01:09,567
+[BLANK_AUDIO]
+
+23
+00:01:09,567 --> 00:01:10,620
+当我们改变设置时
+When we changed our setting.
+

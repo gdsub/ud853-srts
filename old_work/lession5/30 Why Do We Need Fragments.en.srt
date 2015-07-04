@@ -1,0 +1,240 @@
+1
+00:00:00,990 --> 00:00:02,810
+所以现在你已经明白了fragment是在哪里使用的
+So now you know, where fragments are used and
+
+2
+00:00:02,810 --> 00:00:05,700
+并且知道了我们将会在我们的应用哪个地方中去使用它
+where we're going to use them in our app. You're
+
+3
+00:00:05,700 --> 00:00:09,070
+你可能会开始问，究竟为什么要使用fragment呢？
+probably starting to ask, why use fragments at all?
+
+4
+00:00:09,070 --> 00:00:11,810
+如果要把UI组件凑到一块儿，难道我们不能只是创建一个
+If we want to group UI components, couldn't we just create
+
+5
+00:00:11,810 --> 00:00:14,520
+View Group或者一个可重用的XML布局定义吗？
+a View Group or maybe a re-usable XML layout
+
+6
+00:00:14,520 --> 00:00:19,240
+当然可以！但是！Fragment的真实能力是超出
+definition? Yes. But, the real power in fragments goes
+
+7
+00:00:19,240 --> 00:00:22,220
+组合UI元素的，fragment可以使activity
+beyond grouping UI elements. They allow us to fully
+
+8
+00:00:22,220 --> 00:00:26,350
+充分模块化，包括从他们持有的应用状态
+modularize our activities, including the life cycle events they receive
+
+9
+00:00:26,350 --> 00:00:28,990
+中接收到的生命周期事件。Fragment是从Honeycomb的时候开始
+in the app state that they maintain. Fragments were
+
+10
+00:00:28,990 --> 00:00:33,090
+引入以解决一个特定问题的。
+first introduced in Honeycomb to solve a particular problem. Honeycomb
+
+11
+00:00:33,090 --> 00:00:36,390
+Honeycomb是第一个支持平板的Android版本。
+was the first Android release to support tablets, and
+
+12
+00:00:36,390 --> 00:00:38,680
+事实证明，去创建平板UI界面
+it turned out, the best way for most apps to
+
+13
+00:00:38,680 --> 00:00:41,780
+的最好方式是将两个或者
+create a great tablet UI. Is put two or
+
+14
+00:00:41,780 --> 00:00:46,910
+多个手机activity并排。举个栗子
+more, of their phone activities alongside each other. For example,
+
+15
+00:00:46,910 --> 00:00:48,710
+如果你有一个手机应用是使用list activity启动的
+if you had a phone app that started with a
+
+16
+00:00:48,710 --> 00:00:51,520
+就像这样，当你点击一个项会
+list activity like this, which you then clicked an item
+
+17
+00:00:51,520 --> 00:00:54,570
+打开detail activity，就像这个我们
+would open a detailed activity like this one. What
+
+18
+00:00:54,570 --> 00:00:57,840
+称为master detail flow的一样
+we call a master detail flow. A good tablet
+
+19
+00:00:57,840 --> 00:01:01,060
+一个好的平板UI界面会将它们并排，就像这样
+UI would put them side by side like this.
+
+20
+00:01:01,060 --> 00:01:04,760
+从功能上讲，点击这个列表上的项，将这个activity放在右边
+Functionally, clicking an item on this list, now replaces this
+
+21
+00:01:04,760 --> 00:01:07,310
+而不是和在手机上一样
+activity on the right, rather than starting a new
+
+22
+00:01:07,310 --> 00:01:08,680
+打开一个新的activity
+one, as it would have done on the phone.
+
+23
+00:01:09,760 --> 00:01:13,940
+不幸的是，Android并不总是支持在其他activity中嵌入activity
+Now unfortunately, Android didn't always support embedding activities within
+
+24
+00:01:13,940 --> 00:01:18,410
+至少在我们介绍了fragment之前不行。
+other activities. At least, it didn't until we introduced fragments.
+
+25
+00:01:18,410 --> 00:01:20,260
+现在如果你看一下UI元素
+Now if you just look at the UI elements, you could
+
+26
+00:01:20,260 --> 00:01:23,470
+你可以思考一下使用view Group和layout构建的
+be excused for thinking you could achieve much the same thing
+
+27
+00:01:23,470 --> 00:01:27,870
+activity来达到同样的事情
+using an activity that was built using view groups and layouts,
+
+28
+00:01:27,870 --> 00:01:32,630
+而不用操心fragment，在一定程度上这是对的
+without bothering the fragments, which is true up to a point.
+
+29
+00:01:32,630 --> 00:01:34,712
+但是，你将传递所有activity的生命周期事件
+But then you'd have to pass through all of the activity
+
+30
+00:01:34,712 --> 00:01:37,860
+管理每一个UI的状态
+life cycle events, manage the state of each piece of the
+
+31
+00:01:37,860 --> 00:01:40,390
+当它们改变的时候，跟踪他们的每一部分的状态。
+UI, keep track of the state of each of the portions
+
+32
+00:01:40,390 --> 00:01:43,770
+并且还要在任意给定时刻记住，
+as they changed. And remember, which screen elements were on screen
+
+33
+00:01:43,770 --> 00:01:46,710
+屏幕上有哪些元素，以此来保持应用状态。
+at any given time, in order to maintain app state.
+
+34
+00:01:47,740 --> 00:01:50,470
+这所有的一切，完全就是你使用Fragment的时候FragmentManger
+All of which, is exactly what the Fragment Manager does
+
+35
+00:01:50,470 --> 00:01:53,500
+替你做的事情。这使你能退后一步，
+for you, when you use Fragments. And that lets you
+
+36
+00:01:53,500 --> 00:01:56,230
+把每一个fragment当做一个迷你activity来处理。
+take a step back and, and treat each fragment as though
+
+37
+00:01:56,230 --> 00:01:59,240
+举个栗子，在activity的世界中
+it were a mini activity. For example, in the world
+
+38
+00:01:59,240 --> 00:02:02,400
+你从一个activity中启动另一个activity，这个事物
+of activities, you start one activity from the other, and that
+
+39
+00:02:02,400 --> 00:02:05,400
+就会在后台的栈中记录下来。所以，点击返回按钮，
+transaction is recorded on the back stack. So, hitting the
+
+40
+00:02:05,400 --> 00:02:09,090
+我们将撤销那个事物并且将第一个activity
+Back button, we'll undo that transaction and bring the first activity
+
+41
+00:02:09,090 --> 00:02:11,310
+放置在前面。而现在可以用fragment transaction
+to the front. Now the same thing can
+
+42
+00:02:11,310 --> 00:02:13,870
+实现同样的事情。在这个例子中，
+happen with fragment transactions. In this case, rather
+
+43
+00:02:13,870 --> 00:02:16,580
+你不必开始一个新的activity，我们只需要
+than starting a new activity, we simply replace
+
+44
+00:02:16,580 --> 00:02:19,480
+用detail activity替换list activity。
+the list fragment with the detail fragment. And then
+
+45
+00:02:19,480 --> 00:02:21,740
+然后返回按钮会撤销这个事物并反过来。
+the back button will undo that transaction and
+
+46
+00:02:21,740 --> 00:02:24,210
+所以，在理论上来说，你真的可以
+reverse it. So in theory, you can really take
+
+47
+00:02:24,210 --> 00:02:26,880
+把所有使用多个Activity做的事情换成
+any act with multiple activities and replace it
+
+48
+00:02:26,880 --> 00:02:29,950
+用持有多个Fragment的单一Activity来实现。
+with a single activity that's host to multiple fragments.
+

@@ -1,0 +1,129 @@
+1
+00:00:00,160 --> 00:00:01,980
+方才我们说过了  Android框架不允许我们
+When we said that the framework didn't want us
+
+2
+00:00:01,980 --> 00:00:05,080
+在主线程上执行网络操作工作
+to run network operations on the main thread, what
+
+3
+00:00:05,080 --> 00:00:08,630
+那什么是主线程呢  Android程序默认是
+is the main thread? Well, Android apps run by
+
+4
+00:00:08,630 --> 00:00:12,570
+在主线程上执行的  也叫UI线程
+default on the main thread, also called the UI thread.
+
+5
+00:00:12,570 --> 00:00:14,900
+它控制着所有用户的输入和输出
+It handles all the user input as well as
+
+6
+00:00:14,900 --> 00:00:18,060
+比如绘制屏幕等
+the output, such as screen drawing. Thus we want
+
+7
+00:00:18,060 --> 00:00:21,760
+因此我们就得避免在这里有任何耗时的操作
+to avoid any time-consuming operations here, otherwise the UI
+
+8
+00:00:21,760 --> 00:00:25,470
+不然界面就要卡顿  让这些需要花费大量时间的工作
+is going to stutter. Instead, kick off a background worker
+
+9
+00:00:25,470 --> 00:00:27,430
+交给后台去做
+thread if you have to do some long-running
+
+10
+00:00:27,430 --> 00:00:32,170
+这包括网络请求  图片解码  或者  
+work. This includes doing network calls, decoding bitmaps, or
+
+11
+00:00:32,170 --> 00:00:35,870
+读取  写入数据库
+reading, and writing from the database. Okay. So, somehow,
+
+12
+00:00:35,870 --> 00:00:37,890
+所以  我们需要把网络请求部分的代码从主线程移走
+we have to move the networking code off the
+
+13
+00:00:37,890 --> 00:00:39,800
+但是要怎么做才行呢
+main thread. But how are we going to do
+
+14
+00:00:39,800 --> 00:00:43,180
+这里有一些选项
+that? Well there are several options, but let's look
+
+15
+00:00:43,180 --> 00:00:46,610
+但是让我们先来回答一个问题  找到这个类的名称
+for the name of the Android class that simplifies
+
+16
+00:00:46,610 --> 00:00:50,520
+这个类简化了后台线程的创建和UI线程的同步处理
+background thread creation and UI thread synchronization, so that
+
+17
+00:00:50,520 --> 00:00:53,370
+它将在后台执行操作并把结果返回给主线程
+the results from the background work will come back onto the
+
+18
+00:00:53,370 --> 00:00:55,710
+然后我们可以用这个结果来更新我们的用户界面
+main thread, and then we can use it to update our
+
+19
+00:00:55,710 --> 00:00:59,740
+去网上搜索一些这个类的名称  填入下面的
+UI. Search online and figure out the answer to this question
+
+20
+00:00:59,740 --> 00:01:02,740
+方框里吧  我有一些建议
+and then enter the class name in the box. Here's some
+
+21
+00:01:02,740 --> 00:01:04,950
+如果你有一些问题无法从
+advice for you. If you ever get stuck on how to
+
+22
+00:01:04,950 --> 00:01:07,480
+Android开发者网站上找到结果的话
+do something in Android and you can't find it on the
+
+23
+00:01:07,480 --> 00:01:12,220
+你可以尝试一下stackoverflow.com这个网站
+developer's site you can try to check stackoverflow.com. It's a question
+
+24
+00:01:12,220 --> 00:01:16,740
+这是一个对Android开发者来说非常重要的一个问答网站
+and answer site that many Android developers use as a valuable resource.
+
+25
+00:01:16,740 --> 00:01:18,700
+你可能会碰到一些人问了跟你
+So chances are likely that someone has
+
+26
+00:01:18,700 --> 00:01:20,850
+相同或者相近的问题
+already asked a similar question that you have.

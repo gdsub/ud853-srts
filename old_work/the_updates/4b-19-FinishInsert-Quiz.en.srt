@@ -1,0 +1,24 @@
+1
+00:00:00,550 --> 00:00:03,960
+为了实现Insert这个函数的的content provider方法
+Implement the rest of the Insert()
+content provider method.
+
+2
+00:00:03,960 --> 00:00:08,950
+处理位置URI，并且使用content resolver通知
+Handle the location URI, and
+use the content resolver to notify any
+
+3
+00:00:08,950 --> 00:00:11,385
+注册的content observer已经了改变了
+registered contentObserver
+of the change.
+
+4
+00:00:11,385 --> 00:00:14,330
+取消对这些插入测试的注释，看看你是否已经正确地完成了
+Uncomment the test insert test,
+to see if you've done this right.
+

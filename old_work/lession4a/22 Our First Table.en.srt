@@ -1,0 +1,59 @@
+1
+00:00:00,350 --> 00:00:04,800
+我们的数据库将包含天气预报记录。我们的数据模型将使用两个表。
+Our database will contain weather forecast entries. Out data model will use
+
+2
+00:00:04,800 --> 00:00:09,520
+一个表用来包含关于位置的信息，
+two tables. One table will be used to contain information about the location,
+
+3
+00:00:09,520 --> 00:00:13,480
+另一个则用来包含位置所在处的天气预报数据。
+while the other will contain the forecast data keyed the locations.
+
+4
+00:00:13,480 --> 00:00:17,730
+这些最终都会通过协议重新与我们的视图以及内容提供者绑定到一块
+These will ultimately be tied back to our view through the contract, and
+
+5
+00:00:17,730 --> 00:00:21,890
+我们可以用一个内部链接，提取出今天的每一个天气预报的完整数据。
+the content provider. We can use an inner join, pull the complete data for
+
+6
+00:00:21,890 --> 00:00:27,630
+包括所有关于位置的信息。
+each forecast today. Including all information about the location. This,
+
+7
+00:00:27,630 --> 00:00:33,230
+这就是一个很大的协议。注意我们要存储位置ID，
+is a big contract. Note that we store the location id, which will be a foreign
+
+8
+00:00:33,230 --> 00:00:39,140
+这个位置ID是来自COLUMN_LOC_KEY里的位置表的一个外键。但是注意单元是不存储在数据库里的。
+key from the location table in COLUMN_LOC_KEY. Note that the units aren't stored
+
+9
+00:00:39,140 --> 00:00:43,440
+我们希望所有的天气记录都储存在metric单元里，并且当
+in the database. We expect all weather entries to be stored in metric units, and
+
+10
+00:00:43,440 --> 00:00:48,330
+用户界面需要时就可以直接转换到imperial单元。自从这个列名converted when needed by the UI, into imperial units. Since the column names
+
+11
+00:00:48,330 --> 00:00:52,260
+不包含数据类型，变量名或者注释里的注释是非常有用的，
+don't actually contain data types, it's useful to annotate that in
+
+12
+00:00:52,260 --> 00:00:56,860
+因为这样会让我们的协议变得更加明确。
+the variable names and/or the comments to make our contract more explicit.
+

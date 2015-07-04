@@ -1,0 +1,135 @@
+1
+00:00:00,640 --> 00:00:01,200
+好
+Okay.
+
+2
+00:00:01,200 --> 00:00:04,590
+在Dan介绍数据库之前
+So before Dan gets carried away with databases, let's look at
+
+3
+00:00:04,590 --> 00:00:08,280
+让我们看看当你用intent在activity之间切换的时候都会发生什么
+what happens when you use an intent to transition between activities.
+
+4
+00:00:08,280 --> 00:00:09,354
+在Sunshine应用中
+Within Sunshine,
+
+5
+00:00:09,354 --> 00:00:13,387
+如果你点击Activity列表中的一个Activity  它会打开这个更加详细的Activity
+if you tap on a list in the main activity it opens up the detail activity.
+
+6
+00:00:16,962 --> 00:00:19,230
+但是主Activity还是在后台运行的
+But the main activity remains on the backstack.
+
+7
+00:00:19,230 --> 00:00:22,080
+随时都准备着重新在前台显示  只要你点一下返回键  主Activity就会重新显示
+Ready to reappear as soon as you hit Back.
+
+8
+00:00:22,080 --> 00:00:25,980
+那么现在  在这个例子中  两个Activity在同一个应用中
+Now, in that example, both activities are within the same app.
+
+9
+00:00:25,980 --> 00:00:29,264
+但是  像我们在第三节中学习的一样  你还可以使用浏览器浏览网页
+But as we learned in lesson three, you can also watch the browser or
+
+10
+00:00:29,264 --> 00:00:30,507
+使用Sunshine里的地图应用
+maps app from sunshine.
+
+11
+00:00:35,091 --> 00:00:37,041
+而且  用户可以点Home键回到主界面
+Or for that matter, the user can hit Home.
+
+12
+00:00:41,065 --> 00:00:44,521
+并开启其他的应用  或者点Recent键
+And launch apps from there, or they can use the recent key or
+
+13
+00:00:44,521 --> 00:00:47,160
+或者在通知栏中转换到其他的应用
+switch to another app using notifications.
+
+14
+00:00:47,160 --> 00:00:50,270
+这些行为都意味着你可以终止在后台运行的很多应用
+All of these options mean you can end up with a lot of apps on your back stack.
+
+15
+00:00:57,947 --> 00:01:02,440
+一定要记住移动设备的资源是非常有限的
+Now, keep in mind that our resources on devices are extremely limited.
+
+16
+00:01:02,440 --> 00:01:06,700
+所以让很多的应用在后台等待不是一个好办法
+So it's not a good idea to have dozens of apps sitting idle in the background.
+
+17
+00:01:06,700 --> 00:01:07,880
+Android为我们解决了这个问题
+Android solves this for us,
+
+18
+00:01:07,880 --> 00:01:11,320
+所以你不必使用那些令人讨厌的杀进程的应用
+so you don't have to use those awful task killer apps.
+
+19
+00:01:11,320 --> 00:01:13,010
+那么  这些是怎么做到的呢
+So, how does it do that?
+
+20
+00:01:13,010 --> 00:01:17,120
+其实是系统会杀掉那些低优先级的你目前没有在使用的应用
+Well, it kills low priority applications that you haven't used in a while.
+
+21
+00:01:17,120 --> 00:01:21,740
+在第六节课  我们会仔细的讲解Android是如何找出哪些应用应该被杀掉的
+We'll go into detail on exactly how it figures out which app needs to die, in lesson six.
+
+22
+00:01:21,740 --> 00:01:25,030
+现在  你只要知道你的应用
+But for now, it's important to realize that your app isn't in
+
+23
+00:01:25,030 --> 00:01:27,070
+无法控制自己什么时候被销毁就好了
+control of its own destiny.
+
+24
+00:01:27,070 --> 00:01:28,612
+你的应用可能在任何时间被杀死
+It can be killed at any time.
+
+25
+00:01:32,589 --> 00:01:34,305
+所以你要学会如何处理这种情况
+So you need to know, how to deal with that.
+
+26
+00:01:34,305 --> 00:01:37,846
+这就意味着你要了解Activity的生命周期
+And that means understanding the lifecycle of an activity and the signals we
+
+27
+00:01:37,846 --> 00:01:41,180
+和在系统中获得的表示生命周期状态的信号
+get from the framework to indicate its progress through the lifetime.
+

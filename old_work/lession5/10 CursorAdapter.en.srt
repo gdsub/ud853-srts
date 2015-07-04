@@ -1,0 +1,90 @@
+﻿1
+00:00:00,160 --> 00:00:02,250
+我们创建了today_layout但是它为什么不显示呢？
+We created the today layout so why doesn't it show
+
+2
+00:00:02,250 --> 00:00:06,910
+原因是我们现在使用的是一个简单的游标适配器。记住
+up? The reason is because we're using a simple CursorAdapter. Remember
+
+3
+00:00:06,910 --> 00:00:08,960
+它为游标里的每一行创建了一个列表项，
+that it creates a list item for every row in the
+
+4
+00:00:08,960 --> 00:00:12,740
+但是它仅仅支持一种项目的显示模式。也就是说
+cursor but it only supports one item view type. That means
+
+5
+00:00:12,740 --> 00:00:15,970
+所有行里的项目必须用同一种布局。如果
+that all list items must use the same layout. If
+
+6
+00:00:15,970 --> 00:00:18,640
+我们希望今天的预报看上去不一样，我们就需要
+we want today's forecast to look differently we're going to need
+
+7
+00:00:18,640 --> 00:00:22,120
+创建一个自定义的游标适配器。这样我们能有多种
+to create a custom CursorAdapter. That way we can have multiple
+
+8
+00:00:22,120 --> 00:00:25,540
+项目的显示类型。然后我们就可以基于我们正在看哪一行游标
+item view types. Then we can have different list item layouts
+
+9
+00:00:25,540 --> 00:00:28,130
+来拥有不同的列表项。
+based on what row of the cursor we're looking at.
+
+10
+00:00:28,130 --> 00:00:30,530
+注意，项目显示类型的概念
+Note that the concept of item view types applies to
+
+11
+00:00:30,530 --> 00:00:34,280
+对适配器是普遍适用的，不仅仅是游标适配器。如果你打开
+adapters in general, not just the CursorAdapter. If you open
+
+12
+00:00:34,280 --> 00:00:37,730
+游标适配器的说明文档，你可以知道这是一个抽象
+up the documentation for CursorAdapter, you'll see that it's an abstract
+
+13
+00:00:37,730 --> 00:00:40,640
+类，包含两个抽象方法需要
+class. It contains two abstract methods that you'll need to
+
+14
+00:00:40,640 --> 00:00:45,052
+重载, bindView方法和newView方法。
+override. The bindView method as well as the newView method.
+
+15
+00:00:45,052 --> 00:00:47,260
+newView方法知道如何返回一个新的列表项布局，
+The newView method knows how to return a new list
+
+16
+00:00:47,260 --> 00:00:50,560
+但还不包含任何数据。bindView方法知道
+item layout, but doesn't contain data yet. The bindView method knows
+
+17
+00:00:50,560 --> 00:00:52,670
+如何接收一个已存在的布局并
+how to take an existing layout and update
+
+18
+00:00:52,670 --> 00:00:54,660
+通过游标用指向的数据更新他。
+it with the data pointed to by the cursor
+

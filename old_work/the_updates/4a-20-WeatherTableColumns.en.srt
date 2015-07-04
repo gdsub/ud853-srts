@@ -1,0 +1,58 @@
+1
+00:00:00,340 --> 00:00:04,340
+现在让我们重新回顾一下我们的最终细节框架
+This is a good time to revisit
+our final detail wireframe.
+
+2
+00:00:04,340 --> 00:00:07,550
+如果我们要在数据库中保存我们的天气预报信息
+If we're going to store our weather
+forecast information in a database
+
+3
+00:00:07,550 --> 00:00:10,270
+哪一些信息行是我们所需要的呢？
+table, which columns
+should our contract have?
+
+4
+00:00:12,720 --> 00:00:16,360
+在我们的数据库中，我们有天气预报的列表
+In our database, we will have
+a table of weather forecast entries.
+
+5
+00:00:16,360 --> 00:00:18,880
+我们用一行代表预测的某天
+We use a row to represent
+each forecast day.
+
+6
+00:00:18,880 --> 00:00:21,520
+并会把与预报相关的每一项数据保存在
+And we'll store each piece of data
+associated with the forecast in
+
+7
+00:00:21,520 --> 00:00:22,750
+一个单独的列中
+a separate column.
+
+8
+00:00:22,750 --> 00:00:26,345
+看一下我们这个天气应用的界面，
+which columns would we need for
+
+9
+00:00:26,345 --> 00:00:28,100
+哪一列才是我们的数据库表所需要的呢？
+Taking a look at our weather UX,
+the weather database table?
+
+10
+00:00:28,100 --> 00:00:30,830
+思考一下哪一列才是需要在数据库中被记录的
+Think of which columns should
+be in each database record.
+

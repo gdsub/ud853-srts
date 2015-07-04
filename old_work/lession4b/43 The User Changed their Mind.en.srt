@@ -1,0 +1,215 @@
+1
+00:00:00,370 --> 00:00:02,710
+好的，我知道了。你们实际上想要
+All right, I get the hint. You actually want
+
+2
+00:00:02,710 --> 00:00:05,140
+这个课程能在下一个版本的Android
+this class to be finished sometime before the next
+
+3
+00:00:05,140 --> 00:00:09,458
+出来前结束。就快结束了。我们看看
+Android release happens. We're almost done. So we look
+
+4
+00:00:09,458 --> 00:00:13,780
+ForecastFragment里的onStart函数。我们其实耍了点小聪明
+in ForecastFragment in onStart. We've actually been cheating a
+
+5
+00:00:13,780 --> 00:00:16,190
+每一次我们执行onStart的时候
+bit. Every single time we get to onStart, we
+
+6
+00:00:16,190 --> 00:00:20,150
+我们其实也更新了天气。我们删掉这一行
+actually update the weather. Let's get rid of that.
+
+7
+00:00:20,150 --> 00:00:21,890
+这会迫使我们不得不用
+It'll force us to actually have to use the
+
+8
+00:00:21,890 --> 00:00:25,650
+refresh函数来获得新的天气，但是这也会帮助说明
+refresh function to get new weather, but it'll help illustrate
+
+9
+00:00:25,650 --> 00:00:27,320
+一样很酷的东西关于我们即将用到的preference
+the cool stuff we're about to do with preferences.
+
+10
+00:00:27,320 --> 00:00:30,930
+我们不耍小聪明了。在onPreferenceChange里，如果
+We're going to stop cheating here. In onPreferenceChange, if we're
+
+11
+00:00:30,930 --> 00:00:34,065
+我们还没有设置偏好，如果地址改变，我们将执行一个新的
+not actually binding preferences, we're going to execute a new
+
+12
+00:00:34,065 --> 00:00:37,710
+FetchWeatherTask。否则，我们就
+FetchWeatherTask if there's a change in location. Otherwise, we'll just
+
+13
+00:00:37,710 --> 00:00:41,450
+通知CONTENT_URI来允许光标的信息更新。
+notify our CONTENT_URI to allow our cursor to update.
+
+14
+00:00:41,450 --> 00:00:45,060
+我们还要再做一件事。在ForecastFragment里
+We still have to do one more thing. In ForecastFragment
+
+15
+00:00:45,060 --> 00:00:48,320
+我们用了一个实例变量（mLocation）来储存
+we've been using an instance variable, mLocation, to save the
+
+16
+00:00:48,320 --> 00:00:52,330
+我们从onCreateLoader里获得的偏好地址
+preferred location we get when we're actually an onCreateLoader.
+
+17
+00:00:52,330 --> 00:00:54,110
+我们这样做是因为我们计划
+We've been doing that because we've been planning to
+
+18
+00:00:54,110 --> 00:00:58,040
+使用这个数据一段时间。接下来我们要覆盖另一个函数。
+use this for a while. Let's override another function. In
+
+19
+00:00:58,040 --> 00:01:00,140
+在onResume里，我们需要检查
+onResume we need to check to see whether or not
+
+20
+00:01:00,140 --> 00:01:04,400
+地址是不是改变了。所以如果地址
+our location has changed. So if our location is not
+
+21
+00:01:04,400 --> 00:01:08,470
+不等于null并且Utility.getPreferredLocation和mLocation
+equal to null and Utility.getPreferredLocation does not equal
+
+22
+00:01:08,470 --> 00:01:11,870
+不一致，这时候我们就可以调用更新天气的函数。我们看看
+location, well, then we can call update weather. Let's see
+
+23
+00:01:11,870 --> 00:01:15,010
+发生什么了。你能看到它立刻就变回去了。你看
+what happens. You see it immediately changed back. You didn't
+
+24
+00:01:15,010 --> 00:01:16,982
+不到载入过程因为它不需要载入任何东西。
+see that loading because it didn't have to load anything.
+
+25
+00:01:16,982 --> 00:01:21,700
+但是，如果我们把设置改成其他的地址
+However, if we change settings to something else,
+
+26
+00:01:21,700 --> 00:01:24,210
+它在后台刷新数据。从这里能看到
+it's refreshing in the background. Well, it turns out
+
+27
+00:01:24,210 --> 00:01:28,250
+这里的updateWeather并没有帮到我们。为什么呢？
+updating weather doesn't actually help us here. Why?
+
+28
+00:01:28,250 --> 00:01:30,900
+因为我们的URI没有变。记住，我们做的
+Because our URI hasn't changed. Remember, we're doing
+
+29
+00:01:30,900 --> 00:01:33,720
+所有东西都是基于URI的。我们真正需要
+everything based upon URI. What we really need
+
+30
+00:01:33,720 --> 00:01:35,800
+做的是重置载入程序
+to do is reset our loader. So, how
+
+31
+00:01:35,800 --> 00:01:39,420
+要怎样做呢？这个非常简单
+do we do that? Well, it's pretty straightforward.
+
+32
+00:01:39,420 --> 00:01:42,020
+就像我们在onActivityCreated里做的一样。我们
+Just like we did in onActivityCreated, we have to
+
+33
+00:01:42,020 --> 00:01:45,360
+不得不使用LoaderManager。所以不需要调用updateWeather
+use LoaderManager. So instead of calling updateWeather, what
+
+34
+00:01:45,360 --> 00:01:48,270
+真正要做的是调用其他的一些函数
+we're actually going to do is call something else.
+
+35
+00:01:48,270 --> 00:01:52,070
+这种情况，不是调用initLoader，而是调用restartLoader
+In this case, not an initLoader, but restartLoader.
+
+36
+00:01:52,070 --> 00:01:54,480
+它和initLoader需要一样的参数。
+It takes the same parameters as an initLoader. Now
+
+37
+00:01:54,480 --> 00:01:58,040
+我们再来试试。看起来好多了
+let's try this again. That already looks better.
+
+38
+00:01:58,040 --> 00:01:59,860
+好了，我们换回我们自己的天气吧
+All right, let's change back to our own weather
+
+39
+00:01:59,860 --> 00:02:03,810
+这就是了。你能看到
+again. And there we are. As you can see,
+
+40
+00:02:05,180 --> 00:02:07,270
+当地址改变时天气也改变了
+the weather is changing as we go from location
+
+41
+00:02:07,270 --> 00:02:09,400
+但是我们还是有这个问题
+to location, but we still have this
+
+42
+00:02:09,400 --> 00:02:12,030
+明显的，当我们在这里更改设置时
+problem. Obviously when we change settings here,
+
+43
+00:02:12,030 --> 00:02:17,130
+没有任何作用。我们需要修复这个。那就是你们要做的了。
+it doesn't affect anything, so we need to fix that. That's where you come in.
+

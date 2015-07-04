@@ -1,0 +1,110 @@
+1
+00:00:00,280 --> 00:00:02,680
+在AsyncTask的文档中，我们可以
+In the documentation for AsyncTask, we can
+
+2
+00:00:02,680 --> 00:00:04,440
+滑到受保护的（protected）方法的部分
+scroll down to the section that talks about
+
+3
+00:00:04,440 --> 00:00:08,380
+这里我们看到不同的方法
+protected methods. Here we see that different methods
+
+4
+00:00:08,380 --> 00:00:10,540
+会在UI线程或者后台线程上
+are called on the UI thread versus on the
+
+5
+00:00:10,540 --> 00:00:13,870
+被调用。它还包含了这些方法相对
+background thread. It also contains information on what
+
+6
+00:00:13,870 --> 00:00:16,450
+doInBackground()方法被调用的先后顺序
+order these methods are called in relative to the
+
+7
+00:00:16,450 --> 00:00:21,020
+的信息。例如，方法onPreExecute() 在
+doInBackground method. For example, onPreExecute gets called on
+
+8
+00:00:21,020 --> 00:00:25,660
+UI线程上先于doInBackground()方法被调用。所以现在有了这些消息
+the UI thread before doInBackground. So with that information
+
+9
+00:00:25,660 --> 00:00:28,470
+我们就能填写我们的测试答案了。
+now, we can populate the answers to our quiz. As
+
+10
+00:00:28,470 --> 00:00:31,720
+如我们刚才所说，方法onPreExecute() 在主线程上被调用。
+we mentioned before, onPreExecute happens on the main thread. And
+
+11
+00:00:31,720 --> 00:00:35,130
+在这个方法里你可以做一些初始化的工作。然后方法doInBackground()运行在
+here you can do any setup work. Then doInBackground happens
+
+12
+00:00:35,130 --> 00:00:38,390
+后台线程中。当它在执行的过程中，你就可以
+on the background thread. While this is running, you can actually
+
+13
+00:00:38,390 --> 00:00:41,090
+任性地调用publishProgress()方法了，然后
+call publishProgress as many times as you want, so that
+
+14
+00:00:41,090 --> 00:00:44,450
+你就可以传递信息给用户界面了。这样
+you can pass information to the UI. So that it
+
+15
+00:00:44,450 --> 00:00:47,380
+用户界面可以进行更新并且告诉用户某项
+can update and then tell the user that a certain
+
+16
+00:00:47,380 --> 00:00:50,640
+工作完成的进度。每一次publishProgress()方法被调用的时候，
+percentage of the work is done. Each time this is called,.
+
+17
+00:00:50,640 --> 00:00:54,690
+就会触发onProgressUpdate()方法的调用并传进一些信息。然后，
+It triggers onProgressUpdate with some information. Then,
+
+18
+00:00:54,690 --> 00:00:57,060
+你就可以在界面上
+you can show a loading indicator in
+
+19
+00:00:57,060 --> 00:01:00,700
+显示进度，告诉用户某项工作已经完成10%，50%，100%。进度的显示
+your UI that says something's 10% done, 50% done, 100% done. And all this
+
+20
+00:01:01,860 --> 00:01:06,000
+都是发生在主线程中的。最后，一旦所有后台线程中的工作完成了，
+happens on the main thread. And then, once all of this is complete in
+
+21
+00:01:06,000 --> 00:01:08,450
+在主线程上运行的onPostExecute()方法会被调用
+the background thread, then it calls onPostExecute
+
+22
+00:01:08,450 --> 00:01:09,980
+并且会传入相应的结果数据。
+with the results on the main thread.
+

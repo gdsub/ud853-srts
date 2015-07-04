@@ -1,0 +1,39 @@
+1
+00:00:00,160 --> 00:00:01,740
+嗯~你又搞定了。
+All right, you're done.
+
+2
+00:00:01,740 --> 00:00:03,150
+我们来看看这个解决方法。
+Let's look at the solution.
+
+3
+00:00:03,150 --> 00:00:06,780
+在syncAdapter中，就在大量数据插入之后
+Inside of our sync adapter,
+right after doing our bulk insert,
+
+4
+00:00:06,780 --> 00:00:09,400
+我们可以通过调用content provider
+we can just call the content
+provider with a delete,
+
+5
+00:00:09,400 --> 00:00:12,690
+并将JulianStartDay减1作为参数带入
+with the date as our current
+JulianStartDay minus 1.
+
+6
+00:00:12,690 --> 00:00:16,090
+这是使用JulianDays的一个优点。
+This is one of the advantages
+of using Julian days.
+
+7
+00:00:16,090 --> 00:00:16,590
+完成！
+Done.
+

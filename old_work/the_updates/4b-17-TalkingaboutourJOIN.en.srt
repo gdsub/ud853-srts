@@ -1,0 +1,177 @@
+1
+00:00:00,260 --> 00:00:02,580
+当我们起初定义我们的表的时候
+When we first defined our tables,
+
+2
+00:00:02,580 --> 00:00:06,320
+我们定义他们之间的关系和约束条件
+we defined the relationship between
+them in terms of constraints.
+
+3
+00:00:06,320 --> 00:00:08,880
+我将会讲解怎么样实现关系在我们的
+I'm going to show how we implemented
+that relationship into our
+
+4
+00:00:08,880 --> 00:00:10,140
+查询中使用join
+query using a join.
+
+5
+00:00:11,420 --> 00:00:13,900
+join允许我们查询weather使用从
+This join allows us to
+query the weather table for
+
+6
+00:00:13,900 --> 00:00:17,450
+位置设置里定义的一些值
+values from a specific location setting.
+
+7
+00:00:17,450 --> 00:00:21,170
+在Sunshine的例子中，用户设置这些在偏好中
+In Sunshine's case,
+the user sets this in preferences.
+
+8
+00:00:21,170 --> 00:00:24,340
+你将注意到有一个SQLite query builder类
+You'll notice that there's a SQ
+lite query builder class for
+
+9
+00:00:24,340 --> 00:00:26,240
+在weather provider的顶部
+able at the top of weather provider.
+
+10
+00:00:26,240 --> 00:00:29,940
+正如你可能会想到的 这个类帮助构建查询和
+As you might guess,
+this class helps construct queries and
+
+11
+00:00:29,940 --> 00:00:31,700
+被用到作为查询方法的基础
+is actually used as the basis for
+
+12
+00:00:31,700 --> 00:00:35,730
+你已经在SQLite 数据类中有用到
+the query functions you've already
+used in the SQLite database class.
+
+13
+00:00:35,730 --> 00:00:40,350
+我们在这个类的静态块初始化这个SQLite query builder
+We initialize the SQLite query builder
+in the static constructor of the class.
+
+14
+00:00:40,350 --> 00:00:42,825
+描述这两个表之间的连接
+Describing the join between both tables.
+
+15
+00:00:42,825 --> 00:00:48,230
+setTables方法填写SQL 查询的一部分内容
+Set.Tables fills out the content
+in the from part of the SQL query.
+
+16
+00:00:48,230 --> 00:00:52,890
+注意 两个表都有一个_ID 字段
+Note, since both tables
+have a field with an _ID,
+
+17
+00:00:52,890 --> 00:00:56,840
+我们必须使用表名来清除我们
+we must explicitly use the table
+name in order to disambiguate
+
+18
+00:00:56,840 --> 00:00:59,940
+讨论的是那个ID的歧义在多表查询中
+which ID we are talking
+about in the join.
+
+19
+00:00:59,940 --> 00:01:02,050
+然后我们定义了selection
+Then we define the selection.
+
+20
+00:01:02,050 --> 00:01:06,090
+selection使用问号标记或者占位符
+The selection is defined using
+the question mark or placement syntax.
+
+21
+00:01:06,090 --> 00:01:09,830
+selection参数会替代这些值
+The selection parameters
+will replace these values.
+
+22
+00:01:09,830 --> 00:01:13,570
+正如你看到的 我们的selection有2个参数
+As you can see,
+our selection has 2 parameters,
+
+23
+00:01:13,570 --> 00:01:16,15
+一个位置设置和一个日期
+a location setting and a date.
+
+24
+00:01:16,150 --> 00:01:19,340
+然后我们有一个方法来通过位置获取天气
+Then we have a function to get the
+weather by location setting using this
+
+25
+00:01:19,340 --> 00:01:21,010
+使用相同的query builder
+same query builder.
+
+26
+00:01:21,010 --> 00:01:23,910
+注意 我们从URI取参数
+Note that we fetch
+the parameters from the URI.
+
+27
+00:01:23,910 --> 00:01:27,640
+然后构建这个string数组和这个string数组从而
+And build the string array and
+build the string array so
+
+28
+00:01:27,640 --> 00:01:30,050
+使他们代入我们的查询
+that they can be
+substituted into our query.
+
+29
+00:01:30,050 --> 00:01:34,110
+我们以这个方式建立的两个查询
+We do that for both of the queries
+that we're creating this way.
+
+30
+00:01:34,110 --> 00:01:38,570
+最终，我们把方法加入到content provider的日常查询中
+Finally, we added the functions into the
+query routine of the content provider
+
+31
+00:01:38,570 --> 00:01:42,160
+为带有位置和日期的天气和带有位置的天气
+for both weather with location and
+date and weather with location.
+

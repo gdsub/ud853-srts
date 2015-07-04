@@ -1,0 +1,100 @@
+1
+00:00:00,220 --> 00:00:02,050
+让我们通过打开工程中的MainActivity.java文件
+Let's apply what we just learned by opening up
+
+2
+00:00:02,050 --> 00:00:06,390
+来应用刚才学到的知识。我们将要使用
+the MainActivity.java file within our project. We're going to take
+
+3
+00:00:06,390 --> 00:00:08,830
+这些网络部分的代码片段并且将它移动到
+this networking code snippet and move it over to
+
+4
+00:00:08,830 --> 00:00:11,200
+它自己的异步任务中，这样它就运行在一个
+it's own AsyncTask, so it runs in a background
+
+5
+00:00:11,200 --> 00:00:14,160
+后台线程上。这个任务的类就将被定义在
+thread. The task is going to be defined within
+
+6
+00:00:14,160 --> 00:00:18,070
+这个Fragmen类里。但是说到这里，它实际上
+this Fragment class. But speaking of which, it's actually
+
+7
+00:00:18,070 --> 00:00:21,300
+还叫PlaceholderFragment.让我们通过给它重命名
+still called PlaceholderFragment. Let's do a little bit of
+
+8
+00:00:21,300 --> 00:00:25,365
+来做一下调整。那我们就叫它
+refactoring now by giving it a real name. Let's call
+
+9
+00:00:25,365 --> 00:00:28,463
+ForecastFragment.然后你也可以在其它引用它
+it ForecastFragment. And then you can update it
+
+10
+00:00:28,463 --> 00:00:31,560
+的地方进行一下更新。我们也可以
+in other appropriate places as well. We can also
+
+11
+00:00:31,560 --> 00:00:34,560
+移动ForecastFragment到单独的文件里
+move ForecastFragment into its own file that way
+
+12
+00:00:34,560 --> 00:00:38,412
+这样MainActivity就不会显得那么长那么啰嗦。在
+the MainActivity won't get so long and cumbersome. Within
+
+13
+00:00:38,412 --> 00:00:41,284
+ForecastFragment里我们应该定义一个新的内部类
+ForecastFragment we should define a new inner class
+
+14
+00:00:41,284 --> 00:00:45,290
+叫做FetchWeatherTask,它继承自AsyncTask。然后你
+called FetchWeatherTask which extends from AsyncTask. And then you
+
+15
+00:00:45,290 --> 00:00:48,770
+可以把网络部分的代码片段移动到这里。当你
+can move the networking code snippet here. After you
+
+16
+00:00:48,770 --> 00:00:50,840
+做完调整并且运行过你的应用程序之后，它应该
+make the changes and run your app, it should
+
+17
+00:00:50,840 --> 00:00:53,770
+看起来是个样子。这和之前应该没有区别
+look something like this. There really should be no difference except it
+
+18
+00:00:53,770 --> 00:00:57,290
+除了它现在不应该崩溃，在接下来的这一步中我们将要添加代码去执行
+doesn't crash now. In the next step we will add code to execute
+
+19
+00:00:57,290 --> 00:01:01,300
+这个任务。在这节课的后面部分，我们将要做JSON解析并且更新
+the task. And later in the lesson, we'll do JSON parsing and updating
+
+20
+00:01:01,300 --> 00:01:05,120
+用户界面。在这期间，先从这些最基本的改变开始吧。
+the UI. In the meantime though, make these initial changes to your code.
+

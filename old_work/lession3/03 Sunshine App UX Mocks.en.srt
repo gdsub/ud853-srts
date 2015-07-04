@@ -1,0 +1,40 @@
+1
+00:00:00,490 --> 00:00:03,320
+Sunshine这个应用看起来是这样的  但他并没有展示
+Sunshine looks something like this, but it doesn't show
+
+2
+00:00:03,320 --> 00:00:05,320
+我们所拥有的有趣的天气信息
+most of the fun information we have about the
+
+3
+00:00:05,320 --> 00:00:07,710
+我们想在用户点击列表中的某一天时
+weather. We want to show a detailed view when
+
+4
+00:00:07,710 --> 00:00:09,790
+显示一个详细信息的界面
+the user clicks on a day within the list.
+
+5
+00:00:13,170 --> 00:00:17,210
+好吧  这是有点虎头蛇尾  它并没有做任何真正有用的事情
+Okay, that was a bit anticlimactic. It doesn't really do anything
+
+6
+00:00:17,210 --> 00:00:22,610
+但它将会包含各种各样的天气的详细信息  
+useful yet. But it will contain all sorts of great weathery details,
+
+7
+00:00:22,610 --> 00:00:26,440
+比如天气爱好者想了解的气压
+things that weather nerds love such as barometric pressure and that
+
+8
+00:00:26,440 --> 00:00:32,220
+最终还会有航海家想知道的风速和方向  但还是得和婴儿学步一样慢慢来
+navigators love such as wind speed and direction eventually, but baby steps.
+

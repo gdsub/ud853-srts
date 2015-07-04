@@ -1,0 +1,39 @@
+1
+00:00:00,360 --> 00:00:02,310
+现在，我们正在很带感的把我们下好的数据存起来
+Now that we're storing the data we downloaded in
+
+2
+00:00:02,310 --> 00:00:05,300
+一切就绪，可以构建丰富的UI啦
+a sensible fashion, we're ready to build rich UIs
+
+3
+00:00:05,300 --> 00:00:08,210
+对于我们的每个Activity，这意味着学习
+for each of our activities. That means learning about
+
+4
+00:00:08,210 --> 00:00:10,180
+Fragments以及我们该如何使用他们创建
+fragments and how we can use them to create
+
+5
+00:00:10,180 --> 00:00:13,370
+复杂的用户界面，同时又能轻松与诸多
+complex user interfaces that can easily be adapted to
+
+6
+00:00:13,370 --> 00:00:15,850
+不同的设备和屏幕无缝整合。
+work seamlessly on a range of different devices and
+
+7
+00:00:15,850 --> 00:00:18,440
+但首先，我得再告诉你
+screens. But first I'd like to tell you a
+
+8
+00:00:18,440 --> 00:00:21,190
+一些伟大的Android设计背后的原则。
+little more about the principles behind great Android design.

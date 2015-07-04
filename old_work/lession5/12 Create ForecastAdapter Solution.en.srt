@@ -1,0 +1,60 @@
+﻿1
+00:00:00,130 --> 00:00:03,210
+这里是解决方案。在Utility类中，我们添加了
+Here's the solution. In the Utility class, we add the
+
+2
+00:00:03,210 --> 00:00:06,260
+在代码片段中提供的辅助方法。我们也
+helper methods that were provide in the gist. We also
+
+3
+00:00:06,260 --> 00:00:09,970
+在string.xml文件里对这些字符串进行了声明。在
+declared these strings in the strings.xml file. In the
+
+4
+00:00:09,970 --> 00:00:13,000
+ForecastAdapter类的bindView方法中我们完成了
+ForecastAdapter Class, in the bindView method, we finish off the
+
+5
+00:00:13,000 --> 00:00:16,210
+遗留下来的to do。从游标中读取最高气温值
+remaining to do's. After we read the high temperature value
+
+6
+00:00:16,210 --> 00:00:18,420
+之后，我们试着找到ID为list_item_high_textview
+from the cursor, we go and try to find the
+
+7
+00:00:18,420 --> 00:00:21,950
+所代表的TextView，
+TextView, represented by the ID, list_item_high_textview
+
+8
+00:00:21,950 --> 00:00:25,970
+然后我使用Utility方法来格式化温度，
+Then we use Utility function to format the temperature
+
+9
+00:00:25,970 --> 00:00:28,960
+这样它就可以被展示在TextView里。然后我们对
+so that it can be displayed in the TextView. Then we do the
+
+10
+00:00:28,960 --> 00:00:32,820
+对最低气温值做同样的事情。在ForecastFragment类
+same for the low temperature value. In the ForecastFragment class, in the on
+
+11
+00:00:32,820 --> 00:00:38,230
+的onCreateView方法中,我们去掉了SimpleCursorAdapter，作为替代，我们
+onCreateView method, we remove the use of the simple cursor adapter. Instead, we
+
+12
+00:00:38,230 --> 00:00:41,420
+使用了ForecastAdapter并在listview上完成设置。
+use the new ForecastAdapter and then we set it on the listview.
+

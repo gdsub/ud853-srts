@@ -1,0 +1,124 @@
+﻿1
+00:00:00,710 --> 00:00:02,670
+所以我们将再次替换一个
+So once again we're going to replace the one
+
+2
+00:00:02,670 --> 00:00:06,300
+我们的测试的剩余部分，还有一个
+remaining part of our test, that still has a
+
+3
+00:00:06,300 --> 00:00:09,460
+标准数据库。让我们摆脱我们的数据库
+standard database. Let's actually get rid of our database.
+
+4
+00:00:09,460 --> 00:00:12,950
+只留下单独的insert语句。
+That leaves us with this lonely insert statement. Once
+
+5
+00:00:12,950 --> 00:00:16,090
+再一次像其余的事情一样，我们将取代
+again, like with everything else, we're going to replace that
+
+6
+00:00:16,090 --> 00:00:19,530
+内容解析器调用。当然我们
+with a content resolver call. And of course we're
+
+7
+00:00:19,530 --> 00:00:22,250
+实际上不会插入表中。我们将
+actually not going to be inserting the table. We're going
+
+8
+00:00:22,250 --> 00:00:25,510
+插入内容的URI，删掉Null。
+inserting the content URI. Getting rid of the nulls.
+
+9
+00:00:26,660 --> 00:00:28,870
+当然这并不返回位置行ID。
+Of course this doesn't return a location row ID.
+
+10
+00:00:30,730 --> 00:00:34,860
+这是对的。我们可以把它从URI里取出来，
+That's alright. We can pull it from the URI. Using
+
+11
+00:00:34,860 --> 00:00:38,120
+使用contentURIs的helper函数,让插入留在那吧
+the helper function from content URI's, we can leave
+
+12
+00:00:38,120 --> 00:00:41,160
+虽然这并不是必要的
+that insert in there, although it's not necessary. And the
+
+13
+00:00:41,160 --> 00:00:42,630
+其他一切都应该差不多一样
+rest of everything should pretty much be as it
+
+14
+00:00:42,630 --> 00:00:45,510
+我们不再在testprovider里使用数据库
+always is. We're no longer using a database at all
+
+15
+00:00:45,510 --> 00:00:49,140
+完全使用内容提供者
+within test provider, but entirely using the content provider.
+
+16
+00:00:49,140 --> 00:00:51,248
+运行我们的测试,看看他们是否仍然工作
+Let's run our tests and see if they still work.
+
+17
+00:00:51,248 --> 00:00:56,331
+[BLANK_AUDIO]
+
+18
+00:00:56,331 --> 00:00:59,410
+全部通过。祝贺你,我们现在
+And they all pass. Congratulations, we now
+
+19
+00:00:59,410 --> 00:01:01,620
+有一个功能完备的内容提供者
+have a fully functioning content provider that can
+
+20
+00:01:01,620 --> 00:01:04,560
+他们可以插入和查询
+both insert and query. But, of course,
+
+21
+00:01:04,560 --> 00:01:05,970
+当然还有其他你可能想使用内容提供者做的事
+there are other things you might want to do
+
+22
+00:01:05,970 --> 00:01:07,810
+目前，我们不会
+with the content provider. Now, we're not
+
+23
+00:01:07,810 --> 00:01:09,350
+使用它们
+actually going to use any of these things
+
+24
+00:01:09,350 --> 00:01:12,340
+但是这真的很重要
+in Sunshine. But it's really important to know.
+
+25
+00:01:12,340 --> 00:01:14,620
+所以,我建议你真正实现这些功能
+So, I suggest you actually implement these functions.
+

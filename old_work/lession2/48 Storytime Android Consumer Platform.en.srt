@@ -1,0 +1,261 @@
+1
+00:00:00,360 --> 00:00:03,130
+在2013年的六月中，每天就有150万台
+As of July of 2013, one and a half
+
+2
+00:00:03,130 --> 00:00:07,560
+新的Android设备被激活
+million new Android devices were being activated every day.
+
+3
+00:00:07,560 --> 00:00:09,080
+这在几年前是难以置信的，
+So it's hard to believe that just a few
+
+4
+00:00:09,080 --> 00:00:13,960
+我开始和那些潜在的开发者开会并解释
+years ago, I started all meetings with potential developers explaining
+
+5
+00:00:13,960 --> 00:00:16,079
+什么是Android然后说服他们
+what Android was and convincing them that it was
+
+
+6
+00:00:16,079 --> 00:00:19,560
+他们值得花费时间和精力为这个平台做开发。
+worth their time and effort developing for the platform.
+
+7
+00:00:19,560 --> 00:00:22,150
+到了2010年，我们甚至分享了数字
+It wasn't until 2010 that we even shared numbers
+
+8
+00:00:22,150 --> 00:00:26,080
+去表明这个平台的成长，那就是在那一年的三月份每一天就会有10万的激活量。
+to indicate the growth of the platform, 100,000 daily activations
+
+9
+00:00:26,080 --> 00:00:28,729
+在2011年中期快速增长到
+in May of that year. Which quickly grew to
+
+10
+00:00:28,729 --> 00:00:33,290
+500000并且在2012年的时候直接超过日激活量百万这个目标。
+500,000 in mid-2011 and crossed the million daily activations mark
+
+11
+00:00:33,290 --> 00:00:37,340
+这表明全球已经有了超过10亿的Android设备
+in 2012. That represents over a billion Android devices around
+
+12
+00:00:37,340 --> 00:00:39,940
+因此我在开始演讲的时候
+the world, which is why I don't start my presentations
+
+13
+00:00:39,940 --> 00:00:42,320
+不再询问房间里的人是否都有Android设备
+asking if anyone in the room has an Android device
+
+14
+00:00:42,320 --> 00:00:45,480
+对于我来说，在那初期阶段最让我大吃一惊的就是
+anymore. To me though, the biggest surprise in those early
+
+15
+00:00:45,480 --> 00:00:48,610
+要付出那么多的努力去说服这些
+days was how much effort was required to convince people
+
+16
+00:00:48,610 --> 00:00:52,580
+为移动端开发的人们，让他们认为这是一个值得做的投资。
+that developing for mobile at all was a worthwhile investment.
+
+17
+00:00:52,580 --> 00:00:54,700
+大部分人用他们的手机
+A huge number of people use their phones to go
+
+18
+00:00:54,700 --> 00:00:56,810
+去上网，他们中的一部分则是把手机当作上网的
+online and many of them use their phone as the main
+
+19
+00:00:56,810 --> 00:00:59,808
+主要方法。在2013年的皮尤互联网项目的
+way to do so. One study by the Pew Research
+
+20
+00:00:59,808 --> 00:01:04,163
+一个研究中发现将近三分之二的手机用户
+Internet Project in 2013 found that nearly two-thirds of mobile owners
+
+21
+00:01:04,163 --> 00:01:07,111
+用他们的手机上网，是2009年的两倍
+use their phones to go online, double the rate found
+
+22
+00:01:07,111 --> 00:01:09,810
+还有另外的三分之一的手机用户则主要
+in 2009. And that a third of phone users use mostly
+
+23
+00:01:09,810 --> 00:01:13,970
+用他们的手机上网。沉思一下.......
+their phone to get online. Think about that for a second.
+
+24
+00:01:13,970 --> 00:01:17,730
+这些手机已经成为口袋中的电脑并且不断的连接到
+These portable phones have become pocket computers constantly connected to the
+
+25
+00:01:17,730 --> 00:01:20,910
+云端，然后可以让我们近距离接触或者是一目了然
+cloud to make the sum of human knowledge available
+
+26
+00:01:20,910 --> 00:01:23,530
+所有的知识。
+to us at a touch and a glance. It's no
+
+27
+00:01:23,530 --> 00:01:25,870
+难怪对于越来越多的人来说
+wonder then that for a growing number of people,
+
+28
+00:01:25,870 --> 00:01:28,050
+手机并不是你离开桌子以后继续上网的替代品
+mobile isn't how to get online when you're away from
+
+29
+00:01:28,050 --> 00:01:31,610
+它实际上在取代个人电脑，成为人们主要的计算设备。
+your desk. It's actually displacing PCs as their primary
+
+30
+00:01:31,610 --> 00:01:35,460
+这个改变是多么的戏剧化，这种趋势
+computing platform. The change is so dramatic and the trend
+
+31
+00:01:35,460 --> 00:01:39,150
+也是非常明了，就像完全依赖于互联网的Google这类的公司
+so clear that companies like Google, who depend entirely on
+
+32
+00:01:39,150 --> 00:01:42,800
+它们有一个移动第一政策，确保在做一个新的产品时
+internet, have a mobile first policy, ensuring that the
+
+33
+00:01:42,800 --> 00:01:45,750
+移动体验是首要考虑的方面。
+mobile experience is the first consideration when building
+
+34
+00:01:45,750 --> 00:01:49,930
+这一趋势在成长过程中使用手机的年轻用户
+new products. This trend is particularly evident amongst younger
+
+35
+00:01:49,930 --> 00:01:52,870
+中尤为明显，特别是
+users who grew up using mobiles and especially
+
+36
+00:01:52,870 --> 00:01:55,340
+在非洲和亚洲这些新兴市场，在这些地方用
+in emerging markets like Africa and Asia, where the
+
+37
+00:01:55,340 --> 00:01:59,530
+无处不在的宽带基础设施来支持桌面电脑是不太现实的。
+infrastructure to support ubiquitous broadband for desktops isn't
+
+38
+00:01:59,530 --> 00:02:02,300
+就在几年前我有幸访问肯尼亚的时候
+as readily available. I saw this firsthand when I
+
+39
+00:02:02,300 --> 00:02:03,960
+我就亲眼见过这样的
+had the good fortune to visit Kenya a
+
+40
+00:02:03,960 --> 00:02:08,380
+事情。到处都是手机和热情，可是有才的开发者
+few years ago. Ubiquitous phones and passionate, talented developers
+
+41
+00:02:08,380 --> 00:02:12,300
+却无处可寻，然而真正打动我的是
+weren't really familiar, but what really struck me was the degree
+
+42
+00:02:12,300 --> 00:02:15,300
+手机已经成为人们日常生活
+to which mobile phones had become an integral part of people's
+
+43
+00:02:15,300 --> 00:02:18,940
+必不可少的一部分。它并不仅仅是用来看个邮件，或者在脸谱网上发点东西
+everyday lives. It wasn't just checking email and posting to Facebook,
+
+44
+00:02:18,940 --> 00:02:21,740
+从杂货到车票，她还被用来（未知）购买任何东西。
+it was using [UNKNOWN] to buy everything from groceries to bus
+
+45
+00:02:21,740 --> 00:02:25,390
+手机是生活的一部分，我听说
+fare. Mobiles was such a part of life that I heard
+
+46
+00:02:25,390 --> 00:02:28,620
+比起请人喝一杯以表达爱慕
+rather than buying someone a drink to show that you're interested,
+
+47
+00:02:28,620 --> 00:02:30,440
+人们更愿意留下电话号码，这样如果对方
+you'd send them a phone credit so that they can call
+
+48
+00:02:30,440 --> 00:02:33,420
+也有同样的感觉，他们回打电给你。智能手机从
+you if they felt the same way. In the transition of
+
+49
+00:02:33,420 --> 00:02:36,890
+科技饰品过渡到生活的一部分
+smartphones from tech accessory to a part of life to the
+
+50
+00:02:36,890 --> 00:02:39,180
+到你上网的主要途径，再到你支付的手段
+main way you get online to how you pay for things,
+
+51
+00:02:39,180 --> 00:02:43,200
+甚至是如何调情，这个过程代表我们开发者的巨大机会。
+even how you flirt, represents a huge opportunity for us as
+
+52
+00:02:43,200 --> 00:02:47,010
+那么问题来了，你将如何改变世界呢？
+developers. The question is, how are you going to change the world?
+

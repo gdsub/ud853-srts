@@ -1,0 +1,112 @@
+1
+00:00:00,390 --> 00:00:04,260
+在我们开始我们的content provider代码之前，我们
+Before we start coding our content provider, let's
+
+2
+00:00:04,260 --> 00:00:07,000
+要先确认manifest是正确建立的。
+make sure the manifest is set up correctly.
+
+3
+00:00:07,000 --> 00:00:09,760
+你需要更新包含应用标签的androidmanifest.xml文件夹
+You need to update the androidmanifest.xml file within
+
+4
+00:00:09,760 --> 00:00:12,550
+再添加到contentprovider里去。
+the application tag to add the content provider. So
+
+5
+00:00:12,550 --> 00:00:16,140
+这样安卓的内容解析器才能访问它。
+that android's content resolver can see it. The
+
+6
+00:00:16,140 --> 00:00:19,030
+当归档到content provider类的包名确定时，
+authority really should match your package name. While
+
+7
+00:00:19,030 --> 00:00:21,860
+authority也应匹配包的名字。
+the name indicates which file your content provider
+
+8
+00:00:21,860 --> 00:00:25,730
+
+接着，开始写on create函数。
+class is in. Next, let's code up on create.
+
+9
+00:00:25,730 --> 00:00:28,380
+我们要给database helper创建一个实际变量。
+We'll begin by creating an instance variable for our
+
+10
+00:00:28,380 --> 00:00:33,650
+在on create里面，我们初始化实际变量。
+database helper. In on create, we initiate our instance variable.
+
+11
+00:00:33,650 --> 00:00:36,490
+我们通过返回true值来告诉安卓
+We return true, which is how we tell Android that
+
+12
+00:00:36,490 --> 00:00:40,150
+content provider已经创建成功。这结果显示
+the content provider has been created successfully. It turns out
+
+13
+00:00:40,150 --> 00:00:42,060
+我们可以通过重复同一个之前对数据库做过的测试
+that we can repurpose the same test we did
+
+14
+00:00:42,060 --> 00:00:45,200
+来测试新的content provider。这
+for the database to test our new content provider. This
+
+15
+00:00:45,200 --> 00:00:47,920
+让你能够测试你的content provider 代码
+will allow you to both test your content provider code
+
+16
+00:00:47,920 --> 00:00:51,060
+验证content provider calls是怎样代替SQLI
+and see how the content provider calls replace the SQLI
+
+17
+00:00:51,060 --> 00:00:54,240
+数据调用的。通过使用Android
+database calls. Let's start by using Android
+
+18
+00:00:54,240 --> 00:00:57,730
+studio复制testDB来测试provider。
+Studio to copy TestDB to test provider.
+
+19
+00:01:01,690 --> 00:01:06,050
+我们重命名测试创建DB,来测试删除DB。
+Let's rename test create DB, to test delete DB.
+
+20
+00:01:08,330 --> 00:01:12,740
+所以开始启用一个干净的记录。我们只需要留下一个M背景点在那里删除
+So we can start with a clean slate. We'll just leave the M context dot delete
+
+21
+00:01:12,740 --> 00:01:15,850
+数据库行。其他测试也是
+database line in there. We'll leave the other
+
+22
+00:01:15,850 --> 00:01:18,260
+
+同样，很快就可以达到目的。
+test the same, we'll get to it soon.
+

@@ -1,0 +1,30 @@
+1
+00:00:00,400 --> 00:00:02,740
+早期的Android版本并没有装载器
+Early versions of Android didn't have the loader
+
+2
+00:00:02,740 --> 00:00:06,310
+而现在为了避免直接从UI 代码中直接查询数据库添加了装载器
+pattern. It was added to avoid directly querying the
+
+3
+00:00:06,310 --> 00:00:10,830
+那么，从UI 代码中直接查询数据库
+database from the UI code. What are the disadvantages
+
+4
+00:00:10,830 --> 00:00:14,080
+的缺点是什么呢？
+in directly querying the database from the UI code?
+
+5
+00:00:16,129 --> 00:00:18,630
+查询将会消耗很多时间
+The query could take a long time. It could
+
+6
+00:00:18,630 --> 00:00:21,630
+它可能会在完成之前被中止。不然的话它是没有缺点的
+be terminated before it completes. Or there are no disadvantages.
+

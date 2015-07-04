@@ -1,0 +1,20 @@
+1
+00:00:00,280 --> 00:00:02,870
+现在我们修改代码使得当Refresh菜单项被选择时，
+Now modify the code so that when the Refresh menu item
+
+2
+00:00:02,870 --> 00:00:08,290
+执行FetchWeatherTask任务。但是稍等一下，
+is selected, it executes the FetchWeatherTask. But hang on. When you
+
+3
+00:00:08,290 --> 00:00:12,630
+当你点击Refresh按钮时，他崩溃了。为什么不
+tap on the Refresh button, it actually crashes. Why don't you
+
+4
+00:00:12,630 --> 00:00:15,210
+看看日志，到底什么错误引起了崩溃。
+go check the logs to see what error is causing this.
+

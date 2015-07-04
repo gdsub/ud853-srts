@@ -1,0 +1,115 @@
+﻿1
+00:00:00,400 --> 00:00:02,710
+因为AsyncTask是在Activity组件里面被创建  所以它可以
+Because it's being created within an Activity, it can be
+
+2
+00:00:02,710 --> 00:00:05,400
+被很轻松地终止  例如把手机旋转到另一个不同的
+terminated as simply as rotating the phone into a different
+
+3
+00:00:05,400 --> 00:00:08,710
+方向  因此  AsyncTask只能用于
+orientation. So, should only ever be used for tasks whose
+
+4
+00:00:08,710 --> 00:00:12,050
+生命周期被绑定到宿主Activity组件上的  并且在
+lifecycle is tied to the host Activity, and is expected
+
+5
+00:00:12,050 --> 00:00:15,420
+一两秒内就运行完的任务  在移动设备上
+to run for only a second or two. On mobile,
+
+6
+00:00:15,420 --> 00:00:18,100
+即使认为最轻量的网络请求会很快执行完
+it's unwise to assume that even the most trivial network
+
+7
+00:00:18,100 --> 00:00:21,680
+也是非常不明智的。所以一个更好的办法是
+access is going to happen quickly. So a better approach
+
+8
+00:00:21,680 --> 00:00:25,770
+使用一个服务  一个没有用户界面的应用程序组件
+would be to use a service. An application component without
+
+9
+00:00:25,770 --> 00:00:27,220
+被中断的可能性比较小
+the UI that's less likely to be
+
+10
+00:00:27,220 --> 00:00:30,820
+服务可能会使用到不精确的定时提醒任务
+interrupted. Possibly scheduled using an inexact repeating alarm.
+
+11
+00:00:32,970 --> 00:00:35,860
+更佳的是  Android有一个特定的解决方案  叫做
+Even better, Android has a specialized solution know
+
+12
+00:00:35,860 --> 00:00:39,170
+同步适配器  它专门被设计用以
+as Sync Adapter. And it's designed especially to schedule
+
+13
+00:00:39,170 --> 00:00:42,700
+高效地处理后台数据的同步  并尽可能的高效
+your background data syncs as efficiently as possible. Better
+
+14
+00:00:42,700 --> 00:00:46,830
+当然使用Google云消息是更加好的  当服务器端有变化发生时
+still would be using Google Cloud Messaging. This lets
+
+15
+00:00:46,830 --> 00:00:48,740
+它可以用来通知你的同步适配器
+you notify your Sync Adapter of changes on the
+
+16
+00:00:48,740 --> 00:00:52,460
+所以只有当你知道服务器上
+server side. So you're only ever initiating network requests
+
+17
+00:00:52,460 --> 00:00:54,510
+有数据更新的时候，你才需要在App里发起
+from your app when you know there's something to
+
+18
+00:00:54,510 --> 00:00:58,030
+一个网络请求  目前我们只需要尽力
+be updated on the server. For now we're concentrating
+
+19
+00:00:58,030 --> 00:01:01,340
+使我们的应用在前台很好的工作  但是稍后
+on making our app work when it's in the foreground. But we'll return to
+
+20
+00:01:01,340 --> 00:01:03,340
+我们仍然会回过头看看在后台
+look at these approaches to invisibly updating
+
+21
+00:01:03,340 --> 00:01:04,890
+更新你的App的方法
+your app from the background a little
+
+22
+00:01:04,890 --> 00:01:09,200
+目前  只需要记住在我们开发应用的剩余部分时
+later. For now, keep in mind that the refresh button and the new thread
+
+23
+00:01:09,200 --> 00:01:12,530
+刷新按钮以及创建新的线程都只是临时替代方案
+solution is just a place holder while we hook up the rest of the app.
+
