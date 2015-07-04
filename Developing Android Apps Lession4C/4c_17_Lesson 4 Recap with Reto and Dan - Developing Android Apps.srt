@@ -1,0 +1,69 @@
+1
+00:00:00,155 --> 00:00:03,730
+(Dan)那么，Rato,我们从这节课里学到了什么
+(Dan) So, Rato, what have we learned in this lesson?
+
+2
+00:00:03,730 --> 00:00:08,109
+(Rato)嗯…我学到的是我不想写数据库和ContentProvider
+(Rato) Well, I learned that I do not want to write databases and content providers.
+
+3
+00:00:08,109 --> 00:00:10,060
+你呢
+What did you learn in this lesson?
+
+4
+00:00:10,060 --> 00:00:12,980
+(Dan)嗯... JUnit测试是很棒的
+(Dan) Well, JUnit tests are awesome,
+
+5
+00:00:12,980 --> 00:00:17,550
+还有就是创建应用程序的后台框架是件很光荣的工作
+and building the back end framework of our apps is the most glorious of work.
+
+6
+00:00:17,550 --> 00:00:20,620
+对于创建一个强健的，用户体验很棒的应用来说
+It's an absolutely vital part of creating a robust app
+
+7
+00:00:20,620 --> 00:00:22,480
+这是必不可少的一部分
+with a great user experience.
+
+8
+00:00:22,480 --> 00:00:26,405
+(Rato)我也学到了让Dan说英语口音是很难的事情
+(Rato) I also learned that Dan cannot do an English accent.
+
+9
+00:00:26,405 --> 00:00:30,329
+幸好你可以准备欢迎Katherine在第五课回归
+Fortunately, you can get ready to welcome back Katherine for lesson five
+
+10
+00:00:30,329 --> 00:00:32,512
+那节课上，我们会把activity拆成fragment
+where we'll shatter our activity into fragments,
+
+11
+00:00:32,512 --> 00:00:35,487
+使用content provider来承载更复杂的UI
+use our content providers to populate more complex UIs,
+
+12
+00:00:35,487 --> 00:00:39,320
+还有创建可以像在手机上布局一样好的平板布局
+and build layouts that work as well on tablets as they do on phones.
+
+13
+00:00:39,320 --> 00:00:41,660
+(Dan)就像便利的赛格威进入历史舞台
+(Dan) Which seems like a convenient segueway
+
+14
+00:00:41,660 --> 00:00:44,840
+还有android硬件的进化史一样
+into the history and evolution of Android hardware.

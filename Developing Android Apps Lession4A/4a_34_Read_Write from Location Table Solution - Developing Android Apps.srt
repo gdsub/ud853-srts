@@ -1,0 +1,144 @@
+1
+00:00:01,050 --> 00:00:04,140
+这里就是testLocationTable方法
+Here's what the testLocationTable method looks like.
+
+2
+00:00:04,140 --> 00:00:07,000
+首先  我们获取一个可写数据库的引用
+First, we grab a reference to a writable database
+
+3
+00:00:07,000 --> 00:00:09,480
+这是因为我们要修改数据库
+because we'll be modifying the database.
+
+4
+00:00:09,480 --> 00:00:11,630
+然后我们使用TestUtilities类中的方法
+Then we create content values for
+
+5
+00:00:11,630 --> 00:00:16,149
+创建一行位置信息的ContentValues对象
+a row of location data using the function within test utilities.
+
+6
+00:00:16,149 --> 00:00:20,340
+接着把这个ContentValues对象插入到位置表中
+Then we insert that content values object into the location table.
+
+7
+00:00:20,340 --> 00:00:23,590
+插入语句的返回值是这一行的id字段
+The return value of the insert statement should be row ID.
+
+8
+00:00:23,590 --> 00:00:28,040
+如果返回值是-1  说明插入操作失败了  我们需要对此断言
+If it's negative one, we know the insertion failed, so we assert that.
+
+9
+00:00:28,040 --> 00:00:31,970
+然后我们只传入表名参数进行数据查询
+Then we query the location table and pass in null for all the parameters
+
+10
+00:00:31,970 --> 00:00:35,640
+这会得到所有行和列的默认查询结果集
+to get a default query of all tabled rows and columns, since we want
+
+11
+00:00:35,640 --> 00:00:39,950
+这么做是因为我们想要确认数据库中的所有数据都是我们插入的
+a precisely verify that our database only contains our inserted record.
+
+12
+00:00:39,950 --> 00:00:42,260
+查询操作会返回一个Cursor对象
+The query will return a cursor.
+
+13
+00:00:42,260 --> 00:00:45,470
+这里我们断言不能将Cursor对象指向第一行数据（也就是查询结果为空）
+And we are assert if we cannot move it to the first row.
+
+14
+00:00:45,470 --> 00:00:49,940
+最后  我们调用TestUtilities中的validateCurrentRecord方法验证
+Finally, we call validate current record from the test utility to validate
+
+15
+00:00:49,940 --> 00:00:52,450
+查询的结果是否正确
+the query will return the correct record.
+
+16
+00:00:52,450 --> 00:00:55,600
+validateCurrentRecord方法会从我们插入的
+Validate current record grabs the set of value pairs
+
+17
+00:00:55,600 --> 00:00:57,460
+ContentValues对象中获得键值对的集合
+from the content values that we inserted.
+
+18
+00:00:57,460 --> 00:01:01,390
+然后遍历这个集合  用Cursor对象的getColumnIndex方法
+It then iterates through them, using cursor.getColumnIndex
+
+19
+00:01:01,390 --> 00:01:04,030
+通过键的名称获得每个键在Cursor中索引值
+to get the index of each column in the record set by name.
+
+20
+00:01:05,120 --> 00:01:08,350
+我们需要通过这个索引值从Cursor对象中读取数据
+We need the column index to get data from the cursor.
+
+21
+00:01:08,350 --> 00:01:11,065
+注意返回的数据的属性顺序和映射数组是一致的
+Note the projections are always return in order.
+
+22
+00:01:11,065 --> 00:01:14,695
+所以如果我们指定了映射数组参数  我们就可以直接使用映射数组
+So if we specify a projection, we can safely use the indexes from our
+
+23
+00:01:14,695 --> 00:01:17,695
+中的索引值  而不需要像这样进行查找
+projection array without having to look them up like this.
+
+24
+00:01:17,695 --> 00:01:19,595
+让我们回到我们的测试
+Let's go back to our test.
+
+25
+00:01:19,595 --> 00:01:23,665
+我们通过断言moveToNext返回false确认数据库中只有一个记录
+We checked to make sure the database has only one record by making sure we moved
+
+26
+00:01:23,665 --> 00:01:28,715
+然后关闭Cursor对象和数据库以保证不会泄漏资源
+to next fails, then we close the cursor and database, we don't leak resources.
+
+27
+00:01:28,715 --> 00:01:31,360
+最后  我们返回locationRowId值
+Finally, we return the locationRowId.
+
+28
+00:01:31,360 --> 00:01:34,040
+运行一下测试看看
+Let's run the test and see what happens.
+
+29
+00:01:34,040 --> 00:01:38,220
+测试通过  只剩下一个测试要写啦
+And the test past, [SOUND], only one more test to write.

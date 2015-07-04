@@ -1,0 +1,20 @@
+1
+00:00:00,270 --> 00:00:03,270
+其中有些东西你可能会注意到，我们所使用的数据库大小感觉上一直在
+One of the things you may have noticed, is that our app database continues
+
+2
+00:00:03,270 --> 00:00:07,900
+增长。最终会把整个设备给占满了。这个时候最好的方法就是把我们这个应用给
+to grow forever, eventually filling up the device. This is a great way to
+
+3
+00:00:07,900 --> 00:00:12,930
+删了。所以为了不要出现这种问题，我们必须要修复这个问题。 添加一些代码来删掉
+get out app uninstalled. So let's fix this. Add code to delete weather data that
+
+4
+00:00:12,930 --> 00:00:18,190
+一天之前的天气数据。我们需要使用日历来让应用完成这个功能。
+is more than one day old. Use the Calendar function to do data arithmetic.
+

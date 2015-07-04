@@ -1,0 +1,55 @@
+﻿1
+00:00:00,450 --> 00:00:03,340
+添加支持位置的插入，看起来
+Adding support for the location insert, looks almost
+
+2
+00:00:03,340 --> 00:00:06,520
+和添加支持天气差不多，我们只要
+identical to adding support for weather. We just have
+
+3
+00:00:06,520 --> 00:00:09,030
+选择正确的表名，并且
+to select the right table name, and return
+
+4
+00:00:09,030 --> 00:00:12,460
+返回正确的位置URI就可以。但是，还有一件事情要做
+the right location URI. But there's one more thing
+
+5
+00:00:12,460 --> 00:00:14,140
+我们要做的就是
+to do. All we have to do is
+
+6
+00:00:14,140 --> 00:00:17,570
+为这个函数中传入的URI调用
+call getContext().getContentResolver().notifyChange on the
+
+7
+00:00:17,570 --> 00:00:19,120
+getContext().getContentResolver().notifyChange
+URI that was actually passed
+
+8
+00:00:19,120 --> 00:00:22,370
+来通知任何需要知道的观察者
+into our function. To notify any observers that need
+
+9
+00:00:22,370 --> 00:00:25,350
+UI已经改变了
+to know that UI has changed. And that's it.
+
+10
+00:00:25,350 --> 00:00:28,510
+我们现在已经完成插入了，然而
+We've now finished insert. However, of course,
+
+11
+00:00:28,510 --> 00:00:30,510
+我们要添加一个测试才能真正的完成它
+we're never done without also adding a test.
+

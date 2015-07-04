@@ -1,0 +1,25 @@
+1
+00:00:00,470 --> 00:00:06,100
+好的，你已经全部完成！那就让我们在my solution里看一看。现在注意了，
+All right, you're done! Let's go take a look at my solution. Now note,
+
+2
+00:00:06,100 --> 00:00:10,050
+其实你还不能运行代码来测试这些解决方案。
+you won't be able to actually run this code to test any of these solutions yet.
+
+3
+00:00:10,050 --> 00:00:14,700
+但是不用担心，我们会尽快测试。这是我们的解决方案。
+But don't worry, we'll be testing soon. Here's our solution.
+
+4
+00:00:14,700 --> 00:00:18,510
+我们从这个唯一的表名开始。在剩余的内部类里边
+We begin with our unique table name. The rest of the inner class,
+
+5
+00:00:18,510 --> 00:00:21,310
+则列出了我们将要用来存储数据的列。
+lists the columns we're going to use to store our data.
+

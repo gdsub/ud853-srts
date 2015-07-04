@@ -1,0 +1,55 @@
+﻿1
+00:00:00,460 --> 00:00:03,600
+现在，乍一看，减少传输的负载
+Now, at first glass, reducing the payload of each transfer, and
+
+2
+00:00:03,600 --> 00:00:07,330
+并且在需要的时候进行数据传输，貌似算是个办法
+only transmitting data when it's required seems like a sound approach.
+
+3
+00:00:07,330 --> 00:00:09,830
+您减少数据的传输量，这样网络中的数据就少了。
+You're reducing the amount of data being transferred, so that's less
+
+4
+00:00:09,830 --> 00:00:14,300
+这样在设备上所存储的运行过程中所产生的荣誉数据就少多了。
+data on the network. That's less superfluous work being done storing processing
+
+5
+00:00:14,300 --> 00:00:17,730
+基本上在你没有真正的
+data on the device. It's basically a case of putting off
+
+6
+00:00:17,730 --> 00:00:20,040
+知道你需要干什么之前，基本上都耽误着所有的工作。
+any work, until you actually know you need to do it.
+
+7
+00:00:20,040 --> 00:00:22,630
+但事实证明相比于之前的大cookie模式下的全部工作，
+But it turns out that this approach has it's drawbacks, compared
+
+8
+00:00:22,630 --> 00:00:26,220
+这种方法也有他的缺点。
+to the big cookie model of all of that work up front.
+
+9
+00:00:26,220 --> 00:00:30,110
+所以，综上所述，这个还是一个更好的解决办法。但是让我们近距离观察这个大cookie
+So, overall, this is a better solution. But let's take a closer look at the big
+
+10
+00:00:30,110 --> 00:00:31,670
+模板。要做到这一点，我们就需要
+cookie model. And to do that, we really
+
+11
+00:00:31,670 --> 00:00:34,360
+底层的cell radio状态机。
+need to understand the underlying cell radio state machine.
+

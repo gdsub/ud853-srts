@@ -1,0 +1,85 @@
+﻿1
+00:00:00,260 --> 00:00:03,070
+现在轮到你来创建温度单位的设定。这
+Now its your turn to build the temperature unit setting. This
+
+2
+00:00:03,070 --> 00:00:05,590
+将会联合很多你已经学过的概念，而且需要
+will bring together a lot of the concepts that you've learned and
+
+3
+00:00:05,590 --> 00:00:08,520
+花一些时间实现，但是我觉得你已经准备好了。
+will take some time to implement, but we think you're ready for
+
+4
+00:00:08,520 --> 00:00:11,650
+修改这个APP，以使正确的温度单位显示
+it. Modify the app, so that the right temperature units are displayed
+
+5
+00:00:11,650 --> 00:00:15,410
+给用户。假设我们从服务器获取的数据时公制单位
+to the user. Use the assumption that we're syncing metric data from
+
+6
+00:00:15,410 --> 00:00:18,500
+最终，我们将在设备上拥有一个数据库，并且我们
+the server. Eventually, we'll have a database on the device and we
+
+7
+00:00:18,500 --> 00:00:21,840
+不希望在数据库里华氏和摄氏温度混在一起。因此
+don't want a mix of Fahrenheit and Celsius data in there. Hence,
+
+8
+00:00:21,840 --> 00:00:25,300
+我们会通过从服务器获取公制数据来保持一致。然后
+we'll stay consistent by getting metric data from the server. And then,
+
+9
+00:00:25,300 --> 00:00:28,100
+我们会在运行中转换到偏好的单位
+we'll convert on the fly to the preferred units when
+
+10
+00:00:28,100 --> 00:00:31,330
+当我们更新用户界面的时候。在你修改完这些后，我会展示
+we update the UI. After you make these changes, I'll show
+
+11
+00:00:31,330 --> 00:00:33,750
+给你看这在设备上是什么样的。如果你
+you what it looks like on the device. If you
+
+12
+00:00:33,750 --> 00:00:37,640
+进入设置，你可以看到当前的温度单位偏好设置。如果你
+go to settings, you'll see the temperature units preference. If you
+
+13
+00:00:37,640 --> 00:00:40,930
+点击它，你可以看见有两个选项的对话框
+tap on that, you see a dialog with two options.
+
+14
+00:00:40,930 --> 00:00:43,130
+如果你转换到英制，然后返回到
+If you switch to imperial and then you go back to
+
+15
+00:00:43,130 --> 00:00:46,230
+天气预报列表，你会看见现在所有的气温
+the forecast list, then you see that all the temperatures now
+
+16
+00:00:46,230 --> 00:00:50,660
+都用华氏表示。当这个任务成功完成后，回答这个问题。哪一个Preference的子类
+are in Fahrenheit. Once it works, answer this question. Which subclass
+
+17
+00:00:50,660 --> 00:00:52,030
+是你刚刚用过的？
+of preference did you use?
+

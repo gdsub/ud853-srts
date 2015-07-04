@@ -1,0 +1,19 @@
+1
+00:00:00,640 --> 00:00:04,260
+请通读指导笔记中关于数据库中的外键与数据表连接的
+Read through the documentation provided in the instructor notes on foreign
+
+2
+00:00:04,260 --> 00:00:05,890
+有关文档
+keys and joins.
+
+3
+00:00:05,890 --> 00:00:09,220
+并描述外键约束对Sunshine来说起了什么作用
+Describe what the foreign key constraint does for sunshine.
+
+4
+00:00:10,270 --> 00:00:13,020
+这对于测试我们的天气数据表来说又意味着什么呢
+What does this mean in terms of testing our weather table?

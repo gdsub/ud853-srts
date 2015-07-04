@@ -1,0 +1,68 @@
+1
+00:00:00,200 --> 00:00:01,350
+好吧，你搞定了
+All right, you're done.
+
+2
+00:00:02,760 --> 00:00:04,640
+我们来看看这个解决方法
+Let's look at the solution.
+
+3
+00:00:04,640 --> 00:00:10,550
+首先我们在AbstractThreadedSyncAdapter中添加一个LOG_TAG
+Okay, we'll begin by adding a log tag
+in to our AbstractThreadedSyncAdapter.
+
+4
+00:00:10,550 --> 00:00:14,580
+由于这个玩意是在后台运行的，所以有些log记录是很有帮助的。
+Since this stuff runs in the background,
+it's helpful to have some logging.
+
+5
+00:00:14,580 --> 00:00:18,590
+由于我们希望syncAdapter处于无人值守模式
+Since we ultimately want the syncAdapter
+to run in an unattended mode,
+
+6
+00:00:18,590 --> 00:00:21,960
+我们从Utility类中提取位置请求，
+we pull the location query
+from our Utility class, and
+
+7
+00:00:21,960 --> 00:00:25,020
+然后我们把sunshineService中的代码拷贝进来
+then we paste in the code from
+our existing sunshine service.
+
+8
+00:00:25,020 --> 00:00:27,030
+然后我们需要补充一些东西
+We'll have to patch a few things up.
+
+9
+00:00:27,030 --> 00:00:30,520
+我们需要调用getContexts来获得当前的Context对象
+We'll have to call get contexts
+to get the current context.
+
+10
+00:00:30,520 --> 00:00:35,150
+比如，我们在getWeatherDataFromJson和addLocation
+For example, we copy over
+the getWeatherDataFromJson function
+
+11
+00:00:35,150 --> 00:00:37,690
+中补充getContexts
+as well as the addLocation function.
+
+12
+00:00:37,690 --> 00:00:41,210
+最后我们修改updateWeather来启用syncAdapter
+Finally we fix updateWeather
+to use our syncAdapter.
+

@@ -1,0 +1,40 @@
+1
+00:00:00,390 --> 00:00:02,780
+恭喜。你现在知道如何构建一个在前台运行没关
+Congratulations. You now know how to build an
+
+2
+00:00:02,780 --> 00:00:05,290
+同时在后台运行高校的应用了。
+app that runs beautifully in the foreground, and efficiently
+
+3
+00:00:05,290 --> 00:00:07,840
+在这一课中，你学会了如何使用服务
+in the background. In this lesson, you learned how
+
+4
+00:00:07,840 --> 00:00:10,930
+以及考虑Adapter(适配器)，同时还有创建
+to use services and think adapters, as well as
+
+5
+00:00:10,930 --> 00:00:14,020
+丰富的通知，一切都是为了创造
+creating rich notifications, all ways to provide a
+
+6
+00:00:14,020 --> 00:00:17,670
+很棒的用户体验，即使在你的应用不可见的时候。
+great user experience, even when your app isn't visible.
+
+7
+00:00:17,670 --> 00:00:19,720
+现在加入来听最后一段故事，
+Join me now for the final story time, as
+
+8
+00:00:19,720 --> 00:00:22,040
+我会引领你看看Android可能的未来
+I take you into a possible future for Android.
+

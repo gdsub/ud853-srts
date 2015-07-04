@@ -1,0 +1,336 @@
+1
+00:00:00,037 --> 00:00:04,190
+感谢Veto告诉我们选择合适的版本的重要性
+Thanks for telling us about the
+importance of proper dessert selection.
+
+2
+00:00:04,190 --> 00:00:06,290
+让我们来选择一个甜点吧
+So let's choose our desserts now.
+
+3
+00:00:06,290 --> 00:00:09,830
+我们App支持的最早的版本是Gingerbread
+The earliest platform version that
+our Apple support is Gingerbread.
+
+4
+00:00:09,830 --> 00:00:12,860
+目前来说，选择Gingerbread意味着
+At the current time, choosing
+Gingerbread means we can cover over 99%
+
+5
+00:00:12,860 --> 00:00:16,070
+在Google Play Store激活的设备范围内我们可以覆盖99%的设备
+of the devices active
+on Google Playstore.
+
+6
+00:00:16,070 --> 00:00:19,690
+这也是能不能使用Google Play Services例如
+It's also the cutoff for using Google
+Play services for things like maps and
+
+7
+00:00:19,690 --> 00:00:22,540
+maps, location和 Android support library的分水岭
+location and
+the Android support library.
+
+8
+00:00:22,540 --> 00:00:26,400
+support library包提供了对于之后版本的UI新特性的支持
+The support library package offers an
+implementation of ui features that were
+
+9
+00:00:26,400 --> 00:00:28,400
+added in later releases of Android but
+
+10
+00:00:28,400 --> 00:00:30,750
+可以在老版本上使用新版本的UI
+now can be used on older
+versions of the platform.
+
+11
+00:00:30,750 --> 00:00:32,040
+所以很有用
+So it's really useful.
+
+12
+00:00:32,040 --> 00:00:34,825
+我们选择了API 10的Gingerbread
+Notice how we picked the latest
+version of Gingerbread with API level
+
+13
+00:00:34,825 --> 00:00:39,220
+因为它相对于API 9修复了一些bug
+10 because it contains additional bug
+fixes that API level 9 doesn't have.
+
+14
+00:00:39,220 --> 00:00:41,320
+然后点击Next
+The we can go ahead and click Next.
+
+15
+00:00:41,320 --> 00:00:44,340
+选择一个模板，我们选择Blank Activity with Fragment
+We're going to choose the template,
+Blank Activity with Fragment.
+
+16
+00:00:44,340 --> 00:00:47,580
+有一个Activity作为UI的呈现容器
+For background context and
+activity serves as the present layer for
+
+17
+00:00:47,580 --> 00:00:51,890
+上面一个Fragment占据部分屏幕来呈现内容
+our UI, and a fragment represents
+a behavior or portion of the screen.
+
+18
+00:00:51,890 --> 00:00:54,995
+我们可以修改引导为我们自动生成的文件名
+And now we have an option to modify
+the names of the files that will be
+
+19
+00:00:54,995 --> 00:00:56,770
+auto-generated from the wizard.
+
+20
+00:00:56,770 --> 00:00:59,210
+我们的Activity名是MainActivity
+The name of our activity
+is MainActivity, and
+
+21
+00:00:59,210 --> 00:01:03,720
+它的布局由activity_main所定义的，这是一个XML文件
+the layout will come from activity_main,
+which is an XML file.
+
+22
+00:01:03,720 --> 00:01:07,730
+同样的，Fragment的布局来自fragment_main
+In a similar fashion, the fragments
+layout will come from fragment_main,
+
+23
+00:01:07,730 --> 00:01:09,130
+也是一个XML文件
+which is also an XML file.
+
+24
+00:01:09,130 --> 00:01:13,525
+在这里我修改下文件名为main.xml
+I'm going to do a small change for
+the name of the menu file to be called
+
+25
+00:01:13,525 --> 00:01:18,220
+因为老版本的Android Studio的默认名是这个
+main.xml because on a older version of
+Android's tu, that was the default name.
+
+26
+00:01:18,220 --> 00:01:19,640
+然后点击Finish
+Then we go ahead and hit Finish.
+
+27
+00:01:19,640 --> 00:01:22,960
+现在你应该有一个新创建的Sunshine App
+And now you should have a newly
+created sunshine app with the files on
+
+28
+00:01:22,960 --> 00:01:24,060
+文件目录在左边
+the left here.
+
+29
+00:01:24,060 --> 00:01:26,540
+默认情况下，你看到的文件是基于Android视图
+By default, you may see
+the Android view of the files,
+
+30
+00:01:26,540 --> 00:01:28,510
+是一个平面式的项目结构
+which is a flattened version
+of the project structure,
+
+31
+00:01:28,510 --> 00:01:31,890
+并且它高亮了你需要编辑的Android源代码文件
+and it highlights the key Android
+source files that you'll need to edit.
+
+32
+00:01:31,890 --> 00:01:35,030
+在这个课程里，我们使用这个项目视图
+In this course, though, we're going to
+be using the project view because that's
+
+33
+00:01:35,030 --> 00:01:37,145
+因为老版本中我们也是用的这个
+what we had in the older
+version of Android Studio.
+
+34
+00:01:37,145 --> 00:01:39,405
+你也可以选择你喜欢的视图
+You can choose any view that you prefer,
+though.
+
+35
+00:01:39,405 --> 00:01:41,875
+确保Gradle的编译完成了
+Make sure you wait for
+the gradle build to finish.
+
+36
+00:01:41,875 --> 00:01:44,895
+如果你有任何问题，可以去查看引导文档或者下面的笔记
+If you have any errors, you can check
+the guide and instructor notes below.
+
+37
+00:01:44,895 --> 00:01:47,125
+提示下，你还可以看下在App文件夹中的
+As a tip,
+you can check the build.gradle file,
+
+38
+00:01:47,125 --> 00:01:49,795
+build.gradle文件
+which is located under the App folder.
+
+39
+00:01:49,795 --> 00:01:52,235
+你需要确保compileSdkVersion和
+You want to make sure that
+the compileSdkVersion and
+
+40
+00:01:52,235 --> 00:01:55,975
+targetSdkVersion都指向最新的稳定版本
+the targetSdkVersion are both pointing
+at the latest stable version of
+
+41
+00:01:55,975 --> 00:01:57,365
+the platform.
+
+42
+00:01:57,365 --> 00:02:01,510
+这里，最新版本是API 21也就是Android 5.0 Lollipop
+In this case, it's 21 for
+the Android 5.0 Lollipop release.
+
+43
+00:02:01,510 --> 00:02:04,720
+一旦编译好了，我们可以添加更适合我们的天气App的
+Once it's done building, we can add a
+custom app icon that's more fitting for
+
+44
+00:02:04,720 --> 00:02:05,290
+自定义的App图标
+our weather app.
+
+45
+00:02:05,290 --> 00:02:09,310
+右击App文件夹单击新建Image Asset
+Right-click on the App folder and
+click New Image Asset.
+
+46
+00:02:09,310 --> 00:02:12,680
+你可以改变这些选项
+You can choose from any of
+the clip art options or
+
+47
+00:02:12,680 --> 00:02:15,980
+可以用下面我们提供的图片
+you can use the one that we
+provide in the download below.
+
+48
+00:02:15,980 --> 00:02:19,540
+用这个占位图标
+Then, use a placeholder icon we
+provide in a download below.
+
+49
+00:02:19,540 --> 00:02:22,010
+现在App会显示这个图标
+Now this will show up in
+the All Apps screen, so
+
+50
+00:02:22,010 --> 00:02:24,790
+点击这个图标会打开我们的App
+that clicking on this app
+icon will launch our app.
+
+51
+00:02:24,790 --> 00:02:28,280
+如果Sunshine是你最近使用的App
+It will also show up in the overview
+space if sunshine is one of
+
+52
+00:02:28,280 --> 00:02:29,950
+这个图标也会显示在多任务切换界面中
+your most recent tasks.
+
+53
+00:02:29,950 --> 00:02:34,380
+还可以在我们App的Action Bar中看到这个图标
+The other place you might see this app
+icon is in the action bar of our app.
+
+54
+00:02:34,380 --> 00:02:38,420
+在这个课程的视频中，我们使用的是之前的
+In certain videos of this course that
+were filmed earlier on Kit Kat by
+
+55
+00:02:38,420 --> 00:02:42,560
+Kit Kat版本，默认是在Action Bar中有显示App图标
+default the action bar
+shows the app icon.
+
+56
+00:02:42,560 --> 00:02:46,570
+而在Material Design的Lollipop和之后的版本中
+With material design on Lollipop and
+later, the app icon doesn't show up
+
+57
+00:02:46,570 --> 00:02:49,500
+App图标默认不会显示，所以如果没看到它不需要担心
+by default anymore, so
+don't worry if you don't see it.
+
+58
+00:02:49,500 --> 00:02:50,230
+It's fine, and
+
+59
+00:02:50,230 --> 00:02:53,330
+我们将会在课程5中自定义Action Bar
+we're going to be styling the action
+bar later in lesson five, anyways.

@@ -1,0 +1,120 @@
+1
+00:00:00,380 --> 00:00:02,715
+在ForecastFragment这个类里  我们想要通过修改
+In the ForecastFragment, we want to modify the
+
+2
+00:00:02,715 --> 00:00:05,070
+FetchWeatherTask这个类  以使我们在
+FetchWeatherTask, so that we can pass in the
+
+3
+00:00:05,070 --> 00:00:08,730
+执行任务的时候可以把邮编作为参数传进去
+postal code parameter when we execute that task.
+
+4
+00:00:08,730 --> 00:00:11,370
+你可以点击这个类名或者使用快捷键
+You can click on this class, to jump
+
+5
+00:00:11,370 --> 00:00:16,780
+找到它定义的地方  然后你就能发现
+to where it's defined or you can use this shortcut. And here you see that we
+
+6
+00:00:16,780 --> 00:00:19,640
+我们把输入参数的泛型改为了String类型
+modified the generic input type, to be a
+
+7
+00:00:19,640 --> 00:00:25,080
+这样doInBackground()方法就会接收到String类型的参数
+String so that the doInBackground method receives String params.
+
+8
+00:00:25,080 --> 00:00:27,783
+现在我们只传入了一个字符串类型的参数
+Now, we only passed in one String param,
+
+9
+00:00:27,783 --> 00:00:30,923
+94043（邮编） 所以在下面
+94043. So when you see down here later, we
+
+10
+00:00:30,923 --> 00:00:33,816
+我们可以读取参数数组下标为0的参数
+can read out the zeroth position in the params
+
+11
+00:00:33,816 --> 00:00:37,520
+来获得邮编
+array, to get that postal code. Notice that we're
+
+12
+00:00:37,520 --> 00:00:40,590
+注意我们这里使用了URiBuilder类  把请求参数
+using the URiBuilder here, and we're appending query
+
+13
+00:00:40,590 --> 00:00:43,830
+一个一个加上去  我们为这些参数名预定义了一些常量
+parameters, one by one. We define constants for these
+
+14
+00:00:43,830 --> 00:00:47,100
+就像这里看到的这样  至于参数具体的值
+query params, as seen here. And for the values,
+
+15
+00:00:47,100 --> 00:00:50,300
+我们也定义在了上面  你可以想到的是
+we also define them up here. You can imagine
+
+16
+00:00:50,300 --> 00:00:52,590
+未来我们可能会在这个类外面
+that in the future these might be configured outside
+
+17
+00:00:52,590 --> 00:00:54,580
+设定这些变量  现在我们只是把他们放在这里
+of this class, but for now we're just going
+
+18
+00:00:54,580 --> 00:00:57,820
+为验证 URL 是正确的
+to define them here. To verify that this URI
+
+19
+00:00:57,820 --> 00:01:01,010
+我们在这里把这个 URL 输出到
+was defined properly, we add a verbose log command
+
+20
+00:01:01,010 --> 00:01:04,629
+日志调试窗口 我们来一起看看
+to print out the built URI. Let's verify that
+
+21
+00:01:04,629 --> 00:01:07,460
+我们输出的日志信息吧
+the log we added actually shows up. In overflow
+
+22
+00:01:07,460 --> 00:01:10,350
+在右上角更多菜单栏我们点击刷新（Refresh）  然后我们看到
+menu we tap Refresh. Then we see the log
+
+23
+00:01:10,350 --> 00:01:15,300
+日志的标签FetchWeatherTask和我们的URI被打印出来了
+tag FetchWeatherTask with our URI printed out. It says
+
+24
+00:01:15,300 --> 00:01:19,610
+它显示着94043  输出 JSON 格式、公制单位、7天  那么它看起来是正确的咯
+94043, jSON format metric units, seven days. So this looks correct.
+

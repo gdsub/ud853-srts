@@ -1,0 +1,120 @@
+1
+00:00:00,150 --> 00:00:02,400
+从日志中，我们知道我们拥有了正确的天气预报的数据，
+From the logs, we know that we have the right forecast
+
+2
+00:00:02,400 --> 00:00:04,770
+并且它是我们希望的正确格式，也即一个字符串数组。
+data and it's in the right format that we want as
+
+3
+00:00:04,770 --> 00:00:07,860
+因此终于到了更新UI的时候了。
+an array of strings. So it's finally time to update the
+
+4
+00:00:07,860 --> 00:00:11,950
+回头想想AsyncTask是如何将数据传递
+UI. Think back on how AsyncTasks are able to pass data
+
+5
+00:00:11,950 --> 00:00:15,090
+回主线程的。你可以同时按下Ctrl+O看看
+back onto the main thread. You can hit Ctrl+O to see
+
+6
+00:00:15,090 --> 00:00:18,880
+我们能重写AsyncTask的哪些方法。如果
+the list of available methods we can override in AsyncTask. If
+
+7
+00:00:18,880 --> 00:00:21,190
+你点击它们中的任何一个，它将会自动生成
+you click on any of them, it will be prepopulated in
+
+8
+00:00:21,190 --> 00:00:25,220
+在代码中。然后，你能使用从AsyncTask接收到的新的数据
+the code for you. Then, you can update ArrayAdapter with the new
+
+9
+00:00:25,220 --> 00:00:28,730
+去更新ArrayAdapter。提醒你一下，
+data that was retrieved by the AsyncTask. As a hint, you
+
+10
+00:00:28,730 --> 00:00:31,890
+你可以将ForecastAdapter作为全局变量。这样的话，你
+can make the ForecastAdapter be a global variable. That way, you
+
+11
+00:00:31,890 --> 00:00:35,300
+就能够在FetchWeatherTask中访问到它。确保FetchWeatherTask
+can access it from within the FetchWeatherTask. Make sure that this
+
+12
+00:00:35,300 --> 00:00:37,810
+不是一个静态类，否则，你将不能从中
+is not a static class, otherwise, you won't be able to
+
+13
+00:00:37,810 --> 00:00:41,810
+访问ForecastFragment中的成员变量。然后，
+access the member variable from the ForecastFragment. Then, go ahead
+
+14
+00:00:41,810 --> 00:00:44,250
+编译你的应用。当你运行它时，
+and compile and build the app. When you run it, and
+
+15
+00:00:44,250 --> 00:00:46,970
+你点击refresh按钮，你应该看到你所在地区的
+you hit the refresh button, you should see a week's worth
+
+16
+00:00:46,970 --> 00:00:50,320
+一个星期的天气数据。一旦它可以运行了，你可以
+of weather data for your location. Once it's working, you can
+
+17
+00:00:50,320 --> 00:00:52,310
+删除verbose级别的日志语句，以使日志
+remove the verbose log statements so you don't
+
+18
+00:00:52,310 --> 00:00:54,900
+不会那么杂乱。当你运行这个代码，
+clutter the logs. As you're working on this
+
+19
+00:00:54,900 --> 00:00:58,550
+如果你看到了UnsupportedOperationException异常，
+code, if you see an UnsupportedOperationException,
+
+20
+00:00:58,550 --> 00:01:00,360
+确保当你创建假数据，
+make sure that when you're creating the fake
+
+21
+00:01:00,360 --> 00:01:03,580
+然后初始化ArrayAdapter时，你传入了
+data, that when you initialize ArrayAdapter, you passed
+
+22
+00:01:03,580 --> 00:01:05,590
+一个字符串列表，而不是
+in a list of strings, and not an
+
+23
+00:01:05,590 --> 00:01:07,470
+一个数组。这样你能够在这个list集合上
+array. That way you can call the clear
+
+24
+00:01:07,470 --> 00:01:10,040
+调用clear()方法或者add()方法。
+method or the add method on this list collection.
+

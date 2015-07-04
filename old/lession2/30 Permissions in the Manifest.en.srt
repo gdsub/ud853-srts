@@ -1,0 +1,20 @@
+1
+00:00:00,200 --> 00:00:01,250
+花一点时间去浏览
+Take a moment to explore the
+
+2
+00:00:01,250 --> 00:00:05,080
+developers.android.com上面的安全部分的内容
+security section of developers.android.com. Which of these
+
+3
+00:00:05,080 --> 00:00:06,990
+下面的哪些操作只有在manifest文件中
+following activities can only be done
+
+4
+00:00:06,990 --> 00:00:09,330
+声明权限以后才可以完成
+after declaring a uses-permission in the manifest?
+

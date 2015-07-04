@@ -1,0 +1,85 @@
+1
+00:00:00,700 --> 00:00:04,990
+作为一个应用开发者  我们有责任让自己的应用一旦被使用就深深吸引住用户
+As app developers, it's our job to maintain the illusion that once started,
+
+2
+00:00:04,990 --> 00:00:07,680
+时刻在后台等待着用户的使用
+every app is waiting patiently in the background looking for
+
+3
+00:00:07,680 --> 00:00:11,670
+所以  一旦用户再次把你的应用转回到前台
+its chance to be the star when called on. So whenever the user switches back to
+
+4
+00:00:11,670 --> 00:00:14,700
+无论你的应用是否被系统临时终止
+your app, whether or not the system is kilted in the interim,
+
+5
+00:00:14,700 --> 00:00:18,780
+都要显示出跟离开时一样的UI界面
+they should be presented with the same UI they had when they left. To help,
+
+6
+00:00:18,780 --> 00:00:22,540
+为了帮助应用在这种情况下保存和恢复状态  Android系统提供了一对特殊的句柄
+Android has a pair of handles specifically for persisting state in these
+
+7
+00:00:22,540 --> 00:00:27,030
+当你的应用进入不活跃状态  也就是暂停onPause状态时
+circumstances. On save instance data is called immediately before on pause. So
+
+8
+00:00:27,030 --> 00:00:33,450
+保存实例数据的函数会被立即调用
+as soon as your app is no longer active, an on
+
+9
+00:00:33,450 --> 00:00:37,630
+如果你的应用被系统终止
+restore instance data is called immediately after on create, but
+
+10
+00:00:37,630 --> 00:00:41,220
+在重新创建时  恢复实例数据的函数会被立即调用
+only if the app is being restarted after having been terminated by the system.
+
+11
+00:00:42,290 --> 00:00:45,880
+这意味着你可以读取出上次退出时  也就是这里
+That means you can read the bundle of state information saved the last time your
+
+12
+00:00:45,880 --> 00:00:49,870
+保存的那些状态信息
+app was moved to the foreground here. The next time,
+
+13
+00:00:49,870 --> 00:00:52,940
+即使系统终止了你的程序  下次你也可以使用这些参数
+you'll use the switches to your app even if it was killed by the system in
+
+14
+00:00:52,940 --> 00:00:57,520
+用这个Bundle里的数据  你可以重新恢复跟上次离开时一模一样的UI
+the mean time. Using that bundle you can return your ui to the same state it
+
+15
+00:00:57,520 --> 00:01:01,040
+这提供了一种不间断的效果
+was the last time the user saw it creating a seamless transition that hides
+
+16
+00:01:01,040 --> 00:01:05,880
+并把资源管理的操作掩盖在后台  不为用户所见  原因就是这些了
+the resource management happening under the covers. That's enough of the why,
+
+17
+00:01:05,880 --> 00:01:08,910
+让Dan给大家介绍一下 如何把这些理论与实际结合起来
+let's go back to Dan and see how to put this theory into practice.
+

@@ -1,0 +1,115 @@
+1
+00:00:00,230 --> 00:00:03,780
+在代码里  我们将要在PlaceholderFragment这个类的OnCreateView()里初始化
+In our code, we're going to initialize the adapter within the placeholder
+
+2
+00:00:03,780 --> 00:00:07,530
+我们的Adapter适配器  那是我们希望在ListView视图里呈现给
+fragment on create view method. Because that's where we want the list view to
+
+3
+00:00:07,530 --> 00:00:11,790
+用户的数据  我们使用一个数组适配器  我们用四个参数来初始化
+be populated with data. We're using a array adapter, and we can initialize it
+
+4
+00:00:11,790 --> 00:00:16,295
+Context  列表条目布局的id 
+with four parameters. A context, the ID of a list item layout,
+
+5
+00:00:16,295 --> 00:00:21,870
+TextView组件的id  以及原始数据列表
+the ID of a text view within that list item layout, as well as a list of data.
+
+6
+00:00:21,870 --> 00:00:25,560
+我们来一个一个讲讲
+We'll go through each of these parameters one by one now. First, for
+
+7
+00:00:25,560 --> 00:00:29,800
+Context  它描述的是一个应用程序环境的信息  即上下文
+context. It contained global information about the App environment.
+
+8
+00:00:29,800 --> 00:00:34,520
+通过它我们可以获取应用程序的资源和类
+It allows us to access system services and resources, as well as the application
+
+9
+00:00:34,520 --> 00:00:39,600
+也包括一些应用级别操作  这里我们使用由Fragments填充的Activity作为Context
+specific resources that we've defined. We use the fragments containing activity
+
+10
+00:00:39,600 --> 00:00:44,520
+所以  这个参数我们调用getActivity()这个方法填充
+as the context. So, we're going to call getActivity for our parameter here.
+
+11
+00:00:44,520 --> 00:00:48,120
+然后这个Adapter适配器需要知道每个条目的布局信息
+Since the adapter needs to know the layout for each list item, and
+
+12
+00:00:48,120 --> 00:00:52,990
+需要通过我们已经在XML文件中定义过id的布局来调用
+needs some reference to the XML layouts that we've defined. The r.java class is
+
+13
+00:00:52,990 --> 00:00:58,210
+R.java 这个文件是自动生成用来统一定义我们所有资源文件的东东
+a generated file that creates human readable identifiers for our resources. For
+
+14
+00:00:58,210 --> 00:01:03,490
+列表项目的布局信息  我们可以通过代码中调用 R.layout.list_item_forecast  来得到
+the list item layout, we refer to it in code as r.layout.list_item_forecast.
+
+15
+00:01:03,490 --> 00:01:07,546
+这是我们早些时候创建的XML文件里的东西
+This was the name of the XML file that we created earlier. Next,
+
+16
+00:01:07,546 --> 00:01:11,630
+下一步  适配器需要将天气情况的数据显示在
+the array adapter needs to know how to take the weather forecast string and
+
+17
+00:01:11,630 --> 00:01:16,110
+一个TextView组件里  所以通过我们之前给TextView创建的那个ID
+set that to be displayed in a text view. So you pass in the ID of the text view
+
+18
+00:01:16,110 --> 00:01:20,820
+就可以调用它了  虽然这两个资源ID看起来很像
+that we defined earlier, in the list item layout. Even though these two resource
+
+19
+00:01:20,820 --> 00:01:25,938
+一个是以R.layout开始的  另一个是以R.id开始的
+IDs look similar, one starts with R.layout while the other starts with R.id.
+
+20
+00:01:25,938 --> 00:01:30,663
+R.layout意味着要去布局文件中找相关内容  而R.id则是从XML布局文件中
+R.layout refers to a layout file, while an ID refers to a specific [UNKNOWN]
+
+21
+00:01:30,663 --> 00:01:35,694
+精确的定位到你曾为其设定为某个ID的元素  最后  我们提供一周的天气预报
+element with the matching ID attribute. And lastly, we pass in a week forecast,
+
+22
+00:01:35,694 --> 00:01:40,400
+通过之前定义的那个包含天气信息的数组
+which is the array list of forecast data that we defined earlier.
+
+23
+00:01:40,400 --> 00:01:44,030
+现在就可以初始化你的Adapter啦  做完的话请在这个复选框打勾
+Now go ahead and initialize your adapter. Check this box when you're done.
+

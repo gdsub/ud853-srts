@@ -1,0 +1,105 @@
+1
+00:00:00,190 --> 00:00:03,850
+让我们来点击这个绿色的运行按钮
+And now for the moment you've been waiting for, let's hit this green Run button.
+
+2
+00:00:03,850 --> 00:00:06,800
+它会让我们选择一个设备，因为我们没有物理设备
+It will prompt us to choose a device, without a physical device we
+
+3
+00:00:06,800 --> 00:00:10,700
+所以用对应SDK版本的模拟器来测试App
+can test the app using the emulator that comes with the Android SDK.
+
+4
+00:00:10,700 --> 00:00:13,640
+你应该在配置Android Studio时就已经创建了
+An Android virtual device should have already been created for
+
+5
+00:00:13,640 --> 00:00:16,290
+一个Android虚拟设备
+you automatically when you set up Android Studio.
+
+6
+00:00:16,290 --> 00:00:19,010
+所以单击OK
+So you can go ahead and click OK.
+
+7
+00:00:19,010 --> 00:00:20,170
+在模拟器启动的这段时间里
+While the emulator's booting up,
+
+8
+00:00:20,170 --> 00:00:24,130
+我想来介绍下怎样修改你的模拟设备
+I want to point out that if you ever want to modify your emulator devices,
+
+9
+00:00:24,130 --> 00:00:28,140
+你可以点击这个紫色的按钮
+you can click on this button with the purple device and the Android, and
+
+10
+00:00:28,140 --> 00:00:31,520
+打开AVD管理器来管理你的Android虚拟设备
+open up the AVD manager to manage your Android virtual devices.
+
+11
+00:00:31,520 --> 00:00:34,210
+它列出了已存在的设备
+It lists out your existing devices, and
+
+12
+00:00:34,210 --> 00:00:36,600
+你也可以新建其它的虚拟设备
+you can always create another virtual device.
+
+13
+00:00:36,600 --> 00:00:40,660
+你可以选择设备的类别，然后选择一个特定设备
+You can select the category of device and then a specific device.
+
+14
+00:00:40,660 --> 00:00:44,530
+然后需要选择运行的平台版本
+Then you choose which platform version it should be running on.
+
+15
+00:00:44,530 --> 00:00:48,010
+这是这台电脑上唯一可运行的版本
+And this is the only one that's available on this computer now.
+
+16
+00:00:48,010 --> 00:00:52,830
+所以我们选择Lollipop，选择target为Google API
+So Lollipop is good, and we choose the Google API's target, because it
+
+17
+00:00:52,830 --> 00:00:56,810
+因为这会包括进去一些模拟器上已经预装好的Google服务
+will include some Google services already pre-installed on the emulator.
+
+18
+00:00:56,810 --> 00:00:57,890
+选择Next
+You can choose Next.
+
+19
+00:00:57,890 --> 00:01:02,230
+这里有更多可以自定义的选项和设置
+There's a couple more options and settings that you can modify, for example,
+
+20
+00:01:02,230 --> 00:01:06,990
+例如，如果你想要添加一个SD卡，或者相机，你可以在这里选择
+if you want an SD card, or a camera you can change those here, and
+
+21
+00:01:06,990 --> 00:01:10,420
+然后点击Finish，就创建了一个新的虚拟设备
+then you can go ahead and click Finish, and it'll create a new AVD for you.
+

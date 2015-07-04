@@ -1,0 +1,80 @@
+1
+00:00:00,300 --> 00:00:01,920
+就像你注意到的一样，实际上我们还没有测试新的功能。
+As you've noticed, we aren't actually testing
+
+2
+00:00:01,920 --> 00:00:04,170
+幸运的是，我们有一个绝妙的
+that new function yet. Fortunately, we have a
+
+3
+00:00:04,170 --> 00:00:05,890
+地方在后台做测试。
+pretty good spot in doing background to
+
+4
+00:00:05,890 --> 00:00:08,430
+毕竟我们在这已经
+do that. After all, right here we've already
+
+5
+00:00:08,430 --> 00:00:13,227
+解析了所有我们需要调用的函数。所以，我们可以只要调用long locationId就等价于
+parsed everything we need to call that function. So, we can just call long
+
+6
+00:00:13,227 --> 00:00:18,843
+调用了addLocation cityName locationQuery
+locationId equals addLocation cityName locationQuery
+
+7
+00:00:18,843 --> 00:00:25,411
+citylatitude还有citylongitude。它对我们拥有另一个方法的协议
+citylatitude, and citylongitude. It would be useful for our contract to have
+
+8
+00:00:25,411 --> 00:00:28,715
+是非常有用的，这是一个把数据工程转换为
+another method, one that converts a date object
+
+9
+00:00:28,715 --> 00:00:32,800
+我们的数据库使用的格式的函数。注意当你往Android studio
+to the format our database uses. Note that Android
+
+10
+00:00:32,800 --> 00:00:34,840
+中导入这个数据工程时可能会有点问题，
+Studio may have trouble importing this data object,
+
+11
+00:00:34,840 --> 00:00:37,930
+因为java有两个day类，一个在数据库里，
+since Java has two day classes, one in databases,
+
+12
+00:00:37,930 --> 00:00:42,680
+还有一个在java单元里。然而我想要的是在java单元里的数据。
+and one in java.util. We want java.util.date. Back
+
+13
+00:00:42,680 --> 00:00:45,180
+回到FetchWeatherTask,我们要从JSON中
+in the FetchWeatherTask, we're going to collect the data
+
+14
+00:00:45,180 --> 00:00:49,090
+收集所有天气的数据。好的，所以，
+from JSON into the weather array. All right, so
+
+15
+00:00:49,090 --> 00:00:50,530
+现在我们有一大堆
+we now have a whole bunch of data that
+
+16
+00:00:50,530 --> 00:00:53,300
+需要插入的数据。猜猜我们下一步将要做什么了？
+needs to be inserted. Guess what we're going to do next?
+

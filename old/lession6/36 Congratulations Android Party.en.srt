@@ -1,0 +1,75 @@
+1
+00:00:00,005 --> 00:00:01,016
+【声音】
+[SOUND].
+
+2
+00:00:01,016 --> 00:00:01,842
+【笑】
+>> [LAUGH]
+
+3
+00:00:01,842 --> 00:00:03,310
+啊！ Content Providers
+>> Content providers.
+
+4
+00:00:03,310 --> 00:00:06,640
+恭喜大家，你们已经完成构建Sunshine应用。
+>> Congratulations, everyone, you've finished building the Sunshine App.
+
+5
+00:00:06,640 --> 00:00:08,150
+但总有空间给更多的阳光。
+>> But there's always room for more sunshine.
+
+6
+00:00:08,150 --> 00:00:10,070
+是的Dan，但是现在是时候
+>> There is, Dan, but now it's time
+
+7
+00:00:10,070 --> 00:00:12,100
+让学生去构建他们最终的项目了。
+for the students to go build their final project.
+
+8
+00:00:12,100 --> 00:00:13,718
+你们可以从Android开发者网站上
+>> And you can get a lot of the resources you
+
+9
+00:00:13,718 --> 00:00:16,622
+获得构建一个超赞的应用所需的许多资源。
+need to build really great mobile apps at the Android developer site.
+
+10
+00:00:16,622 --> 00:00:19,306
+也可以从我们和Udacity这儿获取更多。
+>> And stay tuned for more from us and Udacity.
+
+11
+00:00:19,306 --> 00:00:25,184
+现在，我想
+>> For now, I think it's
+
+12
+00:00:25,184 --> 00:00:34,165
+是时候来些蛋糕庆祝一下了。
+time to celebrate with some cake.
+
+13
+00:00:34,165 --> 00:00:35,983
+哇欧。
+>> Woohoo.
+
+14
+00:00:35,983 --> 00:00:39,655
+柠檬挞。
+>> Lemon tarts.
+
+15
+00:00:39,655 --> 00:00:44,749
+【音乐♪】
+[MUSIC]
+

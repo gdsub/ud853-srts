@@ -1,0 +1,340 @@
+1
+00:00:00,420 --> 00:00:03,420
+根据之前的测试  我们成功地创建了数据库
+We tested that the database was created successfully.
+
+2
+00:00:03,420 --> 00:00:05,290
+但是现在我们要测试一下是否能
+But now we should test that reading from and
+
+3
+00:00:05,290 --> 00:00:08,800
+正确地从数据库中读写数据
+writing to the sunshine database works as expected.
+
+4
+00:00:08,800 --> 00:00:11,890
+我会教大家如何向数据库中插入一行数据
+I'll show you how we insert a row of data into the database, and
+
+5
+00:00:11,890 --> 00:00:14,740
+然后再从数据库中读出这行数据
+then query the database to read it back out.
+
+6
+00:00:14,740 --> 00:00:18,810
+首先  我们需要通过SQLiteOpenHelper类拿到数据库的引用
+First, we get a reference to the database from our SQLI Open Helper.
+
+7
+00:00:18,810 --> 00:00:21,960
+也就是一个SQLiteDatabase的实例
+Which is an instance of an SQLI database object.
+
+8
+00:00:21,960 --> 00:00:24,740
+我们在测试创建数据库的时候用到了这个实例
+We use this in test create DB.
+
+9
+00:00:24,740 --> 00:00:26,270
+由于我们需要向数据库写入数据
+Since we're writing to the database,
+
+10
+00:00:26,270 --> 00:00:30,170
+并且从中读取数据  我们需要一个可写的数据库实例
+as well as reading, we're going to get a writable database.
+
+11
+00:00:30,170 --> 00:00:33,390
+如果我们只需要读取数据  那么只需要一个可读的数据库实例就可以了
+If we were only reading, then we should use a readable database.
+
+12
+00:00:33,390 --> 00:00:36,600
+我们使用ContentValues对象表示需要插入到
+To represent the row of data, we want to insert into the database,
+
+13
+00:00:36,600 --> 00:00:38,870
+数据库中的一行数据
+we use a content values object.
+
+14
+00:00:38,870 --> 00:00:40,160
+我们在createNorthPoleLocationValues
+We create one of these,
+
+15
+00:00:40,160 --> 00:00:43,650
+工具方法中创建一个ContentValues对象
+in the create North pole location values utility function.
+
+16
+00:00:44,830 --> 00:00:48,550
+ContentValues对象包含了一组键值对
+Content values, contain a set of key value pairs.
+
+17
+00:00:48,550 --> 00:00:53,059
+你需要将字符串类型的键以及与其相关联的值存入ContentValues中
+You put a key string associated with the value, into the content value set.
+
+18
+00:00:53,059 --> 00:00:56,763
+字符串类型的键是数据库中的属性名称
+The key string is contain the names of columns in your database.
+
+19
+00:00:56,763 --> 00:01:00,490
+值则可以是多种数据类型
+The value can contain many different data types.
+
+20
+00:01:00,490 --> 00:01:04,140
+ContentValues对象在Android里用于向数据库中写入数据
+Content values, are used to write databases in Android.
+
+21
+00:01:04,140 --> 00:01:06,021
+一旦我们创建了ContentValues对象
+Once we've created our content values.
+
+22
+00:01:06,021 --> 00:01:08,465
+就可以调用数据库实例的insert方法
+We call database.insert,
+
+23
+00:01:08,465 --> 00:01:12,775
+将表名和ContentValues对象作为参数传入以创建一行新数据
+with the table name and content values to actually create the new row of data.
+
+24
+00:01:12,775 --> 00:01:15,475
+插入操作的返回值是一个长整形
+The return value, from our insertion is a long,
+
+25
+00:01:15,475 --> 00:01:19,435
+它是插入的新数据行的id属性
+that contains the new row ID from the _ID column.
+
+26
+00:01:19,435 --> 00:01:23,450
+如果插入操作失败  返回值是-1
+If there's an error inserting, the return value is negative 1.
+
+27
+00:01:23,450 --> 00:01:28,050
+现在我们有了这个id值  我们可以通过它从数据库中查询这一行数据
+Now that we have a row ID, we can query the database for that row.
+
+28
+00:01:28,050 --> 00:01:32,080
+这里是各种有不同个数参数的重载的query方法
+There are several query methods that take in different numbers of parameters.
+
+29
+00:01:32,080 --> 00:01:34,780
+查询方法只是帮助我们更加简单地
+A query method, is just a helper function to make it
+
+30
+00:01:34,780 --> 00:01:37,770
+创建和执行一个SELECT语句
+easier to construct and execute a select statement.
+
+31
+00:01:37,770 --> 00:01:40,800
+让我们来看看query方法是如何构建一个查询语句的
+Let's show how the query function constructs a statement.
+
+32
+00:01:40,800 --> 00:01:44,920
+这里是一个SQLiteDatabase的基本的查询方法
+Here's what the base, SQLiteDatabase query function looks like.
+
+33
+00:01:44,920 --> 00:01:48,107
+最基本的查询只需要一个表名作为参数
+The most basic query we can make with this only has a table name.
+
+34
+00:01:48,107 --> 00:01:50,970
+这样会返回所有记录的所有属性
+And it returns all columns and all records.
+
+35
+00:01:50,970 --> 00:01:52,040
+剩下的这些参数
+The rest of the parameters,
+
+36
+00:01:52,040 --> 00:01:54,750
+可以对上面这个基本的输出结果进行过滤
+would modifying filter the output of this query.
+
+37
+00:01:54,750 --> 00:01:57,881
+添加一个我们希望返回的属性列表的映射数组
+Adding a projection, in array of columns, we wish to return,
+
+38
+00:01:57,881 --> 00:02:00,786
+会改变下面的SELECT语句所查询的内容
+changes what we are selecting in select statement below.
+
+39
+00:02:00,786 --> 00:02:03,510
+selection参数会过滤查询结果
+The selection parameter filters the results.
+
+40
+00:02:04,560 --> 00:02:08,120
+你也可以选择性地使用selection arguments参数来替换selection参数
+One can optionally also use the selection arguments to replace any
+
+41
+00:02:08,120 --> 00:02:10,020
+中对应的问号占位符
+question marks in the query.
+
+42
+00:02:10,020 --> 00:02:12,380
+Android将此作为绑定参数
+Android creates these as bound parameters,
+
+43
+00:02:12,380 --> 00:02:16,260
+它是面向SQLite数据库的低层次接口  也就是说  我们不需要担心
+in a low level interface to SQLite, which means, we don't have to worry
+
+44
+00:02:16,260 --> 00:02:19,530
+诸如转义字符串以保证查询的正确性这样的事情
+about things like escaping the strings to keep the query valid.
+
+45
+00:02:19,530 --> 00:02:21,660
+我们在构建了上面这样的查询以后
+We can also change the selection arguments,
+
+46
+00:02:21,660 --> 00:02:24,040
+依然可以改变selection参数
+after our query has been made this way.
+
+47
+00:02:24,040 --> 00:02:28,770
+最后一个参数  你应该可以猜到  会影响到查询结果的顺序
+The last parameter, as you would expect, affects the order by cause of our query,
+
+48
+00:02:28,770 --> 00:02:32,260
+它会把查询的结果按照日期降序排列
+causing it to sort our result in descending order by date.
+
+49
+00:02:32,260 --> 00:02:35,720
+所有的query方法都会返回一个数据库Cursor（游标）对象
+The query functions all return a database cursor.
+
+50
+00:02:35,720 --> 00:02:40,190
+Cursor对象是一种提供控制操作的数据结构  它可以遍历
+A cursor object, is a control structure, that enables traversal over the rows and
+
+51
+00:02:40,190 --> 00:02:42,420
+查询结果集的行和列
+columns of our query results set.
+
+52
+00:02:42,420 --> 00:02:46,590
+通常我们会通过调用cursor.moveToFirst来开始遍历
+Typically, we'll start traversing results set by calling cursor.move
+
+53
+00:02:46,590 --> 00:02:50,440
+如果Cursor对象中没有查询的结果  则会返回false
+to first, which will return false if there were no rows in the result,
+
+54
+00:02:50,440 --> 00:02:52,670
+也就是说没有数据符合查询的参数
+which means nothing matched the query parameters.
+
+55
+00:02:52,670 --> 00:02:56,245
+我们可以通过moveToNext方法来遍历每一行
+We can then call move to next, iterate through each row.
+
+56
+00:02:56,245 --> 00:02:59,745
+一旦Cursor对象指向了一行有效的数据  你就可以调用
+Once the cursor points to a valid row, one can call get
+
+57
+00:02:59,745 --> 00:03:04,215
+getColumnIndex方法来返回数据库的属性在结果集中的索引值
+column index to return the index of each database column within the results set.
+
+58
+00:03:04,215 --> 00:03:07,952
+你可以保存这些索引值  它们可以用于结果集中的每一行
+You can save these values and use them for every row in the result.
+
+59
+00:03:07,952 --> 00:03:09,492
+然后你可以根据列的索引值
+And then you can call get or methods,
+
+60
+00:03:09,492 --> 00:03:13,822
+调用获取这一行相应属性值的方法
+that retrieve the values from that row based upon column index.
+
+61
+00:03:13,822 --> 00:03:16,232
+我们现在已经讨论了如何在我们的应用中
+Everything we've covered so far, is how we read and
+
+62
+00:03:16,232 --> 00:03:18,392
+读写数据库
+write from the database in our app.
+
+63
+00:03:18,392 --> 00:03:19,832
+测试和应用中的代码都有相关的内容
+In tests and in our app code.
+
+64
+00:03:21,010 --> 00:03:22,170
+但是对于单元测试
+For our unit test, though,
+
+65
+00:03:22,170 --> 00:03:25,530
+我们增加了一个验证的步骤  也就是使用断言来判断Cursor中的值
+we add a step to validate the values from the cursor with the ones we
+
+66
+00:03:25,530 --> 00:03:30,470
+和最初创建ContentValues使用的值是否一样
+originally created the contentValues object with, by using assert statements.
+
+67
+00:03:30,470 --> 00:03:32,770
+另外  当我们完成任务以后需要关闭Cursor和数据库
+And, when we're finished we should close our cursor and
+
+68
+
+00:03:32,770 --> 00:03:34,775
+以尽快地释放系统资源
+database to release the system resources as soon as possible

@@ -1,0 +1,150 @@
+﻿1
+00:00:00,590 --> 00:00:02,710
+我认为可以把Intent看作信封，
+I like to think of intents as envelopes
+
+2
+00:00:04,920 --> 00:00:08,109
+里边包含了一个目标，比如在这里表示你想把消息发送给哪个组件
+each one includes who, or in this case, which component you want it
+
+3
+00:00:08,109 --> 00:00:11,290
+而且Intent里面还有空间可以
+delivered to. And there's room for a small amount of data to be delivered,
+
+4
+00:00:13,360 --> 00:00:14,409
+以Extra的方式存储一些少量的数据
+packaged as extras.
+
+5
+00:00:16,870 --> 00:00:19,000
+应用程序中有效的原始数据结构
+Primitive tuples that will be available to the application
+
+6
+00:00:19,000 --> 00:00:23,550
+才能最终得到并打开这个Intent对象。
+component that ultimately receives and opens this intent. So an
+
+7
+00:00:23,550 --> 00:00:26,910
+所以一个显式声明的Intent需要显示声明接收者的名称，
+explicit intent, explicitly specifies the name of the recipient, as
+
+8
+00:00:26,910 --> 00:00:29,900
+就像你在这个信封上看到的一样。隐式Intent就更有意思了。
+you can see on this envelope. Implicit intents are a
+
+9
+00:00:29,900 --> 00:00:33,800
+这里，我们并不指定这个类的名称。
+lot more interesting. Here, we don't specify the name of
+
+10
+00:00:33,800 --> 00:00:36,550
+我们甚至不知道他是什么。所以，
+the class. We don't even know what it is. So,
+
+11
+00:00:36,550 --> 00:00:39,500
+那我们如何知道需要打开哪个activity呢？
+how do we indicate which activity to launch? Well, you
+
+12
+00:00:39,500 --> 00:00:42,230
+你也许知道这样的故事，你是否有时候听说过有的信用的是
+know those stories you sometimes hear about letters with fake
+
+13
+00:00:42,230 --> 00:00:47,890
+假地址，但是依旧可以找到去往收件人地址的路线？
+addresses like these that somehow still find their way to the intended
+
+14
+00:00:47,890 --> 00:00:52,410
+安卓系统的Intent解析也是一样的工作原理。
+recipient? Well the intent resolution system on Android, works the same way.
+
+15
+00:00:54,660 --> 00:00:56,940
+找到一个activity，它能够执行一个你
+Finding an activity, capable of performing an action
+
+16
+00:00:56,940 --> 00:01:00,920
+对相关数据的操作。所以，与其指定
+you specify on the associated data. So, rather than
+
+17
+00:01:00,920 --> 00:01:03,420
+一个类名称，你要指定
+specifying the name of a class, you indicate
+
+18
+00:01:03,420 --> 00:01:05,930
+一个activity要执行的操作
+an action you'd like an activity to perform, and
+
+19
+00:01:05,930 --> 00:01:09,000
+和它对数据要进行的操作。
+on what data that action should be performed.
+
+20
+00:01:09,000 --> 00:01:13,210
+就像这样，我们想要打开一个activity，
+Like this, where we want to address an activity
+
+21
+00:01:13,210 --> 00:01:16,450
+它能用来浏览网页。因为Intent可以
+that's capable of viewing a website. And because intents
+
+22
+00:01:16,450 --> 00:01:20,200
+可以跨越程序进行传递，而所打开的activity
+can cross through application boundaries, the activity that started,
+
+23
+00:01:20,200 --> 00:01:22,900
+很可能都不是你的应用程序的activity。所以，
+may not be part of your app. So,
+
+24
+00:01:22,900 --> 00:01:27,270
+你可以像这样添加功能，比如浏览网页、
+you can include functionality like this, browsing websites or
+
+25
+00:01:29,480 --> 00:01:35,750
+打电话或是从电话本里选择联系人。
+making phone calls or choosing a contact from your address book. All
+
+26
+00:01:35,750 --> 00:01:39,150
+这些功能都可以从你的应用里打开，而你不用去实现这些功能。
+from within your app, without you having to implement any of it yourself.
+
+27
+00:01:41,160 --> 00:01:42,520
+你甚至不需要知道哪个应用
+You don't even need to know about the app
+
+28
+00:01:42,520 --> 00:01:45,530
+最终完成了你的请求。你可以在
+that will ultimately service your request. You can find
+
+29
+00:01:45,530 --> 00:01:47,850
+安卓开发者的网站的 Common Intents 页面里了解到
+details of some of the intents supported by native
+
+30
+00:01:47,850 --> 00:01:50,970
+原生程序所支持的intent。
+apps in Common Intents page of the Android developer site.
+

@@ -1,0 +1,30 @@
+1
+00:00:00,148 --> 00:00:05,400
+谢谢Raydo  我们来看看阳光(Sunshine)吧  我指的是我们的应用程序SunShine
+Thanks Raydo. But let's start thinking about Sunshine, meaning our app. I'm not
+
+2
+00:00:05,400 --> 00:00:09,430
+其实我并不是要故意为我们的名字起一个一语双关的名字哈
+convinced I'm ever going to tire of the obvious puns our app name allows.
+
+3
+00:00:09,430 --> 00:00:13,050
+切记  在我们学习本课程并一起完成这个应用程序的时候
+Remember, as we progress through this course and build this app together, you
+
+4
+00:00:13,050 --> 00:00:16,600
+你也应该要好好考虑下你想要实现的应用  毕竟市面上已经有很多天气类的
+should be thinking about the app you want to create. There are too many weather
+
+5
+00:00:16,600 --> 00:00:20,310
+应用程序了  在课程的结束  你就可以做一个
+apps already after all. By the end of the course, you could be ready to tackle
+
+6
+00:00:20,310 --> 00:00:24,430
+最终项目  把你新学到的所有知识都用上
+the final project. Using all your new Android know how to build your own app.
+

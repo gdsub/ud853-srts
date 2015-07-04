@@ -1,0 +1,269 @@
+1
+00:00:00,190 --> 00:00:02,830
+大家还记得第1节课中的这张图吗？  适配器
+Do you remember this diagram from lesson one? The adapter
+
+2
+00:00:02,830 --> 00:00:05,520
+有一个指向原始数据的引用  另外还有
+has a reference to the raw data. And has instructions on
+
+3
+00:00:05,520 --> 00:00:09,020
+如何创建每一个列表项布局的方法  这些布局最终
+how to build each list item layout. These layouts eventually make
+
+4
+00:00:09,020 --> 00:00:11,840
+会组成这里的ListView控件  但是如果这里的任何一项数据改变了
+it into the ListView here. But what happens if any
+
+5
+00:00:11,840 --> 00:00:15,490
+会发生什么呢  让我们来举个例子  现在有第四个
+of this data changes. Let's say for example, there's a fourth
+
+6
+00:00:15,490 --> 00:00:19,120
+联系人叫Don  适配器知道如何为Don创建一个
+contact named Don. The adapter knows how to create a list
+
+7
+00:00:19,120 --> 00:00:22,090
+列表项布局  但是现在的ListView控件的数据是过时的
+item layout for Don. But now the ListView is outdated
+
+8
+00:00:22,090 --> 00:00:26,170
+因为它只有3个列表项  不管怎样  我们需要适配器
+because it only has three items. Somehow, we need the adapter
+
+9
+00:00:26,170 --> 00:00:28,190
+来通知ListView控件数据发生了变化
+to notify the ListView that things have
+
+10
+00:00:28,190 --> 00:00:31,728
+幸运的是  有一个叫
+changed. And lucky for us, there's a method
+
+11
+00:00:31,728 --> 00:00:37,590
+adapter.notifyDataSetChanged()的方法  这个方法通知所有附加的观察者
+called: adapter.notifyDataSetChanged(). This notifies any attached observers,
+
+12
+00:00:37,590 --> 00:00:40,460
+比如这个  依赖的适配器数据发生了变化
+like this one, that the underlying adapter data has
+
+13
+00:00:40,460 --> 00:00:43,340
+这个时候ListView控件需要再次计算
+changed. Then the ListView needs to populate
+
+14
+00:00:43,340 --> 00:00:46,100
+它的列表项  所以它问适配器
+its children again. So it asks the adapter
+
+15
+00:00:46,100 --> 00:00:47,990
+有多少列表项  适配器回答说
+how many items there are? And the adapter
+
+16
+00:00:47,990 --> 00:00:51,210
+有4个  然后ListView控件会逐个获取
+responds with four. Then the ListView goes and fetches
+
+17
+00:00:51,210 --> 00:00:53,940
+每一个列表项直到它自己填满屏幕
+each one individually until it fills up the screen.
+
+18
+00:00:54,940 --> 00:00:57,300
+ListView控件是通过这个方法
+And it's through that method that the ListView is able
+
+19
+00:00:57,300 --> 00:01:00,250
+获取它所有的列表项的  但是现在
+to get all its list items. But now you
+
+20
+00:01:00,250 --> 00:01:03,270
+你肯定在想  我们确实成功地更新了ListView控件
+must be thinking. How did we actually update the ListView
+
+21
+00:01:03,270 --> 00:01:06,230
+但是我们并没有在app中添加这行代码呀
+successfully, without adding this line of code in our
+
+22
+00:01:06,230 --> 00:01:09,290
+其实呢  在使用ArrayAdapter的时候  无论何时你向它添加
+app? Well, with ArrayAdapter, whenever you add or
+
+23
+00:01:09,290 --> 00:01:14,190
+或者移除元素  它自动在内部调用了notifyDataSetChanged()方法  也就是说
+remove elements from it, it internally calls notifyDataSetChanged(). That means
+
+24
+00:01:14,190 --> 00:01:16,260
+我们不需要做任何事情  但是我们如何确认这一点呢
+we don't have to do anything. But how can be
+
+25
+00:01:16,260 --> 00:01:20,050
+我们可以查看一下ArrayAdapter类
+confirm this? Well, we can check the actual implementation
+
+26
+00:01:20,050 --> 00:01:23,470
+在framework中的实现  这里就是
+of the ArrayAdapter class in the framework. And here's
+
+27
+00:01:23,470 --> 00:01:26,190
+ArrayAdapter类在Android的framework层中的代码
+the code for the ArrayAdapter class within the Android
+
+28
+00:01:26,190 --> 00:01:29,930
+你可以点击下面的链接来继续查看详细代码
+framework. You can follow along with the link below.
+
+29
+00:01:29,930 --> 00:01:32,910
+首先我们来找一下add()方法  记住
+First, we're going to search for the add() method. Remember,
+
+30
+00:01:32,910 --> 00:01:35,730
+我们之前就是用这个方法向适配器中添加天气预报的字符串的
+we added forecast strings to the adapter using this
+
+31
+00:01:35,730 --> 00:01:38,790
+并且我们可以确认的是
+method. And sure enough we see that, the
+
+32
+00:01:38,790 --> 00:01:42,140
+notifyDataSetChanged()方法在内部被调用了
+notifyDataSetChanged() method is called internally. But you
+
+33
+00:01:42,140 --> 00:01:44,740
+但是你可能在想这里的这个布尔型变量是做什么的
+might be thinking what about this Boolean here. Well
+
+34
+00:01:44,740 --> 00:01:47,180
+让我们来把它找出来  如果你滑动到最上面
+let's look it up. If you scroll to the top
+
+35
+00:01:47,180 --> 00:01:50,270
+你会看到mNotifyOnChange变量一开始
+you'll see that, mNotifyOnChange is declared as
+
+36
+00:01:50,270 --> 00:01:53,640
+是被声明为true的  如果你查看它在其它地方的使用会发现
+true initially. As you go through your other references you'll
+
+37
+00:01:53,640 --> 00:01:56,800
+它只在这个叫setNotifyOnChange()的方法里
+see that it's only changed here in this
+
+38
+00:01:56,800 --> 00:02:01,410
+被改变了  因为我们不会通过参数false
+setNotifyOnChange() method. Since we don't call this public
+
+39
+00:02:01,410 --> 00:02:04,600
+调用这个公共方法  那么每次适配器更新的时候
+method with the value false, then we know that we're
+
+40
+00:02:04,600 --> 00:02:07,440
+我们都会被安全地通知到
+going to be safely notified each time the adapter updates.
+
+41
+00:02:08,850 --> 00:02:11,220
+现在再让我们回到add()方法  我想给你们
+Now let's go back to the add() method. I want to
+
+42
+00:02:11,220 --> 00:02:14,280
+再看一件事情  你会注意到
+show you one more thing. You'll notice in the
+
+43
+00:02:14,280 --> 00:02:17,660
+在addAll()方法中  它只通知它的观察者一次  然而
+addAll() method, it only notifies its observers once. Whereas in
+
+44
+00:02:17,660 --> 00:02:20,930
+对于add()方法每次你调用它  它都会更新它的
+the add() method every time you call this it will update
+
+45
+00:02:20,930 --> 00:02:24,700
+观察者们  这表明我们的代码每次调用add()方法都在
+it's observers. That means that our code actually is refreshing
+
+46
+00:02:24,700 --> 00:02:28,350
+刷新列表  因此  如果你的目标设备是运行Honeycomb或者更新的系统
+the list every time. So, if you're targeting Honeycomb or above
+
+47
+00:02:28,350 --> 00:02:30,180
+你可以使用这个方法来提高一点效率
+you can use this method to be a little more
+
+48
+00:02:30,180 --> 00:02:33,890
+总之  不要害怕尝试自己去做这些事情
+efficient. In general don't be afraid to try and do this
+
+49
+00:02:33,890 --> 00:02:38,710
+小窍门  任何时候如果你对某件事不确定
+on your own. As a general pro tip, if you're ever unsure about something,
+
+50
+00:02:38,710 --> 00:02:39,930
+尽情地去查看
+feel free to go and check the
+
+51
+00:02:39,930 --> 00:02:42,760
+Android源代码吧  不要把framework层的代码想象成
+Android source code. Don't treat the framework code
+
+52
+00:02:42,760 --> 00:02:47,320
+是一个黑盒子  充分利用Android开源的优势
+like a black box. Take advantage of the fact that Android is open source. The
+
+53
+00:02:47,320 --> 00:02:48,910
+你越了解这个平台
+more you learn about the platform the
+
+54
+00:02:48,910 --> 00:02:50,690
+你就会成为一个越好的Android开发者
+better of an Android developer you can become.

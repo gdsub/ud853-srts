@@ -1,0 +1,19 @@
+1
+00:00:00,760 --> 00:00:05,600
+我们开始设计这个天气应用的用户界面吧  我们已经创建好了一个Android项目
+Let's build up the UI for the weather app. We've created our Android project.
+
+2
+00:00:05,600 --> 00:00:09,800
+同时也懂得了一些基本的工具  我们来看看Sunshine的用户界面吧
+And understand more about basic tools. So let's go to the user interface for
+
+3
+00:00:09,800 --> 00:00:13,760
+这次我们来设计首屏
+Sunshine. Specifically, we're building the initial screen.
+
+4
+00:00:13,760 --> 00:00:16,320
+它用列表展示了未来几天天气情况
+A list of forecasts for the next several days.

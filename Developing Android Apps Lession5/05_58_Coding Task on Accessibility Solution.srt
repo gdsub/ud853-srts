@@ -1,0 +1,45 @@
+1
+00:00:00,080 --> 00:00:02,990
+谢谢你的答案。如果你在你的Sunshine应用中试试talkback，
+Thanks for your answer. If you tried talkback on the
+
+2
+00:00:02,990 --> 00:00:05,890
+你将发现一个简单的修改能够使我们的app
+Sunshine app, you'll notice that one easy fix to make our
+
+3
+00:00:05,890 --> 00:00:09,210
+更加的可理解，那就是在我们图片视图中添加内容描述。
+app more accessible is to add content descriptions to our image
+
+4
+00:00:09,210 --> 00:00:12,240
+因为在图片视图上并没有可读的文字。
+views. 'Cause there's no spoken text when a user talks on
+
+5
+00:00:12,240 --> 00:00:15,100
+在我们从游标上阅读天气预报之后，
+it. In the forecaster adopter after we read the weather
+
+6
+00:00:15,100 --> 00:00:18,130
+我们也
+forecast from the cursor, we also set it as a content
+
+7
+00:00:18,130 --> 00:00:22,240
+在icon上设置内容描述。类似地，在detail fragment中，一旦我们
+description on the icon. Similarly, in the detail fragment, once we
+
+8
+00:00:22,240 --> 00:00:25,520
+获得了天气预报，我们将在icon上设置内容描述。
+get the weather forecast, we set that as the content description
+
+9
+00:00:25,520 --> 00:00:29,510
+现在点击图片能够大声朗读天气的描述。
+on the icon. Now clicking on the image speaks the weather description out loud.
+

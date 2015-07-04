@@ -1,0 +1,115 @@
+1
+00:00:00,140 --> 00:00:02,360
+上一道小测验的方案说
+The solution of the previous quiz said that we
+
+2
+00:00:02,360 --> 00:00:05,030
+我们需要在两处定义具体宽度的fragment布局
+had to define the wide detail fragment layout in two
+
+3
+00:00:05,030 --> 00:00:09,630
+layout-land目录和layou-sw600dp目录。为了防止
+places. The layout-land and the layout-sw600dp folder. To avoid having
+
+4
+00:00:09,630 --> 00:00:13,050
+有这个文件的多份附件，我们应当使用布局别名。
+multiple copies of this file, we should use layout aliasing.
+
+5
+00:00:13,050 --> 00:00:15,700
+我们可以查看布局别名的文档来看看示例。
+We can check the documentation for layout aliases to see
+
+6
+00:00:15,700 --> 00:00:18,670
+比方说我们有一个主布局文件给
+an example. Say we have a main layout file that's
+
+7
+00:00:18,670 --> 00:00:22,177
+单面板的UI。在layout-large和layout-sw600dp目录中，
+for one pane UI. In the layout large and layout-sw600dp
+
+8
+00:00:22,177 --> 00:00:25,190
+我们想要有一个多面板的布局。
+folders, we want a multi pane layout. In case you're
+
+9
+00:00:25,190 --> 00:00:28,380
+你要是想了解，layout-large是为了对安卓3.2
+wondering, layout large is for backward compatibility purposes for
+
+10
+00:00:28,380 --> 00:00:32,280
+之前的大尺寸设备做向后兼容的，从那之后
+large devices prior to Android 3.2, that's when the SW
+
+11
+00:00:32,280 --> 00:00:35,340
+SW限定语才被引入。回到重点。
+qualifiers were introduced. So back to the point. To
+
+12
+00:00:35,340 --> 00:00:38,290
+为了避免代码重复，我们可以在基础布局目录中
+avoid code duplication, we can define the two pane layout
+
+13
+00:00:38,290 --> 00:00:41,161
+定义双面板的的布局。然后，在values-large
+in the base layout folder. Then, in the values-large
+
+14
+00:00:41,161 --> 00:00:44,870
+和values-sw600dp目录中，我们再创建一份引用
+and values-sw600dp folders, we can create a reference so that
+
+15
+00:00:44,870 --> 00:00:48,100
+这样主布局实际就映射到双面板布局了。
+the main layout actually maps to the two pane layout.
+
+16
+00:00:48,100 --> 00:00:50,950
+在Java代码中，你可以使用R.layout.main来引用他，
+In the Java code, you can reference it as r.layout.main,
+
+17
+00:00:50,950 --> 00:00:53,640
+但他实际上会引用到双面板布局。
+but it's actually referencing the two pane layout.
+
+18
+00:00:53,640 --> 00:00:55,110
+这就是detail fragment最终看起来的样子。
+This is what the detail fragment should look
+
+19
+00:00:55,110 --> 00:00:57,070
+这是手机
+like afterwards. And this is what the phone
+
+20
+00:00:57,070 --> 00:00:59,610
+水平视图看起来的样子。如果你旋转设备，
+landscape view looks like. If you rotate the
+
+21
+00:00:59,610 --> 00:01:02,460
+手机垂直视图将会是不一样的。
+device, the phone portrait view should be different.
+
+22
+00:01:02,460 --> 00:01:04,400
+在下一个编码任务中，我们将要使
+In the next coding task, we're going to make
+
+23
+00:01:04,400 --> 00:01:07,800
+今日列表项在平板上看起来更像其他项。
+the today list item look more like the other items in the list for the tablet.
+

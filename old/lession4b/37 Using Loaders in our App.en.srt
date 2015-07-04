@@ -1,0 +1,210 @@
+﻿1
+00:00:00,150 --> 00:00:02,170
+这节课的开始，我们会在forecastfragment.java文件中
+We'll start by adding our call back functions
+
+2
+00:00:02,170 --> 00:00:05,040
+添加回调函数
+to our forecast fragment. Now know we have two
+
+3
+00:00:05,040 --> 00:00:07,230
+我们有两个不同的loaderCallBacks回调函数选项，我们要
+different options here for loader call backs. We want to
+
+4
+00:00:07,230 --> 00:00:11,260
+确保选中的是 "android.support.v4" 包里的这个回调函数
+make sure that we're choosing the android.support.v4 callback so
+
+5
+00:00:11,260 --> 00:00:13,780
+这样我们就能使得应用在 Gingerbread（2.3版本） 系统上兼容。这是一个泛型类
+we're compatible with Gingerbread. These take a generic
+
+6
+00:00:13,780 --> 00:00:17,402
+我们将会使用 cursor，是的，
+type. We're going to want to use cursor. And yes that
+
+7
+00:00:17,402 --> 00:00:22,370
+就是 Android.database.cursor，现在让我们向下翻到
+is Andriod.database.cursor. Now, let's move down to where we
+
+8
+00:00:22,370 --> 00:00:25,380
+我们要插入代码的地方，就在最下面这里
+want to actually insert this code. Here at the bottom
+
+9
+00:00:25,380 --> 00:00:28,390
+当然，实际上可以用“Ctrl+I”快捷键来插入代码
+and, of course, we use control I to actually insert.
+
+10
+00:00:28,390 --> 00:00:32,250
+我们的Cursor加载器模式被完美地插入在了这里
+And there we have it beautifully, our loader pattern with cursor.
+
+11
+00:00:32,250 --> 00:00:35,256
+现在我们来做一些对我们有用的工作。首先，
+Now let's do some work that will help us out. First
+
+12
+00:00:35,256 --> 00:00:38,270
+我们在这个ForecastFragment的最上面添加一个记录列的数组
+we add an array of columns to the top of our forecast fragment.
+
+13
+00:00:38,270 --> 00:00:40,590
+这些列是会在我们的数据库查询中所使用的
+These are the columns that are going to be used in our
+
+14
+00:00:40,590 --> 00:00:44,490
+注意，因为WeatherEntry 和 LocationEntry都有_ID
+query. Note, that since both weather entry and location entry have
+
+15
+00:00:44,490 --> 00:00:47,720
+所以我们必须完整地描述哪一个ID
+the underscore ID field, we must fully qualify, which ID we
+
+16
+00:00:47,720 --> 00:00:50,460
+才是我们在想在查询结果中列出来的
+want in our projection for this query to work. And in
+
+17
+00:00:50,460 --> 00:00:53,110
+事实上，这个查询方法需要一个projection才能使用
+fact, this query requires a projection to work at
+
+18
+00:00:53,110 --> 00:00:58,190
+否则的话就是模拟两可的 接下来，这里是一些和
+all, otherwise that's ambiguous. Next, here are indexes that
+
+19
+00:00:58,190 --> 00:01:00,710
+FORECAST_COLUMNS捆绑在一起的指数。这将会使我们后面的工作
+are tied to these columns. This'll make some of
+
+20
+00:01:00,710 --> 00:01:04,200
+变得更加简单。注意，看这些，实际上它们必须是相互对应的
+our work easier, later on. Note, that these actually must
+
+21
+00:01:04,200 --> 00:01:07,420
+接下来我们创建一些 public 的指数 
+match. Then we create some public indexes to use,
+
+22
+00:01:07,420 --> 00:01:09,730
+供我们在adapter中使用，这会使得我们在adapter
+in our adapter. This allows us to make our
+
+23
+00:01:09,730 --> 00:01:12,190
+中的代码简洁有效。但是这意味着
+code tiny and efficient, in the adapter. But it
+
+24
+00:01:12,190 --> 00:01:15,950
+我们必须维持column index和projection之间的关系
+means, we must maintain the relationship between these column indexes.
+
+25
+00:01:15,950 --> 00:01:19,530
+每一个loader都有一个ID
+and the projection. Each loader has an ID. It
+
+26
+00:01:19,530 --> 00:01:21,750
+它允许在同一时间一个fargment中能有多个活跃的loader
+allows a fragment to have multiple loaders active at
+
+27
+00:01:21,750 --> 00:01:25,080
+我们将把这个ID和一个变量一起放在这个类的最上面
+once. We're going to place this along with an instance
+
+28
+00:01:25,080 --> 00:01:26,820
+这个变量用于储存我们的位置信息
+variable to save off our location here at the
+
+29
+00:01:26,820 --> 00:01:29,535
+ 接下来我们将重载
+top of our class. Next we're going to override
+
+30
+00:01:29,535 --> 00:01:33,310
+onActivityCreated函数。Loader在onActivityCreated函数
+onActivityCreated. Loaders are initialized
+
+31
+00:01:33,310 --> 00:01:34,980
+中初始化，因为loader的生命周期是
+in onActivityCreated because their life
+
+32
+00:01:34,980 --> 00:01:37,800
+和这个activity绑定到一起的，而不是和fragment
+cycle is actually bound to the activity. Not the
+
+33
+00:01:37,800 --> 00:01:42,350
+请注意这个loader ID的使用 —— FORECAST_LOADER
+fragment. Note the use of the loader ID. FORECAST_LOADER.
+
+34
+00:01:42,350 --> 00:01:45,420
+然后我们回到onCreateLoader这个函数
+Then we return to the onCreateLoader function.
+
+35
+00:01:45,420 --> 00:01:49,570
+我们添加一个新的CursorLoader，这个CursorLoader有我们的查询方法
+We add a new CursorLoader. This CursorLoader has
+
+36
+00:01:49,570 --> 00:01:53,350
+包括 start date，colums和sort order。
+our query, including start date, columns, and sort
+
+37
+00:01:53,350 --> 00:01:56,420
+我们的start date实际上在我们的URI中
+order. Our start date is actually in our
+
+38
+00:01:56,420 --> 00:02:01,490
+column就是我们之前定义的，并且sort order是
+URI. Our columns are the ones we defined earlier, and our sort order is going
+
+39
+00:02:01,490 --> 00:02:05,250
+基于COLUMN_DATETEXT升序的
+to be based upon COLUMN_DATETEXT ascending. Let's do
+
+40
+00:02:05,250 --> 00:02:07,430
+让我们做一遍最后的检查，我们要确保我们使用
+one last check. We want to make sure we're
+
+41
+00:02:07,430 --> 00:02:09,150
+了这些类的支持库版本
+using the support library version of all of
+
+42
+00:02:09,150 --> 00:02:13,240
+否则，我们无法兼容Android 2.3版本
+these classes, otherwise we won't get Android 2.3 compatibility.
+

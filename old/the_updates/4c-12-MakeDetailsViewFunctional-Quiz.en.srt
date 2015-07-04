@@ -1,0 +1,95 @@
+1
+00:00:00,370 --> 00:00:01,340
+OK
+Okay.
+
+2
+00:00:01,340 --> 00:00:03,350
+这次的作业有点大
+Now for the big quiz.
+
+3
+00:00:03,350 --> 00:00:06,990
+在预报细节界面中使用CursorLoader
+Implement the details view
+using a CursorLoader.
+
+4
+00:00:06,990 --> 00:00:10,240
+我们刚刚在ForecastFragment中使用了CursorLoader
+We've just implemented a CursorLoader
+for forecast fragment.
+
+5
+00:00:10,240 --> 00:00:14,240
+如果你不确定从哪儿开始的话
+So if you're unsure where to start,
+start with the same steps we used for
+
+6
+00:00:14,240 --> 00:00:15,940
+照着ForecastFragment的步骤做
+forecast fragment.
+
+7
+00:00:15,940 --> 00:00:17,980
+你可以用相同的Utility中的函数
+You can use the same
+utility functions and
+
+8
+00:00:17,980 --> 00:00:21,090
+甚至ForecastFragment中相同的格式化函数
+even the same format that we
+used in forecast fragment
+
+9
+00:00:21,090 --> 00:00:24,840
+来格式化设置到预报细节视图的字符串
+to help you format the string that
+you will set into the detail view.
+
+10
+00:00:24,840 --> 00:00:27,410
+别忘了使用projection
+Consider taking
+advantage of projections.
+
+11
+00:00:27,410 --> 00:00:31,480
+有点复杂的部分是要确保完成时
+The trickiest part of all this is
+making sure that your sharing function
+
+12
+00:00:31,480 --> 00:00:33,860
+你的分享功能还能正常运行
+is still working when you're all done.
+
+13
+00:00:33,860 --> 00:00:35,543
+不过别太担心
+But don't worry too much about that.
+
+14
+00:00:35,543 --> 00:00:39,873
+重要的是要理解CursorLoader是怎么工作的
+The important thing is to
+understand how CursorLoaders work.
+
+15
+00:00:39,873 --> 00:00:43,623
+如果你真的想看看分享部分是怎么做的，看下解答
+Look at the solution if you really
+want to see how sharing is done.
+
+16
+00:00:43,623 --> 00:00:46,394
+如果你对这部分不怎么清楚的话
+If you're at all confused
+about how sharing is done,
+
+17
+00:00:46,394 --> 00:00:47,819
+just look at the solution.
+

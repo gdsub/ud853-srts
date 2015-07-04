@@ -1,0 +1,85 @@
+﻿1
+00:00:00,310 --> 00:00:05,160
+好吧,你完成了。虽然以后还有很多新事情
+All right, you're done. There were a lot of new things that time. But, afterall,
+
+2
+00:00:05,160 --> 00:00:08,530
+但是你成为一名经验丰富的Android程序员了
+you're becoming a seasoned Android programmer by now.
+
+3
+00:00:08,530 --> 00:00:12,910
+我刚才提到，我们用NotificationCompat.Builder
+As I mentioned before, we're going to use NotificationCompat.Builder
+
+4
+00:00:12,910 --> 00:00:15,310
+来创建一个Notification。它可以很容易的就
+to build our notification. It's easy to build
+
+5
+00:00:15,310 --> 00:00:18,000
+建立一个漂亮的通知
+a nice looking notification that has our icon
+
+6
+00:00:18,000 --> 00:00:21,220
+拥有图标和标题
+representing the weather forecast, the title for our
+
+7
+00:00:21,220 --> 00:00:25,390
+以及文本内容
+App. And our content text, the forecast with
+
+8
+00:00:25,390 --> 00:00:28,600
+还有高温和低温的预报。
+highs and lows. We're going to use another class
+
+9
+00:00:28,600 --> 00:00:32,130
+我们再用支持库里的另外一个类为pending intent
+from the support library, to create a task stack builder
+
+10
+00:00:32,130 --> 00:00:34,960
+创建一个taskStackBuilder。
+for our pending intent. This is a simple case
+
+11
+00:00:34,960 --> 00:00:37,880
+这是一个taskStackBuilder的简单例子，因为
+of task stack builder, because all we have is a
+
+12
+00:00:37,880 --> 00:00:40,980
+我们只有一个单独项。
+single item on our stack. We just add the
+
+13
+00:00:40,980 --> 00:00:43,700
+只要添加nextIntent,并且用它创建出pending intent 
+next intent and use it to build out pending intent
+
+14
+00:00:43,700 --> 00:00:47,470
+再传入notificationManager里面就好了。
+that we pass into the notification manager. Finally we call
+
+15
+00:00:47,470 --> 00:00:51,150
+最后调用notificationManager，它其中包含通过buidler所创建的intent对象
+the notification manager with the built intent from our builder,
+
+16
+00:00:51,150 --> 00:00:55,480
+notificationManager很棒的一点是，它可以被用于任何线程
+with a notify function. One of the great things about notification manager is
+
+17
+00:00:55,480 --> 00:00:58,490
+甚至是UI线程
+it can be used from any thread even though it is displaying UI.
+

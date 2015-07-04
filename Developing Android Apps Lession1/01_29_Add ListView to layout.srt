@@ -1,0 +1,90 @@
+1
+00:00:00,290 --> 00:00:01,370
+谢谢Rado
+Thanks, Rado.
+
+2
+00:00:01,370 --> 00:00:04,740
+现在我们都知道了ListView非常好用
+Now that we know the distinct advantages of using a list view,
+
+3
+00:00:04,740 --> 00:00:08,750
+可以用它在应用中展示天气预报
+we can use a list view to display the list of weather forecasts in our app.
+
+4
+00:00:08,750 --> 00:00:13,140
+那我们应该修改哪个布局文件来做到呢
+Now which file in the layout folder should we modify to accomplish this?
+
+5
+00:00:13,470 --> 00:00:16,530
+我们需要把ListView直接放进Fragment布局
+Well, we want to add the list view directly to the fragment.
+
+6
+00:00:16,530 --> 00:00:19,670
+你打开fragment_main.xml文件的话
+If you open up the fragment_main.xml file,
+
+7
+00:00:19,670 --> 00:00:22,670
+你可以看到布局里有个作为父视图的RelativeLayout
+you'll notice that the layout includes a RelativeLayout as a parent view,
+
+8
+00:00:22,670 --> 00:00:25,096
+也有个作为子视图TextView
+as well as a child TextView.
+
+9
+00:00:25,096 --> 00:00:28,692
+修改这个文件  用ListView代替TextView
+Modify this file so that we show a ListView instead of a TextView
+
+10
+00:00:28,692 --> 00:00:33,840
+并指定其ID为ListViewForecast便于我们之后引用
+and assign it an ID ListViewForecast so we can reference it later.
+
+11
+00:00:33,840 --> 00:00:37,010
+既然这个布局只有一个子视图
+Also, since this layout only contains one child's view,
+
+12
+00:00:37,010 --> 00:00:39,840
+父布局使用FrameLayout
+it would be more efficient to actually switch to a FrameLayout
+
+13
+00:00:39,840 --> 00:00:41,940
+要比RelativeLayout更好
+instead of a RelativeLayout.
+
+14
+00:00:41,940 --> 00:00:45,020
+这些都做完以后  编译运行你的应用 
+After you make the changes, compile and run your app.
+
+15
+00:00:45,020 --> 00:00:49,200
+你会觉得黑屏怪怪的  但是没关系
+You will be a little bit underwhelmed with the blank screen, but that's okay.
+
+16
+00:00:49,200 --> 00:00:52,030
+因为我们还没有给ListView填充数据
+That's because we haven't populated the list view with data yet,
+
+17
+00:00:52,030 --> 00:00:53,929
+这会在下一步实现
+and that will come in a later step.
+
+18
+00:00:53,929 --> 00:00:55,559
+完成了记得来检查一下
+Check the box when you're done.
+

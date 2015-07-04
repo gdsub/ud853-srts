@@ -1,0 +1,315 @@
+1
+00:00:00,850 --> 00:00:03,360
+好了，你已经做完了。让我们看看
+All right, you're done. Let's take a look
+
+2
+00:00:03,360 --> 00:00:07,870
+答案。删除实际上是很直接的。
+at the solution. Delete is actually pretty straight forward.
+
+3
+00:00:07,870 --> 00:00:10,140
+再次注意以下我们几乎没有无用的
+Note that once again we have almost useless
+
+4
+00:00:10,140 --> 00:00:13,370
+参数。S实际上引用了我们的选择尽管我们这的字符串实际上是Rs。
+parameters. S actually refers to our selection while our
+
+5
+00:00:13,370 --> 00:00:16,400
+在删除中有一个
+strings here are actually our selection Rs. One
+
+6
+00:00:16,400 --> 00:00:19,180
+小问题是如果我们
+little trickiness in delete is that if you actually
+
+7
+00:00:19,180 --> 00:00:22,840
+没有selection，则将删除全部的行。
+put no selection in, it'll delete all the rows.
+
+8
+00:00:22,840 --> 00:00:25,710
+我仍然想确保我们通知这次改变。
+I still want to make sure we notify the change.
+
+9
+00:00:25,710 --> 00:00:28,090
+我已经做了。
+I've done the slide optimization here. It would be
+
+10
+00:00:28,090 --> 00:00:31,560
+一直通知改变是没问题的，但是我已经决定
+fine to just notify the change always, but I've decided
+
+11
+00:00:31,560 --> 00:00:34,140
+如果没有行被删除，那么我们应该
+if no rows have been deleted, then we should
+
+12
+00:00:34,140 --> 00:00:38,280
+阻止这次通知。除非selection是null，
+bother not notifying. Unless the selection is null, in which
+
+13
+00:00:38,280 --> 00:00:40,940
+这种情况下将删除全部的行，但是话说回来，
+case we deleted all the rows, but again, it
+
+14
+00:00:40,940 --> 00:00:43,780
+通知改变是没问题的
+would be fine just to use notify change here even
+
+15
+00:00:43,780 --> 00:00:47,380
+尽管没有行被删除。毕竟，我们的意图是
+if no rows are actually deleted. After all, the intention
+
+16
+00:00:47,380 --> 00:00:50,730
+被删除的行。再看，
+was that rows would be deleted. Once again, let's take
+
+17
+00:00:50,730 --> 00:00:53,910
+让我们同情以下那些可能维护你代码的人，
+pity on someone who might have to maintain your code, and change
+
+18
+00:00:53,910 --> 00:00:55,560
+将那些默认的参数名改成
+these default parameter names to something
+
+19
+00:00:55,560 --> 00:00:59,670
+更有用的如selection和selectionargs。
+more useful like selection and selectionargs.
+
+20
+00:01:03,770 --> 00:01:07,090
+否则，update看起来几乎了delete一模一样。
+Other than that, update looks almost exactly like delete. Once
+
+21
+00:01:07,090 --> 00:01:10,080
+我们回来更新影响的行数。
+again, we are returning the number of rows impacted by
+
+22
+00:01:10,080 --> 00:01:13,100
+如果没有行被影响，我们不担心通知。
+the update, and we don't bother notifying if no rows
+
+23
+00:01:13,100 --> 00:01:16,530
+既然我们已经结束了实现update和delete，我们
+were impacted. Now that we've finished writing update and delete, we
+
+24
+00:01:16,530 --> 00:01:19,080
+能够回去测试provider，并且加一些测试。
+can go back to test provider and add some tests.
+
+25
+00:01:19,080 --> 00:01:23,120
+首先，我们删除delete.db，最后的测试并不依赖于provider。
+First, let's remove test delete.db, the last test that doesn't depend
+
+26
+00:01:23,120 --> 00:01:26,930
+现在，让我们加一个测试用来删除
+on the provider. Instead, let's have a test that deletes
+
+27
+00:01:26,930 --> 00:01:30,100
+全部的记录并且确保确实删除了。
+all the records and checks to make sure they're actually deleted.
+
+28
+00:01:30,100 --> 00:01:32,970
+记住，传递一个空的查询实际上是删除了
+Remember, passing a null query actually deletes all of the
+
+29
+00:01:32,970 --> 00:01:36,340
+表中的全部记录。因此非常简单只需要传一个
+records in a table. So this is really straight-forward, just passing
+
+30
+00:01:36,340 --> 00:01:39,850
+null。因为我们依赖我们删除的数据库，
+nulls. Since we're depending on the database for our deletes, it's
+
+31
+00:01:39,850 --> 00:01:42,770
+我们是否真实测试过delete函数并不重要，
+not all that particularly important that we actually test the delete
+
+32
+00:01:42,770 --> 00:01:46,190
+尽管在以后加入这些也可以。
+functions, although it would be nice to add that later on.
+
+33
+00:01:46,190 --> 00:01:48,020
+我们想现在加入的原因是想确保
+The reason we'd want to add it is to make sure that
+
+34
+00:01:48,020 --> 00:01:51,780
+我们的限制是合法的。并且我们曾经做过删除，
+our constraints are valid. And once we're done doing the deletes,
+
+35
+00:01:51,780 --> 00:01:53,860
+我们检查现在没有一行剩下。
+we check to make sure that there are no rows left.
+
+36
+00:01:55,140 --> 00:01:58,040
+注意在我们删除location元组之前我们已经删除weather元组了，
+Note that we have to delete weather entry before we delete location
+
+37
+00:01:58,040 --> 00:02:01,620
+因为我们在数据库中存在一个限制，那就是
+entry, because you've got constraints in the database that prevent weather entry
+
+38
+00:02:01,620 --> 00:02:04,740
+如果location元组不存在，那么weather元组也不能存在，并且
+from existing if location entries do not also exist and would also
+
+39
+00:02:04,740 --> 00:02:07,640
+避免删除location元组。因此我们查看是否确实
+prevent the deletion of those entries. So let's check to see whether
+
+40
+00:02:07,640 --> 00:02:12,610
+工作了。好了，通过了。这是好消息。现在我们能
+that actually works. All right, that passes. Good news. Now we can
+
+41
+00:02:12,610 --> 00:02:14,770
+添加同样的测试到最后确保我们
+add the same test to the end to make sure we can
+
+42
+00:02:14,770 --> 00:02:17,700
+在最后能删除全部的行，并仍然能工作。
+delete all of the rows at the end and it still works.
+
+43
+00:02:17,700 --> 00:02:20,240
+正如我们看到的，他们也通过了。因此我们现在知道我们已经
+And as you can see, they still pass. So now we know we've
+
+44
+00:02:20,240 --> 00:02:23,810
+在运行测试前和后都删除了记录。现在，让我们试着
+deleted records before and after running tests. Now, let's try
+
+45
+00:02:23,810 --> 00:02:27,170
+更新。我们将只做location的更新。
+that update. We'll do just an update of the location.
+
+46
+00:02:28,350 --> 00:02:31,340
+再一次，我们以删除全部记录为开始，然后添加一条
+Again, let's start by deleting all records and inserting a
+
+47
+00:02:31,340 --> 00:02:34,030
+我们想更新的记录。一件好事情是
+record that we want to update. One of the nice things about
+
+48
+00:02:34,030 --> 00:02:36,240
+contentValues是我们使用了一个复制构造函数来复制他们。
+content values is you can actually copy them using a
+
+49
+00:02:36,240 --> 00:02:40,230
+之后，我们能添加我们
+copy constructor. After that, we can add the ID we
+
+50
+00:02:40,230 --> 00:02:42,660
+想更新的ID，然后添加我们
+want to update and then put the name of the city
+
+51
+00:02:42,660 --> 00:02:45,440
+想更新的城市的名字。在这里，从North Pole
+we want to update it to. In this case, from North Pole
+
+52
+00:02:45,440 --> 00:02:48,420
+更新成Santa's Village。然后，我们调用update。
+to Santa's Village. And then, finally, we call update.
+
+53
+00:02:49,600 --> 00:02:52,175
+注意，我们实际上更新了一个记录，
+Assert that we've actually updated exactly one record as
+
+54
+00:02:52,175 --> 00:02:55,600
+这正是我们想要的，然后我们做了一个查询，
+we'd expect, and then do a query on that,
+
+55
+00:02:55,600 --> 00:02:58,980
+测试我们的游标，确保这次更新是生效的。
+validating our cursor, making sure that our update actually works.
+
+56
+00:02:58,980 --> 00:03:01,700
+最后，我们关闭我们的游标。一切
+And then finally, we close our cursor. It all
+
+57
+00:03:01,700 --> 00:03:04,370
+都看起来很好。我们看到他确实运行了，
+looks pretty good. And let's see that it actually runs,
+
+58
+00:03:04,370 --> 00:03:07,910
+做了正确的事。我们测试通过了。
+and does the right thing. And our tests pass.
+
+59
+00:03:07,910 --> 00:03:11,550
+因此，我们已经证明了我们能更新，删除，插入，
+So, we've now proved that we can update, delete, insert,
+
+60
+00:03:11,550 --> 00:03:14,250
+和查询，并且全部都已经测试过。
+and query and all this is fully tested.
+
+61
+00:03:14,250 --> 00:03:16,280
+换句话说，我们应用的主体
+In other words, the bones of our application
+
+62
+00:03:16,280 --> 00:03:19,850
+已经结束，只需要将我们的UI连接上即可。
+are finished, just waiting to attach our UI.
+
+63
+00:03:19,850 --> 00:03:21,510
+让我们开始将我们的UI连接上。
+Let's go through and attach some of our UI.
+

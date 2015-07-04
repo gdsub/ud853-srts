@@ -1,0 +1,29 @@
+﻿1
+00:00:00,540 --> 00:00:03,850
+我们的ListView组件已经完成  我们需要添加一些测试数据来显示
+With our ListView ready to go, we'll want to create some fake data to
+
+2
+00:00:03,850 --> 00:00:08,778
+打开MainActivity.java这个文件  拉到文件底部
+populate it. Open up MainActivity.java and then scroll down to the bottom where
+
+3
+00:00:08,778 --> 00:00:13,630
+找到PlaceholderFragment这个类  在onCreateView()方法里
+the PlaceholderFragment class is. Within the onCreateView method,
+
+4
+00:00:13,630 --> 00:00:17,630
+创建一个含有字符串的数组列表代表天气预报数据
+create an array list of strings to represent the weather forecast list items
+
+5
+00:00:17,630 --> 00:00:21,570
+比如  近期天气情况以类似 Today - Sunny - 88 / 63 这样的格式显示
+shown in the wire frames. For example, the Today List item will be
+
+6
+00:00:21,570 --> 00:00:25,880
+试着去做  做完之后选中该复选框  点击提交
+represented as a string shown here. When you're done, check the box and submit.

@@ -1,0 +1,205 @@
+1
+00:00:00,270 --> 00:00:03,070
+在平板的设计草图中，当一个列表项被选择后，
+In the tablet wireframes, when a list item is selected
+
+2
+00:00:03,070 --> 00:00:06,530
+会显示一个蓝色的激活状态的背景。
+it shows this blue activated state background. This can be done
+
+3
+00:00:06,530 --> 00:00:08,430
+通过使用StateListDrawable来实现这个功能。
+by setting the background of the list item to be
+
+4
+00:00:08,430 --> 00:00:10,990
+我们来看看开发文档里如何解释StateListDrawable的。
+a state drawable. We can look at the documentation for the
+
+5
+00:00:10,990 --> 00:00:12,970
+就是下面这个链接
+StateListDrawable, which is linked below.
+
+6
+00:00:12,970 --> 00:00:14,700
+本质上，一个StateListDrawable 可以允许你
+Essentially a StateListDrawable allows you
+
+7
+00:00:14,700 --> 00:00:18,960
+基于View的不同状态设置不同的drawable资源
+to specify different drawables based on the state of the view.
+
+8
+00:00:18,960 --> 00:00:22,180
+我们这里有一些StateListDrawable的代码。
+We provide you the code for the StateListDrawable. Drop it in
+
+9
+00:00:22,180 --> 00:00:25,520
+将改代码放进res目录下的一个drawable 文件夹里。
+by creating a drawable folder under the res directory. When set
+
+10
+00:00:25,520 --> 00:00:27,920
+当系统设置列表项的背景时，touch selector在这里会
+on the background of a list item, the touch selector will
+
+11
+00:00:27,920 --> 00:00:31,350
+默认设置为透明色。这跟我们看到的一样，
+appear transparent by default. As seen here we just see the background
+
+12
+00:00:31,350 --> 00:00:34,080
+activity的背景就是透明的。当这个View被按下之后我们可以看到一个
+of the activity come through. When the view is pressed then
+
+13
+00:00:34,080 --> 00:00:37,590
+灰色的背景。当状态为激活状态时，我们看到一个
+we see a grey background. Then when the state is activated we
+
+14
+00:00:37,590 --> 00:00:40,620
+蓝色的背景。这说明被选的选项进入了
+see a blue background. This indicates that it's the selected item
+
+15
+00:00:40,620 --> 00:00:44,200
+激活模式。在列表布局界面，我们要设置背景为
+into pay mode. In the list item layout, we set the background
+
+16
+00:00:44,200 --> 00:00:47,190
+这个touch selector。同样我们也需要对today布局做
+to be this drawable touch selector. We also did the same
+
+17
+00:00:47,190 --> 00:00:50,600
+同样的操作。在touch selector文件里， 可以看到
+for the today layout. In the touch selector file, we also see
+
+18
+00:00:50,600 --> 00:00:54,010
+这里定义了一些颜色。这个安卓颜色标注表示
+that we have some colors defined here. That Android color notation
+
+19
+00:00:54,010 --> 00:00:57,336
+该颜色来自系统框架。颜色其实是在colors.xml文件里。
+is for a framework defined color. Our colors are in the colors.xml
+
+20
+00:00:57,336 --> 00:01:00,770
+这个文件在values文件夹下。当开发者
+file. This is located under the values folder. This us useful
+
+21
+00:01:00,770 --> 00:01:03,610
+需要在代码中多次引用颜色的时候，这个方式会大大提高代码效率。
+if you need to reference colors multiple times in your app. As
+
+22
+00:01:03,610 --> 00:01:06,650
+还有个提示，要下是列表项当前的状态，
+a hint, to make a list item show its activated state,
+
+23
+00:01:06,650 --> 00:01:10,160
+你可以参考开发文档中关于XML属性--choiceMode的内容
+you can look at the documentation for the XML attribute choice mode
+
+24
+00:01:10,160 --> 00:01:13,140
+你一旦找到对的属性，就可以
+for the list view. Once you find the right attribute, you'll realize
+
+25
+00:01:13,140 --> 00:01:16,480
+看到单面板的属性和双面板有什么不同。
+that you want different behavior for one pane versus two pane mode.
+
+26
+00:01:16,480 --> 00:01:18,820
+同时你也可以在Java代码里修改这些设置，
+While you could change the behavior programmatically in the Java
+
+27
+00:01:18,820 --> 00:01:21,610
+我的建议是希望你能够通过style的方式在xml里面进行修改。
+code, we'd like you to do it purely via the resource
+
+28
+00:01:21,610 --> 00:01:24,550
+阅读下面的文档你可以
+XML files using a style. Read this doc to learn
+
+29
+00:01:24,550 --> 00:01:27,220
+学到如何去定义XML里的style，同时你也
+about how styles can be defined in XML and use what
+
+30
+00:01:27,220 --> 00:01:30,880
+可以依据之前学到的知识根据不同的屏幕大小使用不同的资源文件
+you learned earlier about defining alternative resources for different sized
+
+31
+00:01:30,880 --> 00:01:33,950
+通常，styles就是view的一组属性的集合
+devices. In general, styles are a way that you can group
+
+32
+00:01:33,950 --> 00:01:37,320
+举个例子啊， 这些文字属性会被
+together attributes for a view. For example, these text attributes
+
+33
+00:01:37,320 --> 00:01:41,607
+CodeFont的风格替换。CodeFont的风格其实是在
+are replaced by this style CodeFont. The CodeFont styles is defined
+
+34
+00:01:41,607 --> 00:01:44,710
+styles.xml 文件里定义的，之前讲过，在values 文件夹。
+in the styles.xml file, located in the values folder.
+
+35
+00:01:44,710 --> 00:01:48,610
+你可以通过设置父类的风格来继承
+You can also have styles inherent other styles by specifying
+
+36
+00:01:48,610 --> 00:01:51,290
+其它风格的属性。这里还有一些其他的例子，你可以用来
+the parent. There are a couple other examples that you
+
+37
+00:01:51,290 --> 00:01:53,350
+参考。好的，这就是你最后应用
+can check out on this page. This is what the
+
+38
+00:01:53,350 --> 00:01:55,280
+看上去的样子了。有两个
+app should look like when you're done. The two
+
+39
+00:01:55,280 --> 00:01:57,950
+面板来显示被按下和激活的状态。在
+pane mode shows the pressed and activated state. On the
+
+40
+00:01:57,950 --> 00:02:00,890
+网页面板模式中，我们只能看到按下的状态，因为
+web pane mode, we see just the press state, because
+
+41
+00:02:00,890 --> 00:02:03,400
+按下选项之后内容会显示在『详情页面』上。
+tapping on an item brings you to the details screen.
+

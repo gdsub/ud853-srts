@@ -1,0 +1,35 @@
+1
+00:00:00,350 --> 00:00:04,730
+好的  现在我们来做这个有趣的测试  如果我们需要储存的数据
+All right. Now for a little fun exercise. If data that we needed to store
+
+2
+00:00:04,730 --> 00:00:08,180
+包括了图形和其他的二进制数据  我们应该如何
+included images or other binary data, how would
+
+3
+00:00:08,180 --> 00:00:10,580
+储存  我们应该把原始数据
+we store it? Would we put the raw
+
+4
+00:00:10,580 --> 00:00:13,530
+放进数据库么  我们应该把文件
+data in the database? Would we store files
+
+5
+00:00:13,530 --> 00:00:16,590
+放进一个公共的文件夹中么  还是
+into a public folder on the device? Or
+
+6
+00:00:16,590 --> 00:00:18,340
+我们应该把文件储存在一个私有的
+would we store the files in a private
+
+7
+00:00:18,340 --> 00:00:20,790
+文件夹  并且参照一个数据库中地址吗
+folder, and reference the location in the database?
+

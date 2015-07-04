@@ -1,0 +1,90 @@
+﻿1
+00:00:00,280 --> 00:00:03,650
+在程序运行的时候，我知道你们很可能厌倦了盯着无聊的假数据而且
+On app launch, I know that you're probably tired of seeing the dummy data and
+
+2
+00:00:03,650 --> 00:00:06,721
+希望每一刻点击刷新来获取实时信息
+needing to hit the refresh button for real data every single time.
+
+3
+00:00:06,721 --> 00:00:10,630
+我会告诉你们如何用当前的设置来显示数据
+I'm going to show you how to display the data using the current settings each
+
+4
+00:00:10,630 --> 00:00:14,250
+当Activity已经被载入后。在ForecastFragment中
+time the activity is loaded. In forecast fragment,
+
+5
+00:00:14,250 --> 00:00:17,530
+我们重构了一下代码以便当刷新按钮被选中的时候
+we just refactored the code so that when the refresh button is selected,
+
+6
+00:00:17,530 --> 00:00:21,250
+我们可以调用这个帮助类函数，updateWeather。现在这里是这个函数，
+we call this helper_method, updateWeather. Now that it's in a helper method,
+
+7
+00:00:21,250 --> 00:00:25,160
+我们也可以从onStart方法中调用它。我们覆盖了onStart函数 这样
+we can also call it from the onStart method. We over write onStart so
+
+8
+00:00:25,160 --> 00:00:27,970
+每当Fragment启动的时候都会刷新一次。
+that the refresh happens whenever the fragment starts.
+
+9
+00:00:27,970 --> 00:00:31,950
+这会使天气信息显示出来。我们会在下一节课学习关于onStart的所有东西，和
+This will cause the weather data to appear. We'll learn all about onStart, and
+
+10
+00:00:31,950 --> 00:00:35,360
+Android生命周期的其他部分。现在
+the rest of the android life cycle in the next lesson. At this point,
+
+11
+00:00:35,360 --> 00:00:39,190
+我们也可以移除我们在onCreateView方法里的所有假数据。
+we can also remove all the fake data that we had in the onCreateView method.
+
+12
+00:00:39,190 --> 00:00:44,250
+然后向ArrayAdapter传递一个空的ArrayList。现在我们可以对其进行测试了。
+Then we pass in an empty array list to the ArrayAdapter. Now we can test this.
+
+13
+00:00:44,250 --> 00:00:46,510
+我们需要确定这是第一个启动的程序而且
+We need to make sure that this is the first app launch and
+
+14
+00:00:46,510 --> 00:00:49,820
+并未正在运行。如果已经运行了，杀掉。
+that it wasn't already running. So if it's already running, kill it.
+
+15
+00:00:49,820 --> 00:00:51,240
+然后点击重开。
+And then tap to open the app,
+
+16
+00:00:51,240 --> 00:00:54,820
+然后你应该立刻看见真实的天气数据。在设置菜单下，我们
+and then you should see the actual weather data immediately. Under settings we
+
+17
+00:00:54,820 --> 00:00:59,310
+可以更改位置去相对应的邮编。当我们点击ok，
+can change the location to be the pairs postal code. We hit OK, and
+
+18
+00:00:59,310 --> 00:01:02,950
+会跳回主菜单，然后我们可以看见天气数据是更新过的。
+then return to the main list, and then we see that the weather data has updated.
+

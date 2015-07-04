@@ -1,0 +1,303 @@
+1
+00:00:00,358 --> 00:00:02,054
+Forecast Fragment类中
+In the Forecast Fragment class,
+
+2
+00:00:02,054 --> 00:00:05,890
+我们添加了回调接口，它提供了一个依据
+we add the Callback interface
+that was provided in the gist.
+
+3
+00:00:05,890 --> 00:00:10,220
+然后再onCreateView函数里改变列表项点击事件
+Then, in the onCreateView method,
+we modify the list item click behavior.
+
+4
+00:00:10,220 --> 00:00:13,590
+当列表项被点击，不同于总是加载一个新的intent来启动
+When an item is clicked, instead of
+always launching a new intent to
+
+5
+00:00:13,590 --> 00:00:17,170
+detail activity，我们希望通知回调
+the detail activity,
+we want to notify the Callback instead.
+
+6
+00:00:17,170 --> 00:00:18,330
+调用getActivity方法
+We call getActivity and
+
+7
+00:00:18,330 --> 00:00:23,380
+强转成一个Callback对象，这样我们可以调用onItemSelected
+then cast it to a Callback object,
+then we can call onItemSelected on it.
+
+8
+00:00:23,380 --> 00:00:26,890
+我们传递这个描述位置信息数据的URI
+We pass the URI that represents
+the selected location and date.
+
+9
+00:00:27,920 --> 00:00:31,988
+然后在main_activity里实现这个回调接口	
+Then, in the main activity,
+we implement the Callback interface.
+
+10
+00:00:31,988 --> 00:00:36,110
+在onItemSelected函数里，根据之前定义的mTwoPane变量
+In the onItemSelected method, we fork
+the behavior based on the mTwoPane
+
+11
+00:00:36,110 --> 00:00:38,070
+来分支这个行为
+variable that we defined earlier.
+
+12
+00:00:38,070 --> 00:00:41,890
+如果我们在两个窗格模式下，就创建一个DetailFragment
+If we're in two-pane mode,
+then we create a DetailFragment and
+
+13
+00:00:41,890 --> 00:00:44,660
+把URI数据放进arguments bundle
+put the URI inside the arguments bundle.
+
+14
+00:00:44,660 --> 00:00:47,406
+然后在weather_detail_container中，使用DETAILFRAGMENT_TAG
+Then we replace the existing
+DetailFragment in
+
+15
+00:00:47,406 --> 00:00:51,540
+替换掉现在的DetailFragment
+the weather_detail_container,
+using the DETAILFRAGMENT_TAG.
+
+16
+00:00:51,540 --> 00:00:55,780
+在单窗格模式，我们创建一个新的intent加载DetailActivity
+In one pane mode, we create a new
+Intent to launch the DetailActivity and
+
+17
+00:00:55,780 --> 00:00:57,690
+设置数据URI
+we set the data URI.
+
+18
+00:00:57,690 --> 00:00:59,120
+在DetailActivity里
+In the DetailActivity,
+
+19
+00:00:59,120 --> 00:01:03,920
+改变onCreate来从进来的intent里读取数据URI
+we modify the onCreate method to read
+the data URI from the incoming intent.
+
+20
+00:01:03,920 --> 00:01:08,540
+我们使用这个URI，设置它为新的DetailFragment的属性
+We take the URI and set it as
+an arguments in the new DetailFragment.
+
+21
+00:01:08,540 --> 00:01:12,300
+然后动态的添加fragment到容器中
+Then we dynamically add this
+fragment to this container.
+
+22
+00:01:12,300 --> 00:01:15,900
+在detai_fragment里，我们改变onCreateView函数让它
+In the detail fragment,
+we modify the onCreateView method
+
+23
+00:01:15,900 --> 00:01:19,120
+读取初始化这个fragment所使用的arguments
+to read the arguments that
+the fragment was initialized with.
+
+24
+00:01:19,120 --> 00:01:24,260
+我们读取数据URI并且存储在成员变量mUri
+We read the data URI and
+store that in the member variable mUri.
+
+25
+00:01:24,260 --> 00:01:28,540
+在OnCreateLoader函数里，我们移除掉一些依赖传入的intent的代码
+In the OnCreateLoader method,
+we remove some code that relied on
+
+26
+00:01:28,540 --> 00:01:33,170
+并选择用mUti代替
+incoming intent, and
+switched it to use mUri instead.
+
+27
+00:01:33,170 --> 00:01:37,495
+不管DetailFragment是在main_activity还是在DetailActivity
+Whether this DetailFragment is in
+the main activity or the DetailActivity,
+
+28
+00:01:37,495 --> 00:01:39,520
+它都有mUri的设置
+it should have mUri set.
+
+29
+00:01:39,520 --> 00:01:43,170
+接下来我们将使用mUri来查询内容提供者的数据
+Then we're going to use mUri to
+query the content provider for
+
+30
+00:01:43,170 --> 00:01:46,350
+来显示在DetailFragment上
+the data to display in
+this DetailFragment.
+
+31
+00:01:46,350 --> 00:01:48,050
+当你在平板上测试的时候
+When you try it out on the tablet,
+
+32
+00:01:48,050 --> 00:01:51,300
+有一个和导航栏有关的bug需要解决
+there is one bug related to
+navigation that we should fix.
+
+33
+00:01:51,300 --> 00:01:55,430
+我们选择明天的数据，如果你导航到settings activity
+Say we select tomorrow's date, if you
+navigate to the settings activity, and
+
+34
+00:01:55,430 --> 00:01:58,720
+然后点击向上的按键，detail fragment变空了
+then hit the up button,
+the detail fragment is blank.
+
+35
+00:01:58,720 --> 00:02:02,190
+这是因为新的main activity的实例被加载了
+That's because a brand new instance
+of main activity got launched, and
+
+36
+00:02:02,190 --> 00:02:04,850
+默认是没有选择任何数据的
+for a brand new instance,
+nothing is selected yet.
+
+37
+00:02:04,850 --> 00:02:08,850
+为了解决这个bug,当settings activity向上按键被按下的时候
+To fix this, when the setting activity
+up button is pressed, we want to
+
+38
+00:02:08,850 --> 00:02:12,430
+我们希望导航到前一个运行的main activity实例
+navigate to the previous running
+instance of the main activity where
+
+39
+00:02:12,430 --> 00:02:16,688
+并且明天的选项依然被选中，但现在它创建了一个新的实例
+the tomorrow item is selected and now
+create a new instance of main activity.
+
+40
+00:02:16,688 --> 00:02:21,910
+在SettingsActivity里重写这个方法
+In the SettingsActivity, override this
+method, which the system will call
+
+41
+00:02:21,910 --> 00:02:25,790
+系统将会调用它来得到父activity的intent来处理向上按键的事件
+in order to get the parent activity
+intent for the up button behavior.
+
+42
+00:02:25,790 --> 00:02:28,940
+在父类里得到父activity
+Get the parent activity
+intent from the super class,
+
+43
+00:02:28,940 --> 00:02:31,770
+这将创建一个新的main_activity
+this should create a new
+intent to main activity.
+
+44
+00:02:31,770 --> 00:02:35,570
+然后添加intent_flag，名字是FLAG_ACTIVITY_CLEAR_TOP
+Then add the intent flag called
+FLAG_ACTIVITY_CLEAR_TOP.
+
+45
+00:02:35,570 --> 00:02:38,730
+这个flag的意思是，我们应该检查是否在task中存在
+This flag indicates that we should
+check if the main activity is
+
+46
+00:02:38,730 --> 00:02:40,360
+已经运行的 main activity
+already running in our task.
+
+47
+00:02:40,360 --> 00:02:44,270
+并且使用它代替创建一个新的实例
+And to use that one instead of
+creating a new main activity instance.
+
+48
+00:02:44,270 --> 00:02:46,850
+这个方法在Jelly bean之前的版本中不存在
+Also this method didn't
+exist prior to Jelly Bean so
+
+49
+00:02:46,850 --> 00:02:50,170
+我们需要添加@TargetApi 注解
+we need to add this
+@TargetApi annotation.
+
+50
+00:02:50,170 --> 00:02:53,120
+如果你查阅activity的文档
+If you check the documentation for
+the activity class,
+
+51
+00:02:53,120 --> 00:02:57,160
+getParentActivityIntent方法只能在高于api 16的版本使用
+the getParentActivityIntent method
+was only added in API level 16,
+
+52
+00:02:57,160 --> 00:03:00,477
+你可以查到api 16 对应的版本是Jelly Bean
+and you can check that version
+16 maps to Jelly Bean.
+

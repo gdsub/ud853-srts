@@ -1,0 +1,20 @@
+﻿1
+00:00:01,710 --> 00:00:04,490
+update和delete方法看起来很像
+The update and delete methods look a lot like the
+
+2
+00:00:04,490 --> 00:00:08,980
+insert方法。除了他们更新和删除,实际上
+insert method, except they update and delete and neither actually returns
+
+3
+00:00:08,980 --> 00:00:13,050
+都不会在完成时返回一个URI，但是行数受到影响了。
+a URI upon completion, but instead, the number of rows affected.
+
+4
+00:00:14,100 --> 00:00:17,490
+当你做这些的时候，也一定要通知我们的内容观察者
+Also, make sure to notify our ContentObservers while you're at it
+

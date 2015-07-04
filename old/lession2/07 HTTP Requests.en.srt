@@ -1,0 +1,59 @@
+1
+00:00:00,230 --> 00:00:02,100
+在提供的示例代码里，你会注意到，
+In the sample code provided you'll notice
+
+2
+00:00:02,100 --> 00:00:06,000
+我们创建了一个HTTP URL连接。
+that we create a Http Url connection. To
+
+3
+00:00:06,000 --> 00:00:08,430
+为了使用Http协议在网络上发送和接收数据，
+use Http to send and receive data over
+
+4
+00:00:08,430 --> 00:00:10,960
+Android里有两种客户端的API。
+the network, we have two clients on Android.
+
+5
+00:00:10,960 --> 00:00:13,740
+一个是HttpUrlConnection类，还有一个是
+The HttpUrlConnection class, as well as
+
+6
+00:00:13,740 --> 00:00:17,700
+Apache提供的HttpClient类。这两种方式都支持
+the Apache HttpClient class. Both options support
+
+7
+00:00:17,700 --> 00:00:22,010
+Https，以数据流的形式上传和下载，超时配置，
+Https, streaming uploads and downloads, configurable time outs,
+
+8
+00:00:22,010 --> 00:00:25,460
+IP v6以及连接池。
+IP v6 and connection pooling. We recommend the
+
+9
+00:00:25,460 --> 00:00:28,850
+我们推荐使用HttpUrlConnection类，因为它更为通用，轻量级，
+HttpUrlConnection class because it's general purpose and light
+
+10
+00:00:28,850 --> 00:00:31,730
+而且专门针对大多数Android应用的需求进行了优化。
+weight, and it's been optimized to suit the needs of
+
+11
+00:00:31,730 --> 00:00:34,460
+想要了解更多的网络连接的知识，
+most Android apps. To learn more about connecting to the
+
+12
+00:00:34,460 --> 00:00:37,130
+请参阅读下方的培训指南和博文链接。
+network, see the training guide and blog post link below.

@@ -1,0 +1,29 @@
+1
+00:00:00,445 --> 00:00:03,245
+大家集中注意力
+All right, let's get serious now.
+
+2
+00:00:03,245 --> 00:00:07,118
+我们要用刚刚创建的ContentProvider来将天气数据
+We need to change our code to store our weather information in the database
+
+3
+00:00:07,118 --> 00:00:09,376
+保存到数据库里
+using the content provider we just built.
+
+4
+00:00:09,376 --> 00:00:12,789
+总之  天气是很严谨的
+After all, weather is serious business.
+
+5
+00:00:12,789 --> 00:00:15,578
+下一步我们要进行一些代码重构
+The next step just involves some refactoring,
+
+6
+00:00:15,578 --> 00:00:19,770
+为了保证大家重构方法正确  接下来我会给大家一些指导
+to make sure you get it right, we'll give you some instructions next.

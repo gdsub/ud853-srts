@@ -1,0 +1,210 @@
+﻿1
+00:00:00,610 --> 00:00:03,350
+在所有搭载Android的设备里
+Of all the Android launch devices, the Nexus 1 will
+
+2
+00:00:03,350 --> 00:00:06,560
+Nexus 1在我心里一直有非常特别的位置
+always hold a special place in my heart. That's not
+
+3
+00:00:06,560 --> 00:00:08,970
+我的第一台android设备，HTC G1的推出
+to take anything away from my first Android device, the
+
+4
+00:00:08,970 --> 00:00:11,970
+把android带到了这个世界，带有独特的
+HTC G1, that launched Android into the world with its
+
+5
+00:00:11,970 --> 00:00:17,420
+下巴和滑出式键盘，或者说称它为HTC Magic
+distinctive chin and slide-out keyboard, or the HTC Magic. First
+
+6
+00:00:17,420 --> 00:00:19,450
+HTC Magic，是我加入Google时
+pre release android phone I got to dog food when
+
+7
+00:00:19,450 --> 00:00:22,070
+第一台预发布的android手机
+I joined google. And the first, the wave of devices
+
+8
+00:00:22,070 --> 00:00:25,970
+也是我们给每一位2009年google IO与会者的第一波设备
+we gave every attendee starting at google IO in 2009.
+
+9
+00:00:25,970 --> 00:00:29,180
+2010年android迎来了有趣的全球现象
+2010 was the year android went from that's
+
+10
+00:00:29,180 --> 00:00:33,650
+从5月开始10万的日激活量
+interesting to global phenomenon. Growing from 100,000 activations a
+
+11
+00:00:33,650 --> 00:00:37,410
+到12月超过30万的日激活量
+day in May, to over 300,000 by December.
+
+12
+00:00:37,410 --> 00:00:39,210
+Motorola Droid的发布功不可没
+That was seriously helped by the release of the
+
+13
+00:00:39,210 --> 00:00:41,950
+我依然记得
+Motorola Droid. I can still remember the offices
+
+14
+00:00:41,950 --> 00:00:44,760
+就是这里，44层的办公室里
+here in building 44 echoing with the constant refrain
+
+15
+00:00:44,760 --> 00:00:48,670
+不断重复的Droid设备重启的声音
+of Droid as each device rebooted. The Droid was
+
+16
+00:00:48,670 --> 00:00:51,120
+Droid是第一台又薄，分辨率又高，性能又强大的
+the first of the thinner, higher res, more powerful
+
+17
+00:00:51,120 --> 00:00:54,150
+android设备，这些都成了日后的标准
+Android devices that have since become standard. And it
+
+18
+00:00:54,150 --> 00:00:57,090
+它也是Verizon在美国发布的定制设备，
+was also the device whose release on Verizon here in
+
+19
+00:00:57,090 --> 00:00:59,420
+真正开始了Android激活的洪水
+the U,S. Really kicked off the flood of Android
+
+20
+00:00:59,420 --> 00:01:02,570
+但我那是是一个伦敦人
+activations. But I was a Londoner then, and the Droid
+
+21
+00:01:02,570 --> 00:01:04,910
+Droid是一台只支持CDMA的电话
+was a CDMA only phone, so it was never
+
+22
+00:01:04,910 --> 00:01:08,050
+所以我从没有真正的用过它
+really a device I truly used. Then, there was the
+
+23
+00:01:08,050 --> 00:01:12,320
+然后就是Nexus One,代号为激情
+Nexus One, code-named Passion. The first device I felt was
+
+24
+00:01:12,320 --> 00:01:16,160
+我觉得它是第一部纯净的android设备
+pure Android was also the phone we brought with us
+
+25
+00:01:16,160 --> 00:01:19,410
+我们带它进行了2010Android开发者实验室世界巡演
+on our 2010 Android Developer Labs World Tour. Me
+
+26
+00:01:19,410 --> 00:01:22,200
+我和我的同事旅行世界各地
+and my colleagues travel across the world. Seven cities
+
+27
+00:01:22,200 --> 00:01:25,590
+十天走了七个城市，通过演讲和Nexus One
+in ten days. Introducing over twenty thousand developers to
+
+28
+00:01:25,590 --> 00:01:29,250
+吸引了二万多个Android开发者
+Android by way of presentations and a free Nexus 1.
+
+29
+00:01:29,250 --> 00:01:32,090
+因此我在欧洲交了很多朋友
+As a result, I made a lot of friends
+
+30
+00:01:32,090 --> 00:01:35,200
+也深刻了解到我能携带多少电话
+across Europe and learned exactly how many boxes of phones
+
+31
+00:01:35,200 --> 00:01:37,840
+穿越在斯德哥尔摩雪堆和柏林结冰的路面上
+I can carry across snow drifts in Stockholm and
+
+32
+00:01:37,840 --> 00:01:41,340
+从那时起，nexus 4和nexus 5
+icy roads in Berlin. Since then, The Nexus S4 and
+
+33
+00:01:41,340 --> 00:01:43,890
+都有各自不同的提升来打造更好的android手机
+five have each improved on what it takes, to make
+
+34
+00:01:43,890 --> 00:01:47,350
+世界各地的OEM（原始设备制造商）们
+a great android phone. And OEMs across the world, have
+
+35
+00:01:47,350 --> 00:01:51,150
+已经创造了超过1000种不同的android设备
+created 1000s of different Android devices. Starting with the Motorola
+
+36
+00:01:51,150 --> 00:01:55,080
+从motorola zoom开始，android进军平板，
+Zoom, which led Android's official expansion into tablets, and leading the
+
+37
+00:01:55,080 --> 00:01:57,960
+它也为nexus 7和nexus 10指引着道路。
+way for the Nexus 7 and 10. But that was
+
+38
+00:01:57,960 --> 00:02:00,490
+但这仅仅是开始。这些改变为android移动设备
+just the start, Those changes paved the way for the
+
+39
+00:02:00,490 --> 00:02:02,740
+铺平了道路，
+Android mobile [UNKNOWN] west, to grow into what could be,
+
+40
+00:02:02,740 --> 00:02:06,450
+成长为从手机到平板，再到电视，车载，可穿戴设备比如Android wear，这所有一切的核心
+the brains behind anything, from phones and tablets, to TVs, cars
+
+41
+00:02:06,450 --> 00:02:10,508
+很难想象下一个是什么
+and wearables, like Android wear. It's impossible to know, what comes
+
+42
+00:02:10,508 --> 00:02:15,510
+谁知道呢？ 也许下一个android设备，就是机器人
+next. Who knows? Maybe the next Android devices, will be Androids themselves.
+

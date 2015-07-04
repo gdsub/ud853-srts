@@ -1,0 +1,55 @@
+1
+00:00:01,060 --> 00:00:04,390
+好的，你完成了。我给你看看我的解决方案。
+All right, you're done. Let me show you my solution.
+
+2
+00:00:06,430 --> 00:00:11,320
+我们从创建新的空URIMatcher开始，我不希望根节点匹配
+We start by creating an empty URIMatcher. I don't want the root node to match
+
+3
+00:00:11,320 --> 00:00:15,720
+任何东西。这是个习惯。为了使
+anything. This is typical behavior. To make the
+
+4
+00:00:15,720 --> 00:00:18,490
+代码更具有可读性，我将创建一个快捷键
+code easier to read, I'm making a shortcut
+
+5
+00:00:18,490 --> 00:00:23,000
+指向WeatherContract的CONTENT_AUTHORITY。严格意义上，日期
+to the WeatherContract.CONTENT_AUTHORITY. Technically, date
+
+6
+00:00:23,000 --> 00:00:25,700
+一直被认为是数字，但是我
+will always be numeric, but I'm matching the
+
+7
+00:00:25,700 --> 00:00:27,770
+用*，因为它们被存储在
+paths with star, because they are stored in
+
+8
+00:00:27,770 --> 00:00:31,200
+数据库里，以字符串的方式，目的是保持一致。
+our database as strings, just to be consistent.
+
+9
+00:00:32,380 --> 00:00:36,930
+最终，我们有了位置的URI。由于数据库里的ID是
+Finally, we have the location URIs. Since the ID in the database is
+
+10
+00:00:36,930 --> 00:00:41,670
+长整型，用#是非常有意义的。
+always a long integer, it makes perfect sense to use the pound sign pattern.
+
+11
+00:00:44,060 --> 00:00:47,474
+现在我们可以加入我们的类变量了。
+Now we can add our class variable. 
+

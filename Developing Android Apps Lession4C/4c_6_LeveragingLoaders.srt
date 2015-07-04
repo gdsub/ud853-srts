@@ -1,0 +1,184 @@
+1
+00:00:00,402 --> 00:00:03,650
+好了，接下来我会向大家示范如何通过三个简单的步骤
+All right we're going to show you how to create a CursorLoader in three
+
+2
+00:00:03,650 --> 00:00:05,360
+创建一个CursorLoader
+easy steps.
+
+3
+00:00:05,360 --> 00:00:08,790
+先创建一个整型的常量作为Loader ID
+We start by creating an integer constant for a Loader ID.
+
+4
+00:00:08,790 --> 00:00:11,110
+然后实现Loader回调函数
+Then we implement the Loader Call backs.
+
+5
+00:00:11,110 --> 00:00:14,410
+最后使用LoaderManager初始化Loader
+Finally we initialize the Loader with the LoaderManager.
+
+6
+00:00:14,410 --> 00:00:18,910
+那我们就从创建Loader的ID开始，它是一个整型常量
+We start just by creating a Loader ID, which is an integer constant.
+
+7
+00:00:18,910 --> 00:00:21,570
+一个activity可以使用不同的多个Loader
+A single activity can use multiple Loaders and
+
+8
+00:00:21,570 --> 00:00:23,580
+它们是靠不同的ID来区分的
+they are differentiated by these ID's.
+
+9
+00:00:25,500 --> 00:00:28,020
+然后我们需要把Loader的回调函数写完整
+The we have to fill in the Loader Callbacks.
+
+10
+00:00:28,020 --> 00:00:30,760
+回掉函数是一个接口类
+The Loader Callbacks are a generic interface class,
+
+11
+00:00:30,760 --> 00:00:33,150
+带了一个参数化类型
+with one parametrized type.
+
+12
+00:00:33,150 --> 00:00:37,260
+当我们通过CursorLoader使用回调函数的时候
+When we use the Loader Callbacks with a CursorLoader, the parameterized type we
+
+13
+00:00:37,260 --> 00:00:41,480
+我们使用的这个参数化类型是Cursor 
+use is Cursor, which makes the callbacks look like they do here.
+
+14
+00:00:41,480 --> 00:00:44,430
+最有意思的事情是onCreateLoader
+The most interesting one for us is onCreateLoader.
+
+15
+00:00:45,880 --> 00:00:50,165
+它返回了一个带有Cursor的loader
+OnCreateLoader returns a loader with parameterized type, Cursor.
+
+16
+00:00:50,165 --> 00:00:52,990
+这是我们创建和返回CursorLoader的地方
+This is where we create and return our CursorLoader.
+
+17
+00:00:54,310 --> 00:00:57,795
+CursorLoader有一个构造函数，带着所有标准的
+CursorLoader has a constructor that takes all of the standard content
+
+18
+00:00:57,795 --> 00:01:02,445
+content provider的查询参数，并且按照我们的意愿调用content provider
+provider query parameters, and will call the content provider on our behalf.
+
+19
+00:01:02,445 --> 00:01:05,114
+它是靠LoaderManager来执行的
+When it is executed by the LoaderManager.
+
+20
+00:01:05,114 --> 00:01:07,774
+因为CursorLoader派生自Async TaskLoader
+Since CursorLoader derives an Async TaskLoader,
+
+21
+00:01:07,774 --> 00:01:10,765
+它必须执行一个后台线程
+it will be executed in a background thread.
+
+22
+00:01:10,765 --> 00:01:15,010
+当它完成后 OnLoadFinished会执行，我们的数据也就绪了
+OnLoadFinished is called when the loader completes, and our data is ready.
+
+23
+00:01:15,010 --> 00:01:19,100
+只需要调用SwapCursor就可以在cursor adaptor里使用数据了
+To use the data in our cursor adaptor, we just call SwapCursor,
+
+24
+00:01:19,100 --> 00:01:22,860
+但是当数据就绪的时候 也是我们应该
+but this is where we would also perform any other UI updates we'd want to make
+
+25
+00:01:22,860 --> 00:01:24,585
+去执行UI更新的地方
+when the data is ready.
+
+26
+00:01:24,585 --> 00:01:28,920
+OnLoaderReset专门是在loader被销毁的时候调用的
+OnLoaderReset is typically only called when our loader is being destroyed.
+
+27
+00:01:28,920 --> 00:01:32,780
+这意味着我们要移除所有Loader数据的引用
+It means that we need to remove all references to the Loader Data.
+
+28
+00:01:32,780 --> 00:01:37,190
+为了做到这一点，我们调用SwapCursor，cursor adaptor为空
+To do that we call SwapCursor on our cursor adaptor with null.
+
+29
+00:01:37,190 --> 00:01:41,150
+最后，使用LoaderManager初始化我们的loader
+Finally, we use the LoaderManager to initialize our loader.
+
+30
+00:01:41,150 --> 00:01:42,780
+我们传递一个ID
+We pass in that loader ID,
+
+31
+00:01:42,780 --> 00:01:48,130
+刚才已经写好了的回掉函数，还有一个可选的bundle
+the loader call back we just filled out, and an optional bundle.
+
+32
+00:01:48,130 --> 00:01:51,840
+这就覆盖了所有loader的生命周期
+This will do all that cool life cycle stuff we covered in the loader intro,
+
+33
+00:01:51,840 --> 00:01:55,880
+这样，如果loader还不存在，就调用onCreatLoader
+such as, calling onCreate loader if the loader doesn't already exist.
+
+34
+00:01:55,880 --> 00:01:57,920
+当在fragment里使用loader的时候
+When using loaders in a fragment,
+
+35
+00:01:57,920 --> 00:02:00,990
+我们在onActivityCreated方法里初始化loader
+we initialize our loader in the onActivityCreated method.
+
+36
+00:02:02,780 --> 00:02:05,910
+这样你会得到一个基本的CursorLoader
+And that's it, you've got a basic CursorLoader.
+
+37
+00:02:05,910 --> 00:02:08,120
+我们会在下一次练习时让你写一个
+We're going to have you write one for our next exercise.

@@ -1,0 +1,45 @@
+1
+00:00:00,460 --> 00:00:03,340
+使用照相机  打电话  访问联系人信息
+While declaring a permission is required for using a
+
+2
+00:00:03,340 --> 00:00:07,240
+这些操作都需要声明相应的权限
+camera, making a phone call, or accessing contact details. You
+
+3
+00:00:07,240 --> 00:00:09,440
+你其实也可以通过系统应用作为中介
+can do each of these things using a system app
+
+4
+00:00:09,440 --> 00:00:13,340
+完成这些事情  因为相机应用  拨号器  和联系人应用
+as an intermediator. Because the camera app, dialer, and contacts
+
+5
+00:00:13,340 --> 00:00:15,090
+将被用来提供你请求的数据
+app will each be used to provide the data
+
+6
+00:00:15,090 --> 00:00:17,950
+用户可以取消你发起的操作
+you request, users have the chance to cancel the action
+
+7
+00:00:17,950 --> 00:00:21,300
+也就是用户可以在应用运行期间动态地拒绝你的访问
+you initiated giving them run time ability to refuse your
+
+8
+00:00:21,300 --> 00:00:25,830
+然而  你的应用只有明确地声明了相应的权限
+access. However, your app can only access the user's current location
+
+9
+00:00:25,830 --> 00:00:28,170
+才可以访问用户的当前位置信息
+if it explicitly declares a user's permission.
+

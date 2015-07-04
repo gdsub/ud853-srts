@@ -1,0 +1,90 @@
+1
+00:00:00,160 --> 00:00:02,510
+让我们data包内创造一个天气的provider类
+Let's create a weather provider class within the
+
+2
+00:00:02,510 --> 00:00:06,236
+我们将其作为ContentProvider的继承。
+data package. We'll have it extend ContentProvider. 
+
+3
+00:00:06,236 --> 00:00:08,942
+你可以通过使用Ctrl+I来实现需要的类函数
+You can have the required method by heading
+
+4
+00:00:08,942 --> 00:00:13,309
+ContentProvider的功能实现是基于
+Ctrl+I once more. ContentProvider implement functionality based upon
+
+5
+00:00:13,309 --> 00:00:15,676
+URI的。每个URI类型都被约束为一个 
+the URI's. Each URI type is tied to
+
+6
+00:00:15,676 --> 00:00:20,220
+整型常量。我们的ContentProvider将会实现五个
+an integer constant. Our ContentProvider will implement five
+
+7
+00:00:20,220 --> 00:00:23,280
+不同类型的URI。每个
+different types of URI's. Each one of these
+
+8
+00:00:23,280 --> 00:00:25,750
+URI会用作不同类型的需求。
+URI's will be used for different types of queries.
+
+9
+00:00:27,640 --> 00:00:31,840
+现在，我们把这些常量加入我们的WeatherProvider类
+For now, let's just add these constants into our WeatherProvider class.
+
+10
+00:00:33,970 --> 00:00:37,010
+Android提供一个URIMatcher类来协助
+Android provides a URIMatcher class to help
+
+11
+00:00:37,010 --> 00:00:40,850
+URI与我们的整型常量的配对。它规定了
+match URI's to our integer constants. It provides
+
+12
+00:00:40,850 --> 00:00:44,640
+一个表达式配对不同的URI。
+for an expression syntax to match various URI's.
+
+13
+00:00:44,640 --> 00:00:47,020
+这里是一些例子。你将会很快把
+Now these are just examples. You're going to have
+
+14
+00:00:47,020 --> 00:00:49,840
+他们中的一些实现。记住
+to implement one of these very soon. Note,
+
+15
+00:00:49,840 --> 00:00:53,630
+这里有两个通配符。
+that there are two wildcards.
+
+16
+00:00:53,630 --> 00:00:59,710
+“#”是用来通配数字的，“*”是用来通配字符串的。
+The pound sign is used to match a number, while a star is used to match a string. 
+
+17
+00:00:59,710 --> 00:01:03,110
+利用这些,你可以非常容易去匹配任何
+Using this,you can very, very easily match any of the URI's
+
+18
+00:01:03,110 --> 00:01:05,570
+我们希望传递进入我们的ContentProvider的URI
+that we would want to pass in to our ContentProvide.
+

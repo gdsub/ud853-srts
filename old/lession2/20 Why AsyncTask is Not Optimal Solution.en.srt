@@ -1,0 +1,45 @@
+1
+00:00:00,450 --> 00:00:03,040
+那么，数据传输不在UI线程中
+Well, the transfer isn't happening on the UI thread, but
+
+2
+00:00:03,040 --> 00:00:05,750
+但是这不是坏事。实际上，不在UI线程中
+that's not a bad thing. In fact, it's good that it's
+
+3
+00:00:05,750 --> 00:00:07,900
+运行是一件好事。所以这儿也没问题
+not happening on the UI thread. So that's not a problem
+
+4
+00:00:07,900 --> 00:00:11,910
+数据传输在现代智能手机App中是不可或缺的
+either. Data transfers are an integral part of most modern smartphone
+
+5
+00:00:11,910 --> 00:00:15,200
+所以这也不是个问题。真正的问题是
+apps, so that's not a problem. The real problem is that
+
+6
+00:00:15,200 --> 00:00:18,080
+数据传输所在的线程的生命周期被明确地绑定到
+the transfer is happening on a thread whose lifetime is tied
+
+7
+00:00:18,080 --> 00:00:21,800
+一个UI组件上，在这里是与Activity组件绑定
+explicitly to a UI component, in this case an Activity. So
+
+8
+00:00:21,800 --> 00:00:25,330
+那么当Activity组件被某些东西终止，比如旋转屏幕方向
+if the Activity is terminated by something like a screen rotation,
+
+9
+00:00:25,330 --> 00:00:27,080
+数据传输也会被终止
+the transfer will also be terminated.
+

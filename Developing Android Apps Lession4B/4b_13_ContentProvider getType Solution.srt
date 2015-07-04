@@ -1,0 +1,19 @@
+1
+00:00:00,003 --> 00:00:04,740
+WEATHER_WITH_LOCATION_AND_DATE条件只能返回一行数据
+The WEATHER_WITH_LOCATION_AND_DATE function can only return a single row.
+
+2
+00:00:04,740 --> 00:00:06,656
+所以我们返回ITEM_TYPE
+So we give it the ITEM_TYPE.
+
+3
+00:00:06,656 --> 00:00:10,278
+而WEATHER_WITH_LOCATION条件返回多个元素
+While the WEATHER_WITH_LOCATION type returns multiple items.
+
+4
+00:00:10,278 --> 00:00:13,270
+所以返回CONTENT_TYPE  它是一个目录
+So it gets CONTENT_TYPE, which is a dir.

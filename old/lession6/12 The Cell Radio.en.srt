@@ -1,0 +1,220 @@
+1
+00:00:00,670 --> 00:00:03,730
+你的设备里的无线电大致是这样运行的。
+The cell radio in your device operates roughly like this.
+
+2
+00:00:03,730 --> 00:00:06,320
+从最初的空闲状态，它需要几秒钟
+From an initial idle state, it takes a couple of seconds
+
+3
+00:00:06,320 --> 00:00:09,120
+开启，直到它可以开始发送。
+to turn on until it can start transmitting. That kind of
+
+4
+00:00:09,120 --> 00:00:12,430
+那种延迟会大大降低网页浏览的用户体验
+latency makes for a sucky web browsing experience. So rather than
+
+5
+00:00:12,430 --> 00:00:15,850
+所以机器会停留在满功率一定的时间
+going back to idle, state machine stays on at full power
+
+6
+00:00:15,850 --> 00:00:18,730
+而不是回到空闲状态。通常情况下
+for a certain amount of time. Typically, around five to ten
+
+7
+00:00:18,730 --> 00:00:22,940
+约五到十秒的时间后，才下降到中低功率模式，这时会比全功率使用消耗
+seconds before dropping to an intermediate low power mode that uses
+
+8
+00:00:22,940 --> 00:00:25,860
+更少得电池，并且返回全功率会比
+less battery than full power, and has lower latency to return
+
+9
+00:00:25,860 --> 00:00:28,661
+返回待机模式具有更低的延迟
+to full power than the standby mode. If a new
+
+10
+00:00:28,661 --> 00:00:31,370
+如果启动新的传输操作，无线电将提升回全功率模式
+transfer is initiated, the radio will be promoted back to
+
+11
+00:00:31,370 --> 00:00:34,560
+如果另一段时间什么也没发生
+full power mode. And if nothing happens for another period
+
+12
+00:00:34,560 --> 00:00:38,020
+通常约为30秒到一分钟的时间
+of time, typically around 30 seconds to a minute, it'll
+
+13
+00:00:38,020 --> 00:00:41,690
+它会返回待机状态。准确的切换时间
+drop back to standby. The exact latency in tail times
+
+14
+00:00:41,690 --> 00:00:45,000
+因在运营商之间不同，甚至在同个运营商下国家和地区之间都会有不同，
+varies between carriers, and even in carriers between states and
+
+15
+00:00:45,000 --> 00:00:47,910
+因为他们要依据如线路拥塞和典型网络条件的类似因素
+countries, as they try to balance low latency with longer
+
+16
+00:00:47,910 --> 00:00:51,380
+来平衡低延迟和延长电池寿命
+battery life based on factors like cell congestion and typical
+
+17
+00:00:51,380 --> 00:00:54,830
+因此，其准确计时方法会有所不同。
+prevailing network conditions. So the exact timings vary. How
+
+18
+00:00:54,830 --> 00:00:58,630
+我们如何优化我们的传输频率？
+do we optimize our transfer frequency? Ultimately, it doesn't matter
+
+19
+00:00:58,630 --> 00:01:01,120
+最终，其实具体的时序是什么无所谓
+what the specific timings are. You just need to
+
+20
+00:01:01,120 --> 00:01:03,712
+你只需要明白，网络是要试图平衡低延迟高电池续航时间
+understand that the network is going to attempt to balance
+
+21
+00:01:03,712 --> 00:01:07,740
+对我们来说
+low latency with high battery life. For us, when
+
+22
+00:01:07,740 --> 00:01:10,650
+当它涉及到规划数据传输，
+it comes to planning out data transfers, we really like
+
+23
+00:01:10,650 --> 00:01:13,960
+我们真的很喜欢这里的某个地方
+to be somewhere around here,. Now, if we return
+
+24
+00:01:13,960 --> 00:01:16,550
+现在，如果我们简单地回到无线电状态机
+briefly to the cell radio state machine, we know that
+
+25
+00:01:16,550 --> 00:01:19,370
+我们知道，我们每次进行数据传输时
+every time we perform a data transfer, the radio will
+
+26
+00:01:19,370 --> 00:01:22,550
+无线电将保持活跃至少持续五秒钟，
+stay active for at least another five seconds of full tail
+
+27
+00:01:22,550 --> 00:01:26,260
+任何状态下需要30秒到一分钟的时间
+time, and anywhere from 30 seconds to a minute at low
+
+28
+00:01:26,260 --> 00:01:30,010
+才能从低电源模式返回到待机状态
+power before it finally returns to standby. That means every time
+
+29
+00:01:30,010 --> 00:01:32,830
+这意味着每次启动传送，你至少需要20秒来启动无线电
+you initiate a transfer, you're powering the cell radio up for
+
+30
+00:01:32,830 --> 00:01:35,060
+所以让我们看一下如果用“小饼干”的模式
+at least 20 seconds. So let's take a look at how
+
+31
+00:01:35,060 --> 00:01:38,660
+会对应用程序有怎样的影响
+that affects an app, using the little cookie approach. An app
+
+32
+00:01:38,660 --> 00:01:41,550
+像这样的应用程序甚至无需传输大量数据就可以耗尽电池
+like this can drain the battery without even having to transfer
+
+33
+00:01:41,550 --> 00:01:44,720
+这些小峰都是一个应用程序执行ping操作
+much data. Each of these small peaks is
+
+34
+00:01:44,720 --> 00:01:47,270
+把分析传回服务器产生的
+an app pinging its analytics back to the server,.
+
+35
+00:01:47,270 --> 00:01:50,940
+在这种情况下，每15秒。这些洛吉峰表示
+In this case, every 15 seconds. These logi-peaks represent
+
+36
+00:01:50,940 --> 00:01:54,540
+基于用户交互间歇数据传送
+intermittent data transfers based on user interaction. For example,
+
+37
+00:01:54,540 --> 00:01:56,590
+例如，他们可能浏览餐厅列表或寻找明天的天气预报
+they may be viewing a restaurant listing or looking
+
+38
+00:01:56,590 --> 00:01:59,900
+下面我们已经绘制了无线受到的影响
+at tomorrow's weather forecast. Beneath it, we've graphed how
+
+39
+00:01:59,900 --> 00:02:03,230
+蓝色显示主动数据传输
+this affects the radio state. The blue shows active
+
+40
+00:02:03,230 --> 00:02:07,800
+红色是满功率运行
+data transfers. The red, the radio in full power.
+
+41
+00:02:07,800 --> 00:02:12,090
+黄色表示低功耗模式
+And yellow showing low power mode. The gaps in between, if
+
+42
+00:02:12,090 --> 00:02:16,340
+中间间隔的表示无线被闲置
+there were any, indicate when the radio was idle. So while
+
+43
+00:02:16,340 --> 00:02:19,370
+所以，应用运行的时候，有百分之多少的时间
+this app is running, what is the percentage of time that
+
+44
+00:02:19,370 --> 00:02:22,180
+无线能够回到它的空闲状态？
+the cell radio is able to go back to its idle state?
+

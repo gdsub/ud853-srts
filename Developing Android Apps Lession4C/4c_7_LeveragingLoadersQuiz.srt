@@ -1,0 +1,69 @@
+1
+00:00:00,540 --> 00:00:02,378
+好吧  该你了
+All right, it's your turn.
+
+2
+00:00:02,378 --> 00:00:05,100
+在ForecastFragment里实现一个CursorLoader
+Implement a CursorLoader in the forecast fragment
+
+3
+00:00:05,100 --> 00:00:08,390
+用来在cursorAdapter里读取cursor
+to load the cursor used in the cursor adapter.
+
+4
+00:00:08,390 --> 00:00:12,020
+当数据发生改变的时候  loader会负责发起重新请求  
+You want to pass zero in for the flags when you create the cursor adapter as
+
+5
+00:00:12,020 --> 00:00:16,270
+所以当你创建cursoradapter时  要将flag设置为0
+the loader will now be responsible for re-querying when data changes.
+
+6
+00:00:16,270 --> 00:00:19,050
+而且  这是在ForecastFragment中实现
+Also, it's easiest to have ForcastFragment
+
+7
+00:00:19,050 --> 00:00:21,060
+Loader回调最简单的方法
+implement the Loader Callbacks.
+
+8
+00:00:21,060 --> 00:00:22,495
+如果完成了这些以后
+If after you're doing all of this,
+
+9
+00:00:22,495 --> 00:00:26,440
+你的程序能够显示天气信息  那么你的实现方法就对了
+your app still displays the weather, you've probably done it right.
+
+10
+00:00:26,440 --> 00:00:29,990
+要确定引用到了这里所有类所需的Android
+Make sure to check that you are using the support library versions of all of
+
+11
+00:00:29,990 --> 00:00:31,320
+支持库
+our classes.
+
+12
+00:00:31,320 --> 00:00:35,210
+否则  你的程序讲无法兼容Android 2.3
+Otherwise, you won't get Android 2.3 compatibility.
+
+13
+00:00:35,210 --> 00:00:38,260
+在下面的指导笔记中我已经给出了
+I've provided the exact import statements you need to use
+
+14
+00:00:38,260 --> 00:00:39,750
+确切的导入声明
+in the instructor notes below.

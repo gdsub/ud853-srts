@@ -1,0 +1,105 @@
+1
+00:00:00,350 --> 00:00:02,900
+接下来我们来看看如何实现它。
+All right, you're done. Let's talk about how I
+
+2
+00:00:02,900 --> 00:00:06,280
+首先，把我们的代码
+solved this one. First, let's take all our code, and
+
+3
+00:00:06,280 --> 00:00:09,560
+从FetchWeatherTask中拷贝出来
+copy it from the fetch weather task. The intent
+
+4
+00:00:09,560 --> 00:00:12,010
+IntentService中会创建一个helper线程来运行这部分代码 
+service actually creates a helper thread for us to run
+
+5
+00:00:12,010 --> 00:00:15,300
+和AsyncTask所做的工作类似。
+on. Similar to what async task does. So we
+
+6
+00:00:15,300 --> 00:00:18,080
+我们仅需要把这部分代码从doBackground拷贝到
+can just copy this stuff from doing background to on
+
+7
+00:00:18,080 --> 00:00:22,240
+handleIntent中即可。这里我们添加一些辅助的常量。比如LOG_TAG
+handle intent. Let's add a few helpful constants, such as
+
+8
+00:00:22,240 --> 00:00:25,550
+和Intent Extra所需的String常量，
+log tag and an Intent Extra, so we can pass
+
+9
+00:00:25,550 --> 00:00:28,430
+这样我们就能传递位置请求了。
+in the location query. Now, we're just going to
+
+10
+00:00:28,430 --> 00:00:30,590
+现在我们仅需要整体浏览一遍代码，清除一下里面的错误即可。
+go through and clean up some of the errors.
+
+11
+00:00:30,590 --> 00:00:34,110
+Intent Service没有返回值。
+After all, Intent Service doesn't return a value. And
+
+12
+00:00:34,110 --> 00:00:36,790
+而且由于它是一个服务，因此它有自己的Context(上下文)
+since it's a service, it has its own context.
+
+13
+00:00:36,790 --> 00:00:40,933
+就是这样，我们已经把我们的FetchWeatherTask变成了
+And that's it. We've turned our fetch weather task
+
+14
+00:00:40,933 --> 00:00:44,750
+IntentService，非常“简单粗暴”。
+into an intents service, pretty straightforward. Now we just
+
+15
+00:00:44,750 --> 00:00:47,200
+下面我们需要调用它。在ForecastFragment的
+need to call it. So, now in the update
+
+16
+00:00:47,200 --> 00:00:50,830
+updateWeather函数中，我可以通过显式Intent的方式
+weather function from within forecast fragment, we can call
+
+17
+00:00:50,830 --> 00:00:53,430
+调用服务
+the service using an explicit intent,
+
+18
+00:00:53,430 --> 00:00:56,620
+将所需的参数放到Intent Extra中
+putting the parameter into an intent extra.
+
+19
+00:00:56,620 --> 00:00:59,640
+那么接下来我们看看它的运行效果
+All right, let's take a look at how that runs. And when we
+
+20
+00:00:59,640 --> 00:01:03,440
+当我们点击“refresh”按钮时，它会调用我们的新服务。非常棒！
+hit the refresh button, it'll use our new service. Pretty nice. And we
+
+21
+00:01:03,440 --> 00:01:06,330
+这货和我们所构思的一模一样。
+really can't tell any difference, which is how we'd expect things to be.
+

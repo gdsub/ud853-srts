@@ -1,0 +1,5 @@
+1
+00:00:00,422 --> 00:00:03,860
+这些就是我们为了在应用中展示天气预报列表所需要的JSON字符串的属性
+And here the attributes we care about to display a list of forecasts in our app.
+

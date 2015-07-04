@@ -1,0 +1,75 @@
+1
+00:00:00,230 --> 00:00:03,330
+好的，现在我们有个艰巨的任务了。把
+All right, here's a big one. Finish
+
+2
+00:00:03,330 --> 00:00:06,290
+SynchAdapter 完成，用它来获取天气数据，
+the SynchAdapter, making it fetch the weather
+
+3
+00:00:06,290 --> 00:00:09,470
+并且储存在数据库中。在ForecastFragment中
+and store it in the database. Alter
+
+4
+00:00:09,470 --> 00:00:12,740
+需要修改updateWeather函数，来与SyncAdapter
+the updateWeather function within the ForecastFragment to
+
+5
+00:00:12,740 --> 00:00:17,710
+进行同步处理。这里需要注意一些，把onHandleIntent方法的代码放进
+start a sync with the SyncAdapter. Some things here. Pull the code from on
+
+6
+00:00:17,710 --> 00:00:21,070
+SyncAdapter中。onHandleIntent方法的代码是
+handle intent into our SyncAdapter. On handle
+
+7
+00:00:21,070 --> 00:00:25,150
+在我们的Sunshine服务里的。
+intent is inside of our Sunshine service.
+
+8
+00:00:25,150 --> 00:00:27,040
+这样做的好处是虚拟分配同步adapter线程
+The good news is that abstract threaded
+
+9
+00:00:27,040 --> 00:00:29,510
+会提供一个后台线程，来处理
+sync adapter provides a background thread to
+
+10
+00:00:29,510 --> 00:00:31,460
+从服务器端获取的数据，就像是
+run the server fetch on, just like
+
+11
+00:00:31,460 --> 00:00:35,370
+Intent服务一样。 同时会从utility类中
+intent service does. Also, just fetch the location
+
+12
+00:00:35,370 --> 00:00:38,110
+获取位置数据。最终，我们
+query from our utility class. Eventually, we
+
+13
+00:00:38,110 --> 00:00:40,030
+的目的是在无用户参与的情况下进行同步操作
+want to run syncs like this without any
+
+14
+00:00:40,030 --> 00:00:42,690
+最终，同步adaptor会在我们
+involvement of the user. Finally, make the
+
+15
+00:00:42,690 --> 00:00:45,810
+调用Update Weather之后运行。
+sync adaptor run when we call Update Weather.
+

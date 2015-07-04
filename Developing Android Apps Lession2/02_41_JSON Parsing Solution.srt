@@ -1,0 +1,79 @@
+1
+00:00:00,370 --> 00:00:04,040
+我们希望FetchWeatherTask这个类返回代表天气预测结果的字符串队列
+We want the FetchWeatherTask to return an array of string forecasts.
+
+2
+00:00:05,210 --> 00:00:08,840
+这意味着我们需要修正AsyncTask的返回类型
+This means we need to modify the return type of the AsyncTask to be
+
+3
+00:00:08,840 --> 00:00:10,160
+为字符串数组
+a string array.
+
+4
+00:00:10,160 --> 00:00:13,100
+这个的效果就是doInBackground方法将会返回
+The effect of this is that the doInBackground method will now return
+
+5
+00:00:13,100 --> 00:00:14,530
+一个字符串数组
+a string array.
+
+6
+00:00:14,530 --> 00:00:17,085
+在这个方法中  在我们查询了服务器以及
+In this method, after we query the server and
+
+7
+00:00:17,085 --> 00:00:21,660
+读入流之后  我们将会执行这段代码
+then read in the input stream, we're going to perform this code.
+
+8
+00:00:21,660 --> 00:00:25,600
+这段代码用来解析服务器的返回值  函数名为getWeatherDataFromJson
+To parse the response from the server, we call getWeatherDataFromJson.
+
+9
+00:00:25,600 --> 00:00:30,540
+函数的输入为预测的JSON字符串  以及预测的天数
+We pass in the forecast JSON string, as well as the number of forecast days.
+
+10
+00:00:30,540 --> 00:00:33,290
+为了确保返回的字符串数组的正确性
+To make sure that this is returning the right string array,
+
+11
+00:00:33,290 --> 00:00:37,650
+我们可以在这个方法中 最后的位置 加入
+we can go into the method, and then at the bottom of the method, we just add
+
+12
+00:00:37,650 --> 00:00:41,990
+一些日志 把字符串数组的每一个元素都打印出来
+some logging statements to print out every element of the string array.
+
+13
+00:00:41,990 --> 00:00:44,550
+现在  当你编译这段代码并且在你的设备上运行的时候
+Now, when you compile the code and run it on your device,
+
+14
+00:00:44,550 --> 00:00:48,060
+你可以点击刷新按钮从服务器中读取数据
+you can hit the Refresh button to pull the data from the server.
+
+15
+00:00:48,060 --> 00:00:51,650
+然后  如果你打开日志栏  你就能看到这些数据被正确地解析
+Then, if you open up log cat, you can see that it was parsed correctly,
+
+16
+00:00:51,650 --> 00:00:54,020
+你可以看到所有的预测条目都被打印在日志栏中
+where you see all the forecast entries being printed out.

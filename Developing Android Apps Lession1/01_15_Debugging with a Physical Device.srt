@@ -1,0 +1,64 @@
+1
+00:00:00,210 --> 00:00:04,640
+感谢你Veto  现在我们要在手机上安装Sunshine这款应用程序
+Thanks Veto. And now it's time to install the Sunshine app on our phones.
+
+2
+00:00:04,640 --> 00:00:10,230
+我们需要一根USB数据线连接手机
+So to get started, let's grab a USB cable. We'll plug in our device and
+
+3
+00:00:10,230 --> 00:00:14,680
+然后我们需要启用USB调试  这个可以在手机的设置—
+then we'll need to enable USB debugging. This can be found in Developer options
+
+4
+00:00:14,680 --> 00:00:20,090
+开发者选项中找到  但是需要注意的是  在Android4.2以上的版本里
+in the Settings app. But note that on Android devices 4.2 and above,
+
+5
+00:00:20,090 --> 00:00:27,270
+这个选项默认是隐藏的  怎么找到它呢
+the option is actually hidden by default. To find the secret menu,
+
+6
+00:00:27,270 --> 00:00:31,650
+到设置界面  拉到最下面选择关于手机
+go to the Settings app. Scroll down to About phone.
+
+7
+00:00:32,850 --> 00:00:37,066
+找到Build number(版本号)
+Then go down to Build number and
+
+8
+00:00:37,066 --> 00:00:41,627
+轻触七次之后
+tap on that seven times [SOUND]. Then,
+
+9
+00:00:41,627 --> 00:00:45,350
+返回到设置界面  你就能看到开发者选项神奇的出现啦
+when you go back to Settings, you'll see the Developer options menu appear.
+
+10
+00:00:46,520 --> 00:00:50,260
+同样的  你需要在电脑上安装驱动等让电脑识别你的设备  点击下面的链接
+Also, set up your computer to detect your device. Check the instructor notes for
+
+11
+00:00:50,260 --> 00:00:54,680
+查看更多  我们在开发中将会用真机测试因为它相对更快
+more details. We're going to continue using a device because it's faster and
+
+12
+00:00:54,680 --> 00:00:57,270
+更顺畅  但是如果尚未拥有一台Android设备
+smoother for development. But if you don't have one,
+
+13
+00:00:57,270 --> 00:01:00,900
+木有问题  你可以用我们之前创建的模拟器来开发
+that's okay. You can continue using the emulator that we created previously.

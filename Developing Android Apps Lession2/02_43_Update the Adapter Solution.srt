@@ -1,0 +1,85 @@
+1
+00:00:00,450 --> 00:00:03,190
+解决方法是重写AsyncTask的onPostExecute()方法。
+The solution is to override the onPostExecute method
+
+2
+00:00:03,190 --> 00:00:05,510
+它在主线程中运行。
+of the AsyncTask. And this runs on the main
+
+3
+00:00:05,510 --> 00:00:09,410
+我们获得天气预报的字符串数组，
+thread. We received the string array of forecast results,
+
+4
+00:00:09,410 --> 00:00:11,590
+它是从上面的doInBackground()方法中
+which came as a return value from the do
+
+5
+00:00:11,590 --> 00:00:15,930
+返回的。首先，我们清除ForecastAdapter中
+in background method above. First, we clear the ForecastAdapter
+
+6
+00:00:15,930 --> 00:00:19,300
+所有先前的天气预报数据。然后，我们
+of all the previous forecast entries. Then we go
+
+7
+00:00:19,300 --> 00:00:21,810
+向ForecastAdapter中一个一个添加
+ahead and add each new forecast entry one by
+
+8
+00:00:21,810 --> 00:00:25,500
+新的天气预报的数据。这最终会触发
+one to the ForecastAdapter. This is what ultimately triggers
+
+9
+00:00:25,500 --> 00:00:29,050
+Listview的更新。注意，如果你是面向Honeycomb
+the listView to update. Note that if you're targeting Honeycomb
+
+10
+00:00:29,050 --> 00:00:32,210
+或更高版本的设备，你在这可以使用addAll()方法，
+devices and above, you can use an addAll method here,
+
+11
+00:00:32,210 --> 00:00:34,430
+因此你不需要一个一个地添加它们。
+so you don't have to add them one by one.
+
+12
+00:00:34,430 --> 00:00:38,320
+你能够只添加一次，并且只更新一次ListView。
+You can just add it once and update the listView once.
+
+13
+00:00:38,320 --> 00:00:41,060
+一旦你点击Refresh按钮，你将看到接下来七天内
+Once you hit Refresh, you'll see the weather forecast for
+
+14
+00:00:41,060 --> 00:00:44,700
+你所在地区的天气预报。尽管我们点击了Refresh按钮，
+the next seven days for your location. Even though we hit
+
+15
+00:00:44,700 --> 00:00:47,820
+我们没有任何的verbose级别的日志语句在这里打印出来。
+Refresh, we don't have any verbose logging statements being printed
+
+16
+00:00:47,820 --> 00:00:50,520
+我们不再需要它们，因为我们现在有方法
+out here. We don't need them anymore, because we have a
+
+17
+00:00:50,520 --> 00:00:53,500
+去检查我们的代码是否正确，那就是直接看UI。
+way to check that our code is correct by looking at the UI now.
+

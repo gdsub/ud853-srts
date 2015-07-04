@@ -1,0 +1,60 @@
+1
+00:00:00,840 --> 00:00:04,030
+嘿  丹  想要看看我们到目前为止开发的天气应用吗
+Hey, Dan. want to see our weather app, so far, that we've been building?
+
+2
+00:00:05,800 --> 00:00:09,400
+看起来很棒  但我想看到更多的东西
+>> Pretty cool. But I want something more.
+
+3
+00:00:09,400 --> 00:00:11,250
+嗯  我们还没有完成呢  我们才开始学习了2节课
+>> Well, we're not done yet. We just started
+
+4
+00:00:11,250 --> 00:00:14,090
+让我们歇会  但是
+two lessons ago. Give us a break. But fair
+
+5
+00:00:14,090 --> 00:00:16,750
+我们的确还有很多事情要做
+enough, there's still a bunch more work left to
+
+6
+00:00:16,750 --> 00:00:18,780
+你认为我们下一步该做什么呢
+do. What do you think we should do next?
+
+7
+00:00:18,780 --> 00:00:21,130
+对于初学者  让我们先做一个列表项
+>> Well for starters, let's make the list
+
+8
+00:00:21,130 --> 00:00:22,300
+当我们点击时它时  它会做一些事情
+item do something when you click on it.
+
+9
+00:00:23,480 --> 00:00:25,952
+好吧  你看起来是点击列表项的专家
+>> Well, since you seem to be the expert on clicking on
+
+10
+00:00:25,952 --> 00:00:30,130
+为什么你不去做呢  我要去吃一些果冻豆
+list items, why don't you do it? I'm going to go eat some jellybeans.
+
+11
+00:00:30,130 --> 00:00:32,659
+我认为Catherine刚才是在嘲弄我
+>> I think Catherine was mocking me there.
+
+12
+00:00:32,659 --> 00:00:34,910
+说到"嘲弄"  让我们去做一些UI吧
+Speaking of mocks, let's go do some UI.
+

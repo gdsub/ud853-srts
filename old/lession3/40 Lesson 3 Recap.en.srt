@@ -1,0 +1,40 @@
+1
+00:00:00,410 --> 00:00:02,440
+在这一课中  我们在我们的应用中添加了新的Activity
+In this lesson we added new activities to our
+
+2
+00:00:02,440 --> 00:00:05,950
+并且探讨了它们之间的结构层次以及如何导航
+apps and explored ways to structure and navigate between them.
+
+3
+00:00:05,950 --> 00:00:08,370
+而这意味着我们学习了Intent的相关知识以及它们
+And that meant learning all about intents and how
+
+4
+00:00:08,370 --> 00:00:12,150
+在Android中是如何使用的  在下面的第4课中  我们将要学到
+they're used in Android. Next up in Lesson 4, we're
+
+5
+00:00:12,150 --> 00:00:14,740
+Activity的生命周期  并且
+going to learn about the activity life cycle and make
+
+6
+00:00:14,740 --> 00:00:18,150
+通过保存数据使我们的应用程序更好用
+our apps that much more useful by saving data. We'll
+
+7
+00:00:18,150 --> 00:00:20,620
+我们将开始学习数据库和ContentProvider（内容提供者）的相关知识
+begin to databases and learn about content providers, but
+
+8
+00:00:20,620 --> 00:00:24,230
+但是首先让我们踏上Android历史的另一段旅程
+first let's take another journey into the history of Android.
+

@@ -1,0 +1,89 @@
+1
+00:00:00,340 --> 00:00:02,320
+关于这一点  我们将通过使sunshine应用
+On that note, we're going to make our sunshine app
+
+2
+00:00:02,320 --> 00:00:05,410
+由网络连接到OpenWeatherMap的服务来极大地
+100 times better now by connecting it over the network
+
+3
+00:00:05,410 --> 00:00:10,360
+提升其质量  OpenWeatherMap服务提供免费的天气的数据
+to the OpenWeatherMap service. OpenWeatherMap provides a free weather data
+
+4
+00:00:10,360 --> 00:00:13,480
+和预报的API  网址链接就在下面
+and forecast API. And the site is linked below, so
+
+5
+00:00:13,480 --> 00:00:16,570
+你可以点击了进去看看  通过浏览这个网站
+you can follow along. By scrolling through the site,
+
+6
+00:00:16,570 --> 00:00:19,600
+你可以看到什么类型的数据是可用的
+you can see what type of data is available. It
+
+7
+00:00:19,600 --> 00:00:22,540
+它还有示例查询  你可以点击这里
+also has example queries so you can click on this
+
+8
+00:00:22,540 --> 00:00:25,440
+来查看在英国伦敦的天气情况
+one to see what the weather is like in London.
+
+9
+00:00:25,440 --> 00:00:28,070
+返回的数据包括一个关于天气状况的对用户友好的说明
+It includes a user friendly description of the weather
+
+10
+00:00:28,070 --> 00:00:31,280
+举个例子  比如这里的块云
+condition, such as broken clouds, in this case. And
+
+11
+00:00:31,280 --> 00:00:34,110
+我们稍后会在应用中使用到这些数据
+we'll use this later in our app. For the
+
+12
+00:00:34,110 --> 00:00:37,060
+如果想要获得完整的天气状况的列表  你可以返回
+full list of weather conditions, you can go back to
+
+13
+00:00:37,060 --> 00:00:40,330
+到首页  向下滚动  然后点击
+the main page. And scroll down. And then, click
+
+14
+00:00:40,330 --> 00:00:42,790
+这个链接来获取天气情况的编码
+on this link here for the Weather Condition Codes.
+
+15
+00:00:43,950 --> 00:00:45,700
+在这个页面上  我们有了天气情况的
+And on this page, we have the full list
+
+16
+00:00:45,700 --> 00:00:51,000
+完整列表  它涵盖了所有情况  从散云到
+of weather conditions. It contains everything, from scattered clouds to
+
+17
+00:00:51,000 --> 00:00:55,490
+冻雨  甚至是火山灰  我不知道
+freezing rain, or even volcanic ash. I don't know
+
+18
+00:00:55,490 --> 00:00:58,170
+你那里的情况  但愿希望它不会经常发生
+about you, but hopefully that doesn't happen too often.

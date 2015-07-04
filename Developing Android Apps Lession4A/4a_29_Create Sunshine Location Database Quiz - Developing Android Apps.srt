@@ -1,0 +1,112 @@
+1
+00:00:00,000 --> 00:00:03,660
+重写onCreate()方法  并使用我们在合约类中定义的常量
+Modify onCreate to create
+the LocationEntry database table using
+
+2
+00:00:03,660 --> 00:00:06,022
+来创建LocationEntry数据库表
+the constants we defined
+in the contract.
+
+3
+00:00:06,022 --> 00:00:08,248
+好消息是这个声明和WeatherEntry很相似
+The good news is that
+this is a similar but
+
+4
+00:00:08,248 --> 00:00:11,269
+但是又更简单
+simpler statement than what
+we have in WeatherEntry.
+
+5
+00:00:11,269 --> 00:00:15,286
+你将会创建并执行一个存储了SQL命令的字符串
+You'll be creating and executing
+a string that stores an SQL command.
+
+6
+00:00:15,286 --> 00:00:18,526
+你需要确保每一个列使用了正确的数据类型
+You want to make sure to use
+the correct data types for each column.
+
+7
+00:00:18,526 --> 00:00:21,405
+你同样需要确保使用了正确的约束
+Also, make sure that you
+have the right constraints.
+
+8
+00:00:21,405 --> 00:00:24,005
+通常  对于天气表的所有模型
+In general, for
+all the model of the weather table.
+
+9
+00:00:24,005 --> 00:00:28,405
+除了ID列  其它列必须定义成不能为空
+With the exception of the ID,
+all columns must be defined as not null.
+
+10
+00:00:28,405 --> 00:00:32,078
+位置查询应该额外加上唯一性
+The location query should
+additionally be defined as unique or
+
+11
+00:00:32,078 --> 00:00:35,068
+或者坐标值为实数或者浮点数
+coordinates are real, or
+floating point values.
+
+12
+00:00:35,068 --> 00:00:38,480
+你应该考虑为SQL声明语句加上输出日志
+You should consider adding logging
+statements to print the SQL statement,
+
+13
+00:00:38,480 --> 00:00:40,327
+以便验证语句是自己期望的样子
+and verify that it
+looks as you intended.
+
+14
+00:00:40,327 --> 00:00:43,358
+特别注意空格、插入语以及逗号
+Pay close attention to spaces,
+parenthesis, and commas.
+
+15
+00:00:43,358 --> 00:00:46,180
+写好了创建表的SQL语句以后
+Once you have finished writing
+the SQL to create the table,
+
+16
+00:00:46,180 --> 00:00:49,512
+继续去运行TestDB中的testCreateDB()测试方法
+continue to run testCreateDB
+from within the TestDB, and
+
+17
+00:00:49,512 --> 00:00:52,239
+让这个测试引导你进行创建表的声明语句的调试
+let it guide you as to how to
+fix your creation statement.
+
+18
+00:00:52,239 --> 00:00:55,997
+当你结束了编码以后  我建议你看一下我们的解决方案
+Once you have finished coding,
+I recommend looking at our solution,
+
+19
+00:00:55,997 --> 00:00:58,172
+以防我们测试漏了什么
+just in case our test missed something.
