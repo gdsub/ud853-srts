@@ -1,19 +1,19 @@
 1
 00:00:00,430 --> 00:00:03,860
-µ±ÄãÎª Adapter ÊÊÅäÆ÷´´½¨ºÃÄÚÈİµÄÊ±ºò  ËüÓ¦¸Ã¿´ÆğÀ´ÏñÕâ¸öÑù×ÓµÄ
+å½“ä½ ä¸º Adapter é€‚é…å™¨åˆ›å»ºå¥½å†…å®¹çš„æ—¶å€™  å®ƒåº”è¯¥çœ‹èµ·æ¥åƒè¿™ä¸ªæ ·å­çš„
 When you've declared your array adapter of strings, it should look something
 
 2
 00:00:03,860 --> 00:00:09,500
-ÎÒÃÇ°ÑÕâ¸öFragmentËùÊôµÄActivity´«½øÈ¥  ×÷ÎªÒ»¸öContext²ÎÊı
+æˆ‘ä»¬æŠŠè¿™ä¸ªFragmentæ‰€å±çš„Activityä¼ è¿›å»  ä½œä¸ºä¸€ä¸ªContextå‚æ•°
 like this. We pass in a context, which is this fragment's parent activity,
 
 3
 00:00:09,500 --> 00:00:14,010
-Í¬Ê±»¹ÓĞÁĞ±íÏîÄ¿²¼¾ÖµÄid  ÒÔ¼° TextView ×é¼şµÄ id
+åŒæ—¶è¿˜æœ‰åˆ—è¡¨é¡¹ç›®å¸ƒå±€çš„id  ä»¥åŠ TextView ç»„ä»¶çš„ id
 as well as the ID of the list item layout, and the ID of the text view we
 
 4
 00:00:14,010 --> 00:00:17,380
-×îºóÎÒÃÇ´«ÈëÌìÆøÊı¾İĞÅÏ¢
+æœ€åæˆ‘ä»¬ä¼ å…¥å¤©æ°”æ•°æ®ä¿¡æ¯
 want to populate. And lastly, we pass in the forecast data.

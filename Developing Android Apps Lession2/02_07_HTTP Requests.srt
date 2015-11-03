@@ -1,59 +1,59 @@
 1
 00:00:00,230 --> 00:00:02,100
-ÔÚÌá¹©µÄÊ¾Àı´úÂëÀï£¬Äã»á×¢Òâµ½£¬
+åœ¨æä¾›çš„ç¤ºä¾‹ä»£ç é‡Œï¼Œä½ ä¼šæ³¨æ„åˆ°ï¼Œ
 In the sample code provided you'll notice
 
 2
 00:00:02,100 --> 00:00:06,000
-ÎÒÃÇ´´½¨ÁËÒ»¸öHTTP URLÁ¬½Ó¡£
+æˆ‘ä»¬åˆ›å»ºäº†ä¸€ä¸ªHTTP URLè¿æ¥ã€‚
 that we create a Http Url connection. To
 
 3
 00:00:06,000 --> 00:00:08,430
-ÎªÁËÊ¹ÓÃHttpĞ­ÒéÔÚÍøÂçÉÏ·¢ËÍºÍ½ÓÊÕÊı¾İ£¬
+ä¸ºäº†ä½¿ç”¨Httpåè®®åœ¨ç½‘ç»œä¸Šå‘é€å’Œæ¥æ”¶æ•°æ®ï¼Œ
 use Http to send and receive data over
 
 4
 00:00:08,430 --> 00:00:10,960
-AndroidÀïÓĞÁ½ÖÖ¿Í»§¶ËµÄAPI¡£
+Androidé‡Œæœ‰ä¸¤ç§å®¢æˆ·ç«¯çš„APIã€‚
 the network, we have two clients on Android.
 
 5
 00:00:10,960 --> 00:00:13,740
-Ò»¸öÊÇHttpUrlConnectionÀà£¬»¹ÓĞÒ»¸öÊÇ
+ä¸€ä¸ªæ˜¯HttpUrlConnectionç±»ï¼Œè¿˜æœ‰ä¸€ä¸ªæ˜¯
 The HttpUrlConnection class, as well as
 
 6
 00:00:13,740 --> 00:00:17,700
-ApacheÌá¹©µÄHttpClientÀà¡£ÕâÁ½ÖÖ·½Ê½¶¼Ö§³Ö
+Apacheæä¾›çš„HttpClientç±»ã€‚è¿™ä¸¤ç§æ–¹å¼éƒ½æ”¯æŒ
 the Apache HttpClient class. Both options support
 
 7
 00:00:17,700 --> 00:00:22,010
-Https£¬ÒÔÊı¾İÁ÷µÄĞÎÊ½ÉÏ´«ºÍÏÂÔØ£¬³¬Ê±ÅäÖÃ£¬
+Httpsï¼Œä»¥æ•°æ®æµçš„å½¢å¼ä¸Šä¼ å’Œä¸‹è½½ï¼Œè¶…æ—¶é…ç½®ï¼Œ
 Https, streaming uploads and downloads, configurable time outs,
 
 8
 00:00:22,010 --> 00:00:25,460
-IP v6ÒÔ¼°Á¬½Ó³Ø¡£
+IP v6ä»¥åŠè¿æ¥æ± ã€‚
 IP v6 and connection pooling. We recommend the
 
 9
 00:00:25,460 --> 00:00:28,850
-ÎÒÃÇÍÆ¼öÊ¹ÓÃHttpUrlConnectionÀà£¬ÒòÎªËü¸üÎªÍ¨ÓÃ£¬ÇáÁ¿¼¶£¬
+æˆ‘ä»¬æ¨èä½¿ç”¨HttpUrlConnectionç±»ï¼Œå› ä¸ºå®ƒæ›´ä¸ºé€šç”¨ï¼Œè½»é‡çº§ï¼Œ
 HttpUrlConnection class because it's general purpose and light
 
 10
 00:00:28,850 --> 00:00:31,730
-¶øÇÒ×¨ÃÅÕë¶Ô´ó¶àÊıAndroidÓ¦ÓÃµÄĞèÇó½øĞĞÁËÓÅ»¯¡£
+è€Œä¸”ä¸“é—¨é’ˆå¯¹å¤§å¤šæ•°Androidåº”ç”¨çš„éœ€æ±‚è¿›è¡Œäº†ä¼˜åŒ–ã€‚
 weight, and it's been optimized to suit the needs of
 
 11
 00:00:31,730 --> 00:00:34,460
-ÏëÒªÁË½â¸ü¶àµÄÍøÂçÁ¬½ÓµÄÖªÊ¶£¬
+æƒ³è¦äº†è§£æ›´å¤šçš„ç½‘ç»œè¿æ¥çš„çŸ¥è¯†ï¼Œ
 most Android apps. To learn more about connecting to the
 
 12
 00:00:34,460 --> 00:00:37,130
-Çë²ÎÔÄ¶ÁÏÂ·½µÄÅàÑµÖ¸ÄÏºÍ²©ÎÄÁ´½Ó¡£
+è¯·å‚é˜…è¯»ä¸‹æ–¹çš„åŸ¹è®­æŒ‡å—å’Œåšæ–‡é“¾æ¥ã€‚
 network, see the training guide and blog post link below.

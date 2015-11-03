@@ -2,49 +2,49 @@
 00:00:00,170 --> 00:00:02,180
 These are the attributes
 that we care about.
-ÕâĞ©ÊÇÎÒÃÇ¹ØĞÄµÄÊôĞÔ¡£
+è¿™äº›æ˜¯æˆ‘ä»¬å…³å¿ƒçš„å±æ€§ã€‚
 
 2
 00:00:02,180 --> 00:00:04,660
 You might be wondering
 why time is not included.
-Äã¿ÉÄÜÏëÖªµÀÎªÊ²Ã´Ê±¼ä²»°üÀ¨ÔÚÀïÃæ.
+ä½ å¯èƒ½æƒ³çŸ¥é“ä¸ºä»€ä¹ˆæ—¶é—´ä¸åŒ…æ‹¬åœ¨é‡Œé¢.
 
 3
 00:00:04,660 --> 00:00:06,750
 The weather API provides the date and
-weather API Ìá¹©ÁËÈÕÆÚºÍ GMT Ê±¼ä£¬
+weather API æä¾›äº†æ—¥æœŸå’Œ GMT æ—¶é—´ï¼Œ
 
 4
 00:00:06,750 --> 00:00:10,380
 GMT time, but doesn't provide
 time zones for the location.
-µ«ÊÇ²¢²»Ìá¹©µØÇøµÄÊ±Çø¡£
+ä½†æ˜¯å¹¶ä¸æä¾›åœ°åŒºçš„æ—¶åŒºã€‚
 
 5
 00:00:10,380 --> 00:00:13,820
 So unfortunately, the date could be
 incorrect in some cases depending on
-Òò´Ë²»ĞÒÔËµÄÊÇ£¬ÈÕÆÚÔÚÄ³Ğ©Çé¿öÏÂ¸ù¾İ
+å› æ­¤ä¸å¹¸è¿çš„æ˜¯ï¼Œæ—¥æœŸåœ¨æŸäº›æƒ…å†µä¸‹æ ¹æ®
 
 6
 00:00:13,820 --> 00:00:15,900
 your location and time of day.
-ÄãµÄµØÇøºÍÊ±¼äµÄ²»Í¬¶ø²»Í¬¡£
+ä½ çš„åœ°åŒºå’Œæ—¶é—´çš„ä¸åŒè€Œä¸åŒã€‚
 
 7
 00:00:15,900 --> 00:00:16,570
 Instead, for
-·´¶ø£¬ÎªÁË
+åè€Œï¼Œä¸ºäº†
 
 8
 00:00:16,570 --> 00:00:20,200
 a more accurate experience, we'll be
 computing the date ourselves based on
-Ò»¸ö¸ü¼Ó¾«È·µÄÌåÑé£¬ÎÒÃÇ½«×Ô¼º¼ÆËãÈÕÆÚ»ùÓÚ
+ä¸€ä¸ªæ›´åŠ ç²¾ç¡®çš„ä½“éªŒï¼Œæˆ‘ä»¬å°†è‡ªå·±è®¡ç®—æ—¥æœŸåŸºäº
 
 9
 00:00:20,200 --> 00:00:23,150
 the device time of when you fetched
 the weather forecast from the server.
-Äã´Ó·şÎñÆ÷ÄÃµ½Êı¾İÊ±µÄÉè±¸Ê±¼ä¡£
+ä½ ä»æœåŠ¡å™¨æ‹¿åˆ°æ•°æ®æ—¶çš„è®¾å¤‡æ—¶é—´ã€‚

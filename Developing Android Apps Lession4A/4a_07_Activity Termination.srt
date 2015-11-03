@@ -1,25 +1,25 @@
 1
 00:00:01,000 --> 00:00:03,880
-ÈÃÎÒÃÇ¿´¿´ÊÇ·ñÄÜÍÆ²â³öÒ»¸öÓ¦ÓÃÔÚºóÌ¨½áÊøÊ±»á·¢ÉúÊ²Ã´
+è®©æˆ‘ä»¬çœ‹çœ‹æ˜¯å¦èƒ½æ¨æµ‹å‡ºä¸€ä¸ªåº”ç”¨åœ¨åå°ç»“æŸæ—¶ä¼šå‘ç”Ÿä»€ä¹ˆ
 Let's see if we can figure out what happens when an app is terminated in
 
 2
 00:00:03,880 --> 00:00:08,690
-ÖØĞÂ´ò¿ªÓ¦ÓÃ  È»ºóµã»÷Home¼ü  ´ò¿ªÒ»Ğ©ÆäËûµÄ³ÌĞò
+é‡æ–°æ‰“å¼€åº”ç”¨  ç„¶åç‚¹å‡»Homeé”®  æ‰“å¼€ä¸€äº›å…¶ä»–çš„ç¨‹åº
 the background. Start the app again then hit the Home key. Now launch some other
 
 3
 00:00:08,690 --> 00:00:13,240
-¶ø²»ÊÇ·µ»ØÄã×Ô¼ºµÄ³ÌĞò  ³¢ÊÔÒ»Ğ©Õ¼ÓÃ´óÁ¿ÄÚ´æµÄ²Ù×÷
+è€Œä¸æ˜¯è¿”å›ä½ è‡ªå·±çš„ç¨‹åº  å°è¯•ä¸€äº›å ç”¨å¤§é‡å†…å­˜çš„æ“ä½œ
 apps before returning to ours. Try and pick apps with large memory footprints.
 
 4
 00:00:13,240 --> 00:00:17,310
-ÄãÄÜÍÆ²â³öÔÚÄãµÄÓ¦ÓÃ±»»·¾³½áÊøÖ®Ç°
+ä½ èƒ½æ¨æµ‹å‡ºåœ¨ä½ çš„åº”ç”¨è¢«ç¯å¢ƒç»“æŸä¹‹å‰
 Can you figure out, which of the following lifecycle event handlers is the last
 
 5
 00:00:17,310 --> 00:00:21,000
-ÉúÃüÖÜÆÚÖĞµÄÄÄ¸ö×´Ì¬ÊÇ×îºó±»µ÷ÓÃµÄÃ´
+ç”Ÿå‘½å‘¨æœŸä¸­çš„å“ªä¸ªçŠ¶æ€æ˜¯æœ€åè¢«è°ƒç”¨çš„ä¹ˆ
 one guaranteed to be called, before your app maybe terminated by the runtime?
 

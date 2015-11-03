@@ -1,50 +1,50 @@
 1
 00:00:00,375 --> 00:00:03,670
-ÄãÔÚµÚÒ»¿ÎµÄÑ§Ï°ÖĞÒÑ¾­Íê³ÉÁËĞí¶à¡£
+ä½ åœ¨ç¬¬ä¸€è¯¾çš„å­¦ä¹ ä¸­å·²ç»å®Œæˆäº†è®¸å¤šã€‚
 You accomplished a lot in this first lesson. Starting with nothing more
 
 2
 00:00:03,670 --> 00:00:07,870
-ÒÀ¿¿Android studioºÍÒ»Ç»ÈÈÑª£¬ÏÖÔÚÄã´ÓÒ»ÎŞËùÓĞµ½´´½¨ÁËµÚÒ»¸ö¹¤³Ì
+ä¾é Android studioå’Œä¸€è…”çƒ­è¡€ï¼Œç°åœ¨ä½ ä»ä¸€æ— æ‰€æœ‰åˆ°åˆ›å»ºäº†ç¬¬ä¸€ä¸ªå·¥ç¨‹
 than Android Studio and hope, you've created your first project. Built and
 
 3
 00:00:07,870 --> 00:00:10,390
-ÔÚĞéÄâÉè±¸ºÍÊµ»úÉÏÉú³ÉºÍÅäÖÃ³ÌĞò£¬
+åœ¨è™šæ‹Ÿè®¾å¤‡å’Œå®æœºä¸Šç”Ÿæˆå’Œé…ç½®ç¨‹åºï¼Œ
 deployed it to virtual and actual devices, and
 
 4
 00:00:10,390 --> 00:00:14,910
-ÉõÖÁÊ¹ÓÃÊÊÅäÆ÷´´½¨ÁËÒ»¸ö¼òµ¥µÄ»ùÓÚÁĞ±íµÄÓÃ»§½çÃæ
+ç”šè‡³ä½¿ç”¨é€‚é…å™¨åˆ›å»ºäº†ä¸€ä¸ªç®€å•çš„åŸºäºåˆ—è¡¨çš„ç”¨æˆ·ç•Œé¢
 even created a simple list-based UI that's populated using an adapter.
 
 5
 00:00:14,910 --> 00:00:18,480
-ÄãÒ²Ñ§Ï°µ½Ò»µã¹ØÓÚÒÆ¶¯¶ËºÍandroid¶Ë¿ª·¢£¬ÓÈÆäÊÇ£¬
+ä½ ä¹Ÿå­¦ä¹ åˆ°ä¸€ç‚¹å…³äºç§»åŠ¨ç«¯å’Œandroidç«¯å¼€å‘ï¼Œå°¤å…¶æ˜¯ï¼Œ
 You also learned a little about what makes mobile and Android, in particular,
 
 6
 00:00:18,480 --> 00:00:22,690
-ºÍ×ÀÃæ¡¢ÍøÒ³ºÍ·şÎñ¶Ë¿ª·¢µÈÏà±È£¬ÕâÊÇÒ»¸ö²»Í¬µÄ¿ª·¢»·¾³
+å’Œæ¡Œé¢ã€ç½‘é¡µå’ŒæœåŠ¡ç«¯å¼€å‘ç­‰ç›¸æ¯”ï¼Œè¿™æ˜¯ä¸€ä¸ªä¸åŒçš„å¼€å‘ç¯å¢ƒ
 a different environment to develop for the desktop, web, and server. But we've
 
 7
 00:00:22,690 --> 00:00:27,090
-ÕâÖ»ÊÇ¸Õ¸Õ¿ªÊ¼¡£ÎÒÃÇµÄÓ¦ÓÃ³ÌĞòµ½ÏÖÔÚÎªÖ¹Ê¹ÓÃµÄ»¹ÊÇ¾²Ì¬Ä£ÄâÊı¾İ¡£
+è¿™åªæ˜¯åˆšåˆšå¼€å§‹ã€‚æˆ‘ä»¬çš„åº”ç”¨ç¨‹åºåˆ°ç°åœ¨ä¸ºæ­¢ä½¿ç”¨çš„è¿˜æ˜¯é™æ€æ¨¡æ‹Ÿæ•°æ®ã€‚
 only just gotten started. The app we've got so far is using static mock data.
 
 8
 00:00:27,090 --> 00:00:31,050
-ËùÒÔ£¬ÎÒÃÇ½«»áÔÚµÚ¶ş¿ÎÀï¼ÌĞøÑ§Ï°£¬ÈçºÎµÃµ½ÕæÕıµÄÌìÆøÊı¾İ¡£
+æ‰€ä»¥ï¼Œæˆ‘ä»¬å°†ä¼šåœ¨ç¬¬äºŒè¯¾é‡Œç»§ç»­å­¦ä¹ ï¼Œå¦‚ä½•å¾—åˆ°çœŸæ­£çš„å¤©æ°”æ•°æ®ã€‚
 So join us in lesson two to learn how to hook it up to real weather data.
 
 9
 00:00:31,050 --> 00:00:34,070
-ÄÇÃ´ÔÚÕâÖ®Ç°£¬»¨µãÊ±¼äÍØÕ¹Ò»ÏÂÄãµÄÈÏÖª£¬
+é‚£ä¹ˆåœ¨è¿™ä¹‹å‰ï¼ŒèŠ±ç‚¹æ—¶é—´æ‹“å±•ä¸€ä¸‹ä½ çš„è®¤çŸ¥ï¼Œ
 But before that, take a moment to cleanse your palate with
 
 10
 00:00:34,070 --> 00:00:38,020
-¹ØÓÚAndroidÉúÌ¬ÏµÍ³µÄÀúÊ·ºÍÑİ±ä¡£
+å…³äºAndroidç”Ÿæ€ç³»ç»Ÿçš„å†å²å’Œæ¼”å˜ã€‚
 a brief interlude exploring the history and evolution of the Android ecosystem.
 

@@ -1,89 +1,89 @@
 1
 00:00:00,340 --> 00:00:02,320
-¹ØÓÚÕâÒ»µã  ÎÒÃÇ½«Í¨¹ıÊ¹sunshineÓ¦ÓÃ
+å…³äºè¿™ä¸€ç‚¹  æˆ‘ä»¬å°†é€šè¿‡ä½¿sunshineåº”ç”¨
 On that note, we're going to make our sunshine app
 
 2
 00:00:02,320 --> 00:00:05,410
-ÓÉÍøÂçÁ¬½Óµ½OpenWeatherMapµÄ·şÎñÀ´¼«´óµØ
+ç”±ç½‘ç»œè¿æ¥åˆ°OpenWeatherMapçš„æœåŠ¡æ¥æå¤§åœ°
 100 times better now by connecting it over the network
 
 3
 00:00:05,410 --> 00:00:10,360
-ÌáÉıÆäÖÊÁ¿  OpenWeatherMap·şÎñÌá¹©Ãâ·ÑµÄÌìÆøµÄÊı¾İ
+æå‡å…¶è´¨é‡  OpenWeatherMapæœåŠ¡æä¾›å…è´¹çš„å¤©æ°”çš„æ•°æ®
 to the OpenWeatherMap service. OpenWeatherMap provides a free weather data
 
 4
 00:00:10,360 --> 00:00:13,480
-ºÍÔ¤±¨µÄAPI  ÍøÖ·Á´½Ó¾ÍÔÚÏÂÃæ
+å’Œé¢„æŠ¥çš„API  ç½‘å€é“¾æ¥å°±åœ¨ä¸‹é¢
 and forecast API. And the site is linked below, so
 
 5
 00:00:13,480 --> 00:00:16,570
-Äã¿ÉÒÔµã»÷ÁË½øÈ¥¿´¿´  Í¨¹ıä¯ÀÀÕâ¸öÍøÕ¾
+ä½ å¯ä»¥ç‚¹å‡»äº†è¿›å»çœ‹çœ‹  é€šè¿‡æµè§ˆè¿™ä¸ªç½‘ç«™
 you can follow along. By scrolling through the site,
 
 6
 00:00:16,570 --> 00:00:19,600
-Äã¿ÉÒÔ¿´µ½Ê²Ã´ÀàĞÍµÄÊı¾İÊÇ¿ÉÓÃµÄ
+ä½ å¯ä»¥çœ‹åˆ°ä»€ä¹ˆç±»å‹çš„æ•°æ®æ˜¯å¯ç”¨çš„
 you can see what type of data is available. It
 
 7
 00:00:19,600 --> 00:00:22,540
-Ëü»¹ÓĞÊ¾Àı²éÑ¯  Äã¿ÉÒÔµã»÷ÕâÀï
+å®ƒè¿˜æœ‰ç¤ºä¾‹æŸ¥è¯¢  ä½ å¯ä»¥ç‚¹å‡»è¿™é‡Œ
 also has example queries so you can click on this
 
 8
 00:00:22,540 --> 00:00:25,440
-À´²é¿´ÔÚÓ¢¹úÂ×¶ØµÄÌìÆøÇé¿ö
+æ¥æŸ¥çœ‹åœ¨è‹±å›½ä¼¦æ•¦çš„å¤©æ°”æƒ…å†µ
 one to see what the weather is like in London.
 
 9
 00:00:25,440 --> 00:00:28,070
-·µ»ØµÄÊı¾İ°üÀ¨Ò»¸ö¹ØÓÚÌìÆø×´¿öµÄ¶ÔÓÃ»§ÓÑºÃµÄËµÃ÷
+è¿”å›çš„æ•°æ®åŒ…æ‹¬ä¸€ä¸ªå…³äºå¤©æ°”çŠ¶å†µçš„å¯¹ç”¨æˆ·å‹å¥½çš„è¯´æ˜
 It includes a user friendly description of the weather
 
 10
 00:00:28,070 --> 00:00:31,280
-¾Ù¸öÀı×Ó  ±ÈÈçÕâÀïµÄ¿éÔÆ
+ä¸¾ä¸ªä¾‹å­  æ¯”å¦‚è¿™é‡Œçš„å—äº‘
 condition, such as broken clouds, in this case. And
 
 11
 00:00:31,280 --> 00:00:34,110
-ÎÒÃÇÉÔºó»áÔÚÓ¦ÓÃÖĞÊ¹ÓÃµ½ÕâĞ©Êı¾İ
+æˆ‘ä»¬ç¨åä¼šåœ¨åº”ç”¨ä¸­ä½¿ç”¨åˆ°è¿™äº›æ•°æ®
 we'll use this later in our app. For the
 
 12
 00:00:34,110 --> 00:00:37,060
-Èç¹ûÏëÒª»ñµÃÍêÕûµÄÌìÆø×´¿öµÄÁĞ±í  Äã¿ÉÒÔ·µ»Ø
+å¦‚æœæƒ³è¦è·å¾—å®Œæ•´çš„å¤©æ°”çŠ¶å†µçš„åˆ—è¡¨  ä½ å¯ä»¥è¿”å›
 full list of weather conditions, you can go back to
 
 13
 00:00:37,060 --> 00:00:40,330
-µ½Ê×Ò³  ÏòÏÂ¹ö¶¯  È»ºóµã»÷
+åˆ°é¦–é¡µ  å‘ä¸‹æ»šåŠ¨  ç„¶åç‚¹å‡»
 the main page. And scroll down. And then, click
 
 14
 00:00:40,330 --> 00:00:42,790
-Õâ¸öÁ´½ÓÀ´»ñÈ¡ÌìÆøÇé¿öµÄ±àÂë
+è¿™ä¸ªé“¾æ¥æ¥è·å–å¤©æ°”æƒ…å†µçš„ç¼–ç 
 on this link here for the Weather Condition Codes.
 
 15
 00:00:43,950 --> 00:00:45,700
-ÔÚÕâ¸öÒ³ÃæÉÏ  ÎÒÃÇÓĞÁËÌìÆøÇé¿öµÄ
+åœ¨è¿™ä¸ªé¡µé¢ä¸Š  æˆ‘ä»¬æœ‰äº†å¤©æ°”æƒ…å†µçš„
 And on this page, we have the full list
 
 16
 00:00:45,700 --> 00:00:51,000
-ÍêÕûÁĞ±í  Ëüº­¸ÇÁËËùÓĞÇé¿ö  ´ÓÉ¢ÔÆµ½
+å®Œæ•´åˆ—è¡¨  å®ƒæ¶µç›–äº†æ‰€æœ‰æƒ…å†µ  ä»æ•£äº‘åˆ°
 of weather conditions. It contains everything, from scattered clouds to
 
 17
 00:00:51,000 --> 00:00:55,490
-¶³Óê  ÉõÖÁÊÇ»ğÉ½»Ò  ÎÒ²»ÖªµÀ
+å†»é›¨  ç”šè‡³æ˜¯ç«å±±ç°  æˆ‘ä¸çŸ¥é“
 freezing rain, or even volcanic ash. I don't know
 
 18
 00:00:55,490 --> 00:00:58,170
-ÄãÄÇÀïµÄÇé¿ö  µ«Ô¸Ï£ÍûËü²»»á¾­³£·¢Éú
+ä½ é‚£é‡Œçš„æƒ…å†µ  ä½†æ„¿å¸Œæœ›å®ƒä¸ä¼šç»å¸¸å‘ç”Ÿ
 about you, but hopefully that doesn't happen too often.

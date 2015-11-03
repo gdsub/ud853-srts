@@ -1,239 +1,239 @@
 1
 00:00:00,470 --> 00:00:02,400
-ÔÚÎÒÃÇ¼ÌĞøÑ§Ï°ºÍ´´½¨Ò»¸öcontent providerÖ®Ç°
+åœ¨æˆ‘ä»¬ç»§ç»­å­¦ä¹ å’Œåˆ›å»ºä¸€ä¸ªcontent providerä¹‹å‰
 Before we go ahead and build a content provider
 
 2
 00:00:02,400 --> 00:00:05,280
-Äã²»»áÏëµ½È¥ÎÊ£¬µ«ÕâÊÇÎªÊ²Ã´ÄØ£¿
+ä½ ä¸ä¼šæƒ³åˆ°å»é—®ï¼Œä½†è¿™æ˜¯ä¸ºä»€ä¹ˆå‘¢ï¼Ÿ
 you wouldn't be out of line to ask, well why.
 
 3
 00:00:07,250 --> 00:00:09,060
-×î¼òµ¥µÄ´ğ°¸¾ÍÊÇcontent providerÔÊĞíÄãÀûÓÃunderlying data source£¬
+æœ€ç®€å•çš„ç­”æ¡ˆå°±æ˜¯content providerå…è®¸ä½ åˆ©ç”¨underlying data sourceï¼Œ
 The simplest answer is that it allows you to
 
 4
 00:00:09,060 --> 00:00:12,540
-°²È«²¢ÇÒ¸ßĞ§µØÍ¨¹ıÓ¦ÓÃ³ÌĞòµÄ½çÏŞ
+å®‰å…¨å¹¶ä¸”é«˜æ•ˆåœ°é€šè¿‡åº”ç”¨ç¨‹åºçš„ç•Œé™
 share your data safely and efficiently across app boundaries by
 
 5
 00:00:12,540 --> 00:00:15,520
-·ÖÏíÄãµÄÊı¾İ£¬ºÍÕâÀïÒ»ÑùÊ¹ÓÃSQLite
+åˆ†äº«ä½ çš„æ•°æ®ï¼Œå’Œè¿™é‡Œä¸€æ ·ä½¿ç”¨SQLite
 abstracting the underlying data source, be it SQLite like
 
 6
 00:00:15,520 --> 00:00:19,080
-»òÕßÊ¹ÓÃÎÄ¼ş£¬»òÕßÆäËûµÄ·½·¨¡£ÒÔ±ãÆäËû
+æˆ–è€…ä½¿ç”¨æ–‡ä»¶ï¼Œæˆ–è€…å…¶ä»–çš„æ–¹æ³•ã€‚ä»¥ä¾¿å…¶ä»–
 this or files or really anything else. So that other
 
 7
 00:00:19,080 --> 00:00:21,870
-Ó¦ÓÃ¿ÉÒÔ·ÃÎÊËü£¬¶ø²»ĞèÒªÕæÕıÀí½âÄãÊÇÈçºÎ´æ´¢ËüµÄ
+åº”ç”¨å¯ä»¥è®¿é—®å®ƒï¼Œè€Œä¸éœ€è¦çœŸæ­£ç†è§£ä½ æ˜¯å¦‚ä½•å­˜å‚¨å®ƒçš„
 apps can access it without really needing to understand how
 
 8
 00:00:21,870 --> 00:00:25,650
-ÊÂÊµÉÏ£¬ÈÕÀú£¬¶ÌĞÅºÍÁªÏµÈË
+äº‹å®ä¸Šï¼Œæ—¥å†ï¼ŒçŸ­ä¿¡å’Œè”ç³»äºº
 you stored it. In fact, the calendar, SMS, and contacts
 
 9
 00:00:25,650 --> 00:00:29,620
-µÄAPI¶¼ÊÇÓÃshared content providersÕâÖÖ·½·¨¹¤×÷µÄ
+çš„APIéƒ½æ˜¯ç”¨shared content providersè¿™ç§æ–¹æ³•å·¥ä½œçš„
 APIs work that way, using shared content providers.
 
 10
 00:00:29,620 --> 00:00:31,780
-ÎÒÃÇµÈ»á½«Òª·ÖÏíÎÒÃÇµÄÌìÆøÊı¾İ¿â£¬µ«ÊÇÈç¹û
+æˆ‘ä»¬ç­‰ä¼šå°†è¦åˆ†äº«æˆ‘ä»¬çš„å¤©æ°”æ•°æ®åº“ï¼Œä½†æ˜¯å¦‚æœ
 We're going to share our weather database later, but if
 
 11
 00:00:31,780 --> 00:00:34,370
-Äã²»Ïë¹«¿ªÄãµÄÓ¦ÓÃµÄÊı¾İ
+ä½ ä¸æƒ³å…¬å¼€ä½ çš„åº”ç”¨çš„æ•°æ®
 you're not planning to expose your app's data, you're
 
 12
 00:00:34,370 --> 00:00:38,160
-Äã¿ÉÄÜ»á¿¼ÂÇÌø¹ıÕâ¸ö²½Öè£¬¶Ô°É£¿
+ä½ å¯èƒ½ä¼šè€ƒè™‘è·³è¿‡è¿™ä¸ªæ­¥éª¤ï¼Œå¯¹å§ï¼Ÿ
 probably thinking you can skip this bit, right? Well,
 
 13
 00:00:38,160 --> 00:00:40,770
-µ«Êµ¼ÊÉÏ£¬ÔÚºÜ¶àÊ±ºòÄã¿ÉÒÔÕâÑù×ö
+ä½†å®é™…ä¸Šï¼Œåœ¨å¾ˆå¤šæ—¶å€™ä½ å¯ä»¥è¿™æ ·åš
 almost, in a lot of cases you could,
 
 14
 00:00:40,770 --> 00:00:44,970
-µ«Äã²»Ó¦¸ÃÕâÑù×ö¡£±ÈÈçËµ£¬ÔÚSunshineÕâ¸öÓ¦ÓÃÖĞ£¬ÎÒÃÇÊ¹ÓÃ
+ä½†ä½ ä¸åº”è¯¥è¿™æ ·åšã€‚æ¯”å¦‚è¯´ï¼Œåœ¨Sunshineè¿™ä¸ªåº”ç”¨ä¸­ï¼Œæˆ‘ä»¬ä½¿ç”¨
 but really shouldn't. For example, in Sunshine we're using
 
 15
 00:00:44,970 --> 00:00:47,380
-SQLite¡£µ«ÊÇÄã¿ÉÒÔ½«Êı¾İ´æ´¢ÔÚÎÄ¼şÖĞ
+SQLiteã€‚ä½†æ˜¯ä½ å¯ä»¥å°†æ•°æ®å­˜å‚¨åœ¨æ–‡ä»¶ä¸­
 SQ Lite. But you could be storing data in
 
 16
 00:00:47,380 --> 00:00:50,680
-¶¯Ì¬ÔËĞĞµÄÊı¾İÒ²Ö»ÊÇÒ»¸ö²»Í¬µÄÊı¾İ¿â¶øÒÑ
+åŠ¨æ€è¿è¡Œçš„æ•°æ®ä¹Ÿåªæ˜¯ä¸€ä¸ªä¸åŒçš„æ•°æ®åº“è€Œå·²
 files, dynamic run-time data or even just a different
 
 17
 00:00:50,680 --> 00:00:55,040
-Í¨¹ıÊ¹ÓÃcontent provider£¬Ê¹Äã¸ü¼ÓÈİÒ×
+é€šè¿‡ä½¿ç”¨content providerï¼Œä½¿ä½ æ›´åŠ å®¹æ˜“
 database library. By using content providers, it's easier for
 
 18
 00:00:55,040 --> 00:00:57,380
-½«data source×ª³ö
+å°†data sourceè½¬å‡º
 you to potentially switch out the data source and
 
 19
 00:00:57,380 --> 00:00:59,740
-²¢ÇÒÄÜÊ¹±ğÈË±ÈÄã¸üÈİÒ×È¥¹ÜÀí
+å¹¶ä¸”èƒ½ä½¿åˆ«äººæ¯”ä½ æ›´å®¹æ˜“å»ç®¡ç†
 much easier for someone other than you to manage
 
 20
 00:00:59,740 --> 00:01:02,410
-UI²ãµÄ´úÂë£¬¼´Ê¹ËûÃÇ²¢Ã»ÓĞÉîÈëÀí½â
+UIå±‚çš„ä»£ç ï¼Œå³ä½¿ä»–ä»¬å¹¶æ²¡æœ‰æ·±å…¥ç†è§£
 the UI layer code without them having to understand
 
 21
 00:01:02,410 --> 00:01:05,459
-ÄãµÄÊı¾İ´æ´¢ÊÇÔõÑùÊµÏÖµÄ¡£
+ä½ çš„æ•°æ®å­˜å‚¨æ˜¯æ€æ ·å®ç°çš„ã€‚
 the depths of your data storage implementation. On the
 
 22
 00:01:05,459 --> 00:01:09,070
-ÔÚUI²ã£¬ÕâÊÇÒ»¸öÍ¨ÓÃµÄ·µ»Ø¹â±ê»úÖÆ
+åœ¨UIå±‚ï¼Œè¿™æ˜¯ä¸€ä¸ªé€šç”¨çš„è¿”å›å…‰æ ‡æœºåˆ¶
 UI layer, it's a generic mechanism that returns cursors.
 
 23
 00:01:09,070 --> 00:01:12,270
-¾ÍºÍSQLite Êı¾İ¿âÖĞ·µ»ØÊı¾İÒ»Ñù
+å°±å’ŒSQLite æ•°æ®åº“ä¸­è¿”å›æ•°æ®ä¸€æ ·
 The same of those returned by SQLite databases. So,
 
 24
 00:01:12,270 --> 00:01:15,690
-ËùÒÔ£¬Èç¹ûÄãµÄÊı¾İ²ãÊµÏÖÓĞ¸Ä±ä£¬ÄãµÄcontent provider
+æ‰€ä»¥ï¼Œå¦‚æœä½ çš„æ•°æ®å±‚å®ç°æœ‰æ”¹å˜ï¼Œä½ çš„content provider
 if your data layer implementation changes, then your content provider
 
 25
 00:01:15,690 --> 00:01:19,390
-»áÊÜµ½Ó°Ïì¡£ÏÖÔÚÊÇÄã¸ÃĞ´´úÂëµÄÊ±ºòÁË
+ä¼šå—åˆ°å½±å“ã€‚ç°åœ¨æ˜¯ä½ è¯¥å†™ä»£ç çš„æ—¶å€™äº†
 is effected. Still, it's just you writing the code right
 
 26
 00:01:19,390 --> 00:01:21,520
-ÕâÃ´¶àµÄÀı×ÓÊÇÎªÁËË³Ó¦
+è¿™ä¹ˆå¤šçš„ä¾‹å­æ˜¯ä¸ºäº†é¡ºåº”
 now and that's a lot of boilerplate for the sake of
 
 27
 00:01:21,520 --> 00:01:24,690
-¼ò½àµÄÉè¼ÆÄ£Ê½¡£àÅ£¬¼Ç×¡
+ç®€æ´çš„è®¾è®¡æ¨¡å¼ã€‚å—¯ï¼Œè®°ä½
 following a neat design pattern. Well, keep in mind that
 
 28
 00:01:24,690 --> 00:01:27,730
-¾Íframework¶øÑÔ£¬ËùÓĞµÄÊı¾İ¶¼Í¨¹ıcontent provider´¦Àí
+å°±frameworkè€Œè¨€ï¼Œæ‰€æœ‰çš„æ•°æ®éƒ½é€šè¿‡content providerå¤„ç†
 as far as the framework is concerned, all data is handled
 
 29
 00:01:27,730 --> 00:01:31,027
-ËùÒÔ£¬Èç¹ûÄãÒªºÍÄãµÄÓ¦ÓÃÍâµÄ
+æ‰€ä»¥ï¼Œå¦‚æœä½ è¦å’Œä½ çš„åº”ç”¨å¤–çš„
 through content providers. So, if you want to interact with
 
 30
 00:01:31,027 --> 00:01:33,790
-ÈÎºÎ¶«Î÷»¥¶¯£¬±ÈÈçËµ£¬Ïòwidget·¢ËÍÊı¾İ
+ä»»ä½•ä¸œè¥¿äº’åŠ¨ï¼Œæ¯”å¦‚è¯´ï¼Œå‘widgetå‘é€æ•°æ®
 anything outside of your app, such as sending data to a
 
 31
 00:01:33,790 --> 00:01:37,770
-»òÕß´ÓĞÂµÄÓ¦ÓÃÄÇÀï·µ»ØËÑË÷½á¹û
+æˆ–è€…ä»æ–°çš„åº”ç”¨é‚£é‡Œè¿”å›æœç´¢ç»“æœ
 widget or returning search results from the newer app, you'll need
 
 32
 00:01:37,770 --> 00:01:40,770
-Äã»áĞèÒªÒ»¸öcontent providerÈ¥×öÕâĞ©ÊÂÇé¡£ÊÂÊµÉÏ£¬Õâ¾ÍÊÇ
+ä½ ä¼šéœ€è¦ä¸€ä¸ªcontent providerå»åšè¿™äº›äº‹æƒ…ã€‚äº‹å®ä¸Šï¼Œè¿™å°±æ˜¯
 a content provider for that too. In fact, that's how the
 
 33
 00:01:40,770 --> 00:01:43,760
-Google play store ºÍGmail widgets µÄ¹¤×÷·½Ê½£¬ÒÔ¼°
+Google play store å’ŒGmail widgets çš„å·¥ä½œæ–¹å¼ï¼Œä»¥åŠ
 Google play store and Gmail widgets work. As well as the
 
 34
 00:01:43,760 --> 00:01:47,920
-ÎªÊ²Ã´ÄÜ¹»´ÓGoogle PlayµÃµ½ËÑË÷½á¹û¡£Í¬ÑùµÄ£¬ÕâÀïÓĞÒ»Ğ©API
+ä¸ºä»€ä¹ˆèƒ½å¤Ÿä»Google Playå¾—åˆ°æœç´¢ç»“æœã€‚åŒæ ·çš„ï¼Œè¿™é‡Œæœ‰ä¸€äº›API
 ability to get search results from Google Play. Similarly, there's a bunch
 
 35
 00:01:47,920 --> 00:01:51,960
-Ö¼ÔÚÓÅ»¯Í¬²½µÄ¹ı³Ì£¬²éÑ¯Êı¾İ
+æ—¨åœ¨ä¼˜åŒ–åŒæ­¥çš„è¿‡ç¨‹ï¼ŒæŸ¥è¯¢æ•°æ®
 of APIs designed to optimize the process of synching and querying data,
 
 36
 00:01:51,960 --> 00:01:56,580
-ºÍ¸üĞÂÏàÓ¦µÄUI¡£ÕâĞ©¶¼ÆÚ´ıÓÃcontent providerÊµÏÖ
+å’Œæ›´æ–°ç›¸åº”çš„UIã€‚è¿™äº›éƒ½æœŸå¾…ç”¨content providerå®ç°
 and updating UI accordingly. And all of them also expect content providers.
 
 37
 00:02:00,490 --> 00:02:03,950
-Õâ¶¼°üÀ¨ÁËsync adapterºÍcursor loaders£¬Ê¹µÃ
+è¿™éƒ½åŒ…æ‹¬äº†sync adapterå’Œcursor loadersï¼Œä½¿å¾—
 That includes sync adapters and cursor loaders. Which make your
 
 38
 00:02:03,950 --> 00:02:07,140
-ÄãµÄÓ¦ÓÃ¿ÉÒÔºÍ·şÎñ¶ËÓĞĞ§µØ½øĞĞÍ¬²½£¬¿ÉÒÔ´ÓUI²ãÔØÈëÊı¾İ
+ä½ çš„åº”ç”¨å¯ä»¥å’ŒæœåŠ¡ç«¯æœ‰æ•ˆåœ°è¿›è¡ŒåŒæ­¥ï¼Œå¯ä»¥ä»UIå±‚è½½å…¥æ•°æ®
 app able to efficiently sync with your server, load data in
 
 39
 00:02:07,140 --> 00:02:10,360
-°üÀ¨ÄÚÖÃµÄcontent observers ½«»á×Ô¶¯¸üĞÂÄãµÄUI
+åŒ…æ‹¬å†…ç½®çš„content observers å°†ä¼šè‡ªåŠ¨æ›´æ–°ä½ çš„UI
 your UI layer, and which include built in content observers that
 
 40
 00:02:10,360 --> 00:02:14,167
-µ±ÄãµÄ»ù´¡Êı¾İ·¢Éú¸Ä±äÊ±
+å½“ä½ çš„åŸºç¡€æ•°æ®å‘ç”Ÿæ”¹å˜æ—¶
 will update your UI automatically when the underlying data changes. You
 
 41
 00:02:14,167 --> 00:02:17,680
-Äãµ±È»¿ÉÒÔ×Ô¼º½«ÕâĞ©È«²¿½¨Á¢ÆğÀ´
+ä½ å½“ç„¶å¯ä»¥è‡ªå·±å°†è¿™äº›å…¨éƒ¨å»ºç«‹èµ·æ¥
 could, of course, build all of that yourself but at
 
 42
 00:02:17,680 --> 00:02:20,350
-µ«´ÓÄ³ÖÖ³Ì¶ÈÀ´Ëµ
+ä½†ä»æŸç§ç¨‹åº¦æ¥è¯´
 a certain point the advantage you gained by not writing a
 
 43
 00:02:20,350 --> 00:02:23,280
-ÄãËù»ñµÃµÄÓÅÊÆÊÇÍ¨¹ıÒ»¿ªÊ¼²»Ğ´content provider 
+ä½ æ‰€è·å¾—çš„ä¼˜åŠ¿æ˜¯é€šè¿‡ä¸€å¼€å§‹ä¸å†™content provider 
 content provider to begin with is lost in the process of
 
 44
 00:02:23,280 --> 00:02:26,900
-¶ø¶ªÊ§²»±ØÖØĞÂ´´½¨ËùÓĞÊ¹ÓÃËüµÄÓĞÓÃ´ØµÄ¹ı³Ì
+è€Œä¸¢å¤±ä¸å¿…é‡æ–°åˆ›å»ºæ‰€æœ‰ä½¿ç”¨å®ƒçš„æœ‰ç”¨ç°‡çš„è¿‡ç¨‹
 having to recreate all of the useful clusters that utilize it.
 
 45
 00:02:26,900 --> 00:02:30,160
-ÔÚÕâ½Ú¿ÎµÄºóÃæ£¬ÎÒÃÇ½«»á¿´Ò»ÏÂÄã·¢²¼µÄcontent provider²¢Ê¹ÓÃLotus
+åœ¨è¿™èŠ‚è¯¾çš„åé¢ï¼Œæˆ‘ä»¬å°†ä¼šçœ‹ä¸€ä¸‹ä½ å‘å¸ƒçš„content providerå¹¶ä½¿ç”¨Lotus
 We'll take a look at publishing your content provider and using Lotus
 
 46
 00:02:30,160 --> 00:02:33,980
-È¥ÓĞĞ§µØ·ÃÎÊËü¡£ÔÚµÚÁù½Ú¿Î³ÌÖĞ£¬µ±ÎÒÃÇ×öÓĞĞ§µÄ±³¾°¸üĞÂÊ±£¬
+å»æœ‰æ•ˆåœ°è®¿é—®å®ƒã€‚åœ¨ç¬¬å…­èŠ‚è¯¾ç¨‹ä¸­ï¼Œå½“æˆ‘ä»¬åšæœ‰æ•ˆçš„èƒŒæ™¯æ›´æ–°æ—¶ï¼Œ
 to access it efficiently later in this lesson. And we'll explore sync adapters
 
 47
 00:02:33,980 --> 00:02:37,820
-ÎÒÃÇ»¹»áÌ½Ë÷sync adapter
+æˆ‘ä»¬è¿˜ä¼šæ¢ç´¢sync adapter
 in lesson six when we look at doing efficient background updates. But
 
 48
 00:02:37,820 --> 00:02:41,390
-µ«Ê×ÏÈ£¬µ¤ÒÑ¾­×¼±¸ºÃÏòÄãÕ¹Ê¾ÈçºÎ½¨Á¢Ò»¸öcontent providerÁË
+ä½†é¦–å…ˆï¼Œä¸¹å·²ç»å‡†å¤‡å¥½å‘ä½ å±•ç¤ºå¦‚ä½•å»ºç«‹ä¸€ä¸ªcontent provideräº†
 first, Dan is going to show you how to actually build a content provider.

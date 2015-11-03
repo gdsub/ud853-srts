@@ -1,40 +1,40 @@
 1
 00:00:00,580 --> 00:00:05,240
-Android StudioµÄ±à¼­Æ÷Ïàµ±Ç¿´ó  ²»ÓÃĞ´ÈÎºÎ´úÂë±ã¿ÉÒÔ´´Ò»¸ö·Ç³£¸´ÔÓµÄLayouts
+Android Studioçš„ç¼–è¾‘å™¨ç›¸å½“å¼ºå¤§  ä¸ç”¨å†™ä»»ä½•ä»£ç ä¾¿å¯ä»¥åˆ›ä¸€ä¸ªéå¸¸å¤æ‚çš„Layouts
 The editor is quite powerful. Without using any code, one can create relatively
 
 2
 00:00:05,240 --> 00:00:10,150
-¶ÔÓÚÖĞºÅ×ÖºÍ´óºÅ×ÖÇëÎñ±ØÈ·ÈÏÊ¹ÓÃÄÚÖÃµÄÑùÊ½ÎÄ±¾¿Ø¼ş
+å¯¹äºä¸­å·å­—å’Œå¤§å·å­—è¯·åŠ¡å¿…ç¡®è®¤ä½¿ç”¨å†…ç½®çš„æ ·å¼æ–‡æœ¬æ§ä»¶
 sophisticated layouts. Make sure to use the built-in styled text widgets for
 
 3
 00:00:10,150 --> 00:00:14,420
-ËùÓĞµÄÎÄ×Ö¶¼Ö»ÊÇÎÄ±¾ĞÎÊ½µÄÕ¼Î»·û  ËùÒÔ
+æ‰€æœ‰çš„æ–‡å­—éƒ½åªæ˜¯æ–‡æœ¬å½¢å¼çš„å ä½ç¬¦  æ‰€ä»¥
 large and medium text. All of the text is just placeholder text, so
 
 4
 00:00:14,420 --> 00:00:18,700
-Ê¹ÓÃ¿ÉÊÓ»¯±à¼­Æ÷Äã¿ÉÒÔÇáËÉµÄ¿ªÊ¼±à¼­  Èç¹ûÄã¶ÔÄãµÄ×÷Æ·¸Ğµ½·Ç³£ÂúÒâ
+ä½¿ç”¨å¯è§†åŒ–ç¼–è¾‘å™¨ä½ å¯ä»¥è½»æ¾çš„å¼€å§‹ç¼–è¾‘  å¦‚æœä½ å¯¹ä½ çš„ä½œå“æ„Ÿåˆ°éå¸¸æ»¡æ„
 you easily enter it using the visual editor. If you're proud of your creation,
 
 5
 00:00:18,700 --> 00:00:21,750
-¸øÆÁÄ»½ØÒ»ÕÅÍ¼È»ºóËæ×ÅXMLÎÄµµÒ»Æğ·¢µ½ÂÛÌ³ÉÏ
+ç»™å±å¹•æˆªä¸€å¼ å›¾ç„¶åéšç€XMLæ–‡æ¡£ä¸€èµ·å‘åˆ°è®ºå›ä¸Š
 take a screenshot and post it along with the XML into the forums.
 
 6
 00:00:22,800 --> 00:00:26,700
-ÏÖÔÚÄãÒÑ¾­ÕÆÎÕÁËAndroid StudioµÄ»ù±¾¹¤¾ßµÄÊ¹ÓÃ
+ç°åœ¨ä½ å·²ç»æŒæ¡äº†Android Studioçš„åŸºæœ¬å·¥å…·çš„ä½¿ç”¨
 Now that you have some background on the basic tools in Android studio, and
 
 7
 00:00:26,700 --> 00:00:29,650
-ºÍÒ»Ğ©»ù±¾µÄAndroidÓÃ»§½çÃæ
+å’Œä¸€äº›åŸºæœ¬çš„Androidç”¨æˆ·ç•Œé¢
 a few of the basic android user interface views,
 
 8
 00:00:29,650 --> 00:00:32,170
-¿­ÉªÁÕ½«»á¸æËßÄãÈçºÎ¿ªÊ¼±àĞ´·Ç³£¿áµÄSunshineÓ¦ÓÃ
+å‡¯ç‘Ÿç³å°†ä¼šå‘Šè¯‰ä½ å¦‚ä½•å¼€å§‹ç¼–å†™éå¸¸é…·çš„Sunshineåº”ç”¨
 Katherine will show you how to start making some sunshine.
 

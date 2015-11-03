@@ -1,19 +1,19 @@
 ?1
 00:00:00,370 --> 00:00:04,380
-ÕıÈ·´ğ°¸ÊÇsetOnItemClickListener  ÎÒÃÇÓ¦¸Ã
+æ­£ç¡®ç­”æ¡ˆæ˜¯setOnItemClickListener  æˆ‘ä»¬åº”è¯¥
 The answer is setOnItemClickListener. We should register
 
 2
 00:00:04,380 --> 00:00:06,980
-ÎªListViewÊÓÍ¼°ó¶¨Ò»¸öOnItemClickListener¼àÌıÆ÷
+ä¸ºListViewè§†å›¾ç»‘å®šä¸€ä¸ªOnItemClickListenerç›‘å¬å™¨
 an OnItemClickListener with the list view via the
 
 3
 00:00:06,980 --> 00:00:10,440
-Í¨¹ısetOnItemClickListener() Õâ¸ö·½·¨
+é€šè¿‡setOnItemClickListener() è¿™ä¸ªæ–¹æ³•
 setOnItemClickListener method. Then, when an item in the
 
 4
 00:00:10,440 --> 00:00:12,831
-µ±ÆäÖĞµÄÌõÄ¿±»µã»÷Ê±Ö´ĞĞ»Øµ÷·½·¨
+å½“å…¶ä¸­çš„æ¡ç›®è¢«ç‚¹å‡»æ—¶æ‰§è¡Œå›è°ƒæ–¹æ³•
 list view is clicked, the callback is invoked.

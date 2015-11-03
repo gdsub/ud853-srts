@@ -1,79 +1,79 @@
 1
 00:00:00,370 --> 00:00:04,040
-ÎÒÃÇÏ£ÍûFetchWeatherTaskÕâ¸öÀà·µ»Ø´ú±íÌìÆøÔ¤²â½á¹ûµÄ×Ö·û´®¶ÓÁĞ
+æˆ‘ä»¬å¸Œæœ›FetchWeatherTaskè¿™ä¸ªç±»è¿”å›ä»£è¡¨å¤©æ°”é¢„æµ‹ç»“æœçš„å­—ç¬¦ä¸²é˜Ÿåˆ—
 We want the FetchWeatherTask to return an array of string forecasts.
 
 2
 00:00:05,210 --> 00:00:08,840
-ÕâÒâÎ¶×ÅÎÒÃÇĞèÒªĞŞÕıAsyncTaskµÄ·µ»ØÀàĞÍ
+è¿™æ„å‘³ç€æˆ‘ä»¬éœ€è¦ä¿®æ­£AsyncTaskçš„è¿”å›ç±»å‹
 This means we need to modify the return type of the AsyncTask to be
 
 3
 00:00:08,840 --> 00:00:10,160
-Îª×Ö·û´®Êı×é
+ä¸ºå­—ç¬¦ä¸²æ•°ç»„
 a string array.
 
 4
 00:00:10,160 --> 00:00:13,100
-Õâ¸öµÄĞ§¹û¾ÍÊÇdoInBackground·½·¨½«»á·µ»Ø
+è¿™ä¸ªçš„æ•ˆæœå°±æ˜¯doInBackgroundæ–¹æ³•å°†ä¼šè¿”å›
 The effect of this is that the doInBackground method will now return
 
 5
 00:00:13,100 --> 00:00:14,530
-Ò»¸ö×Ö·û´®Êı×é
+ä¸€ä¸ªå­—ç¬¦ä¸²æ•°ç»„
 a string array.
 
 6
 00:00:14,530 --> 00:00:17,085
-ÔÚÕâ¸ö·½·¨ÖĞ  ÔÚÎÒÃÇ²éÑ¯ÁË·şÎñÆ÷ÒÔ¼°
+åœ¨è¿™ä¸ªæ–¹æ³•ä¸­  åœ¨æˆ‘ä»¬æŸ¥è¯¢äº†æœåŠ¡å™¨ä»¥åŠ
 In this method, after we query the server and
 
 7
 00:00:17,085 --> 00:00:21,660
-¶ÁÈëÁ÷Ö®ºó  ÎÒÃÇ½«»áÖ´ĞĞÕâ¶Î´úÂë
+è¯»å…¥æµä¹‹å  æˆ‘ä»¬å°†ä¼šæ‰§è¡Œè¿™æ®µä»£ç 
 then read in the input stream, we're going to perform this code.
 
 8
 00:00:21,660 --> 00:00:25,600
-Õâ¶Î´úÂëÓÃÀ´½âÎö·şÎñÆ÷µÄ·µ»ØÖµ  º¯ÊıÃûÎªgetWeatherDataFromJson
+è¿™æ®µä»£ç ç”¨æ¥è§£ææœåŠ¡å™¨çš„è¿”å›å€¼  å‡½æ•°åä¸ºgetWeatherDataFromJson
 To parse the response from the server, we call getWeatherDataFromJson.
 
 9
 00:00:25,600 --> 00:00:30,540
-º¯ÊıµÄÊäÈëÎªÔ¤²âµÄJSON×Ö·û´®  ÒÔ¼°Ô¤²âµÄÌìÊı
+å‡½æ•°çš„è¾“å…¥ä¸ºé¢„æµ‹çš„JSONå­—ç¬¦ä¸²  ä»¥åŠé¢„æµ‹çš„å¤©æ•°
 We pass in the forecast JSON string, as well as the number of forecast days.
 
 10
 00:00:30,540 --> 00:00:33,290
-ÎªÁËÈ·±£·µ»ØµÄ×Ö·û´®Êı×éµÄÕıÈ·ĞÔ
+ä¸ºäº†ç¡®ä¿è¿”å›çš„å­—ç¬¦ä¸²æ•°ç»„çš„æ­£ç¡®æ€§
 To make sure that this is returning the right string array,
 
 11
 00:00:33,290 --> 00:00:37,650
-ÎÒÃÇ¿ÉÒÔÔÚÕâ¸ö·½·¨ÖĞ ×îºóµÄÎ»ÖÃ ¼ÓÈë
+æˆ‘ä»¬å¯ä»¥åœ¨è¿™ä¸ªæ–¹æ³•ä¸­ æœ€åçš„ä½ç½® åŠ å…¥
 we can go into the method, and then at the bottom of the method, we just add
 
 12
 00:00:37,650 --> 00:00:41,990
-Ò»Ğ©ÈÕÖ¾ °Ñ×Ö·û´®Êı×éµÄÃ¿Ò»¸öÔªËØ¶¼´òÓ¡³öÀ´
+ä¸€äº›æ—¥å¿— æŠŠå­—ç¬¦ä¸²æ•°ç»„çš„æ¯ä¸€ä¸ªå…ƒç´ éƒ½æ‰“å°å‡ºæ¥
 some logging statements to print out every element of the string array.
 
 13
 00:00:41,990 --> 00:00:44,550
-ÏÖÔÚ  µ±Äã±àÒëÕâ¶Î´úÂë²¢ÇÒÔÚÄãµÄÉè±¸ÉÏÔËĞĞµÄÊ±ºò
+ç°åœ¨  å½“ä½ ç¼–è¯‘è¿™æ®µä»£ç å¹¶ä¸”åœ¨ä½ çš„è®¾å¤‡ä¸Šè¿è¡Œçš„æ—¶å€™
 Now, when you compile the code and run it on your device,
 
 14
 00:00:44,550 --> 00:00:48,060
-Äã¿ÉÒÔµã»÷Ë¢ĞÂ°´Å¥´Ó·şÎñÆ÷ÖĞ¶ÁÈ¡Êı¾İ
+ä½ å¯ä»¥ç‚¹å‡»åˆ·æ–°æŒ‰é’®ä»æœåŠ¡å™¨ä¸­è¯»å–æ•°æ®
 you can hit the Refresh button to pull the data from the server.
 
 15
 00:00:48,060 --> 00:00:51,650
-È»ºó  Èç¹ûÄã´ò¿ªÈÕÖ¾À¸  Äã¾ÍÄÜ¿´µ½ÕâĞ©Êı¾İ±»ÕıÈ·µØ½âÎö
+ç„¶å  å¦‚æœä½ æ‰“å¼€æ—¥å¿—æ   ä½ å°±èƒ½çœ‹åˆ°è¿™äº›æ•°æ®è¢«æ­£ç¡®åœ°è§£æ
 Then, if you open up log cat, you can see that it was parsed correctly,
 
 16
 00:00:51,650 --> 00:00:54,020
-Äã¿ÉÒÔ¿´µ½ËùÓĞµÄÔ¤²âÌõÄ¿¶¼±»´òÓ¡ÔÚÈÕÖ¾À¸ÖĞ
+ä½ å¯ä»¥çœ‹åˆ°æ‰€æœ‰çš„é¢„æµ‹æ¡ç›®éƒ½è¢«æ‰“å°åœ¨æ—¥å¿—æ ä¸­
 where you see all the forecast entries being printed out.

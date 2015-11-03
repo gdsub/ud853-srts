@@ -1,79 +1,79 @@
 1
 00:00:00,420 --> 00:00:02,540
-Äã»áÔÚÊ¾Àý´úÂëÖÐ¿´¼û£¬
+ä½ ä¼šåœ¨ç¤ºä¾‹ä»£ç ä¸­çœ‹è§ï¼Œ
 You'll also notice in the sample code that we
 
 2
 00:00:02,540 --> 00:00:07,150
-ÎÒÃÇÔÚÆäÖÐµ÷ÓÃÁËLog.e()·½·¨£¬ÕâÊÇÓÃÀ´¼ÇÂ¼´íÎóÈÕÖ¾µÄ¡£
+æˆ‘ä»¬åœ¨å…¶ä¸­è°ƒç”¨äº†Log.e()æ–¹æ³•ï¼Œè¿™æ˜¯ç”¨æ¥è®°å½•é”™è¯¯æ—¥å¿—çš„ã€‚
 have lines that call Log.e(), which log error messages. With
 
 3
 00:00:07,150 --> 00:00:09,920
-ÎÒÃÇ¿ÉÒÔÊ¹ÓÃadbÃüÁî¶ÔÁ¬½ÓµÄÉè±¸½øÐÐµ÷ÊÔ
+æˆ‘ä»¬å¯ä»¥ä½¿ç”¨adbå‘½ä»¤å¯¹è¿žæŽ¥çš„è®¾å¤‡è¿›è¡Œè°ƒè¯•
 the adb command line tool and with the device plugged
 
 4
 00:00:09,920 --> 00:00:13,580
-µ±Äã¼üÈëadb logcatÃüÁîÊ±£¬
+å½“ä½ é”®å…¥adb logcatå‘½ä»¤æ—¶ï¼Œ
 in, you can type adb logcat to see the debug
 
 5
 00:00:13,580 --> 00:00:16,770
-Äã¿ÉÒÔ¿´¼ûµ÷ÊÔºÍ´íÎóÈÕÖ¾ÕýÔÚ±»´òÓ¡³öÀ´¡£
+ä½ å¯ä»¥çœ‹è§è°ƒè¯•å’Œé”™è¯¯æ—¥å¿—æ­£åœ¨è¢«æ‰“å°å‡ºæ¥ã€‚
 and error messages that are being printed to the logcat.
 
 6
 00:00:16,770 --> 00:00:19,610
-¸ü¶à¹ØÓÚlogcatÃüÁîµÄÊ¹ÓÃ£¬Äã¿ÉÒÔ²Î¿¼ÏÂÃæµÄÁ´½Ó¡£
+æ›´å¤šå…³äºŽlogcatå‘½ä»¤çš„ä½¿ç”¨ï¼Œä½ å¯ä»¥å‚è€ƒä¸‹é¢çš„é“¾æŽ¥ã€‚
 For more details on the logcat options, see the link
 
 7
 00:00:19,610 --> 00:00:22,670
-Ò²¿ÉÒÔÊ¹ÓÃAndroid Studio²é¿´ÈÕÖ¾¡£
+ä¹Ÿå¯ä»¥ä½¿ç”¨Android StudioæŸ¥çœ‹æ—¥å¿—ã€‚
 below. Another way to view the logs, is to use
 
 8
 00:00:22,670 --> 00:00:25,610
-µ±Äãµã»÷ÆÁÄ»ÉÏµÄÕâ¸ö°´Å¥Ê±£¬
+å½“ä½ ç‚¹å‡»å±å¹•ä¸Šçš„è¿™ä¸ªæŒ‰é’®æ—¶ï¼Œ
 Android Studio. If you click on the Screen Android button,
 
 9
 00:00:25,610 --> 00:00:28,486
-ËüÆô¶¯ÁËAndroidÉè±¸¼àÊÓÆ÷¡£
+å®ƒå¯åŠ¨äº†Androidè®¾å¤‡ç›‘è§†å™¨ã€‚
 it launches the Android Device Monitor. Which includes the
 
 10
 00:00:28,486 --> 00:00:31,950
-Õâµ±ÖÐ»¹ÓÐDDMS¹¤¾ß£¬¹ØÓÚÕâ¸öRadoÔÚÖ®Ç°µÄ¿Î³ÌÖÐÌá¹ý¡£
+è¿™å½“ä¸­è¿˜æœ‰DDMSå·¥å…·ï¼Œå…³äºŽè¿™ä¸ªRadoåœ¨ä¹‹å‰çš„è¯¾ç¨‹ä¸­æè¿‡ã€‚
 DDMS tool that Rado mentioned earlier. Then click on a
 
 11
 00:00:31,950 --> 00:00:34,400
-È»ºóµã»÷ÕâÀïµÄÉè±¸£¬Äã»á¿´µ½ÎÒÃÇµÄÓ¦ÓÃÊÇÔËÐÐÔÚÒ»¸ö½ø³ÌÖÐµÄ¡£
+ç„¶åŽç‚¹å‡»è¿™é‡Œçš„è®¾å¤‡ï¼Œä½ ä¼šçœ‹åˆ°æˆ‘ä»¬çš„åº”ç”¨æ˜¯è¿è¡Œåœ¨ä¸€ä¸ªè¿›ç¨‹ä¸­çš„ã€‚
 device and you can see that our app here, is
 
 12
 00:00:34,400 --> 00:00:37,580
-Èç¹ûÄúÔÚ´Ë´¦µã»÷LogCatÕâ¸öÑ¡Ïî¿¨£¬
+å¦‚æžœæ‚¨åœ¨æ­¤å¤„ç‚¹å‡»LogCatè¿™ä¸ªé€‰é¡¹å¡ï¼Œ
 a running process. If you click on the LogCat tab,
 
 13
 00:00:37,580 --> 00:00:40,000
-ÄÇÃ´Äã»á¿´µ½ËùÓÐµÄÈÕÖ¾ÏûÏ¢£¬
+é‚£ä¹ˆä½ ä¼šçœ‹åˆ°æ‰€æœ‰çš„æ—¥å¿—æ¶ˆæ¯ï¼Œ
 then you all these log messages here, which is what
 
 14
 00:00:40,000 --> 00:00:44,010
-ÕâºÍÎÒÃÇÖ®Ç°Í¨¹ýadb logcatÃüÁî¿´µ½µÄÈÕÖ¾ÏûÏ¢ÊÇÒ»ÑùµÄ¡£
+è¿™å’Œæˆ‘ä»¬ä¹‹å‰é€šè¿‡adb logcatå‘½ä»¤çœ‹åˆ°çš„æ—¥å¿—æ¶ˆæ¯æ˜¯ä¸€æ ·çš„ã€‚
 we saw with adb logcat. Now try viewing the logs
 
 15
 00:00:44,010 --> 00:00:46,910
-ÏÖÔÚ£¬Ê¹ÓÃÆäÖÐÈÎÒâÒ»¸ö·½·¨£¬²é¿´×Ô¼º³ÌÐòµÄÈÕÖ¾¡£
+çŽ°åœ¨ï¼Œä½¿ç”¨å…¶ä¸­ä»»æ„ä¸€ä¸ªæ–¹æ³•ï¼ŒæŸ¥çœ‹è‡ªå·±ç¨‹åºçš„æ—¥å¿—ã€‚
 yourself with either of those methods. If you do both,
 
 16
 00:00:46,910 --> 00:00:49,950
-Èç¹ûÄã¶¼×öµ½ÁË£¬ÄÇÃ´½«¶ÔÄã¹ÎÄ¿Ïà¿´¡£ Ñ¡ÖÐ´Ë¿ò£¬¼ÌÐø¡£
+å¦‚æžœä½ éƒ½åšåˆ°äº†ï¼Œé‚£ä¹ˆå°†å¯¹ä½ åˆ®ç›®ç›¸çœ‹ã€‚ é€‰ä¸­æ­¤æ¡†ï¼Œç»§ç»­ã€‚
 then you get brownie points. Check this box to proceed.

@@ -1,34 +1,34 @@
 1
 00:00:00,500 --> 00:00:04,450
-����ѭ��Щ�����Դ���һ����Ԫ��������һ������
+请遵循这些步骤以创建一个单元测试来将一行数据
 Follow these steps to create a unit test to insert a row of data
 
 2
 00:00:04,450 --> 00:00:06,810
-���뵽��ַ���ݱ���
+插入到地址数据表中
 into the location database table.
 
 3
 00:00:06,810 --> 00:00:09,320
-Ȼ��  ��ѯ���ݱ�����֤���ݵ�ֵ
+然后  查询数据表并验证数据的值
 Then, query the table and validate the values.
 
 4
 00:00:10,370 --> 00:00:14,920
-���ǽ�Ҫ��TestDB���������Ե�ַ���ݱ�����
+我们将要在TestDB内填满测试地址数据表函数
 We're going to be filling out the test location table function within TestDB.
 
 5
 00:00:14,920 --> 00:00:18,490
-�ú����ڵ�ע��Ӧ�ÿ��������������Ĳ���
+该函数内的注释应该可以引导你完成你的测试
 The comment in that function should guide you in completing your test.
 
 6
 00:00:18,490 --> 00:00:22,120
-������Ժ����ܷ��ز����е�ID
+这个测试函数能返回插入行的ID
 This test function returns the ID of the inserted row.
 
 7
 00:00:22,120 --> 00:00:24,100
-������ɺ�  ѡ�иø�ѡ���Լ���
+当你完成后  选中该复选框以继续
 When you're done, check the box to continue.

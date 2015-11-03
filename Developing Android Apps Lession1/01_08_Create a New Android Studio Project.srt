@@ -1,66 +1,66 @@
 1
 00:00:00,090 --> 00:00:02,990
-Ò»µ©Äã°²×°ºÃAndroid Studio£¬´ò¿ªËü
+ä¸€æ—¦ä½ å®‰è£…å¥½Android Studioï¼Œæ‰“å¼€å®ƒ
 Once you install Android Studio you can open it and check for
 
 2
 00:00:02,990 --> 00:00:04,570
-ÔÚÔËĞĞÖ®Ç°¼ì²éÓĞÃ»ÓĞÉı¼¶ÄÚÈİ
+åœ¨è¿è¡Œä¹‹å‰æ£€æŸ¥æœ‰æ²¡æœ‰å‡çº§å†…å®¹
 updates before proceeding.
 
 3
 00:00:04,570 --> 00:00:07,096
-¿´ÉÏÈ¥ÎÒÃÇµÄ°æ±¾ÊÇ×îĞÂµÄ
+çœ‹ä¸Šå»æˆ‘ä»¬çš„ç‰ˆæœ¬æ˜¯æœ€æ–°çš„
 Looks like we have the latest version installed already, so
 
 4
 00:00:07,096 --> 00:00:08,191
-ËùÒÔÎÒÃÇ¹Ø±ÕÕâ¸ö¶Ô»°¿ò
+æ‰€ä»¥æˆ‘ä»¬å…³é—­è¿™ä¸ªå¯¹è¯æ¡†
 we can close this dialog.
 
 5
 00:00:08,191 --> 00:00:11,960
-ÎÒÃÇ×¼±¸ÓÃAndroid Studio 1.01°æĞÂ½¨Ò»¸öÏîÄ¿
+æˆ‘ä»¬å‡†å¤‡ç”¨Android Studio 1.01ç‰ˆæ–°å»ºä¸€ä¸ªé¡¹ç›®
 We're going to be setting up a new project using Android Studio version 1.01.
 
 6
 00:00:11,960 --> 00:00:16,490
-Èç¹ûÄã·¢ÏÖÄãµÄ°æ±¾ºÍÎÒµÄ¿´ÉÏÈ¥²»Ì«Ò»Ñù
+å¦‚æœä½ å‘ç°ä½ çš„ç‰ˆæœ¬å’Œæˆ‘çš„çœ‹ä¸Šå»ä¸å¤ªä¸€æ ·
 As you follow along, if things look differently on your computer, that's okay.
 
 7
 00:00:16,490 --> 00:00:19,410
-¿ÉÄÜÊÇÄãµÄAndroid Studio°æ±¾¸üĞÂ£¬Ã»Ê²Ã´´óÎÊÌâ
+å¯èƒ½æ˜¯ä½ çš„Android Studioç‰ˆæœ¬æ›´æ–°ï¼Œæ²¡ä»€ä¹ˆå¤§é—®é¢˜
 It's probably because you're on a newer version of Android Studio.
 
 8
 00:00:19,410 --> 00:00:22,020
-Óöµ½ÈÎºÎÎÊÌâÇë²é¿´ÏÂÃæµÄ±Ê¼Ç
+é‡åˆ°ä»»ä½•é—®é¢˜è¯·æŸ¥çœ‹ä¸‹é¢çš„ç¬”è®°
 For the most up-to-date instructions on how to get started,
 
 9
 00:00:22,020 --> 00:00:24,260
-Ëü»áÊµÊ±¸üĞÂ
+å®ƒä¼šå®æ—¶æ›´æ–°
 you can always check the instructor notes below.
 
 10
 00:00:24,260 --> 00:00:27,240
-ÏÖÔÚ£¬µã»÷ÕâÀïÀ´ĞÂ½¨Ò»¸öAndroid StudioÏîÄ¿
+ç°åœ¨ï¼Œç‚¹å‡»è¿™é‡Œæ¥æ–°å»ºä¸€ä¸ªAndroid Studioé¡¹ç›®
 Now, let's click here to start a new Android Studio project.
 
 11
 00:00:27,240 --> 00:00:30,550
-ÔÚÏîÄ¿Òıµ¼Ò³Ãæ£¬ÎÒÃÇÉèÖÃAppµÄÃû×ÖÎªSunshine
+åœ¨é¡¹ç›®å¼•å¯¼é¡µé¢ï¼Œæˆ‘ä»¬è®¾ç½®Appçš„åå­—ä¸ºSunshine
 In the project wizard, we set the app name to be Sunshine.
 
 12
 00:00:30,550 --> 00:00:33,180 
-È»ºóÎÒÃÇĞèÒª¶¨ÒåÒ»¸öÏà·ûµÄ°üÃû
+ç„¶åæˆ‘ä»¬éœ€è¦å®šä¹‰ä¸€ä¸ªç›¸ç¬¦çš„åŒ…å
 Then we provide a corresponding package name.
 
 13
 00:00:33,180 --> 00:00:36,570
-°üÃûÔÚËùÓĞÄÜÔÚAndroidÉÏ°²×°µÄ°üÕâ¸ö·¶Î§ÄÚ¶¼Ó¦¸ÃÊÇ¶ÀÒ»ÎŞ¶şµÄ£¬
+åŒ…ååœ¨æ‰€æœ‰èƒ½åœ¨Androidä¸Šå®‰è£…çš„åŒ…è¿™ä¸ªèŒƒå›´å†…éƒ½åº”è¯¥æ˜¯ç‹¬ä¸€æ— äºŒçš„ï¼Œ
 The package name should be globally unique across all packages installed
 
 14
@@ -69,105 +69,105 @@ on Android.
 
 15
 00:00:37,540 --> 00:00:38,900
-ÎªÁË±ÜÃâ°üÃû³åÍ»
+ä¸ºäº†é¿å…åŒ…åå†²çª
 To avoid conflicts,
 
 16
 00:00:38,900 --> 00:00:41,970
-½«ÄãÓµÓĞµÄ»¥ÁªÍøÓòÃû·´¹ıÀ´
+å°†ä½ æ‹¥æœ‰çš„äº’è”ç½‘åŸŸååè¿‡æ¥
 use the reverse of the name of the internet domain that you own.
 
 17
 00:00:41,970 --> 00:00:44,520
-ÕâºÍJava°üÃûµÄÃüÃû¹ßÀıÏàÍ¬
+è¿™å’ŒJavaåŒ…åçš„å‘½åæƒ¯ä¾‹ç›¸åŒ
 This follows the Java package name conventions.
 
 18
 00:00:44,520 --> 00:00:46,620
-ÎÒÃÇÓÃexample×÷ÎªSunshine AppµÄ°üÃû
+æˆ‘ä»¬ç”¨exampleä½œä¸ºSunshine Appçš„åŒ…å
 We're using the combat example name space for
 
 19
 00:00:46,620 --> 00:00:48,680
-ÒòÎªËü×ã¹»¼á¶¨
+å› ä¸ºå®ƒè¶³å¤Ÿåšå®š
 our Sunshine app because it's a sample.
 
 20
 00:00:48,680 --> 00:00:52,240
-µ«ÊÇÄã²»ÄÜ½«ÕâÑù°üÃûµÄApp·¢²¼µ½Google PlayÉÏÈ¥
+ä½†æ˜¯ä½ ä¸èƒ½å°†è¿™æ ·åŒ…åçš„Appå‘å¸ƒåˆ°Google Playä¸Šå»
 But you cannot publish an app on Google Play with that name space.
 
 21
 00:00:52,240 --> 00:00:54,840
-Í¨³£¾ÍÈÃËü±£³ÖÄ¬ÈÏ°üÃû
+é€šå¸¸å°±è®©å®ƒä¿æŒé»˜è®¤åŒ…å
 Usually leaving the default package name is fine.
 
 22
 00:00:54,840 --> 00:00:58,270
-²»¹ı£¬Õâ¸ö¿Î³ÌÓÃµÄÊÇÀÏ°æ±¾Android Studio
+ä¸è¿‡ï¼Œè¿™ä¸ªè¯¾ç¨‹ç”¨çš„æ˜¯è€ç‰ˆæœ¬Android Studio
 However, this course was originally filmed with a older version of
 
 23
 00:00:58,270 --> 00:01:03,110
-Ä¬ÈÏ°üÀ¨Ä£¿éÃû
+é»˜è®¤åŒ…æ‹¬æ¨¡å—å
 Android Studio where the module name app was included by default.
 
 24
 00:01:03,110 --> 00:01:04,950
-ËùÒÔÎÒÃÇÔÚÕâÀïĞŞ¸ÄÏÂ°üÃû
+æ‰€ä»¥æˆ‘ä»¬åœ¨è¿™é‡Œä¿®æ”¹ä¸‹åŒ…å
 So, we'll edit the package name here, so
 
 25
 00:01:04,950 --> 00:01:08,180
-ÕâÑù¾ÍºÍÎÒÃÇÓÃÀÏ°æ±¾Android Studio´´½¨µÄÄ¿Â¼Ïà·ûºÏÁË
+è¿™æ ·å°±å’Œæˆ‘ä»¬ç”¨è€ç‰ˆæœ¬Android Studioåˆ›å»ºçš„ç›®å½•ç›¸ç¬¦åˆäº†
 it matches what we had in the older version of Android Studio.
 
 26
 00:01:08,180 --> 00:01:10,920
-ÄãÃÇÒ²Ó¦¸Ã¼ÓÉÏ¡°.app¡±
+ä½ ä»¬ä¹Ÿåº”è¯¥åŠ ä¸Šâ€œ.appâ€
 For your code to match the rest of the code in this course,
 
 27
 00:01:10,920 --> 00:01:12,960
-ÕâÑù¾ÍÄÜºÍÆäËû´úÂëÏàÅä
+è¿™æ ·å°±èƒ½å’Œå…¶ä»–ä»£ç ç›¸é…
 you should add the dot app as well.
 
 28
 00:01:12,960 --> 00:01:16,800
-ÏÂÒ»²½£¬ÎÒÃÇÑ¡ÔñÏîÄ¿Ä¿Â¼£¬È»ºóµã»÷Next
+ä¸‹ä¸€æ­¥ï¼Œæˆ‘ä»¬é€‰æ‹©é¡¹ç›®ç›®å½•ï¼Œç„¶åç‚¹å‡»Next
 Next, we choose our project location and then we can hit Next.
 
 29
 00:01:16,800 --> 00:01:19,400
-ÏÖÔÚÎÒÃÇĞèÒªÑ¡Ôñ×îĞ¡SDK°æ±¾
+ç°åœ¨æˆ‘ä»¬éœ€è¦é€‰æ‹©æœ€å°SDKç‰ˆæœ¬
 Now we need to choose our minimum SDK version.
 
 30
 00:01:19,400 --> 00:01:20,940
-ÔÚÖ®Ç°°æ±¾µÄAndroid Studio
+åœ¨ä¹‹å‰ç‰ˆæœ¬çš„Android Studio
 In previous versions of Android Studio,
 
 31
 00:01:20,940 --> 00:01:24,070
-Äã»¹ÒªÑ¡ÔñÒ»¸öÄ¿±êSDK
+ä½ è¿˜è¦é€‰æ‹©ä¸€ä¸ªç›®æ ‡SDK
 you would also have to select the target SDK.
 
 32
 00:01:24,070 --> 00:01:27,230
-ÏÖÔÚµÄ»°£¬ÏîÄ¿Òıµ¼×Ô¶¯ÉèÖÃÄ¿±êSDK
+ç°åœ¨çš„è¯ï¼Œé¡¹ç›®å¼•å¯¼è‡ªåŠ¨è®¾ç½®ç›®æ ‡SDK
 Now the project wizard automatically sets the target SDK
 
 33
 00:01:27,230 --> 00:01:29,590
-Îª×îĞÂ°æ±¾µÄAndroid
+ä¸ºæœ€æ–°ç‰ˆæœ¬çš„Android
 to the latest version of Android.
 
 34
 00:01:29,590 --> 00:01:30,850
-²»¹ıÁË½âµ½×îĞ¡SDKºÍÄ¿±êSDKµÄ²î±ğÈÔÈ»ºÜÖØÒª
+ä¸è¿‡äº†è§£åˆ°æœ€å°SDKå’Œç›®æ ‡SDKçš„å·®åˆ«ä»ç„¶å¾ˆé‡è¦
 Even though it's already selected for
 
 35
 00:01:30,850 --> 00:01:34,480
-¼´Ê¹ÒÑ¾­ÎªÄãÑ¡ºÃÁË
+å³ä½¿å·²ç»ä¸ºä½ é€‰å¥½äº†
 you, it's important to know the distinction between minimum and target SDK.

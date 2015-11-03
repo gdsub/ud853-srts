@@ -1,117 +1,117 @@
 1
 00:00:00,340 --> 00:00:01,280
-¶ÔÓÚÎÒÃÇÀ´Ëµ
+å¯¹äºæˆ‘ä»¬æ¥è¯´
 For us,
 
 2
 00:00:01,280 --> 00:00:06,090
-²éÑ¯½«ÊÇ×î¸´ÔÓµÄËùĞèµÄcontent providerµÄ·½·¨
+æŸ¥è¯¢å°†æ˜¯æœ€å¤æ‚çš„æ‰€éœ€çš„content providerçš„æ–¹æ³•
 query will be the most complex of
 the required content provider methods.
 
 3
 00:00:06,090 --> 00:00:09,120
-ÎÒÃÇÒÑ¾­¸øÄãÁËÊµÏÖ²Ù×÷µÄ´óÖÂ¿ò¼Ü
+æˆ‘ä»¬å·²ç»ç»™ä½ äº†å®ç°æ“ä½œçš„å¤§è‡´æ¡†æ¶
 We've given you the bones,
 of the query operation.
 
 4
 00:00:09,120 --> 00:00:12,970
-ÈçÄãËù¼û Ê¹ÓÃÎÒÃÇÓµÓĞµÄSURIµÄ¶ÔÏó
+å¦‚ä½ æ‰€è§ ä½¿ç”¨æˆ‘ä»¬æ‹¥æœ‰çš„SURIçš„å¯¹è±¡
 As you can see,
 we use our SURI nature object,
 
 5
 00:00:12,970 --> 00:00:16,149
-ÔÙ¶ÔURIµÄÀàĞÍ½øĞĞÅĞ¶Ï
+å†å¯¹URIçš„ç±»å‹è¿›è¡Œåˆ¤æ–­
 once again to switch on the type of URI.
 
 6
 00:00:16,149 --> 00:00:19,220
-ĞèÒª×¢ÒâµÄÊÇ Õâ¸ö·½·¨Ã¿´Î¶¼»á·µ»ØÒ»¸öcursor¶ÔÏóÀ´
+éœ€è¦æ³¨æ„çš„æ˜¯ è¿™ä¸ªæ–¹æ³•æ¯æ¬¡éƒ½ä¼šè¿”å›ä¸€ä¸ªcursorå¯¹è±¡æ¥
 Note that each response from this
 function, will return a cursor that
 
 7
 00:00:19,220 --> 00:00:23,740
-¶ÔÓ¦ÄãÒª²éÑ¯µÄÄÇ¸öURI
+å¯¹åº”ä½ è¦æŸ¥è¯¢çš„é‚£ä¸ªURI
 corresponds to the incoming
 query as defined by the URI.
 
 8
 00:00:23,740 --> 00:00:26,470
-ÕâÊÇÎ¨Ò»µÄ·½·¨ÎÒÃÇ±ØĞëÌîĞ´²»Í¬µÄ
+è¿™æ˜¯å”¯ä¸€çš„æ–¹æ³•æˆ‘ä»¬å¿…é¡»å¡«å†™ä¸åŒçš„
 This is the only function where we
 will have to fill out a different
 
 9
 00:00:26,470 --> 00:00:30,000
-·µ»ØÄÚÈİÎªÃ¿Ò»¸öÀàĞÍµÄURIÔÚcontent providerÖĞ
+è¿”å›å†…å®¹ä¸ºæ¯ä¸€ä¸ªç±»å‹çš„URIåœ¨content providerä¸­
 response for every type of
 URI in the content provider,
 
 10
 00:00:30,000 --> 00:00:32,360
-ËûÃÇÖĞµÄÒ»Ğ©¿ÉÄÜÖ»ÓÃÓÚ²éÑ¯
+ä»–ä»¬ä¸­çš„ä¸€äº›å¯èƒ½åªç”¨äºæŸ¥è¯¢
 as several of them
 are used in queries only.
 
 11
 00:00:32,360 --> 00:00:36,520
-ÔÚÕâ¸ö·½·¨µÄµ×²¿£¬ÎÒÃÇ½«ÉèÖÃÍ¨ÖªÎª
+åœ¨è¿™ä¸ªæ–¹æ³•çš„åº•éƒ¨ï¼Œæˆ‘ä»¬å°†è®¾ç½®é€šçŸ¥ä¸º
 At the bottom of our function, we're
 going to set the notification URI for
 
 12
 00:00:36,520 --> 00:00:39,370
-ÎÒÃÇµÄ´«¸øÕâ¸ö·½·¨µÄ¶ÔÓ¦µÄcursorµÄURI
+æˆ‘ä»¬çš„ä¼ ç»™è¿™ä¸ªæ–¹æ³•çš„å¯¹åº”çš„cursorçš„URI
 our cursor to the one that
 was passed into the function.
 
 13
 00:00:39,370 --> 00:00:43,550
-ÕâÊ¹cursor×¢²áÒ»¸öcontent observer£¬À´ÊØÍû
+è¿™ä½¿cursoræ³¨å†Œä¸€ä¸ªcontent observerï¼Œæ¥å®ˆæœ›
 This causes the cursor to register
 a content observer, to watch for
 
 14
 00:00:43,550 --> 00:00:47,430
-ÄÇ¸öURIµÄÒÔ¼°ÈÎºÎµÄ×ÓURI·¢ÉúµÄ±ä»¯
+é‚£ä¸ªURIçš„ä»¥åŠä»»ä½•çš„å­URIå‘ç”Ÿçš„å˜åŒ–
 changes that happen to that URI and
 any of its descendants.
 
 15
 00:00:47,430 --> 00:00:51,020
-ÕâÈÃcontent providerºÜÈİÒ×µÄ¸æËßUI µ±cursor
+è¿™è®©content providerå¾ˆå®¹æ˜“çš„å‘Šè¯‰UI å½“cursor
 This allows the content provider,
 to easily tell the UI when the cursor
 
 16
 00:00:51,020 --> 00:00:55,040
-¸Ä±äµÄÊ±ºò ÀàËÆÊı¾İ¿âÖĞµÄ²åÈë»òÕß²éÑ¯²Ù×÷
+æ”¹å˜çš„æ—¶å€™ ç±»ä¼¼æ•°æ®åº“ä¸­çš„æ’å…¥æˆ–è€…æŸ¥è¯¢æ“ä½œ
 changes, on operations like
 a database insert or update.
 
 17
 00:00:55,040 --> 00:00:57,620
-ÉÔºóÎÒÃÇ»á¿´µ½¸ü¶à µ±ÎÒÃÇÌÖÂÛ²åÈëºÍ
+ç¨åæˆ‘ä»¬ä¼šçœ‹åˆ°æ›´å¤š å½“æˆ‘ä»¬è®¨è®ºæ’å…¥å’Œ
 We'll see more on this later,
 when we cover inserting and
 
 18
 00:00:57,620 --> 00:00:59,300
-¸üĞÂÊı¾İ¿âµÄÊ±ºò
+æ›´æ–°æ•°æ®åº“çš„æ—¶å€™
 updating the database.
 
 19
 00:00:59,300 --> 00:01:03,840
-È¡Ïû×¢ÊÍµôtest providerÖĞµÄ»ù±¾µÄÌìÆø²éÑ¯·½·¨ºÍ
+å–æ¶ˆæ³¨é‡Šæ‰test providerä¸­çš„åŸºæœ¬çš„å¤©æ°”æŸ¥è¯¢æ–¹æ³•å’Œ
 Uncomment the test basic weather query
 function within test provider and
 
 20
 00:01:03,840 --> 00:01:07,600
-ÔËĞĞ´úÂëµ±ÄãÍê³ÉµÄÊ±ºò£¬²¢ÇÒÒª±£Ö¤ËùÓĞÕâĞ©ÔËĞĞÕı³£
+è¿è¡Œä»£ç å½“ä½ å®Œæˆçš„æ—¶å€™ï¼Œå¹¶ä¸”è¦ä¿è¯æ‰€æœ‰è¿™äº›è¿è¡Œæ­£å¸¸
 run this code when you're finished, to
 make sure all of this is working well.
 

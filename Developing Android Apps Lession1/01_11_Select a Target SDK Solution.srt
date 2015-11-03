@@ -1,20 +1,20 @@
 1
 00:00:05,370 --> 00:00:09,490
-ÎÒÃÇ²»¸ÃÑ¡Ôñ100%ÄÜÖ§³ÖµÄÉè±¸À´×÷ÎªÎÒÃÇµÄÄ¿±êSDK
+æˆ‘ä»¬ä¸è¯¥é€‰æ‹©100%èƒ½æ”¯æŒçš„è®¾å¤‡æ¥ä½œä¸ºæˆ‘ä»¬çš„ç›®æ ‡SDK
 100% of devices, it's the wrong choice for our target SDK. To ensure the best
 
 2
 00:00:09,490 --> 00:00:13,630
-ÎªÁËÈ·±£ÈÃÓÃ»§ÔÚËùÓĞÊÖ»úÉÏ¶¼¸ĞÊÜµ½×îºÃµÄÌåÑé£¬°üÀ¨×îĞÂ·¢²¼µÄKitKat
+ä¸ºäº†ç¡®ä¿è®©ç”¨æˆ·åœ¨æ‰€æœ‰æ‰‹æœºä¸Šéƒ½æ„Ÿå—åˆ°æœ€å¥½çš„ä½“éªŒï¼ŒåŒ…æ‹¬æœ€æ–°å‘å¸ƒçš„KitKat
 experience for users on all phones including the newest KitKat releases,
 
 3
 00:00:00,240 --> 00:00:05,370
-ÕâÊÇÕıÈ·µÄ  ËùÒÔÎÒÃÇÓ¦¸ÃÉèÖÃFroyoÎª×îµÍSDK£¬Ëü»áÊ¹ÎÒÃÇÄÜ¹»ÊÊÅäËùÓĞ>=FroyoµÄ»úĞÍ
+è¿™æ˜¯æ­£ç¡®çš„  æ‰€ä»¥æˆ‘ä»¬åº”è¯¥è®¾ç½®Froyoä¸ºæœ€ä½SDKï¼Œå®ƒä¼šä½¿æˆ‘ä»¬èƒ½å¤Ÿé€‚é…æ‰€æœ‰>=Froyoçš„æœºå‹
 That's right. While setting Froyo as a minimum SDK, would allow us to support
 
 4
 00:00:13,630 --> 00:00:16,830
-ÎÒÃÇ»¹ĞèÒªÉèÖÃÄ¿±êSDKÎª×îĞÂ·¢²¼µÄKitKat
+æˆ‘ä»¬è¿˜éœ€è¦è®¾ç½®ç›®æ ‡SDKä¸ºæœ€æ–°å‘å¸ƒçš„KitKat
 we need to set our target SDK to the latest build, which is KitKat.
 

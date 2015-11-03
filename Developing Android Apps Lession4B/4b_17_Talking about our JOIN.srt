@@ -1,177 +1,177 @@
 1
 00:00:00,260 --> 00:00:02,580
-µ±ÎÒÃÇÆğ³õ¶¨ÒåÎÒÃÇµÄ±íµÄÊ±ºò
+å½“æˆ‘ä»¬èµ·åˆå®šä¹‰æˆ‘ä»¬çš„è¡¨çš„æ—¶å€™
 When we first defined our tables,
 
 2
 00:00:02,580 --> 00:00:06,320
-ÎÒÃÇ¶¨ÒåËûÃÇÖ®¼äµÄ¹ØÏµºÍÔ¼ÊøÌõ¼ş
+æˆ‘ä»¬å®šä¹‰ä»–ä»¬ä¹‹é—´çš„å…³ç³»å’Œçº¦æŸæ¡ä»¶
 we defined the relationship between
 them in terms of constraints.
 
 3
 00:00:06,320 --> 00:00:08,880
-ÎÒ½«»á½²½âÔõÃ´ÑùÊµÏÖ¹ØÏµÔÚÎÒÃÇµÄ
+æˆ‘å°†ä¼šè®²è§£æ€ä¹ˆæ ·å®ç°å…³ç³»åœ¨æˆ‘ä»¬çš„
 I'm going to show how we implemented
 that relationship into our
 
 4
 00:00:08,880 --> 00:00:10,140
-²éÑ¯ÖĞÊ¹ÓÃjoin
+æŸ¥è¯¢ä¸­ä½¿ç”¨join
 query using a join.
 
 5
 00:00:11,420 --> 00:00:13,900
-joinÔÊĞíÎÒÃÇ²éÑ¯weatherÊ¹ÓÃ´Ó
+joinå…è®¸æˆ‘ä»¬æŸ¥è¯¢weatherä½¿ç”¨ä»
 This join allows us to
 query the weather table for
 
 6
 00:00:13,900 --> 00:00:17,450
-Î»ÖÃÉèÖÃÀï¶¨ÒåµÄÒ»Ğ©Öµ
+ä½ç½®è®¾ç½®é‡Œå®šä¹‰çš„ä¸€äº›å€¼
 values from a specific location setting.
 
 7
 00:00:17,450 --> 00:00:21,170
-ÔÚSunshineµÄÀı×ÓÖĞ£¬ÓÃ»§ÉèÖÃÕâĞ©ÔÚÆ«ºÃÖĞ
+åœ¨Sunshineçš„ä¾‹å­ä¸­ï¼Œç”¨æˆ·è®¾ç½®è¿™äº›åœ¨åå¥½ä¸­
 In Sunshine's case,
 the user sets this in preferences.
 
 8
 00:00:21,170 --> 00:00:24,340
-Äã½«×¢Òâµ½ÓĞÒ»¸öSQLite query builderÀà
+ä½ å°†æ³¨æ„åˆ°æœ‰ä¸€ä¸ªSQLite query builderç±»
 You'll notice that there's a SQ
 lite query builder class for
 
 9
 00:00:24,340 --> 00:00:26,240
-ÔÚweather providerµÄ¶¥²¿
+åœ¨weather providerçš„é¡¶éƒ¨
 able at the top of weather provider.
 
 10
 00:00:26,240 --> 00:00:29,940
-ÕıÈçÄã¿ÉÄÜ»áÏëµ½µÄ Õâ¸öÀà°ïÖú¹¹½¨²éÑ¯ºÍ
+æ­£å¦‚ä½ å¯èƒ½ä¼šæƒ³åˆ°çš„ è¿™ä¸ªç±»å¸®åŠ©æ„å»ºæŸ¥è¯¢å’Œ
 As you might guess,
 this class helps construct queries and
 
 11
 00:00:29,940 --> 00:00:31,700
-±»ÓÃµ½×÷Îª²éÑ¯·½·¨µÄ»ù´¡
+è¢«ç”¨åˆ°ä½œä¸ºæŸ¥è¯¢æ–¹æ³•çš„åŸºç¡€
 is actually used as the basis for
 
 12
 00:00:31,700 --> 00:00:35,730
-ÄãÒÑ¾­ÔÚSQLite Êı¾İÀàÖĞÓĞÓÃµ½
+ä½ å·²ç»åœ¨SQLite æ•°æ®ç±»ä¸­æœ‰ç”¨åˆ°
 the query functions you've already
 used in the SQLite database class.
 
 13
 00:00:35,730 --> 00:00:40,350
-ÎÒÃÇÔÚÕâ¸öÀàµÄ¾²Ì¬¿é³õÊ¼»¯Õâ¸öSQLite query builder
+æˆ‘ä»¬åœ¨è¿™ä¸ªç±»çš„é™æ€å—åˆå§‹åŒ–è¿™ä¸ªSQLite query builder
 We initialize the SQLite query builder
 in the static constructor of the class.
 
 14
 00:00:40,350 --> 00:00:42,825
-ÃèÊöÕâÁ½¸ö±íÖ®¼äµÄÁ¬½Ó
+æè¿°è¿™ä¸¤ä¸ªè¡¨ä¹‹é—´çš„è¿æ¥
 Describing the join between both tables.
 
 15
 00:00:42,825 --> 00:00:48,230
-setTables·½·¨ÌîĞ´SQL ²éÑ¯µÄÒ»²¿·ÖÄÚÈİ
+setTablesæ–¹æ³•å¡«å†™SQL æŸ¥è¯¢çš„ä¸€éƒ¨åˆ†å†…å®¹
 Set.Tables fills out the content
 in the from part of the SQL query.
 
 16
 00:00:48,230 --> 00:00:52,890
-×¢Òâ Á½¸ö±í¶¼ÓĞÒ»¸ö_ID ×Ö¶Î
+æ³¨æ„ ä¸¤ä¸ªè¡¨éƒ½æœ‰ä¸€ä¸ª_ID å­—æ®µ
 Note, since both tables
 have a field with an _ID,
 
 17
 00:00:52,890 --> 00:00:56,840
-ÎÒÃÇ±ØĞëÊ¹ÓÃ±íÃûÀ´Çå³ıÎÒÃÇ
+æˆ‘ä»¬å¿…é¡»ä½¿ç”¨è¡¨åæ¥æ¸…é™¤æˆ‘ä»¬
 we must explicitly use the table
 name in order to disambiguate
 
 18
 00:00:56,840 --> 00:00:59,940
-ÌÖÂÛµÄÊÇÄÇ¸öIDµÄÆçÒåÔÚ¶à±í²éÑ¯ÖĞ
+è®¨è®ºçš„æ˜¯é‚£ä¸ªIDçš„æ­§ä¹‰åœ¨å¤šè¡¨æŸ¥è¯¢ä¸­
 which ID we are talking
 about in the join.
 
 19
 00:00:59,940 --> 00:01:02,050
-È»ºóÎÒÃÇ¶¨ÒåÁËselection
+ç„¶åæˆ‘ä»¬å®šä¹‰äº†selection
 Then we define the selection.
 
 20
 00:01:02,050 --> 00:01:06,090
-selectionÊ¹ÓÃÎÊºÅ±ê¼Ç»òÕßÕ¼Î»·û
+selectionä½¿ç”¨é—®å·æ ‡è®°æˆ–è€…å ä½ç¬¦
 The selection is defined using
 the question mark or placement syntax.
 
 21
 00:01:06,090 --> 00:01:09,830
-selection²ÎÊı»áÌæ´úÕâĞ©Öµ
+selectionå‚æ•°ä¼šæ›¿ä»£è¿™äº›å€¼
 The selection parameters
 will replace these values.
 
 22
 00:01:09,830 --> 00:01:13,570
-ÕıÈçÄã¿´µ½µÄ ÎÒÃÇµÄselectionÓĞ2¸ö²ÎÊı
+æ­£å¦‚ä½ çœ‹åˆ°çš„ æˆ‘ä»¬çš„selectionæœ‰2ä¸ªå‚æ•°
 As you can see,
 our selection has 2 parameters,
 
 23
 00:01:13,570 --> 00:01:16,15
-Ò»¸öÎ»ÖÃÉèÖÃºÍÒ»¸öÈÕÆÚ
+ä¸€ä¸ªä½ç½®è®¾ç½®å’Œä¸€ä¸ªæ—¥æœŸ
 a location setting and a date.
 
 24
 00:01:16,150 --> 00:01:19,340
-È»ºóÎÒÃÇÓĞÒ»¸ö·½·¨À´Í¨¹ıÎ»ÖÃ»ñÈ¡ÌìÆø
+ç„¶åæˆ‘ä»¬æœ‰ä¸€ä¸ªæ–¹æ³•æ¥é€šè¿‡ä½ç½®è·å–å¤©æ°”
 Then we have a function to get the
 weather by location setting using this
 
 25
 00:01:19,340 --> 00:01:21,010
-Ê¹ÓÃÏàÍ¬µÄquery builder
+ä½¿ç”¨ç›¸åŒçš„query builder
 same query builder.
 
 26
 00:01:21,010 --> 00:01:23,910
-×¢Òâ ÎÒÃÇ´ÓURIÈ¡²ÎÊı
+æ³¨æ„ æˆ‘ä»¬ä»URIå–å‚æ•°
 Note that we fetch
 the parameters from the URI.
 
 27
 00:01:23,910 --> 00:01:27,640
-È»ºó¹¹½¨Õâ¸östringÊı×éºÍÕâ¸östringÊı×é´Ó¶ø
+ç„¶åæ„å»ºè¿™ä¸ªstringæ•°ç»„å’Œè¿™ä¸ªstringæ•°ç»„ä»è€Œ
 And build the string array and
 build the string array so
 
 28
 00:01:27,640 --> 00:01:30,050
-Ê¹ËûÃÇ´úÈëÎÒÃÇµÄ²éÑ¯
+ä½¿ä»–ä»¬ä»£å…¥æˆ‘ä»¬çš„æŸ¥è¯¢
 that they can be
 substituted into our query.
 
 29
 00:01:30,050 --> 00:01:34,110
-ÎÒÃÇÒÔÕâ¸ö·½Ê½½¨Á¢µÄÁ½¸ö²éÑ¯
+æˆ‘ä»¬ä»¥è¿™ä¸ªæ–¹å¼å»ºç«‹çš„ä¸¤ä¸ªæŸ¥è¯¢
 We do that for both of the queries
 that we're creating this way.
 
 30
 00:01:34,110 --> 00:01:38,570
-×îÖÕ£¬ÎÒÃÇ°Ñ·½·¨¼ÓÈëµ½content providerµÄÈÕ³£²éÑ¯ÖĞ
+æœ€ç»ˆï¼Œæˆ‘ä»¬æŠŠæ–¹æ³•åŠ å…¥åˆ°content providerçš„æ—¥å¸¸æŸ¥è¯¢ä¸­
 Finally, we added the functions into the
 query routine of the content provider
 
 31
 00:01:38,570 --> 00:01:42,160
-Îª´øÓĞÎ»ÖÃºÍÈÕÆÚµÄÌìÆøºÍ´øÓĞÎ»ÖÃµÄÌìÆø
+ä¸ºå¸¦æœ‰ä½ç½®å’Œæ—¥æœŸçš„å¤©æ°”å’Œå¸¦æœ‰ä½ç½®çš„å¤©æ°”
 for both weather with location and
 date and weather with location.
 

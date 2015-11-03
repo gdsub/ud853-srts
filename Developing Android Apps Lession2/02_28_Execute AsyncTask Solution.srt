@@ -1,49 +1,49 @@
 1
 00:00:00,470 --> 00:00:02,880
-ÔÚForecaseFragmentÀàÖĞ£¬ÎÒÃÇĞŞ¸ÄÁË
+åœ¨ForecaseFragmentç±»ä¸­ï¼Œæˆ‘ä»¬ä¿®æ”¹äº†
 In the ForecaseFragment class, we modify the
 
 2
 00:00:02,880 --> 00:00:08,134
-onOptionsItemSelected()·½·¨¡£µ±µã»÷Refresh°´Å¥Ê±£¬
+onOptionsItemSelected()æ–¹æ³•ã€‚å½“ç‚¹å‡»RefreshæŒ‰é’®æ—¶ï¼Œ
 onOptionsItemSelected method. When the Refresh menu item is selected,
 
 3
 00:00:08,134 --> 00:00:11,129
-ÎÒÃÇ´´½¨ÁËÒ»¸öĞÂµÄFetchWeatherTask¶ÔÏó£¬²¢ÇÒÎÒÃÇµ÷ÓÃ
+æˆ‘ä»¬åˆ›å»ºäº†ä¸€ä¸ªæ–°çš„FetchWeatherTaskå¯¹è±¡ï¼Œå¹¶ä¸”æˆ‘ä»¬è°ƒç”¨
 we create a new FetchWeatherTask and then we call
 
 4
 00:00:11,129 --> 00:00:13,489
-ËüµÄexecute()·½·¨¡£¾¡¹ÜÓÉÓÚÊ¹ÓÃµÄÊÇAsyncTask
+å®ƒçš„execute()æ–¹æ³•ã€‚å°½ç®¡ç”±äºä½¿ç”¨çš„æ˜¯AsyncTask
 execute on it. While the call is no longer
 
 5
 00:00:13,489 --> 00:00:16,487
-µ÷ÓÃ²¢²»»á×èÈûUIÏß³Ì£¬
+è°ƒç”¨å¹¶ä¸ä¼šé˜»å¡UIçº¿ç¨‹ï¼Œ
 blocking the UI thread because it's an AsyncTask, the
 
 6
 00:00:16,487 --> 00:00:19,390
-µ«ÊÇÓ¦ÓÃÈÔÈ»»á±ÀÀ£¡£Èç¹ûÄã²é¿´ÈÕÖ¾£¬
+ä½†æ˜¯åº”ç”¨ä»ç„¶ä¼šå´©æºƒã€‚å¦‚æœä½ æŸ¥çœ‹æ—¥å¿—ï¼Œ
 app will still crash. If we check the logs,
 
 7
 00:00:19,390 --> 00:00:21,920
-ÎÒÃÇ»á¿´µ½Ó¦ÓÃÕâÒ»´ÎÊÇÓÉÓÚÒ»¸öSecurityException£¨°²È«Òì³££©
+æˆ‘ä»¬ä¼šçœ‹åˆ°åº”ç”¨è¿™ä¸€æ¬¡æ˜¯ç”±äºä¸€ä¸ªSecurityExceptionï¼ˆå®‰å…¨å¼‚å¸¸ï¼‰
 we see that the app crashed, this time though,
 
 8
 00:00:21,920 --> 00:00:26,030
-±ÀÀ£µÄ¡£ËüËµÈ¨ÏŞ±»¾Ü¾ø£¬²¢ÇÒÎÊ
+å´©æºƒçš„ã€‚å®ƒè¯´æƒé™è¢«æ‹’ç»ï¼Œå¹¶ä¸”é—®
 with a SecurityException. It says Permission denied and
 
 9
 00:00:26,030 --> 00:00:29,810
-ÊÇ²»ÊÇÃ»ÓĞÉêÇëINTERNETÈ¨ÏŞ¡£È·Êµ£¬
+æ˜¯ä¸æ˜¯æ²¡æœ‰ç”³è¯·INTERNETæƒé™ã€‚ç¡®å®ï¼Œ
 ask if you're missing the INTERNET permission or not. And indeed,
 
 10
 00:00:29,810 --> 00:00:32,670
-ÎÒÃÇÃ»ÉêÇëINTERNETÈ¨ÏŞ£¬Òò´ËÎÒÃÇĞèÒªÉêÇëËü¡£
+æˆ‘ä»¬æ²¡ç”³è¯·INTERNETæƒé™ï¼Œå› æ­¤æˆ‘ä»¬éœ€è¦ç”³è¯·å®ƒã€‚
 we are missing the INTERNET permission, so we need to request it.

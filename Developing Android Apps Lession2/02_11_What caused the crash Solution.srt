@@ -1,79 +1,79 @@
 1
 00:00:00,450 --> 00:00:02,830
-Èç¹ûÄãµÄÓ¦ÓÃ³ÌĞò
+å¦‚æœä½ çš„åº”ç”¨ç¨‹åº
 If you run it on your phone, your App crashed
 
 2
 00:00:02,830 --> 00:00:06,270
-ÒòÎªNetworkOnMainException¶ø±ÀÀ£ÁË
+å› ä¸ºNetworkOnMainExceptionè€Œå´©æºƒäº†
 because of a network got main thread exception. We found
 
 3
 00:00:06,270 --> 00:00:08,990
-ÎÒÃÇ¿ÉÒÔ½«Éè±¸ºÍµçÄÔÁ¬½Ó
+æˆ‘ä»¬å¯ä»¥å°†è®¾å¤‡å’Œç”µè„‘è¿æ¥
 this answer by connecting our device to our computer and
 
 4
 00:00:08,990 --> 00:00:12,790
-È»ºó¹Û²ìAndroidÉè±¸¼àÊÓÆ÷ÉÏÏÔÊ¾µÄ´íÎóĞÅÏ¢
+ç„¶åè§‚å¯ŸAndroidè®¾å¤‡ç›‘è§†å™¨ä¸Šæ˜¾ç¤ºçš„é”™è¯¯ä¿¡æ¯
 then checking Android device monitor for the error. You can
 
 5
 00:00:12,790 --> 00:00:15,220
-¿ÉÒÔ¿´µ½ÕâÀïÊÇÎÒÃÇµÄÓ¦ÓÃ³ÌĞò°üÃû
+å¯ä»¥çœ‹åˆ°è¿™é‡Œæ˜¯æˆ‘ä»¬çš„åº”ç”¨ç¨‹åºåŒ…å
 see here that this is our package name and this
 
 6
 00:00:15,220 --> 00:00:18,010
-ÕâÀïÊÇ½ø³ÌID Èç¹ûÄãËÑË÷Õâ¸ö½ø³ÌID
+è¿™é‡Œæ˜¯è¿›ç¨‹ID å¦‚æœä½ æœç´¢è¿™ä¸ªè¿›ç¨‹ID
 is our process ID. If you search the logs for
 
 7
 00:00:18,010 --> 00:00:22,390
-¾Í»á¿´µ½´íÎóĞÅÏ¢ Õâ¸ö´íÎóÊÇ±»NetworkOnMainThreadExceptionÒı·¢µÄ
+å°±ä¼šçœ‹åˆ°é”™è¯¯ä¿¡æ¯ è¿™ä¸ªé”™è¯¯æ˜¯è¢«NetworkOnMainThreadExceptionå¼•å‘çš„
 that process ID then our error appears. It's triggered ultimately
 
 8
 00:00:22,390 --> 00:00:25,700
-Ò²¾ÍÊÇÔÚÖ÷Ïß³ÌÖĞ½øĞĞÁËÍøÂç²Ù×÷
+ä¹Ÿå°±æ˜¯åœ¨ä¸»çº¿ç¨‹ä¸­è¿›è¡Œäº†ç½‘ç»œæ“ä½œ
 by a network on main thread exception. If you're curious
 
 9
 00:00:25,700 --> 00:00:28,560
-Èç¹ûÄãÏëÖªµÀÊÇÎÒÃÇ´úÂëÖĞµÄÄÄÒ»ĞĞ´¥·¢µÄ
+å¦‚æœä½ æƒ³çŸ¥é“æ˜¯æˆ‘ä»¬ä»£ç ä¸­çš„å“ªä¸€è¡Œè§¦å‘çš„
 as to what line of our code actually caused
 
 10
 00:00:28,560 --> 00:00:30,730
-Äã¿ÉÒÔÏòÏÂ¹ö¶¯Õâ¸ö¶ÑÕ»ĞÅÏ¢
+ä½ å¯ä»¥å‘ä¸‹æ»šåŠ¨è¿™ä¸ªå †æ ˆä¿¡æ¯
 this, you can scroll down the stack trace to
 
 11
 00:00:30,730 --> 00:00:33,940
-ÕâĞ©ÊÇÏµÍ³¿âÖĞ´úÂëÒı·¢µÄ´íÎóĞÅÏ¢ Äã¿ÉÒÔÌø¹ı
+è¿™äº›æ˜¯ç³»ç»Ÿåº“ä¸­ä»£ç å¼•å‘çš„é”™è¯¯ä¿¡æ¯ ä½ å¯ä»¥è·³è¿‡
 read more. This is our framework code that you
 
 12
 00:00:33,940 --> 00:00:36,570
-¶øÕâÀïÊÇÎÒÃÇ´úÂëÖĞ´¥·¢´íÎóµÄÔªĞ×
+è€Œè¿™é‡Œæ˜¯æˆ‘ä»¬ä»£ç ä¸­è§¦å‘é”™è¯¯çš„å…ƒå‡¶
 can skip and here's where it actually hits our
 
 13
 00:00:36,570 --> 00:00:41,440
-ÕâĞĞ°üº¬ÁË´íÎó·¢ÉúµÄµØµã ÔÚPlaceholderFragment.classÖĞµÄonCreateView()·½·¨ÖĞ
+è¿™è¡ŒåŒ…å«äº†é”™è¯¯å‘ç”Ÿçš„åœ°ç‚¹ åœ¨PlaceholderFragment.classä¸­çš„onCreateView()æ–¹æ³•ä¸­
 app. It's within the placeholder fragment class, in the onCreateView method. And
 
 14
 00:00:41,440 --> 00:00:46,680
-¾ßÌåÊÇÔÚMainActivity.javaµÄ116ĞĞ
+å…·ä½“æ˜¯åœ¨MainActivity.javaçš„116è¡Œ
 it happens in main activity.java file, in line 116. So
 
 15
 00:00:46,680 --> 00:00:51,650
-»Øµ½´úÂë ÔÚÕâÒ»ĞĞÄã¿ÉÒÔ¿´µ½urlConnection.connect()
+å›åˆ°ä»£ç  åœ¨è¿™ä¸€è¡Œä½ å¯ä»¥çœ‹åˆ°urlConnection.connect()
 if we go back to the code, on that line you can see that urlConnection.connect
 
 16
 00:00:51,650 --> 00:00:55,210
-Êµ¼ÊÉÏ¾ÍÊÇËüÒı·¢ÁË´íÎó ÎÒÃÇ²»ÄÜÔÚÖ÷Ïß³ÌÀïÊ¹ÓÃËü
+å®é™…ä¸Šå°±æ˜¯å®ƒå¼•å‘äº†é”™è¯¯ æˆ‘ä»¬ä¸èƒ½åœ¨ä¸»çº¿ç¨‹é‡Œä½¿ç”¨å®ƒ
 actually caused the error, and that we can't do that on the main thread.

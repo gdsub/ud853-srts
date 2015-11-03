@@ -1,130 +1,130 @@
 1
 00:00:00,460 --> 00:00:04,250
-ÔÚ¸´ÖÆÁËËùÓĞÍ¼Æ¬Ö®ºó£¬ĞèÒªÔÚ°²×¿µÄmanifestÎÄ¼şÖĞ¸üĞÂ×ÀÃæÆô¶¯Í¼±ê
+åœ¨å¤åˆ¶äº†æ‰€æœ‰å›¾ç‰‡ä¹‹åï¼Œéœ€è¦åœ¨å®‰å“çš„manifestæ–‡ä»¶ä¸­æ›´æ–°æ¡Œé¢å¯åŠ¨å›¾æ ‡
 After copying over the assets, updating the launcher icon in the Android
 
 2
 00:00:04,250 --> 00:00:07,890
-²¢ÇÒÔÚUtilityÀàÖĞÌí¼Ó¸¨Öúº¯Êı
+å¹¶ä¸”åœ¨Utilityç±»ä¸­æ·»åŠ è¾…åŠ©å‡½æ•°
 manifest, and adding the helper methods to the utility class,
 
 3
 00:00:07,890 --> 00:00:12,410
-Îª´Ë£¬ÎÒÃÇĞèÒªĞŞ¸ÄDetailFragmentºÍ ForecastAdapterÕâÁ½¸öÀà
+ä¸ºæ­¤ï¼Œæˆ‘ä»¬éœ€è¦ä¿®æ”¹DetailFragmentå’Œ ForecastAdapterè¿™ä¸¤ä¸ªç±»
 we need to modify to detail fragment and forecast it after classes.
 
 4
 00:00:12,410 --> 00:00:15,050
-ÔÚDetailFragmentÀàµÄ·½·¨ÖĞ
+åœ¨DetailFragmentç±»çš„æ–¹æ³•ä¸­
 In the detail fragment onload finished method,
 
 5
 00:00:15,050 --> 00:00:17,350
-ÎÒÃÇÍ¨¹ı»ñÈ¡cursorµÄÎ»ÖÃÀ´¶ÁÈ¡Ö¸¶¨µÄÌìÆøÇé¿ö
+æˆ‘ä»¬é€šè¿‡è·å–cursorçš„ä½ç½®æ¥è¯»å–æŒ‡å®šçš„å¤©æ°”æƒ…å†µ
 we read the weather condition code from the cursor.
 
 6
 00:00:17,350 --> 00:00:21,670
-È»ºó½«Ëü´«µİ¸ø¸¨Öúº¯Êı
+ç„¶åå°†å®ƒä¼ é€’ç»™è¾…åŠ©å‡½æ•°
 Then we pass this into the utility helper method to get the resource ID for
 
 7
 00:00:21,670 --> 00:00:25,610
-À´»ñÈ¡Ìî³äÊÓÍ¼µÄ²ÊÉ«Í¼±ê
+æ¥è·å–å¡«å……è§†å›¾çš„å½©è‰²å›¾æ ‡
 the colored icon in order to set it on the image view.
 
 8
 00:00:25,610 --> 00:00:28,730
-ÒòÎª¶ÔÓÚ½ñÌìµÄÌìÆøÎÒÃÇÏëÊ¹ÓÃ²ÊÉ«Í¼±ê
+å› ä¸ºå¯¹äºä»Šå¤©çš„å¤©æ°”æˆ‘ä»¬æƒ³ä½¿ç”¨å½©è‰²å›¾æ ‡
 The ForecasterAdapter change is a little trickier because we want to use
 
 9
 00:00:28,730 --> 00:00:32,610
-¶ø¶ÔÓÚÎ´À´µÄÌìÆøÓÖÏëÊ¹ÓÃ»ÒÉ«µÄ
+è€Œå¯¹äºæœªæ¥çš„å¤©æ°”åˆæƒ³ä½¿ç”¨ç°è‰²çš„
 a colored icon for the today layout and we want to use a gray icon for
 
 10
 00:00:32,610 --> 00:00:33,590
-Í¼±ê
+å›¾æ ‡
 the other days.
 
 11
 00:00:33,590 --> 00:00:35,660
-ÎªÁË½«ÕâÁ½ÕßÇø·Ö¿ªÀ´
+ä¸ºäº†å°†è¿™ä¸¤è€…åŒºåˆ†å¼€æ¥
 In order to distinguish between the two,
 
 12
 00:00:35,660 --> 00:00:38,880
-ÎÒÃÇ¿ÉÒÔ¸ù¾İµ±Ç°cursorµÄÎ»ÖÃÀ´È·¶¨»ñÈ¡ÊÓÍ¼µÄÀàĞÍ
+æˆ‘ä»¬å¯ä»¥æ ¹æ®å½“å‰cursorçš„ä½ç½®æ¥ç¡®å®šè·å–è§†å›¾çš„ç±»å‹
 we call getItemViewType given the current cursor position.
 
 13
 00:00:38,880 --> 00:00:40,410
-Èç¹ûÊÓÍ¼ÀàĞÍÊÇ½ñÌì
+å¦‚æœè§†å›¾ç±»å‹æ˜¯ä»Šå¤©
 If the view type is today.
 
 14
 00:00:40,410 --> 00:00:42,970
-ÎÒÃÇ¾Í´Ó¹â±ê´¦»ñÈ¡½ñÌìµÄÌìÆøÇé¿ö
+æˆ‘ä»¬å°±ä»å…‰æ ‡å¤„è·å–ä»Šå¤©çš„å¤©æ°”æƒ…å†µ
 Then we get the weather condition code from the cursor.
 
 15
 00:00:42,970 --> 00:00:47,010
-ÎÒÃÇ¾Í´Ó¹â±ê´¦»ñÈ¡½ñÌìµÄÌìÆøÇé¿ö²¢´Ó¸¨Öúº¯ÊıÖĞ»ñÈ¡²ÊÉ«Í¼±êµÄ×ÊÔ´ID
+æˆ‘ä»¬å°±ä»å…‰æ ‡å¤„è·å–ä»Šå¤©çš„å¤©æ°”æƒ…å†µå¹¶ä»è¾…åŠ©å‡½æ•°ä¸­è·å–å½©è‰²å›¾æ ‡çš„èµ„æºID
 Then we get the resource ID for the colored image from the helper method.
 
 16
 00:00:47,010 --> 00:00:48,820
-×îºóÔÚÊÓÍ¼ÖĞ¼ÓÔØ²ÊÉ«Í¼±ê
+æœ€ååœ¨è§†å›¾ä¸­åŠ è½½å½©è‰²å›¾æ ‡
 And then we set that on to the image view.
 
 17
 00:00:48,820 --> 00:00:49,800
-Èç¹ûÊÓÍ¼ÀàĞÍÊÇÎ´À´µÄÄ³Ò»Ìì
+å¦‚æœè§†å›¾ç±»å‹æ˜¯æœªæ¥çš„æŸä¸€å¤©
 If the view type is for
 
 18
 00:00:49,800 --> 00:00:53,740
-Í¬Ñù£¬ÎÒÃÇÏÈ´Ó¹â±ê´¦»ñÈ¡Î´À´µÄÌìÆøÇé¿ö
+åŒæ ·ï¼Œæˆ‘ä»¬å…ˆä»å…‰æ ‡å¤„è·å–æœªæ¥çš„å¤©æ°”æƒ…å†µ
 a future day, then we read the weather condition code from the cursor.
 
 19
 00:00:53,740 --> 00:00:56,900
-½Ó×Å´Ó¸¨Öúº¯ÊıÖĞ»ñÈ¡»ÒÉ«Í¼±êµÄ×ÊÔ´ID
+æ¥ç€ä»è¾…åŠ©å‡½æ•°ä¸­è·å–ç°è‰²å›¾æ ‡çš„èµ„æºID
 Then we pass it into the helper method to get the resource ID for
 
 20
 00:00:56,900 --> 00:01:00,270
-×îÖÕÔÚÊÓÍ¼ÖĞ¼ÓÔØ»ÒÉ«Í¼±ê
+æœ€ç»ˆåœ¨è§†å›¾ä¸­åŠ è½½ç°è‰²å›¾æ ‡
 the gray icon and then we set that on to the image view.
 
 21
 00:01:00,270 --> 00:01:03,290
-Èç¹ûÄãÏÈÇ°Ê¹ÓÃÓ²±àÂëÍ¼ÏñÔÚÊÓÍ¼ÖĞÌí¼ÓÁËÒ»¸öimage
+å¦‚æœä½ å…ˆå‰ä½¿ç”¨ç¡¬ç¼–ç å›¾åƒåœ¨è§†å›¾ä¸­æ·»åŠ äº†ä¸€ä¸ªimage
 If you previously hard coded an image into the layout,
 
 22
 00:01:03,290 --> 00:01:05,160
-ÏÖÔÚÄãÓ¦¸Ã½«ËüÉ¾³ı
+ç°åœ¨ä½ åº”è¯¥å°†å®ƒåˆ é™¤
 then you should remove that value now.
 
 23
 00:01:05,160 --> 00:01:08,590
-·ñÔò£¬ÔÚappÆô¶¯Ê±
-Ëü»áÏÈ¼ÓÔØÍ¼ÏñÕ¼Î»·ûÈ»ºó
+å¦åˆ™ï¼Œåœ¨appå¯åŠ¨æ—¶
+å®ƒä¼šå…ˆåŠ è½½å›¾åƒå ä½ç¬¦ç„¶å
 Otherwise on app launch, it will load up the placeholder image and
 
 24
 00:01:08,590 --> 00:01:10,280
-Ìø³öµ±Ç°Í¼±ê
+è·³å‡ºå½“å‰å›¾æ ‡
 then flash to the actual icon.
 
 25
 00:01:11,320 --> 00:01:12,950
-¼ÈÈ»ÊÖ»úÓÃ»§½çÃæµÄµÄ¿ò¼ÜÒÑ¾­ºÜÍêÉÆÁË
+æ—¢ç„¶æ‰‹æœºç”¨æˆ·ç•Œé¢çš„çš„æ¡†æ¶å·²ç»å¾ˆå®Œå–„äº†
 Now that the wire frame implementation for
 
 26
 00:01:12,950 --> 00:01:16,350
-ÈÃÎÒÃÇÀ´¿´¿´Æ½°åµÄÓÃ»§½çÃæ
+è®©æˆ‘ä»¬æ¥çœ‹çœ‹å¹³æ¿çš„ç”¨æˆ·ç•Œé¢
 the phone UI is pretty much complete, let's look at the tablet UI.

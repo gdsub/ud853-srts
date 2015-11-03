@@ -1,104 +1,104 @@
 1
 00:00:00,190 --> 00:00:03,850
-ÄãÒÑ¾­µÈ²»¼°ÁËÒªÔËĞĞÓ¦ÓÃÁË°É  ÏÖÔÚ¾ÍÈÃÎÒÃÇµã»÷ÂÌÉ«µÄÔËĞĞ°´Å¥
+ä½ å·²ç»ç­‰ä¸åŠäº†è¦è¿è¡Œåº”ç”¨äº†å§  ç°åœ¨å°±è®©æˆ‘ä»¬ç‚¹å‡»ç»¿è‰²çš„è¿è¡ŒæŒ‰é’®
 And now for the moment you've been waiting for, let's hit this green Run button.
 
 2
 00:00:03,850 --> 00:00:06,800
-È»ºó»áµ¯³öÑ¡ÔñÔËĞĞÉè±¸µÄ¶Ô»°¿ò  Èç¹ûÊÖÍ·Ã»ÓĞÕæ»ú
+ç„¶åä¼šå¼¹å‡ºé€‰æ‹©è¿è¡Œè®¾å¤‡çš„å¯¹è¯æ¡†  å¦‚æœæ‰‹å¤´æ²¡æœ‰çœŸæœº
 It will prompt us to choose a device, without a physical device we
 
 3
 00:00:06,800 --> 00:00:10,700
-ÎÒÃÇ¿ÉÒÔÑ¡ÔñAndroid SDK×Ô´øµÄÄ£ÄâÆ÷
+æˆ‘ä»¬å¯ä»¥é€‰æ‹©Android SDKè‡ªå¸¦çš„æ¨¡æ‹Ÿå™¨
 can test the app using the emulator that comes with the Android SDK.
 
 4
 00:00:10,700 --> 00:00:13,640
-ÔÚÅäÖÃAndroid StudioÊ±
+åœ¨é…ç½®Android Studioæ—¶
 An Android virtual device should have already been created for
 
 5
 00:00:13,640 --> 00:00:16,290
-AVD(AndroidĞéÄâÄ£ÄâÆ÷)Ó¦¸ÃÒÑ¾­×Ô¶¯´´½¨Íê³ÉÁË
+AVD(Androidè™šæ‹Ÿæ¨¡æ‹Ÿå™¨)åº”è¯¥å·²ç»è‡ªåŠ¨åˆ›å»ºå®Œæˆäº†
 you automatically when you set up Android Studio.
 
 6
 00:00:16,290 --> 00:00:19,010
-ÄãÖ»ĞèÒªµã»÷OK°´Å¥¼´¿É
+ä½ åªéœ€è¦ç‚¹å‡»OKæŒ‰é’®å³å¯
 So you can go ahead and click OK.
 
 7
 00:00:19,010 --> 00:00:21,170
-ÀûÓÃÄ£ÄâÆ÷Æô¶¯ÆğÀ´µÄÕâ¶ÎÊ±¼ä
+åˆ©ç”¨æ¨¡æ‹Ÿå™¨å¯åŠ¨èµ·æ¥çš„è¿™æ®µæ—¶é—´
 While the emulator's booting up,
 
 8
 00:00:21,170 --> 00:00:24,130
-Ë³±ãËµÒ»ÏÂ  Èç¹ûÄãÏëĞŞ¸ÄÄãµÄÄ£ÄâÆ÷
+é¡ºä¾¿è¯´ä¸€ä¸‹  å¦‚æœä½ æƒ³ä¿®æ”¹ä½ çš„æ¨¡æ‹Ÿå™¨
 I want to point out that if you ever want to modify your emulator devices,
 
 9
 00:00:24,130 --> 00:00:28,140
-¿ÉÒÔµã»÷Õâ¸ö´øÓĞÒ»¸ö×ÏÉ«Éè±¸ºÍÒ»¸öAndroidĞ¡ÈËµÄ°´Å¥
+å¯ä»¥ç‚¹å‡»è¿™ä¸ªå¸¦æœ‰ä¸€ä¸ªç´«è‰²è®¾å¤‡å’Œä¸€ä¸ªAndroidå°äººçš„æŒ‰é’®
 you can click on this button with the purple device and the Android, and
 
 10
 00:00:28,140 --> 00:00:31,520
-´ò¿ªAVD managerÀ´¹ÜÀíÄãµÄAndroidĞéÄâÉè±¸
+æ‰“å¼€AVD manageræ¥ç®¡ç†ä½ çš„Androidè™šæ‹Ÿè®¾å¤‡
 open up the AVD manager to manage your Android virtual devices.
 
 11
 00:00:31,520 --> 00:00:34,210
-Ëü»áÁĞ³öÒÑ´´½¨µÄÉè±¸
+å®ƒä¼šåˆ—å‡ºå·²åˆ›å»ºçš„è®¾å¤‡
 It lists out your existing devices, and
 
 12
 00:00:34,210 --> 00:00:36,600
-µ±È»ÄãÒ²¿ÉÒÔ´´½¨ĞÂµÄĞéÄâÉè±¸
+å½“ç„¶ä½ ä¹Ÿå¯ä»¥åˆ›å»ºæ–°çš„è™šæ‹Ÿè®¾å¤‡
 you can always create another virtual device.
 
 13
 00:00:36,600 --> 00:00:40,660
-¿ÉÒÔÑ¡ÔñÆ½Ì¨ÖÖÀà  Éè±¸ĞÍºÅ
+å¯ä»¥é€‰æ‹©å¹³å°ç§ç±»  è®¾å¤‡å‹å·
 You can select the category of device and then a specific device.
 
 14
 00:00:40,660 --> 00:00:44,530
-ºÍ´îÔØµÄAndroidÏµÍ³°æ±¾
+å’Œæ­è½½çš„Androidç³»ç»Ÿç‰ˆæœ¬
 Then you choose which platform version it should be running on.
 
 15
 00:00:44,530 --> 00:00:48,010
-¿É¿´µ½  Ä¿Ç°ÕâÌ¨µçÄÔÖ»ÏÂÔØÁËLollipop°æ±¾µÄAndroidÏµÍ³
+å¯çœ‹åˆ°  ç›®å‰è¿™å°ç”µè„‘åªä¸‹è½½äº†Lollipopç‰ˆæœ¬çš„Androidç³»ç»Ÿ
 And this is the only one that's available on this computer now.
 
 16
 00:00:48,010 --> 00:00:52,830
-Ñ¡ÔñLollipopÖ®ºó»¹Ó¦¸ÃÑ¡ÔñGoogle APIÀ´´´½¨Target
+é€‰æ‹©Lollipopä¹‹åè¿˜åº”è¯¥é€‰æ‹©Google APIæ¥åˆ›å»ºTarget
 So Lollipop is good, and we choose the Google API's target, because it
 
 17
 00:00:52,830 --> 00:00:56,810
-¿ÉÒÔÊ¹Ä£ÄâÆ÷ÌáÇ°Ô¤×°Google·şÎñ
+å¯ä»¥ä½¿æ¨¡æ‹Ÿå™¨æå‰é¢„è£…GoogleæœåŠ¡
 will include some Google services already pre-installed on the emulator.
 
 18
 00:00:56,810 --> 00:00:57,890
-Ö®ºóµã»÷Next°´Å¥
+ä¹‹åç‚¹å‡»NextæŒ‰é’®
 You can choose Next.
 
 19
 00:00:57,890 --> 00:01:02,230
-ÕâÀïÓĞºÜ¶àÑ¡ÏîºÍ²ÎÊıÉèÖÃ
+è¿™é‡Œæœ‰å¾ˆå¤šé€‰é¡¹å’Œå‚æ•°è®¾ç½®
 There's a couple more options and settings that you can modify, for example,
 
 20
 00:01:02,230 --> 00:01:06,990
-±ÈÈçÄã¿ÉÄÜĞèÒªÒ»¸öSD¿¨»òÕßÒ»¸öÉãÏñÍ·  ¶¼¿ÉÒÔÔÚÕâÀïÑ¡Ôñ
+æ¯”å¦‚ä½ å¯èƒ½éœ€è¦ä¸€ä¸ªSDå¡æˆ–è€…ä¸€ä¸ªæ‘„åƒå¤´  éƒ½å¯ä»¥åœ¨è¿™é‡Œé€‰æ‹©
 if you want an SD card, or a camera you can change those here, and
 
 21
 00:01:06,990 --> 00:01:10,420
-ÏÂÒ»²½µã»÷Finish  ¾Í´´½¨ºÃÁËÒ»¸öĞÂµÄAVDÁË
+ä¸‹ä¸€æ­¥ç‚¹å‡»Finish  å°±åˆ›å»ºå¥½äº†ä¸€ä¸ªæ–°çš„AVDäº†
 then you can go ahead and click Finish, and it'll create a new AVD for you.

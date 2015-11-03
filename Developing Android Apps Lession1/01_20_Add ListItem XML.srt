@@ -1,40 +1,40 @@
 1
 00:00:00,100 --> 00:00:04,814
-�ǳ�����  ллDan  �������Ѿ���������һ��UIר��
+非常完美  谢谢Dan  现在他已经把你变成了一个UI专家
 Perfect, thanks Dan. Since he's turned you into a UI expert now, where should we
 
 2
 00:00:04,814 --> 00:00:09,010
-����Ӧ�������ﶨ������б���Ŀ��Layout��
+我们应该在哪里定义这个列表项目的Layout？
 define this list item layout? If you're thinking the layout folder,
 
 3
 00:00:09,010 --> 00:00:13,510
-�������Ϊ����resourcesĿ¼�µ�layoutĿ¼��  ��ô������ȷ��
+如果你认为是在resources目录下的layout目录下  那么你是正确的
 under the resources directory, then you are correct. Here you can create a new
 
 4
 00:00:13,510 --> 00:00:18,375
-����������Դ���һ���µ�layout resource�ļ�����List item forecast
+在这里你可以创建一个新的layout resource文件叫做List item forecast
 layout resource file called list item forecast. Inside that file,
 
 5
 00:00:18,375 --> 00:00:23,570
-���Ǹ��ļ���  ����һ���ı���ͼ��Ϊ����ͼ  Ȼ���List item forecast��ͼָ��һ��ID
+在那个文件内  定义一个文本视图作为根视图  然后给List item forecast视图指定一个ID
 define a text view as the root view, then assign it an ID list item forecast
 
 6
 00:00:23,570 --> 00:00:27,870
-����һ����С�ĸ߶�  ʹ��List item�������Ƚ�����
+给它一个最小的高度  使得List item按起来比较容易
 text view. Give it a minimum height, so that the list item isn't too short for
 
 7
 00:00:27,870 --> 00:00:32,150
-����ʹ������ı������Ĵ�ֱ
+并且使里面的文本项中心垂直
 tapping on and vertically center the text within that item. Go ahead and
 
 8
 00:00:32,150 --> 00:00:34,730
-�����������Լ���һ��  ������ɵ�ʱ��ѡ�˸�ѡ��
+现在来尝试自己做一遍  当你完成的时候勾选此复选框
 try it yourself now. And check the box when you're done.
 

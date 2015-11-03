@@ -1,107 +1,107 @@
 1
 00:00:01,010 --> 00:00:02,969
-ºÃµÄ ÄãÒÑ¾­×öºÃÁË
+å¥½çš„ ä½ å·²ç»åšå¥½äº†
 All right, you're done.
 
 2
 00:00:02,969 --> 00:00:04,220
-ÈÃÎÒÃÇ¿´Ò»ÏÂ´ğ°¸
+è®©æˆ‘ä»¬çœ‹ä¸€ä¸‹ç­”æ¡ˆ
 Let's take a look at the solution.
 
 3
 00:00:05,720 --> 00:00:08,002
-¾ÍÏñÎÒÃÇµÄcontent providerÖĞµÄ²âÊÔ
+å°±åƒæˆ‘ä»¬çš„content providerä¸­çš„æµ‹è¯•
 Just like in our content provider test,
 
 4
 00:00:08,002 --> 00:00:13,580
-ÎÒÃÇÊ¹ÓÃgetContentResolver·½·¨À´¸ù¾İCONTENT_URI½øĞĞ²éÑ¯
+æˆ‘ä»¬ä½¿ç”¨getContentResolveræ–¹æ³•æ¥æ ¹æ®CONTENT_URIè¿›è¡ŒæŸ¥è¯¢
 we can use get content resolver to
 query based upon the content URI.
 
 5
 00:00:13,580 --> 00:00:17,180
-¼Ç×¡ Ä¬ÈÏµÄÎ»ÖÃÊµÌåµÄCONTENT_URI
+è®°ä½ é»˜è®¤çš„ä½ç½®å®ä½“çš„CONTENT_URI
 Remember, that the default
 location entry content URI
 
 6
 00:00:17,180 --> 00:00:20,160
-»á´«µİËùÓĞµÄ²ÎÊıµ½Êı¾İ¿â
+ä¼šä¼ é€’æ‰€æœ‰çš„å‚æ•°åˆ°æ•°æ®åº“
 just passes all of the parameters
 into the database.
 
 7
 00:00:20,160 --> 00:00:24,190
-Òò´Ë ÎÒÃÇ¿ÉÒÔÈİÒ×µÄ¹¹½¨Ò»¸ö°üº¬Ö¸¶¨Î»ÖÃµÄ²éÑ¯
+å› æ­¤ æˆ‘ä»¬å¯ä»¥å®¹æ˜“çš„æ„å»ºä¸€ä¸ªåŒ…å«æŒ‡å®šä½ç½®çš„æŸ¥è¯¢
 So, we can easily construct a query
 containing the location query
 
 8
 00:00:24,190 --> 00:00:26,230
-À´¿´¿´Õâ¸öÎ»ÖÃÊÇ·ñÒÑ¾­ÔÚÊı¾İ¿âÖĞ
+æ¥çœ‹çœ‹è¿™ä¸ªä½ç½®æ˜¯å¦å·²ç»åœ¨æ•°æ®åº“ä¸­
 to see if it is in the database yet.
 
 9
 00:00:26,230 --> 00:00:30,010
-¼Ç×¡ Ä¬ÈÏµÄÎ»ÖÃÊµÌåCONTENT_URI
+è®°ä½ é»˜è®¤çš„ä½ç½®å®ä½“CONTENT_URI
 Remember that the default
 location entry content URI
 
 10
 00:00:30,010 --> 00:00:34,320
-´«µİËùÓĞµÄ²ÎÊıµ½Êı¾İ¿â Òò´ËÎÒÃÇ¿ÉÒÔÈİÒ×µÄ¹¹½¨
+ä¼ é€’æ‰€æœ‰çš„å‚æ•°åˆ°æ•°æ®åº“ å› æ­¤æˆ‘ä»¬å¯ä»¥å®¹æ˜“çš„æ„å»º
 passes all of the parameters into
 the database, so we can easily construct
 
 11
 00:00:34,320 --> 00:00:38,310
-ÈİÒ×µÄ¹¹½¨Ò»¸ö°üº¬Ö¸¶¨Î»ÖÃµÄ²éÑ¯ À´¿´¿´Õâ¸öÎ»ÖÃÊÇ·ñÒÑ¾­ÔÚÊı¾İ¿âÖĞ
+å®¹æ˜“çš„æ„å»ºä¸€ä¸ªåŒ…å«æŒ‡å®šä½ç½®çš„æŸ¥è¯¢ æ¥çœ‹çœ‹è¿™ä¸ªä½ç½®æ˜¯å¦å·²ç»åœ¨æ•°æ®åº“ä¸­
 a query containing the location setting
 to see if it is in the database yet.
 
 12
 00:00:38,310 --> 00:00:41,240
-Èç¹û²»ÔÚ Õâ¸ö²éÑ¯»á·µ»ØÒ»¸ö¿ÕµÄ¼¯ºÏ(cursor)
+å¦‚æœä¸åœ¨ è¿™ä¸ªæŸ¥è¯¢ä¼šè¿”å›ä¸€ä¸ªç©ºçš„é›†åˆ(cursor)
 If it's not,
 then the query will return an empty set.
 
 13
 00:00:41,240 --> 00:00:45,060
-È»ºóÎÒÃÇÓ¦¸Ã²åÈëĞÂµÄcityName Î»ÖÃÉèÖÃ ºÍ
+ç„¶åæˆ‘ä»¬åº”è¯¥æ’å…¥æ–°çš„cityName ä½ç½®è®¾ç½® å’Œ
 And we should insert the new city name,
 location setting, and
 
 14
 00:00:45,060 --> 00:00:46,870
-×ø±ê
+åæ ‡
 coordinates together.
 
 15
 00:00:46,870 --> 00:00:50,810
-×¢Òâ ÎÒÃÇ½«»áµ÷ÓÃaddLocation·½·¨ ´ÓTaskµÄ doInBackground·½·¨ÖĞ
+æ³¨æ„ æˆ‘ä»¬å°†ä¼šè°ƒç”¨addLocationæ–¹æ³• ä»Taskçš„ doInBackgroundæ–¹æ³•ä¸­
 Note that we're calling that ad location
 method, from inside doing background.
 
 16
 00:00:50,810 --> 00:00:53,730
-µ÷ÓÃgetWeatherDataFromJson·½·¨
+è°ƒç”¨getWeatherDataFromJsonæ–¹æ³•
 Which calls getWeatherDataFromJson.
 
 17
 00:00:53,730 --> 00:00:56,950
-ÎÒÃÇÒÑ¾­È¡Ïû×¢ÊÍÁËtestAddLocation·½·¨
+æˆ‘ä»¬å·²ç»å–æ¶ˆæ³¨é‡Šäº†testAddLocationæ–¹æ³•
 We've uncommented out the test
 ad location function.
 
 18
 00:00:56,950 --> 00:01:00,520
-ÏÖÔÚÎÒÃÇÔËĞĞ²âÊÔ²¢ÇÒ²âÊÔ¶¼Í¨¹ıÁË
+ç°åœ¨æˆ‘ä»¬è¿è¡Œæµ‹è¯•å¹¶ä¸”æµ‹è¯•éƒ½é€šè¿‡äº†
 Now, we'll run our tests,
 and our tests all pass.
 
 19
 00:01:00,520 --> 00:01:02,070
-ÎÒÃÇÒÑ¾­ÎªÏÂÒ»²½×öºÃÁË×¼±¸
+æˆ‘ä»¬å·²ç»ä¸ºä¸‹ä¸€æ­¥åšå¥½äº†å‡†å¤‡
 We're ready to move on to the next step.
 

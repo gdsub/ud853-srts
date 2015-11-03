@@ -1,75 +1,75 @@
 1
 00:00:00,900 --> 00:00:04,400
-Äã¿ÉÄÜ×¢Òâµ½ÁË  µ±ÄãÔÚÓ¦ÓÃÖ®¼äÇĞ»»µÄÊ±ºò
+ä½ å¯èƒ½æ³¨æ„åˆ°äº†  å½“ä½ åœ¨åº”ç”¨ä¹‹é—´åˆ‡æ¢çš„æ—¶å€™
 As you are moving around between apps, you probably notice that from a user
 
 2
 00:00:04,400 --> 00:00:08,670
-Android²¢²»»áÈÃÓÃ»§¸Ğ¾õµ½Ó¦ÓÃ×´Ì¬µÄ±ä»¯  Android²»»áÍ¨ÖªÓÃ»§
+Androidå¹¶ä¸ä¼šè®©ç”¨æˆ·æ„Ÿè§‰åˆ°åº”ç”¨çŠ¶æ€çš„å˜åŒ–  Androidä¸ä¼šé€šçŸ¥ç”¨æˆ·
 perspective, Android doesn't announce changes in app state. It doesn't announce,
 
 3
 00:00:08,670 --> 00:00:12,890
-ÏÖÔÚÄÚ´æ²»×ã  ²¢ÒªÇóÓÃ»§¹Ø±ÕÓ¦ÓÃÒÔÊÍ·ÅÒ»Ğ©ÄÚ´æ
+ç°åœ¨å†…å­˜ä¸è¶³  å¹¶è¦æ±‚ç”¨æˆ·å…³é—­åº”ç”¨ä»¥é‡Šæ”¾ä¸€äº›å†…å­˜
 that it's low in memory or ask users to close apps, to free up resources. In
 
 4
 00:00:12,890 --> 00:00:17,010
-ÊÂÊµÉÏ  µ±Éè±¸µÄ×ÊÔ´²»×ãÊ±  Android×Ô¼ºÍê³ÉÁËËùÓĞµÄËùĞèµÄ²Ù×÷
+äº‹å®ä¸Š  å½“è®¾å¤‡çš„èµ„æºä¸è¶³æ—¶  Androidè‡ªå·±å®Œæˆäº†æ‰€æœ‰çš„æ‰€éœ€çš„æ“ä½œ
 fact, it does everything it can, to make the resource limitation to the device,
 
 5
 00:00:17,010 --> 00:00:21,800
-¶øÕâĞ©²Ù×÷¶ÔÓÃ»§ÊÇÍ¸Ã÷µÄ  ÕâÒâÎ¶×Å  ÎªÁËÊ¹Ç°Ì¨µÄÓ¦ÓÃÕı³£ÔËĞĞ
+è€Œè¿™äº›æ“ä½œå¯¹ç”¨æˆ·æ˜¯é€æ˜çš„  è¿™æ„å‘³ç€  ä¸ºäº†ä½¿å‰å°çš„åº”ç”¨æ­£å¸¸è¿è¡Œ
 invisible to the user. That means keeping the foreground app running smoothly,
 
 6
 00:00:21,800 --> 00:00:25,100
-²¢ÇÒÄÜÔÚ¸÷¸öÓ¦ÓÃÖ®¼äÎŞ·ìµÄÇĞ»»  µ±·¢Éú×ÊÔ´²»×ãÊ±
+å¹¶ä¸”èƒ½åœ¨å„ä¸ªåº”ç”¨ä¹‹é—´æ— ç¼çš„åˆ‡æ¢  å½“å‘ç”Ÿèµ„æºä¸è¶³æ—¶
 and switching between apps seamless, and that means killing apps in
 
 7
 00:00:25,100 --> 00:00:30,420
-Android»áÉ±µôºóÌ¨µÄÓ¦ÓÃ
+Androidä¼šæ€æ‰åå°çš„åº”ç”¨
 the background. And it does that if it
 
 8
 00:00:30,420 --> 00:00:34,690
-À´ÊÍ·ÅËûÃÇËùÕ¼ÓÃµÄ×ÊÔ´¸øÇ°Ì¨Ó¦ÓÃ
+æ¥é‡Šæ”¾ä»–ä»¬æ‰€å ç”¨çš„èµ„æºç»™å‰å°åº”ç”¨
 needs their resources to make sure that the foreground apps can continue to run.
 
 9
 00:00:34,690 --> 00:00:38,080
-ËùÒÔ  µ±ÄãµÄÓ¦ÓÃ²»¿É¼ûÊ±
+æ‰€ä»¥  å½“ä½ çš„åº”ç”¨ä¸å¯è§æ—¶
 So we know that as soon as your app isn't visible, its lifetime is as
 
 10
 00:00:38,080 --> 00:00:41,810
-ËüµÄÉúÃüÖÜÆÚËæÊ±¶¼¿ÉÄÜ±»ÏµÍ³ÏûÎŞÉùÏ¢µÄÖÕ½á
+å®ƒçš„ç”Ÿå‘½å‘¨æœŸéšæ—¶éƒ½å¯èƒ½è¢«ç³»ç»Ÿæ¶ˆæ— å£°æ¯çš„ç»ˆç»“
 perilous as that of a Stark at the Red Wedding. Likely to die without notice,
 
 11
 00:00:41,810 --> 00:00:46,670
-Ò²ËæÊ±×¼±¸×Å»Øµ½Ç°Ì¨ÖØĞÂ»îÔ¾
+ä¹Ÿéšæ—¶å‡†å¤‡ç€å›åˆ°å‰å°é‡æ–°æ´»è·ƒ
 but ready to return from the dead. That tells us some very important things
 
 12
 00:00:46,670 --> 00:00:50,140
-ÕâĞ©¸æËßÎÒÃÇÈçºÎÊ¹ÎÒÃÇµÄÓ¦ÓÃºÜºÃµÄÊÊÓ¦AndroidÏµÍ³  ²¢ÇÒ¸øÓÃ»§Ìá¹©Á¼ºÃµÄÌåÑé
+è¿™äº›å‘Šè¯‰æˆ‘ä»¬å¦‚ä½•ä½¿æˆ‘ä»¬çš„åº”ç”¨å¾ˆå¥½çš„é€‚åº”Androidç³»ç»Ÿ  å¹¶ä¸”ç»™ç”¨æˆ·æä¾›è‰¯å¥½çš„ä½“éªŒ
 about how our app should behave to be good citizens and provide a great user
 
 13
 00:00:50,140 --> 00:00:54,600
-´ÓÏµÍ³µÄ½Ç¶ÈÀ´¿´  ´¦ÓÚÔİÍ£ºÍÍ£Ö¹µÄÓ¦ÓÃ
+ä»ç³»ç»Ÿçš„è§’åº¦æ¥çœ‹  å¤„äºæš‚åœå’Œåœæ­¢çš„åº”ç”¨
 experience. From a system perspective, on pause and on stop are signals that our
 
 14
 00:00:54,600 --> 00:00:57,990
-ËæÊ±¶¼¿ÉÒÔ±»ÖÕÖ¹  ËùÒÔÎÒÃÇ±ØĞëÒªÔÚ½øÈëÕâĞ©×´Ì¬Ê±  °´ÕÕË³Ğò×÷±ØÒªµÄ°şÀë¹¤×÷
+éšæ—¶éƒ½å¯ä»¥è¢«ç»ˆæ­¢  æ‰€ä»¥æˆ‘ä»¬å¿…é¡»è¦åœ¨è¿›å…¥è¿™äº›çŠ¶æ€æ—¶  æŒ‰ç…§é¡ºåºä½œå¿…è¦çš„å‰¥ç¦»å·¥ä½œ
 app may be killed eminently. So we need to clean up any resources that
 
 15
 00:00:57,990 --> 00:01:01,990
-ÀıÈç¹Ø±Õ´ò¿ªµÄÁ¬½Ó»òÌ×½Ó×Ö
+ä¾‹å¦‚å…³é—­æ‰“å¼€çš„è¿æ¥æˆ–å¥—æ¥å­—
 need an orderly tear down such as closing any open connections or sockets.
 
