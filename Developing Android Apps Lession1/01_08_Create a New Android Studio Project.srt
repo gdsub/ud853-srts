@@ -164,10 +164,11 @@ to the latest version of Android.
 
 34
 00:01:29,590 --> 00:01:30,850
-不过了解到最小SDK和目标SDK的差别仍然很重要
+不过即使已经为你选好了
 Even though it's already selected for
 
 35
 00:01:30,850 --> 00:01:34,480
-即使已经为你选好了
+了解到最小SDK和目标SDK的差别仍然很重要
 you, it's important to know the distinction between minimum and target SDK.
+
