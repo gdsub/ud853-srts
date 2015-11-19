@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,440 --> 00:00:03,310
 我们的应用有设置界面但是没有设置选项
 We have our settings screen but no settings.
@@ -55,17 +55,17 @@ Right-click on the res folder, go to new Android resource directory and
 
 12
 00:00:36,680 --> 00:00:39,210
-接着输入XML 作为目录的名字
-then type in XML as the name of the directory.
+接着输入 xml 作为目录的名字
+then type in xml as the name of the directory.
 
 13
 00:00:40,220 --> 00:00:42,905
-对于Resource Type(资源类型)你可以选择XML，然后点击OK
-For resource type you can use XML and then hit OK.
+对于Resource Type(资源类型)你可以选择xml，然后点击OK
+For resource type you can use xml and then hit OK.
 
 14
 00:00:44,250 --> 00:00:49,490
-在这个文件夹下，我们点击右键创建一个新的XML资源文件
+在这个文件夹下，我们点击右键创建一个新的XML resource file
 Inside this folder, we right-click to create a new XML resource file.
 
 15
@@ -75,7 +75,7 @@ We call it pref_general,
 
 16
 00:00:50,650 --> 00:00:54,990
-Root element就是PreferenceScreen，就像我们在开发者这边看到的一样
+Root element就是PreferenceScreen，就像我们在开发者网站上看到的一样
 and the root element is a preference screen as we saw on the developer's site.
 
 17
@@ -85,17 +85,17 @@ And then our preferences file is created.
 
 18
 00:00:57,020 --> 00:00:58,980
-然后增添我们的地址首选项
+然后增添我们的地理位置preference
 Then add the location preference.
 
 19
 00:00:58,980 --> 00:01:03,420
-由于线框里面需要显示一个可用来输入用户地理位置的字符串
+由于线框设计稿里 需要弹出一个可编辑文本对话框 来让用户输入代表地理位置的字符串
 Since the wireframes showed an editable text field to input user location as
 
 20
 00:01:03,420 --> 00:01:06,318
-我们将使用EditTextPreference来进行编码
+我们将使用一个EditTextPreference
 a string, we make this an EditTextPreference.
 
 21
@@ -115,7 +115,7 @@ First we specify a title for
 
 24
 00:01:14,890 --> 00:01:18,230
-将用是这个preference向用户展示的标签
+这将用作这个preference向用户展示的标签
 the preference which will be the label that's displayed to the user.
 
 25
@@ -130,17 +130,17 @@ And this key is actually the key value in SharedPreferences.
 
 27
 00:01:25,690 --> 00:01:29,610
-回到代码中，我们增加了一些属性，用来描述一些在线框中显示的
+回到代码中，我们增加了一些属性，用来设定一些在对话框中EditText控件里显示的提示文字
 Going back to the code, we also add these attributes to describe the Edit Text
 
 28
 00:01:29,610 --> 00:01:32,780
-对话框中的EditText
+就像我们在线框设计稿中看到的一样
 field in the pop up dialog that was shown in the wire frames.
 
 29
 00:01:34,120 --> 00:01:38,440
-在代码中，我们也可以编辑 Edit Text field 的属性
+在代码中，我们也可以编辑EditText控件的其它属性
 Going back to the code, we can also configure properties of the Edit Text field.
 
 30
@@ -170,27 +170,27 @@ This is the name of the label of the preference.
 
 35
 00:01:54,520 --> 00:01:58,390
-这是用户可见的，为了转义我们增加了字符限制
+这是用户可见的，为了适配多语言翻译我们增加了字符限制（CHAR_LIMIT)
 It's user-visible, so we add a char limit for translation purposes.
 
 36
 00:01:58,390 --> 00:02:02,840
-你也可以指定那个在Sharepreferences中被命名为location的key
+你也可以自定义那个在Sharepreferences中被命名为location的key
 You also specify location which is the name of the key in Shared Preferences.
 
 37
 00:02:02,840 --> 00:02:05,730
-我们并不翻译它因为我们经常通过这个名字
+但我们并不翻译它因为我们总是需要通过这个名字来
 We don't want to translate it because we always want to find the key based
 
 38
 00:02:05,730 --> 00:02:07,060
-寻找 key
+定位 key
 on this name.
 
 39
 00:02:07,060 --> 00:02:10,169
-我们也可以指定一个常量作为默认的location
+我们也可以指定一个常量作为默认的地理位置
 We also specify a constant for the default location.
 
 40
