@@ -1,11 +1,11 @@
-﻿1
+1
 00:00:00,300 --> 00:00:03,360
-解决方案就是为DetailActivity类发送一个
+解决方案就是发送一个显式声明的Intent
 The solution is to lauch an explicit intent to
 
 2
 00:00:03,360 --> 00:00:07,750
-显式声明的Intent。我们先转到onCreateView,
+往DetailActivity类。我们先转到onCreateView,
 the Detail Activity Class. We'll go to On Create View,
 
 3
