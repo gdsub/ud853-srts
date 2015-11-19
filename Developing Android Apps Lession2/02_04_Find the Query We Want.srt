@@ -3,6 +3,7 @@
 Now, we should be able to find the most
 appropriate URL that our app should use.
 现在，我们应该能够找到我们APP应该使用的最适合的URL。
+
 2
 00:00:04,780 --> 00:00:07,780
 Based on the UX wireframes
@@ -38,31 +39,37 @@ code for your own location.
 Or you can use city name or
 latitude, longitude coordinates.
 或者你能使用城市名或经度纬度。
+
 8
 00:00:28,890 --> 00:00:31,580
 If it doesn't find your
 location based on postal code.
 如果基于邮政编码不能找到你的地点。
+
 9
 00:00:31,580 --> 00:00:34,720
 Try using postal code followed by
 a comma, followed by the country code.
 试着在邮政编码后面加一个逗号，再跟上城市。
+
 10
 00:00:34,720 --> 00:00:37,670
 See the discussion forum for
 more examples.
 请看在讨论区中的更多的例子。
+
 11
 00:00:37,670 --> 00:00:40,930
 Next, we want the response from
 the server to be in JSON format.
 接下去，我们想要从服务器中返回JSON格式的响应。
+
 12
 00:00:40,930 --> 00:00:44,600
 And we also want the temperatures
 to be reported in metric units.
 并且我我们也想要以公制单位输出温度。
+
 13
 00:00:44,600 --> 00:00:47,410
 We choose metric for
@@ -74,11 +81,13 @@ doing the query, but our UI will be
 able to displace celsius or
 fahrenheit based ion user preferences.
 能够使用摄氏度或华氏度基于用户的配置。
+
 15
 00:00:50,815 --> 00:00:53,330
 Wnd we'll just do
 the conversion ourselves.
 我们将自己做出换算。
+
 16
 00:00:53,330 --> 00:00:56,230
 Enter the URL in the box that
