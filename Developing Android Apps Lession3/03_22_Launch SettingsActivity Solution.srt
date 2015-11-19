@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,290 --> 00:00:03,118
 为了启动SettingsActivity，我们将修改
 In order to launch the SettingsActivity, we modify
@@ -25,8 +25,8 @@ We call startActivity, to launch this intent.
 
 6
 00:00:16,700 --> 00:00:19,290
-我们并没有调用startActivity来获取一个返回值，因为我们
-We don't call startActivity for result because we're
+我们并没有调用startActivityForResult，因为我们
+We don't call startActivityForResult because we're
 
 7
 00:00:19,290 --> 00:00:22,640
