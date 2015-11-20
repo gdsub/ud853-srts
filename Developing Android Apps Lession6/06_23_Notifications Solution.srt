@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,310 --> 00:00:05,160
 好吧,你完成了。虽然以后还有很多新事情
 All right, you're done. There were a lot of new things that time. But, afterall,

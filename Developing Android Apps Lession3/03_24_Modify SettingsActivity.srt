@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,410 --> 00:00:02,650
 为了使得 preference 显示在手机上，我们
 To make the preferences appear on the phone, we

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,500 --> 00:00:04,390
 The URL that we built looks good, and the JSON string from the server,
 我们构建的URL看起来很好，并且从服务器返回的JSON数据也看起来不错，

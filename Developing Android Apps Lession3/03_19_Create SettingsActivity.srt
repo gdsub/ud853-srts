@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,090 --> 00:00:02,990
 我们要充分利用framework(框架)为我们提供的条件来创建我们的
 We'll take advantage of what the framework offers in order to build our

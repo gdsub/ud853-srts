@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,120 --> 00:00:03,760
 下面介绍构建Sunshine方式变化的概况
 Here's an overview of the changes we're going to be making to Sunshine.

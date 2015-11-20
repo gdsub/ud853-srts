@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,310 --> 00:00:03,400
 外键约束保证了表之间的链接
 The foreign key constraint keeps the link between the tables

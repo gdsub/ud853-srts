@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,260 --> 00:00:03,510
 通常当我们谈论数据传输效率的时候，我们总是在谈论
 Typically when we talk about data transfer efficiency, we're talking

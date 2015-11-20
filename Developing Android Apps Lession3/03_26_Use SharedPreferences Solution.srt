@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,650 --> 00:00:04,600
 在ForecastFragment中，当刷新菜单项被选中的时候，
 Within the forecast fragment class, when the refresh menu item is selected,

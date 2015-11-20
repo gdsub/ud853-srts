@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,360 --> 00:00:03,420
 我们来看看设置界面画的线框图
 Let's go through the wire frames for the settings UI.

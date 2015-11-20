@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,810 --> 00:00:02,940
 现在  你已经看到为天气表创建的WeatherEntry类
 Now, that you've seen the WeatherEntry class for

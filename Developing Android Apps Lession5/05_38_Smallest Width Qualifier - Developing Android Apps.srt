@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,090 --> 00:00:02,130
 我们已经讲过几次，把sw写在
 We mentioned this several times. Put the SW in

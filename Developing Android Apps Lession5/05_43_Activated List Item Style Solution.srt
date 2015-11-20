@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,150 --> 00:00:03,240
 通过这个文档，我们需要的是单选模式
 From the documentation, we want singleChoice, mode so

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,160 --> 00:00:03,460
 首先我们来创建SettingsActivity组件  这些就是我们根据要点写出的代码
 First, we create our SettingsActivity, and this is the code that we got

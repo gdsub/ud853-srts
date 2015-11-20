@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,560 --> 00:00:03,240
 从一个Activity移动到另一个Activity
 To move from one activity. In this case,

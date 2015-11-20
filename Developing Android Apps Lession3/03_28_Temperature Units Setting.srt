@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,260 --> 00:00:03,070
 现在轮到你来创建温度单位的设定。这
 Now its your turn to build the temperature unit setting. This

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,290 --> 00:00:03,790
 在forecastFragment里，我们创建一个位置变量，一旦
 In the forecast fragment, we create a position variable. Whenever an item

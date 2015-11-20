@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,450 --> 00:00:03,660
 在fragment_detail布局中，已经定义了一个TextView
 In the fragment detailed layout, a text view

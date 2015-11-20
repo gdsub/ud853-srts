@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,380 --> 00:00:02,190
 让我解释一下我看到这个布局时的
 Let me the explain the reasoning that I use when I

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:01,030 --> 00:00:04,939
 非准确重复警告虽然比准确重复警告要好一些，
 Inexact repeating alarms. Infinitely better than exact repeating alarms, but

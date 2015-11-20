@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,460 --> 00:00:03,600
 现在，乍一看，减少传输的负载
 Now, at first glass, reducing the payload of each transfer, and

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,280 --> 00:00:03,650
 在程序运行的时候，我知道你们很可能厌倦了盯着无聊的假数据而且
 On app launch, I know that you're probably tired of seeing the dummy data and

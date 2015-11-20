@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,320 --> 00:00:03,010
 好的，你已经完成了。让我们看看答案。
 All right, you're done. Let's look at the solution.

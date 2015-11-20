@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,425 --> 00:00:04,617
 现在你已经添加了URI进WeatherContract
 Now that you've added the URI
