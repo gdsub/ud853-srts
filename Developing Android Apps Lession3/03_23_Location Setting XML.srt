@@ -90,7 +90,7 @@ Then add the location preference.
 
 19
 00:00:58,980 --> 00:01:03,420
-由于线框设计稿里 需要弹出一个可编辑文本对话框 来让用户输入代表地理位置的字符串
+由于线框设计图里 需要弹出一个可编辑文本对话框 来让用户输入代表地理位置的字符串
 Since the wireframes showed an editable text field to input user location as
 
 20

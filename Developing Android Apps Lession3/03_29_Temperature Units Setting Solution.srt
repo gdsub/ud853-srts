@@ -35,7 +35,7 @@ units. We also need to give it a key for
 
 8
 00:00:21,770 --> 00:00:25,600
-SharedPreferences。然后我们指明是作为单位的。
+SharedPreferences。然后我们把key是定义为units。
 the SharedPreferences. And so we specify that to be units.
 
 9

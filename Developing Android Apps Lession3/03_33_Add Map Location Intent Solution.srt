@@ -1,6 +1,6 @@
 1
 00:00:00,390 --> 00:00:05,689
-已经完成了。让我们来看看答案。在main activity的菜单排版文件里
+已经完成了。让我们来看看答案。在main activity的菜单布局文件里
 Done already. Let's go to the solution. In the menu layout file for the main
 
 2
