@@ -135,7 +135,7 @@ Going back to the code, we also add these attributes to describe the Edit Text
 
 28
 00:01:29,610 --> 00:01:32,780
-就像我们在线框设计稿中看到的一样
+就像我们在线框设计图中看到的一样
 field in the pop up dialog that was shown in the wire frames.
 
 29
