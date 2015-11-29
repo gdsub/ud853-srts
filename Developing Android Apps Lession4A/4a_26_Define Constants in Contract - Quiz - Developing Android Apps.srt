@@ -1,6 +1,6 @@
 1
 00:00:00,810 --> 00:00:02,940
-现在  你已经看到为天气表创建的WeatherEntry类
+现在  你已经看到为Weather表创建的WeatherEntry类
 Now, that you've seen the WeatherEntry class for
 
 2
@@ -15,7 +15,7 @@ Add the constants for
 
 4
 00:00:06,860 --> 00:00:11,850
-给位置表添加一些常量
+给Location表添加一些常量
 the location table in the LocationEntry inner contract class.
 
 5

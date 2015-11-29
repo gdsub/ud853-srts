@@ -5,7 +5,7 @@ Follow these steps to create a unit test to insert a row of data
 
 2
 00:00:04,450 --> 00:00:06,810
-插入到地址数据表中
+插入到Location数据库表中
 into the location database table.
 
 3
@@ -15,8 +15,8 @@ Then, query the table and validate the values.
 
 4
 00:00:10,370 --> 00:00:14,920
-我们将要在TestDB内填满测试地址数据表函数
-We're going to be filling out the test location table function within TestDB.
+我们将要在TestDB内填充testLocationTable()
+We're going to be filling out the testLocationTable function within TestDB.
 
 5
 00:00:14,920 --> 00:00:18,490

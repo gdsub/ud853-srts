@@ -25,12 +25,12 @@ Well, what does this mean for testing?
 
 6
 00:00:14,750 --> 00:00:18,990
-它意味着我们不能在没有位置表的情况下测试天气表
+它意味着我们不能在没有Location表的情况下测试Weather表
 It means that we cannot test the weather table without having the location table,
 
 7
 00:00:18,990 --> 00:00:23,450
-因为外键约束强制要求位置表的ID
+因为外键约束强制要求Location表的ID
 because the foreign key constraint enforces that the location ID is a valid
 
 8
@@ -40,12 +40,12 @@ ID in the location table.
 
 9
 00:00:25,650 --> 00:00:28,630
-这同样意味着我们必须使用插入位置表的结果
+这同样意味着我们必须使用插入Location表的结果
 It also means that we have to use the result of an insert in the location
 
 10
 00:00:28,630 --> 00:00:31,550
-以便向天气表插入数据
+以便向Weather表插入数据
 table in order to insert in the weather table.
 
 11
@@ -55,7 +55,7 @@ In other words,
 
 12
 00:00:32,450 --> 00:00:36,650
-天气表不可能独立于位置表进行单元测试
+Weather表不可能独立于Location表进行单元测试
 the weather table cannot be unit tested independently from the location table.
 
 13

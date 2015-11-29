@@ -25,7 +25,7 @@ a row of location data using the function within test utilities.
 
 6
 00:00:16,149 --> 00:00:20,340
-接着把这个ContentValues对象插入到位置表中
+接着把这个ContentValues对象插入到Location表中
 Then we insert that content values object into the location table.
 
 7
@@ -40,7 +40,7 @@ If it's negative one, we know the insertion failed, so we assert that.
 
 9
 00:00:28,040 --> 00:00:31,970
-然后我们只传入表名参数进行数据查询
+然后我们只传入表名参数对Location表进行数据查询
 Then we query the location table and pass in null for all the parameters
 
 10

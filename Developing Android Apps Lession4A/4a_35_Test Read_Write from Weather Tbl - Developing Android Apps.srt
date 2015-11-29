@@ -1,11 +1,11 @@
 1
 00:00:00,740 --> 00:00:02,990
-我们已经测试过位置数据表 所以
+我们已经测试过Location表 所以
 We've tested the location table so
 
 2
 00:00:02,990 --> 00:00:06,760
-现在我们应该以天气数据表该有的方式来测试它
+现在我们应该以Weather表该有的方式来测试它
 now we should test the weather table in a test weather table method.
 
 3
@@ -20,7 +20,7 @@ into the weather database table.
 
 5
 00:00:11,470 --> 00:00:15,360
-请注意我们必须先插入位置表以获得位置键值 
+请注意我们必须先插入Location表以获得位置键值 
 Noting that we have to first insert into the location table to get the location
 
 6
