@@ -10,17 +10,17 @@ The other important function that we are required to fill in
 
 3
 00:00:06,360 --> 00:00:08,290
-on-update函数
-is the on-upgrade method.
+onUpdate函数
+is the onUpgrade method.
 
 4
 00:00:08,290 --> 00:00:11,740
-这个函数在数据库已经被创建但是版本发生改变时被调用
+这个函数在数据库已经被创建但
 This function gets called when the database has already been created but
 
 5
 00:00:11,740 --> 00:00:13,740
-这个函数在数据库已经被创建但是版本发生改变时被调用
+版本发生改变时被调用
 the version is changed.
 
 6
@@ -35,22 +35,22 @@ general structure the database has changed.
 
 8
 00:00:21,060 --> 00:00:24,744
-SQLite Open Helper能知道database版本已经发生改变
+SQLiteOpenHelper能知道database版本已经发生改变
 The SQLite Open Helper knows the database version has changed because
 
 9
 00:00:24,744 --> 00:00:27,810
-因为我们传到它的构造函数里面的版本信息已经改变
+是因为我们传到它的构造函数里面的版本信息已经改变
 the version we passed into its constructure has changed.
 
 10
 00:00:28,840 --> 00:00:31,600
-当改变数据库表的时候 要确保总是改变数据库的版本
+当改变数据库表的时候 
 Make sure to always change the database version
 
 11
 00:00:31,600 --> 00:00:34,460
-当改变数据库表的时候 要确保总是改变数据库的版本
+要确保总是改变数据库的版本
 when you make changes to the database tables.
 
 12
@@ -65,12 +65,12 @@ I'm not upgrading anything yet, so why bother?
 
 14
 00:00:40,590 --> 00:00:43,400
-因为 当你改变数据库表的时候 这对于保证你的应用不发生错误非常重要
+因为 当你改变数据库表的时候 
 Because it's important to make sure that your application won't have
 
 15
 00:00:43,400 --> 00:00:45,635
-因为 当你改变数据库表的时候 这对于保证你的应用不发生错误非常重要
+保证你的应用不发生错误非常重要
 errors when you make changes to the database tables.
 
 16
