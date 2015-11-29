@@ -1,26 +1,26 @@
 1
 00:00:00,000 --> 00:00:04,311
-要记住  contract是一个协定  描述了在我们的数据模型和视图之间信息如何被存储
+要记住  合约(contract)是一个协定  描述了在我们的数据模型
 Remember, that a contract is an agreement between our data model and
 
 2
 00:00:04,311 --> 00:00:07,445
-要记住  contract是一个协定  描述了在我们的数据模型和视图之间信息如何被存储
+和视图之间信息如何被存储
 our views describing how information is stored.
 
 3
 00:00:07,445 --> 00:00:11,434
-它包括常量字符串  这些字符串代表了用户接口将要显示的所有域
+它包括常量字符串  这些字符串代表了我们的UI将要显示的所有域
 It contains constant strings to represent all the fields that our user
 
 4
 00:00:11,434 --> 00:00:14,543
-在Sunsline的例子中  数据库将被存储在这里
+在Sunsline的例子中
 interface will display, and in the case of Sunshine,
 
 5
 00:00:14,543 --> 00:00:16,312
-在Sunsline的例子中  数据库将被存储在这里
+数据库将被存储在这里
 that our database will store.
 
 6
@@ -35,27 +35,25 @@ use in our 2SQLI databases that will store weather and information.
 
 8
 00:00:23,650 --> 00:00:27,293
-现在让我们学习这些列名常量如何在天气contract里声明
+现在让我们学习这些列名常量是如何在天气contract里声明的
 Now let's learn how these column names constraints are declared in our weather
 
 9
 00:00:27,293 --> 00:00:27,844
-现在让我们学习这些列名常量如何在天气contract里声明
 contract.
 
 10
 00:00:27,844 --> 00:00:31,461
-让我们快速浏览下我们已经提供给你的天气contract类文件
+让我们快速浏览下我们已经提供给你的WeatherContract类文件
 Let's take a quick look at the weather contract class file that we've
 
 11
 00:00:31,461 --> 00:00:32,081
-让我们快速浏览下我们已经提供给你的天气contract类文件
 given you.
 
 12
 00:00:32,081 --> 00:00:38,083
-contract类包含两个内部类  WeatherEntry和LocationEntry
+这个contract类包含两个内部类  WeatherEntry和LocationEntry
 The contract class has two inner classes, WeatherEntry and LocationEntry.
 
 13
@@ -90,7 +88,7 @@ The constant values as defined in the WeatherEntry class match the values
 
 19
 00:00:57,553 --> 00:00:59,352
-要和存储在天气表里面的值相匹配
+要和存储在Weather表里面的值相匹配
 we're storing in the weather table.
 
 20
@@ -120,17 +118,17 @@ This is because we're implementing the class, BaseColumns,
 
 25
 00:01:14,486 --> 00:01:17,004
-这个类包括一个叫做_id的常量
-which contains a constant called _id.
+这个接口里包括一个叫做_ID的常量字符串(值"_id")
+which contains a constant called _ID.
 
 26
 00:01:17,004 --> 00:01:22,444
-通过添加一个_id列来作为数据表的主键  我们可以利用
+通过添加一个_id列来作为数据表的主键  我们便可以利用多种
 By adding an _id column to our table as a primary key, we can utilize various
 
 27
 00:01:22,444 --> 00:01:27,301
-多种Android辅助类的依赖被创建的_id列
+依赖于 已建"_id"列 的Android辅助类
 Android helper classes that rely on the _id column being created.
 
 28
@@ -140,7 +138,7 @@ The LOC_KEY column is the foreign key we talked about earlier,
 
 29
 00:01:30,847 --> 00:01:33,419
-指向地理位置表里面的记录
+指向Location表里面的记录
 that points to records in the location table.
 
 30
@@ -150,10 +148,10 @@ Since the column names don't actually contain data types,
 
 31
 00:01:36,365 --> 00:01:39,540
-所以  一般在在变量名称中注释这些类型
+所以  一般在在变量名称中使用注解(annotation)来标识这些类型
 it's usual to annotate these types in the variable names, and or
 
 32
 00:01:39,540 --> 00:01:42,540
-过着通过注解来让我们的contract更加明确
+或着通过注释(comment)来让我们的合约更加明确
 comments to make our contract more explicit
