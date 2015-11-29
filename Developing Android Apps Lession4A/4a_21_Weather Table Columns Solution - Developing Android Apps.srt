@@ -5,19 +5,19 @@ All right, let's see how we did.
 
 2
 00:00:02,940 --> 00:00:08,452
-如果你勾选了 record ID，风速
+如果你勾选了 记录ID，天气条件ID，最低温
 If you checked record ID, weather
 condition ID, minimum temperature,
 
 3
 00:00:08,452 --> 00:00:13,003
-湿度，最高温
+风速，湿度，最高温
 wind speed, humidity,
 maximum temperature,
 
 4
 00:00:13,003 --> 00:00:16,920
-日期，方位还有气压，是的，你当然可以这么做
+日期，风向还有气压，你便选对了正确的答案
 date, weather direction and
 pressure, you've got this right.
 
@@ -40,19 +40,19 @@ make any sense here.
 
 8
 00:00:25,250 --> 00:00:28,900
-但由于我们真的显示日期，所以对于数据库来说，
+但由于我们实际只显示日期，对于数据库来说，
 But since we're really displaying the
 date, it makes sense for the database to
 
 9
 00:00:28,900 --> 00:00:32,540
-尽可能多地复制那些显示的着的项是有意义的
+最有意义地还是尽可能多地复制那些用来显示的项
 actually replicate what's on
 the display as much as possible.
 
 10
 00:00:32,540 --> 00:00:35,640
-单位应该存储在一个单独的表中
+单位应该存储在一个独立的首选项里
 Units should be stored in
 a separate table with preferences.
 
@@ -88,24 +88,24 @@ determine the image to display.
 
 16
 00:00:52,850 --> 00:00:56,100
-最后，当它在我们的UI界面中不显示的时候
+最后，尽管ID在我们的UI界面中不显示
 And finally,
 while it's not displayed in our UI,
 
 17
 00:00:56,100 --> 00:00:59,140
-我们需要一个ID列用来唯一地标示每一行
+我们还是需要一个ID列用来唯一地标识每一行
 we need an ID column to
 uniquely identify each row.
 
 18
 00:01:00,260 --> 00:01:02,440
-正如我们讨论的，它需要
+正如我们讨论的
 As discussed, it's required for
 
 19
 00:01:02,440 --> 00:01:06,410
-所有的SQLite 数据库表显示在Android list views视图中
+所有的SQLite 数据库表需要显示在Android list views视图中
 all SQLI database tables that are going
 to be displayed in Android list views.
 

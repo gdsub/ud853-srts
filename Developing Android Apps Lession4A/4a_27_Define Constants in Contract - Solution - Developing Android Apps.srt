@@ -33,7 +33,7 @@ the other classes you've received,
 
 7
 00:00:16,700 --> 00:00:20,790
-比如说 weather DBHelper这个类，使用了这些相同的常量名
+比如说WeatherDBHelper这个类，使用了这些相同的常量名
 such as the weather DBHelper,
 uses these same constant names.
 
