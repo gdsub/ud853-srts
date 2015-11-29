@@ -1,6 +1,6 @@
 1
 00:00:00,340 --> 00:00:04,340
-现在让我们重新回顾一下我们的最终细节框架
+现在让我们重新回顾一下我们的最终线框设计图的细节
 This is a good time to revisit
 our final detail wireframe.
 
@@ -12,7 +12,7 @@ forecast information in a database
 
 3
 00:00:07,550 --> 00:00:10,270
-哪一些信息行是我们所需要的呢？
+哪一些信息列是我们的合约所需要的呢？
 table, which columns
 should our contract have?
 

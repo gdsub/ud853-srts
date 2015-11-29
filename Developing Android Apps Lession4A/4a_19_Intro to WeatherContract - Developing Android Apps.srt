@@ -10,27 +10,27 @@ Sunshine by defining our weather contract.
 
 3
 00:00:05,020 --> 00:00:07,750
-你可能会问  什么是合约
+你可能会问  什么是合约(contract)
 You might ask, what is a contract?
 
 4
 00:00:07,750 --> 00:00:11,340
-合约就是一个数据模型  存储
+合约(contract)就是一个关于 数据模型 存储
 A contract is an agreement between the data model, storage, and
 
 5
 00:00:11,340 --> 00:00:15,730
-视图  展示以及描述信息如何被访问的协议
+视图 展示以及描述信息如何被访问的协议
 views, presentation, describing how information is accessed.
 
 6
 00:00:15,730 --> 00:00:19,560
-合约的一致性在合约类中执行
+合约中的协议实际是以Contract类来实现
 The agreement in a contract is implemented in a contract class that
 
 7
 00:00:19,560 --> 00:00:24,270
-这个合约类包括一个常量的列表  通常还有数据库表和列的名称
+这个Contract类包括一个常量的列表  通常是数据库表和列的名称
 contains a list of constants, typically database table column names, that
 
 8
@@ -55,7 +55,7 @@ Each column in the data source represents a UI element.
 
 12
 00:00:42,370 --> 00:00:45,450
-如果我们在developer.android.com搜索contract这个单词
+如果我们在developer.android.com搜索合约(contract)这个单词
 If we search developer.android.com for the word,
 
 13
@@ -75,27 +75,27 @@ we can see that part of the contract contains a list of column names.
 
 16
 00:00:55,800 --> 00:00:59,680
-并且我们能够了解合约数据库是什么样子
+并且我们能够了解联系人数据库是什么样子
 And we can have some sense of what the contact database looks like.
 
 17
 00:00:59,680 --> 00:01:04,319
-它有一个列作为显示名以及合约的标示符
+它有一个作为显示名的列 一些用来标识联系人的标记
 It has a column for the display name, flags for the contact, columns for
 
 18
 00:01:04,319 --> 00:01:08,400
-以及存放ID的列并被用来链接其他表里面的数据
+以及一些被用来链接其他表数据的ID列
 ID's that are used to link the contact to data in other tables.
 
 19
 00:01:08,400 --> 00:01:12,650
-并且还有指向与合约有关的图像的URI列
+并且还有指向与这个联系人有关图像的URI列
 And columns for URI's that point to images associated with the contact.
 
 20
 00:01:12,650 --> 00:01:16,880
-在Sunshine中我们的合约是用来创建和
+在Sunshine中我们的合约是用来创建数据库 以及
 In Sunshine, our contract is used to both create and
 
 21
