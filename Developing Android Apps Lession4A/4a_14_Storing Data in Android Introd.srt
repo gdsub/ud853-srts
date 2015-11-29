@@ -30,7 +30,7 @@ Why don't we just always fetch t
 
 7
 00:00:23,530 --> 00:00:26,650
-我们真的需要担心设备上的数据存储吗？
+我们真的需要考虑在设备上存储一切吗？
 Do we really need to worry about saving anything on the device?
 
 8
@@ -70,7 +70,7 @@ especially the cellular radio.
 
 15
 00:00:54,640 --> 00:00:57,800
-存储气象数据，而不是没次都获取数据，
+存储气象数据，而不是每次都获取数据，
 Storing the weather data rather than fetching it each time saves
 
 16
@@ -120,7 +120,7 @@ have a network connection available constantly.
 
 25
 00:01:24,820 --> 00:01:28,878
-app的一个首要又是就是可以抵抗恶劣的网络状况
+app的一个首要优势就是可以抵抗恶劣的网络状况
 One of the prime advantages of having a mobile app is being resistant to bad or
 
 26
@@ -165,10 +165,10 @@ working seamlessly between offline and online states.
 
 34
 00:01:59,660 --> 00:02:03,520
-我们坚持Sunshine的数据，更好的用户体验
+我们持久化Sunshine的数据，以提供更好的用户体验
 We persist data in Sunshine to make it both a better experience for
 
 35
 00:02:03,520 --> 00:02:07,550
-更少的请求网络，更少的耗电！
+更少的网络请求，更少的耗电！
 users, while making it use less network and battery resources.

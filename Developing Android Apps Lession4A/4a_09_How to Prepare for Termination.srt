@@ -45,7 +45,7 @@ So we know that as soon as your app isn't visible, its lifetime is as
 
 10
 00:00:38,080 --> 00:00:41,810
-它的生命周期随时都可能被系统消无声息的终结
+它的生命周期随时都可能被系统悄无声息的终结
 perilous as that of a Stark at the Red Wedding. Likely to die without notice,
 
 11
