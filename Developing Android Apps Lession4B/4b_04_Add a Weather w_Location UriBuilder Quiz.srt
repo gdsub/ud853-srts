@@ -23,13 +23,12 @@ how to do this.
 
 5
 00:00:13,370 --> 00:00:16,370
-取消掉这个用于测试的WeatherLocation函数的注释
-Uncomment out the test
-weatherLocation function within
+取消掉testWeatherLocation函数的注释
+Uncomment out the testWeatherLocation function within
 
 6
 00:00:16,370 --> 00:00:19,560
-来检验你的实现。那个函数在测试的WeatherContract里。
-test weatherContract to
+来检验你的实现。那个函数在TestWeatherContract里。
+TestWeatherContract to
 verify your implementation.
 

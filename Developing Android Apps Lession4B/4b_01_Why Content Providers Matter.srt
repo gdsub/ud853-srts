@@ -1,36 +1,36 @@
 1
 00:00:00,470 --> 00:00:02,400
-在我们继续学习和创建一个content provider之前
+在我们继续学习和创建一个ContentProvider之前
 Before we go ahead and build a content provider
 
 2
 00:00:02,400 --> 00:00:05,280
-你不会想到去问，但这是为什么呢？
+你会不会想到去问，这是为什么呢？
 you wouldn't be out of line to ask, well why.
 
 3
 00:00:07,250 --> 00:00:09,060
-最简单的答案就是content provider允许你利用underlying data source，
+最简单的答案就是ContentProvider允许你
 The simplest answer is that it allows you to
 
 4
 00:00:09,060 --> 00:00:12,540
-安全并且高效地通过应用程序的界限
+安全并且高效地跨过应用程序的界限分享你的数据
 share your data safely and efficiently across app boundaries by
 
 5
 00:00:12,540 --> 00:00:15,520
-分享你的数据，和这里一样使用SQLite
+而这需要你把底层数据源做一定的抽象，就像你使用SQLite
 abstracting the underlying data source, be it SQLite like
 
 6
 00:00:15,520 --> 00:00:19,080
-或者使用文件，或者其他的方法。以便其他
+或者文件，或者其他的什么东西。然后其他
 this or files or really anything else. So that other
 
 7
 00:00:19,080 --> 00:00:21,870
-应用可以访问它，而不需要真正理解你是如何存储它的
+应用便可以访问它，而不需要真正理解你是如何存储它的
 apps can access it without really needing to understand how
 
 8
@@ -75,17 +75,17 @@ SQ Lite. But you could be storing data in
 
 16
 00:00:47,380 --> 00:00:50,680
-动态运行的数据也只是一个不同的数据库而已
+动态的运行时数据中，或者也可能只是一个不同的数据库中
 files, dynamic run-time data or even just a different
 
 17
 00:00:50,680 --> 00:00:55,040
-通过使用content provider，使你更加容易
+通过使用ContentProvider，使你更加容易
 database library. By using content providers, it's easier for
 
 18
 00:00:55,040 --> 00:00:57,380
-将data source转出
+将数据源切换成另一个
 you to potentially switch out the data source and
 
 19
@@ -115,7 +115,7 @@ The same of those returned by SQLite databases. So,
 
 24
 00:01:12,270 --> 00:01:15,690
-所以，如果你的数据层实现有改变，你的content provider
+所以，如果你的数据层实现有改变，你的ContentProvider
 if your data layer implementation changes, then your content provider
 
 25
@@ -135,7 +135,7 @@ following a neat design pattern. Well, keep in mind that
 
 28
 00:01:24,690 --> 00:01:27,730
-就framework而言，所有的数据都通过content provider处理
+就framework而言，所有的数据都通过ContentProvider处理
 as far as the framework is concerned, all data is handled
 
 29
@@ -155,7 +155,7 @@ widget or returning search results from the newer app, you'll need
 
 32
 00:01:37,770 --> 00:01:40,770
-你会需要一个content provider去做这些事情。事实上，这就是
+你会需要一个ContentProvider去做这些事情。事实上，这就是
 a content provider for that too. In fact, that's how the
 
 33
@@ -165,22 +165,22 @@ Google play store and Gmail widgets work. As well as the
 
 34
 00:01:43,760 --> 00:01:47,920
-为什么能够从Google Play得到搜索结果。同样的，这里有一些API
+为什么能够从Google Play得到搜索结果。同样的，这里有一堆API
 ability to get search results from Google Play. Similarly, there's a bunch
 
 35
 00:01:47,920 --> 00:01:51,960
-旨在优化同步的过程，查询数据
+旨在优化 同步，查询数据 和
 of APIs designed to optimize the process of synching and querying data,
 
 36
 00:01:51,960 --> 00:01:56,580
-和更新相应的UI。这些都期待用content provider实现
+更新相应的UI。这些都期待用ContentProvider实现
 and updating UI accordingly. And all of them also expect content providers.
 
 37
 00:02:00,490 --> 00:02:03,950
-这都包括了sync adapter和cursor loaders，使得
+这些(优化用的API)包括了SyncAdapter和CursorLoader，它们使得
 That includes sync adapters and cursor loaders. Which make your
 
 38
@@ -190,12 +190,12 @@ app able to efficiently sync with your server, load data in
 
 39
 00:02:07,140 --> 00:02:10,360
-包括内置的content observers 将会自动更新你的UI
+还包括了内置的content observers 即当你的基础数据发生改变时
 your UI layer, and which include built in content observers that
 
 40
 00:02:10,360 --> 00:02:14,167
-当你的基础数据发生改变时
+它们将会自动更新你的UI
 will update your UI automatically when the underlying data changes. You
 
 41
@@ -210,7 +210,7 @@ a certain point the advantage you gained by not writing a
 
 43
 00:02:20,350 --> 00:02:23,280
-你所获得的优势是通过一开始不写content provider 
+你所获得的优势是通过一开始不写ContentProvider 
 content provider to begin with is lost in the process of
 
 44
@@ -220,7 +220,7 @@ having to recreate all of the useful clusters that utilize it.
 
 45
 00:02:26,900 --> 00:02:30,160
-在这节课的后面，我们将会看一下你发布的content provider并使用Lotus
+在这节课的后面，我们将会看一下你发布的ContentProvider并使用Lotus
 We'll take a look at publishing your content provider and using Lotus
 
 46
@@ -235,5 +235,5 @@ in lesson six when we look at doing efficient background updates. But
 
 48
 00:02:37,820 --> 00:02:41,390
-但首先，丹已经准备好向你展示如何建立一个content provider了
+但首先，Dan已经准备好向你展示如何建立一个ContentProvider了
 first, Dan is going to show you how to actually build a content provider.
