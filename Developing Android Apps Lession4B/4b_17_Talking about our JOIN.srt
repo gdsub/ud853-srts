@@ -5,47 +5,47 @@ When we first defined our tables,
 
 2
 00:00:02,580 --> 00:00:06,320
-我们定义他们之间的关系和约束条件
+我们以约束的名义定义了它们之间的关系
 we defined the relationship between
 them in terms of constraints.
 
 3
 00:00:06,320 --> 00:00:08,880
-我将会讲解怎么样实现关系在我们的
+我将会讲解这种关系是怎么样在我们的
 I'm going to show how we implemented
 that relationship into our
 
 4
 00:00:08,880 --> 00:00:10,140
-查询中使用join
+查询中通过使用join来实现的
 query using a join.
 
 5
 00:00:11,420 --> 00:00:13,900
-join允许我们查询weather使用从
+join允许我们使用一个特定的“地点设置”的值
 This join allows us to
 query the weather table for
 
 6
 00:00:13,900 --> 00:00:17,450
-位置设置里定义的一些值
+去查询Weather表
 values from a specific location setting.
 
 7
 00:00:17,450 --> 00:00:21,170
-在Sunshine的例子中，用户设置这些在偏好中
+在Sunshine的例子中，这里的“地点设置”位于用户的偏好首选项中
 In Sunshine's case,
 the user sets this in preferences.
 
 8
 00:00:21,170 --> 00:00:24,340
-你将注意到有一个SQLite query builder类
+你将注意到有一个SQLiteQueryBuilder类
 You'll notice that there's a SQ
 lite query builder class for
 
 9
 00:00:24,340 --> 00:00:26,240
-在weather provider的顶部
+在WeatherProvider的顶部
 able at the top of weather provider.
 
 10
@@ -56,7 +56,7 @@ this class helps construct queries and
 
 11
 00:00:29,940 --> 00:00:31,700
-被用到作为查询方法的基础
+被用作查询方法的基础
 is actually used as the basis for
 
 12
@@ -67,7 +67,7 @@ used in the SQLite database class.
 
 13
 00:00:35,730 --> 00:00:40,350
-我们在这个类的静态块初始化这个SQLite query builder
+我们在这个类的静态块初始化这个SQLiteQueryBuilder
 We initialize the SQLite query builder
 in the static constructor of the class.
 
@@ -90,19 +90,19 @@ have a field with an _ID,
 
 17
 00:00:52,890 --> 00:00:56,840
-我们必须使用表名来清除我们
+我们必须显式使用表名来区分我们
 we must explicitly use the table
 name in order to disambiguate
 
 18
 00:00:56,840 --> 00:00:59,940
-讨论的是那个ID的歧义在多表查询中
+讨论的是多表查询中哪个表的ID
 which ID we are talking
 about in the join.
 
 19
 00:00:59,940 --> 00:01:02,050
-然后我们定义了selection
+然后我们定义selection
 Then we define the selection.
 
 20
@@ -125,12 +125,12 @@ our selection has 2 parameters,
 
 23
 00:01:13,570 --> 00:01:16,15
-一个位置设置和一个日期
+一个地点设置和一个日期
 a location setting and a date.
 
 24
 00:01:16,150 --> 00:01:19,340
-然后我们有一个方法来通过位置获取天气
+然后我们有一个方法来通过地点获取天气
 Then we have a function to get the
 weather by location setting using this
 
@@ -171,7 +171,7 @@ query routine of the content provider
 
 31
 00:01:38,570 --> 00:01:42,160
-为带有位置和日期的天气和带有位置的天气
+为带有地点和日期的天气和带有地点的天气
 for both weather with location and
 date and weather with location.
 

@@ -1,108 +1,108 @@
 1
 00:00:01,120 --> 00:00:02,029
-All right, you're done.
 好的，你完成了
+All right, you're done.
 
 2
 00:00:03,310 --> 00:00:06,720
+希望你是用给定的buildUriMatcher函数开始的
 Hopefully you started with
 the provided buildUriMatcher function.
-希望你是用给定的buildUriMatcher函数开始的
 
 3
 00:00:06,720 --> 00:00:10,440
-We begin with the new UriMatcher
-that contains the NO_MATCH
 我们从定义一个新的UriMatcher开始
 包含NO_MATCH
+We begin with the new UriMatcher
+that contains the NO_MATCH
 
 
 4
 00:00:10,440 --> 00:00:13,710
+函数因为我们不希望根节点匹配任何东西。
 function because we don't want
 the root node to match anything.
-函数因为我们不希望根节点匹配任何东西。
 
 5
 00:00:13,710 --> 00:00:17,610
+这是保证代码可读性的典型习惯。
 This is typical behavior to make
 the code more easy to read.
-这是保证代码可读性的典型习惯。
 
 6
 00:00:17,610 --> 00:00:21,190
-I'm making a shortcut to
-the WeatherContract.CONTENT_AUTHORITY.
 我正在创建WeatherContract.CONTENT_AUTHORITY.
 的快捷方式
+I'm making a shortcut to
+the WeatherContract.CONTENT_AUTHORITY.
 
 7
 00:00:21,190 --> 00:00:23,840
-Our two base URIs are pretty simple.
 我们的两个底层URI很简单
+Our two base URIs are pretty simple.
 
 8
 00:00:23,840 --> 00:00:27,670
-Since we've already defined PATH_WEATHER
-and PATH_LOCATION in the contract,
 既然我们已经在WeatherContract中
 定义了PATH_WEATHER和PATH_LOCATION 
+Since we've already defined PATH_WEATHER
+and PATH_LOCATION in the contract,
 
 9
 00:00:27,670 --> 00:00:31,730
+我们只需要把他们分配给对应的整型常量
 we can just assign them to their
 corresponding integer constants there.
-我们只需要把他们分配给对应的整型常量
 
 10
 00:00:31,730 --> 00:00:35,515
-For PATH_WEATHER, we're going to match
-a path with just one additional item
 对于PATH_WEATHER，我们将配对
 多一个项目
+For PATH_WEATHER, we're going to match
+a path with just one additional item
 
 11
 00:00:35,515 --> 00:00:38,560
-WEATHER_WITH_LOCATION we're going
-to match a path that just has
 WEATHER_WITH_LOCATION在其上面。
 我们将配对
+WEATHER_WITH_LOCATION we're going
+to match a path that just has
 
 12
 00:00:38,560 --> 00:00:40,180
-one additional item on it.
 附加的一个项目。
+one additional item on it.
 
 13
 00:00:40,180 --> 00:00:43,832
+因为地点可能是一个字符串
+我们必须将其与星号匹配
 Because location can be a string,
 we have to match it with an asterisk.
-因为位置可能是一个字符串
-我们必须将其与星号匹配
 
 14
 00:00:43,832 --> 00:00:47,450
-For WEATHER_WITH_LOCATION_AND_DATE
-we're going to match two path items.
 对于WEATHER_WITH_LOCATION_AND_DATE
 我们将与二者都进行匹配
+For WEATHER_WITH_LOCATION_AND_DATE
+we're going to match two path items.
 
 15
 00:00:47,450 --> 00:00:50,440
+第一个为我们的地点，一个字符串
 The first one of course will
 be our location, a string.
-第一个为我们的位置，一个字符串
 
 16
 00:00:50,440 --> 00:00:54,030
-But the second one will be our date,
-which will always be a number.
 但是第二个将会是我们的日期
 这将会是一个数字
+But the second one will be our date,
+which will always be a number.
 
 17
 00:00:54,030 --> 00:00:56,060
+因为如此我们可以与#配对
 Because of that we can
 match with the hash sign.
-因为如此我们可以与#配对
 

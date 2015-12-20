@@ -210,7 +210,7 @@ created location entry table.
 
 43
 00:02:11,038 --> 00:02:14,280
-这意味必须有一个天气位置的位置实体被插到库里后
+这意味必须有一个天气地点的地点实体被插到库里后
 This means that we cannot insert a weather entry into the database until
 
 44
@@ -220,12 +220,12 @@ a location entry for the weather location has been inserted.
 
 45
 00:02:17,450 --> 00:02:20,270
-同时，当存在指向位置的天气实体时  
+同时，当存在指向地点的天气实体时  
 And we cannot delete locations while there exist weather
 
 46
 00:02:20,270 --> 00:02:21,680
-我们不能删除位置
+我们不能删除地点
 entries that point to them.
 
 47
@@ -510,7 +510,7 @@ This is the last chance to fix up your location contract if
 
 103
 00:05:26,690 --> 00:05:28,270
-你的位置合约
+你的地点合约
 things don't compile.
 
 104

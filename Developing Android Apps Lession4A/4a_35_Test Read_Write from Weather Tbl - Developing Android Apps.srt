@@ -20,7 +20,7 @@ into the weather database table.
 
 5
 00:00:11,470 --> 00:00:15,360
-请注意我们必须先插入Location表以获得位置键值 
+请注意我们必须先插入Location表以获得地点键值 
 Noting that we have to first insert into the location table to get the location
 
 6

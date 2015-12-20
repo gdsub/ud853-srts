@@ -15,7 +15,7 @@ I'll walk you through how we add our first setting for
 
 4
 00:00:08,510 --> 00:00:13,780
-地理位置，然后你将自己动手添加温度单位的设置选项，所以接下来请仔细听讲
+地点，然后你将自己动手添加温度单位的设置选项，所以接下来请仔细听讲
 location, then you'll do the temperature setting on your own, so listen closely.
 
 5
@@ -85,12 +85,12 @@ And then our preferences file is created.
 
 18
 00:00:57,020 --> 00:00:58,980
-然后增添我们的地理位置preference
+然后增添我们的地点preference
 Then add the location preference.
 
 19
 00:00:58,980 --> 00:01:03,420
-由于线框设计图里 需要弹出一个可编辑文本对话框 来让用户输入代表地理位置的字符串
+由于线框设计图里 需要弹出一个可编辑文本对话框 来让用户输入代表地点的字符串
 Since the wireframes showed an editable text field to input user location as
 
 20
@@ -190,7 +190,7 @@ on this name.
 
 39
 00:02:07,060 --> 00:02:10,169
-我们也可以指定一个常量作为默认的地理位置
+我们也可以指定一个常量作为默认的地点
 We also specify a constant for the default location.
 
 40

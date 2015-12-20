@@ -15,7 +15,7 @@ Once again,
 
 4
 00:00:09,800 --> 00:00:14,570
-使用test provider中的getType方法来验证我们的方法正不正确
+使用TestProvider中的testGetType方法来验证我们的方法正不正确
 use test get type within test provider to validate that our answer is correct.
 
 5

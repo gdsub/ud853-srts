@@ -20,7 +20,7 @@ First, we're going to need to create a standard intent
 
 5
 00:00:11,220 --> 00:00:14,650
-然后我们把位置查询功能临时添加进来。
+然后我们把地点查询功能临时添加进来。
 for our alarm receiver. We then add our location query
 
 6

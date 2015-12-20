@@ -20,7 +20,7 @@ Then we create content values for
 
 5
 00:00:11,630 --> 00:00:16,149
-创建一行位置信息的ContentValues对象
+创建一行地点信息的ContentValues对象
 a row of location data using the function within test utilities.
 
 6

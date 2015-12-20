@@ -28,7 +28,7 @@ to run in an unattended mode,
 
 6
 00:00:18,590 --> 00:00:21,960
-我们从Utility类中提取位置请求，
+我们从Utility类中提取地点请求，
 we pull the location query
 from our Utility class, and
 

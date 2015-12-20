@@ -30,12 +30,12 @@ As we've shown in a few previous diagrams, the columns need to store
 
 7
 00:00:19,950 --> 00:00:25,010
-这些列需要存储位置设置  纬度  经度以及城市名
+这些列需要存储地点设置  纬度  经度以及城市名
 the location setting, latitude, longitude, and the city name.
 
 8
 00:00:25,010 --> 00:00:27,720
-当你编写完位置实体类的代码后
+当你编写完地点实体类的代码后
 After you finish coding the location entry class,
 
 9

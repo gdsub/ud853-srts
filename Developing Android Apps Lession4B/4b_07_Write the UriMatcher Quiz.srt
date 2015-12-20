@@ -1,42 +1,43 @@
 1
 00:00:00,430 --> 00:00:03,130
+在前面我们对URI的内容解释中
 In the previous explanation
 of our content URIs,
-在前面我们对URI的内容解释中
 
 2
 00:00:03,130 --> 00:00:05,910
+我展示给你我们在这个App中会用的四种类型
 I showed the four types
 we will use in this app.
-我展示给你我们在这个App中会用的四种类型
 
 3
 00:00:05,910 --> 00:00:10,260
-Fill out the buildUriMatcher function in
-the WeatherProvider class we gave you.
 填充进buildUriMatcher函数在
 我们提供的WeatherProvider类里
+Fill out the buildUriMatcher function in
+the WeatherProvider class we gave you.
 
 4
 00:00:10,260 --> 00:00:10,850
-To help you,
 为了帮助你
+To help you,
 
 5
 00:00:10,850 --> 00:00:14,620
-we've given you a link to the UriMatcher
-documentation in the instructor notes.
 我们给了你一个UriMatcher文档的链接
 在指导笔记中
+we've given you a link to the UriMatcher
+documentation in the instructor notes.
 
 6
 00:00:14,620 --> 00:00:19,040
+取消掉在TestUriMatcher里
+测试UriMatcher的函数注释然后
 Un-comment the UriMatcher
 test in test UriMatcher, and
-取消掉在UriMatcher里测试的注释然后
 
 7
 00:00:19,040 --> 00:00:20,850
+运行一下检查你的工作是否正确完成了
 run it to see if you've
 done your work correctly.
-运行一下检查你的工作是否正确完成了

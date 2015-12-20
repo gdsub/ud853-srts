@@ -10,18 +10,18 @@ Let's take a look at the solution.
 
 3
 00:00:04,130 --> 00:00:07,330
-增加了对插入位置的支持，看起来就像
+增加了对插入地点的支持，看起来就像
 Adding support for the location
 insert looks almost identical
 
 4
 00:00:07,330 --> 00:00:09,100
-增加了对weather的支持一样
+增加了对天气的支持一样
 to adding the support for weather.
 
 5
 00:00:09,100 --> 00:00:14,620
-我们只需要选择正确的表名，然后返回一个正确的位置URI
+我们只需要选择正确的表名，然后返回一个正确的地点URI
 We just have to select the right table
 name, and return the right location URI.
 

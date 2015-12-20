@@ -21,7 +21,7 @@ query based upon the content URI.
 
 5
 00:00:13,580 --> 00:00:17,180
-记住 默认的位置实体的CONTENT_URI
+记住 默认的地点实体的CONTENT_URI
 Remember, that the default
 location entry content URI
 
@@ -33,18 +33,18 @@ into the database.
 
 7
 00:00:20,160 --> 00:00:24,190
-因此 我们可以容易的构建一个包含指定位置的查询
+因此 我们可以容易的构建一个包含指定地点的查询
 So, we can easily construct a query
 containing the location query
 
 8
 00:00:24,190 --> 00:00:26,230
-来看看这个位置是否已经在数据库中
+来看看这个地点是否已经在数据库中
 to see if it is in the database yet.
 
 9
 00:00:26,230 --> 00:00:30,010
-记住 默认的位置实体CONTENT_URI
+记住 默认的地点实体CONTENT_URI
 Remember that the default
 location entry content URI
 
@@ -56,7 +56,7 @@ the database, so we can easily construct
 
 11
 00:00:34,320 --> 00:00:38,310
-容易的构建一个包含指定位置的查询 来看看这个位置是否已经在数据库中
+容易的构建一个包含指定地点的查询 来看看这个地点是否已经在数据库中
 a query containing the location setting
 to see if it is in the database yet.
 
@@ -68,7 +68,7 @@ then the query will return an empty set.
 
 13
 00:00:41,240 --> 00:00:45,060
-然后我们应该插入新的cityName 位置设置 和
+然后我们应该插入新的cityName 地点设置 和
 And we should insert the new city name,
 location setting, and
 

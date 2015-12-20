@@ -80,7 +80,7 @@ and then you should see the actual weather data immediately. Under settings we
 
 17
 00:00:54,820 --> 00:00:59,310
-可以更改位置去相对应的邮编。当我们点击ok，
+可以更改地点去相对应的邮编。当我们点击ok，
 can change the location to be the pairs postal code. We hit OK, and
 
 18

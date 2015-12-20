@@ -23,19 +23,19 @@ a locationSetting, cityName,
 
 5
 00:00:13,710 --> 00:00:16,070
-纬度和经度为新的位置
+纬度和经度为新的地点
 latitude and longitude for
 the new location.
 
 6
 00:00:17,320 --> 00:00:22,960
-如果这个位置已经存在 我们返回这个存在的位置的ID
+如果这个地点已经存在 我们返回这个存在的地点的ID
 If the location already exists, we
 return the ID of the existing location.
 
 7
 00:00:22,960 --> 00:00:27,690
-如果我们添加一个新的位置，我们返回那个添加的位置的ID
+如果我们添加一个新的地点，我们返回那个添加的地点的ID
 If we add a location,
 we return the ID of the added location.
 
@@ -47,19 +47,19 @@ querying the content provider,
 
 9
 00:00:30,670 --> 00:00:34,020
-来看看查询的位置是否存在
+来看看查询的地点是否存在
 to see if the location
 query already exists, and
 
 10
 00:00:34,020 --> 00:00:37,220
-仅仅位置不存在的时候进行插入操作
+仅仅地点不存在的时候进行插入操作
 only performing the insert
 if it doesn't yet exist.
 
 11
 00:00:37,220 --> 00:00:41,120
-取消在测试抓取天气的任务中测试添加位置的代码
+取消在测试抓取天气的任务中测试添加地点的代码
 Uncomment test add location
 within test fetch weather task,
 

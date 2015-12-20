@@ -54,7 +54,7 @@ all columns must be defined as not null.
 
 10
 00:00:28,405 --> 00:00:32,078
-位置查询应该额外加上唯一性
+地点查询应该额外加上唯一性
 The location query should
 additionally be defined as unique or
 

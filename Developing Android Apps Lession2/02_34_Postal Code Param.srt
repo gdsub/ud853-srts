@@ -20,7 +20,7 @@ instead of hard coding our post code in, we'd really
 
 5
 00:00:12,515 --> 00:00:15,726
-他们应该可以在设置里自定义位置信息  我们要
+他们应该可以在设置里自定义地点信息  我们要
 to change their location in the settings. So let's make
 
 6

@@ -1,21 +1,21 @@
 1
 00:00:00,560 --> 00:00:04,330
-既然我们已经在Android manifest.xml中同步了weather provider进程
+既然我们已经在Android manifest.xml中注册了WeatherProvider
 Now that we've registered our weather provider in the Android manifest,
 
 2
 00:00:04,330 --> 00:00:06,820
-我们就可以来编写天气插件了
+是时候来编写WeatherProvider的代码了
 it's time to begin coding our weather provider.
 
 3
 00:00:08,020 --> 00:00:12,890
-这是实现内容提供的过程中最终也是最关键的一步
+这是实现Content Provider的过程中最终也是最关键的一步
 This is the final and most involved step in implementing our content provider.
 
 4
 00:00:12,890 --> 00:00:17,018
-我们即将着手完成内容提供的核心功能
+我们即将着手补完这些Content Provider的核心函数
 We'll be filling out these core content provider functions.
 
 5
@@ -25,22 +25,22 @@ Except for onCreate, which we've already done for
 
 6
 00:00:20,040 --> 00:00:24,220
-我们也已经为数据库助手添加了实例变量
+我们也已经添加了一个（WeatherDbHelper的）实例变量作为数据库助手
 you, we've added an instance variable for our data base helper.
 
 7
 00:00:24,220 --> 00:00:26,460
-我们在onCreate中初始化上述功能
+我们在onCreate中初始化这个实例
 We initialize this in our onCreate function.
 
 8
 00:00:26,460 --> 00:00:31,050
-并会在大部分的内容提供方法下使用数据库助手
+并会在大部分的ContentProvider方法中使用这个数据库助手
 We will use this database helper in most of the content provider methods.
 
 9
 00:00:31,050 --> 00:00:34,980
-我们先来看看内容提供方法里的getType方法
+我们先来看看ContentProvider方法里的getType方法
 The first of the content provider methods that we will look at is getType.
 
 10
@@ -65,12 +65,12 @@ We partially filled out the getType function for you.
 
 14
 00:00:47,540 --> 00:00:51,820
-我们使用之前建立的urimatchr工具类来匹配传入的uri
+我们使用之前建立的UriMatcher工具类来处理传入的uri
 We use the urimatcher we built earlier to match the given uri
 
 15
 00:00:51,820 --> 00:00:54,690
-这和之前所做的是不同的
+用来匹配我们之前编译好的表达式
 against the expressions we've compiled in.
 
 16
@@ -80,7 +80,7 @@ For each match, we return the types that we've defined in the weather contract.
 
 17
 00:00:58,580 --> 00:01:02,560
-谨记  要传达的关键信息是content uri是否
+谨记  这次传达的关键信息是content uri是否
 Remember that the key information that this conveys, is weather the content uri
 
 18
@@ -95,7 +95,7 @@ multiple records type directory.
 
 20
 00:01:10,200 --> 00:01:13,420
-除了数据库cursor  内容提供商也可以用来返回
+除了数据库cursor  ContentProvider也可以用来返回
 Content providers can also be used to return other kinds of data
 
 21
@@ -105,7 +105,7 @@ than just database cursors.
 
 22
 00:01:15,410 --> 00:01:19,590
-比如说  如果我们想要内容提供商以content uri返回一个JEPG图像
+比如说  如果我们想要ContentProvider以content uri返回一个JEPG图像
 For example, if we wanted the content provider to return JPEG images for
 
 23

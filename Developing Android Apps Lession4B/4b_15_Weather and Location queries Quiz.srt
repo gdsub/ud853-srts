@@ -1,6 +1,6 @@
 1
 00:00:00,320 --> 00:00:04,550
-实现天气的和位置的查询在content provider里
+在ContentProvider里实现天气的和地点的查询
 Implement the queries for weather and
 location in our content provider.
 
@@ -11,7 +11,7 @@ Note that these are both basic queries.
 
 3
 00:00:07,240 --> 00:00:11,270
-取消注释test provider中的基本的测试位置查询的方法
+反注释TestProvider中的testBasicWeather方法
 Un comment out the test basic location
 query function within test provider.
 

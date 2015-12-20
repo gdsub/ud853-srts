@@ -5,12 +5,12 @@ We're not storing a key piece of data in our weather table,
 
 2
 00:00:03,050 --> 00:00:05,850
-即所要呈现天气的 位置信息
+即所要呈现天气的 地点信息
 the location at which the weather is going to occur.
 
 3
 00:00:05,850 --> 00:00:10,140
-这是因为我们将要为天气位置使用一个分离的表
+这是因为我们将要为天气地点使用一个分离的表
 This is because we are going to use a separate table for weather locations.
 
 4
@@ -20,12 +20,12 @@ Using a separate table has several advantages.
 
 5
 00:00:13,070 --> 00:00:16,875
-首先，我们不必为每一条记录增加可能重复的位置信息，这会使空间利用率更高
+首先，我们不必为每一条记录增加可能重复的地点信息，这会使空间利用率更高
 In addition to being more efficient because we do not duplicate our location
 
 6
 00:00:16,875 --> 00:00:20,503
-其次，（使用分离的位置表）还使得我们在更新位置信息的时候
+其次，（使用分离的地点表）还使得我们在更新地点信息的时候
 data with each record, it also allows us to update information about our
 
 7
@@ -65,7 +65,7 @@ What does this look like?
 
 14
 00:00:42,120 --> 00:00:45,400
-我们的Weather表中的列有一个位置ID
+我们的Weather表中的列有一个地点ID
 Our list of columns in the weather table has a location ID,
 
 15
@@ -75,7 +75,7 @@ which points to IDs in the location table.
 
 16
 00:00:48,410 --> 00:00:53,315
-我们可以使用这个位置ID来进行内连接操作
+我们可以使用这个地点ID来进行内连接操作
 We can use this location ID to perform an operation known as an inner join.
 
 17
@@ -100,7 +100,7 @@ columns from both tables.
 
 21
 00:01:04,150 --> 00:01:08,090
-在这个例子中我们可以在Location表中查询到 位置信息
+在这个例子中我们可以在Location表中查询到 地点信息
 In this case we're getting the location query from the location table, and
 
 22

@@ -5,7 +5,7 @@ There's a number of different content providers available
 
 2
 00:00:02,150 --> 00:00:05,870
-存储在不同位置，而且种类夜不相同的媒体
+存储在不同地方，而且种类也不相同的媒体
 to access different kinds of media stored in different locations.
 
 3

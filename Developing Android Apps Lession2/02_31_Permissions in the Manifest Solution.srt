@@ -40,5 +40,5 @@ access. However, your app can only access the user's current location
 
 9
 00:00:25,830 --> 00:00:28,170
-才可以访问用户的当前位置信息
+才可以访问用户的当前地点信息
 if it explicitly declares a user's permission.

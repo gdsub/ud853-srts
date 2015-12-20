@@ -6,7 +6,7 @@ content provider method.
 
 2
 00:00:03,960 --> 00:00:08,950
-处理位置URI，并且使用content resolver通知
+处理地点URI，并且使用content resolver通知
 Handle the location URI, and
 use the content resolver to notify any
 

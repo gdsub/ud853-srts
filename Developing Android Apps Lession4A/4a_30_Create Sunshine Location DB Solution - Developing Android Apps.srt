@@ -12,7 +12,7 @@ we make the location setting unique.
 
 3
 00:00:07,553 --> 00:00:12,204
-这非常重要  因为现存位置的ID
+这非常重要  因为现存地点的ID
 This is particularly important because
 the ID of the existing location is
 

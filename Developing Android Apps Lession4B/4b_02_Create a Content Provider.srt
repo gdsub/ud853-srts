@@ -245,7 +245,7 @@ be the package name of the application.
 
 43
 00:02:37,590 --> 00:02:42,720
-位置，通常指向程序里数据库的一个表
+地点，通常指向程序里数据库的一个表
 A location, which typically points to
 a database table within the application.
 

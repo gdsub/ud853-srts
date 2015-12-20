@@ -5,7 +5,7 @@ Some good examples of answers include,
 
 2
 00:00:02,340 --> 00:00:06,990
-传感器监听  位置更新  动态广播接收
+传感器监听  地点更新  动态广播接收
 sensor listeners, location updates, dynamic broadcast receivers. Or
 
 3
