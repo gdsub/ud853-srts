@@ -40,17 +40,17 @@ And that can be useful.
 
 9
 00:00:22,290 --> 00:00:25,190
-我只注意到content resolver发生了一个变化
+只在一种情况下，我会通知ContentResolver发生了一个变化
 I only notify the content resolver of a change
 
 10
 00:00:25,190 --> 00:00:27,250
-如果我们的确删除了某些行
+即当我们的确删除了某些行时
 if we actually have deleted some rows.
 
 11
 00:00:27,250 --> 00:00:29,090
-但是完全没必要这么做
+但是严格讲并非一定要这么做
 This isn't strictly necessary.
 
 12
@@ -70,27 +70,27 @@ call the update function with the values in the selection arguments.
 
 15
 00:00:40,560 --> 00:00:44,860
-并且我只注意到我们已经更新了某些行
+并且我只在我们确实更新了某些行时进行通知
 And I only notify for a change we've actually updated some rows.
 
 16
 00:00:45,980 --> 00:00:47,430
-好的
+好
 Alright.
 
 17
 00:00:47,430 --> 00:00:49,510
-我们来测试一下我们的方法
+让我们来测试一下我们的方法
 Let's go to test our function.
 
 18
 00:00:49,510 --> 00:00:53,230
-在测试用例里面  你可以看到我们没有把testDeleteRecords方法注释掉
+在测试用例里面  你可以看到我们把testDeleteRecords方法反注释掉
 In test provider you can see we've uncommented out test delete records
 
 19
 00:00:54,710 --> 00:00:57,400
-同样也没注释testUpdateLocation方法
+同样反注释testUpdateLocation方法
 as well as test update location.
 
 20
@@ -110,5 +110,5 @@ We've done everything correct for updating and
 
 23
 00:01:05,050 --> 00:01:06,280
-content provider的所有内容
+ContentProvider的所有内容
 deleting the content provider.

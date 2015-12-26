@@ -11,24 +11,24 @@ except they update and delete.
 
 3
 00:00:05,582 --> 00:00:11,068
-都是在完成时返回修改后的行而不是返回一个URI
+都是在完成时返回修改后的行数而不是返回一个URI
 And, both return the rows modified,
 rather than a URI upon completion.
 
 4
 00:00:11,068 --> 00:00:14,597
-当你完成每一部分的时候，取消对更新测试的注释
+当你完成每一部分的时候，取消对testUpdater或
 As you complete each section,
 uncomment the test updater, or
 
 5
 00:00:14,597 --> 00:00:16,803
-或者用deletetest函数去测试检查你的结果
+testDelete的注释去检查你的结果
 test delete test to check your result.
 
 6
 00:00:16,803 --> 00:00:20,400
-当然，当你在做这些的时候记得去通知你的content observer
+当然，当你在做这些的时候记得去通知你的ContentObserver
 Of course, make sure to notify your
 content observers, and, of course,
 

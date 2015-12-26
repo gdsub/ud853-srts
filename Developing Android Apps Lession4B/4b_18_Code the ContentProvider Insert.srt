@@ -1,6 +1,6 @@
 1
 00:00:00,280 --> 00:00:03,030
-我们已经介绍了使用content provider进行查询
+我们已经介绍了使用ContentProvider进行查询
 Now that we've covered querying
 with our content provider,
 
@@ -11,18 +11,18 @@ it's time to start inserting data.
 
 3
 00:00:05,120 --> 00:00:08,080
-看一下我们在资源代码中提供的
+看一下我们在源代码中提供的
 Let's take a look at the incomplete
 content provider insert function
 
 4
 00:00:08,080 --> 00:00:10,110
-不完整的content provider 插入函数
+不完整的ContentProvider的insert函数
 we provided in the source code.
 
 5
 00:00:10,110 --> 00:00:14,290
-正如你所看到的，这个函数利用了URI 匹配代码
+正如你所看到的，这个函数利用了UriMatcher代码
 As you can see, this function takes
 advantage of the URI matcher code.
 
@@ -45,7 +45,7 @@ right record ends up in the right table.
 
 9
 00:00:23,000 --> 00:00:26,060
-那些包含在其他URI中的数据，比如说 location
+那些包含在其他URI中的数据，比如说 location和
 The data that is contained in
 the other URI, such as location and
 
@@ -63,7 +63,7 @@ we could support all of the URIs here.
 
 12
 00:00:33,480 --> 00:00:37,590
-但他使得该插入函数的实现更加复杂
+但它使得该插入函数的实现更加复杂
 But it makes the implementation of the
 insert function far more complicated.
 
@@ -85,7 +85,7 @@ data modified by our insert.
 
 16
 00:00:44,240 --> 00:00:49,050
-事实证明，cursor通过注册通知其派生
+事实证明，cursor通过注册自身通知其派生的后继
 It turns out that cursors register
 themselves as notify for descendents.
 
@@ -97,19 +97,19 @@ URI will also notify all descendents
 
 18
 00:00:53,438 --> 00:00:57,760
-那些含有附加路径信息的
+即那些含有附加路径信息的URI
 of the URI, ones that contain
 additional path information.
 
 19
 00:00:57,760 --> 00:01:00,750
-比如说调用我们的content provider
+比如说调用我们的ContentProvider
 Just like with calling
 our content providers.
 
 20
 00:01:00,750 --> 00:01:05,140
-我们可以使用content resolver去通知 content observer
+我们可以使用ContentResolver去通知ContentObserver
 We can use a content resolver
 to notify our content observer.
 
@@ -121,7 +121,7 @@ each table in sunshine
 
 22
 00:01:09,100 --> 00:01:13,380
-包含了上下文范围，权限和表名
+包含了上下文范围，规范和表名
 just contains the context scope,
 the authority, and the table name.
 
@@ -162,7 +162,7 @@ careful when doing that.
 
 29
 00:01:34,250 --> 00:01:36,320
-让我们回到资源代码中
+让我们回到源代码中
 Let's go back to the source code.
 
 30
@@ -208,37 +208,37 @@ path followed by an ID.
 
 37
 00:01:59,200 --> 00:02:03,220
-如果我们在content provider中实现了的话
+如果我们要保证ContentProvider完全的话
 If we were being complete in our content
 provider implementation, we should also
 
 38
 00:02:03,220 --> 00:02:07,710
-我们还应该在contract URI matcher和查询函数中提供这些URI类型
+我们还应该在合约的UriMatcher和查询函数中提供这些URI类型
 implement these URI types in the
 contract URI matcher and query function.
 
 39
 00:02:07,710 --> 00:02:10,820
-但是这些同content provider实现有关的事物
+但是实际上实现ContentProvider时有件不错的事是
 But the beautiful thing about
 implementing a content provider,
 
 40
 00:02:10,820 --> 00:02:14,120
-尤其是如果被你的应用程序所使用的
+尤其是如果这些URI只被你的应用程序所使用的话
 especially if it's only being
 used by your application,
 
 41
 00:02:14,120 --> 00:02:16,480
-你只需要去实现你所使用的功能
+那你只需要去实现你所使用的功能就好了
 is it you only need to
 implement the features you use.
 
 42
 00:02:17,580 --> 00:02:21,380
-所以我们只是通过使用build weather URI函数设置了return URI
+所以我们只是通过使用buildWeatherUri函数设置了return URI
 So we just set the return URI by
 using the build weather URI function.
 

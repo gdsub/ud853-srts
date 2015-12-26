@@ -78,7 +78,7 @@ Describing the join between both tables.
 
 15
 00:00:42,825 --> 00:00:48,230
-setTables方法填写SQL 查询的一部分内容
+setTables方法填写SQL查询中from部分的内容
 Set.Tables fills out the content
 in the from part of the SQL query.
 
@@ -130,7 +130,7 @@ a location setting and a date.
 
 24
 00:01:16,150 --> 00:01:19,340
-然后我们有一个方法来通过地点获取天气
+然后我们有一个方法来通过地点设置获取天气
 Then we have a function to get the
 weather by location setting using this
 
@@ -147,13 +147,12 @@ the parameters from the URI.
 
 27
 00:01:23,910 --> 00:01:27,640
-然后构建这个string数组和这个string数组从而
-And build the string array and
-build the string array so
+然后构建这个string数组 从而
+And build the string array so
 
 28
 00:01:27,640 --> 00:01:30,050
-使他们代入我们的查询
+使它们代入我们的查询
 that they can be
 substituted into our query.
 
@@ -165,13 +164,13 @@ that we're creating this way.
 
 30
 00:01:34,110 --> 00:01:38,570
-最终，我们把方法加入到content provider的日常查询中
+最终，我们在ContentProvider的常规查询中
 Finally, we added the functions into the
 query routine of the content provider
 
 31
 00:01:38,570 --> 00:01:42,160
-为带有地点和日期的天气和带有地点的天气
+为带有地点和日期的天气和带有地点的天气补充相关的方法
 for both weather with location and
 date and weather with location.
 

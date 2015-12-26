@@ -27,7 +27,7 @@ name, and return the right location URI.
 
 6
 00:00:14,620 --> 00:00:18,570
-记住，在函数的最后，我们要调用getcontentresolver里的notifychange这个函数
+记住，在函数的最后，我们要调用getContentResolver里的notifyChange这个函数
 Remember, at the end of the function,
 we can just call notify change on
 
@@ -39,7 +39,7 @@ all of the registered observers.
 
 8
 00:00:22,780 --> 00:00:27,210
-注意到我们必须使用URI路径而不是返回URI
+注意到我们必须使用uri而不是returnUri
 Note that we must use the past in URI,
 and not the return URI,
 
@@ -51,7 +51,7 @@ our cursors of the change.
 
 10
 00:00:30,540 --> 00:00:33,980
-由于我们取消了testInsertreadProvider函数的注释
+由于我们取消了testInsertReadProvider函数的注释
 Since we also uncommented
 test insert read provider,
 
@@ -74,7 +74,7 @@ And, our test passed.
 
 14
 00:00:42,420 --> 00:00:44,850
-我们在content provider的道路上越走越顺了
+我们在构建ContentProvider的道路上越走越顺了
 We're well on our way to
 building our content provider.
 
