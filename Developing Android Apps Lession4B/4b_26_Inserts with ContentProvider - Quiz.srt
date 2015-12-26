@@ -41,7 +41,7 @@ we return the ID of the added location.
 
 8
 00:00:27,690 --> 00:00:30,670
-我们第一步先查询这个content provider
+我们第一步先查询这个ContentProvider
 We can do this by first
 querying the content provider,
 
@@ -59,7 +59,7 @@ if it doesn't yet exist.
 
 11
 00:00:37,220 --> 00:00:41,120
-取消在测试抓取天气的任务中测试添加地点的代码
+反注释在TestFetchWeatherTask中testAddLocation的代码
 Uncomment test add location
 within test fetch weather task,
 
