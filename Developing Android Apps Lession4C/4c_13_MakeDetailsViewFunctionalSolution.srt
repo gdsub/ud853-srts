@@ -26,8 +26,8 @@ we add a constant for the loader.
 5
 00:00:10,050 --> 00:00:13,850
 同时需要加入一个projection ,用来存放我想要
+从数据库里获取的列。
 I've also added a projection for the
-从数据库里获取的数据组。
 columns I want to get from the database.
 
 6
@@ -38,8 +38,8 @@ And, of course, corresponding constants.
 7
 00:00:16,660 --> 00:00:19,680
 这样我们的DetailFragment 里的
-Then we have our detail fragment
 lorder 的 callback 就完成了。这个callback 
+Then we have our detail fragment
 implement our loader callbacks for
 
 8
@@ -50,8 +50,8 @@ cursor loader.
 9
 00:00:20,900 --> 00:00:23,530
 当然，
-Of course,
 这是一个参数化的cursor。
+Of course,
 with parametrized type cursor.
 
 10
@@ -62,36 +62,36 @@ In on create loader.
 11
 00:00:25,020 --> 00:00:29,490
 我们创建一个新的cursor loader，
-We create a new cursor loader for
 用来处理从intent来的URI。
+We create a new cursor loader for
 the URI that came in from the intent.
 
 12
 00:00:29,490 --> 00:00:33,910
 在 onLoadFinished, 需要我们来创建一个字符串
-In onLoadFinished, I format a string to
 用来匹配在原先forecast
+In onLoadFinished, I format a string to
 match what was in the original forecast
 
 13
 00:00:33,910 --> 00:00:39,350
 fragment 并且用来把它们设置为mForecast 
-fragment and set it to the mForecast
 变量，就和TextView 一样。
+fragment and set it to the mForecast
 variable as well as the TextView.
 
 14
 00:00:39,350 --> 00:00:42,010
 对于onLoadrrRest 方法，并不需要
-We don't have to do anything
 做什么改变。
+We don't have to do anything
 with onLoaderReset.
 
 15
 00:00:42,010 --> 00:00:44,630
 因为这里没有任何数据需要我们
-Because there isn't any data that we
 暂时持有，直到我们需要把它们
+Because there isn't any data that we
 were holding onto that needs to be
 
 16
@@ -107,15 +107,15 @@ But, how do we fix the share intent?
 18
 00:00:48,200 --> 00:00:51,500
 首先要创建一个成员变量来
-I start by creating a member variable
 共享action provider。
+I start by creating a member variable
 for the share action provider.
 
 19
 00:00:52,670 --> 00:00:55,730
 这个变量是在onCreate 菜单
-I set this variable in
 选项里设置的。
+I set this variable in
 on create options menu.
 
 20
@@ -126,22 +126,22 @@ Only if we have a forecast.
 21
 00:00:57,820 --> 00:01:01,665
 我们不需要做任何关于
-We don't make any assumptions about
 lorder发生顺序的设想。
+We don't make any assumptions about
 the order in which our loader happens.
 
 22
 00:01:01,665 --> 00:01:05,735
 最后在onLoadFinish 函数中，
-Finally in onload finish,
 把intent 设为 共享。
+Finally in onload finish,
 I set the share intent.
 
 23
 00:01:05,735 --> 00:01:09,035
 这样，程序会自动更新共享的action provider,
-This will update the share action
 当它已经存在的时候。
+This will update the share action
 provider if it already exists.
 
 24
@@ -152,8 +152,8 @@ Let's make sure this still works.
 25
 00:01:11,035 --> 00:01:14,290
 这些list 现在工作地跟我们期望的一样。
-The list as we would expect it to be and
 当我们点击其中一个。
+The list as we would expect it to be and
 when we click on one of these.
 
 26
@@ -169,7 +169,7 @@ We even have a share action provider.
 28
 00:01:18,450 --> 00:01:23,220
 就和你看到的一样，我们能共享它，
-And as you can see, we can share it,
 这就是我们新的forecast。
+And as you can see, we can share it,
 and there's our forecast.
 
