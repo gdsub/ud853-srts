@@ -15,8 +15,8 @@ To access audio media stored in the internal data store,
 
 4
 00:00:09,105 --> 00:00:11,639
-你需要使用INTERNAL_CONTENT_URL
-you'd use the INTERNAL_CONTENT_URL
+你需要使用INTERNAL_CONTENT_URI
+you'd use the INTERNAL_CONTENT_URI
 
 5
 00:00:11,639 --> 00:00:16,659

@@ -45,7 +45,7 @@ The we have to fill in the Loader Callbacks.
 
 10
 00:00:28,020 --> 00:00:30,760
-回掉函数是一个接口类
+回调函数是一个接口类
 The Loader Callbacks are a generic interface class,
 
 11
@@ -100,7 +100,7 @@ Since CursorLoader derives an Async TaskLoader,
 
 21
 00:01:07,774 --> 00:01:10,765
-它必须执行一个后台线程
+它会在一个后台线程里执行
 it will be executed in a background thread.
 
 22
@@ -135,7 +135,7 @@ It means that we need to remove all references to the Loader Data.
 
 28
 00:01:32,780 --> 00:01:37,190
-为了做到这一点，我们调用SwapCursor，cursor adaptor为空
+为了做到这一点，我们调用cursorAdapter上的swapCursor方法，并传入null
 To do that we call SwapCursor on our cursor adaptor with null.
 
 29
@@ -150,7 +150,7 @@ We pass in that loader ID,
 
 31
 00:01:42,780 --> 00:01:48,130
-刚才已经写好了的回掉函数，还有一个可选的bundle
+刚才已经写好了的回调函数，还有一个可选的bundle
 the loader call back we just filled out, and an optional bundle.
 
 32
@@ -160,7 +160,7 @@ This will do all that cool life cycle stuff we covered in the loader intro,
 
 33
 00:01:51,840 --> 00:01:55,880
-这样，如果loader还不存在，就调用onCreatLoader
+这样，如果loader还不存在，就调用onCreateLoader
 such as, calling onCreate loader if the loader doesn't already exist.
 
 34
