@@ -75,12 +75,12 @@ the main layout actually maps to the two pane layout.
 
 16
 00:00:48,100 --> 00:00:50,950
-在Java代码中，你可以使用R.layout.main来引用他，
+在Java代码中，你可以使用R.layout.main来引用它，
 In the Java code, you can reference it as r.layout.main,
 
 17
 00:00:50,950 --> 00:00:53,640
-但他实际上会引用到双面板布局。
+但它实际上会引用到双面板布局。
 but it's actually referencing the two pane layout.
 
 18

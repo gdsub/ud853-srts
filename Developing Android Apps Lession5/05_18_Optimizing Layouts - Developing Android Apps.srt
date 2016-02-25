@@ -50,12 +50,12 @@ off with more siblings and fewer children. Because it's
 
 11
 00:00:32,490 --> 00:00:34,970
-因为它并不这么简单，我相信你也想避免过多的视图。
+因为它并不这么简单，我相信你也想
 never as simple as that, you also want to
 
 12
 00:00:34,970 --> 00:00:38,930
-通常情况下，
+避免过多的视图。通常情况下，
 avoid having excessive views. In the most general terms, that
 
 13
