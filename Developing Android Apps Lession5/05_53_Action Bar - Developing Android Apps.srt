@@ -1,23 +1,23 @@
 1
 00:00:00,190 --> 00:00:01,609
-前面我们学习了style,以及怎样使用它们
+前面我们学习了style,以及怎样把它们
 Earlier we learned about styles and
 
 2
 00:00:01,609 --> 00:00:04,470
-把一个视图变的特别
+应用到某一个别的视图
 how you can apply them
 to an individual view.
 
 3
 00:00:04,470 --> 00:00:07,580
-如果你希望整个app或者activity的所有视图都使用它
+如果你希望把它应用到整个app或者activity的所有视图
 If you want to apply it to all the views
 in an activity or application,
 
 4
 00:00:07,580 --> 00:00:11,330
-你可以在activity或者manifest里
+你可以在manifest中的activity或者application标签里
 you can do it by specifying a theme
 attribute on the activity or
 
@@ -28,12 +28,13 @@ application tag in the Android manifest.
 
 6
 00:00:14,600 --> 00:00:17,990
-现在我们来设计action bar
+现在我们使用style来调整action bar 使main activity与
 Now we style the action bar to look
 like these visual mocks for the main and
 
 7
 00:00:17,990 --> 00:00:19,020
+detail activity看上去像我们设计的样子
 detail activity.
 
 8
@@ -44,13 +45,13 @@ because it extends from the preference
 
 9
 00:00:22,750 --> 00:00:26,100
-preference activity类，而不是action bar activity
+PreferenceActivity类，而不是ActionBarActivity
 activity class,
 instead of the action bar activity.
 
 10
 00:00:26,100 --> 00:00:28,180
-所以这些在下一节再讲
+所以那些在下一节再讲
 So that's going to be
 done in the next section.
 
@@ -67,7 +68,7 @@ blue hex color.
 
 13
 00:00:32,330 --> 00:00:36,250
-我们注意到detail activity 只显示了标题，没有图标
+我们注意到detail activity只显示了标题，没有图标
 We notice that the detail activity
 only shows the title, no app icon.
 
@@ -213,9 +214,9 @@ shown in the status bar,
 
 38
 00:01:52,280 --> 00:01:57,340
-典型的，status bar会比actionBar拥有更暗的颜色
+典型的，status bar会比app bar拥有更暗的颜色
 and typically the status bar is
-a darker color than the at bar.
+a darker color than the app bar.
 
 39
 00:01:57,340 --> 00:02:03,315
