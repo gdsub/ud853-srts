@@ -40,12 +40,12 @@ are good if you want to specify that one view should be to the right of another,
 
 9
 00:00:29,100 --> 00:00:33,545
-上面的时候，使用RelativeLayout是合适的。当你想要一个view在
+上面的时候，使用RelativeLayout是合适的。RelativeLayout也适用于当你想要一个view在
 or on top of another view. Relative layouts are also good if you want a view to
 
 10
 00:00:33,545 --> 00:00:37,923
-父view的左边，上面，右边或者底部的时候RelativeLayout也很恰当。但对于现在这种，要让两个TextView居中于
+父view的左边，上面，右边或者底部的时候。但对于现在这种，要让两个TextView居中于
 be aligned to the parents left, top, right or bottom. But it's harder in this
 
 11

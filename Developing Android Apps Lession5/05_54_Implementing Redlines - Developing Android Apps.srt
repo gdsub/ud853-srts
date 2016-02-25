@@ -60,7 +60,7 @@ if we just specify wrap content in case the image size changes.
 
 13
 00:00:38,210 --> 00:00:41,150
-接下来我们来处理文字。在ice cream sandwich以及更高版本的android系统中
+接下来我们来处理文字。在ice cream sandwich(4.0.3)以及更高版本的android系统中
 Next we style the text. On ice cream sandwich and above,
 
 14
@@ -110,7 +110,7 @@ for consistency with a platform and for user experience. In our
 
 23
 00:01:08,800 --> 00:01:11,710
-的程序中，我们统一使用标准的字体大小。当然了，有一些是
+在我们的程序中，我们统一使用标准的字体大小。当然了，有一些是
 app, we stick to the standard type sizes. And that's an
 
 24
@@ -120,17 +120,17 @@ intentional part of the design, such as the large temperature values.
 
 25
 00:01:15,540 --> 00:01:17,750
-所以这里红色标记说明了日期文本的大小为22sp
+所以这里红色标记说明了日期文本的大小
 Hence, when the red line say that the date text
 
 26
 00:01:17,750 --> 00:01:21,100
-我们可以把代码中文本的尺寸设置为22sp
+应为22sp，我们可以按需求把代码中文本的
 should be 22sp for font size, we could specify Android
 
 27
 00:01:21,100 --> 00:01:24,420
-但是Andorid所推荐的
+尺寸设置为22sp，但是Andorid所推荐的
 text size to be 22sp, but the text appearance large
 
 28

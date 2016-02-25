@@ -108,7 +108,7 @@ to all the child views.
 
 20
 00:00:51,778 --> 00:00:54,800
-在我们是出乎啊视图之后的newView方法中，
+在newView方法中，当我们加载视图之后，
 In the newView method after
 we've inflated the view,
 
@@ -159,7 +159,7 @@ all the individual views that we need to
 
 29
 00:01:16,300 --> 00:01:20,040
-例如icon视图，日期视图，描述视图等等。
+例如iconView，dateView，descriptionView等等。
 update, such as icon view, date view,
 description view and so on.
 

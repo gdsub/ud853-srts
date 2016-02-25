@@ -6,19 +6,19 @@ items have the same layout.
 
 2
 00:00:02,860 --> 00:00:05,880
-然而，我们希望今日项目使用不同的布局，
+然而，我们希望“今日项”使用不同的布局，
 However, we want the today
 item to use a different layout
 
 3
 00:00:05,880 --> 00:00:10,320
-也就是我们之前在list_item_forecast_today XML文件中定义的。
+也就是我们之前在list_item_forecast_today XML文件中所定义的。
 which we defined earlier in the list
 item forecast today XML file.
 
 4
 00:00:10,320 --> 00:00:13,460
-这就是适配器项的“项视图类型”发挥作用的地方了。
+这就是适配器的“项视图类型”(ItemViewType)发挥作用的地方了。
 This is where adapter item
 view types will save the day.
 
@@ -60,7 +60,7 @@ a today list item.
 
 11
 00:00:34,610 --> 00:00:37,830
-然后他就会解析，并且为适当的视图绑定数据。
+然后他就会加载适当的布局，并且为其绑定数据。
 Then it will inflate, and
 bind data for the appropriate layout.
 
@@ -119,7 +119,7 @@ are declared up above.
 
 21
 00:01:05,280 --> 00:01:08,760
-他们就只是代表了视图类型的整形。
+他们就只是代表了视图类型的整型。
 These are just integer
 representations of the view type.
 

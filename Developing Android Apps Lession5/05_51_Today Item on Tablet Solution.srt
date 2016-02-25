@@ -30,12 +30,12 @@ where the forecast adapter is initialized. So we set the Boolean here,
 
 7
 00:00:20,580 --> 00:00:23,200
-因为它是public方法，所以我们这里这么写。
+之所以我们这里这么写。是因为
 as well. The reason we have this code here is because it's
 
 8
 00:00:23,200 --> 00:00:26,180
-将来它可以在这个方法之前或者之后
+它是一个public方法 并且将来它可以在这个方法(onCreateView)之前或者之后
 a public method. So, in the future, it could be called before or
 
 9

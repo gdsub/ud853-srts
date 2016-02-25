@@ -70,7 +70,7 @@ per inch, then it increases to medium density, high density
 
 15
 00:00:45,870 --> 00:00:48,960
-XDPI、XXDPI、XXXDPI 等等  它越高就代表这
+XHDPI、XXHDPI、XXXHDPI 等等  它越高就代表这
 all the way to extra, extra, extra high density devices
 
 16
@@ -125,7 +125,7 @@ So we need a consistent unit of measure to define physical
 
 26
 00:01:19,970 --> 00:01:24,610
-在Android里  我们称之为与密度无关的像素  或者叫 dips
+在Android里  我们称之为与密度无关的像素  或者叫 dip(s)
 size, and in Android we call that density-independent pixels or dips
 
 27
