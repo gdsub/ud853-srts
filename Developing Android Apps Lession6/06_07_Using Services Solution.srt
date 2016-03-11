@@ -90,9 +90,9 @@ creates a helper thread for
 
 17
 00:00:46,780 --> 00:00:50,240
-这个功能和stringTask所做的类似
+这个功能和AsyncTask所做的类似
 us to run code on,
-similar to what a string task does.
+similar to what async task does.
 
 18
 00:00:50,240 --> 00:00:54,180
@@ -129,7 +129,7 @@ instead of using it as a parameter.
 
 24
 00:01:08,180 --> 00:01:09,700
-然后开启服务
+然后启动服务
 And then start the service.
 
 25

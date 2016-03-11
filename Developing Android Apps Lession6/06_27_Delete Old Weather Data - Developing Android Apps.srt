@@ -15,6 +15,6 @@ get out app uninstalled. So let's fix this. Add code to delete weather data that
 
 4
 00:00:12,930 --> 00:00:18,190
-一天之前的天气数据。我们需要使用日历来让应用完成这个功能。
+一天之前的天气数据。我们需要使用Calendar类的函数来让应用完成日期的计算。
 is more than one day old. Use the Calendar function to do data arithmetic.
 

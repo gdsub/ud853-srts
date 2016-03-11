@@ -30,12 +30,12 @@ representing the weather forecast, the title for our
 
 7
 00:00:21,220 --> 00:00:25,390
-以及文本内容
+以及我们的文本内容
 App. And our content text, the forecast with
 
 8
 00:00:25,390 --> 00:00:28,600
-还有高温和低温的预报。
+带有高温和低温的天气预报。
 highs and lows. We're going to use another class
 
 9

@@ -1,11 +1,11 @@
 1
 00:00:00,390 --> 00:00:02,780
-恭喜。你现在知道如何构建一个在前台运行没关
+恭喜。你现在知道如何构建一个在前台运行美观
 Congratulations. You now know how to build an
 
 2
 00:00:02,780 --> 00:00:05,290
-同时在后台运行高校的应用了。
+同时在后台运行高效的应用了。
 app that runs beautifully in the foreground, and efficiently
 
 3
@@ -30,7 +30,7 @@ great user experience, even when your app isn't visible.
 
 7
 00:00:17,670 --> 00:00:19,720
-现在加入来听最后一段故事，
+现在来听听我说的最后一段故事，
 Join me now for the final story time, as
 
 8

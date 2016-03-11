@@ -30,7 +30,7 @@ like downloading files, uploading photos, or playing music? Well,
 
 7
 00:00:17,150 --> 00:00:21,357
-有一个应用程序的组件就是为这种情况而生的
+有一个应用程序的组件就是为这种情况而生的——Services
 there's an application component for that. Services. We've already
 
 8
@@ -130,7 +130,7 @@ task you wish to execute. But notice that there are
 
 27
 00:01:18,860 --> 00:01:21,880
-它们没有并不监控状态改变，而这些状态会反映
+并不存在一个可覆盖的方法，来监控应用状态的改变，从而反映
 no handlers for monitoring changes in state, to reflect the
 
 28
@@ -145,7 +145,7 @@ service itself sends a signal to the framework that the
 
 30
 00:01:27,250 --> 00:01:30,930
-它包含了这个应用应该比
+指出这个运行了服务的应用应该比
 containing app should be considered higher priority than other apps
 
 31
@@ -305,22 +305,22 @@ common best practice pattern, for using intents, which are
 
 62
 00:03:07,920 --> 00:03:10,640
-来在服务里使用intent。它创建了一个
+来在服务里使用intent。它创建了一个intent队列
 executed within a service. It creates a queue of
 
 63
 00:03:10,640 --> 00:03:14,630
-传入的intent的队列，并在服务被调用时传进去
+传入的intent在startService被调用时入队
 incoming intents, passed in when start service is called.
 
 64
 00:03:14,630 --> 00:03:17,970
-这样，在你的intent service实现里的onHandleIntent方法里
+这样，在你的IntentService实现类中的onHandleIntent方法里
 These are then, processed sequentially on a background thread,
 
 65
 00:03:17,970 --> 00:03:22,970
-在后台按顺序执行
+这些intent就在后台线程中按顺序一一执行了
 within the onHandleIntent handler, within your intent service implementation.
 
 66
@@ -360,6 +360,6 @@ background tasks or the sync adapter which you'll learn about
 
 73
 00:03:43,810 --> 00:03:47,620
-它可以完美的执行后台数据同步
+它可以完美地执行后台数据同步
 later in this lesson. Perfect for performing background data synchronization
 

@@ -35,7 +35,7 @@ The next thing to do is to move the function
 
 8
 00:00:21,270 --> 00:00:25,400
-在地图中把openPreferredLocation方法移到ForecastFragmen里去。
+openPreferredLocationInMap方法移到ForecastFragment里去。
 open preferred location in map over to forecast fragment. Instead of
 
 9
@@ -55,7 +55,7 @@ our cursor moved to a reasonable position, and then build
 
 12
 00:00:34,480 --> 00:00:39,160
-然后创建经纬度以冒号连接的字符串。
+然后创建带冒号的经纬度字符串。
 our new string which is just latitude colon longitude. We'll
 
 13

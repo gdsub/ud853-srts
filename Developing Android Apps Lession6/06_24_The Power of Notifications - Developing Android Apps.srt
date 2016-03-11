@@ -95,11 +95,11 @@ user to disable your app's notifications
 
 20
 00:00:59,630 --> 00:01:01,450
-所以看看下面的指令设计指南的链接里
+所以看看下面的的笔记里
 permanently. So check out the instruction
 
 21
 00:01:01,450 --> 00:01:05,030
-关于创建良好的通知的部分吧
+关于创建良好通知设计指南那部分的链接吧
 that's below for links to the design guide in creating good notifications.
 

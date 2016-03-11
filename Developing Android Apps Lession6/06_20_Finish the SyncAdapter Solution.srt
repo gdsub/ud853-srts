@@ -45,7 +45,7 @@ We'll have to patch a few things up.
 
 9
 00:00:27,030 --> 00:00:30,520
-我们需要调用getContexts来获得当前的Context对象
+我们需要调用getContext()来获得当前的Context对象
 We'll have to call get contexts
 to get the current context.
 
@@ -57,7 +57,7 @@ the getWeatherDataFromJson function
 
 11
 00:00:35,150 --> 00:00:37,690
-中补充getContexts
+中补充getContext()
 as well as the addLocation function.
 
 12

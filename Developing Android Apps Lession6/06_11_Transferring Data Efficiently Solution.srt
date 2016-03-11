@@ -5,7 +5,7 @@ Now, at first glass, reducing the payload of each transfer, and
 
 2
 00:00:03,600 --> 00:00:07,330
-并且在需要的时候进行数据传输，貌似算是个办法
+并且仅在需要的时候进行数据传输，貌似算是个办法
 only transmitting data when it's required seems like a sound approach.
 
 3
@@ -15,7 +15,7 @@ You're reducing the amount of data being transferred, so that's less
 
 4
 00:00:09,830 --> 00:00:14,300
-这样在设备上所存储的运行过程中所产生的荣誉数据就少多了。
+这样在设备上 那些用于存储处理冗余数据的冗余处理工作也就少多了。
 data on the network. That's less superfluous work being done storing processing
 
 5
@@ -30,7 +30,7 @@ any work, until you actually know you need to do it.
 
 7
 00:00:20,040 --> 00:00:22,630
-但事实证明相比于之前的大cookie模式下的全部工作，
+但事实证明相比于之前的大饼干模式下的全部工作，
 But it turns out that this approach has it's drawbacks, compared
 
 8
@@ -40,16 +40,16 @@ to the big cookie model of all of that work up front.
 
 9
 00:00:26,220 --> 00:00:30,110
-所以，综上所述，这个还是一个更好的解决办法。但是让我们近距离观察这个大cookie
+所以，综上所述，这个还是一个更好的解决办法。但是让我们近距离观察这个大饼干
 So, overall, this is a better solution. But let's take a closer look at the big
 
 10
 00:00:30,110 --> 00:00:31,670
-模板。要做到这一点，我们就需要
+模型。要做到这一点，我们就需要理解
 cookie model. And to do that, we really
 
 11
 00:00:31,670 --> 00:00:34,360
-底层的cell radio状态机。
+底层的无线电状态机模块。
 need to understand the underlying cell radio state machine.
 
