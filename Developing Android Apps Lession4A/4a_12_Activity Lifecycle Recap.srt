@@ -1,60 +1,60 @@
 1
 00:00:00,470 --> 00:00:05,240
-¶ÔÓÚSunshineÕâ¸ö³ÌĞòÀ´Ëµ  ÕâĞ©ĞÅÏ¢Ö»ÊÇÀíÂÛÉÏµÄ
+å¯¹äºSunshineè¿™ä¸ªç¨‹åºæ¥è¯´  è¿™äº›ä¿¡æ¯åªæ˜¯ç†è®ºä¸Šçš„
 For the purposes of the Sunshine app, this information is purely theoretical.
 
 2
 00:00:05,240 --> 00:00:07,700
-ÊÂÊµÉÏ  µ±ÄãĞèÒª¼ÓÈëÒ»Ğ©ÌØÊâµÄ²Ù×÷  Èç´«¸Ğ¼àÌıÆ÷
+äº‹å®ä¸Š  å½“ä½ éœ€è¦åŠ å…¥ä¸€äº›ç‰¹æ®Šçš„æ“ä½œ  å¦‚ä¼ æ„Ÿç›‘å¬å™¨
 In fact, you'll really only need to consider this later,
 
 3
 00:00:07,700 --> 00:00:11,940
-»òÕß¶¨Î»¼àÌıÆ÷µÄÊ±ºò  Äã²ÅÕæÕıĞèÒª¿¼ÂÇÕâ¸öÎÊÌâ
+æˆ–è€…å®šä½ç›‘å¬å™¨çš„æ—¶å€™  ä½ æ‰çœŸæ­£éœ€è¦è€ƒè™‘è¿™ä¸ªé—®é¢˜
 when you're adding things like Sensor or LocationListeners. Until then,
 
 4
 00:00:11,940 --> 00:00:14,530
-µ½Ä¿Ç°ÎªÖ¹  Ä¬ÈÏµÄ×é¼şÄÜ°ïÄãÍê³É´ó¶àÊı²Ù×÷
+åˆ°ç›®å‰ä¸ºæ­¢  é»˜è®¤çš„ç»„ä»¶èƒ½å¸®ä½ å®Œæˆå¤§å¤šæ•°æ“ä½œ
 the default components will handle much of this behavior for
 
 5
 00:00:14,530 --> 00:00:18,710
-×ÜÖ®  ÄãÏÖÔÚÁË½âÁËÉúÃüÖÜÆÚ
+æ€»ä¹‹  ä½ ç°åœ¨äº†è§£äº†ç”Ÿå‘½å‘¨æœŸ
 you. In any case, now that you understand the lifecycle and
 
 6
 00:00:18,710 --> 00:00:22,110
-ºÍµ±ÏµÍ³ĞèÒª×ÊÔ´Ê±  Ëü»áÈçºÎÈÃÄãµÄÓ¦ÓÃÍË³ö
+å’Œå½“ç³»ç»Ÿéœ€è¦èµ„æºæ—¶  å®ƒä¼šå¦‚ä½•è®©ä½ çš„åº”ç”¨é€€å‡º
 the way the system handles exiting your app, when it needs its resources.
 
 7
 00:00:22,110 --> 00:00:26,380
-ÄãÒ²Ó¦¸ÃÃ÷°×ÎªÊ²Ã´ÍË³ö»òÕßÍ£Ö¹¼üÔÚAndroidÓ¦ÓÃÖĞ ÆäÊµ
+ä½ ä¹Ÿåº”è¯¥æ˜ç™½ä¸ºä»€ä¹ˆé€€å‡ºæˆ–è€…åœæ­¢é”®åœ¨Androidåº”ç”¨ä¸­ å…¶å®
 You should hopefully understand why Exit or Quit buttons in Android apps serve
 
 8
 00:00:26,380 --> 00:00:31,020
-²¢Ã»ÓĞÊµ¼ÊµÄÒâÒå  ×î¶à  Ò²¾ÍÊÇÄã¿ÉÒÔÍ¨¹ıÔÚActivityÖĞµ÷ÓÃFinishº¯Êı
+å¹¶æ²¡æœ‰å®é™…çš„æ„ä¹‰  æœ€å¤š  ä¹Ÿå°±æ˜¯ä½ å¯ä»¥é€šè¿‡åœ¨Activityä¸­è°ƒç”¨Finishå‡½æ•°
 no practical purpose. At most, you can call finish on an activity and
 
 9
 00:00:31,020 --> 00:00:35,070
-ÈÃÄãµÄÓ¦ÓÃÂíÉÏ½áÊø  µ±Äãµã»÷·µ»Ø¼üÊ±
+è®©ä½ çš„åº”ç”¨é©¬ä¸Šç»“æŸ  å½“ä½ ç‚¹å‡»è¿”å›é”®æ—¶
 it will get torn down instantly. That's actually exactly what happens when
 
 10
 00:00:35,070 --> 00:00:37,290
-Êµ¼ÊÉÏ±íÏÖµÄ¾ÍÊÇÉÏÊöµÄĞĞÎª
+å®é™…ä¸Šè¡¨ç°çš„å°±æ˜¯ä¸Šè¿°çš„è¡Œä¸º
 you use a simple hits back from within their activity.
 
 11
 00:00:37,290 --> 00:00:42,035
-Èç¹ûÄã»¹ÊÇÎŞ·¨È·ĞÅµÄ»°  ¿ÉÒÔ´ò¿ªÔÚÖ¸µ¼ÊÖ²áÀïµÄÊÓÆµ
+å¦‚æœä½ è¿˜æ˜¯æ— æ³•ç¡®ä¿¡çš„è¯  å¯ä»¥æ‰“å¼€åœ¨æŒ‡å¯¼æ‰‹å†Œé‡Œçš„è§†é¢‘
 If you're still not convinced, check out the video in the instructor notes.
 
 12
 00:00:42,035 --> 00:00:44,030
-ÎÒÔÚÄÇ¸öÊÓÆµÀï¶ÔÔ­Òò×öÁË¸ü¼ÓÉú¶¯µÄ½²Êö
+æˆ‘åœ¨é‚£ä¸ªè§†é¢‘é‡Œå¯¹åŸå› åšäº†æ›´åŠ ç”ŸåŠ¨çš„è®²è¿°
 Where I explain my reasoning with a little more, color.
 

@@ -1,86 +1,86 @@
 1
 00:00:00,450 --> 00:00:03,730
-ÔÚÒ»¸ö¿ÉÊÓ»¯²¼¾ÖµÄ±à¼­Æ÷ÉÏÉè¼Æ²¼¾ÖºÜ¼òµ¥
+åœ¨ä¸€ä¸ªå¯è§†åŒ–å¸ƒå±€çš„ç¼–è¾‘å™¨ä¸Šè®¾è®¡å¸ƒå±€å¾ˆç®€å•
 Building something that looks great in the visual layout editor is the easy
 
 2
 00:00:03,730 --> 00:00:08,960
-ÄãÍ¬ÑùĞèÒª¿¼ÂÇ²»Í¬³ß´çµÄÆÁÄ»ÒÔ¼°ÆÁÄ»µÄ·½Ïò
+ä½ åŒæ ·éœ€è¦è€ƒè™‘ä¸åŒå°ºå¯¸çš„å±å¹•ä»¥åŠå±å¹•çš„æ–¹å‘
 part. You also need to consider different screens and orientations. As you
 
 3
 00:00:08,960 --> 00:00:12,460
-µ±Äã¿ªÊ¼Éè¼ÆÄã³ÌĞòµÄUIÊ± ºÜ¿ÉÄÜ»áÏëÈ¥ÓÃÄã¿ª·¢Ê±ºòÓÃµÄÉè±¸²ÎÊı
+å½“ä½ å¼€å§‹è®¾è®¡ä½ ç¨‹åºçš„UIæ—¶ å¾ˆå¯èƒ½ä¼šæƒ³å»ç”¨ä½ å¼€å‘æ—¶å€™ç”¨çš„è®¾å¤‡å‚æ•°
 begin to layout your UI, there's a temptation to build it pixel perfect for
 
 4
 00:00:12,460 --> 00:00:16,120
-È¥ÊÔÍ¼¹¹½¨ÊÊºÏÕâ¸ö²ÎÊıµÄÏñËØÍêÃÀµÄ²¼¾Ö 
+å»è¯•å›¾æ„å»ºé€‚åˆè¿™ä¸ªå‚æ•°çš„åƒç´ å®Œç¾çš„å¸ƒå±€ 
 the device you happen to be using at the time. This is reinforced by
 
 5
 00:00:16,120 --> 00:00:20,320
-¶øÄãµÄ±à³ÌÊ±ÓÃµÄÉè±¸ÆÁÄ»´óĞ¡Í¨³£²»»á¸Ä±ä
+è€Œä½ çš„ç¼–ç¨‹æ—¶ç”¨çš„è®¾å¤‡å±å¹•å¤§å°é€šå¸¸ä¸ä¼šæ”¹å˜
 the fact that your apps window doesn't generally change size while it's running.
 
 6
 00:00:20,320 --> 00:00:22,720
-ËùÒÔÄãÎŞ·¨ËæÒâµ÷ÕûÆÁÄ»µÄ´óĞ¡
+æ‰€ä»¥ä½ æ— æ³•éšæ„è°ƒæ•´å±å¹•çš„å¤§å°
 So you can't just grab the lower i-corner and grow and
 
 7
 00:00:22,720 --> 00:00:26,530
-À´¿´¿´ËüÔÚ²»Í¬Éè±¸ÉÏÓĞÊ²Ã´²»Í¬±íÏÖ µ«ÊÇÈç¹ûÄã¿ª·¢¹ıÍøÂç»òÕß×ÀÃæÓ¦ÓÃ
+æ¥çœ‹çœ‹å®ƒåœ¨ä¸åŒè®¾å¤‡ä¸Šæœ‰ä»€ä¹ˆä¸åŒè¡¨ç° ä½†æ˜¯å¦‚æœä½ å¼€å‘è¿‡ç½‘ç»œæˆ–è€…æ¡Œé¢åº”ç”¨
 shrink your app to see how it behaves. But if you've ever developed for
 
 8
 00:00:26,530 --> 00:00:29,660
-Äã¾Í»áÖªµÀÕâÓĞÊ²Ã´È±µã
+ä½ å°±ä¼šçŸ¥é“è¿™æœ‰ä»€ä¹ˆç¼ºç‚¹
 the web or desktop, you know this static approach is a bad idea.
 
 9
 00:00:30,760 --> 00:00:36,950
-AndroidÊ×´Î·¢²¼Ê± ÆÁÄ»±ê×¼ÊÇ480*320µÄHVGA
+Androidé¦–æ¬¡å‘å¸ƒæ—¶ å±å¹•æ ‡å‡†æ˜¯480*320çš„HVGA
 When Android first launched, HVGA 480 by 320 resolution screens were standard.
 
 10
 00:00:36,950 --> 00:00:41,260
-ÄÇÊ±ºòÎÒÃÇ¿ÉÒÔÓÃ¾ø¶Ô²¼¾Ö¶¨ÒåÃ¿¸öÔªËØµÄÎ»ÖÃ
+é‚£æ—¶å€™æˆ‘ä»¬å¯ä»¥ç”¨ç»å¯¹å¸ƒå±€å®šä¹‰æ¯ä¸ªå…ƒç´ çš„ä½ç½®
 As we began exploring how to build engaging user experiences on those devices,
 
 11
 00:00:41,260 --> 00:00:44,650
-À´¿ª·¢¸ßÓÃ»§ÌåÑéµÄÓ¦ÓÃ³ÌĞò
+æ¥å¼€å‘é«˜ç”¨æˆ·ä½“éªŒçš„åº”ç”¨ç¨‹åº
 we could use absolute layouts to define the exact location of each
 
 12
 00:00:44,650 --> 00:00:50,840
-µ«ÊÇÒ»ÄêÒÔÄÚ µÚÒ»¸öWVGAÆÁÄ»µÄAndroidÊÖ»ú·¢²¼ÁË
+ä½†æ˜¯ä¸€å¹´ä»¥å†… ç¬¬ä¸€ä¸ªWVGAå±å¹•çš„Androidæ‰‹æœºå‘å¸ƒäº†
 screen element. But within a year, the first WVGA Android phones were released.
 
 13
 00:00:50,840 --> 00:00:54,850
-¶øÏÖÔÚAndroidÔËĞĞÔÚ¸÷ÖÖ³ß´çÆÁÄ»µÄÆ½°åÊÖ»ú¡¢Æ½°å¡¢TV
+è€Œç°åœ¨Androidè¿è¡Œåœ¨å„ç§å°ºå¯¸å±å¹•çš„å¹³æ¿æ‰‹æœºã€å¹³æ¿ã€TV
 And now Android runs on everything from phones to phablets, tablets, TVs and
 
 14
 00:00:54,850 --> 00:01:00,030
-»¹ÓĞ´©´÷Ê½Éè±¸ 
+è¿˜æœ‰ç©¿æˆ´å¼è®¾å¤‡ 
 wearables with any screen size, resolution and aspect ratio you can imagine.
 
 15
 00:01:00,030 --> 00:01:03,008
-×ÀÃæ¿ª·¢ºÍWeb¿ª·¢ÉÏ Äã¿ÉÒÔÓÃpanels»òCSS
+æ¡Œé¢å¼€å‘å’ŒWebå¼€å‘ä¸Š ä½ å¯ä»¥ç”¨panelsæˆ–CSS
 So, just like desktop or web where you might use panels or
 
 16
 00:01:03,008 --> 00:01:07,104
-ÄãµÄAndroid UIĞèÒªÊÊÓ¦¸÷ÖÖÆÁÄ»
+ä½ çš„Android UIéœ€è¦é€‚åº”å„ç§å±å¹•
 CSS, your Android UI needs to scale based on the screen it's running within,
 
 17
 00:01:07,104 --> 00:01:09,546
-Õâ¾ÍÊÇ²»Ê¹ÓÃ¾ø¶Ô²¼¾ÖµÄÔ­Òò
+è¿™å°±æ˜¯ä¸ä½¿ç”¨ç»å¯¹å¸ƒå±€çš„åŸå› 
 which is why absolute layout was deprecated.
 
 18
@@ -89,16 +89,16 @@ which is why absolute layout was deprecated.
 
 19
 00:01:14,284 --> 00:01:17,559
-ÀûÓÃLinearLayout²¼¾Ö¡¢RelativeLayout²¼¾Ö¡¢
+åˆ©ç”¨LinearLayoutå¸ƒå±€ã€RelativeLayoutå¸ƒå±€ã€
 In favor of layouts like LinearLayout, RelativeLayout and
 
 20
 00:01:17,559 --> 00:01:20,063
-GridLayout²¼¾Ö À´¹¹½¨¶¯Ì¬´óĞ¡µÄ²¼¾Ö
+GridLayoutå¸ƒå±€ æ¥æ„å»ºåŠ¨æ€å¤§å°çš„å¸ƒå±€
 GridLayout, they can dynamically resize and
 
 21
 00:01:20,063 --> 00:01:23,930
-ÒÔÊÊÓ¦Ô½À´Ô½¶àÑù»¯µÄAndroidÉè±¸ Çë×ñÕÕÏìÓ¦Ê½²¼¾ÖµÄ×¼ÔòÀ´Éè¼Æ
+ä»¥é€‚åº”è¶Šæ¥è¶Šå¤šæ ·åŒ–çš„Androidè®¾å¤‡ è¯·éµç…§å“åº”å¼å¸ƒå±€çš„å‡†åˆ™æ¥è®¾è®¡
 adapt to any screen, following the principles of responsive design.
 

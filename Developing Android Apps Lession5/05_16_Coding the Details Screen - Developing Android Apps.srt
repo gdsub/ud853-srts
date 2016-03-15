@@ -17,7 +17,7 @@ This is what it looks like.
 
 4
 00:00:06,120 --> 00:00:08,500
-我们有日期，最高和最低问题，以及
+我们有日期，最高和最低温度，以及
 We have the date, the high and
 low temperatures, and
 
@@ -34,7 +34,7 @@ and the weather forecast.
 
 7
 00:00:13,030 --> 00:00:14,470
-这些线是水平的。
+这些东西是水平排列的。
 And these line up horizontally.
 
 8
@@ -51,7 +51,7 @@ you can populate all this information,
 
 10
 00:00:21,060 --> 00:00:22,490
-包括这些心的视图。
+包括这些新的视图。
 including these new views.
 
 11
@@ -153,7 +153,7 @@ is displayed on screen.
 
 28
 00:01:02,390 --> 00:01:05,590
-你可以使用下面提供的代码片段用于辅助方法
+你可以把下面提供的代码片段用于辅助方法
 You can use the code snippets provided
 below for helper functions and
 
@@ -164,7 +164,7 @@ strings that you're going to need.
 
 30
 00:01:07,500 --> 00:01:09,950
-并且，留下一个占位图现在也是可以的。
+并且，现在留下一个占位图也是可以的。
 And again, leaving a place
 holder image is fine for now.
 

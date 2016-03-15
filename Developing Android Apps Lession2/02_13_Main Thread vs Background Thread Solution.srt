@@ -1,169 +1,169 @@
 1
 00:00:00,440 --> 00:00:03,790
-Èç¹ûÄãµÄ»Ø´ğÊÇÒì²½ÈÎÎñ£¬ÄÇÃ´ÄãÊÇÕıÈ·µÄ
+å¦‚æœä½ çš„å›ç­”æ˜¯å¼‚æ­¥ä»»åŠ¡ï¼Œé‚£ä¹ˆä½ æ˜¯æ­£ç¡®çš„
 If you answered A sync Task, then you are correct.
 
 2
 00:00:03,790 --> 00:00:06,930
-ÎªÁËÅªÇåÎªÊ²Ã´ÎÒÃÇÑ¡ÔñÒì²½ÈÎÎñ×÷Îª´ğ°¸
+ä¸ºäº†å¼„æ¸…ä¸ºä»€ä¹ˆæˆ‘ä»¬é€‰æ‹©å¼‚æ­¥ä»»åŠ¡ä½œä¸ºç­”æ¡ˆ
 To understand why we chose Async Task as the answer,
 
 3
 00:00:06,930 --> 00:00:09,900
-ÎÒÃÇ¿ÉÒÔ²éÔÄÒ»ÏÂ¿ª·¢ÕßÎÄµµ
+æˆ‘ä»¬å¯ä»¥æŸ¥é˜…ä¸€ä¸‹å¼€å‘è€…æ–‡æ¡£
 we can check the developer documentation. In this API
 
 4
 00:00:09,900 --> 00:00:13,670
-ÔÚAPIÖ¸ÄÏµÄ½ø³ÌÓëÏß³Ì²¿·Ö£¬¹ö¶¯µ½
+åœ¨APIæŒ‡å—çš„è¿›ç¨‹ä¸çº¿ç¨‹éƒ¨åˆ†ï¼Œæ»šåŠ¨åˆ°
 guide on processes and threads, we can scroll to the
 
 5
 00:00:13,670 --> 00:00:16,730
-worker threadsÕâÒ»¶Î¡£Èç¹ûÄãÏëÏÖÔÚ
+worker threadsè¿™ä¸€æ®µã€‚å¦‚æœä½ æƒ³ç°åœ¨
 Worker threads section. Right away, if you want to follow
 
 6
 00:00:16,730 --> 00:00:20,810
-¾ÍÈ¥²éÔÄ£¬Á´½Ó¾ÍÔÚµ×²¿ÁË¡£
+å°±å»æŸ¥é˜…ï¼Œé“¾æ¥å°±åœ¨åº•éƒ¨äº†ã€‚
 along, the link is included below. Say, for example, that
 
 7
 00:00:20,810 --> 00:00:23,170
-±ÈÈç£¬ÄãÏë´ÓÍøÂçÉÏ
+æ¯”å¦‚ï¼Œä½ æƒ³ä»ç½‘ç»œä¸Š
 you want to download an image from the network
 
 8
 00:00:23,170 --> 00:00:26,040
-ÏÂÔØÒ»ÕÅÍ¼Æ¬È»ºó¸üĞÂUI
+ä¸‹è½½ä¸€å¼ å›¾ç‰‡ç„¶åæ›´æ–°UI
 at this URL and then you want to update the
 
 9
 00:00:26,040 --> 00:00:30,020
-À´ÏÔÊ¾Õâ¸öÍ¼Æ¬£¬ÄÇºÃ£¬´´½¨Äã×Ô¼ºµÄÏÂÔØ
+æ¥æ˜¾ç¤ºè¿™ä¸ªå›¾ç‰‡ï¼Œé‚£å¥½ï¼Œåˆ›å»ºä½ è‡ªå·±çš„ä¸‹è½½
 UI so that it displays this bitmap. Well, creating
 
 10
 00:00:30,020 --> 00:00:32,250
-Í¼Æ¬µÄÏß³ÌÊÇÓĞ¼ÛÖµµÄÑ¡Ïî
+å›¾ç‰‡çš„çº¿ç¨‹æ˜¯æœ‰ä»·å€¼çš„é€‰é¡¹
 your own thread to download the image is a
 
 11
 00:00:32,250 --> 00:00:35,170
-µ«ÊÇÕâÑù»áºÜ¶à¶îÍâµÄ¿ªÏú
+ä½†æ˜¯è¿™æ ·ä¼šå¾ˆå¤šé¢å¤–çš„å¼€é”€
 valid option, but there's a lot of overhead to
 
 12
 00:00:35,170 --> 00:00:38,790
-ÓÃÀ´±£Ö¤ÄãµÄÓ¦ÓÃÏß³Ì°²È«
+ç”¨æ¥ä¿è¯ä½ çš„åº”ç”¨çº¿ç¨‹å®‰å…¨
 handle in making you app actually thread safe. After
 
 13
 00:00:38,790 --> 00:00:41,750
-ÏÂÔØºÃÍ¼Æ¬ºó£¬²»ÄÜÖ±½Ó´ÓºóÌ¨Ïß³ÌÀï
+ä¸‹è½½å¥½å›¾ç‰‡åï¼Œä¸èƒ½ç›´æ¥ä»åå°çº¿ç¨‹é‡Œ
 you download your image, you cannot directly update the
 
 14
 00:00:41,750 --> 00:00:45,070
-¸üĞÂUI¡£È»¶ø£¬AndroidÓĞÒ»Ğ©
+æ›´æ–°UIã€‚ç„¶è€Œï¼ŒAndroidæœ‰ä¸€äº›
 UI from a background thread. However, Android has several
 
 15
 00:00:45,070 --> 00:00:47,500
-Ñ¡Ïî£¬¿ÉÒÔ´ÓÆäËüÏß³Ì
+é€‰é¡¹ï¼Œå¯ä»¥ä»å…¶å®ƒçº¿ç¨‹
 options to run code that manipulates the UI to
 
 16
 00:00:47,500 --> 00:00:51,280
-²Ù×÷UIÏß³Ì¡£ÔÚÕâ¸öÀı×ÓÀï
+æ“ä½œUIçº¿ç¨‹ã€‚åœ¨è¿™ä¸ªä¾‹å­é‡Œ
 run from other threads. In this example, yet another
 
 17
 00:00:51,280 --> 00:00:54,220
-ÁíÍâÒ»¸örunnableÒÑ¾­±»´´½¨
+å¦å¤–ä¸€ä¸ªrunnableå·²ç»è¢«åˆ›å»º
 runnable is created to get the bitmap result back onto
 
 18
 00:00:54,220 --> 00:00:57,810
-Õâ¸örunnableÓÃÀ´·µ»ØÍ¼Æ¬¸øÖ÷Ïß³Ì,¸üĞÂImageView
+è¿™ä¸ªrunnableç”¨æ¥è¿”å›å›¾ç‰‡ç»™ä¸»çº¿ç¨‹,æ›´æ–°ImageView
 the main thread to update the image view. This solution
 
 19
 00:00:57,810 --> 00:01:00,220
-Õâ¸ö½â¾ö·½°¸ÉÔÎ¢ÓĞĞ©Âé·³£¬ÒòÎªÄã±ØĞë¹ÜÀíÁ½¸örunnable
+è¿™ä¸ªè§£å†³æ–¹æ¡ˆç¨å¾®æœ‰äº›éº»çƒ¦ï¼Œå› ä¸ºä½ å¿…é¡»ç®¡ç†ä¸¤ä¸ªrunnable
 is a little cumbersome because you have to manage two
 
 20
 00:01:00,220 --> 00:01:04,099
-ÎªÁË³éÀëÕâÖÖ¸´ÔÓĞÔ
+ä¸ºäº†æŠ½ç¦»è¿™ç§å¤æ‚æ€§
 runnables here. To abstract away this complexity we can use
 
 21
 00:01:04,099 --> 00:01:06,960
-ÎÒÃÇ¿ÉÒÔÓÃÒì²½ÈÎÎñ£¬Íê³ÉºóÔÙ¶ªµôËü
+æˆ‘ä»¬å¯ä»¥ç”¨å¼‚æ­¥ä»»åŠ¡ï¼Œå®Œæˆåå†ä¸¢æ‰å®ƒ
 an async task and then to kick off the async
 
 22
 00:01:06,960 --> 00:01:10,400
-ÀıÈç£¬Ò»µ©°´Å¥±»µã»÷ÁË
+ä¾‹å¦‚ï¼Œä¸€æ—¦æŒ‰é’®è¢«ç‚¹å‡»äº†
 task. For example, when someone clicks a button, then you
 
 23
 00:01:10,400 --> 00:01:13,030
-ÄãÖ»ĞèÒª³õÊ¼»¯Õâ¸öÈÎÎñ£¬È»ºóµ÷ÓÃexecuteº¯Êı
+ä½ åªéœ€è¦åˆå§‹åŒ–è¿™ä¸ªä»»åŠ¡ï¼Œç„¶åè°ƒç”¨executeå‡½æ•°
 just initialize the task, and then you can call execute
 
 24
 00:01:13,030 --> 00:01:16,730
-ÔÙ´«ÈëËüĞèÒªµÄ²ÎÊı
+å†ä¼ å…¥å®ƒéœ€è¦çš„å‚æ•°
 on it, and then pass in any parameters that are needed.
 
 25
 00:01:16,730 --> 00:01:19,470
-×¢Òâ£¬ÄãÕıÔÚ¼Ì³ĞÒ»¸öÒì²½Àà
+æ³¨æ„ï¼Œä½ æ­£åœ¨ç»§æ‰¿ä¸€ä¸ªå¼‚æ­¥ç±»
 Notice that when you're extending the Async class, there's a
 
 26
 00:01:19,470 --> 00:01:22,750
-ÓĞÒ»Ğ©ÄãĞèÒªÖ¸¶¨µÄÊôĞÔ
+æœ‰ä¸€äº›ä½ éœ€è¦æŒ‡å®šçš„å±æ€§
 couple of generics that you need to specify. The first is
 
 27
 00:01:22,750 --> 00:01:24,670
-Ê×ÏÈÊÇÔÚdoInBackground·½·¨ÀïÄãĞèÒª´«ÈëÀàĞÍ
+é¦–å…ˆæ˜¯åœ¨doInBackgroundæ–¹æ³•é‡Œä½ éœ€è¦ä¼ å…¥ç±»å‹
 the type that will be passed into the do in
 
 28
 00:01:24,670 --> 00:01:28,520
-ÕâÑù£¬Èç¹ûÄãÏë´«ÈëÒ»¸öÍ¼Æ¬URL£¬
+è¿™æ ·ï¼Œå¦‚æœä½ æƒ³ä¼ å…¥ä¸€ä¸ªå›¾ç‰‡URLï¼Œ
 background method. So, if you want to pass in this image URL
 
 29
 00:01:28,520 --> 00:01:31,310
-Õâ¸öURLÔÚÕâÀïÊÇÒ»¸öÖ¸¶¨µÄ×Ö·û´®
+è¿™ä¸ªURLåœ¨è¿™é‡Œæ˜¯ä¸€ä¸ªæŒ‡å®šçš„å­—ç¬¦ä¸²
 that is specified string here and then in doing background
 
 30
 00:01:31,310 --> 00:01:34,690
-È»ºóÔÚdoInBackgroundÀïÄã½«µÃµ½Ò»¸ö×Ö·û´®²ÎÊı
+ç„¶ååœ¨doInBackgroundé‡Œä½ å°†å¾—åˆ°ä¸€ä¸ªå­—ç¬¦ä¸²å‚æ•°
 you'll get a string parameter. The second one is for the
 
 31
 00:01:34,690 --> 00:01:37,380
-µÚ¶ş¸öÊÇ£¬ ÄãÔÚÈÎÎñÖ´ĞĞµÄÊ±ºòµÃµ½ËüµÄ¸üĞÂ½ø¶ÈµÄÀàĞÍ
+ç¬¬äºŒä¸ªæ˜¯ï¼Œ ä½ åœ¨ä»»åŠ¡æ‰§è¡Œçš„æ—¶å€™å¾—åˆ°å®ƒçš„æ›´æ–°è¿›åº¦çš„ç±»å‹
 type of object that you'll get when you get progress
 
 32
 00:01:37,380 --> 00:01:41,670
-ÔÚÕâÀïÎÒÃÇÓÃ²»µ½
+åœ¨è¿™é‡Œæˆ‘ä»¬ç”¨ä¸åˆ°
 updates as a task gets executed. We're not using that here,
 
 33
 00:01:41,670 --> 00:01:48,000
-ËùÒÔÖ¸¶¨Îªvoid¾Í¿ÉÒÔÁË
+æ‰€ä»¥æŒ‡å®šä¸ºvoidå°±å¯ä»¥äº†
 so it's okay to specify that as void. And the third type is type of results
 
 34
 00:01:48,000 --> 00:01:52,127
-µÚÈı¸ö·µ»Ø½á¹ûÀàĞÍ£¬ÎÒÃÇ»áÔÚonPostExecuteº¯ÊıÀï°ÑËü·µ»Øµ½Ö÷Ïß³ÌÖĞ
+ç¬¬ä¸‰ä¸ªè¿”å›ç»“æœç±»å‹ï¼Œæˆ‘ä»¬ä¼šåœ¨onPostExecuteå‡½æ•°é‡ŒæŠŠå®ƒè¿”å›åˆ°ä¸»çº¿ç¨‹ä¸­
 that we'll be sending back to the main thread through the onPostExecute method

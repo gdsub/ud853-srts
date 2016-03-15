@@ -1,195 +1,195 @@
 1
 00:00:00,570 --> 00:00:04,040
-2008Äê8ÔÂ25ÈÕ£¬ÎÒÔÚStackOverflowÌá³öÁËµÚÒ»¸öandroidÎÊÌâ¡£
+2008å¹´8æœˆ25æ—¥ï¼Œæˆ‘åœ¨StackOverflowæå‡ºäº†ç¬¬ä¸€ä¸ªandroidé—®é¢˜ã€‚
 I asked my first Android question on Stack Overflow, on August 25, 2008.
 
 2
 00:00:04,040 --> 00:00:09,080
-Õâ¸öÎÊÌâÎÒÊÇÔÚ0.9 Android Beta SDKÊÇÓöµ½µÄ¡£
+è¿™ä¸ªé—®é¢˜æˆ‘æ˜¯åœ¨0.9 Android Beta SDKæ˜¯é‡åˆ°çš„ã€‚
 Was about a problem I was having on the 0.9 Android Beta SDK.
 
 3
 00:00:10,100 --> 00:00:12,250
-Android´ÓÄÇÊ±Æğ¾Í¿ªÊ¼¿ìËÙ·¢Õ¹£¬
+Androidä»é‚£æ—¶èµ·å°±å¼€å§‹å¿«é€Ÿå‘å±•ï¼Œ
 Android has evolved quickly since then, and
 
 4
 00:00:12,250 --> 00:00:16,560
-ÔÚgoogle×Ü²¿µÄandroidÌğµãÔ°Çø£¬ÄÇÊÇandroid¿ª·¢µÄºËĞÄÇø£¬
+åœ¨googleæ€»éƒ¨çš„androidç”œç‚¹å›­åŒºï¼Œé‚£æ˜¯androidå¼€å‘çš„æ ¸å¿ƒåŒºï¼Œ
 no where is there more power than here, in the Android Dessert Sculpture garden,
 
 5
 00:00:16,560 --> 00:00:20,150
-ÔÚÄÇ»áÓĞ¸ü¸ßµÄĞ§ÂÊÈ¥¿ª·¢android¡£
+åœ¨é‚£ä¼šæœ‰æ›´é«˜çš„æ•ˆç‡å»å¼€å‘androidã€‚
 at the very heart of Android, building 44 at Google HQ.
 
 6
 00:00:21,180 --> 00:00:24,580
-ÄÇ¶ù²»½ö½öÓĞÕæÈË´óĞ¡µÄÌğµãÄ£ĞÍ¹©ÈËÅÄÕÕ£¬
+é‚£å„¿ä¸ä»…ä»…æœ‰çœŸäººå¤§å°çš„ç”œç‚¹æ¨¡å‹ä¾›äººæ‹ç…§ï¼Œ
 More than just a convenient place to take a photo with a life-size sculpture of
 
 7
 00:00:24,580 --> 00:00:30,400
-Ò²ÊÇandroid·¢Õ¹µÄÀúÊ·¼ûÖ¤¡£
+ä¹Ÿæ˜¯androidå‘å±•çš„å†å²è§è¯ã€‚
 your favorite dessert, it also tells the history of Android. In terms of food,
 
 8
 00:00:30,400 --> 00:00:34,850
-ÔÚÊ³Æ··½ÃæÀ´Ëµ£¬Ã¿Ò»¸öÍÆ³öµÄAndroid°æ±¾¶¼ÓĞÁ½¸ö¹²Í¬µã¡£
+åœ¨é£Ÿå“æ–¹é¢æ¥è¯´ï¼Œæ¯ä¸€ä¸ªæ¨å‡ºçš„Androidç‰ˆæœ¬éƒ½æœ‰ä¸¤ä¸ªå…±åŒç‚¹ã€‚
 every Android launch has two things in common. Work from work, Bacon Sundays,
 
 9
 00:00:34,850 --> 00:00:39,070
-ÈÕ¸´Ò»ÈÕµÄ¹¤×÷£¬¼Ó°àµÄÖÜÄ©£¬ÒÔ¼°Ã¿¸ö¹Ø¼üÊ±¿ÌµÄ²úÆ·ÍÆ³ö¡£
+æ—¥å¤ä¸€æ—¥çš„å·¥ä½œï¼ŒåŠ ç­çš„å‘¨æœ«ï¼Œä»¥åŠæ¯ä¸ªå…³é”®æ—¶åˆ»çš„äº§å“æ¨å‡ºã€‚
 and the crunch time leading up to each launch. And a dessert themed code named
 
 10
 00:00:39,070 --> 00:00:45,106
-androidÌğµãµñËÜÔ°ÊÇÃ¿Ò»¸öÒÔÌğµãÃüÃûµÄ°æ±¾´úÂëµÄÓÀ¾Ã¼ÍÄî¡£
+androidç”œç‚¹é›•å¡‘å›­æ˜¯æ¯ä¸€ä¸ªä»¥ç”œç‚¹å‘½åçš„ç‰ˆæœ¬ä»£ç çš„æ°¸ä¹…çºªå¿µã€‚
 memorialized forever here, in the Android Dessert Sculpture garden.
 
 11
 00:00:45,106 --> 00:00:49,447
-Ã¿¸ö°æ±¾µÄĞÂµÄÓ²¼ş¡¢APIsºÍ¹¦ÄÜ¶¼ÓĞ¿ª·¢ÈËÔ±µÄ²ÎÓë¡£
+æ¯ä¸ªç‰ˆæœ¬çš„æ–°çš„ç¡¬ä»¶ã€APIså’ŒåŠŸèƒ½éƒ½æœ‰å¼€å‘äººå‘˜çš„å‚ä¸ã€‚
 [NOISE] Each release brings with it new hardware, APIs, and features for
 
 12
 00:00:49,447 --> 00:00:53,954
-µÚÈı¸öÖØÒªµÄandroid°æ±¾£¬ÊÇ1.5°æ±¾£¬»òÕßËµÖ½±­µ°¸â£¬
+ç¬¬ä¸‰ä¸ªé‡è¦çš„androidç‰ˆæœ¬ï¼Œæ˜¯1.5ç‰ˆæœ¬ï¼Œæˆ–è€…è¯´çº¸æ¯è›‹ç³•ï¼Œ
 developers to play with. The third major Android release, 1.5 or Cupcake,
 
 13
 00:00:53,954 --> 00:00:58,162
-µ±È»ÕâÊÇËüµÄ°æ±¾´ú³Æ£¬Ëü¸øAndroid SDK´øÀ´ÁËÊÓÆµÂ¼ÖÆºÍ´°¿Ú¿Ø¼ş£¬
+å½“ç„¶è¿™æ˜¯å®ƒçš„ç‰ˆæœ¬ä»£ç§°ï¼Œå®ƒç»™Android SDKå¸¦æ¥äº†è§†é¢‘å½•åˆ¶å’Œçª—å£æ§ä»¶ï¼Œ
 as it was code named, brought video recording and widgets to the Android SDK,
 
 14
 00:00:58,162 --> 00:01:03,580
-ÕâÊÇÎÒÃÇ²İÆºÉÏµÚÒ»¸ö¿¾ºÃµÄÌğÆ·¡£
+è¿™æ˜¯æˆ‘ä»¬è‰åªä¸Šç¬¬ä¸€ä¸ªçƒ¤å¥½çš„ç”œå“ã€‚
 and the first baked good to our front lawn. Android 1.6 and 2.0 brought with
 
 15
 00:01:03,580 --> 00:01:08,770
-Android 1.6ºÍ2.0·Ö±ğÊÇ¾Ş´óµÄÌğÌğÈ¦ºÍËÉ±ı£¬ËüÃÇÖ§³Ö²»Í¬ÏÔÊ¾ÆÁ·Ö±æÂÊ£¬
+Android 1.6å’Œ2.0åˆ†åˆ«æ˜¯å·¨å¤§çš„ç”œç”œåœˆå’Œæ¾é¥¼ï¼Œå®ƒä»¬æ”¯æŒä¸åŒæ˜¾ç¤ºå±åˆ†è¾¨ç‡ï¼Œ
 them giant donuts and eclairs as well as support for different screen sizes, and
 
 16
 00:01:08,770 --> 00:01:13,670
-»¹ÄÜÍ¬Ê±¸ú×Ù¶à¸ö´¥Ãşµã¡£
+è¿˜èƒ½åŒæ—¶è·Ÿè¸ªå¤šä¸ªè§¦æ‘¸ç‚¹ã€‚
 tracking multiple simultaneous touch points. The biggest challenge for
 
 17
 00:01:13,670 --> 00:01:17,940
-¶ÔÓÚAndroid 2.2À´Ëµ£¬×î´óµÄÌôÕ½¾ÍÊÇÔÚ¸Õ³öÂ¯µÄÌğµãÉÏ¼ÓÒ»¸ö¿ªÍ·×ÖÄ¸F¡£
+å¯¹äºAndroid 2.2æ¥è¯´ï¼Œæœ€å¤§çš„æŒ‘æˆ˜å°±æ˜¯åœ¨åˆšå‡ºç‚‰çš„ç”œç‚¹ä¸ŠåŠ ä¸€ä¸ªå¼€å¤´å­—æ¯Fã€‚
 Android 2.2 was coming up with a baked dessert starting with the letter F.
 
 18
 00:01:17,940 --> 00:01:19,400
-×îÖÕÎÒÃÇºöÂÔÁËÒ»¸öÌôÕ½£¬
+æœ€ç»ˆæˆ‘ä»¬å¿½ç•¥äº†ä¸€ä¸ªæŒ‘æˆ˜ï¼Œ
 A challenge we ultimately ignored,
 
 19
 00:01:19,400 --> 00:01:22,900
-Õâ²¢²»ÊÇ¸øÁÚ¾ÓËÍÒ»´óÍë¶³ËáÄÌ¡£
+è¿™å¹¶ä¸æ˜¯ç»™é‚»å±…é€ä¸€å¤§ç¢—å†»é…¸å¥¶ã€‚
 instead introducing this giant bowl of froyo to the neighborhood.
 
 20
 00:01:22,900 --> 00:01:25,125
-Ëæ×ÅÊ±¼äÍÆÒÆ£¬ÔÆ¶ËÉè±¸»á½«ÓÃ»§·´À¡ÏûÏ¢´«ËÍµ½ÎÒÃÇµÄÆ½Ì¨¡£
+éšç€æ—¶é—´æ¨ç§»ï¼Œäº‘ç«¯è®¾å¤‡ä¼šå°†ç”¨æˆ·åé¦ˆæ¶ˆæ¯ä¼ é€åˆ°æˆ‘ä»¬çš„å¹³å°ã€‚
 Along with that, in cloud's device messaging to the platform.
 
 21
 00:01:25,125 --> 00:01:31,320
-ÕâÖÖÇé¿öÏÂ£¬ÎÒÃÇÍÆ³öÁËAndroid 2.3£¬Õâ¸öÕæÈË´óĞ¡µÄ½ª±ı£¬
+è¿™ç§æƒ…å†µä¸‹ï¼Œæˆ‘ä»¬æ¨å‡ºäº†Android 2.3ï¼Œè¿™ä¸ªçœŸäººå¤§å°çš„å§œé¥¼ï¼Œ
 [NOISE] That brings us to Android 2.3, and this giant life-size gingerbread man,
 
 22
 00:01:31,320 --> 00:01:36,067
-¸øÎÒÃÇ´øÀ´ÁËÆøÑ¹¼Æ¡¢ÍÓÂİÒÇºÍNFCÏµÍ³Ö§³Ö¡£
+ç»™æˆ‘ä»¬å¸¦æ¥äº†æ°”å‹è®¡ã€é™€èºä»ªå’ŒNFCç³»ç»Ÿæ”¯æŒã€‚
 along with system support for barometers, gyroscopes and NFC.
 
 23
 00:01:36,067 --> 00:01:40,300
-Android 3.0ÊÇÒ»¸ö·ä³²¡£ÕâÊÇµÚÒ»¸öÓĞÕë¶ÔĞÔµÄ°æ±¾£¬
+Android 3.0æ˜¯ä¸€ä¸ªèœ‚å·¢ã€‚è¿™æ˜¯ç¬¬ä¸€ä¸ªæœ‰é’ˆå¯¹æ€§çš„ç‰ˆæœ¬ï¼Œ
 Android 3.0 was the Honeycomb release. The first one targeted, specifically for
 
 24
 00:01:40,300 --> 00:01:46,020
-Õë¶ÔÆ½°åÏµÍ³²¢ÎªAndroid 4.0µÄ·¢ĞĞÆÌºÃÂ·¡£
+é’ˆå¯¹å¹³æ¿ç³»ç»Ÿå¹¶ä¸ºAndroid 4.0çš„å‘è¡Œé“ºå¥½è·¯ã€‚
 tablets and paving the way for Android 4.0. Android 4,
 
 25
 00:01:46,020 --> 00:01:50,460
-Android 4.0±ùä¿ÁÜÈıÃ÷ÖÎ£¬ÈÃÊÖ»úºÍÆ½°åµçÄÔÖØĞÂ×ßµ½Ò»Æğ¡£
+Android 4.0å†°æ·‡æ·‹ä¸‰æ˜æ²»ï¼Œè®©æ‰‹æœºå’Œå¹³æ¿ç”µè„‘é‡æ–°èµ°åˆ°ä¸€èµ·ã€‚
 Ice Cream Sandwich brought phones and tablets back together. It also introduced
 
 26
 00:01:50,460 --> 00:01:56,320
-Ëü»¹ÍÆ³öÁËAndroid Beam£¬ºÍ´ó¼Ò×îÏ²»¶µÄ×ÖÌåroboto¡£
+å®ƒè¿˜æ¨å‡ºäº†Android Beamï¼Œå’Œå¤§å®¶æœ€å–œæ¬¢çš„å­—ä½“robotoã€‚
 Android Beam, and everyone's favorite font, roboto. Android 4.1 Jelly Bean
 
 27
 00:01:56,320 --> 00:02:00,240
-Android 4.1¹û¶³¶¹ÊÇ»ùÓÚ·á¸»¹¦ÄÜµÄ¿ÉÀ©Õ¹Í¨Öª·¢²¼µÚÒ»¸öµÄÆ½Ì¨£¬¡£
+Android 4.1æœå†»è±†æ˜¯åŸºäºä¸°å¯ŒåŠŸèƒ½çš„å¯æ‰©å±•é€šçŸ¥å‘å¸ƒç¬¬ä¸€ä¸ªçš„å¹³å°ï¼Œã€‚
 was the first platform release to feature rich expandable notifications.
 
 28
 00:02:00,240 --> 00:02:03,900
-ÕâÒ²ÊÇµÚÒ»¸ö×ÔÈ¼µÄµñËÜ£¬¶à¿÷ÁËÒ»¸ö°æ±¾Ò»¸öÉè¼ÆµñËÜ£¬
+è¿™ä¹Ÿæ˜¯ç¬¬ä¸€ä¸ªè‡ªç‡ƒçš„é›•å¡‘ï¼Œå¤šäºäº†ä¸€ä¸ªç‰ˆæœ¬ä¸€ä¸ªè®¾è®¡é›•å¡‘ï¼Œ
 It's also the first sculpture to spontaneously combust thanks to a version one
 
 29
 00:02:03,900 --> 00:02:08,120
-Îª´ËÎÒÃÇ»¹ÎªÕâĞ©¡°Ì«ÑôÄÜ¸ßÑ¹¹ø¡±ÉêÇëÁË×¨Àû¡£
+ä¸ºæ­¤æˆ‘ä»¬è¿˜ä¸ºè¿™äº›â€œå¤ªé˜³èƒ½é«˜å‹é”…â€ç”³è¯·äº†ä¸“åˆ©ã€‚
 design, that we've since patented as a solar powered pressure cooker. But
 
 30
 00:02:08,120 --> 00:02:13,473
-µ±È»£¬ÕâÊÇ¸öĞ¡²åÇú¡£ÕâÒ²¸øÎÒÃÇ´øÀ´ÁËÒ»¸öĞÂ³ÉÔ±Android 4.4£¬ÆæÇÉ¡£
+å½“ç„¶ï¼Œè¿™æ˜¯ä¸ªå°æ’æ›²ã€‚è¿™ä¹Ÿç»™æˆ‘ä»¬å¸¦æ¥äº†ä¸€ä¸ªæ–°æˆå‘˜Android 4.4ï¼Œå¥‡å·§ã€‚
 that's another story. [NOISE] Which brings us to the newest member of our team,
 
 31
 00:02:13,473 --> 00:02:18,774
-Õâ¸ö°æ±¾¸øÎÒÃÇ´øÀ´¸ü¶àµÄ´«¸ĞÆ÷£¬Ö÷»úĞéÄâ¿¨£¬»¹ÓĞ¶ÌĞÅAPI¡£
+è¿™ä¸ªç‰ˆæœ¬ç»™æˆ‘ä»¬å¸¦æ¥æ›´å¤šçš„ä¼ æ„Ÿå™¨ï¼Œä¸»æœºè™šæ‹Ÿå¡ï¼Œè¿˜æœ‰çŸ­ä¿¡APIã€‚
 Android 4.4, Kit-Kat. With sensor batching, host card emulation and an API for
 
 32
 00:02:18,774 --> 00:02:23,750
-ÕâÃ´¿´À´ÌğµãµÄÃû×Ö¶¼¾ö¶¨ºÃÁËÂğ£¿
+è¿™ä¹ˆçœ‹æ¥ç”œç‚¹çš„åå­—éƒ½å†³å®šå¥½äº†å—ï¼Ÿ
 text messaging. So how do the dessert names get decided? Well ultimately,
 
 33
 00:02:23,750 --> 00:02:27,800
-ÆäÊµ£¬ÕæÕıµÄ¹æÔòÊÇ°æ±¾¶¼×ñÑ­ÁËÊ××ÖÄ¸Ë³Ğò¡£
+å…¶å®ï¼ŒçœŸæ­£çš„è§„åˆ™æ˜¯ç‰ˆæœ¬éƒ½éµå¾ªäº†é¦–å­—æ¯é¡ºåºã€‚
 the only real rule is sequential lettering. Then it's down to intense lobbying,
 
 34
 00:02:27,800 --> 00:02:31,940
-Õâ¸öÃüÃûÉõÖÁ¾­¹ıÁË¼¤ÁÒµÄÓÎËµ£¬ÍşĞ²£¬»ßÂ¸£¬»¹ÓĞÎÄ»¯¹²ÃùºÍÍ³¼ÆÊı¾İ¡£
+è¿™ä¸ªå‘½åç”šè‡³ç»è¿‡äº†æ¿€çƒˆçš„æ¸¸è¯´ï¼Œå¨èƒï¼Œè´¿èµ‚ï¼Œè¿˜æœ‰æ–‡åŒ–å…±é¸£å’Œç»Ÿè®¡æ•°æ®ã€‚
 threats, bribery and [UNKNOWN] on the ease of spelling, cultural resonance and
 
 35
 00:02:31,940 --> 00:02:36,630
-¶øÎÒÃÇÏÖÔÚ¿´µ½µÄ£¬¾ÍÊÇ×îÖÕ±»¼á³ÖÏÂÀ´µÄ¡£
+è€Œæˆ‘ä»¬ç°åœ¨çœ‹åˆ°çš„ï¼Œå°±æ˜¯æœ€ç»ˆè¢«åšæŒä¸‹æ¥çš„ã€‚
 statuability of each proposal. Eventually something just sort of sticks.
 
 36
 00:02:36,630 --> 00:02:39,810
-¼´Ê¹ÕâÑù£¬ÎÒÃÇ»¹ÄÜ¸ø×Ô¼º´øÀ´¾ªÏ²¡£¿´¿´GITµÄÀúÊ·£¬ÎÒÃÇ¿ÉÒÔ¿´µ½K°æ±¾£¬
+å³ä½¿è¿™æ ·ï¼Œæˆ‘ä»¬è¿˜èƒ½ç»™è‡ªå·±å¸¦æ¥æƒŠå–œã€‚çœ‹çœ‹GITçš„å†å²ï¼Œæˆ‘ä»¬å¯ä»¥çœ‹åˆ°Kç‰ˆæœ¬ï¼Œ
 Even then, we can surprise ourselves. Take a look at the GIT history for
 
 37
 00:02:39,810 --> 00:02:44,820
-ÄãÄÜ¿´µ½ÆæÇÉ£¬µ«ÊÂÊµÉÏËüÒ²¿ÉÒÔ²»ÊÇÆæÇÉ¡£
+ä½ èƒ½çœ‹åˆ°å¥‡å·§ï¼Œä½†äº‹å®ä¸Šå®ƒä¹Ÿå¯ä»¥ä¸æ˜¯å¥‡å·§ã€‚
 the K release, and you'll see that even KitKat wasn't always KitKat. As for
 
 38
 00:02:44,820 --> 00:02:46,670
-ÖÁÓÚÏÂÒ»¸ö°æ±¾£¬ÎÒÃÇ»¹µÃµÈ´ıËüµÄ·¢²¼£¬
+è‡³äºä¸‹ä¸€ä¸ªç‰ˆæœ¬ï¼Œæˆ‘ä»¬è¿˜å¾—ç­‰å¾…å®ƒçš„å‘å¸ƒï¼Œ
 what comes next, we'll have to wait and
 
 39
 00:02:46,670 --> 00:02:48,890
-²ÅÄÜÖªµÀ½ÓÏÂÀ´µÄÌğµãÊÇÊ²Ã´¡£
+æ‰èƒ½çŸ¥é“æ¥ä¸‹æ¥çš„ç”œç‚¹æ˜¯ä»€ä¹ˆã€‚
 see what the next statue is, before we know for sure.
 

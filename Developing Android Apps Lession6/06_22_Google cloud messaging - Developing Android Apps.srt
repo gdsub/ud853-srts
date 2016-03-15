@@ -1,11 +1,11 @@
-﻿1
+1
 00:00:01,030 --> 00:00:04,939
-非准确重复警告虽然比准确重复警告要好一些，
+非准确重复定时器(Alarm)虽然比准确重复定时器要好一些，
 Inexact repeating alarms. Infinitely better than exact repeating alarms, but
 
 2
 00:00:04,939 --> 00:00:08,690
-但是它仍然不是理想的。任何类型的重复报警的问题是
+但是它仍然不是理想的。任何类型的重复定时器的问题是
 still far from ideal. The problem with any kind of repeating
 
 3
@@ -20,7 +20,7 @@ for updates. So the more frequently you poll, the fresher the
 
 5
 00:00:14,530 --> 00:00:17,130
-你获得的数据也更新，但是电池寿命就越低
+你获得的数据也更新，但是电池损耗就越厉害
 data you can display, but the higher the cost in
 
 6
@@ -80,7 +80,7 @@ the Google Cloud. As a result, you can stop polling,
 
 17
 00:00:51,650 --> 00:00:54,630
-这就立竿见影的提高了电池寿命，也提升了
+这就立竿见影的提高了电池续航，也提升了
 which will immediately improve battery life and also improve the
 
 18
@@ -110,7 +110,7 @@ Or you can include the new data within the message payload.
 
 23
 00:01:10,560 --> 00:01:14,140
-在这个例子里，我们使用了其它的服务器
+在sunshine这个例子里，我们使用了其它的服务器
 In the sunshine example, we're using someone else's server. But
 
 24

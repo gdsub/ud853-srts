@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,230 --> 00:00:03,650
 Fragment的最后一个好处与用户界面完全无关
 The final advantage of fragments, doesn't involve user interfaces at

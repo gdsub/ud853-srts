@@ -235,7 +235,7 @@ Once a fragment has been initialized,
 
 41
 00:02:03,130 --> 00:02:08,160
-你可以改变属性，就像这里看到的一样，你只能读取它们
+你不可以改变其属性，就像这里看到的一样，你只能读取它们
 you can't change the arguments, you
 can only read from them, as seen here.
 

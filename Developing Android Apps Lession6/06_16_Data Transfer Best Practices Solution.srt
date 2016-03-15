@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,290 --> 00:00:03,250
 下载所有的数据能够降低延时并且最大化
 Pulling down all the data will reduce latency and maximize the

@@ -1,148 +1,148 @@
-﻿1
+1
 00:00:00,280 --> 00:00:03,900
-We've given you codes for the beginnings
-of a WeatherProvider class within
 我们已经提供给你代码，
 用于WeatherProvider类的
+We've given you codes for the beginnings
+of a WeatherProvider class within
 
 2
 00:00:03,900 --> 00:00:06,800
+扩展ContentProvider在数据包中
 the data package that
 extends ContentProvider.
-扩展ContentProvider在数据包中
 
 3
 00:00:06,800 --> 00:00:10,330
+Android提供的用来帮助
+完成一个ContentProvider的工具之一
 One of the tools that Android provides
 to help write a ContentProvider
-Android提供的用来帮助
-完成一个ContentProvider的工具之一是
 
 4
 00:00:10,330 --> 00:00:14,105
+是UriMatcher,
+我们会在短时间完成。
 is a UriMatcher,
 which we are going to write shortly.
-UriMatcher,
-我们会在短时间完成。
 
 5
 00:00:14,105 --> 00:00:19,215
-Filling out a UriMatcher is the third
-step in building our ContentProvider.
 填充UriMatcher是在建立ContentProvider
 的第三步
+Filling out a UriMatcher is the third
+step in building our ContentProvider.
 
 6
 00:00:19,215 --> 00:00:21,925
+ContentProvider实现功能是基于
 ContentProviders implement
 functionality based upon
-ContentProvider实现功能是基于
 
 7
 00:00:21,925 --> 00:00:23,905
-URIs passed to them.
 URI传递进来。
+URIs passed to them.
 
 8
 00:00:23,905 --> 00:00:27,232
+我们的ContentProvider将实现四种类型的URI
 Our ContentProvider will
 implement four types of URIs.
-我们的ContentProvider将实现四种类型的URI
 
 9
 00:00:27,232 --> 00:00:30,692
-Each one of these URIs will be used to
-execute different types of operations
 每一个URI会分别用于实现
 不同类型的操作
+Each one of these URIs will be used to
+execute different types of operations
 
 10
 00:00:30,692 --> 00:00:34,122
-against the underlying SQL databases.
 针对底层数据库
+against the underlying SQL databases.
 
 11
 00:00:34,122 --> 00:00:35,752
-For ease of implementation,
 为了易于实施
+For ease of implementation,
 
 12
 00:00:35,752 --> 00:00:40,490
-ContentProviders typically tie each URI type
-internally to an integer constant.
 ContentProviders通常在内部与每一个URI类型
 的整型常量匹配
+ContentProviders typically tie each URI type
+internally to an integer constant.
 
 13
 00:00:40,490 --> 00:00:43,960
+这些整型常量已经被添加到提供的
 These integer constants have already
 been added to the provided 
-这些整型常量已经被添加到提供的
 
 14
 00:00:43,960 --> 00:00:45,640
-WeatherProvider class.
 WeatherProvider类
+WeatherProvider class.
 
 15
 00:00:45,640 --> 00:00:49,750
-Android provides a UriMatcher
-class to help match incoming URIs
 Android提供了一个URIMathcer类
 帮助配对引入的URI
+Android provides a UriMatcher
+class to help match incoming URIs
 
 16
 00:00:49,750 --> 00:00:52,380
+与ContentProvider的整型常量。
 to the ContentProvider
 integer constants.
-与ContentProvider的整型常量。
 
 17
 00:00:52,380 --> 00:00:56,110
+这是重要的，因为我们需要了解哪一种URI
 This is important because we need to
 have a way of knowing which type of URI
-这是重要的，因为我们需要了解哪一种URI
 
 18
 00:00:56,110 --> 00:01:00,130
-is passed into our ContentProvider so
-we can perform the requested operation.
 被传递进了ContentProvider
 我们才可以运行请求的操作
+is passed into our ContentProvider so
+we can perform the requested operation.
 
 19
 00:01:00,130 --> 00:01:01,660
-Once we have the integer constants,
 当我们有整数常量的时候，
+Once we have the integer constants,
 
 20
 00:01:01,660 --> 00:01:04,105
+我们可以在switch语句中轻易地使用他们。
 we can easily use them
 in switch statements.
-我们可以在switch声明中轻易地使用他们。
 
 21
 00:01:04,105 --> 00:01:08,670
+UriMatcher提供了一种表达式语法来匹配不同的URI
 UriMatcher provides for an expression
 syntax to match various URIs that
-UriMatcher提供了一种表达式语法来匹配不同的URI
 
 22
 00:01:08,670 --> 00:01:10,290
-works a bit like regular expressions.
 有一点像普通表达式的运行方式
+works a bit like regular expressions.
 
 23
 00:01:11,300 --> 00:01:14,180
-Hash symbols will match a number.
 #将与数字匹配
+Hash symbols will match a number.
 
 24
 00:01:14,180 --> 00:01:16,240
-And an asterisk will match any string.
 *将于字符串匹配
+And an asterisk will match any string.
 
 25
 00:01:17,400 --> 00:01:18,360
-Here are some examples
 这里是一些例子
+Here are some examples

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:01,090 --> 00:00:04,000
 那么如果我们把Fragment当做迷你Activity，每一个都
 So if we treat fragments as mini activities, each with

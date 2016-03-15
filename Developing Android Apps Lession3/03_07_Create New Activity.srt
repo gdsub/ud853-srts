@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,280 --> 00:00:03,180
 你要用 Android Studio 来创建详细界面
 You're going to use Android Studio to create the

@@ -18,7 +18,7 @@ the background of the list item to be
 
 4
 00:00:08,430 --> 00:00:09,590
-drawable来完成
+state drawable来完成
 a state drawable.
 
 5
@@ -34,7 +34,7 @@ which is linked below.
 
 7
 00:00:12,988 --> 00:00:16,590
-事实上，StateListDrawable允许你根据视图不同的状态
+事实上，StateListDrawable允许你根据视图不同的状态(State)
 Essentially, a StateListDrawable allows
 you to specify different drawables
 
@@ -45,13 +45,13 @@ based on the state of the view.
 
 9
 00:00:18,740 --> 00:00:21,120
-我们提供了一些代码
+我们提供了一些StateListDrawable的代码
 We provide you a code for
 the StateListDrawable.
 
 10
 00:00:21,120 --> 00:00:24,520
-顺便看一下。在 res 目录下创建一个drawable文件夹
+在 res 目录下新建一个drawable文件夹，把代码拖进去
 Drop it in by creating a drawable
 folder under the res directory.
 

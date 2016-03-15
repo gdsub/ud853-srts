@@ -2,48 +2,56 @@
 00:00:00,280 --> 00:00:05,100
 For the Mountain View postal code 94043,
 this is what the query would look like.
-ÒòÎªMountain View µÄÓÊÕş±àÂëÊÇ94043£¬Õâ¾ÍÊÇ²éÑ¯µÄÑù×Ó¡£
+å› ä¸ºMountain View çš„é‚®æ”¿ç¼–ç æ˜¯94043ï¼Œè¿™å°±æ˜¯æŸ¥è¯¢çš„æ ·å­ã€‚
+
 2
 00:00:05,100 --> 00:00:08,510
 You could have also used
 94043 comma USA and
-ÄãÒ²ÄÜÊ¹ÓÃ94043,USA ²¢ÇÒ
+ä½ ä¹Ÿèƒ½ä½¿ç”¨94043,USA å¹¶ä¸”
 
 3
 00:00:08,510 --> 00:00:10,690
 that would have given
 us the same result.
-½«»á·µ»ØÏàÍ¬µÄ½á¹û¡£
+å°†ä¼šè¿”å›ç›¸åŒçš„ç»“æœã€‚
+
 4
 00:00:10,690 --> 00:00:12,720
 We set the mode to be JSON format.
-ÎÒÃÇÉèÖÃÄ£Ê½ÎªJSON¸ñÊ½¡£
+æˆ‘ä»¬è®¾ç½®æ¨¡å¼ä¸ºJSONæ ¼å¼ã€‚
+
 5
 00:00:12,720 --> 00:00:15,810
 In reality, you actually don't
 need this parameter because this
-ÏÖÊµÖĞ£¬ÄãÍêÈ«²»ĞèÒªÕâĞ©²ÎÊıÒòÎª
+ç°å®ä¸­ï¼Œä½ å®Œå…¨ä¸éœ€è¦è¿™äº›å‚æ•°å› ä¸º
+
 6
 00:00:15,810 --> 00:00:18,280
 API sends back JSON data by default.
-APIÄ¬ÈÏ·µ»ØJSON¸ñÊ½Êı¾İ¡£
+APIé»˜è®¤è¿”å›JSONæ ¼å¼æ•°æ®ã€‚
+
 7
 00:00:18,280 --> 00:00:21,430
 But just to be sure,
 we set this parameter.
-Ö»ÒªÈ·±£ÎÒÃÇÉèÖÃÕâĞ©²ÎÊı£¬
+åªè¦ç¡®ä¿æˆ‘ä»¬è®¾ç½®è¿™äº›å‚æ•°ï¼Œ
+
 8
 00:00:21,430 --> 00:00:23,900
 Then we set the temperature
 units to be in metric, and
-È»ºóÎÒÃÇÉèÖÃÎÂ¶ÈµÄµ¥Î»
+ç„¶åæˆ‘ä»¬è®¾ç½®æ¸©åº¦çš„å•ä½
+
 9
 00:00:23,900 --> 00:00:27,160
 the count param to be 7
 days of forecast data.
-²¢ÇÒÒªÇóÌìÊıÎª7£¬
+å¹¶ä¸”è¦æ±‚å¤©æ•°ä¸º7ï¼Œ
+
 10
 00:00:27,160 --> 00:00:29,190
 Let's take this URL and
 use it in our app.
-ÈÃÎÒÃÇ½«Õâ¸öURL·ÅÈëÎÒÃÇµÄAPP¡£
+è®©æˆ‘ä»¬å°†è¿™ä¸ªURLæ”¾å…¥æˆ‘ä»¬çš„APPã€‚

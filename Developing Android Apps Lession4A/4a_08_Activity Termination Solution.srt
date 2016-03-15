@@ -1,20 +1,20 @@
 1
 00:00:00,610 --> 00:00:05,030
-´ÓHoneycomb°æAndroid¿ªÊ¼  Ó¦ÓÃ´æÔÚ±»ÖÕÖ¹µÄÎ£ÏÕÊ±  Í£Ö¹onStopÒ»¶¨»á±»µ÷ÓÃ
+ä»Honeycombç‰ˆAndroidå¼€å§‹  åº”ç”¨å­˜åœ¨è¢«ç»ˆæ­¢çš„å±é™©æ—¶  åœæ­¢onStopä¸€å®šä¼šè¢«è°ƒç”¨
 Since Honeycomb, Android apps can rely on, on stop being called, before the app
 
 2
 00:00:05,030 --> 00:00:09,688
-µ«ÊÇÈç¹ûÄãµÄÓ¦ÓÃÖ§³ÖHoneycomb°æÖ®Ç°µÄ°æ±¾
+ä½†æ˜¯å¦‚æœä½ çš„åº”ç”¨æ”¯æŒHoneycombç‰ˆä¹‹å‰çš„ç‰ˆæœ¬
 is at risk of being terminated. But if you're supporting pre-Honeycomb devices,
 
 3
 00:00:09,688 --> 00:00:12,980
-ÔçÔÚÔİÍ£onPauseÊ±  ¾ÍÒª×öºÃ±»ÖÕÖ¹µÄ×¼±¸
+æ—©åœ¨æš‚åœonPauseæ—¶  å°±è¦åšå¥½è¢«ç»ˆæ­¢çš„å‡†å¤‡
 you should prepare for termination, as early as after on paused.
 
 4
 00:00:16,350 --> 00:00:19,850
-ÈÃÎÒÃÇ×ĞÏ¸¿´¿´ÄãÒªÎªÓ¦ÓÃµÄÖÕÖ¹×öºÃÄÄĞ©×¼±¸
+è®©æˆ‘ä»¬ä»”ç»†çœ‹çœ‹ä½ è¦ä¸ºåº”ç”¨çš„ç»ˆæ­¢åšå¥½å“ªäº›å‡†å¤‡
 Let's take a closer look at how you should prepare for an untimely app death.
 

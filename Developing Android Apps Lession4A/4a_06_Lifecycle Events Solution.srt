@@ -1,10 +1,10 @@
 1
 00:00:00,480 --> 00:00:05,850
-´Ó³·Ïú¿ªÊ¼  Ó¦ÓÃÊ×ÏÈ½øÈëÔİÍ£  È»ºóÊÇÍ£Ö¹ºÍÏú»Ù
+åº”ç”¨ä¼šé€æ­¥é”€æ¯å†é€æ­¥å¤åŸ  é¦–å…ˆæš‚åœ(onPause)  ç„¶åæ˜¯åœæ­¢(onStop) å†é”€æ¯(onDestroy)
 Starting with tear down, the app will first be paused, stopped, destroyed and
 
 2
 00:00:05,850 --> 00:00:08,340
-È»ºóÖØĞÂ´´½¨  ÖØĞÂ¿ªÊ¼  ¸´Ô­
+ç„¶åé‡æ–°åˆ›å»º(onCreate)  é‡æ–°å¼€å§‹(onStart)  å¤åŸ(onResume)
 then recreated, restarted and resumed.
 

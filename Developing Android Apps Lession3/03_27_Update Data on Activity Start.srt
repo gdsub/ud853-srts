@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,280 --> 00:00:03,650
 在程序运行的时候，我知道你们很可能厌倦了盯着无聊的假数据而且
 On app launch, I know that you're probably tired of seeing the dummy data and
@@ -10,12 +10,12 @@ needing to hit the refresh button for real data every single time.
 
 3
 00:00:06,721 --> 00:00:10,630
-我会告诉你们如何用当前的设置来显示数据
+我会告诉你们如何自动显示当前设置对应的数据
 I'm going to show you how to display the data using the current settings each
 
 4
 00:00:10,630 --> 00:00:14,250
-当Activity已经被载入后。在ForecastFragment中
+即在每次Activity被载入后自动刷新。在ForecastFragment中
 time the activity is loaded. In forecast fragment,
 
 5
@@ -25,12 +25,12 @@ we just refactored the code so that when the refresh button is selected,
 
 6
 00:00:17,530 --> 00:00:21,250
-我们可以调用这个帮助类函数，updateWeather。现在这里是这个函数，
+我们可以调用这个辅助方法，updateWeather。现在这里是那个辅助方法，
 we call this helper_method, updateWeather. Now that it's in a helper method,
 
 7
 00:00:21,250 --> 00:00:25,160
-我们也可以从onStart方法中调用它。我们覆盖了onStart函数 这样
+我们也可以从onStart方法中调用它。我们覆盖了onStart() 这样
 we can also call it from the onStart method. We over write onStart so
 
 8
@@ -80,7 +80,7 @@ and then you should see the actual weather data immediately. Under settings we
 
 17
 00:00:54,820 --> 00:00:59,310
-可以更改位置去相对应的邮编。当我们点击ok，
+可以更改地点去相对应的邮编。当我们点击ok，
 can change the location to be the pairs postal code. We hit OK, and
 
 18

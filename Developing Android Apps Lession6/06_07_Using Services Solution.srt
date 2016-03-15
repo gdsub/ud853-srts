@@ -45,7 +45,7 @@ to pass the location query.
 
 9
 00:00:23,540 --> 00:00:25,330
-在我们的Intents Service中传递位置请求数据
+在我们的Intents Service中传递地点请求数据
 Into our Intents service.
 
 10
@@ -67,7 +67,7 @@ parameter we get is an intent.
 
 13
 00:00:35,150 --> 00:00:38,080
-这里通过stringExtra将位置请求数据提取出来
+这里通过stringExtra将地点请求数据提取出来
 So we pull the location
 query out of a stringExtra.
 
@@ -90,9 +90,9 @@ creates a helper thread for
 
 17
 00:00:46,780 --> 00:00:50,240
-这个功能和stringTask所做的类似
+这个功能和AsyncTask所做的类似
 us to run code on,
-similar to what a string task does.
+similar to what async task does.
 
 18
 00:00:50,240 --> 00:00:54,180
@@ -118,7 +118,7 @@ with in forecast fragment.
 
 22
 00:01:03,520 --> 00:01:04,720
-我们把位置请求作为extra来处理
+我们把地点请求作为extra来处理
 We simply put an extra for
 
 23
@@ -129,7 +129,7 @@ instead of using it as a parameter.
 
 24
 00:01:08,180 --> 00:01:09,700
-然后开启服务
+然后启动服务
 And then start the service.
 
 25

@@ -85,7 +85,7 @@ Selecting an item will launch the second activity containing the second
 
 18
 00:00:54,080 --> 00:00:57,640
-我们将把这些分成多个编码任务
+我们将把这些分成多个代码编写任务
 fragment. We're going to break this up into multiple coding tasks until
 
 19
@@ -100,17 +100,17 @@ two pane UI for tablets. Then we'll hook up the communication
 
 21
 00:01:03,460 --> 00:01:07,070
-之间进行通信，即选择一项在右边的窗口
+之间进行通信，即选择一项后，右边的窗口会显示
 between the two fragments, so that's selecting an item replaces the
 
 22
 00:01:07,070 --> 00:01:09,530
-显示详细信息。接着我们会学习如何
+详细信息。接着我们会学习如何
 detail pane on the right. Then we'll learn how to show
 
 23
 00:01:09,530 --> 00:01:12,590
-在一个被选中项上展示其状态，所以
+在一个被选中项上展示其状态，然后
 an activated state on the currently selected item, so we know
 
 24
@@ -120,12 +120,12 @@ what the details pane corresponds to. We'll also need to make
 
 25
 00:01:16,100 --> 00:01:18,630
-滚动的位置被维持在一个方向
+当屏幕方向变化时，滚动的位置被维持在同一个位置上
 sure that the scroll position is maintained across
 
 26
 00:01:18,630 --> 00:01:22,430
-上变化。做完这些以后，我们将更新detail layout
+做完这些以后，我们将更新detail layout
 orientation changes. After that, we'll update the detail layout
 
 27

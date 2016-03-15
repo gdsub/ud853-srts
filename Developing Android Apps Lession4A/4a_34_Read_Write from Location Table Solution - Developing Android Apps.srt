@@ -1,144 +1,144 @@
 1
 00:00:01,050 --> 00:00:04,140
-ÕâÀï¾ÍÊÇtestLocationTable·½·¨
+è¿™é‡Œå°±æ˜¯testLocationTableæ–¹æ³•
 Here's what the testLocationTable method looks like.
 
 2
 00:00:04,140 --> 00:00:07,000
-Ê×ÏÈ  ÎÒÃÇ»ñÈ¡Ò»¸ö¿ÉĞ´Êı¾İ¿âµÄÒıÓÃ
+é¦–å…ˆ  æˆ‘ä»¬è·å–ä¸€ä¸ªå¯å†™æ•°æ®åº“çš„å¼•ç”¨
 First, we grab a reference to a writable database
 
 3
 00:00:07,000 --> 00:00:09,480
-ÕâÊÇÒòÎªÎÒÃÇÒªĞŞ¸ÄÊı¾İ¿â
+è¿™æ˜¯å› ä¸ºæˆ‘ä»¬è¦ä¿®æ”¹æ•°æ®åº“
 because we'll be modifying the database.
 
 4
 00:00:09,480 --> 00:00:11,630
-È»ºóÎÒÃÇÊ¹ÓÃTestUtilitiesÀàÖĞµÄ·½·¨
+ç„¶åæˆ‘ä»¬ä½¿ç”¨TestUtilitiesç±»ä¸­çš„æ–¹æ³•
 Then we create content values for
 
 5
 00:00:11,630 --> 00:00:16,149
-´´½¨Ò»ĞĞÎ»ÖÃĞÅÏ¢µÄContentValues¶ÔÏó
+åˆ›å»ºä¸€è¡Œåœ°ç‚¹ä¿¡æ¯çš„ContentValueså¯¹è±¡
 a row of location data using the function within test utilities.
 
 6
 00:00:16,149 --> 00:00:20,340
-½Ó×Å°ÑÕâ¸öContentValues¶ÔÏó²åÈëµ½Î»ÖÃ±íÖĞ
+æ¥ç€æŠŠè¿™ä¸ªContentValueså¯¹è±¡æ’å…¥åˆ°Locationè¡¨ä¸­
 Then we insert that content values object into the location table.
 
 7
 00:00:20,340 --> 00:00:23,590
-²åÈëÓï¾äµÄ·µ»ØÖµÊÇÕâÒ»ĞĞµÄid×Ö¶Î
+æ’å…¥è¯­å¥çš„è¿”å›å€¼æ˜¯è¿™ä¸€è¡Œçš„idå­—æ®µ
 The return value of the insert statement should be row ID.
 
 8
 00:00:23,590 --> 00:00:28,040
-Èç¹û·µ»ØÖµÊÇ-1  ËµÃ÷²åÈë²Ù×÷Ê§°ÜÁË  ÎÒÃÇĞèÒª¶Ô´Ë¶ÏÑÔ
+å¦‚æœè¿”å›å€¼æ˜¯-1  è¯´æ˜æ’å…¥æ“ä½œå¤±è´¥äº†  æˆ‘ä»¬éœ€è¦å¯¹æ­¤æ–­è¨€
 If it's negative one, we know the insertion failed, so we assert that.
 
 9
 00:00:28,040 --> 00:00:31,970
-È»ºóÎÒÃÇÖ»´«Èë±íÃû²ÎÊı½øĞĞÊı¾İ²éÑ¯
+ç„¶åæˆ‘ä»¬åªä¼ å…¥è¡¨åå‚æ•°å¯¹Locationè¡¨è¿›è¡Œæ•°æ®æŸ¥è¯¢
 Then we query the location table and pass in null for all the parameters
 
 10
 00:00:31,970 --> 00:00:35,640
-Õâ»áµÃµ½ËùÓĞĞĞºÍÁĞµÄÄ¬ÈÏ²éÑ¯½á¹û¼¯
+è¿™ä¼šå¾—åˆ°æ‰€æœ‰è¡Œå’Œåˆ—çš„é»˜è®¤æŸ¥è¯¢ç»“æœé›†
 to get a default query of all tabled rows and columns, since we want
 
 11
 00:00:35,640 --> 00:00:39,950
-ÕâÃ´×öÊÇÒòÎªÎÒÃÇÏëÒªÈ·ÈÏÊı¾İ¿âÖĞµÄËùÓĞÊı¾İ¶¼ÊÇÎÒÃÇ²åÈëµÄ
+è¿™ä¹ˆåšæ˜¯å› ä¸ºæˆ‘ä»¬æƒ³è¦ç¡®è®¤æ•°æ®åº“ä¸­çš„æ‰€æœ‰æ•°æ®éƒ½æ˜¯æˆ‘ä»¬æ’å…¥çš„
 a precisely verify that our database only contains our inserted record.
 
 12
 00:00:39,950 --> 00:00:42,260
-²éÑ¯²Ù×÷»á·µ»ØÒ»¸öCursor¶ÔÏó
+æŸ¥è¯¢æ“ä½œä¼šè¿”å›ä¸€ä¸ªCursorå¯¹è±¡
 The query will return a cursor.
 
 13
 00:00:42,260 --> 00:00:45,470
-ÕâÀïÎÒÃÇ¶ÏÑÔ²»ÄÜ½«Cursor¶ÔÏóÖ¸ÏòµÚÒ»ĞĞÊı¾İ£¨Ò²¾ÍÊÇ²éÑ¯½á¹ûÎª¿Õ£©
+è¿™é‡Œæˆ‘ä»¬æ–­è¨€ä¸èƒ½å°†Cursorå¯¹è±¡æŒ‡å‘ç¬¬ä¸€è¡Œæ•°æ®ï¼ˆä¹Ÿå°±æ˜¯æŸ¥è¯¢ç»“æœä¸ºç©ºï¼‰
 And we are assert if we cannot move it to the first row.
 
 14
 00:00:45,470 --> 00:00:49,940
-×îºó  ÎÒÃÇµ÷ÓÃTestUtilitiesÖĞµÄvalidateCurrentRecord·½·¨ÑéÖ¤
+æœ€å  æˆ‘ä»¬è°ƒç”¨TestUtilitiesä¸­çš„validateCurrentRecordæ–¹æ³•éªŒè¯
 Finally, we call validate current record from the test utility to validate
 
 15
 00:00:49,940 --> 00:00:52,450
-²éÑ¯µÄ½á¹ûÊÇ·ñÕıÈ·
+æŸ¥è¯¢çš„ç»“æœæ˜¯å¦æ­£ç¡®
 the query will return the correct record.
 
 16
 00:00:52,450 --> 00:00:55,600
-validateCurrentRecord·½·¨»á´ÓÎÒÃÇ²åÈëµÄ
+validateCurrentRecordæ–¹æ³•ä¼šä»æˆ‘ä»¬æ’å…¥çš„
 Validate current record grabs the set of value pairs
 
 17
 00:00:55,600 --> 00:00:57,460
-ContentValues¶ÔÏóÖĞ»ñµÃ¼üÖµ¶ÔµÄ¼¯ºÏ
+ContentValueså¯¹è±¡ä¸­è·å¾—é”®å€¼å¯¹çš„é›†åˆ
 from the content values that we inserted.
 
 18
 00:00:57,460 --> 00:01:01,390
-È»ºó±éÀúÕâ¸ö¼¯ºÏ  ÓÃCursor¶ÔÏóµÄgetColumnIndex·½·¨
+ç„¶åéå†è¿™ä¸ªé›†åˆ  ç”¨Cursorå¯¹è±¡çš„getColumnIndexæ–¹æ³•
 It then iterates through them, using cursor.getColumnIndex
 
 19
 00:01:01,390 --> 00:01:04,030
-Í¨¹ı¼üµÄÃû³Æ»ñµÃÃ¿¸ö¼üÔÚCursorÖĞË÷ÒıÖµ
+é€šè¿‡é”®çš„åç§°è·å¾—æ¯ä¸ªé”®åœ¨Cursorä¸­ç´¢å¼•å€¼
 to get the index of each column in the record set by name.
 
 20
 00:01:05,120 --> 00:01:08,350
-ÎÒÃÇĞèÒªÍ¨¹ıÕâ¸öË÷ÒıÖµ´ÓCursor¶ÔÏóÖĞ¶ÁÈ¡Êı¾İ
+æˆ‘ä»¬éœ€è¦é€šè¿‡è¿™ä¸ªç´¢å¼•å€¼ä»Cursorå¯¹è±¡ä¸­è¯»å–æ•°æ®
 We need the column index to get data from the cursor.
 
 21
 00:01:08,350 --> 00:01:11,065
-×¢Òâ·µ»ØµÄÊı¾İµÄÊôĞÔË³ĞòºÍÓ³ÉäÊı×éÊÇÒ»ÖÂµÄ
+æ³¨æ„è¿”å›çš„æ•°æ®çš„å±æ€§é¡ºåºå’Œæ˜ å°„æ•°ç»„æ˜¯ä¸€è‡´çš„
 Note the projections are always return in order.
 
 22
 00:01:11,065 --> 00:01:14,695
-ËùÒÔÈç¹ûÎÒÃÇÖ¸¶¨ÁËÓ³ÉäÊı×é²ÎÊı  ÎÒÃÇ¾Í¿ÉÒÔÖ±½ÓÊ¹ÓÃÓ³ÉäÊı×é
+æ‰€ä»¥å¦‚æœæˆ‘ä»¬æŒ‡å®šäº†æ˜ å°„æ•°ç»„å‚æ•°  æˆ‘ä»¬å°±å¯ä»¥ç›´æ¥ä½¿ç”¨æ˜ å°„æ•°ç»„
 So if we specify a projection, we can safely use the indexes from our
 
 23
 00:01:14,695 --> 00:01:17,695
-ÖĞµÄË÷ÒıÖµ  ¶ø²»ĞèÒªÏñÕâÑù½øĞĞ²éÕÒ
+ä¸­çš„ç´¢å¼•å€¼  è€Œä¸éœ€è¦åƒè¿™æ ·è¿›è¡ŒæŸ¥æ‰¾
 projection array without having to look them up like this.
 
 24
 00:01:17,695 --> 00:01:19,595
-ÈÃÎÒÃÇ»Øµ½ÎÒÃÇµÄ²âÊÔ
+è®©æˆ‘ä»¬å›åˆ°æˆ‘ä»¬çš„æµ‹è¯•
 Let's go back to our test.
 
 25
 00:01:19,595 --> 00:01:23,665
-ÎÒÃÇÍ¨¹ı¶ÏÑÔmoveToNext·µ»ØfalseÈ·ÈÏÊı¾İ¿âÖĞÖ»ÓĞÒ»¸ö¼ÇÂ¼
+æˆ‘ä»¬é€šè¿‡æ–­è¨€moveToNextè¿”å›falseç¡®è®¤æ•°æ®åº“ä¸­åªæœ‰ä¸€ä¸ªè®°å½•
 We checked to make sure the database has only one record by making sure we moved
 
 26
 00:01:23,665 --> 00:01:28,715
-È»ºó¹Ø±ÕCursor¶ÔÏóºÍÊı¾İ¿âÒÔ±£Ö¤²»»áĞ¹Â©×ÊÔ´
+ç„¶åå…³é—­Cursorå¯¹è±¡å’Œæ•°æ®åº“ä»¥ä¿è¯ä¸ä¼šæ³„æ¼èµ„æº
 to next fails, then we close the cursor and database, we don't leak resources.
 
 27
 00:01:28,715 --> 00:01:31,360
-×îºó  ÎÒÃÇ·µ»ØlocationRowIdÖµ
+æœ€å  æˆ‘ä»¬è¿”å›locationRowIdå€¼
 Finally, we return the locationRowId.
 
 28
 00:01:31,360 --> 00:01:34,040
-ÔËĞĞÒ»ÏÂ²âÊÔ¿´¿´
+è¿è¡Œä¸€ä¸‹æµ‹è¯•çœ‹çœ‹
 Let's run the test and see what happens.
 
 29
 00:01:34,040 --> 00:01:38,220
-²âÊÔÍ¨¹ı  Ö»Ê£ÏÂÒ»¸ö²âÊÔÒªĞ´À²
+æµ‹è¯•é€šè¿‡  åªå‰©ä¸‹ä¸€ä¸ªæµ‹è¯•è¦å†™å•¦
 And the test past, [SOUND], only one more test to write.

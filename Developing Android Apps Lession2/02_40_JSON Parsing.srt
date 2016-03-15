@@ -1,104 +1,104 @@
 1
 00:00:00,430 --> 00:00:03,490
-µ±ÄãÑ§»áÁËÈçºÎ½âÎö JSON Êı¾İµÄÊ±ºò  ¾Í¿ÉÒÔºÜ¼òµ¥µØ
+å½“ä½ å­¦ä¼šäº†å¦‚ä½•è§£æ JSON æ•°æ®çš„æ—¶å€™  å°±å¯ä»¥å¾ˆç®€å•åœ°
 Once you've learned how to parse JSON data, it's pretty straightforward to
 
 2
 00:00:03,490 --> 00:00:06,370
-½âÎö³öÎÒÃÇĞèÒªµÄÆäËü×Ö¶Î
+è§£æå‡ºæˆ‘ä»¬éœ€è¦çš„å…¶å®ƒå­—æ®µ
 be able to parse the rest of the fields that we need.
 
 3
 00:00:06,370 --> 00:00:08,109
-ÒòÎªÕâ²»ÊÇÒ»¸ö¹ØÓÚ Java »ò JSON µÄ¿Î³Ì
+å› ä¸ºè¿™ä¸æ˜¯ä¸€ä¸ªå…³äº Java æˆ– JSON çš„è¯¾ç¨‹
 Since this isn't a course on Java or
 
 4
 00:00:08,109 --> 00:00:12,470
-ÎÒÃÇ½«¸øÄãÁĞ³ö½âÎö´úÂëµÄÒªµã
+æˆ‘ä»¬å°†ç»™ä½ åˆ—å‡ºè§£æä»£ç çš„è¦ç‚¹
 JSON, we're going to provide you with the parsing code in the gist below.
 
 5
 00:00:12,470 --> 00:00:14,280
-Õâ¾ÍÊÇÖ÷ÒªµÄ´úÂëÁË
+è¿™å°±æ˜¯ä¸»è¦çš„ä»£ç äº†
 And this is what the gist looks like.
 
 6
 00:00:14,280 --> 00:00:16,070
-ÕâÀïÓĞÈı¸ö¸¨Öú·½·¨
+è¿™é‡Œæœ‰ä¸‰ä¸ªè¾…åŠ©æ–¹æ³•
 There are three helper methods.
 
 7
 00:00:16,070 --> 00:00:18,430
-µÚÒ»¸öÓÃÀ´µÃµ½¸ñÊ½»¯ÈÕÆÚ
+ç¬¬ä¸€ä¸ªç”¨æ¥å¾—åˆ°æ ¼å¼åŒ–æ—¥æœŸ
 The first is for formatting dates.
 
 8
 00:00:18,430 --> 00:00:20,640
-µÚ¶ş¸öÓÃÀ´´¦ÀíÎÂ¶ÈµÄÉáÈë
+ç¬¬äºŒä¸ªç”¨æ¥å¤„ç†æ¸©åº¦çš„èˆå…¥
 The second is for rounding temperatures.
 
 9
 00:00:20,640 --> 00:00:25,450
-µÚÈı¸ö½«ÌìÆøÔ¤±¨µÄ JSON ×Ö·û´®´æÈëÔ¤±¨µÄ¶ÓÁĞÖĞ
+ç¬¬ä¸‰ä¸ªå°†å¤©æ°”é¢„æŠ¥çš„ JSON å­—ç¬¦ä¸²å­˜å…¥é¢„æŠ¥çš„é˜Ÿåˆ—ä¸­
 The third is returning a forecast JSON string into an array of forecasts.
 
 10
 00:00:25,450 --> 00:00:29,960
-Õâ¸ö·½·¨»¹½«ÈÕÆÚÓëÃ¿¸öÔ¤±¨¼ÇÂ¼¶ÔÓ¦ÆğÀ´
+è¿™ä¸ªæ–¹æ³•è¿˜å°†æ—¥æœŸä¸æ¯ä¸ªé¢„æŠ¥è®°å½•å¯¹åº”èµ·æ¥
 This method also handles associating a date with each forecast entry.
 
 11
 00:00:29,960 --> 00:00:33,930
-ÎÒÃÇ´Óµ±Ç°ÈÕÆÚ¿ªÊ¼  Ã¿Ôö¼ÓÒ»Ìì¾Í¼ÓÒ»
+æˆ‘ä»¬ä»å½“å‰æ—¥æœŸå¼€å§‹  æ¯å¢åŠ ä¸€å¤©å°±åŠ ä¸€
 We start with a current date, and we increment one for each successive day.
 
 12
 00:00:33,930 --> 00:00:36,750
-×¢Òâ ÎÒÃÇÊ¹ÓÃÁËÈåÂÔÀúÈÕÆÚ
+æ³¨æ„ æˆ‘ä»¬ä½¿ç”¨äº†å„’ç•¥å†æ—¥æœŸ
 Notice that we also use Julian dates, which is the number of
 
 13
 00:00:36,750 --> 00:00:39,570
-ÕâÊÇ×Ô´ÓÈåÂÔÊ±´ú£¨¿­ÈöÍ³ÖÎÂŞÂíµÄÊ±ÆÚ£©¿ªÊ¼ÖÁ½ñµÄ×ÜÌìÊı
+è¿™æ˜¯è‡ªä»å„’ç•¥æ—¶ä»£ï¼ˆå‡¯æ’’ç»Ÿæ²»ç½—é©¬çš„æ—¶æœŸï¼‰å¼€å§‹è‡³ä»Šçš„æ€»å¤©æ•°
 days that have passed since the beginning of the Julian period.
 
 14
 00:00:39,570 --> 00:00:41,813
-¹ØÓÚÈåÂÔÀúÔÚ½²ÒåÖĞÓĞ¸ü¶àµÄĞÅÏ¢  µ«ÊÇ
+å…³äºå„’ç•¥å†åœ¨è®²ä¹‰ä¸­æœ‰æ›´å¤šçš„ä¿¡æ¯  ä½†æ˜¯
 More information is in the instructor notes below, but
 
 15
 00:00:41,813 --> 00:00:44,400
-Õâ¾ÍÊÇÎÒÃÇµÄÓ¦ÓÃÄÜÊ¼ÖÕÈçÒ»µØ´¦ÀíÈÕÆÚµÄÔ­Òò
+è¿™å°±æ˜¯æˆ‘ä»¬çš„åº”ç”¨èƒ½å§‹ç»ˆå¦‚ä¸€åœ°å¤„ç†æ—¥æœŸçš„åŸå› 
 it's how we'll consistently deal with dates in our app.
 
 16
 00:00:44,400 --> 00:00:47,550
-ÕâÑùÒ»À´  ÔÚ±È½ÏÈÕÆÚÊ±  ÎÒÃÇ²»±Øµ£ĞÄ
+è¿™æ ·ä¸€æ¥  åœ¨æ¯”è¾ƒæ—¥æœŸæ—¶  æˆ‘ä»¬ä¸å¿…æ‹…å¿ƒ
 That way, when comparing dates, we don't have to worry about taking into
 
 17
 00:00:47,550 --> 00:00:50,760
-Ê±Çø»òÊÇÏÄÁîÊ±
+æ—¶åŒºæˆ–æ˜¯å¤ä»¤æ—¶
 account time zones or daylight savings time.
 
 18
 00:00:50,760 --> 00:00:54,040
-Ê¹ÓÃÕâĞ©¸¨Öúº¯ÊıÀ´¸üĞÂ»ñÈ¡ÌìÆøÔ¤±¨µÄÈÎÎñ
+ä½¿ç”¨è¿™äº›è¾…åŠ©å‡½æ•°æ¥æ›´æ–°è·å–å¤©æ°”é¢„æŠ¥çš„ä»»åŠ¡
 Update the fetch weather tasks to use these helper functions and
 
 19
 00:00:54,040 --> 00:00:57,890
-doInBackground·½·¨Ó¦¸Ã·µ»ØÒ»¸öÌìÆøÔ¤±¨µÄ×Ö·û´®Êı×é
+doInBackgroundæ–¹æ³•åº”è¯¥è¿”å›ä¸€ä¸ªå¤©æ°”é¢„æŠ¥çš„å­—ç¬¦ä¸²æ•°ç»„
 the doInBackground method should return a string array of forecasts.
 
 20
 00:00:57,890 --> 00:01:00,750
-Äã¿ÉÒÔ°ÑÊä³ö¼ÇÂ¼ÏÂÀ´ ´Ó¶ø¼ì²éÊı×éµÄÕıÈ·ĞÔ
+ä½ å¯ä»¥æŠŠè¾“å‡ºè®°å½•ä¸‹æ¥ ä»è€Œæ£€æŸ¥æ•°ç»„çš„æ­£ç¡®æ€§
 You can log the output to check that the array is correct.
 
 21
 00:01:00,750 --> 00:01:03,150
-Ä³ÌìµÄÌìÆøÔ¤±¨¸ñÊ½ÊÇÕâÑùµÄ
+æŸå¤©çš„å¤©æ°”é¢„æŠ¥æ ¼å¼æ˜¯è¿™æ ·çš„
 The format of one day's forecast should look like this.

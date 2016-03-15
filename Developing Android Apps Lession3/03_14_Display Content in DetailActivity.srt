@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,360 --> 00:00:04,650
 当Detail Activity启动时，它展示了一个Hello World
 Once the Detail Activity is launched, it shows Hello World. Instead,

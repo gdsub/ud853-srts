@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,340 --> 00:00:03,015
 在平板上，这里有一个bug。当你选择了
 On the tablet, there's a bug where if you select an item near

@@ -1,47 +1,47 @@
 1
 00:00:00,037 --> 00:00:04,190
-¸ĞĞ»Veto¸æËßÎÒÃÇÑ¡ÔñºÏÊÊµÄ°æ±¾µÄÖØÒªĞÔ
+æ„Ÿè°¢Vetoå‘Šè¯‰æˆ‘ä»¬é€‰æ‹©åˆé€‚çš„ç‰ˆæœ¬çš„é‡è¦æ€§
 Thanks for telling us about the
 importance of proper dessert selection.
 
 2
 00:00:04,190 --> 00:00:06,290
-ÈÃÎÒÃÇÀ´Ñ¡ÔñÒ»¸öÌğµã°É
+è®©æˆ‘ä»¬æ¥é€‰æ‹©ä¸€ä¸ªç”œç‚¹å§
 So let's choose our desserts now.
 
 3
 00:00:06,290 --> 00:00:09,830
-ÎÒÃÇAppÖ§³ÖµÄ×îÔçµÄ°æ±¾ÊÇGingerbread
+æˆ‘ä»¬Appæ”¯æŒçš„æœ€æ—©çš„ç‰ˆæœ¬æ˜¯Gingerbread
 The earliest platform version that
 our Apple support is Gingerbread.
 
 4
 00:00:09,830 --> 00:00:12,860
-Ä¿Ç°À´Ëµ£¬Ñ¡ÔñGingerbreadÒâÎ¶×Å
+ç›®å‰æ¥è¯´ï¼Œé€‰æ‹©Gingerbreadæ„å‘³ç€
 At the current time, choosing
 Gingerbread means we can cover over 99%
 
 5
 00:00:12,860 --> 00:00:16,070
-ÔÚGoogle Play Store¼¤»îµÄÉè±¸·¶Î§ÄÚÎÒÃÇ¿ÉÒÔ¸²¸Ç99%µÄÉè±¸
+åœ¨Google Play Storeæ¿€æ´»çš„è®¾å¤‡èŒƒå›´å†…æˆ‘ä»¬å¯ä»¥è¦†ç›–99%çš„è®¾å¤‡
 of the devices active
 on Google Playstore.
 
 6
 00:00:16,070 --> 00:00:19,690
-ÕâÒ²ÊÇÄÜ²»ÄÜÊ¹ÓÃGoogle Play ServicesÀıÈç
+è¿™ä¹Ÿæ˜¯èƒ½ä¸èƒ½ä½¿ç”¨Google Play Servicesä¾‹å¦‚
 It's also the cutoff for using Google
 Play services for things like maps and
 
 7
 00:00:19,690 --> 00:00:22,540
-maps, locationºÍ Android support libraryµÄ·ÖË®Áë
+maps, locationå’Œ Android support libraryçš„åˆ†æ°´å²­
 location and
 the Android support library.
 
 8
 00:00:22,540 --> 00:00:26,400
-support library°üÌá¹©ÁË¶ÔÓÚÖ®ºó°æ±¾µÄUIĞÂÌØĞÔµÄÖ§³Ö
+support libraryåŒ…æä¾›äº†å¯¹äºä¹‹åç‰ˆæœ¬çš„UIæ–°ç‰¹æ€§çš„æ”¯æŒ
 The support library package offers an
 implementation of ui features that were
 
@@ -51,53 +51,53 @@ added in later releases of Android but
 
 10
 00:00:28,400 --> 00:00:30,750
-¿ÉÒÔÔÚÀÏ°æ±¾ÉÏÊ¹ÓÃĞÂ°æ±¾µÄUI
+å¯ä»¥åœ¨è€ç‰ˆæœ¬ä¸Šä½¿ç”¨æ–°ç‰ˆæœ¬çš„UI
 now can be used on older
 versions of the platform.
 
 11
 00:00:30,750 --> 00:00:32,040
-ËùÒÔºÜÓĞÓÃ
+æ‰€ä»¥å¾ˆæœ‰ç”¨
 So it's really useful.
 
 12
 00:00:32,040 --> 00:00:34,825
-ÎÒÃÇÑ¡ÔñÁËAPI 10µÄGingerbread
+æˆ‘ä»¬é€‰æ‹©äº†API 10çš„Gingerbread
 Notice how we picked the latest
 version of Gingerbread with API level
 
 13
 00:00:34,825 --> 00:00:39,220
-ÒòÎªËüÏà¶ÔÓÚAPI 9ĞŞ¸´ÁËÒ»Ğ©bug
+å› ä¸ºå®ƒç›¸å¯¹äºAPI 9ä¿®å¤äº†ä¸€äº›bug
 10 because it contains additional bug
 fixes that API level 9 doesn't have.
 
 14
 00:00:39,220 --> 00:00:41,320
-È»ºóµã»÷Next
+ç„¶åç‚¹å‡»Next
 The we can go ahead and click Next.
 
 15
 00:00:41,320 --> 00:00:44,340
-Ñ¡ÔñÒ»¸öÄ£°å£¬ÎÒÃÇÑ¡ÔñBlank Activity with Fragment
+é€‰æ‹©ä¸€ä¸ªæ¨¡æ¿ï¼Œæˆ‘ä»¬é€‰æ‹©Blank Activity with Fragment
 We're going to choose the template,
 Blank Activity with Fragment.
 
 16
 00:00:44,340 --> 00:00:47,580
-ÓĞÒ»¸öActivity×÷ÎªUIµÄ³ÊÏÖÈİÆ÷
+æœ‰ä¸€ä¸ªActivityä½œä¸ºUIçš„å‘ˆç°å®¹å™¨
 For background context and
 activity serves as the present layer for
 
 17
 00:00:47,580 --> 00:00:51,890
-ÉÏÃæÒ»¸öFragmentÕ¼¾İ²¿·ÖÆÁÄ»À´³ÊÏÖÄÚÈİ
+ä¸Šé¢ä¸€ä¸ªFragmentå æ®éƒ¨åˆ†å±å¹•æ¥å‘ˆç°å†…å®¹
 our UI, and a fragment represents
 a behavior or portion of the screen.
 
 18
 00:00:51,890 --> 00:00:54,995
-ÎÒÃÇ¿ÉÒÔĞŞ¸ÄÒıµ¼ÎªÎÒÃÇ×Ô¶¯Éú³ÉµÄÎÄ¼şÃû
+æˆ‘ä»¬å¯ä»¥ä¿®æ”¹å¼•å¯¼ä¸ºæˆ‘ä»¬è‡ªåŠ¨ç”Ÿæˆçš„æ–‡ä»¶å
 And now we have an option to modify
 the names of the files that will be
 
@@ -107,123 +107,123 @@ auto-generated from the wizard.
 
 20
 00:00:56,770 --> 00:00:59,210
-ÎÒÃÇµÄActivityÃûÊÇMainActivity
+æˆ‘ä»¬çš„Activityåæ˜¯MainActivity
 The name of our activity
 is MainActivity, and
 
 21
 00:00:59,210 --> 00:01:03,720
-ËüµÄ²¼¾ÖÓÉactivity_mainËù¶¨ÒåµÄ£¬ÕâÊÇÒ»¸öXMLÎÄ¼ş
+å®ƒçš„å¸ƒå±€ç”±activity_mainæ‰€å®šä¹‰çš„ï¼Œè¿™æ˜¯ä¸€ä¸ªXMLæ–‡ä»¶
 the layout will come from activity_main,
 which is an XML file.
 
 22
 00:01:03,720 --> 00:01:07,730
-Í¬ÑùµÄ£¬FragmentµÄ²¼¾ÖÀ´×Ôfragment_main
+åŒæ ·çš„ï¼ŒFragmentçš„å¸ƒå±€æ¥è‡ªfragment_main
 In a similar fashion, the fragments
 layout will come from fragment_main,
 
 23
 00:01:07,730 --> 00:01:09,130
-Ò²ÊÇÒ»¸öXMLÎÄ¼ş
+ä¹Ÿæ˜¯ä¸€ä¸ªXMLæ–‡ä»¶
 which is also an XML file.
 
 24
 00:01:09,130 --> 00:01:13,525
-ÔÚÕâÀïÎÒĞŞ¸ÄÏÂÎÄ¼şÃûÎªmain.xml
+åœ¨è¿™é‡Œæˆ‘ä¿®æ”¹ä¸‹æ–‡ä»¶åä¸ºmain.xml
 I'm going to do a small change for
 the name of the menu file to be called
 
 25
 00:01:13,525 --> 00:01:18,220
-ÒòÎªÀÏ°æ±¾µÄAndroid StudioµÄÄ¬ÈÏÃûÊÇÕâ¸ö
+å› ä¸ºè€ç‰ˆæœ¬çš„Android Studioçš„é»˜è®¤åæ˜¯è¿™ä¸ª
 main.xml because on a older version of
 Android's tu, that was the default name.
 
 26
 00:01:18,220 --> 00:01:19,640
-È»ºóµã»÷Finish
+ç„¶åç‚¹å‡»Finish
 Then we go ahead and hit Finish.
 
 27
 00:01:19,640 --> 00:01:22,960
-ÏÖÔÚÄãÓ¦¸ÃÓĞÒ»¸öĞÂ´´½¨µÄSunshine App
+ç°åœ¨ä½ åº”è¯¥æœ‰ä¸€ä¸ªæ–°åˆ›å»ºçš„Sunshine App
 And now you should have a newly
 created sunshine app with the files on
 
 28
 00:01:22,960 --> 00:01:24,060
-ÎÄ¼şÄ¿Â¼ÔÚ×ó±ß
+æ–‡ä»¶ç›®å½•åœ¨å·¦è¾¹
 the left here.
 
 29
 00:01:24,060 --> 00:01:26,540
-Ä¬ÈÏÇé¿öÏÂ£¬Äã¿´µ½µÄÎÄ¼şÊÇ»ùÓÚAndroidÊÓÍ¼
+é»˜è®¤æƒ…å†µä¸‹ï¼Œä½ çœ‹åˆ°çš„æ–‡ä»¶æ˜¯åŸºäºAndroidè§†å›¾
 By default, you may see
 the Android view of the files,
 
 30
 00:01:26,540 --> 00:01:28,510
-ÊÇÒ»¸öÆ½ÃæÊ½µÄÏîÄ¿½á¹¹
+æ˜¯ä¸€ä¸ªå¹³é¢å¼çš„é¡¹ç›®ç»“æ„
 which is a flattened version
 of the project structure,
 
 31
 00:01:28,510 --> 00:01:31,890
-²¢ÇÒËü¸ßÁÁÁËÄãĞèÒª±à¼­µÄAndroidÔ´´úÂëÎÄ¼ş
+å¹¶ä¸”å®ƒé«˜äº®äº†ä½ éœ€è¦ç¼–è¾‘çš„Androidæºä»£ç æ–‡ä»¶
 and it highlights the key Android
 source files that you'll need to edit.
 
 32
 00:01:31,890 --> 00:01:35,030
-ÔÚÕâ¸ö¿Î³ÌÀï£¬ÎÒÃÇÊ¹ÓÃÕâ¸öÏîÄ¿ÊÓÍ¼
+åœ¨è¿™ä¸ªè¯¾ç¨‹é‡Œï¼Œæˆ‘ä»¬ä½¿ç”¨è¿™ä¸ªé¡¹ç›®è§†å›¾
 In this course, though, we're going to
 be using the project view because that's
 
 33
 00:01:35,030 --> 00:01:37,145
-ÒòÎªÀÏ°æ±¾ÖĞÎÒÃÇÒ²ÊÇÓÃµÄÕâ¸ö
+å› ä¸ºè€ç‰ˆæœ¬ä¸­æˆ‘ä»¬ä¹Ÿæ˜¯ç”¨çš„è¿™ä¸ª
 what we had in the older
 version of Android Studio.
 
 34
 00:01:37,145 --> 00:01:39,405
-ÄãÒ²¿ÉÒÔÑ¡ÔñÄãÏ²»¶µÄÊÓÍ¼
+ä½ ä¹Ÿå¯ä»¥é€‰æ‹©ä½ å–œæ¬¢çš„è§†å›¾
 You can choose any view that you prefer,
 though.
 
 35
 00:01:39,405 --> 00:01:41,875
-È·±£GradleµÄ±àÒëÍê³ÉÁË
+ç¡®ä¿Gradleçš„ç¼–è¯‘å®Œæˆäº†
 Make sure you wait for
 the gradle build to finish.
 
 36
 00:01:41,875 --> 00:01:44,895
-Èç¹ûÄãÓĞÈÎºÎÎÊÌâ£¬¿ÉÒÔÈ¥²é¿´Òıµ¼ÎÄµµ»òÕßÏÂÃæµÄ±Ê¼Ç
+å¦‚æœä½ æœ‰ä»»ä½•é—®é¢˜ï¼Œå¯ä»¥å»æŸ¥çœ‹å¼•å¯¼æ–‡æ¡£æˆ–è€…ä¸‹é¢çš„ç¬”è®°
 If you have any errors, you can check
 the guide and instructor notes below.
 
 37
 00:01:44,895 --> 00:01:47,125
-ÌáÊ¾ÏÂ£¬Äã»¹¿ÉÒÔ¿´ÏÂÔÚAppÎÄ¼ş¼ĞÖĞµÄ
+æç¤ºä¸‹ï¼Œä½ è¿˜å¯ä»¥çœ‹ä¸‹åœ¨Appæ–‡ä»¶å¤¹ä¸­çš„
 As a tip,
 you can check the build.gradle file,
 
 38
 00:01:47,125 --> 00:01:49,795
-build.gradleÎÄ¼ş
+build.gradleæ–‡ä»¶
 which is located under the App folder.
 
 39
 00:01:49,795 --> 00:01:52,235
-ÄãĞèÒªÈ·±£compileSdkVersionºÍ
+ä½ éœ€è¦ç¡®ä¿compileSdkVersionå’Œ
 You want to make sure that
 the compileSdkVersion and
 
 40
 00:01:52,235 --> 00:01:55,975
-targetSdkVersion¶¼Ö¸Ïò×îĞÂµÄÎÈ¶¨°æ±¾
+targetSdkVersionéƒ½æŒ‡å‘æœ€æ–°çš„ç¨³å®šç‰ˆæœ¬
 the targetSdkVersion are both pointing
 at the latest stable version of
 
@@ -233,95 +233,95 @@ the platform.
 
 42
 00:01:57,365 --> 00:02:01,510
-ÕâÀï£¬×îĞÂ°æ±¾ÊÇAPI 21Ò²¾ÍÊÇAndroid 5.0 Lollipop
+è¿™é‡Œï¼Œæœ€æ–°ç‰ˆæœ¬æ˜¯API 21ä¹Ÿå°±æ˜¯Android 5.0 Lollipop
 In this case, it's 21 for
 the Android 5.0 Lollipop release.
 
 43
 00:02:01,510 --> 00:02:04,720
-Ò»µ©±àÒëºÃÁË£¬ÎÒÃÇ¿ÉÒÔÌí¼Ó¸üÊÊºÏÎÒÃÇµÄÌìÆøAppµÄ
+ä¸€æ—¦ç¼–è¯‘å¥½äº†ï¼Œæˆ‘ä»¬å¯ä»¥æ·»åŠ æ›´é€‚åˆæˆ‘ä»¬çš„å¤©æ°”Appçš„
 Once it's done building, we can add a
 custom app icon that's more fitting for
 
 44
 00:02:04,720 --> 00:02:05,290
-×Ô¶¨ÒåµÄAppÍ¼±ê
+è‡ªå®šä¹‰çš„Appå›¾æ ‡
 our weather app.
 
 45
 00:02:05,290 --> 00:02:09,310
-ÓÒ»÷AppÎÄ¼ş¼Ğµ¥»÷ĞÂ½¨Image Asset
+å³å‡»Appæ–‡ä»¶å¤¹å•å‡»æ–°å»ºImage Asset
 Right-click on the App folder and
 click New Image Asset.
 
 46
 00:02:09,310 --> 00:02:12,680
-Äã¿ÉÒÔ¸Ä±äÕâĞ©Ñ¡Ïî
+ä½ å¯ä»¥æ”¹å˜è¿™äº›é€‰é¡¹
 You can choose from any of
 the clip art options or
 
 47
 00:02:12,680 --> 00:02:15,980
-¿ÉÒÔÓÃÏÂÃæÎÒÃÇÌá¹©µÄÍ¼Æ¬
+å¯ä»¥ç”¨ä¸‹é¢æˆ‘ä»¬æä¾›çš„å›¾ç‰‡
 you can use the one that we
 provide in the download below.
 
 48
 00:02:15,980 --> 00:02:19,540
-ÓÃÕâ¸öÕ¼Î»Í¼±ê
+ç”¨è¿™ä¸ªå ä½å›¾æ ‡
 Then, use a placeholder icon we
 provide in a download below.
 
 49
 00:02:19,540 --> 00:02:22,010
-ÏÖÔÚApp»áÏÔÊ¾Õâ¸öÍ¼±ê
+ç°åœ¨Appä¼šæ˜¾ç¤ºè¿™ä¸ªå›¾æ ‡
 Now this will show up in
 the All Apps screen, so
 
 50
 00:02:22,010 --> 00:02:24,790
-µã»÷Õâ¸öÍ¼±ê»á´ò¿ªÎÒÃÇµÄApp
+ç‚¹å‡»è¿™ä¸ªå›¾æ ‡ä¼šæ‰“å¼€æˆ‘ä»¬çš„App
 that clicking on this app
 icon will launch our app.
 
 51
 00:02:24,790 --> 00:02:28,280
-Èç¹ûSunshineÊÇÄã×î½üÊ¹ÓÃµÄApp
+å¦‚æœSunshineæ˜¯ä½ æœ€è¿‘ä½¿ç”¨çš„App
 It will also show up in the overview
 space if sunshine is one of
 
 52
 00:02:28,280 --> 00:02:29,950
-Õâ¸öÍ¼±êÒ²»áÏÔÊ¾ÔÚ¶àÈÎÎñÇĞ»»½çÃæÖĞ
+è¿™ä¸ªå›¾æ ‡ä¹Ÿä¼šæ˜¾ç¤ºåœ¨å¤šä»»åŠ¡åˆ‡æ¢ç•Œé¢ä¸­
 your most recent tasks.
 
 53
 00:02:29,950 --> 00:02:34,380
-»¹¿ÉÒÔÔÚÎÒÃÇAppµÄAction BarÖĞ¿´µ½Õâ¸öÍ¼±ê
+è¿˜å¯ä»¥åœ¨æˆ‘ä»¬Appçš„Action Barä¸­çœ‹åˆ°è¿™ä¸ªå›¾æ ‡
 The other place you might see this app
 icon is in the action bar of our app.
 
 54
 00:02:34,380 --> 00:02:38,420
-ÔÚÕâ¸ö¿Î³ÌµÄÊÓÆµÖĞ£¬ÎÒÃÇÊ¹ÓÃµÄÊÇÖ®Ç°µÄ
+åœ¨è¿™ä¸ªè¯¾ç¨‹çš„è§†é¢‘ä¸­ï¼Œæˆ‘ä»¬ä½¿ç”¨çš„æ˜¯ä¹‹å‰çš„
 In certain videos of this course that
 were filmed earlier on Kit Kat by
 
 55
 00:02:38,420 --> 00:02:42,560
-Kit Kat°æ±¾£¬Ä¬ÈÏÊÇÔÚAction BarÖĞÓĞÏÔÊ¾AppÍ¼±ê
+Kit Katç‰ˆæœ¬ï¼Œé»˜è®¤æ˜¯åœ¨Action Barä¸­æœ‰æ˜¾ç¤ºAppå›¾æ ‡
 default the action bar
 shows the app icon.
 
 56
 00:02:42,560 --> 00:02:46,570
-¶øÔÚMaterial DesignµÄLollipopºÍÖ®ºóµÄ°æ±¾ÖĞ
+è€Œåœ¨Material Designçš„Lollipopå’Œä¹‹åçš„ç‰ˆæœ¬ä¸­
 With material design on Lollipop and
 later, the app icon doesn't show up
 
 57
 00:02:46,570 --> 00:02:49,500
-AppÍ¼±êÄ¬ÈÏ²»»áÏÔÊ¾£¬ËùÒÔÈç¹ûÃ»¿´µ½Ëü²»ĞèÒªµ£ĞÄ
+Appå›¾æ ‡é»˜è®¤ä¸ä¼šæ˜¾ç¤ºï¼Œæ‰€ä»¥å¦‚æœæ²¡çœ‹åˆ°å®ƒä¸éœ€è¦æ‹…å¿ƒ
 by default anymore, so
 don't worry if you don't see it.
 
@@ -331,6 +331,6 @@ It's fine, and
 
 59
 00:02:50,230 --> 00:02:53,330
-ÎÒÃÇ½«»áÔÚ¿Î³Ì5ÖĞ×Ô¶¨ÒåAction Bar
+æˆ‘ä»¬å°†ä¼šåœ¨è¯¾ç¨‹5ä¸­è‡ªå®šä¹‰Action Bar
 we're going to be styling the action
 bar later in lesson five, anyways.

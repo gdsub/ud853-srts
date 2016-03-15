@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,220 --> 00:00:02,820
 我们还没完成呢，还差实现平板设备的UI
 We're not quite done yet, with implementing the tablet UI wire

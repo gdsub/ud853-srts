@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,000 --> 00:00:03,300
 Beto提到我们应该为不同分辨率的手机提供多种位图图标
 Beto mentioned that we should provide bitmaps at different resolutions.

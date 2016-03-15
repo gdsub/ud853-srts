@@ -1,117 +1,118 @@
 1
 00:00:00,340 --> 00:00:01,280
-����������˵
+对于我们来说
 For us,
 
 2
 00:00:01,280 --> 00:00:06,090
-��ѯ������ӵ������content provider�ķ���
+查询(query)将是最复杂的所需的ContentProvider方法
 query will be the most complex of
 the required content provider methods.
 
 3
 00:00:06,090 --> 00:00:09,120
-�����Ѿ�������ʵ�ֲ����Ĵ��¿��
+我们已经给你了实现操作的大致框架
 We've given you the bones,
 of the query operation.
 
 4
 00:00:09,120 --> 00:00:12,970
-�������� ʹ������ӵ�е�SURI�Ķ���
+如你所见 使用我们拥有的sURIMatcher对象
 As you can see,
-we use our SURI nature object,
+we use our sURIMatcher object,
 
 5
 00:00:12,970 --> 00:00:16,149
-�ٶ�URI�����ͽ����ж�
+再次用switch对Uri的类型进行判断
 once again to switch on the type of URI.
 
 6
 00:00:16,149 --> 00:00:19,220
-��Ҫע����� �������ÿ�ζ��᷵��һ��cursor������
+需要注意的是 这个方法每次都会返回一个cursor对象来
 Note that each response from this
 function, will return a cursor that
 
 7
 00:00:19,220 --> 00:00:23,740
-��Ӧ��Ҫ��ѯ���Ǹ�URI
+对应你要的那个Uri定义的查询
 corresponds to the incoming
 query as defined by the URI.
 
 8
 00:00:23,740 --> 00:00:26,470
-����Ψһ�ķ������Ǳ�����д��ͬ��
+在ContentProvider中 这是唯一一个我们必须
 This is the only function where we
 will have to fill out a different
 
 9
 00:00:26,470 --> 00:00:30,000
-��������Ϊÿһ�����͵�URI��content provider��
+为每一个类型的Uri
+填写不同返回内容的方法
 response for every type of
 URI in the content provider,
 
 10
 00:00:30,000 --> 00:00:32,360
-�����е�һЩ����ֻ���ڲ�ѯ
+他们中的一些可能只用于查询
 as several of them
 are used in queries only.
 
 11
 00:00:32,360 --> 00:00:36,520
-����������ĵײ������ǽ�����֪ͨΪ
+在这个方法的底部，我们将为我们的cursor设置一个
 At the bottom of our function, we're
 going to set the notification URI for
 
 12
 00:00:36,520 --> 00:00:39,370
-���ǵĴ�����������Ķ�Ӧ��cursor��URI
+Uri变化通知（NotificationUri），值就是我们传给这个方法的Uri
 our cursor to the one that
 was passed into the function.
 
 13
 00:00:39,370 --> 00:00:43,550
-��ʹcursorע��һ��content observer��������
+这使cursor注册一个content observer，来守望
 This causes the cursor to register
 a content observer, to watch for
 
 14
 00:00:43,550 --> 00:00:47,430
-�Ǹ�URI���Լ��κε���URI�����ı仯
+那个Uri的以及任何的子Uri发生的变化
 changes that happen to that URI and
 any of its descendants.
 
 15
 00:00:47,430 --> 00:00:51,020
-����content provider�����׵ĸ���UI ��cursor
+这让ContentProvider很容易的告诉UI 何时cursor
 This allows the content provider,
 to easily tell the UI when the cursor
 
 16
 00:00:51,020 --> 00:00:55,040
-�ı��ʱ�� �������ݿ��еĲ�����߲�ѯ����
+发生改变 类似数据库中的插入或者查询操作
 changes, on operations like
 a database insert or update.
 
 17
 00:00:55,040 --> 00:00:57,620
-�Ժ����ǻῴ������ ���������۲����
+稍后我们会看到更多例子 在我们讨论插入和
 We'll see more on this later,
 when we cover inserting and
 
 18
 00:00:57,620 --> 00:00:59,300
-�������ݿ��ʱ��
+更新数据库的时候
 updating the database.
 
 19
 00:00:59,300 --> 00:01:03,840
-ȡ��ע�͵�test provider�еĻ�����������ѯ������
+反注释掉TestProvider中的testBasicWeather方法
 Uncomment the test basic weather query
 function within test provider and
 
 20
 00:01:03,840 --> 00:01:07,600
-���д��뵱����ɵ�ʱ�򣬲���Ҫ��֤������Щ��������
+当你完成query代码的时候，运行这些测试代码，并且要保证所有这些运行正常
 run this code when you're finished, to
 make sure all of this is working well.
 

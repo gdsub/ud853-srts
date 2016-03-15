@@ -1,19 +1,19 @@
 1
 00:00:00,070 --> 00:00:03,160
-ÏÖÔÚ»¨Ò»µãÊ±¼ä»Øµ½Ê×Ò³
+ç°åœ¨èŠ±ä¸€ç‚¹æ—¶é—´å›åˆ°é¦–é¡µ
 Take a moment now to become familiar with the API by going
 
 2
 00:00:03,160 --> 00:00:06,350
-Í¨¹ıÕâĞ©²»Í¬µÄ²éÑ¯ºÍÖ§³ÖµÄ²ÎÊı
+é€šè¿‡è¿™äº›ä¸åŒçš„æŸ¥è¯¢å’Œæ”¯æŒçš„å‚æ•°
 back to the main page, and looking at the different queries and
 
 3
 00:00:06,350 --> 00:00:10,630
-À´ÊìÏ¤ÕâĞ©API  ÄãÖ»ĞèÒªĞŞ¸Ää¯ÀÀÆ÷µØÖ·À¸ÖĞ²éÑ¯²ÎÊı
+æ¥ç†Ÿæ‚‰è¿™äº›API  ä½ åªéœ€è¦ä¿®æ”¹æµè§ˆå™¨åœ°å€æ ä¸­æŸ¥è¯¢å‚æ•°
 the different parameters supported. Just modify the query params in the URL
 
 4
 00:00:10,630 --> 00:00:15,020
-Íê³ÉºóÇë¹´Ñ¡ÉÏÔÆ¶äÖĞµÄÕâ¸ö¸´Ñ¡¿ò
+å®Œæˆåè¯·å‹¾é€‰ä¸Šäº‘æœµä¸­çš„è¿™ä¸ªå¤é€‰æ¡†
 address bar. Check the box floating in the clouds when you're done.

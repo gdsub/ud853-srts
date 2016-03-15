@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,320 --> 00:00:03,010
 好的，你已经完成了。让我们看看答案。
 All right, you're done. Let's look at the solution.
@@ -20,7 +20,7 @@ First, we're going to need to create a standard intent
 
 5
 00:00:11,220 --> 00:00:14,650
-然后我们把位置查询功能临时添加进来。
+然后我们把地点查询功能临时添加进来。
 for our alarm receiver. We then add our location query
 
 6
@@ -80,12 +80,12 @@ to start our service, and that's it. Let's try running
 
 17
 00:00:51,070 --> 00:00:53,460
-好的，所以我们已经有了可以停止我们
+好的，现在我们已经有了Alarm Manager这条路
 the app. All right, so now we've got the
 
 18
 00:00:53,460 --> 00:00:56,460
-的服务的Alarm Manager。
+来通往我们的服务。
 Alarm Manager getting in the way of our service. We
 
 19
@@ -115,6 +115,6 @@ we could still be more efficient in our use
 
 24
 00:01:12,170 --> 00:01:15,730
-Rato会告诉我们更多关于他的知识。
+Rato会告诉我们更多相关的知识。
 of phone resources. Rato can tell us more about that.
 

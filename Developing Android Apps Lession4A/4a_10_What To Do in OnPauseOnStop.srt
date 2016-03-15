@@ -1,30 +1,30 @@
 1
 00:00:00,760 --> 00:00:05,350
-¶ÔÓÚÓ¦ÓÃÀ´Ëµ  ÏµÍ³ÈÏÎªËüÊÇµÍÓÅÏÈ¼¶Ò²ÊÇÒ»¸öĞÅºÅ
+å¯¹äºåº”ç”¨æ¥è¯´  ç³»ç»Ÿè®¤ä¸ºå®ƒæ˜¯ä½ä¼˜å…ˆçº§ä¹Ÿæ˜¯ä¸€ä¸ªä¿¡å·
 It's also a signal to app that the system now considers it alert priority. Given
 
 2
 00:00:05,350 --> 00:00:09,380
-¿¼ÂÇµ½¿ÉÓÃµÄÓĞÏŞµÄ×ÊÔ´  ÎÒÃÇĞèÒªÏìÓ¦²¢ÇÒ¼õÉÙÎÒÃÇÕ¼ÓÃµÄÏµÍ³×ÊÔ´
+è€ƒè™‘åˆ°å¯ç”¨çš„æœ‰é™çš„èµ„æº  æˆ‘ä»¬éœ€è¦å“åº”å¹¶ä¸”å‡å°‘æˆ‘ä»¬å ç”¨çš„ç³»ç»Ÿèµ„æº
 the limited resources available, we should respond by reducing our use of system
 
 3
 00:00:09,380 --> 00:00:13,890
-ÌØ±ğÊÇÄÇĞ©»á³ÖĞøÏûºÄµçÁ¿µÄ²Ù×÷
+ç‰¹åˆ«æ˜¯é‚£äº›ä¼šæŒç»­æ¶ˆè€—ç”µé‡çš„æ“ä½œ
 resources. Particularly, anything that could continue draining the battery.
 
 4
 00:00:13,890 --> 00:00:18,500
-Õâ°üÀ¨ÄÇĞ©ĞèÒª³ÖĞø¸üĞÂUIµÄ²Ù×÷
+è¿™åŒ…æ‹¬é‚£äº›éœ€è¦æŒç»­æ›´æ–°UIçš„æ“ä½œ
 That includes anything that's being used exclusively to update the UI. So, what
 
 5
 00:00:18,500 --> 00:00:23,120
-ÄÇÃ´µ±ÊÕµ½ÔİÍ£»òÕßÍ£Ö¹ĞÅºÅÊ±  ÄÄĞ©¼àÌıÆ÷»òÕß¸üĞÂĞèÒª±»ÔİÍ£»òÕß¶Ï¿ªÁ¬½ÓÄØ
+é‚£ä¹ˆå½“æ”¶åˆ°æš‚åœæˆ–è€…åœæ­¢ä¿¡å·æ—¶  å“ªäº›ç›‘å¬å™¨æˆ–è€…æ›´æ–°éœ€è¦è¢«æš‚åœæˆ–è€…æ–­å¼€è¿æ¥å‘¢
 are some examples of listeners or updates that should be paused or disconnected
 
 6
 00:00:23,120 --> 00:00:28,110
-Çë°ÑÄãµÄ´ğ°¸Ğ´ÔÚÏÂÃæµÄÎÄ±¾¿òÖĞ
+è¯·æŠŠä½ çš„ç­”æ¡ˆå†™åœ¨ä¸‹é¢çš„æ–‡æœ¬æ¡†ä¸­
 when onpause or onstop are received? Put your answer in the text box below.
 

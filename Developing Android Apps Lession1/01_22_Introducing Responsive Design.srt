@@ -1,30 +1,30 @@
 1
 00:00:00,620 --> 00:00:04,970
-ÏëÏóÒ»ÏÂ  Äã»¨·ÑÁËÊıĞ¡Ê±µÄÊ±¼ä  ´´ÔìÁËÒ»¸öÍêÃÀµÄlayout
+æƒ³è±¡ä¸€ä¸‹  ä½ èŠ±è´¹äº†æ•°å°æ—¶çš„æ—¶é—´  åˆ›é€ äº†ä¸€ä¸ªå®Œç¾çš„layout
 Imagine spending hours, crafting the perfect layout. What happens to
 
 2
 00:00:04,970 --> 00:00:09,540
-µ±Äã×ª¶¯ÄãµÄÉè±¸  Éè±¸±äÎªºáÏòÄ£Ê½Ê±  ÄãµÄlayout»á·¢ÉúÊ²Ã´
+å½“ä½ è½¬åŠ¨ä½ çš„è®¾å¤‡  è®¾å¤‡å˜ä¸ºæ¨ªå‘æ¨¡å¼æ—¶  ä½ çš„layoutä¼šå‘ç”Ÿä»€ä¹ˆ
 that layout, when you rotate the device, into a landscape orientation?
 
 3
 00:00:09,540 --> 00:00:13,850
-»òÕßËµµ±ËüÔËĞĞÔÚÒ»¸ö¸ü´óÆÁÄ»µÄÉè±¸ÉÏ»á·¢ÉúÊ²Ã´  ºÃÏûÏ¢ÊÇ
+æˆ–è€…è¯´å½“å®ƒè¿è¡Œåœ¨ä¸€ä¸ªæ›´å¤§å±å¹•çš„è®¾å¤‡ä¸Šä¼šå‘ç”Ÿä»€ä¹ˆ  å¥½æ¶ˆæ¯æ˜¯
 Or when it's run on a device, with a much larger screen? The good news,
 
 4
 00:00:13,850 --> 00:00:17,400
-AndroidÌá¹©ÁË·Ç³£°ôµÄ¹¤¾ßÈ¥°ïÖúÄãÉè¼Ælayouts
+Androidæä¾›äº†éå¸¸æ£’çš„å·¥å…·å»å¸®åŠ©ä½ è®¾è®¡layouts
 is that Android provides excellent tools to help you with layouts.
 
 5
 00:00:17,400 --> 00:00:21,150
-ÄãÒªÈ¥Ñ§Ï°Ê¹ÓÃËüÃÇÀ´°ïÖúÄãÊ¹µÃÄãµÄÓ¦ÓÃ³ÌĞòÔÚÊÖ»ú ¡¢Æ½°åµçÄÔ
+ä½ è¦å»å­¦ä¹ ä½¿ç”¨å®ƒä»¬æ¥å¸®åŠ©ä½ ä½¿å¾—ä½ çš„åº”ç”¨ç¨‹åºåœ¨æ‰‹æœº ã€å¹³æ¿ç”µè„‘
 You'll want to understand them to make your app look amazing across the wide
 
 6
 00:00:21,150 --> 00:00:25,160
-ÒÔ¼°ÆäËûÉè±¸ÉÏ¶¼¿ÉÒÔÕı³£µÄ¹¤×÷
+ä»¥åŠå…¶ä»–è®¾å¤‡ä¸Šéƒ½å¯ä»¥æ­£å¸¸çš„å·¥ä½œ
 variety of phones, tablets and other devices you'll want your app to work on.
 

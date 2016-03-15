@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,220 --> 00:00:02,890
 由于获取天气的任务是在fragment里面运行的  所以  
 Since the fetch weather task is in the fragment, the

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,430 --> 00:00:02,540
 既然我们已经完成了对应用程序UI的实现，
 Now that we've finished build the UI for our app,

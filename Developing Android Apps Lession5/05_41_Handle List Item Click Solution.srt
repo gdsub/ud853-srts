@@ -11,7 +11,7 @@ that was provided in the gist.
 
 3
 00:00:05,890 --> 00:00:10,220
-然后再onCreateView函数里改变列表项点击事件
+然后在onCreateView函数里改变列表项点击事件
 Then, in the onCreateView method,
 we modify the list item click behavior.
 
@@ -23,7 +23,7 @@ always launching a new intent to
 
 5
 00:00:13,590 --> 00:00:17,170
-detail activity，我们希望通知回调
+detail activity，我们希望通知回调接口
 the detail activity,
 we want to notify the Callback instead.
 
@@ -144,7 +144,7 @@ we remove some code that relied on
 
 26
 00:01:28,540 --> 00:01:33,170
-并选择用mUti代替
+并选择用mUri代替
 incoming intent, and
 switched it to use mUri instead.
 

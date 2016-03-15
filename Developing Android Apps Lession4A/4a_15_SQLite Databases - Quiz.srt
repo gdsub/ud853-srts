@@ -1,269 +1,269 @@
 1
 00:00:00,603 --> 00:00:05,130
-ÄãÊÇ¶ÔµÄ  Android»á½«ÄãµÄÊı¾İ±£´æµ½ÎÄ¼şÏµÍ³ÖĞ
+ä½ æ˜¯å¯¹çš„  Androidä¼šå°†ä½ çš„æ•°æ®ä¿å­˜åˆ°æ–‡ä»¶ç³»ç»Ÿä¸­
 As you might expect, Android stores your persistent data in the file system.
 
 2
 00:00:05,130 --> 00:00:09,172
-ÎªÁË±ãÓÚ¿ª·¢ÕßµÄ¹¤×÷  AndroidÔÚÎÄ¼şÏµÍ³Ö®ÉÏ
+ä¸ºäº†ä¾¿äºå¼€å‘è€…çš„å·¥ä½œ  Androidåœ¨æ–‡ä»¶ç³»ç»Ÿä¹‹ä¸Š
 To simplify what app developers need to write, Android provides
 
 3
 00:00:09,172 --> 00:00:13,077
-Ìá¹©ÁË¼¸ÖÖ½á¹¹»¯µÄ´æ´¢Ñ¡Ïî
+æä¾›äº†å‡ ç§ç»“æ„åŒ–çš„å­˜å‚¨é€‰é¡¹
 several structured storage options on top of the file system.
 
 4
 00:00:13,077 --> 00:00:19,253
-ÎÒÃÇÀ´ÏêÏ¸ÌÖÂÛÒ»ÏÂSharedPreferencesºÍSQLiteÊı¾İ¿â
+æˆ‘ä»¬æ¥è¯¦ç»†è®¨è®ºä¸€ä¸‹SharedPreferenceså’ŒSQLiteæ•°æ®åº“
 For Sunshine, we'll leverage both Shared Preferences and an SQLite Database.
 
 5
 00:00:19,253 --> 00:00:21,690
-ÏÂÃæÈÃÎÒÃÇ¿´Ò»ÏÂ
+ä¸‹é¢è®©æˆ‘ä»¬çœ‹ä¸€ä¸‹
 Let's look at both of these options.
 
 6
 00:00:21,690 --> 00:00:26,864
-ÎÒÃÇÖ®Ç°´æ´¢ÓÃ»§ÓÊ±àµÄSharedPreferencesÀà
+æˆ‘ä»¬ä¹‹å‰å­˜å‚¨ç”¨æˆ·é‚®ç¼–çš„SharedPreferencesç±»
 The Shared Preferences class, which we are already using to store our user
 
 7
 00:00:26,864 --> 00:00:32,036
-Ìá¹©ÁËÒ»ÖÖ´æ´¢ºÍ²éÑ¯»ù´¡Êı¾İÀàĞÍ
+æä¾›äº†ä¸€ç§å­˜å‚¨å’ŒæŸ¥è¯¢åŸºç¡€æ•°æ®ç±»å‹
 zip code in units, provides a general framework that allows you to save and
 
 8
 00:00:32,036 --> 00:00:36,390
-¼üÖµ¶ÔµÄÍ¨ÓÃ¿ò¼Ü
+é”®å€¼å¯¹çš„é€šç”¨æ¡†æ¶
 retrieve persistent key value pairs of primitive data types,
 
 9
 00:00:36,390 --> 00:00:40,192
-ÕâÀïµÄ»ù´¡Êı¾İÀàĞÍ°üÀ¨²¼¶ûĞÍ  ÕûĞÍ  ³¤ÕûĞÍºÍ×Ö·û´®µÈ
+è¿™é‡Œçš„åŸºç¡€æ•°æ®ç±»å‹åŒ…æ‹¬å¸ƒå°”å‹  æ•´å‹  é•¿æ•´å‹å’Œå­—ç¬¦ä¸²ç­‰
 such as Booleans, floats, ins, longs and strings.
 
 10
 00:00:40,192 --> 00:00:44,416
-²»¹ıÓĞĞ©Ê±ºòÏñSharedPreferencesÕâÑù¼òµ¥µÄ¼üÖµ¶Ô¿ò¼Ü
+ä¸è¿‡æœ‰äº›æ—¶å€™åƒSharedPreferencesè¿™æ ·ç®€å•çš„é”®å€¼å¯¹æ¡†æ¶
 There are times when a simple key value pair framework like Shared Preferences
 
 11
 00:00:44,416 --> 00:00:46,601
-ÎŞ·¨Ìá¹©×ã¹»µÄÁé»îĞÔ
+æ— æ³•æä¾›è¶³å¤Ÿçš„çµæ´»æ€§
 doesn't provide enough flexibility.
 
 12
 00:00:46,601 --> 00:00:50,210
-ĞÒÔËµØÊÇ  Android»¹ÓĞSQLiteÊı¾İ¿â
+å¹¸è¿åœ°æ˜¯  Androidè¿˜æœ‰SQLiteæ•°æ®åº“
 Fortunately, Android also has SQLite.
 
 13
 00:00:50,210 --> 00:00:54,181
-SQLiteÊı¾İ¿âÊÇÒ»ÖÖÇáÁ¿¼¶µÄ¹ØÏµĞÍÊı¾İ¿â
+SQLiteæ•°æ®åº“æ˜¯ä¸€ç§è½»é‡çº§çš„å…³ç³»å‹æ•°æ®åº“
 SQLite implements a light weight relational database.
 
 14
 00:00:54,181 --> 00:00:57,804
-ÎÒÃÇÍ¨¹ıĞ´²éÑ¯·½·¨  ÆäËüµÄ·½·¨
+æˆ‘ä»¬é€šè¿‡å†™æŸ¥è¯¢æ–¹æ³•  å…¶å®ƒçš„æ–¹æ³•
 We interact with SQLite databases by writing queries and
 
 15
 00:00:57,804 --> 00:01:02,644
-»òÕßSQLÓï¾äÓëSQLiteÊı¾İ¿â½øĞĞ½»»¥
+æˆ–è€…SQLè¯­å¥ä¸SQLiteæ•°æ®åº“è¿›è¡Œäº¤äº’
 statements and SQLite's variant of the structured query language or SQL.
 
 16
 00:01:02,644 --> 00:01:05,867
-ÔÚÊı¾İ¿âÖĞ´æ´¢Êı¾İ±ÈÊ¹ÓÃSharedPreferences
+åœ¨æ•°æ®åº“ä¸­å­˜å‚¨æ•°æ®æ¯”ä½¿ç”¨SharedPreferences
 Storing something in a a database is more complicated than using
 
 17
 00:01:05,867 --> 00:01:07,008
-Òª¸ü¼Ó¸´ÔÓ
+è¦æ›´åŠ å¤æ‚
 Shared Preferences.
 
 18
 00:01:07,008 --> 00:01:09,366
-ÄÇÎªÊ²Ã´»¹ÒªÊ¹ÓÃÊı¾İ¿âÄØ
+é‚£ä¸ºä»€ä¹ˆè¿˜è¦ä½¿ç”¨æ•°æ®åº“å‘¢
 So why would we ever choose this option?
 
 19
 00:01:09,366 --> 00:01:12,956
-±Ï¾¹  AndroidÖ§³ÖÔ­Ê¼ÎÄ¼ş´æ´¢
+æ¯•ç«Ÿ  Androidæ”¯æŒåŸå§‹æ–‡ä»¶å­˜å‚¨
 After all, Android supports both raw files and
 
 20
 00:01:12,956 --> 00:01:15,926
-¿ÉÒÔ×÷ÎªÌæ´ú
+å¯ä»¥ä½œä¸ºæ›¿ä»£
 shared preferences as alternatives.
 
 21
 00:01:15,926 --> 00:01:20,100
-ºÃ°É  ÕâºÍÄãÎŞ·¨´ÓµØ°åÉÏµÄÒ»´ó¶ÑÒÂ·şÖĞ¿ìËÙµØ
+å¥½å§  è¿™å’Œä½ æ— æ³•ä»åœ°æ¿ä¸Šçš„ä¸€å¤§å †è¡£æœä¸­å¿«é€Ÿåœ°
 Well, for the same reason that it's inefficient to find things if you
 
 22
 00:01:20,100 --> 00:01:22,588
-ÕÒµ½ÄãÏëÒªµÄÒÂ·şµÄµÀÀíÊÇÒ»ÑùµÄ
+æ‰¾åˆ°ä½ æƒ³è¦çš„è¡£æœçš„é“ç†æ˜¯ä¸€æ ·çš„
 throw your clothes in a pile on the floor.
 
 23
 00:01:22,588 --> 00:01:27,996
-ÔÚSQLiteÊı¾İ¿âÖĞ´æ´¢Êı¾İ¿ÉÒÔ°ïÖúÄã¸ü¼òµ¥µØ×éÖ¯ºÍ²éÑ¯Êı¾İ
+åœ¨SQLiteæ•°æ®åº“ä¸­å­˜å‚¨æ•°æ®å¯ä»¥å¸®åŠ©ä½ æ›´ç®€å•åœ°ç»„ç»‡å’ŒæŸ¥è¯¢æ•°æ®
 Storing things in an SQLite Database helps you organize and find data easily.
 
 24
 00:01:27,996 --> 00:01:30,064
-Õâ¶à¿÷ÁËË÷ÒıºÍ±í
+è¿™å¤šäºäº†ç´¢å¼•å’Œè¡¨
 Thanks to the power of indexing and tables.
 
 25
 00:01:30,064 --> 00:01:32,583
-ÈÃÎÒÃÇ¿´¿´¾¿¾¹ÊÇÔõÃ´»ØÊÂ
+è®©æˆ‘ä»¬çœ‹çœ‹ç©¶ç«Ÿæ˜¯æ€ä¹ˆå›äº‹
 Let's see what this looks like.
 
 26
 00:01:32,583 --> 00:01:36,484
-ÕâÊÇÌìÆøÊı¾İ¿âÖĞµÄÒ»ÕÅ±í
+è¿™æ˜¯å¤©æ°”æ•°æ®åº“ä¸­çš„ä¸€å¼ è¡¨
 Here is an SQLite Database table from our weather database.
 
 27
 00:01:36,484 --> 00:01:38,689
-×¢ÒâÎÒÃÇÃ»ÓĞÕ¹Ê¾ËùÓĞµÄÊôĞÔ
+æ³¨æ„æˆ‘ä»¬æ²¡æœ‰å±•ç¤ºæ‰€æœ‰çš„å±æ€§
 Note not all fields are represented.
 
 28
 00:01:38,689 --> 00:01:41,788
-µÚÒ»ÌìµÄËùÓĞÊı¾İÔÚµÚÒ»ĞĞ
+ç¬¬ä¸€å¤©çš„æ‰€æœ‰æ•°æ®åœ¨ç¬¬ä¸€è¡Œ
 All of the data for the first day is in the first row.
 
 29
 00:01:41,788 --> 00:01:45,666
-µÚ¶şÌìµÄËùÓĞÊı¾İÔÚµÚ¶şĞĞ  ÒÔ´ËÀàÍÆ
+ç¬¬äºŒå¤©çš„æ‰€æœ‰æ•°æ®åœ¨ç¬¬äºŒè¡Œ  ä»¥æ­¤ç±»æ¨
 The data for the second day is in the second row and so on.
 
 30
 00:01:45,666 --> 00:01:46,989
-Èç¹ûÓÃ¼üÖµ¶ÔµÄ»°
+å¦‚æœç”¨é”®å€¼å¯¹çš„è¯
 With key valued pairs,
 
 31
 00:01:46,989 --> 00:01:50,171
-ÊÇºÜÄÑ×éÖ¯ÕâÑùµÄÒ»ĞĞÊı¾İµÄ
+æ˜¯å¾ˆéš¾ç»„ç»‡è¿™æ ·çš„ä¸€è¡Œæ•°æ®çš„
 it would be difficult to associate a row of data this way.
 
 32
 00:01:50,171 --> 00:01:54,583
-Ëæ×ÅºóÃæ¶ÔAndroidÖĞÊı¾İ¿âµÄ¼ÌĞøÑ§Ï°
+éšç€åé¢å¯¹Androidä¸­æ•°æ®åº“çš„ç»§ç»­å­¦ä¹ 
 As you continue through this section on database storage and Android.
 
 33
 00:01:54,583 --> 00:01:58,656
-ÎÒÃÇ½«»á¶ÔSQLiteÊı¾İ¿âºÍ¹ØÏµĞÍÊı¾İ¿âÓĞÒ»Ğ©»ù±¾µÄÀí½â
+æˆ‘ä»¬å°†ä¼šå¯¹SQLiteæ•°æ®åº“å’Œå…³ç³»å‹æ•°æ®åº“æœ‰ä¸€äº›åŸºæœ¬çš„ç†è§£
 We're going to expect some basic understanding of SQLite and
 
 34
 00:01:58,656 --> 00:02:02,649
-°üÀ¨´´½¨  ²éÕÒ  ¸üĞÂ  É¾³ı  ²åÈë
+åŒ…æ‹¬åˆ›å»º  æŸ¥æ‰¾  æ›´æ–°  åˆ é™¤  æ’å…¥
 relational databases, including what a create, select,
 
 35
 00:02:02,649 --> 00:02:05,484
-ÕâĞ©²Ù×÷µÄÒâË¼
+è¿™äº›æ“ä½œçš„æ„æ€
 update, delete and insert operation is.
 
 36
 00:02:05,484 --> 00:02:07,725
-ÎÒÃÇ½«°ïÖúÄãĞ´ÕâĞ©²Ù×÷µÄ´úÂë
+æˆ‘ä»¬å°†å¸®åŠ©ä½ å†™è¿™äº›æ“ä½œçš„ä»£ç 
 We'll help you write these operations.
 
 37
 00:02:07,725 --> 00:02:10,606
-²»¹ıÈç¹ûÄã´ÓÀ´Ã»Ê¹ÓÃ¹ıSQLite»òÕßĞèÒª¸´Ï°Ò»ÏÂ
+ä¸è¿‡å¦‚æœä½ ä»æ¥æ²¡ä½¿ç”¨è¿‡SQLiteæˆ–è€…éœ€è¦å¤ä¹ ä¸€ä¸‹
 But if you are new to SQLite or need a refresher,
 
 38
 00:02:10,606 --> 00:02:14,505
-È¥SQLite½Ì³Ì¿´¿´  Á´½ÓÔÚÏÂÃæµÄ°ïÖúÖ¸ÄÏÖĞ
+å»SQLiteæ•™ç¨‹çœ‹çœ‹  é“¾æ¥åœ¨ä¸‹é¢çš„å¸®åŠ©æŒ‡å—ä¸­
 head over to the tutorial linked in the instructor notes below.
 
 39
 00:02:14,505 --> 00:02:17,662
-Ò»µ©ÎÒÃÇÔÚÓ¦ÓÃÖĞ´´½¨ºÃÁËÊı¾İ¿â  ²¢ÔËĞĞÔÚÉè±¸ÉÏ
+ä¸€æ—¦æˆ‘ä»¬åœ¨åº”ç”¨ä¸­åˆ›å»ºå¥½äº†æ•°æ®åº“  å¹¶è¿è¡Œåœ¨è®¾å¤‡ä¸Š
 Once we have a database up and running on our device for our app.
 
 40
 00:02:17,662 --> 00:02:20,982
-Ê¹ÓÃSQLÓï¾ä»ñÈ¡ÎÒÃÇÏëÒªµÄĞÅÏ¢ÊÇºÜ¼òµ¥µÄ
+ä½¿ç”¨SQLè¯­å¥è·å–æˆ‘ä»¬æƒ³è¦çš„ä¿¡æ¯æ˜¯å¾ˆç®€å•çš„
 Getting the information we need using SQL is easy.
 
 41
 00:02:20,982 --> 00:02:24,734
-ÎÒÃÇ¿ÉÒÔ¶ÔÕâ¸öÊı¾İ¿â½øĞĞ²éÑ¯²Ù×÷  ±ÈÈçÕâÀïµÄSELECTÓï¾ä
+æˆ‘ä»¬å¯ä»¥å¯¹è¿™ä¸ªæ•°æ®åº“è¿›è¡ŒæŸ¥è¯¢æ“ä½œ  æ¯”å¦‚è¿™é‡Œçš„SELECTè¯­å¥
 We can perform queries against this database, such as this SELECT statement
 
 42
 00:02:24,734 --> 00:02:27,519
-Ëü»á·µ»ØÌØ¶¨ÈÕÆÚµÄÌìÆøÊı¾İ
+å®ƒä¼šè¿”å›ç‰¹å®šæ—¥æœŸçš„å¤©æ°”æ•°æ®
 here, which returns the weather on the specified date.
 
 43
 00:02:27,519 --> 00:02:30,363
-ÔÚÌìÆøÏêÇéÒ³ÃæÎÒÃÇ¿ÉÄÜ»áĞèÒªÕâÑùµÄÊı¾İ
+åœ¨å¤©æ°”è¯¦æƒ…é¡µé¢æˆ‘ä»¬å¯èƒ½ä¼šéœ€è¦è¿™æ ·çš„æ•°æ®
 Similar to what we would want to do for the detail view.
 
 44
 00:02:30,363 --> 00:02:34,611
-ÎÒÃÇ»¹¿ÉÒÔÊ¹ÓÃÉÔÎ¢¸´ÔÓÒ»Ğ©µÄ²éÑ¯À´·µ»ØÒ»¸öÊ±¼ä¶ÎµÄÌìÆøĞÅÏ¢
+æˆ‘ä»¬è¿˜å¯ä»¥ä½¿ç”¨ç¨å¾®å¤æ‚ä¸€äº›çš„æŸ¥è¯¢æ¥è¿”å›ä¸€ä¸ªæ—¶é—´æ®µçš„å¤©æ°”ä¿¡æ¯
 We can use this slightly more complex query to return a range of dates,
 
 45
 00:02:34,611 --> 00:02:38,506
-ÎÒÃÇÔÚÌìÆøÔ¤±¨ÁĞ±íÒ³ÃæÓ¦¸Ã»áĞèÒªÕâÑùµÄÊı¾İ
+æˆ‘ä»¬åœ¨å¤©æ°”é¢„æŠ¥åˆ—è¡¨é¡µé¢åº”è¯¥ä¼šéœ€è¦è¿™æ ·çš„æ•°æ®
 which is similar to what we'd do on the main forecast list view.
 
 46
 00:02:38,506 --> 00:02:42,566
-ÖØÉêÒ»±é  Èç¹ûÄã¶ÔÈÎºÎÒ»µã²»ÊìÏ¤  Äã¿ÉÒÔ
+é‡ç”³ä¸€é  å¦‚æœä½ å¯¹ä»»ä½•ä¸€ç‚¹ä¸ç†Ÿæ‚‰  ä½ å¯ä»¥
 Once again, if any of this was unfamiliar, please consider working
 
 47
 00:02:42,566 --> 00:02:46,076
-²é¿´SQLite½Ì³Ì  °ïÖúÖ¸ÄÏÖĞÓĞÁ´½Ó
+æŸ¥çœ‹SQLiteæ•™ç¨‹  å¸®åŠ©æŒ‡å—ä¸­æœ‰é“¾æ¥
 through the SQLite tutorial link in the instructor notes.
 
 48
 00:02:46,076 --> 00:02:49,897
-¾ÍËãÃ»ÓĞÎÊÌâ  ÄãÒ²¿ÉÒÔÑ§µ½Ò»Ğ©¶«Î÷
+å°±ç®—æ²¡æœ‰é—®é¢˜  ä½ ä¹Ÿå¯ä»¥å­¦åˆ°ä¸€äº›ä¸œè¥¿
 And even if isn't unfamiliar, you might just learn something.
 
 49
 00:02:49,897 --> 00:02:50,684
-ºÃµÄ
+å¥½çš„
 Okay.
 
 50
 00:02:50,684 --> 00:02:53,704
-ÕâÀïÓĞÒ»¸ö¸ü¼Ó¸´ÔÓÒ»Ğ©µÄSQL²éÑ¯Óï¾ä
+è¿™é‡Œæœ‰ä¸€ä¸ªæ›´åŠ å¤æ‚ä¸€äº›çš„SQLæŸ¥è¯¢è¯­å¥
 Here's a slightly more complicated SQL query.
 
 51
 00:02:53,704 --> 00:02:55,192
-´Ó°ïÖúÖ¸ÄÏÖĞ¿´¿´ÓĞÃ»ÓĞ
+ä»å¸®åŠ©æŒ‡å—ä¸­çœ‹çœ‹æœ‰æ²¡æœ‰
 See the instructor notes for
 
 52
 00:02:55,192 --> 00:02:58,545
-Äã¿ÉÒÔÊ¹ÓÃµ½µÄ¶«Î÷À´°ïÖúÄã½âÎöÕâ¸öSQLÓï¾ä
+ä½ å¯ä»¥ä½¿ç”¨åˆ°çš„ä¸œè¥¿æ¥å¸®åŠ©ä½ è§£æè¿™ä¸ªSQLè¯­å¥
 some resources that you can use to help parse the SQL statement.
 
 53
 00:02:58,545 --> 00:03:03,362
-¿´¿´µÚÒ»¸ö  maxÊÇÒ»ÌìÖĞ×î¸ßÎÂµÄÄÇÒ»À¸
+çœ‹çœ‹ç¬¬ä¸€ä¸ª  maxæ˜¯ä¸€å¤©ä¸­æœ€é«˜æ¸©çš„é‚£ä¸€æ 
 One note, max is the name of the column that stores the high temperature for
 
 54
 00:03:03,362 --> 00:03:03,980
-µÄÊôĞÔÃû³Æ
+çš„å±æ€§åç§°
 the day.

@@ -40,12 +40,12 @@ and go ahead and add the networking code snippet here.
 
 9
 00:00:25,490 --> 00:00:30,410
-或者保持留白  等你什么时候想粘过来了再粘  你或许自动导入
+或者保持留白  等你什么时候想粘过来了再粘  你或许需要启用
 To get her blank, is pasted below again if you need it. You may need to enable
 
 10
 00:00:30,410 --> 00:00:33,700
-或者手动设置这些设置选项
+Auto Import 中的这些选项或者手动添加import
 these options in auto import or add the imports
 
 11

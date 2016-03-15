@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,830 --> 00:00:03,070
 一个在Android里被使用最多的implicit intents是
 One of the most used implicit intents

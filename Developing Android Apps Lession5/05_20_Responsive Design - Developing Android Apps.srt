@@ -90,12 +90,12 @@ devices like tablets. Well, I can show you some examples of
 
 19
 00:00:53,700 --> 00:00:57,420
-看看这些应用是如何使用 Muti-pane 布局适配不同屏幕的吧  在Android设计指南里
+看看这些应用是如何使用 Multi-pane 布局适配不同屏幕的吧  在Android设计指南里
 how apps adapt using multi-pane layouts. In the Android Design Guide,
 
 20
 00:00:57,420 --> 00:01:01,000
-有一个部分叫 Muti-pane 布局  有一项方法就是  把多个视图
+有一个部分叫 Multi-pane 布局  有一项技术就是  把多个视图
 there's a section on multi-pane layouts. One technique is to combine
 
 21

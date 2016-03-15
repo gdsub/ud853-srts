@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,360 --> 00:00:04,810
 做完了么  我来给你演示一遍吧  正如我之前提到的
 Done already? Let me show you how it's done. As I said before, we

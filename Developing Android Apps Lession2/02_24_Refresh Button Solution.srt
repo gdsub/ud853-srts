@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,280 --> 00:00:02,550
 这里是刷新按钮在
 Here's the code for the Refresh button in

@@ -1,155 +1,155 @@
 1
 00:00:00,310 --> 00:00:04,858
-Android 1.0ÔÚ2008Äê·¢²¼ÁË  ÔÚ½ö½öÁùÄêÖ®ºó
+Android 1.0åœ¨2008å¹´å‘å¸ƒäº†  åœ¨ä»…ä»…å…­å¹´ä¹‹å
 Android 1.0 launched in 2008. And in just the six year since then,
 
 2
 00:00:04,858 --> 00:00:09,880
-ÓĞ11¸öĞÂµÄÆ½Ì¨·¢²¼  ÔÚAndroid¿ª·¢·½Ãæ
+æœ‰11ä¸ªæ–°çš„å¹³å°å‘å¸ƒ  åœ¨Androidå¼€å‘æ–¹é¢
 there has been 11 new major platform releases. On the Android developer side,
 
 3
 00:00:09,880 --> 00:00:13,460
-ÎÒÃÇÔÚÒ»¸ö¸ø¶¨µÄÍ¼±êÖĞÕ¹Ê¾ÁËÊıÁ¿Ïà¶Ô»îÔ¾µÄAndroidÉè±¸ÔËĞĞµÄÆ½Ì¨°æ±¾
+æˆ‘ä»¬åœ¨ä¸€ä¸ªç»™å®šçš„å›¾æ ‡ä¸­å±•ç¤ºäº†æ•°é‡ç›¸å¯¹æ´»è·ƒçš„Androidè®¾å¤‡è¿è¡Œçš„å¹³å°ç‰ˆæœ¬
 we show the relative number of active Android devices running a given platform
 
 4
 00:00:13,460 --> 00:00:18,314
-±ıÍ¼ÕæµÄÊÇ·Ç³£°ôµÄ  µ«ÊÇ¶ÔÓÚÎÒÃÇµÄÄ¿µÄÀ´Ëµ
+é¥¼å›¾çœŸçš„æ˜¯éå¸¸æ£’çš„  ä½†æ˜¯å¯¹äºæˆ‘ä»¬çš„ç›®çš„æ¥è¯´
 version in this pie chart, because pie charts are awesome. For our purposes
 
 5
 00:00:18,314 --> 00:00:22,700
-ÄãÕæµÄ×îºÃ»¹ÊÇ¿¼ÂÇ¿´Ò»ÏÂÕâ¸öÖ±·½Í¼  Èç¹ûÄãÃĞ×ÅÑÛ¾¦
+ä½ çœŸçš„æœ€å¥½è¿˜æ˜¯è€ƒè™‘çœ‹ä¸€ä¸‹è¿™ä¸ªç›´æ–¹å›¾  å¦‚æœä½ çœ¯ç€çœ¼ç›
 though, you're really better off looking at this as a histogram. If you squint,
 
 6
 00:00:22,700 --> 00:00:27,715
-Äã´óÔ¼¿ÉÒÔ¿´µ½Ò»¸öÄ£ºıµÄÖÓĞÎÇúÏß  ×îÔçµÄAndroid°æ±¾ÊÇÔÚÕâÀï
+ä½ å¤§çº¦å¯ä»¥çœ‹åˆ°ä¸€ä¸ªæ¨¡ç³Šçš„é’Ÿå½¢æ›²çº¿  æœ€æ—©çš„Androidç‰ˆæœ¬æ˜¯åœ¨è¿™é‡Œ
 you can almost see a vaguely bell-shaped curve, with the oldest releases here at
 
 7
 00:00:27,715 --> 00:00:31,858
-ËüÃÇµÄÖªÃû¶ÈËæ×ÅÉè±¸µÄÉı¼¶ºÍ¸ü»»¶øÖğ½¥ÏÂ½µ
+å®ƒä»¬çš„çŸ¥ååº¦éšç€è®¾å¤‡çš„å‡çº§å’Œæ›´æ¢è€Œé€æ¸ä¸‹é™
 the left, their popularity dropping off as devices are upgraded or
 
 8
 00:00:31,858 --> 00:00:36,100
-ÔÚÖĞ¼äµÄÊÇÔÚÉè±¸ÖĞËùÕ¼±ÈÀı×î´óµÄ
+åœ¨ä¸­é—´çš„æ˜¯åœ¨è®¾å¤‡ä¸­æ‰€å æ¯”ä¾‹æœ€å¤§çš„
 replaced. The largest proportion of devices are here in the middle,
 
 9
 00:00:36,100 --> 00:00:40,020
-´ú±í×ÅÕâĞ©Éè±¸ÒÑ¾­Á½ËêÀ²  ¶ø×îĞÂµÄÆ½Ì¨
+ä»£è¡¨ç€è¿™äº›è®¾å¤‡å·²ç»ä¸¤å²å•¦  è€Œæœ€æ–°çš„å¹³å°
 representing devices about two years old. And the newest platforms,
 
 10
 00:00:40,020 --> 00:00:43,470
-ÈÕÒæÆÕ¼°µÄĞÂÊÖ»úÔÚ·¢²¼ºÍÉı¼¶
+æ—¥ç›Šæ™®åŠçš„æ–°æ‰‹æœºåœ¨å‘å¸ƒå’Œå‡çº§
 gaining popularity as new phones are released or upgrades go out,
 
 11
 00:00:43,470 --> 00:00:47,523
-ÔÚËüµÄÓÒ²à  ËùÒÔ¿¼ÂÇµ½ÕâÒ»µã  ×îµÍSDK×÷ÎªÄúµÄ×îµÍÏŞ¶È
+åœ¨å®ƒçš„å³ä¾§  æ‰€ä»¥è€ƒè™‘åˆ°è¿™ä¸€ç‚¹  æœ€ä½SDKä½œä¸ºæ‚¨çš„æœ€ä½é™åº¦
 are here on the right. So with that in mind, the Min SDK acts as your low-pass
 
 12
 00:00:47,523 --> 00:00:51,980
-Google Play½«²»»áÔÚÒ»Ì¨±È×îµÍSDK°æ±¾»¹µÍµÄÉè±¸Æ½Ì¨ÉÏÏÔÊ¾ÄúµÄÓ¦ÓÃ³ÌĞò
+Google Playå°†ä¸ä¼šåœ¨ä¸€å°æ¯”æœ€ä½SDKç‰ˆæœ¬è¿˜ä½çš„è®¾å¤‡å¹³å°ä¸Šæ˜¾ç¤ºæ‚¨çš„åº”ç”¨ç¨‹åº
 filter. Google Play won't show your app on devices running a platform version
 
 13
 00:00:51,980 --> 00:00:56,660
-ËùÒÔÎÒÃÇÎªÊ²Ã´²»Ö»ÉèÖÃÒ»Ïî×îµÍSDK¶øÖ§³ÖËùÓĞµÄÉè±¸ÄØ
+æ‰€ä»¥æˆ‘ä»¬ä¸ºä»€ä¹ˆä¸åªè®¾ç½®ä¸€é¡¹æœ€ä½SDKè€Œæ”¯æŒæ‰€æœ‰çš„è®¾å¤‡å‘¢
 lower than its minimum SDK version. So why not just set the Min SDK to one and
 
 14
 00:00:56,660 --> 00:01:01,400
-Ò»°ãÀ´Ëµ  ÄãÏëÒªÈÃÄãµÄÄ¿±êSDKÂú×ã¾¡¿ÉÄÜ¶àµÄÓÃ»§
+ä¸€èˆ¬æ¥è¯´  ä½ æƒ³è¦è®©ä½ çš„ç›®æ ‡SDKæ»¡è¶³å°½å¯èƒ½å¤šçš„ç”¨æˆ·
 support everyone? Generally, you'll want to target as many users as you can, but
 
 15
 00:01:01,400 --> 00:01:05,040
-µ«ÒªÓëÒ»Ğ©¾ÉµÄ°æ±¾½øĞĞÆ¥ÅäÊÇÒª¸¶³ö´ú¼ÛµÄ
+ä½†è¦ä¸ä¸€äº›æ—§çš„ç‰ˆæœ¬è¿›è¡ŒåŒ¹é…æ˜¯è¦ä»˜å‡ºä»£ä»·çš„
 there's a cost associated with supporting some of these older versions.
 
 16
 00:01:05,040 --> 00:01:07,830
-±ÈÈçÏñ¼æÈİ²»¿ÉÓÃ
+æ¯”å¦‚åƒå…¼å®¹ä¸å¯ç”¨
 Things like creating different execution paths around deprecated or
 
 17
 00:01:07,830 --> 00:01:12,730
-»ò¸üĞÂµÄAPI»òÕßÕë¶Ô²»Í¬¹¦ÄÜ½øĞĞ²»Ò»ÑùµÄÕ¹Ê¾Ğ§¹û¼°ÓÃ»§ÌåÑé
+æˆ–æ›´æ–°çš„APIæˆ–è€…é’ˆå¯¹ä¸åŒåŠŸèƒ½è¿›è¡Œä¸ä¸€æ ·çš„å±•ç¤ºæ•ˆæœåŠç”¨æˆ·ä½“éªŒ
 update APIs or presenting a different UX to devices with different features. So
 
 18
 00:01:12,730 --> 00:01:16,360
-ËùÒÔÄãĞèÒªÆ½ºâÀ©Õ¹ÄãµÄÓ¦ÓÃµÄÊÜÖÚËù¸¶³öµÄ´ú¼ÛÊÇ·ñÖµµÃ
+æ‰€ä»¥ä½ éœ€è¦å¹³è¡¡æ‰©å±•ä½ çš„åº”ç”¨çš„å—ä¼—æ‰€ä»˜å‡ºçš„ä»£ä»·æ˜¯å¦å€¼å¾—
 you need to balance the opportunity of expanding your audience with the cost of
 
 19
 00:01:16,360 --> 00:01:21,480
-Í¬Ê±  ¼Ç×¡Ã¿¸ö°æ±¾¶¼½éÉÜÁËËüµÄĞÂµÄAPIºÍÓ²¼şÖ§³Ö
+åŒæ—¶  è®°ä½æ¯ä¸ªç‰ˆæœ¬éƒ½ä»‹ç»äº†å®ƒçš„æ–°çš„APIå’Œç¡¬ä»¶æ”¯æŒ
 supporting those new users. Also, remember that each release introduced with it
 
 20
 00:01:21,480 --> 00:01:24,900
-Òò´Ë  °ÑÄúµÄÓ¦ÓÃ³ÌĞòÔÚ²»Ö§³Ö
+å› æ­¤  æŠŠæ‚¨çš„åº”ç”¨ç¨‹åºåœ¨ä¸æ”¯æŒ
 new APIs and hardware support. So it may not make sense to
 
 21
 00:01:24,900 --> 00:01:28,190
-ÄúµÄ×îĞ¡¹¦ÄÜ¼¯µÄÉè±¸ÉÏÔËĞĞÊÇÃ»ÓĞÒâÒåµÄ
+æ‚¨çš„æœ€å°åŠŸèƒ½é›†çš„è®¾å¤‡ä¸Šè¿è¡Œæ˜¯æ²¡æœ‰æ„ä¹‰çš„
 make your app available to devices that don't support your minimum feature set.
 
 22
 00:01:29,220 --> 00:01:33,430
-Í¨¹ı±È½Ï  Ä¿±êSDK²»ÊÇÒ»¸ö×î¸ßÏŞ¶È
+é€šè¿‡æ¯”è¾ƒ  ç›®æ ‡SDKä¸æ˜¯ä¸€ä¸ªæœ€é«˜é™åº¦
 By comparison, the Target SDK is not a high-pass filter.
 
 23
 00:01:33,430 --> 00:01:36,460
-ËüÖ»ÊÇÓÃÀ´ÉùÃ÷ÄãËù²âÊÔ¹ıµÄÆ½Ì¨µÄ°æ±¾
+å®ƒåªæ˜¯ç”¨æ¥å£°æ˜ä½ æ‰€æµ‹è¯•è¿‡çš„å¹³å°çš„ç‰ˆæœ¬
 It's used only to declare which platform version you've tested on.
 
 24
 00:01:37,628 --> 00:01:41,060
-Õë¶ÔÒ»¸öÌØ¶¨µÄAPIµÄÓ¦ÓÃ½«¼ÌĞøÔÚºóĞøµÄ°æ±¾ÖĞÏòÇ°¼æÈİ
+é’ˆå¯¹ä¸€ä¸ªç‰¹å®šçš„APIçš„åº”ç”¨å°†ç»§ç»­åœ¨åç»­çš„ç‰ˆæœ¬ä¸­å‘å‰å…¼å®¹
 An app targeted to a certain API will continue to be forward compatible on
 
 25
 00:01:41,060 --> 00:01:45,650
-¸ÃÆ½Ì¨Ê¹ÓÃÄ¿±êSDKµÄ¼æÈİÄ£Ê½µ±
+è¯¥å¹³å°ä½¿ç”¨ç›®æ ‡SDKçš„å…¼å®¹æ¨¡å¼å½“
 future releases. The platform uses the Target SDK values in case a future
 
 26
 00:01:45,650 --> 00:01:50,040
-ºóĞøµÄÆ½Ì¨·¢ÉúÖØ´ó±ä¸ü
+åç»­çš„å¹³å°å‘ç”Ÿé‡å¤§å˜æ›´
 platform makes a significant change to expected behavior. This ensures your app
 
 27
 00:01:50,040 --> 00:01:54,620
-ÕâÑù¿ÉÒÔÈ·±£ÄúµÄÓ¦ÓÃ³ÌĞòÔÚÓÃ»§µÄÊÖ»úÉı¼¶Ö®ºóÈÔÈ»¿ÉÓÃ
+è¿™æ ·å¯ä»¥ç¡®ä¿æ‚¨çš„åº”ç”¨ç¨‹åºåœ¨ç”¨æˆ·çš„æ‰‹æœºå‡çº§ä¹‹åä»ç„¶å¯ç”¨
 doesn't break when a user's phone gets upgraded. If you're developing a new app,
 
 28
 00:01:54,620 --> 00:01:58,630
-Èç¹ûÄãÕıÔÚ¿ª·¢Ò»¸öĞÂµÄÓ¦ÓÃ³ÌĞò  Ã»ÓĞÈÎºÎÀíÓÉÈ¥¾Ü¾øÊ¹ÓÃ×îĞÂ°æ±¾AndroidÀ´×÷ÎªÄãµÄÄ¿±êSDK
+å¦‚æœä½ æ­£åœ¨å¼€å‘ä¸€ä¸ªæ–°çš„åº”ç”¨ç¨‹åº  æ²¡æœ‰ä»»ä½•ç†ç”±å»æ‹’ç»ä½¿ç”¨æœ€æ–°ç‰ˆæœ¬Androidæ¥ä½œä¸ºä½ çš„ç›®æ ‡SDK
 there's really no reason to target anything but the latest Android version. And
 
 29
 00:01:58,630 --> 00:02:02,340
-Ò»µ©ÄãµÄÓ¦ÓÃ³ÌĞò·¢²¼  ×÷ÎªÖØÒªµÄÒ»µãÊÇ¸üĞÂÄãµÄÄ¿±êSDK
+ä¸€æ—¦ä½ çš„åº”ç”¨ç¨‹åºå‘å¸ƒ  ä½œä¸ºé‡è¦çš„ä¸€ç‚¹æ˜¯æ›´æ–°ä½ çš„ç›®æ ‡SDK
 once your app has been released, make it a point to update your Target SDK and
 
 30
 00:02:02,340 --> 00:02:06,610
-µ±ĞÂµÄÆ½Ì¨·¢²¼µÄÊ±ºòÔ½¿ì²âÊÔÔ½ºÃ
+å½“æ–°çš„å¹³å°å‘å¸ƒçš„æ—¶å€™è¶Šå¿«æµ‹è¯•è¶Šå¥½
 test as soon as possible when new platform releases roll out so you can take
 
 31
 00:02:06,610 --> 00:02:10,570
-ÕâÑù  Äã¾Í¿ÉÒÔÀûÓÃÃ¿Ò»¸öĞÂÆ½Ì¨µÄÌØµãÀ´ÓÅ»¯ºÍ¸Ä½øÄúµÄÓ¦ÓÃ
+è¿™æ ·  ä½ å°±å¯ä»¥åˆ©ç”¨æ¯ä¸€ä¸ªæ–°å¹³å°çš„ç‰¹ç‚¹æ¥ä¼˜åŒ–å’Œæ”¹è¿›æ‚¨çš„åº”ç”¨
 advantage of every new platform optimization and improvement it has to offer.
 

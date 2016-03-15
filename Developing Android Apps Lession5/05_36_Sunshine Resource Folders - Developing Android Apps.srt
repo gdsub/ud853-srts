@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,090 --> 00:00:01,730
 很好，现在我们使用我们所学到的关于
 Great. So, let's apply what we learned about

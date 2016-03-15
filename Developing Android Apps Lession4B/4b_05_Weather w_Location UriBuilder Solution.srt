@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,240 --> 00:00:01,940
 这一段视频非常的短
 This one is pretty short.
@@ -11,7 +11,7 @@ for the location to the weather URI,
 
 3
 00:00:05,768 --> 00:00:09,410
-使用URI类里面得buildUpon函数
+使用Uri类里面得buildUpon函数
 using the buildUpon
 function from the URI class
 

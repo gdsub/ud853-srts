@@ -20,7 +20,7 @@ We started off by defining the URI's that our ContentProvider will support.
 
 5
 00:00:13,550 --> 00:00:16,930
-然后更新了规则来对应这些URI
+然后更新了合约来对应这些URI
 We then updated our contract to reflect these URIs.
 
 6
@@ -45,7 +45,7 @@ cursor returned for each URI.
 
 10
 00:00:34,060 --> 00:00:37,030
-然后我们实现了ContentProvider请求函数
+然后我们实现了ContentProvider查询函数
 We then implemented the ContentProvider query functions,
 
 11
@@ -55,7 +55,7 @@ followed by the write operations insert, update, and delete.
 
 12
 00:00:41,330 --> 00:00:44,260
-最后  我们聊了一下BulkInsert函数
+最后  我们聊了一下bulkInsert函数
 Finally, we talked about the optional BulkInsert
 
 13

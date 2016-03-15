@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,340 --> 00:00:04,440
 添加一个菜单选项来允许在地图上查看用户的偏好地址
 Add a menu option to view the user's preferred location on a map. It

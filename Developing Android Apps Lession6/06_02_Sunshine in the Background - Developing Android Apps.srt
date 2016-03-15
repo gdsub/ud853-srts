@@ -50,7 +50,7 @@ destroy your activity and instantiate a new one. The
 
 11
 00:00:31,810 --> 00:00:35,400
-现在单纯的异步任务实施有俩条线路来尝试
+现在单纯的异步任务实施有俩个线程来尝试
 naive AsyncTask implementation now has two threads trying to
 
 12

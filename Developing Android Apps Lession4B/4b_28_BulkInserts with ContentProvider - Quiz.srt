@@ -1,70 +1,70 @@
 1
 00:00:01,310 --> 00:00:05,210
-ÎÒÃÇÊµ¼ÊÉÏÈÔÈ»Ã»ÓĞ²åÈëÌìÆøÊı¾İµ½Content Provider
+æˆ‘ä»¬å®é™…ä¸Šä»ç„¶æ²¡æœ‰æ’å…¥å¤©æ°”æ•°æ®åˆ°ContentProvider
 We're still not actually inserting
 weather data into the ContentProvider.
 
 2
 00:00:05,210 --> 00:00:08,270
-ËùÒÔ Õâ¸öÊÇÒ»¸öºÃÊ±»úËµËµBulkInserts(BulkInsertÊÇContentProviderµÄÒ»¸ö·½·¨)
+æ‰€ä»¥ è¿™ä¸ªæ˜¯ä¸€ä¸ªå¥½æ—¶æœºè¯´è¯´BulkInserts(BulkInsertæ˜¯ContentProviderçš„ä¸€ä¸ªæ–¹æ³•)
 So, this is a good time to
 talk about BulkInserts.
 
 3
 00:00:08,270 --> 00:00:11,380
-¼Ç×¡ Õâ¸öBulkInertÔÊĞíÎÒÃÇ²åÈë¶àĞĞ(Êı¾İ)
+è®°ä½ è¿™ä¸ªBulkInsertå…è®¸æˆ‘ä»¬æ’å…¥å¤šè¡Œ(æ•°æ®)
 Remember, that BulkInsert allows
 us to insert multiple rows
 
 4
 00:00:11,380 --> 00:00:14,840
-±ÈÊ¹ÓÃÊı¾İ¿âÊÂÎï¸ü¼Ó¸ßĞ§
+æ¯”ä½¿ç”¨æ•°æ®åº“äº‹ç‰©æ›´åŠ é«˜æ•ˆ
 far more efficiently by using
 a database transaction.
 
 5
 00:00:14,840 --> 00:00:18,130
-ÎÒÃÇ¿ÉÒÔÊ¹ÓÃÕâ¸öµ±ÎÒÃÇĞèÒª²åÈë14ÌìµÄÌìÆøÊı¾İ
+å½“æˆ‘ä»¬éœ€è¦æ’å…¥14å¤©çš„å¤©æ°”æ•°æ®åˆ°æ•°æ®åº“è¡¨ä¸­çš„æ—¶å€™
 We can apply this when we need to
 insert 14 days worth of weather data
 
 6
 00:00:18,130 --> 00:00:19,720
-µ½Êı¾İ¿âÖĞµÄÊ±ºò
+æˆ‘ä»¬å¯ä»¥ä½¿ç”¨å®ƒ(BulkInsert)
 into the table.
 
 7
 00:00:19,720 --> 00:00:24,650
-Ê¹ÓÃContent ProviderÀ´ÅúÁ¿²åÈëÄÚÈİÊı¾İµ½
+ä½¿ç”¨ContentProvideræ¥æ‰¹é‡æ’å…¥å†…å®¹æ•°æ®åˆ°
 Use the ContentProvider to BulkInsert
 the vector of content values into
 
 8
 00:00:24,650 --> 00:00:26,250
-Êı¾İ¿â
+æ•°æ®åº“
 the database.
 
 9
 00:00:26,250 --> 00:00:30,995
-×¢Òâ ÔÚÕâ¸öÇøÓòÏÂ·½ÓĞ¼¸ĞĞÌáÊ¾ÔÚÄãÌí¼ÓBulkInsert´úÂë
+æ³¨æ„ åœ¨è¿™ä¸ªåŒºåŸŸä¸‹æ–¹æœ‰å‡ è¡Œæç¤º åœ¨ä½ æ·»åŠ BulkInsertä»£ç å
 Note, there are a few lines underneath
 the area where you add your BulkInsert
 
 10
 00:00:30,995 --> 00:00:35,280
-ºóÊ¹ÓÃËüÀ´²âÊÔÏÔÊ¾Äã²åÈëºóµÄÊı¾İ
+ä½¿ç”¨é‚£äº›ä»£ç æ¥æµ‹è¯•æ˜¾ç¤ºä½ æ’å…¥åçš„æ•°æ®
 code that you can use to test displaying
 the values you just inserted.
 
 11
 00:00:35,280 --> 00:00:39,300
-Ëü»á´ÓÊı¾İ¿âÖĞ¶Á³öÕâĞ©Êı¾İ ÎªËûÃÇ´´½¨ContentValues(ContentProviderµÄ×¨ÓÃÊı¾İ¼¯ºÏ)
+é‚£äº›ä»£ç ä¼šä»æ•°æ®åº“ä¸­è¯»å‡ºè¿™äº›æ•°æ® ä¸ºä»–ä»¬åˆ›å»ºContentValues(ContentProviderçš„ä¸“ç”¨æ•°æ®é›†åˆ)
 It will read those values out of
 the data base, create content values for
 
 12
 00:00:39,300 --> 00:00:42,520
-ºÍ´«¸øÎÒÃÇÒÑ¾­ÓĞµÄÏÔÊ¾·½·¨
+å’Œä¼ ç»™æˆ‘ä»¬å·²ç»æœ‰çš„æ˜¾ç¤ºæ–¹æ³•
 them, and pass them into the same
 display function we already have.
 

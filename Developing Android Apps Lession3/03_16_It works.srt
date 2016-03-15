@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,400 --> 00:00:03,320
 Woo Hoo。点击列表项目工作正常
 Woo Hoo. Clicking our list items works.

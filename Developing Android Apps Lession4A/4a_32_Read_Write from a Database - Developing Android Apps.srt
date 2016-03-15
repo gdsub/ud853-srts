@@ -1,340 +1,340 @@
 1
 00:00:00,420 --> 00:00:03,420
-¸ù¾İÖ®Ç°µÄ²âÊÔ  ÎÒÃÇ³É¹¦µØ´´½¨ÁËÊı¾İ¿â
+æ ¹æ®ä¹‹å‰çš„æµ‹è¯•  æˆ‘ä»¬æˆåŠŸåœ°åˆ›å»ºäº†æ•°æ®åº“
 We tested that the database was created successfully.
 
 2
 00:00:03,420 --> 00:00:05,290
-µ«ÊÇÏÖÔÚÎÒÃÇÒª²âÊÔÒ»ÏÂÊÇ·ñÄÜ
+ä½†æ˜¯ç°åœ¨æˆ‘ä»¬è¦æµ‹è¯•ä¸€ä¸‹æ˜¯å¦èƒ½
 But now we should test that reading from and
 
 3
 00:00:05,290 --> 00:00:08,800
-ÕıÈ·µØ´ÓÊı¾İ¿âÖĞ¶ÁĞ´Êı¾İ
+æ­£ç¡®åœ°ä»æ•°æ®åº“ä¸­è¯»å†™æ•°æ®
 writing to the sunshine database works as expected.
 
 4
 00:00:08,800 --> 00:00:11,890
-ÎÒ»á½Ì´ó¼ÒÈçºÎÏòÊı¾İ¿âÖĞ²åÈëÒ»ĞĞÊı¾İ
+æˆ‘ä¼šæ•™å¤§å®¶å¦‚ä½•å‘æ•°æ®åº“ä¸­æ’å…¥ä¸€è¡Œæ•°æ®
 I'll show you how we insert a row of data into the database, and
 
 5
 00:00:11,890 --> 00:00:14,740
-È»ºóÔÙ´ÓÊı¾İ¿âÖĞ¶Á³öÕâĞĞÊı¾İ
+ç„¶åå†ä»æ•°æ®åº“ä¸­è¯»å‡ºè¿™è¡Œæ•°æ®
 then query the database to read it back out.
 
 6
 00:00:14,740 --> 00:00:18,810
-Ê×ÏÈ  ÎÒÃÇĞèÒªÍ¨¹ıSQLiteOpenHelperÀàÄÃµ½Êı¾İ¿âµÄÒıÓÃ
+é¦–å…ˆ  æˆ‘ä»¬éœ€è¦é€šè¿‡SQLiteOpenHelperç±»æ‹¿åˆ°æ•°æ®åº“çš„å¼•ç”¨
 First, we get a reference to the database from our SQLI Open Helper.
 
 7
 00:00:18,810 --> 00:00:21,960
-Ò²¾ÍÊÇÒ»¸öSQLiteDatabaseµÄÊµÀı
+ä¹Ÿå°±æ˜¯ä¸€ä¸ªSQLiteDatabaseçš„å®ä¾‹
 Which is an instance of an SQLI database object.
 
 8
 00:00:21,960 --> 00:00:24,740
-ÎÒÃÇÔÚ²âÊÔ´´½¨Êı¾İ¿âµÄÊ±ºòÓÃµ½ÁËÕâ¸öÊµÀı
+æˆ‘ä»¬åœ¨æµ‹è¯•åˆ›å»ºæ•°æ®åº“çš„æ—¶å€™ç”¨åˆ°äº†è¿™ä¸ªå®ä¾‹
 We use this in test create DB.
 
 9
 00:00:24,740 --> 00:00:26,270
-ÓÉÓÚÎÒÃÇĞèÒªÏòÊı¾İ¿âĞ´ÈëÊı¾İ
+ç”±äºæˆ‘ä»¬éœ€è¦å‘æ•°æ®åº“å†™å…¥æ•°æ®
 Since we're writing to the database,
 
 10
 00:00:26,270 --> 00:00:30,170
-²¢ÇÒ´ÓÖĞ¶ÁÈ¡Êı¾İ  ÎÒÃÇĞèÒªÒ»¸ö¿ÉĞ´µÄÊı¾İ¿âÊµÀı
+å¹¶ä¸”ä»ä¸­è¯»å–æ•°æ®  æˆ‘ä»¬éœ€è¦ä¸€ä¸ªå¯å†™çš„æ•°æ®åº“å®ä¾‹
 as well as reading, we're going to get a writable database.
 
 11
 00:00:30,170 --> 00:00:33,390
-Èç¹ûÎÒÃÇÖ»ĞèÒª¶ÁÈ¡Êı¾İ  ÄÇÃ´Ö»ĞèÒªÒ»¸ö¿É¶ÁµÄÊı¾İ¿âÊµÀı¾Í¿ÉÒÔÁË
+å¦‚æœæˆ‘ä»¬åªéœ€è¦è¯»å–æ•°æ®  é‚£ä¹ˆåªéœ€è¦ä¸€ä¸ªå¯è¯»çš„æ•°æ®åº“å®ä¾‹å°±å¯ä»¥äº†
 If we were only reading, then we should use a readable database.
 
 12
 00:00:33,390 --> 00:00:36,600
-ÎÒÃÇÊ¹ÓÃContentValues¶ÔÏó±íÊ¾ĞèÒª²åÈëµ½
+æˆ‘ä»¬ä½¿ç”¨ContentValueså¯¹è±¡è¡¨ç¤ºéœ€è¦æ’å…¥åˆ°
 To represent the row of data, we want to insert into the database,
 
 13
 00:00:36,600 --> 00:00:38,870
-Êı¾İ¿âÖĞµÄÒ»ĞĞÊı¾İ
+æ•°æ®åº“ä¸­çš„ä¸€è¡Œæ•°æ®
 we use a content values object.
 
 14
 00:00:38,870 --> 00:00:40,160
-ÎÒÃÇÔÚcreateNorthPoleLocationValues
+æˆ‘ä»¬åœ¨createNorthPoleLocationValues
 We create one of these,
 
 15
 00:00:40,160 --> 00:00:43,650
-¹¤¾ß·½·¨ÖĞ´´½¨Ò»¸öContentValues¶ÔÏó
+å·¥å…·æ–¹æ³•ä¸­åˆ›å»ºä¸€ä¸ªContentValueså¯¹è±¡
 in the create North pole location values utility function.
 
 16
 00:00:44,830 --> 00:00:48,550
-ContentValues¶ÔÏó°üº¬ÁËÒ»×é¼üÖµ¶Ô
+ContentValueså¯¹è±¡åŒ…å«äº†ä¸€ç»„é”®å€¼å¯¹
 Content values, contain a set of key value pairs.
 
 17
 00:00:48,550 --> 00:00:53,059
-ÄãĞèÒª½«×Ö·û´®ÀàĞÍµÄ¼üÒÔ¼°ÓëÆäÏà¹ØÁªµÄÖµ´æÈëContentValuesÖĞ
+ä½ éœ€è¦å°†å­—ç¬¦ä¸²ç±»å‹çš„é”®ä»¥åŠä¸å…¶ç›¸å…³è”çš„å€¼å­˜å…¥ContentValuesä¸­
 You put a key string associated with the value, into the content value set.
 
 18
 00:00:53,059 --> 00:00:56,763
-×Ö·û´®ÀàĞÍµÄ¼üÊÇÊı¾İ¿âÖĞµÄÊôĞÔÃû³Æ
+å­—ç¬¦ä¸²ç±»å‹çš„é”®æ˜¯æ•°æ®åº“ä¸­çš„å±æ€§åç§°
 The key string is contain the names of columns in your database.
 
 19
 00:00:56,763 --> 00:01:00,490
-ÖµÔò¿ÉÒÔÊÇ¶àÖÖÊı¾İÀàĞÍ
+å€¼åˆ™å¯ä»¥æ˜¯å¤šç§æ•°æ®ç±»å‹
 The value can contain many different data types.
 
 20
 00:01:00,490 --> 00:01:04,140
-ContentValues¶ÔÏóÔÚAndroidÀïÓÃÓÚÏòÊı¾İ¿âÖĞĞ´ÈëÊı¾İ
+ContentValueså¯¹è±¡åœ¨Androidé‡Œç”¨äºå‘æ•°æ®åº“ä¸­å†™å…¥æ•°æ®
 Content values, are used to write databases in Android.
 
 21
 00:01:04,140 --> 00:01:06,021
-Ò»µ©ÎÒÃÇ´´½¨ÁËContentValues¶ÔÏó
+ä¸€æ—¦æˆ‘ä»¬åˆ›å»ºäº†ContentValueså¯¹è±¡
 Once we've created our content values.
 
 22
 00:01:06,021 --> 00:01:08,465
-¾Í¿ÉÒÔµ÷ÓÃÊı¾İ¿âÊµÀıµÄinsert·½·¨
+å°±å¯ä»¥è°ƒç”¨æ•°æ®åº“å®ä¾‹çš„insertæ–¹æ³•
 We call database.insert,
 
 23
 00:01:08,465 --> 00:01:12,775
-½«±íÃûºÍContentValues¶ÔÏó×÷Îª²ÎÊı´«ÈëÒÔ´´½¨Ò»ĞĞĞÂÊı¾İ
+å°†è¡¨åå’ŒContentValueså¯¹è±¡ä½œä¸ºå‚æ•°ä¼ å…¥ä»¥åˆ›å»ºä¸€è¡Œæ–°æ•°æ®
 with the table name and content values to actually create the new row of data.
 
 24
 00:01:12,775 --> 00:01:15,475
-²åÈë²Ù×÷µÄ·µ»ØÖµÊÇÒ»¸ö³¤ÕûĞÎ
+æ’å…¥æ“ä½œçš„è¿”å›å€¼æ˜¯ä¸€ä¸ªé•¿æ•´å½¢
 The return value, from our insertion is a long,
 
 25
 00:01:15,475 --> 00:01:19,435
-ËüÊÇ²åÈëµÄĞÂÊı¾İĞĞµÄidÊôĞÔ
+å®ƒæ˜¯æ’å…¥çš„æ–°æ•°æ®è¡Œçš„idå±æ€§
 that contains the new row ID from the _ID column.
 
 26
 00:01:19,435 --> 00:01:23,450
-Èç¹û²åÈë²Ù×÷Ê§°Ü  ·µ»ØÖµÊÇ-1
+å¦‚æœæ’å…¥æ“ä½œå¤±è´¥  è¿”å›å€¼æ˜¯-1
 If there's an error inserting, the return value is negative 1.
 
 27
 00:01:23,450 --> 00:01:28,050
-ÏÖÔÚÎÒÃÇÓĞÁËÕâ¸öidÖµ  ÎÒÃÇ¿ÉÒÔÍ¨¹ıËü´ÓÊı¾İ¿âÖĞ²éÑ¯ÕâÒ»ĞĞÊı¾İ
+ç°åœ¨æˆ‘ä»¬æœ‰äº†è¿™ä¸ªidå€¼  æˆ‘ä»¬å¯ä»¥é€šè¿‡å®ƒä»æ•°æ®åº“ä¸­æŸ¥è¯¢è¿™ä¸€è¡Œæ•°æ®
 Now that we have a row ID, we can query the database for that row.
 
 28
 00:01:28,050 --> 00:01:32,080
-ÕâÀïÊÇ¸÷ÖÖÓĞ²»Í¬¸öÊı²ÎÊıµÄÖØÔØµÄquery·½·¨
+è¿™é‡Œæ˜¯å„ç§æœ‰ä¸åŒä¸ªæ•°å‚æ•°çš„é‡è½½çš„queryæ–¹æ³•
 There are several query methods that take in different numbers of parameters.
 
 29
 00:01:32,080 --> 00:01:34,780
-²éÑ¯·½·¨Ö»ÊÇ°ïÖúÎÒÃÇ¸ü¼Ó¼òµ¥µØ
+æŸ¥è¯¢æ–¹æ³•åªæ˜¯å¸®åŠ©æˆ‘ä»¬æ›´åŠ ç®€å•åœ°
 A query method, is just a helper function to make it
 
 30
 00:01:34,780 --> 00:01:37,770
-´´½¨ºÍÖ´ĞĞÒ»¸öSELECTÓï¾ä
+åˆ›å»ºå’Œæ‰§è¡Œä¸€ä¸ªSELECTè¯­å¥
 easier to construct and execute a select statement.
 
 31
 00:01:37,770 --> 00:01:40,800
-ÈÃÎÒÃÇÀ´¿´¿´query·½·¨ÊÇÈçºÎ¹¹½¨Ò»¸ö²éÑ¯Óï¾äµÄ
+è®©æˆ‘ä»¬æ¥çœ‹çœ‹queryæ–¹æ³•æ˜¯å¦‚ä½•æ„å»ºä¸€ä¸ªæŸ¥è¯¢è¯­å¥çš„
 Let's show how the query function constructs a statement.
 
 32
 00:01:40,800 --> 00:01:44,920
-ÕâÀïÊÇÒ»¸öSQLiteDatabaseµÄ»ù±¾µÄ²éÑ¯·½·¨
+è¿™é‡Œæ˜¯ä¸€ä¸ªSQLiteDatabaseçš„åŸºæœ¬çš„æŸ¥è¯¢æ–¹æ³•
 Here's what the base, SQLiteDatabase query function looks like.
 
 33
 00:01:44,920 --> 00:01:48,107
-×î»ù±¾µÄ²éÑ¯Ö»ĞèÒªÒ»¸ö±íÃû×÷Îª²ÎÊı
+æœ€åŸºæœ¬çš„æŸ¥è¯¢åªéœ€è¦ä¸€ä¸ªè¡¨åä½œä¸ºå‚æ•°
 The most basic query we can make with this only has a table name.
 
 34
 00:01:48,107 --> 00:01:50,970
-ÕâÑù»á·µ»ØËùÓĞ¼ÇÂ¼µÄËùÓĞÊôĞÔ
+è¿™æ ·ä¼šè¿”å›æ‰€æœ‰è®°å½•çš„æ‰€æœ‰å±æ€§
 And it returns all columns and all records.
 
 35
 00:01:50,970 --> 00:01:52,040
-Ê£ÏÂµÄÕâĞ©²ÎÊı
+å‰©ä¸‹çš„è¿™äº›å‚æ•°
 The rest of the parameters,
 
 36
 00:01:52,040 --> 00:01:54,750
-¿ÉÒÔ¶ÔÉÏÃæÕâ¸ö»ù±¾µÄÊä³ö½á¹û½øĞĞ¹ıÂË
+å¯ä»¥å¯¹ä¸Šé¢è¿™ä¸ªåŸºæœ¬çš„è¾“å‡ºç»“æœè¿›è¡Œè¿‡æ»¤
 would modifying filter the output of this query.
 
 37
 00:01:54,750 --> 00:01:57,881
-Ìí¼ÓÒ»¸öÎÒÃÇÏ£Íû·µ»ØµÄÊôĞÔÁĞ±íµÄÓ³ÉäÊı×é
+æ·»åŠ ä¸€ä¸ªæˆ‘ä»¬å¸Œæœ›è¿”å›çš„å±æ€§åˆ—è¡¨çš„æ˜ å°„æ•°ç»„
 Adding a projection, in array of columns, we wish to return,
 
 38
 00:01:57,881 --> 00:02:00,786
-»á¸Ä±äÏÂÃæµÄSELECTÓï¾äËù²éÑ¯µÄÄÚÈİ
+ä¼šæ”¹å˜ä¸‹é¢çš„SELECTè¯­å¥æ‰€æŸ¥è¯¢çš„å†…å®¹
 changes what we are selecting in select statement below.
 
 39
 00:02:00,786 --> 00:02:03,510
-selection²ÎÊı»á¹ıÂË²éÑ¯½á¹û
+selectionå‚æ•°ä¼šè¿‡æ»¤æŸ¥è¯¢ç»“æœ
 The selection parameter filters the results.
 
 40
 00:02:04,560 --> 00:02:08,120
-ÄãÒ²¿ÉÒÔÑ¡ÔñĞÔµØÊ¹ÓÃselection arguments²ÎÊıÀ´Ìæ»»selection²ÎÊı
+ä½ ä¹Ÿå¯ä»¥é€‰æ‹©æ€§åœ°ä½¿ç”¨selection argumentså‚æ•°æ¥æ›¿æ¢selectionå‚æ•°
 One can optionally also use the selection arguments to replace any
 
 41
 00:02:08,120 --> 00:02:10,020
-ÖĞ¶ÔÓ¦µÄÎÊºÅÕ¼Î»·û
+ä¸­å¯¹åº”çš„é—®å·å ä½ç¬¦
 question marks in the query.
 
 42
 00:02:10,020 --> 00:02:12,380
-Android½«´Ë×÷Îª°ó¶¨²ÎÊı
+Androidå°†æ­¤ä½œä¸ºç»‘å®šå‚æ•°
 Android creates these as bound parameters,
 
 43
 00:02:12,380 --> 00:02:16,260
-ËüÊÇÃæÏòSQLiteÊı¾İ¿âµÄµÍ²ã´Î½Ó¿Ú  Ò²¾ÍÊÇËµ  ÎÒÃÇ²»ĞèÒªµ£ĞÄ
+å®ƒæ˜¯é¢å‘SQLiteæ•°æ®åº“çš„ä½å±‚æ¬¡æ¥å£  ä¹Ÿå°±æ˜¯è¯´  æˆ‘ä»¬ä¸éœ€è¦æ‹…å¿ƒ
 in a low level interface to SQLite, which means, we don't have to worry
 
 44
 00:02:16,260 --> 00:02:19,530
-ÖîÈç×ªÒå×Ö·û´®ÒÔ±£Ö¤²éÑ¯µÄÕıÈ·ĞÔÕâÑùµÄÊÂÇé
+è¯¸å¦‚è½¬ä¹‰å­—ç¬¦ä¸²ä»¥ä¿è¯æŸ¥è¯¢çš„æ­£ç¡®æ€§è¿™æ ·çš„äº‹æƒ…
 about things like escaping the strings to keep the query valid.
 
 45
 00:02:19,530 --> 00:02:21,660
-ÎÒÃÇÔÚ¹¹½¨ÁËÉÏÃæÕâÑùµÄ²éÑ¯ÒÔºó
+æˆ‘ä»¬åœ¨æ„å»ºäº†ä¸Šé¢è¿™æ ·çš„æŸ¥è¯¢ä»¥å
 We can also change the selection arguments,
 
 46
 00:02:21,660 --> 00:02:24,040
-ÒÀÈ»¿ÉÒÔ¸Ä±äselection²ÎÊı
+ä¾ç„¶å¯ä»¥æ”¹å˜selectionå‚æ•°
 after our query has been made this way.
 
 47
 00:02:24,040 --> 00:02:28,770
-×îºóÒ»¸ö²ÎÊı  ÄãÓ¦¸Ã¿ÉÒÔ²Âµ½  »áÓ°Ïìµ½²éÑ¯½á¹ûµÄË³Ğò
+æœ€åä¸€ä¸ªå‚æ•°  ä½ åº”è¯¥å¯ä»¥çŒœåˆ°  ä¼šå½±å“åˆ°æŸ¥è¯¢ç»“æœçš„é¡ºåº
 The last parameter, as you would expect, affects the order by cause of our query,
 
 48
 00:02:28,770 --> 00:02:32,260
-Ëü»á°Ñ²éÑ¯µÄ½á¹û°´ÕÕÈÕÆÚ½µĞòÅÅÁĞ
+å®ƒä¼šæŠŠæŸ¥è¯¢çš„ç»“æœæŒ‰ç…§æ—¥æœŸé™åºæ’åˆ—
 causing it to sort our result in descending order by date.
 
 49
 00:02:32,260 --> 00:02:35,720
-ËùÓĞµÄquery·½·¨¶¼»á·µ»ØÒ»¸öÊı¾İ¿âCursor£¨ÓÎ±ê£©¶ÔÏó
+æ‰€æœ‰çš„queryæ–¹æ³•éƒ½ä¼šè¿”å›ä¸€ä¸ªæ•°æ®åº“Cursorï¼ˆæ¸¸æ ‡ï¼‰å¯¹è±¡
 The query functions all return a database cursor.
 
 50
 00:02:35,720 --> 00:02:40,190
-Cursor¶ÔÏóÊÇÒ»ÖÖÌá¹©¿ØÖÆ²Ù×÷µÄÊı¾İ½á¹¹  Ëü¿ÉÒÔ±éÀú
+Cursorå¯¹è±¡æ˜¯ä¸€ç§æä¾›æ§åˆ¶æ“ä½œçš„æ•°æ®ç»“æ„  å®ƒå¯ä»¥éå†
 A cursor object, is a control structure, that enables traversal over the rows and
 
 51
 00:02:40,190 --> 00:02:42,420
-²éÑ¯½á¹û¼¯µÄĞĞºÍÁĞ
+æŸ¥è¯¢ç»“æœé›†çš„è¡Œå’Œåˆ—
 columns of our query results set.
 
 52
 00:02:42,420 --> 00:02:46,590
-Í¨³£ÎÒÃÇ»áÍ¨¹ıµ÷ÓÃcursor.moveToFirstÀ´¿ªÊ¼±éÀú
+é€šå¸¸æˆ‘ä»¬ä¼šé€šè¿‡è°ƒç”¨cursor.moveToFirstæ¥å¼€å§‹éå†
 Typically, we'll start traversing results set by calling cursor.move
 
 53
 00:02:46,590 --> 00:02:50,440
-Èç¹ûCursor¶ÔÏóÖĞÃ»ÓĞ²éÑ¯µÄ½á¹û  Ôò»á·µ»Øfalse
+å¦‚æœCursorå¯¹è±¡ä¸­æ²¡æœ‰æŸ¥è¯¢çš„ç»“æœ  åˆ™ä¼šè¿”å›false
 to first, which will return false if there were no rows in the result,
 
 54
 00:02:50,440 --> 00:02:52,670
-Ò²¾ÍÊÇËµÃ»ÓĞÊı¾İ·ûºÏ²éÑ¯µÄ²ÎÊı
+ä¹Ÿå°±æ˜¯è¯´æ²¡æœ‰æ•°æ®ç¬¦åˆæŸ¥è¯¢çš„å‚æ•°
 which means nothing matched the query parameters.
 
 55
 00:02:52,670 --> 00:02:56,245
-ÎÒÃÇ¿ÉÒÔÍ¨¹ımoveToNext·½·¨À´±éÀúÃ¿Ò»ĞĞ
+æˆ‘ä»¬å¯ä»¥é€šè¿‡moveToNextæ–¹æ³•æ¥éå†æ¯ä¸€è¡Œ
 We can then call move to next, iterate through each row.
 
 56
 00:02:56,245 --> 00:02:59,745
-Ò»µ©Cursor¶ÔÏóÖ¸ÏòÁËÒ»ĞĞÓĞĞ§µÄÊı¾İ  Äã¾Í¿ÉÒÔµ÷ÓÃ
+ä¸€æ—¦Cursorå¯¹è±¡æŒ‡å‘äº†ä¸€è¡Œæœ‰æ•ˆçš„æ•°æ®  ä½ å°±å¯ä»¥è°ƒç”¨
 Once the cursor points to a valid row, one can call get
 
 57
 00:02:59,745 --> 00:03:04,215
-getColumnIndex·½·¨À´·µ»ØÊı¾İ¿âµÄÊôĞÔÔÚ½á¹û¼¯ÖĞµÄË÷ÒıÖµ
+getColumnIndexæ–¹æ³•æ¥è¿”å›æ•°æ®åº“çš„å±æ€§åœ¨ç»“æœé›†ä¸­çš„ç´¢å¼•å€¼
 column index to return the index of each database column within the results set.
 
 58
 00:03:04,215 --> 00:03:07,952
-Äã¿ÉÒÔ±£´æÕâĞ©Ë÷ÒıÖµ  ËüÃÇ¿ÉÒÔÓÃÓÚ½á¹û¼¯ÖĞµÄÃ¿Ò»ĞĞ
+ä½ å¯ä»¥ä¿å­˜è¿™äº›ç´¢å¼•å€¼  å®ƒä»¬å¯ä»¥ç”¨äºç»“æœé›†ä¸­çš„æ¯ä¸€è¡Œ
 You can save these values and use them for every row in the result.
 
 59
 00:03:07,952 --> 00:03:09,492
-È»ºóÄã¿ÉÒÔ¸ù¾İÁĞµÄË÷ÒıÖµ
+ç„¶åä½ å¯ä»¥æ ¹æ®åˆ—çš„ç´¢å¼•å€¼
 And then you can call get or methods,
 
 60
 00:03:09,492 --> 00:03:13,822
-µ÷ÓÃ»ñÈ¡ÕâÒ»ĞĞÏàÓ¦ÊôĞÔÖµµÄ·½·¨
+è°ƒç”¨è·å–è¿™ä¸€è¡Œç›¸åº”å±æ€§å€¼çš„æ–¹æ³•
 that retrieve the values from that row based upon column index.
 
 61
 00:03:13,822 --> 00:03:16,232
-ÎÒÃÇÏÖÔÚÒÑ¾­ÌÖÂÛÁËÈçºÎÔÚÎÒÃÇµÄÓ¦ÓÃÖĞ
+æˆ‘ä»¬ç°åœ¨å·²ç»è®¨è®ºäº†å¦‚ä½•åœ¨æˆ‘ä»¬çš„åº”ç”¨ä¸­
 Everything we've covered so far, is how we read and
 
 62
 00:03:16,232 --> 00:03:18,392
-¶ÁĞ´Êı¾İ¿â
+è¯»å†™æ•°æ®åº“
 write from the database in our app.
 
 63
 00:03:18,392 --> 00:03:19,832
-²âÊÔºÍÓ¦ÓÃÖĞµÄ´úÂë¶¼ÓĞÏà¹ØµÄÄÚÈİ
+æµ‹è¯•å’Œåº”ç”¨ä¸­çš„ä»£ç éƒ½æœ‰ç›¸å…³çš„å†…å®¹
 In tests and in our app code.
 
 64
 00:03:21,010 --> 00:03:22,170
-µ«ÊÇ¶ÔÓÚµ¥Ôª²âÊÔ
+ä½†æ˜¯å¯¹äºå•å…ƒæµ‹è¯•
 For our unit test, though,
 
 65
 00:03:22,170 --> 00:03:25,530
-ÎÒÃÇÔö¼ÓÁËÒ»¸öÑéÖ¤µÄ²½Öè  Ò²¾ÍÊÇÊ¹ÓÃ¶ÏÑÔÀ´ÅĞ¶ÏCursorÖĞµÄÖµ
+æˆ‘ä»¬å¢åŠ äº†ä¸€ä¸ªéªŒè¯çš„æ­¥éª¤  ä¹Ÿå°±æ˜¯ä½¿ç”¨æ–­è¨€æ¥åˆ¤æ–­Cursorä¸­çš„å€¼
 we add a step to validate the values from the cursor with the ones we
 
 66
 00:03:25,530 --> 00:03:30,470
-ºÍ×î³õ´´½¨ContentValuesÊ¹ÓÃµÄÖµÊÇ·ñÒ»Ñù
+å’Œæœ€åˆåˆ›å»ºContentValuesä½¿ç”¨çš„å€¼æ˜¯å¦ä¸€æ ·
 originally created the contentValues object with, by using assert statements.
 
 67
 00:03:30,470 --> 00:03:32,770
-ÁíÍâ  µ±ÎÒÃÇÍê³ÉÈÎÎñÒÔºóĞèÒª¹Ø±ÕCursorºÍÊı¾İ¿â
+å¦å¤–  å½“æˆ‘ä»¬å®Œæˆä»»åŠ¡ä»¥åéœ€è¦å…³é—­Cursorå’Œæ•°æ®åº“
 And, when we're finished we should close our cursor and
 
 68
 
 00:03:32,770 --> 00:03:34,775
-ÒÔ¾¡¿ìµØÊÍ·ÅÏµÍ³×ÊÔ´
+ä»¥å°½å¿«åœ°é‡Šæ”¾ç³»ç»Ÿèµ„æº
 database to release the system resources as soon as possible

@@ -1,454 +1,454 @@
 1
 00:00:00,070 --> 00:00:03,340
-Ö®Ç°ÎÒÃÇÒÑ¾­Ñ§µ½ÁËÈçºÎÓÃÏŞ¶¨·û
+ä¹‹å‰æˆ‘ä»¬å·²ç»å­¦åˆ°äº†å¦‚ä½•ç”¨é™å®šç¬¦
 By taking the knowledge that we learned about overriding resources
 
 2
 00:00:03,340 --> 00:00:04,330
-ĞŞÊÎ×ÊÔ´ÎÄ¼ş¼Ğ
+ä¿®é¥°èµ„æºæ–‡ä»¶å¤¹
 in other folders,
 
 3
 00:00:04,330 --> 00:00:08,020
-Õâ´ÎÎÒ»á½ÌÄãÈçºÎÓÃ´úÂëÊµÏÖÆ½°åµÄË«Ò³ÊÓÍ¼ÏÔÊ¾
+è¿™æ¬¡æˆ‘ä¼šæ•™ä½ å¦‚ä½•ç”¨ä»£ç å®ç°å¹³æ¿çš„åŒé¡µè§†å›¾æ˜¾ç¤º
 we'll walk through the code together on how to build up the two-pane tablet UI.
 
 4
 00:00:08,020 --> 00:00:12,400
-Ê×ÏÈ½«values-w820dpÎÄ¼ş¼ĞÉ¾³ı  ÒòÎªÎÒÃÇ»¹²»ĞèÒª
+é¦–å…ˆå°†values-w820dpæ–‡ä»¶å¤¹åˆ é™¤  å› ä¸ºæˆ‘ä»¬è¿˜ä¸éœ€è¦
 First remove the values W820dp folder because we don't need to provide
 
 5
 00:00:12,400 --> 00:00:16,270
-ÎªÆÁÄ»³ß´ç±È820dp»¹´óµÄÉè±¸×öÊÊÅä
+ä¸ºå±å¹•å°ºå¯¸æ¯”820dpè¿˜å¤§çš„è®¾å¤‡åšé€‚é…
 specific logic where the current orientation is greater than 820dp.
 
 6
 00:00:16,270 --> 00:00:19,000
-È»ºóĞŞ¸ÄxmlÎÄ¼ş
+ç„¶åä¿®æ”¹xmlæ–‡ä»¶
 Then go ahead and make the layout XML changes.
 
 7
 00:00:19,000 --> 00:00:22,220
-´´½¨Ò»¸öĞÂµÄÎÄ¼ş¼Ğ  ÃüÃûÎªlayout-sw600dp
+åˆ›å»ºä¸€ä¸ªæ–°çš„æ–‡ä»¶å¤¹  å‘½åä¸ºlayout-sw600dp
 Then create a new layout SW 600dp folder.
 
 8
 00:00:22,220 --> 00:00:25,610
-ÔÚÆäÖĞ´´½¨Ò»¸öĞÂµÄxmlÎÄ¼ş  ÃüÃûÎªactivity_main
+åœ¨å…¶ä¸­åˆ›å»ºä¸€ä¸ªæ–°çš„xmlæ–‡ä»¶  å‘½åä¸ºactivity_main
 And then add a new file called activity_main.
 
 9
 00:00:25,610 --> 00:00:30,610
-ËüºÍÄ¬ÈÏlayoutÎÄ¼ş¼ĞÖĞµÄactivity_main.xmlÍ¬Ãû
+å®ƒå’Œé»˜è®¤layoutæ–‡ä»¶å¤¹ä¸­çš„activity_main.xmlåŒå
 We use the same file name as in the base layout folder activity_main so
 
 10
 00:00:30,610 --> 00:00:34,780
-ÕâÑù  ÔÚ²»Í¬³ß´çµÄÉè±¸ÉÏ¾Í»á¼ÓÔØ¶ÔÓ¦µÄactivity_main.xml
+è¿™æ ·  åœ¨ä¸åŒå°ºå¯¸çš„è®¾å¤‡ä¸Šå°±ä¼šåŠ è½½å¯¹åº”çš„activity_main.xml
 that this one overrides the behavior specifically on tablets.
 
 11
 00:00:34,780 --> 00:00:37,590
-ÏëÒª¿´µ½ÕâÒ»²¿·ÖµÄ´úÂë  ÇëÔÚgistÉÏ²éÕÒ
+æƒ³è¦çœ‹åˆ°è¿™ä¸€éƒ¨åˆ†çš„ä»£ç   è¯·åœ¨gistä¸ŠæŸ¥æ‰¾
 To see the code for this file you can check out the gist below.
 
 12
 00:00:38,990 --> 00:00:42,590
-ÔÚÕâÀïÓĞÒ»¸öË®Æ½·½ÏòµÄLinearLayout×÷¸¸²¼¾Ö
+åœ¨è¿™é‡Œæœ‰ä¸€ä¸ªæ°´å¹³æ–¹å‘çš„LinearLayoutä½œçˆ¶å¸ƒå±€
 Essentially it's a horizontal linear layout that can hold a forecast fragment
 
 13
 00:00:42,590 --> 00:00:46,340
-ÔÚ¸¸²¼¾ÖÄÚforecast fragment¾Ó×óÏÔÊ¾  detail fragment¾ÓÓÒÏÔÊ¾
+åœ¨çˆ¶å¸ƒå±€å†…forecast fragmentå±…å·¦æ˜¾ç¤º  detail fragmentå±…å³æ˜¾ç¤º
 on the left and a detail fragment on the right.
 
 14
 00:00:46,340 --> 00:00:49,510
-ÊÇÊ±ºòÀ´¶Ô±ÈÒ»ÏÂ¾²Ì¬FragmentºÍ¶¯Ì¬FragmentÁË
+æ˜¯æ—¶å€™æ¥å¯¹æ¯”ä¸€ä¸‹é™æ€Fragmentå’ŒåŠ¨æ€Fragmentäº†
 Now's a good time to talk about static verses dynamic fragments.
 
 15
 00:00:49,510 --> 00:00:52,710
-ÎÒÃÇÊµÏÖ×ó±ßµÄforecast fragmentÊÇ¾²Ì¬µÄ
+æˆ‘ä»¬å®ç°å·¦è¾¹çš„forecast fragmentæ˜¯é™æ€çš„
 In our implementation the forecast fragment is the static fragment because
 
 16
 00:00:52,710 --> 00:00:56,520
-ÒòÎªÎÒÃÇÔÚxml²¼¾ÖÎÄ¼şÖĞÒÑ¾­Íê³ÉÁË¶¨Òå
+å› ä¸ºæˆ‘ä»¬åœ¨xmlå¸ƒå±€æ–‡ä»¶ä¸­å·²ç»å®Œæˆäº†å®šä¹‰
 we're defining it in the XML layout no matter what orientation or device size
 
 17
 00:00:56,520 --> 00:00:59,490
-²»¹ÜÉè±¸ÆÁÄ»µÄ·½ÏòÔõÑù  ³ß´ç´óĞ¡ÈçºÎ  ÔÚmain activityÖĞÎÒÃÇ¶¼ĞèÒªforecast fragment
+ä¸ç®¡è®¾å¤‡å±å¹•çš„æ–¹å‘æ€æ ·  å°ºå¯¸å¤§å°å¦‚ä½•  åœ¨main activityä¸­æˆ‘ä»¬éƒ½éœ€è¦forecast fragment
 we know that we're going to need a forecast fragment in the main activity.
 
 18
 00:00:59,490 --> 00:01:03,430
-ÔÙ¿´Õâ±ß  ÎÒÃÇÖ»ÉùÃ÷ÁËÒ»¸öÓÃÓÚ·ÅÖÃdetail fragmentµÄÈİÆ÷
+å†çœ‹è¿™è¾¹  æˆ‘ä»¬åªå£°æ˜äº†ä¸€ä¸ªç”¨äºæ”¾ç½®detail fragmentçš„å®¹å™¨
 On the other hand, we only declare a container for the detail fragment, but
 
 19
 00:01:03,430 --> 00:01:05,235
-²¢Î´ÕæÕıÔÚÀïÃæÊµÏÖfragment
+å¹¶æœªçœŸæ­£åœ¨é‡Œé¢å®ç°fragment
 not the actual fragment.
 
 20
 00:01:05,235 --> 00:01:08,250
-ÒòÎªÃ¿´Î¶¼ÒªÓÃ²»Í¬µÄ²ÎÊı¶¯Ì¬¼ÓÔØËü
+å› ä¸ºæ¯æ¬¡éƒ½è¦ç”¨ä¸åŒçš„å‚æ•°åŠ¨æ€åŠ è½½å®ƒ
 It's initialized with different arguments each time as a dynamic
 
 21
 00:01:08,250 --> 00:01:11,080
-ËùÒÔ×îºÃÔÚmain activityµÄJava´úÂëÖĞ¶¯Ì¬Íê³É´´½¨
+æ‰€ä»¥æœ€å¥½åœ¨main activityçš„Javaä»£ç ä¸­åŠ¨æ€å®Œæˆåˆ›å»º
 fragment, so it's better to dynamically create and add that
 
 22
 00:01:11,080 --> 00:01:14,850
-²¢ÔÚÒ»¸öfragmentÊÂÎñÖĞ¼ÓÔØ³öÀ´
+å¹¶åœ¨ä¸€ä¸ªfragmentäº‹åŠ¡ä¸­åŠ è½½å‡ºæ¥
 fragment in a fragment transaction in the main activity Java code.
 
 23
 00:01:14,850 --> 00:01:19,190
-ÕâÑùFragmentManager¾Í¿ÉÒÔÒ»Ö±ÕÆ¿ØÓë¶¯Ì¬¼ÓÔØÓĞ¹ØµÄ²ÎÊı
+è¿™æ ·FragmentManagerå°±å¯ä»¥ä¸€ç›´æŒæ§ä¸åŠ¨æ€åŠ è½½æœ‰å…³çš„å‚æ•°
 That way the fragment manager can keep track of those initialization arguments
 
 24
 00:01:19,190 --> 00:01:22,580
-µ±Éè±¸ÇĞ³ÉºáÆÁÊ±  ¾Í¿ÉÒÔ½«detail fragmentÏÔÊ¾³öÀ´
+å½“è®¾å¤‡åˆ‡æˆæ¨ªå±æ—¶  å°±å¯ä»¥å°†detail fragmentæ˜¾ç¤ºå‡ºæ¥
 and pass those back to us on, after device rotation.
 
 25
 00:01:22,580 --> 00:01:25,590
-½ÓÏÂÀ´ÎÒÃÇĞèÒª¸üĞÂÒ»ÏÂµ¥Ò³²¼¾ÖÎÄ¼ş
+æ¥ä¸‹æ¥æˆ‘ä»¬éœ€è¦æ›´æ–°ä¸€ä¸‹å•é¡µå¸ƒå±€æ–‡ä»¶
 Then we need to update the one pane UI layouts so
 
 26
 00:01:25,590 --> 00:01:28,150
-ÈÃÆäºÍË«Ò³²¼¾Ö±£³ÖÒ»ÖÂ
+è®©å…¶å’ŒåŒé¡µå¸ƒå±€ä¿æŒä¸€è‡´
 that they're consistent with the two pane case.
 
 27
 00:01:28,150 --> 00:01:31,780
-ÔÚÄ¬ÈÏlayoutÎÄ¼ş¼ĞÖĞµÄactivity_main.xmlÖĞ
+åœ¨é»˜è®¤layoutæ–‡ä»¶å¤¹ä¸­çš„activity_main.xmlä¸­
 So in the activity main file for the base layout folder this used to be
 
 28
 00:01:31,780 --> 00:01:35,030
-ÕâÀïÃæ·ÅÁËÒ»¸öFrameLayout  ÎÒÃÇÓÃÀ´ÉùÃ÷forecast fragment
+è¿™é‡Œé¢æ”¾äº†ä¸€ä¸ªFrameLayout  æˆ‘ä»¬ç”¨æ¥å£°æ˜forecast fragment
 a frame layout we're going to declare it as a forecast fragment.
 
 29
 00:01:35,030 --> 00:01:37,830
-ÕâÑùÒ»À´¾Í¿ÉÒÔºÍË«Ãæ°åµÄ²¼¾ÖÖĞ
+è¿™æ ·ä¸€æ¥å°±å¯ä»¥å’ŒåŒé¢æ¿çš„å¸ƒå±€ä¸­
 That way it will match the two pane UI,
 
 30
 00:01:37,830 --> 00:01:39,800
-forecast fragmentµÄÉùÃ÷±£³ÖÒ»ÖÂ
+forecast fragmentçš„å£°æ˜ä¿æŒä¸€è‡´
 where this also is declared as a fragment in the XML.
 
 31
 00:01:39,800 --> 00:01:43,130
-Ö®ºómain activityÔÙÈ¥¶¯Ì¬¼ÓÔØforecast fragmentÊ±
+ä¹‹åmain activityå†å»åŠ¨æ€åŠ è½½forecast fragmentæ—¶
 That way the main activity never has to worry about dynamically adding
 
 32
 00:01:43,130 --> 00:01:44,750
-¾Í²»±ØÔÙµ£ĞÄ»áÓĞÎÊÌâ·¢ÉúÁË
+å°±ä¸å¿…å†æ‹…å¿ƒä¼šæœ‰é—®é¢˜å‘ç”Ÿäº†
 the forecast fragment.
 
 33
 00:01:44,750 --> 00:01:47,260
-ÔÚMainActivity.javaµÄonCreate·½·¨ÖĞ
+åœ¨MainActivity.javaçš„onCreateæ–¹æ³•ä¸­
 In the main activity on create view method.
 
 34
 00:01:47,260 --> 00:01:49,790
-¼ÈÈ»forecast fragmentÒÑ¾­ÔÚxmlÎÄ¼şÖĞÉùÃ÷¹ıÁË
+æ—¢ç„¶forecast fragmentå·²ç»åœ¨xmlæ–‡ä»¶ä¸­å£°æ˜è¿‡äº†
 Since the fragment is already inside this layout we can just remove this so
 
 35
 00:01:49,790 --> 00:01:52,930
-Ã»±ØÒªÔÙ¶¯Ì¬¼ÓÔØÒ»±é  ÕâÒ»²¿·Öjava´úÂëÒ²¾Í²»ĞèÒªÁË
+æ²¡å¿…è¦å†åŠ¨æ€åŠ è½½ä¸€é  è¿™ä¸€éƒ¨åˆ†javaä»£ç ä¹Ÿå°±ä¸éœ€è¦äº†
 we don't dynamically add it again.
 
 36
 00:01:52,930 --> 00:01:57,780
-Í¬ÑùµØ  ÎÒÃÇĞŞ¸ÄÁËÄ¬ÈÏlayoutÎÄ¼ş¼ĞÖĞµÄactivity_detail.xml
+åŒæ ·åœ°  æˆ‘ä»¬ä¿®æ”¹äº†é»˜è®¤layoutæ–‡ä»¶å¤¹ä¸­çš„activity_detail.xml
 Similarly we modify the activity detail layout in the base layout folder
 
 37
 00:01:57,780 --> 00:02:01,010
-½«FrameLayoutµÄandroid:idÊôĞÔ¸ÄÎªweather_detail_container
+å°†FrameLayoutçš„android:idå±æ€§æ”¹ä¸ºweather_detail_container
 we change the frame layout ID to be weather detail container.
 
 38
 00:02:01,010 --> 00:02:05,620
-ÕâÑù¾ÍÄÜºÍË«Ò³²¼¾ÖÖĞ°üº¬detail fragmentµÄÈİÆ÷id±£³ÖÒ»ÖÂ
+è¿™æ ·å°±èƒ½å’ŒåŒé¡µå¸ƒå±€ä¸­åŒ…å«detail fragmentçš„å®¹å™¨idä¿æŒä¸€è‡´
 So that it matches the container view id in the two pane UI case.
 
 39
 00:02:05,620 --> 00:02:08,240
-ÕâÖÖ×ö·¨¾ÍÊÇ²»ÂÛÊÇµ¥Ò³Ä£Ê½
+è¿™ç§åšæ³•å°±æ˜¯ä¸è®ºæ˜¯å•é¡µæ¨¡å¼
 The pattern here is that the detail fragment will always be
 
 40
 00:02:08,240 --> 00:02:11,230
-»¹ÊÇË«Ò³Ä£Ê½  detail fragment¶¼»á·ÅÔÚ
+è¿˜æ˜¯åŒé¡µæ¨¡å¼  detail fragmentéƒ½ä¼šæ”¾åœ¨
 added to a container called weather_detail_container,
 
 41
 00:02:11,230 --> 00:02:13,830
-idÎªweather_detail_containerµÄÈİÆ÷Àï
+idä¸ºweather_detail_containerçš„å®¹å™¨é‡Œ
 both in the two pane, and one pane case.
 
 42
 00:02:13,830 --> 00:02:15,500
-¼ÈÈ»ÎÒÃÇ¸ü¸ÄÁËÈİÆ÷µÄid
+æ—¢ç„¶æˆ‘ä»¬æ›´æ”¹äº†å®¹å™¨çš„id
 Since we changed the name of the container,
 
 43
 00:02:15,500 --> 00:02:17,920
-ÎÒÃÇÒ²Ó¦¸Ã¸üĞÂÒ»ÏÂDetailActivity.javaÖĞµÄ´úÂë
+æˆ‘ä»¬ä¹Ÿåº”è¯¥æ›´æ–°ä¸€ä¸‹DetailActivity.javaä¸­çš„ä»£ç 
 we should also update the detail activity.
 
 44
 00:02:17,920 --> 00:02:20,020
-ËüÖ»ÔÚµ¥Ò³Ä£Ê½ÏÂ²Å»áÓÃµ½
+å®ƒåªåœ¨å•é¡µæ¨¡å¼ä¸‹æ‰ä¼šç”¨åˆ°
 This is only used in one pane mode.
 
 45
 00:02:20,020 --> 00:02:21,630
-ÔÚÕâ¸ÄÒ»ÏÂÈİÆ÷µÄid
+åœ¨è¿™æ”¹ä¸€ä¸‹å®¹å™¨çš„id
 Here's where we change the container name.
 
 46
 00:02:22,790 --> 00:02:26,330
-ÔÚµ¥Ò³Ä£Ê½ÏÂ  DetailActivity»áÔÚ¸ÃÈİÆ÷ÄÚ
+åœ¨å•é¡µæ¨¡å¼ä¸‹  DetailActivityä¼šåœ¨è¯¥å®¹å™¨å†…
 In the one pane mode the detail activity will add the detail fragment
 
 47
 00:02:26,330 --> 00:02:28,250
-¶¯Ì¬¼ÓÔØ³ödetail fragment
+åŠ¨æ€åŠ è½½å‡ºdetail fragment
 dynamically to this container.
 
 48
 00:02:28,250 --> 00:02:31,770
-ĞŞ¸ÄÍêxml²¼¾ÖÎÄ¼şÖ®ºó  ÎÒÃÇÓ¦¸Ã¸üĞÂÒ»ÏÂMainActivity.java
+ä¿®æ”¹å®Œxmlå¸ƒå±€æ–‡ä»¶ä¹‹å  æˆ‘ä»¬åº”è¯¥æ›´æ–°ä¸€ä¸‹MainActivity.java
 After we modify the layout we should update the main activity so
 
 49
 00:02:31,770 --> 00:02:34,200
-ÈÃËü¶¯Ì¬¼ÓÔØDetailFragment
+è®©å®ƒåŠ¨æ€åŠ è½½DetailFragment
 we dynamically add the detail fragment.
 
 50
 00:02:34,200 --> 00:02:38,320
-ÔÚMainActivity.javaµÄonCreate·½·¨ÖĞ  ÎÒÃÇÊ×ÏÈ¼ì²é
+åœ¨MainActivity.javaçš„onCreateæ–¹æ³•ä¸­  æˆ‘ä»¬é¦–å…ˆæ£€æŸ¥
 In the main activity on create method we check for the presence of the weather
 
 51
 00:02:38,320 --> 00:02:42,820
-idÎªweather_detail_containerµÄÈİÆ÷ÊÇ·ñ´æÔÚ  À´ÅĞ¶Ïµ±Ç°ÊÇ·ñÊÇË«Ò³Ä£Ê½
+idä¸ºweather_detail_containerçš„å®¹å™¨æ˜¯å¦å­˜åœ¨  æ¥åˆ¤æ–­å½“å‰æ˜¯å¦æ˜¯åŒé¡µæ¨¡å¼
 detail container in the layout to know whether this is a two pane UI or not.
 
 52
 00:02:42,820 --> 00:02:46,300
-ÎÒÃÇÉùÃ÷ÁËÒ»¸ö²¼¶ûÀàĞÍµÄ±äÁ¿mTwoPane±£´æ¸ÃÅĞ¶Ï
+æˆ‘ä»¬å£°æ˜äº†ä¸€ä¸ªå¸ƒå°”ç±»å‹çš„å˜é‡mTwoPaneä¿å­˜è¯¥åˆ¤æ–­
 We keep track of this information in a Boolean called mTwoPane.
 
 53
 00:02:46,300 --> 00:02:49,730
-ÓÉÓÚmTwoPaneÊôÓÚÀàµÄ³ÉÔ±±äÁ¿  ËùÒÔÒ»¶¨ÒªÒÔm¿ªÍ·ÃüÃû  ÇĞ¼Ç
+ç”±äºmTwoPaneå±äºç±»çš„æˆå‘˜å˜é‡  æ‰€ä»¥ä¸€å®šè¦ä»¥må¼€å¤´å‘½å  åˆ‡è®°
 Remember that we start with the letter m, because it's a member variable.
 
 54
 00:02:49,730 --> 00:02:52,370
-±ÈÈçÏÖÔÚÊÇË«Ò³ÏÔÊ¾  mTwoPane¾Í¸ÃÊÇtrue
+æ¯”å¦‚ç°åœ¨æ˜¯åŒé¡µæ˜¾ç¤º  mTwoPaneå°±è¯¥æ˜¯true
 In this case, the Boolean should be true.
 
 55
 00:02:52,370 --> 00:02:54,490
-ËùÒÔ¼ÌĞøÍùÏÂÖ´ĞĞ  ¶¯Ì¬¼ÓÔØ³ödetail fragment
+æ‰€ä»¥ç»§ç»­å¾€ä¸‹æ‰§è¡Œ  åŠ¨æ€åŠ è½½å‡ºdetail fragment
 So we go ahead and create a new detail fragment, and
 
 56
 00:02:54,490 --> 00:02:56,580
-²¢½«Æä·ÅÈëweather_detail_container
+å¹¶å°†å…¶æ”¾å…¥weather_detail_container
 add it to the weather_detail_container.
 
 57
 00:02:56,580 --> 00:02:59,540
-ÎÒÃÇÍ¨¹ıÒ»¸öfragmentÊÂÎñÌá½»ĞŞ¸Ä
+æˆ‘ä»¬é€šè¿‡ä¸€ä¸ªfragmentäº‹åŠ¡æäº¤ä¿®æ”¹
 We commit the change by using a fragment transaction,
 
 58
 00:02:59,540 --> 00:03:01,176
-Ö®Ç°RadoÒÑ¾­½éÉÜ¹ıÁË
+ä¹‹å‰Radoå·²ç»ä»‹ç»è¿‡äº†
 which Rado introduced earlier.
 
 59
 00:03:01,176 --> 00:03:04,590
-ÁíÒ»ÖÖÇé¿ö  Èôweather_detail_container²»´æÔÚ
+å¦ä¸€ç§æƒ…å†µ  è‹¥weather_detail_containerä¸å­˜åœ¨
 Otherwise If the detail container is not present in the layout, then
 
 60
 00:03:04,590 --> 00:03:09,220
-mTwoPaneÖµÎªfalse  ÒâÎ¶×ÅÄ¿Ç°´¦ÔÚÊÖ»úµÄµ¥Ò³Ä£Ê½
+mTwoPaneå€¼ä¸ºfalse  æ„å‘³ç€ç›®å‰å¤„åœ¨æ‰‹æœºçš„å•é¡µæ¨¡å¼
 the boolean should be false, meaning that this is a one-pane UI for phones.
 
 61
 00:03:09,220 --> 00:03:13,010
-ÕâÖÖÇé¿öÏÂ  ÏÔÊ¾detail fragmentÄÚÈİµÄ¹¤×÷½»ÓÉDetailActivityÀ´Íê³É
+è¿™ç§æƒ…å†µä¸‹  æ˜¾ç¤ºdetail fragmentå†…å®¹çš„å·¥ä½œäº¤ç”±DetailActivityæ¥å®Œæˆ
 In this case, the detail activity will handle showing the detail fragment.
 
 62
 00:03:13,010 --> 00:03:16,750
-×¢Òâµ½  ÔÚË«Ò³Ä£Ê½ÏÂsavedInstanceStateÖµÎªnullÊ±
+æ³¨æ„åˆ°  åœ¨åŒé¡µæ¨¡å¼ä¸‹savedInstanceStateå€¼ä¸ºnullæ—¶
 Notice for the two-pane case that we check if the saved instant state
 
 63
 00:03:16,750 --> 00:03:17,990
-ÎÒÃÇ²ÅÈ¥¶¯Ì¬¼ÓÔØdetail fragment
+æˆ‘ä»¬æ‰å»åŠ¨æ€åŠ è½½detail fragment
 bundle is null.
 
 64
 00:03:17,990 --> 00:03:20,120
-Èç¹ûsavedInstanceStateÖµ²»Îªnull
+å¦‚æœsavedInstanceStateå€¼ä¸ä¸ºnull
 If the save instant save bundle is not null,
 
 65
 00:03:20,120 --> 00:03:23,086
-ÎÒÃÇ²»»áÔÙÈ¥ĞÂ´´½¨³öÀ´Ò»¸ö  Ô­ÒòÈçÏÂ
+æˆ‘ä»¬ä¸ä¼šå†å»æ–°åˆ›å»ºå‡ºæ¥ä¸€ä¸ª  åŸå› å¦‚ä¸‹
 then we don't create a new one, and here is the reason why.
 
 66
 00:03:23,086 --> 00:03:25,010
-ÔÚĞı×ªÉè±¸Ö®Ç°
+åœ¨æ—‹è½¬è®¾å¤‡ä¹‹å‰
 Say you want to rotate the device.
 
 67
 00:03:25,010 --> 00:03:26,820
-appÒÑ¾­ÊÇË«Ò³ÏÔÊ¾ÁË
+appå·²ç»æ˜¯åŒé¡µæ˜¾ç¤ºäº†
 Before the activity and
 
 68
 00:03:26,820 --> 00:03:30,500
-ÕâÊ±ÔÚsavedInstanceStateÒÑ¾­´æ·ÅÁËÊı¾İ
+è¿™æ—¶åœ¨savedInstanceStateå·²ç»å­˜æ”¾äº†æ•°æ®
 fragments get torn down, we store information in save state bundles.
 
 69
 00:03:30,500 --> 00:03:34,290
-¸Ä±äÆÁÄ»·½ÏòÖ®ºó  ÏµÍ³ÖØĞÂÔØÈëactivityºÍfragment
+æ”¹å˜å±å¹•æ–¹å‘ä¹‹å  ç³»ç»Ÿé‡æ–°è½½å…¥activityå’Œfragment
 Then after the orientation change, the system restores the activity and
 
 70
 00:03:34,290 --> 00:03:37,140
-»á¶ÁÈ¡savedInstanceState²ÎÊıÖĞµÄÊı¾İ
+ä¼šè¯»å–savedInstanceStateå‚æ•°ä¸­çš„æ•°æ®
 the fragments, by passing back the same bundle, so
 
 71
 00:03:37,140 --> 00:03:39,940
-²¢½«ÏÔÊ¾ÄÚÈİ¸´Ô­µ½Éè±¸Ğı×ªÖ®Ç°µÄÑù×Ó
+å¹¶å°†æ˜¾ç¤ºå†…å®¹å¤åŸåˆ°è®¾å¤‡æ—‹è½¬ä¹‹å‰çš„æ ·å­
 that it can be recreated with the same state.
 
 72
 00:03:39,940 --> 00:03:42,900
-Ò²¾ÍÊÇËµÈç¹ûsavedInstanceStateÖĞÓĞÊı¾İ
+ä¹Ÿå°±æ˜¯è¯´å¦‚æœsavedInstanceStateä¸­æœ‰æ•°æ®
 That means if the bundle exists, then we should let the system
 
 73
 00:03:42,900 --> 00:03:46,570
-ÎÒÃÇÓ¦¸Ã¸æÖªÏµÍ³Òª¸´Ô­Ö®Ç°µÄdetail fragment  Ò²¾Í¿ÉÒÔÌø¹ıÕâ¶Î´úÂë
+æˆ‘ä»¬åº”è¯¥å‘ŠçŸ¥ç³»ç»Ÿè¦å¤åŸä¹‹å‰çš„detail fragment  ä¹Ÿå°±å¯ä»¥è·³è¿‡è¿™æ®µä»£ç 
 handle restoring the detail fragment, and we can skip this code.
 
 74
 00:03:46,570 --> 00:03:49,120
-µ±detail fragment¸ÄÎª¶¯Ì¬¼ÓÔØÖ®ºó
+å½“detail fragmentæ”¹ä¸ºåŠ¨æ€åŠ è½½ä¹‹å
 Once a detail fragment is added dynamically.
 
 75
 00:03:49,120 --> 00:03:52,680
-¸øfragment_detail.xmlÀïµÄ¿Ø¼ş¶¼¼ÓÉÏÄ¬ÈÏÒªÏÔÊ¾µÄÄÚÈİ  Õâ¶Ô²âÊÔÓĞ°ïÖú
+ç»™fragment_detail.xmlé‡Œçš„æ§ä»¶éƒ½åŠ ä¸Šé»˜è®¤è¦æ˜¾ç¤ºçš„å†…å®¹  è¿™å¯¹æµ‹è¯•æœ‰å¸®åŠ©
 Make it show some placeholder data just for testing purposes.
 
 76
 00:03:52,680 --> 00:03:55,840
-½ÓÏÂÀ´ÎÒÃÇ»áÉîÈëÌ½¾¿ÓÒ°ë²¿·ÖµÄÂß¼­
+æ¥ä¸‹æ¥æˆ‘ä»¬ä¼šæ·±å…¥æ¢ç©¶å³åŠéƒ¨åˆ†çš„é€»è¾‘
 Later we'll plumb through the right logic, so that it can display the right
 
 77
 00:03:55,840 --> 00:03:58,170
-Ëü»á¸ù¾İ×ó±ßËùÑ¡µÄÈÕÆÚÀ´ÏÔÊ¾µ±ÌìÌìÆøµÄÏêÇé
+å®ƒä¼šæ ¹æ®å·¦è¾¹æ‰€é€‰çš„æ—¥æœŸæ¥æ˜¾ç¤ºå½“å¤©å¤©æ°”çš„è¯¦æƒ…
 information for the selected date on the left.
 
 78
 00:03:58,170 --> 00:03:59,970
-ĞŞ¸ÄDetailFragment.java
+ä¿®æ”¹DetailFragment.java
 Modify the detail fragment so
 
 79
 00:03:59,970 --> 00:04:03,660
-ÎÒÃÇĞèÒª¿¼ÂÇÎŞÊı¾İ´«½øÀ´µÄÇé¿ö
+æˆ‘ä»¬éœ€è¦è€ƒè™‘æ— æ•°æ®ä¼ è¿›æ¥çš„æƒ…å†µ
 that it doesn't expect the incoming intent to have a data URI.
 
 80
 00:04:03,660 --> 00:04:06,580
-ÔÚÕâÖÖÇé¿öÏÂ  ÓÒ±ßdetail fragment²¿·ÖÖ»»áÏÔÊ¾
+åœ¨è¿™ç§æƒ…å†µä¸‹  å³è¾¹detail fragmentéƒ¨åˆ†åªä¼šæ˜¾ç¤º
 In this case, the detail fragment will just fall back
 
 81
 00:04:06,580 --> 00:04:09,310
-fragment_detail.xmlÀï¸÷¿Ø¼şµÄÄ¬ÈÏÄÚÈİ
+fragment_detail.xmlé‡Œå„æ§ä»¶çš„é»˜è®¤å†…å®¹
 to some placeholder data that we have in our XML.
 
 82
 00:04:09,310 --> 00:04:12,750
-ÕâÀïintent¿ÉÄÜ»áÎª¿ÕµÄÔ­ÒòÊÇÒòÎª
+è¿™é‡Œintentå¯èƒ½ä¼šä¸ºç©ºçš„åŸå› æ˜¯å› ä¸º
 The reason the intent could be blank is because the detail fragment
 
 83
 00:04:12,750 --> 00:04:14,990
-DetailFragmentÏÖÔÚ¿ÉÒÔÔÚMainActivityÖĞ´æÔÚ
+DetailFragmentç°åœ¨å¯ä»¥åœ¨MainActivityä¸­å­˜åœ¨
 can now exist within the main activity.
 
 84
 00:04:14,990 --> 00:04:17,815
-MainActivityÔÚÏÔÊ¾Ê±²»»áÊÂÏÈÑ¡ÔñÒ»¸öÈÕÆÚ
+MainActivityåœ¨æ˜¾ç¤ºæ—¶ä¸ä¼šäº‹å…ˆé€‰æ‹©ä¸€ä¸ªæ—¥æœŸ
 And the main activity isn't launched with a URI for
 
 85
 00:04:17,815 --> 00:04:22,070
-Õâ¸úÔÚDetailActivityÏÔÊ¾Ê±µÄÇé¿öÀàËÆ
+è¿™è·Ÿåœ¨DetailActivityæ˜¾ç¤ºæ—¶çš„æƒ…å†µç±»ä¼¼
 only one date like the detail activity is normally launched with.
 
 86
 00:04:22,070 --> 00:04:22,990
-¶Ô¿Ø¼ş²¼¾ÖÓÅ»¯Ö®ºó
+å¯¹æ§ä»¶å¸ƒå±€ä¼˜åŒ–ä¹‹å
 Once you make the changes for
 
 87
 00:04:22,990 --> 00:04:25,410
-app¾Í±ä³ÉÁËÏÖÔÚÕâÑù
+appå°±å˜æˆäº†ç°åœ¨è¿™æ ·
 the wire frames this is what the app should look like.
 
 88
 00:04:25,410 --> 00:04:28,300
-ÕâÀïÃ»ÓĞÏÔÊ¾ÌìÆøÍ¼±êµÄÔ­ÒòÊÇÒòÎª
+è¿™é‡Œæ²¡æœ‰æ˜¾ç¤ºå¤©æ°”å›¾æ ‡çš„åŸå› æ˜¯å› ä¸º
 The reason it doesn't show an icon here is because
 
 89
 00:04:28,300 --> 00:04:31,430
-ÎÒÃÇÒÆ×ßÁË²¼¾ÖÎÄ¼şÀïµÄ¸ÃImageViewµÄÄ¬ÈÏÍ¼Æ¬
+æˆ‘ä»¬ç§»èµ°äº†å¸ƒå±€æ–‡ä»¶é‡Œçš„è¯¥ImageViewçš„é»˜è®¤å›¾ç‰‡
 we removed the icon from being hard-coded in the layout.
 
 90
 00:04:31,430 --> 00:04:34,460
-ÔÚÖ®ºóµÄÊÓÆµÖĞ  µ±È¥¶¯Ì¬¼ÓÔØÊ±
+åœ¨ä¹‹åçš„è§†é¢‘ä¸­  å½“å»åŠ¨æ€åŠ è½½æ—¶
 But once this data is populated dynamically in a later section,
 
 91
 00:04:34,460 --> 00:04:35,290
-Í¼±ê¾Í»á³öÏÖÁË
+å›¾æ ‡å°±ä¼šå‡ºç°äº†
 it should show up again.

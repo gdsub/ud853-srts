@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,650 --> 00:00:04,600
 在ForecastFragment中，当刷新菜单项被选中的时候，
 Within the forecast fragment class, when the refresh menu item is selected,
@@ -15,7 +15,7 @@ value stored for the location key. If there's no value stored then we fall back
 
 4
 00:00:14,000 --> 00:00:18,930
-使用默认位置。然后我们把位置信息传递到用于获取天气的任务。
+使用默认地点。然后我们把地点信息传递到用于获取天气的任务。
 to the default location. Then we pass the location into the fetch weather task.
 
 

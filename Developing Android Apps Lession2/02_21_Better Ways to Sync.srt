@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,400 --> 00:00:02,710
 因为AsyncTask是在Activity组件里面被创建  所以它可以
 Because it's being created within an Activity, it can be

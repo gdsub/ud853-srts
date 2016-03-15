@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,590 --> 00:00:02,710
 我认为可以把Intent看作信封，
 I like to think of intents as envelopes

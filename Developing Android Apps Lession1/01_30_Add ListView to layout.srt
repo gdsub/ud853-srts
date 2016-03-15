@@ -1,74 +1,74 @@
 1
 00:00:00,280 --> 00:00:03,960
-Ê×ÏÈ½«TextView±êÇ©¸ÄÎªListView±êÇ©
+é¦–å…ˆå°†TextViewæ ‡ç­¾æ”¹ä¸ºListViewæ ‡ç­¾
 You should have changed the TextView into a ListView element.
 
 2
 00:00:03,960 --> 00:00:07,180
-È»ºó½«textÊôĞÔÉ¾µô  ÒòÎªÎÒÃÇ²»ÔÙĞèÒªËüÁË
+ç„¶åå°†textå±æ€§åˆ æ‰  å› ä¸ºæˆ‘ä»¬ä¸å†éœ€è¦å®ƒäº†
 Then you can remove this text attribute because you don't need it anymore.
 
 3
 00:00:07,800 --> 00:00:11,790
-Ö®Ç°ÎÒÃÇ½²¹ıSunshineµÄ²¼¾Ö¿ò¼Ü  ÄãÒ»¶¨»¹¼ÇµÃÌìÆøÁĞ±íÒªÕ¼¾İÕû¸öÆÁÄ»°É
+ä¹‹å‰æˆ‘ä»¬è®²è¿‡Sunshineçš„å¸ƒå±€æ¡†æ¶  ä½ ä¸€å®šè¿˜è®°å¾—å¤©æ°”åˆ—è¡¨è¦å æ®æ•´ä¸ªå±å¹•å§
 Now from the UX Mocks, you'll remember that the list takes up the whole screen,
 
 4
 00:00:11,790 --> 00:00:15,480
-ËùÒÔÎÒÃÇÒª½«layout_widthºÍlayout_heightµÄÊôĞÔÉèÖÃ³Ématch_parent
+æ‰€ä»¥æˆ‘ä»¬è¦å°†layout_widthå’Œlayout_heightçš„å±æ€§è®¾ç½®æˆmatch_parent
 so we want to set the width and height to be match_parent.
 
 5
 00:00:15,480 --> 00:00:18,378
-ÕâÑù¿ÉÒÔÊ¹ListViewÌîÂú
+è¿™æ ·å¯ä»¥ä½¿ListViewå¡«æ»¡
 That will make the ListView match the dimensions of its parent,
 
 6
 00:00:18,378 --> 00:00:20,316
-RelativeLayout¸¸²¼¾Ö
+RelativeLayoutçˆ¶å¸ƒå±€
 which is this RelativeLayout.
 
 7
 00:00:20,316 --> 00:00:22,875
-ÄÇÓÖÒªÈ¥ÄÄÕÒµ½Õâ¸öRelativeLayoutµÄ¸¸²¼¾ÖÄØ
+é‚£åˆè¦å»å“ªæ‰¾åˆ°è¿™ä¸ªRelativeLayoutçš„çˆ¶å¸ƒå±€å‘¢
 And to find out the parent of this RelativeLayout,
 
 8
 00:00:22,875 --> 00:00:25,526
-ËüÊµ¼ÊÉÏÊÇÔÚactivity_main.xmlÀï
+å®ƒå®é™…ä¸Šæ˜¯åœ¨activity_main.xmlé‡Œ
 it's actually in this activity_main XML file
 
 9
 00:00:25,526 --> 00:00:29,477
-ÒòÎª¸ÃActivity»á°üº¬fragment_main.xmlÀïµÄÄÚÈİ
+å› ä¸ºè¯¥Activityä¼šåŒ…å«fragment_main.xmlé‡Œçš„å†…å®¹
 because the fragment is contained within the activity.
 
 10
 00:00:29,477 --> 00:00:34,560
-ÔÚactivity_main.xmlÖĞ  ÎÒÃÇ¿´µ½layout_heightºÍlayout_widthµÄÖµÒ²ÊÇmatch_parent
+åœ¨activity_main.xmlä¸­  æˆ‘ä»¬çœ‹åˆ°layout_heightå’Œlayout_widthçš„å€¼ä¹Ÿæ˜¯match_parent
 Within this file, we see that this view is also match_parent for height and width.
 
 11
 00:00:34,560 --> 00:00:38,440
-ÏÖÔÚÎÒÃÇ¾Í¿ÉÒÔ¿Ï¶¨  ÌìÆøListViewÒ»¶¨»áÕ¼¾İÕû¸öÆÁÄ»
+ç°åœ¨æˆ‘ä»¬å°±å¯ä»¥è‚¯å®š  å¤©æ°”ListViewä¸€å®šä¼šå æ®æ•´ä¸ªå±å¹•
 So now we can confirm that the ListView actually will take up the full screen.
 
 12
 00:00:39,060 --> 00:00:42,626
-»Øµ½fragment_main.xml  ÎÒÃÇÏòListView¼ÓÒ»¸öidÊôĞÔ
+å›åˆ°fragment_main.xml  æˆ‘ä»¬å‘ListViewåŠ ä¸€ä¸ªidå±æ€§
 Going back to the fragment_main file, we can add the id,
 
 13
 00:00:42,626 --> 00:00:45,270
-ÖµÎªlistview_forecast
+å€¼ä¸ºlistview_forecast
 listview_forecast, onto the ListView.
 
 14
 00:00:45,270 --> 00:00:48,085
-¼ÈÈ»¸¸²¼¾ÖÖ»°üº¬ÁËÒ»¸ö×Ó¿Ø¼ş
+æ—¢ç„¶çˆ¶å¸ƒå±€åªåŒ…å«äº†ä¸€ä¸ªå­æ§ä»¶
 And then, since this layout only contains one child,
 
 15
 00:00:48,093 --> 00:00:52,093
-ÎÒÃÇ¿É½«RelativeLyout¸ÄÎªFrameLayoutÀ´¼ò»¯²¼¾Ö
+æˆ‘ä»¬å¯å°†RelativeLyoutæ”¹ä¸ºFrameLayoutæ¥ç®€åŒ–å¸ƒå±€
 we can simplify the layout by changing this into a FrameLayout.

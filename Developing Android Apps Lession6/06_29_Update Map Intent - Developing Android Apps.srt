@@ -20,7 +20,7 @@ both the maps API, and the weather API to
 
 5
 00:00:10,760 --> 00:00:14,440
-来做跟位置查询同样的事情。
+来做跟地点查询同样的事情。
 do the same thing with location queries. Unfortunately,
 
 6

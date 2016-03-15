@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,350 --> 00:00:02,410
 让后台事务有效率的进行，我们有很多
 There's a lot to learn with making background

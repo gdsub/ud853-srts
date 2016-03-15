@@ -1,44 +1,44 @@
 1
 00:00:00,450 --> 00:00:03,040
-ÄÇÃ´£¬Êı¾İ´«Êä²»ÔÚUIÏß³ÌÖĞ
+é‚£ä¹ˆï¼Œæ•°æ®ä¼ è¾“ä¸åœ¨UIçº¿ç¨‹ä¸­
 Well, the transfer isn't happening on the UI thread, but
 
 2
 00:00:03,040 --> 00:00:05,750
-µ«ÊÇÕâ²»ÊÇ»µÊÂ¡£Êµ¼ÊÉÏ£¬²»ÔÚUIÏß³ÌÖĞ
+ä½†æ˜¯è¿™ä¸æ˜¯åäº‹ã€‚å®é™…ä¸Šï¼Œä¸åœ¨UIçº¿ç¨‹ä¸­
 that's not a bad thing. In fact, it's good that it's
 
 3
 00:00:05,750 --> 00:00:07,900
-ÔËĞĞÊÇÒ»¼şºÃÊÂ¡£ËùÒÔÕâ¶ùÒ²Ã»ÎÊÌâ
+è¿è¡Œæ˜¯ä¸€ä»¶å¥½äº‹ã€‚æ‰€ä»¥è¿™å„¿ä¹Ÿæ²¡é—®é¢˜
 not happening on the UI thread. So that's not a problem
 
 4
 00:00:07,900 --> 00:00:11,910
-Êı¾İ´«ÊäÔÚÏÖ´úÖÇÄÜÊÖ»úAppÖĞÊÇ²»¿É»òÈ±µÄ
+æ•°æ®ä¼ è¾“åœ¨ç°ä»£æ™ºèƒ½æ‰‹æœºAppä¸­æ˜¯ä¸å¯æˆ–ç¼ºçš„
 either. Data transfers are an integral part of most modern smartphone
 
 5
 00:00:11,910 --> 00:00:15,200
-ËùÒÔÕâÒ²²»ÊÇ¸öÎÊÌâ¡£ÕæÕıµÄÎÊÌâÊÇ
+æ‰€ä»¥è¿™ä¹Ÿä¸æ˜¯ä¸ªé—®é¢˜ã€‚çœŸæ­£çš„é—®é¢˜æ˜¯
 apps, so that's not a problem. The real problem is that
 
 6
 00:00:15,200 --> 00:00:18,080
-Êı¾İ´«ÊäËùÔÚµÄÏß³ÌµÄÉúÃüÖÜÆÚ±»Ã÷È·µØ°ó¶¨µ½
+æ•°æ®ä¼ è¾“æ‰€åœ¨çš„çº¿ç¨‹çš„ç”Ÿå‘½å‘¨æœŸè¢«æ˜ç¡®åœ°ç»‘å®šåˆ°
 the transfer is happening on a thread whose lifetime is tied
 
 7
 00:00:18,080 --> 00:00:21,800
-Ò»¸öUI×é¼şÉÏ£¬ÔÚÕâÀïÊÇÓëActivity×é¼ş°ó¶¨
+ä¸€ä¸ªUIç»„ä»¶ä¸Šï¼Œåœ¨è¿™é‡Œæ˜¯ä¸Activityç»„ä»¶ç»‘å®š
 explicitly to a UI component, in this case an Activity. So
 
 8
 00:00:21,800 --> 00:00:25,330
-ÄÇÃ´µ±Activity×é¼ş±»Ä³Ğ©¶«Î÷ÖÕÖ¹£¬±ÈÈçĞı×ªÆÁÄ»·½Ïò
+é‚£ä¹ˆå½“Activityç»„ä»¶è¢«æŸäº›ä¸œè¥¿ç»ˆæ­¢ï¼Œæ¯”å¦‚æ—‹è½¬å±å¹•æ–¹å‘
 if the Activity is terminated by something like a screen rotation,
 
 9
 00:00:25,330 --> 00:00:27,080
-Êı¾İ´«ÊäÒ²»á±»ÖÕÖ¹
+æ•°æ®ä¼ è¾“ä¹Ÿä¼šè¢«ç»ˆæ­¢
 the transfer will also be terminated.

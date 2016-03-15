@@ -1,23 +1,23 @@
 1
 00:00:00,320 --> 00:00:04,550
-ÊµÏÖÌìÆøµÄºÍÎ»ÖÃµÄ²éÑ¯ÔÚcontent providerÀï
+åœ¨ContentProvideré‡Œå®ç°å¤©æ°”çš„å’Œåœ°ç‚¹çš„æŸ¥è¯¢
 Implement the queries for weather and
 location in our content provider.
 
 2
 00:00:04,550 --> 00:00:07,240
-×¢ÒâÕâĞ©¶¼ÊÇ»ù±¾µÄ²éÑ¯
+æ³¨æ„è¿™äº›éƒ½æ˜¯åŸºæœ¬çš„æŸ¥è¯¢
 Note that these are both basic queries.
 
 3
 00:00:07,240 --> 00:00:11,270
-È¡Ïû×¢ÊÍtest providerÖĞµÄ»ù±¾µÄ²âÊÔÎ»ÖÃ²éÑ¯µÄ·½·¨
+åæ³¨é‡ŠTestProviderä¸­çš„testBasicWeatheræ–¹æ³•
 Un comment out the test basic location
 query function within test provider.
 
 4
 00:00:11,270 --> 00:00:13,700
-È»ºóÔËĞĞ´úÂë È·±£Ò»ÇĞÔËĞĞÁ¼ºÃ
+ç„¶åè¿è¡Œä»£ç  ç¡®ä¿ä¸€åˆ‡è¿è¡Œè‰¯å¥½
 And, run the code to make sure
 all of this is working well.
 

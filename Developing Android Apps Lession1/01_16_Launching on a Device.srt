@@ -1,124 +1,124 @@
 1
 00:00:00,808 --> 00:00:02,718
-ÏÖÔÚ  ÔÚAndroid StudioÀï  Äã¿ÉÒÔµã»÷ÔËĞĞ°´Å¥
+ç°åœ¨  åœ¨Android Studioé‡Œ  ä½ å¯ä»¥ç‚¹å‡»è¿è¡ŒæŒ‰é’®
 Now in Android studio, you can hit the play button
 
 2
 00:00:02,718 --> 00:00:04,899
-ÔÚÊÖ»úÉÏÔËĞĞÓ¦ÓÃ
+åœ¨æ‰‹æœºä¸Šè¿è¡Œåº”ç”¨
 to run the app on your device.
 
 3
 00:00:04,899 --> 00:00:07,949
-ÔÚÉè±¸Ñ¡Ôñ¶Ô»°¿òÖĞ  ¿É¿´µ½ÓëµçÄÔÏàÁ¬µÄÒÆ¶¯Éè±¸
+åœ¨è®¾å¤‡é€‰æ‹©å¯¹è¯æ¡†ä¸­  å¯çœ‹åˆ°ä¸ç”µè„‘ç›¸è¿çš„ç§»åŠ¨è®¾å¤‡
 In the device Chooser dialog, you should see your connected device.
 
 4
 00:00:08,402 --> 00:00:12,095
-ÒªÏëÔÚÖ®ºóµÄÔËĞĞÊ±²»µ¯³ö¸Ã¶Ô»°¿ò  Ñ¡ÖĞÕâ¸ö¸´Ñ¡¿ò¼´¿É
+è¦æƒ³åœ¨ä¹‹åçš„è¿è¡Œæ—¶ä¸å¼¹å‡ºè¯¥å¯¹è¯æ¡†  é€‰ä¸­è¿™ä¸ªå¤é€‰æ¡†å³å¯
 To prevent the dialog from popping up in future times, check this box,
 
 5
 00:00:12,384 --> 00:00:15,337
-µã»÷OK°´Å¥  ÉÔµÈÆ¬¿Ì
+ç‚¹å‡»OKæŒ‰é’®  ç¨ç­‰ç‰‡åˆ»
 and then hit OK to continue. Within a few moments,
 
 6
 00:00:15,337 --> 00:00:17,464
-¾Í¿ÉÒÔ¿´µ½SunshineÒÑ¾­ÔÚÊÖ»úÉÏÅÜÆğÀ´ÁË
+å°±å¯ä»¥çœ‹åˆ°Sunshineå·²ç»åœ¨æ‰‹æœºä¸Šè·‘èµ·æ¥äº†
 you should see it on your phone.
 
 7
 00:00:17,464 --> 00:00:19,325
-ÁíÍâ  RaidoÒ²Ìáµ½¹ı 
+å¦å¤–  Raidoä¹Ÿæåˆ°è¿‡ 
 On the other hand, as Raido was mentioning,
 
 8
 00:00:19,325 --> 00:00:21,416
-Äã»¹¿ÉÒÔÊ¹ÓÃÃüÁîĞĞ¹¤¾ß
+ä½ è¿˜å¯ä»¥ä½¿ç”¨å‘½ä»¤è¡Œå·¥å…·
 you can use command line tools.
 
 9
 00:00:21,416 --> 00:00:24,945
-ÔÚÏîÄ¿µÄ¸ùÄ¿Â¼ÏÂ  ÓÃgradlewÃüÁîÔÚMac»òÕßLinuxÆ½Ì¨ÉÏ
+åœ¨é¡¹ç›®çš„æ ¹ç›®å½•ä¸‹  ç”¨gradlewå‘½ä»¤åœ¨Macæˆ–è€…Linuxå¹³å°ä¸Š
 From the root folder of the project, use grade lw to build your app
 
 10
 00:00:24,945 --> 00:00:26,366
-À´¹¹½¨ÄãµÄÓ¦ÓÃ
+æ¥æ„å»ºä½ çš„åº”ç”¨
 on Mac or Linux.
 
 11
 00:00:26,366 --> 00:00:28,740
-Èç¹ûÄãÊ¹ÓÃWindowsÏµÍ³  Çë²é¿´ÊÓÆµÏÂ·½±Ê¼ÇÖĞµÄÁ´½Ó
+å¦‚æœä½ ä½¿ç”¨Windowsç³»ç»Ÿ  è¯·æŸ¥çœ‹è§†é¢‘ä¸‹æ–¹ç¬”è®°ä¸­çš„é“¾æ¥
 Check the link in the notes below if you're using Windows.
 
 12
 00:00:29,704 --> 00:00:32,734
-µÚÒ»ĞĞÃüÁîÊ¹gradle wrapper½Å±¾ÃüÁî»ñÈ¡µ½È¨ÏŞ
+ç¬¬ä¸€è¡Œå‘½ä»¤ä½¿gradle wrapperè„šæœ¬å‘½ä»¤è·å–åˆ°æƒé™
 This first command grants execution permission
 
 13
 00:00:32,734 --> 00:00:34,943
-ÕâÌõÃüÁîÖ»ĞèÒªÖ´ĞĞÒ»´Î
+è¿™æ¡å‘½ä»¤åªéœ€è¦æ‰§è¡Œä¸€æ¬¡
 to the gradlw rappers script. And you only need to do it the first time
 
 14
 00:00:34,943 --> 00:00:37,450
-ÒÔºóÔÚÃüÁîĞĞÖĞ¹¹½¨Ó¦ÓÃÊ±¾Í²»ĞèÒªÔÙÖ´ĞĞÁË
+ä»¥ååœ¨å‘½ä»¤è¡Œä¸­æ„å»ºåº”ç”¨æ—¶å°±ä¸éœ€è¦å†æ‰§è¡Œäº†
 you're trying to build from the command line.
 
 15
 00:00:37,450 --> 00:00:42,078
-Ö´ĞĞ./gradlew assembleDebugÃüÁî¿Éµ÷ÊÔ³ÌĞò  ÔÚÓ¦ÓÃ¹¹½¨³É¹¦Ö®ºó
+æ‰§è¡Œ./gradlew assembleDebugå‘½ä»¤å¯è°ƒè¯•ç¨‹åº  åœ¨åº”ç”¨æ„å»ºæˆåŠŸä¹‹å
 Then you can call grade lw assemble debug. Once the build is successful,
 
 16
 00:00:42,078 --> 00:00:47,090
-ÔÚapp/build/apkÂ·¾¶ÏÂ»áÉú³ÉÒ»¸öapkÎÄ¼ş
+åœ¨app/build/apkè·¯å¾„ä¸‹ä¼šç”Ÿæˆä¸€ä¸ªapkæ–‡ä»¶
 it creates an APK file at the app/build/apk directory.
 
 17
 00:00:47,090 --> 00:00:50,788
-¿ÉÊ¹ÓÃadbÃüÁî½øĞĞ°²×°apk
+å¯ä½¿ç”¨adbå‘½ä»¤è¿›è¡Œå®‰è£…apk
 You can use adb to install the app. The -r command means
 
 18
 00:00:50,788 --> 00:00:52,520
--r²ÎÊı±íÃ÷ÈôÓ¦ÓÃÒÑ´æÔÚ
+-rå‚æ•°è¡¨æ˜è‹¥åº”ç”¨å·²å­˜åœ¨
 that you can replace an existing version
 
 19
 00:00:52,520 --> 00:00:55,547
-Ôò½øĞĞ¸²¸Ç°²×°
+åˆ™è¿›è¡Œè¦†ç›–å®‰è£…
 of the app if you've already done it before.
 
 20
 00:00:55,547 --> 00:00:58,694
-ÓĞ¹ØadbÃüÁîÊ¹ÓÃµÄ¸ü¶à¼¼ÇÉ  Çë¿´ÏÂ·½µÄ½ÌÑ§±Ê¼Ç£¨Instructor Notes£©
+æœ‰å…³adbå‘½ä»¤ä½¿ç”¨çš„æ›´å¤šæŠ€å·§  è¯·çœ‹ä¸‹æ–¹çš„æ•™å­¦ç¬”è®°ï¼ˆInstructor Notesï¼‰
 For more tips on adb, you can see the instructor notes below.
 
 21
 00:00:59,012 --> 00:01:02,255
-Äã¿ÉÒÔÊ¹ÓÃadb shell amÃüÁîÆô¶¯MainActivity
+ä½ å¯ä»¥ä½¿ç”¨adb shell amå‘½ä»¤å¯åŠ¨MainActivity
 Then you can use this adb command with the activity manager tool
 
 22
 00:01:02,255 --> 00:01:07,494
-ÊÖ»úÆÁÄ»ÉÏÒ²»áÁ¢¿ÌÏÔÊ¾±¾´ÎÖ´ĞĞµÄ½á¹û
+æ‰‹æœºå±å¹•ä¸Šä¹Ÿä¼šç«‹åˆ»æ˜¾ç¤ºæœ¬æ¬¡æ‰§è¡Œçš„ç»“æœ
 in order to start the main activity. And there you see it on the device.
 
 23
 00:01:08,430 --> 00:01:10,163
-ÎÒÃÇ¿´µ½Ó¦ÓÃÒÑ¾­ÄÜ¹»ÔÚÊÖ»úÉÏÔËĞĞÆğÀ´ÁË
+æˆ‘ä»¬çœ‹åˆ°åº”ç”¨å·²ç»èƒ½å¤Ÿåœ¨æ‰‹æœºä¸Šè¿è¡Œèµ·æ¥äº†
 And now we see it running in our phones.
 
 24
 00:01:10,353 --> 00:01:11,870
-Woo hoo  À´Åö¸öÈ­Í·~
+Woo hoo  æ¥ç¢°ä¸ªæ‹³å¤´~
 Woo hoo! Fist bump!
 
 25
 00:01:13,219 --> 00:01:19,746
-Ä¿Ç°½øÕ¹Ò»ÇĞË³Àû  ÈÃÎÒÃÇÈ¥ÕÒDanÀ´Éè¼ÆsunshineµÄUI½çÃæ°É  Woo~~
+ç›®å‰è¿›å±•ä¸€åˆ‡é¡ºåˆ©  è®©æˆ‘ä»¬å»æ‰¾Danæ¥è®¾è®¡sunshineçš„UIç•Œé¢å§  Woo~~
 We're on a roll. Let's go find Dan so that we can build up the sunshine UI. Woo!

@@ -1,40 +1,40 @@
 1
 00:00:00,290 --> 00:00:02,880
-ÓÉÓÚÊ¹ÓÃÁËOpenWeatherMapAPI
+ç”±äºä½¿ç”¨äº†OpenWeatherMapAPI
 Sunshine is now using real data thanks to
 
 2
 00:00:02,880 --> 00:00:05,580
-SunshineÓ¦ÓÃÏÖÔÚÊ¹ÓÃÁËÕæÊµµÄÌìÆøÊı¾İ
+Sunshineåº”ç”¨ç°åœ¨ä½¿ç”¨äº†çœŸå®çš„å¤©æ°”æ•°æ®
 the OpenWeatherMap API. And it's time for us to
 
 3
 00:00:05,580 --> 00:00:08,070
-¶øÏÖÔÚÎÒÃÇÊÇÊ±ºò½¨Á¢¸ü¶àµÄUI½çÃæÁË
+è€Œç°åœ¨æˆ‘ä»¬æ˜¯æ—¶å€™å»ºç«‹æ›´å¤šçš„UIç•Œé¢äº†
 build out more of the UI. In this lesson
 
 4
 00:00:08,070 --> 00:00:10,620
-ÔÚÕâ½Ú¿ÎÖĞ  Äã½«Ñ§»áÈçºÎ´´½¨Activities
+åœ¨è¿™èŠ‚è¯¾ä¸­  ä½ å°†å­¦ä¼šå¦‚ä½•åˆ›å»ºActivities
 you'll learn how to create activities, create the structure
 
 5
 00:00:10,620 --> 00:00:12,390
-½¨Á¢ÄãµÄÓ¦ÓÃ³ÌĞò½á¹¹  ²¢ÇÒÑ§Ï°ÈçºÎÔÚÆÁÄ»Ö®¼äµ¼º½
+å»ºç«‹ä½ çš„åº”ç”¨ç¨‹åºç»“æ„  å¹¶ä¸”å­¦ä¹ å¦‚ä½•åœ¨å±å¹•ä¹‹é—´å¯¼èˆª
 of your app, and learn how to navigate
 
 6
 00:00:12,390 --> 00:00:17,600
-ÄÇÒâÎ¶×ÅÑ§Ï°¸ü¶àÓĞ¹ØActivity
+é‚£æ„å‘³ç€å­¦ä¹ æ›´å¤šæœ‰å…³Activity
 between screens. And that means learning more about activities,
 
 7
 00:00:17,600 --> 00:00:20,040
-Intent FrameworkµÄÖªÊ¶ÉõÖÁÑ§Ï°
+Intent Frameworkçš„çŸ¥è¯†ç”šè‡³å­¦ä¹ 
 the intent framework and even learning how to use
 
 8
 00:00:20,040 --> 00:00:22,580
-ÈçºÎÔÚ×Ô¼ºµÄÓ¦ÓÃÖĞÊ¹ÓÃÆäËûÓ¦ÓÃµÄActivity
+å¦‚ä½•åœ¨è‡ªå·±çš„åº”ç”¨ä¸­ä½¿ç”¨å…¶ä»–åº”ç”¨çš„Activity
 activities that come from other apps within your own.
 

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,120 --> 00:00:03,760
 下面介绍构建Sunshine方式变化的概况
 Here's an overview of the changes we're going to be making to Sunshine.
@@ -15,7 +15,7 @@ There are lots of terms in this map that we haven't discussed before
 
 4
 00:00:11,260 --> 00:00:15,720
-例如数据库常量  内容提供者以及DB Helper
+例如数据库合约(contract)  内容提供者以及DB Helper
 such as database contract, content provider, and DB Helper.
 
 5
@@ -30,7 +30,7 @@ data storage solution.
 
 7
 00:00:20,720 --> 00:00:24,560
-我们从根据一个协议来定义我数据存储开始
+我们从根据一个contract来定义我数据存储开始
 We start by defining our data storage in terms of a contract.
 
 8

@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,620 --> 00:00:02,560
 如果你打开这个文档，你能看到
 If you open up the documentation, you can see a

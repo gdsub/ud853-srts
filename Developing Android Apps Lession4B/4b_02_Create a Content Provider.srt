@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,130 --> 00:00:01,100
 在SunShine里
 In Sunshine,
@@ -23,7 +23,7 @@ content to and from our user interface.
 
 5
 00:00:12,410 --> 00:00:16,740
-我们通过扩展一个ContentProvider类来实现一个新的类
+我们通过继承一个ContentProvider类来实现一个新的类
 We implement a content provider,
 by extending the content provider class.
 
@@ -130,7 +130,7 @@ but, what's a URI anyhow?
 
 23
 00:01:18,980 --> 00:01:22,260
-一个内容Provider允许我们把数据和我们的View
+一个ContentProvider允许我们把数据和我们的View
 A content provider allows us to think
 of the data associated with our
 
@@ -182,7 +182,7 @@ to query the weather for 94043 location.
 
 32
 00:01:56,540 --> 00:01:59,090
-内容Provider返回一个Cursor
+我们的ContentProvider返回一个Cursor
 Our content provider returns a cursor,
 
 33
@@ -227,13 +227,13 @@ such as HTTP and FTP in URIs.
 
 40
 00:02:23,600 --> 00:02:27,270
-“Content:”表示这个URI指向一个内容Provider
+“Content:”表示这个URI指向一个ContentProvider
 Content colon implies that the URI
 refers to a content provider.
 
 41
 00:02:28,860 --> 00:02:32,920
-中间这一段，是一个唯一的字符串用来定位你的内容Provider
+中间这一段(Authority)，是一个唯一的字符串用来定位你的ContentProvider
 A content authority, which is a unique
 string used to locate your content
 
@@ -245,7 +245,7 @@ be the package name of the application.
 
 43
 00:02:37,590 --> 00:02:42,720
-位置，通常指向程序里数据库的一个表
+地点，通常指向程序里数据库的一个表
 A location, which typically points to
 a database table within the application.
 

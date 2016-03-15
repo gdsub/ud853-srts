@@ -1,15 +1,15 @@
 1
 00:00:00,340 --> 00:00:03,670
-AndroidµÄ°æ±¾¸üĞÂºÍµü´úºÜÆµ·±
+Androidçš„ç‰ˆæœ¬æ›´æ–°å’Œè¿­ä»£å¾ˆé¢‘ç¹
 The distribution and latest version of Android changes frequently. But
 
 2
 00:00:03,670 --> 00:00:08,410
-µ«ÊÇ¸ù¾İÕâ¸öÍ¼±ê  ÄÜ³ÉÎªÄ¿±êSDKµÄAndroid°æ±¾Ó¦¸ÃÊÇÉè±¸Ê¹ÓÃÊı×î¶àµÄÄÇ¸ö°æ±¾£¬
+ä½†æ˜¯æ ¹æ®è¿™ä¸ªå›¾æ ‡  èƒ½æˆä¸ºç›®æ ‡SDKçš„Androidç‰ˆæœ¬åº”è¯¥æ˜¯è®¾å¤‡ä½¿ç”¨æ•°æœ€å¤šçš„é‚£ä¸ªç‰ˆæœ¬ï¼Œ
 based on this graph, which version of Android should be the target SDK to
 
 3
 00:00:08,410 --> 00:00:11,750
-ÇÒËüÄÜÌá¹©×îºÃµÄÓÃ»§ÌåÑé
+ä¸”å®ƒèƒ½æä¾›æœ€å¥½çš„ç”¨æˆ·ä½“éªŒ
 provide the best experience on the largest number of devices.
 

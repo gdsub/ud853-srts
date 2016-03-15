@@ -1,21 +1,21 @@
-﻿1
+1
 00:00:00,260 --> 00:00:03,510
 通常当我们谈论数据传输效率的时候，我们总是在谈论
 Typically when we talk about data transfer efficiency, we're talking
 
 2
 00:00:03,510 --> 00:00:06,590
-限制数据的传输。它降低了带宽
+限制传输数据的总量。如此便降低了带宽
 about limiting the amount of data being transferred. That reduces
 
 3
 00:00:06,590 --> 00:00:08,990
-还有成本，这很正常的一种思路。
+还有成本，通常认为这是很不错的一种思路。
 the bandwidth and the cost and is generally a pretty
 
 4
 00:00:08,990 --> 00:00:13,020
-但是在移动设备上那是一个额外因素。当你看到时，
+但是在移动设备上还有一个额外好处。如你所见，
 good idea. But on mobile there's an extra factor. As you
 
 5
@@ -30,12 +30,12 @@ one of the biggest battery drainers on the device. So making
 
 7
 00:00:18,430 --> 00:00:21,840
-让你的数据传输更高效。到头来解决方案就是提高电池的寿命。
+让你的数据传输更高效。还可以导致电池寿命的提高。
 your data transfers more efficient. Will also result in improved
 
 8
 00:00:21,840 --> 00:00:25,430
-现在，要是程序运行更高效
+现在，从基本上讲，要使程序运行更高效
 battery life. Now, the basic level being more efficient means spending
 
 9
@@ -65,12 +65,12 @@ to think of as the cookie Droid conundrum. Do we
 
 14
 00:00:39,700 --> 00:00:44,190
-我们是否真的用了更大的有效负载来完成更少的下载？或者我们
+我们是否要用更大的负载来完成更少次数的下载？或者我们
 perform fewer downloads with larger payloads? Or do we perform
 
 15
 00:00:44,190 --> 00:00:46,830
-是否在恰当的时机用了大量较小的数据传输操作？
+是否要在恰当的时机使用大量较小的数据传输操作？
 lots of small transfers just in time for when we
 
 16
@@ -85,16 +85,16 @@ So, what do you think? Should we have
 
 18
 00:00:52,750 --> 00:00:55,620
-我们是应该用少量的大饼干表示的庞大下载呢？
+我们是应该用这个大饼干表示的少次数的大数据下载呢？
 a smaller number of large downloads illustrated by
 
 19
 00:00:55,620 --> 00:00:57,870
-还是用大量的小饼干
+还是用这一堆小饼干表示的
 this big cookie? Or a large number of
 
 20
 00:00:57,870 --> 00:01:01,880
-表示的小的下载呢？
+多次数的小数据下载呢？
 small downloads, as illustrated by lots of little cookies.
 

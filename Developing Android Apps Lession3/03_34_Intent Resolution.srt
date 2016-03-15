@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,330 --> 00:00:02,330
 所以  系统是如何知道地图软件能够处理某个Intent的呢
 So, how did the system know that the Maps

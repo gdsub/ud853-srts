@@ -1,135 +1,135 @@
 1
 00:00:00,640 --> 00:00:01,200
-ºÃ
+å¥½
 Okay.
 
 2
 00:00:01,200 --> 00:00:04,590
-ÔÚDan½éÉÜÊı¾İ¿âÖ®Ç°
+åœ¨Danä»‹ç»æ•°æ®åº“ä¹‹å‰
 So before Dan gets carried away with databases, let's look at
 
 3
 00:00:04,590 --> 00:00:08,280
-ÈÃÎÒÃÇ¿´¿´µ±ÄãÓÃintentÔÚactivityÖ®¼äÇĞ»»µÄÊ±ºò¶¼»á·¢ÉúÊ²Ã´
+è®©æˆ‘ä»¬çœ‹çœ‹å½“ä½ ç”¨intentåœ¨activityä¹‹é—´åˆ‡æ¢çš„æ—¶å€™éƒ½ä¼šå‘ç”Ÿä»€ä¹ˆ
 what happens when you use an intent to transition between activities.
 
 4
 00:00:08,280 --> 00:00:09,354
-ÔÚSunshineÓ¦ÓÃÖĞ
+åœ¨Sunshineåº”ç”¨ä¸­
 Within Sunshine,
 
 5
 00:00:09,354 --> 00:00:13,387
-Èç¹ûÄãµã»÷ActivityÁĞ±íÖĞµÄÒ»¸öActivity  Ëü»á´ò¿ªÕâ¸ö¸ü¼ÓÏêÏ¸µÄActivity
+å¦‚æœä½ ç‚¹å‡»Activityåˆ—è¡¨ä¸­çš„ä¸€ä¸ªActivity  å®ƒä¼šæ‰“å¼€è¿™ä¸ªæ›´åŠ è¯¦ç»†çš„Activity
 if you tap on a list in the main activity it opens up the detail activity.
 
 6
 00:00:16,962 --> 00:00:19,230
-µ«ÊÇÖ÷Activity»¹ÊÇÔÚºóÌ¨ÔËĞĞµÄ
+ä½†æ˜¯ä¸»Activityè¿˜æ˜¯åœ¨åå°è¿è¡Œçš„
 But the main activity remains on the backstack.
 
 7
 00:00:19,230 --> 00:00:22,080
-ËæÊ±¶¼×¼±¸×ÅÖØĞÂÔÚÇ°Ì¨ÏÔÊ¾  Ö»ÒªÄãµãÒ»ÏÂ·µ»Ø¼ü  Ö÷Activity¾Í»áÖØĞÂÏÔÊ¾
+éšæ—¶éƒ½å‡†å¤‡ç€é‡æ–°åœ¨å‰å°æ˜¾ç¤º  åªè¦ä½ ç‚¹ä¸€ä¸‹è¿”å›é”®  ä¸»Activityå°±ä¼šé‡æ–°æ˜¾ç¤º
 Ready to reappear as soon as you hit Back.
 
 8
 00:00:22,080 --> 00:00:25,980
-ÄÇÃ´ÏÖÔÚ  ÔÚÕâ¸öÀı×ÓÖĞ  Á½¸öActivityÔÚÍ¬Ò»¸öÓ¦ÓÃÖĞ
+é‚£ä¹ˆç°åœ¨  åœ¨è¿™ä¸ªä¾‹å­ä¸­  ä¸¤ä¸ªActivityåœ¨åŒä¸€ä¸ªåº”ç”¨ä¸­
 Now, in that example, both activities are within the same app.
 
 9
 00:00:25,980 --> 00:00:29,264
-µ«ÊÇ  ÏñÎÒÃÇÔÚµÚÈı½ÚÖĞÑ§Ï°µÄÒ»Ñù  Äã»¹¿ÉÒÔÊ¹ÓÃä¯ÀÀÆ÷ä¯ÀÀÍøÒ³
+ä½†æ˜¯  åƒæˆ‘ä»¬åœ¨ç¬¬ä¸‰èŠ‚ä¸­å­¦ä¹ çš„ä¸€æ ·  ä½ è¿˜å¯ä»¥ä½¿ç”¨æµè§ˆå™¨æµè§ˆç½‘é¡µ
 But as we learned in lesson three, you can also watch the browser or
 
 10
 00:00:29,264 --> 00:00:30,507
-Ê¹ÓÃSunshineÀïµÄµØÍ¼Ó¦ÓÃ
+ä½¿ç”¨Sunshineé‡Œçš„åœ°å›¾åº”ç”¨
 maps app from sunshine.
 
 11
 00:00:35,091 --> 00:00:37,041
-¶øÇÒ  ÓÃ»§¿ÉÒÔµãHome¼ü»Øµ½Ö÷½çÃæ
+è€Œä¸”  ç”¨æˆ·å¯ä»¥ç‚¹Homeé”®å›åˆ°ä¸»ç•Œé¢
 Or for that matter, the user can hit Home.
 
 12
 00:00:41,065 --> 00:00:44,521
-²¢¿ªÆôÆäËûµÄÓ¦ÓÃ  »òÕßµãRecent¼ü
+å¹¶å¼€å¯å…¶ä»–çš„åº”ç”¨  æˆ–è€…ç‚¹Recenté”®
 And launch apps from there, or they can use the recent key or
 
 13
 00:00:44,521 --> 00:00:47,160
-»òÕßÔÚÍ¨ÖªÀ¸ÖĞ×ª»»µ½ÆäËûµÄÓ¦ÓÃ
+æˆ–è€…åœ¨é€šçŸ¥æ ä¸­è½¬æ¢åˆ°å…¶ä»–çš„åº”ç”¨
 switch to another app using notifications.
 
 14
 00:00:47,160 --> 00:00:50,270
-ÕâĞ©ĞĞÎª¶¼ÒâÎ¶×ÅÄã¿ÉÒÔÖÕÖ¹ÔÚºóÌ¨ÔËĞĞµÄºÜ¶àÓ¦ÓÃ
+è¿™äº›è¡Œä¸ºéƒ½æ„å‘³ç€ä½ å¯ä»¥ç»ˆæ­¢åœ¨åå°è¿è¡Œçš„å¾ˆå¤šåº”ç”¨
 All of these options mean you can end up with a lot of apps on your back stack.
 
 15
 00:00:57,947 --> 00:01:02,440
-Ò»¶¨Òª¼Ç×¡ÒÆ¶¯Éè±¸µÄ×ÊÔ´ÊÇ·Ç³£ÓĞÏŞµÄ
+ä¸€å®šè¦è®°ä½ç§»åŠ¨è®¾å¤‡çš„èµ„æºæ˜¯éå¸¸æœ‰é™çš„
 Now, keep in mind that our resources on devices are extremely limited.
 
 16
 00:01:02,440 --> 00:01:06,700
-ËùÒÔÈÃºÜ¶àµÄÓ¦ÓÃÔÚºóÌ¨µÈ´ı²»ÊÇÒ»¸öºÃ°ì·¨
+æ‰€ä»¥è®©å¾ˆå¤šçš„åº”ç”¨åœ¨åå°ç­‰å¾…ä¸æ˜¯ä¸€ä¸ªå¥½åŠæ³•
 So it's not a good idea to have dozens of apps sitting idle in the background.
 
 17
 00:01:06,700 --> 00:01:07,880
-AndroidÎªÎÒÃÇ½â¾öÁËÕâ¸öÎÊÌâ
+Androidä¸ºæˆ‘ä»¬è§£å†³äº†è¿™ä¸ªé—®é¢˜
 Android solves this for us,
 
 18
 00:01:07,880 --> 00:01:11,320
-ËùÒÔÄã²»±ØÊ¹ÓÃÄÇĞ©ÁîÈËÌÖÑáµÄÉ±½ø³ÌµÄÓ¦ÓÃ
+æ‰€ä»¥ä½ ä¸å¿…ä½¿ç”¨é‚£äº›ä»¤äººè®¨åŒçš„æ€è¿›ç¨‹çš„åº”ç”¨
 so you don't have to use those awful task killer apps.
 
 19
 00:01:11,320 --> 00:01:13,010
-ÄÇÃ´  ÕâĞ©ÊÇÔõÃ´×öµ½µÄÄØ
+é‚£ä¹ˆ  è¿™äº›æ˜¯æ€ä¹ˆåšåˆ°çš„å‘¢
 So, how does it do that?
 
 20
 00:01:13,010 --> 00:01:17,120
-ÆäÊµÊÇÏµÍ³»áÉ±µôÄÇĞ©µÍÓÅÏÈ¼¶µÄÄãÄ¿Ç°Ã»ÓĞÔÚÊ¹ÓÃµÄÓ¦ÓÃ
+å…¶å®æ˜¯ç³»ç»Ÿä¼šæ€æ‰é‚£äº›ä½ä¼˜å…ˆçº§çš„ä½ ç›®å‰æ²¡æœ‰åœ¨ä½¿ç”¨çš„åº”ç”¨
 Well, it kills low priority applications that you haven't used in a while.
 
 21
 00:01:17,120 --> 00:01:21,740
-ÔÚµÚÁù½Ú¿Î  ÎÒÃÇ»á×ĞÏ¸µÄ½²½âAndroidÊÇÈçºÎÕÒ³öÄÄĞ©Ó¦ÓÃÓ¦¸Ã±»É±µôµÄ
+åœ¨ç¬¬å…­èŠ‚è¯¾  æˆ‘ä»¬ä¼šä»”ç»†çš„è®²è§£Androidæ˜¯å¦‚ä½•æ‰¾å‡ºå“ªäº›åº”ç”¨åº”è¯¥è¢«æ€æ‰çš„
 We'll go into detail on exactly how it figures out which app needs to die, in lesson six.
 
 22
 00:01:21,740 --> 00:01:25,030
-ÏÖÔÚ  ÄãÖ»ÒªÖªµÀÄãµÄÓ¦ÓÃ
+ç°åœ¨  ä½ åªè¦çŸ¥é“ä½ çš„åº”ç”¨
 But for now, it's important to realize that your app isn't in
 
 23
 00:01:25,030 --> 00:01:27,070
-ÎŞ·¨¿ØÖÆ×Ô¼ºÊ²Ã´Ê±ºò±»Ïú»Ù¾ÍºÃÁË
+æ— æ³•æ§åˆ¶è‡ªå·±ä»€ä¹ˆæ—¶å€™è¢«é”€æ¯å°±å¥½äº†
 control of its own destiny.
 
 24
 00:01:27,070 --> 00:01:28,612
-ÄãµÄÓ¦ÓÃ¿ÉÄÜÔÚÈÎºÎÊ±¼ä±»É±ËÀ
+ä½ çš„åº”ç”¨å¯èƒ½åœ¨ä»»ä½•æ—¶é—´è¢«æ€æ­»
 It can be killed at any time.
 
 25
 00:01:32,589 --> 00:01:34,305
-ËùÒÔÄãÒªÑ§»áÈçºÎ´¦ÀíÕâÖÖÇé¿ö
+æ‰€ä»¥ä½ è¦å­¦ä¼šå¦‚ä½•å¤„ç†è¿™ç§æƒ…å†µ
 So you need to know, how to deal with that.
 
 26
 00:01:34,305 --> 00:01:37,846
-Õâ¾ÍÒâÎ¶×ÅÄãÒªÁË½âActivityµÄÉúÃüÖÜÆÚ
+è¿™å°±æ„å‘³ç€ä½ è¦äº†è§£Activityçš„ç”Ÿå‘½å‘¨æœŸ
 And that means understanding the lifecycle of an activity and the signals we
 
 27
 00:01:37,846 --> 00:01:41,180
-ºÍÔÚÏµÍ³ÖĞ»ñµÃµÄ±íÊ¾ÉúÃüÖÜÆÚ×´Ì¬µÄĞÅºÅ
+å’Œåœ¨ç³»ç»Ÿä¸­è·å¾—çš„è¡¨ç¤ºç”Ÿå‘½å‘¨æœŸçŠ¶æ€çš„ä¿¡å·
 get from the framework to indicate its progress through the lifetime.
 

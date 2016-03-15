@@ -1,114 +1,114 @@
 1
 00:00:00,290 --> 00:00:02,350
-ÈÃÎÒÃÇ¼ÌĞø  Çë¿´×ÅDB helper
+è®©æˆ‘ä»¬ç»§ç»­  è¯·çœ‹ç€DB helper
 Let's continue looking at our DB helper.
 
 2
 00:00:03,450 --> 00:00:06,360
-ÎÒÃÇÒªÌî³äµÄÁíÒ»¸öÖØÒªº¯ÊıÊÇ
+æˆ‘ä»¬è¦å¡«å……çš„å¦ä¸€ä¸ªé‡è¦å‡½æ•°æ˜¯
 The other important function that we are required to fill in
 
 3
 00:00:06,360 --> 00:00:08,290
-on-updateº¯Êı
-is the on-upgrade method.
+onUpdateå‡½æ•°
+is the onUpgrade method.
 
 4
 00:00:08,290 --> 00:00:11,740
-Õâ¸öº¯ÊıÔÚÊı¾İ¿âÒÑ¾­±»´´½¨µ«ÊÇ°æ±¾·¢Éú¸Ä±äÊ±±»µ÷ÓÃ
+è¿™ä¸ªå‡½æ•°åœ¨æ•°æ®åº“å·²ç»è¢«åˆ›å»ºä½†
 This function gets called when the database has already been created but
 
 5
 00:00:11,740 --> 00:00:13,740
-Õâ¸öº¯ÊıÔÚÊı¾İ¿âÒÑ¾­±»´´½¨µ«ÊÇ°æ±¾·¢Éú¸Ä±äÊ±±»µ÷ÓÃ
+ç‰ˆæœ¬å‘ç”Ÿæ”¹å˜æ—¶è¢«è°ƒç”¨
 the version is changed.
 
 6
 00:00:13,740 --> 00:00:18,110
-°æ±¾¸Ä±ä»òÕßÉı¼¶ÒâÎ¶×ÅÁĞ  ±í»òÕß
+ç‰ˆæœ¬æ”¹å˜æˆ–è€…å‡çº§æ„å‘³ç€åˆ—  è¡¨æˆ–è€…
 A version change or upgrade should signify that the columns, tables or
 
 7
 00:00:18,110 --> 00:00:21,060
-Êı¾İ¿âµÄÒ»°ã½á¹¹ÒÑ¾­·¢Éú¸Ä±ä
+æ•°æ®åº“çš„ä¸€èˆ¬ç»“æ„å·²ç»å‘ç”Ÿæ”¹å˜
 general structure the database has changed.
 
 8
 00:00:21,060 --> 00:00:24,744
-SQLite Open HelperÄÜÖªµÀdatabase°æ±¾ÒÑ¾­·¢Éú¸Ä±ä
+SQLiteOpenHelperèƒ½çŸ¥é“databaseç‰ˆæœ¬å·²ç»å‘ç”Ÿæ”¹å˜
 The SQLite Open Helper knows the database version has changed because
 
 9
 00:00:24,744 --> 00:00:27,810
-ÒòÎªÎÒÃÇ´«µ½ËüµÄ¹¹Ôìº¯ÊıÀïÃæµÄ°æ±¾ĞÅÏ¢ÒÑ¾­¸Ä±ä
+æ˜¯å› ä¸ºæˆ‘ä»¬ä¼ åˆ°å®ƒçš„æ„é€ å‡½æ•°é‡Œé¢çš„ç‰ˆæœ¬ä¿¡æ¯å·²ç»æ”¹å˜
 the version we passed into its constructure has changed.
 
 10
 00:00:28,840 --> 00:00:31,600
-µ±¸Ä±äÊı¾İ¿â±íµÄÊ±ºò ÒªÈ·±£×ÜÊÇ¸Ä±äÊı¾İ¿âµÄ°æ±¾
+å½“æ”¹å˜æ•°æ®åº“è¡¨çš„æ—¶å€™ 
 Make sure to always change the database version
 
 11
 00:00:31,600 --> 00:00:34,460
-µ±¸Ä±äÊı¾İ¿â±íµÄÊ±ºò ÒªÈ·±£×ÜÊÇ¸Ä±äÊı¾İ¿âµÄ°æ±¾
+è¦ç¡®ä¿æ€»æ˜¯æ”¹å˜æ•°æ®åº“çš„ç‰ˆæœ¬
 when you make changes to the database tables.
 
 12
 00:00:34,460 --> 00:00:37,570
-Äã¿ÉÄÜ»áÏë  ÎÒÎªÊ²Ã´Òª¹ØĞÄÕâ¸ö
+ä½ å¯èƒ½ä¼šæƒ³  æˆ‘ä¸ºä»€ä¹ˆè¦å…³å¿ƒè¿™ä¸ª
 You might think, why would I care about this?
 
 13
 00:00:37,570 --> 00:00:40,590
-ÎÒÃÇÃ»ÓĞÈÎºÎ¸üĞÂ  ÎªÉ¶Òª¹ØĞÄÕâ¸ö
+æˆ‘ä»¬æ²¡æœ‰ä»»ä½•æ›´æ–°  ä¸ºå•¥è¦å…³å¿ƒè¿™ä¸ª
 I'm not upgrading anything yet, so why bother?
 
 14
 00:00:40,590 --> 00:00:43,400
-ÒòÎª µ±Äã¸Ä±äÊı¾İ¿â±íµÄÊ±ºò Õâ¶ÔÓÚ±£Ö¤ÄãµÄÓ¦ÓÃ²»·¢Éú´íÎó·Ç³£ÖØÒª
+å› ä¸º å½“ä½ æ”¹å˜æ•°æ®åº“è¡¨çš„æ—¶å€™ 
 Because it's important to make sure that your application won't have
 
 15
 00:00:43,400 --> 00:00:45,635
-ÒòÎª µ±Äã¸Ä±äÊı¾İ¿â±íµÄÊ±ºò Õâ¶ÔÓÚ±£Ö¤ÄãµÄÓ¦ÓÃ²»·¢Éú´íÎó·Ç³£ÖØÒª
+ä¿è¯ä½ çš„åº”ç”¨ä¸å‘ç”Ÿé”™è¯¯éå¸¸é‡è¦
 errors when you make changes to the database tables.
 
 16
 00:00:45,635 --> 00:00:50,160
-ÓÉÓÚÎÒÃÇÒªÓÃÎÒÃÇµÄÊı¾İ¿âÀ´×÷ÍøÂçÊı¾İµÄ»º´æ
+ç”±äºæˆ‘ä»¬è¦ç”¨æˆ‘ä»¬çš„æ•°æ®åº“æ¥ä½œç½‘ç»œæ•°æ®çš„ç¼“å­˜
 Since we are going to be using our database as a cache for web data, and
 
 17
 00:00:50,160 --> 00:00:53,680
-¶ø²»ÓÃÓÚÓÃ»§²úÉúµÄÄÚÈİ  ÎÒÃÇ»áÉ¾³ı±í
+è€Œä¸ç”¨äºç”¨æˆ·äº§ç”Ÿçš„å†…å®¹  æˆ‘ä»¬ä¼šåˆ é™¤è¡¨
 not for use generated content, we'll drop the tables,
 
 18
 00:00:53,680 --> 00:00:54,900
-¶øÕâ½«É¾³ıËùÓĞÊı¾İ
+è€Œè¿™å°†åˆ é™¤æ‰€æœ‰æ•°æ®
 which deletes all of the data.
 
 19
 00:00:55,910 --> 00:00:59,450
-Èç¹ûÊı¾İ°üÀ¨ÓÃ»§²úÉúµÄĞÅÏ¢  µ±È»
+å¦‚æœæ•°æ®åŒ…æ‹¬ç”¨æˆ·äº§ç”Ÿçš„ä¿¡æ¯  å½“ç„¶
 If the data had contained information that was user generated, of course,
 
 20
 00:00:59,450 --> 00:01:01,130
-ÎÒÃÇÏëÒª±£ÁôËü
+æˆ‘ä»¬æƒ³è¦ä¿ç•™å®ƒ
 we'd want to preserve it.
 
 21
 00:01:01,130 --> 00:01:05,360
-ÎªÁË×öµ½ÕâÒ»µã  ÎÒÃÇ¿ÉÄÜÍ¨¹ı¸ü¸Ä±íÀ´Ôö¼ÓĞÂÁĞ
+ä¸ºäº†åšåˆ°è¿™ä¸€ç‚¹  æˆ‘ä»¬å¯èƒ½é€šè¿‡æ›´æ”¹è¡¨æ¥å¢åŠ æ–°åˆ—
 To do that, we'd likely use alter table to add new columns.
 
 22
 00:01:05,360 --> 00:01:06,660
-Çë¿´Ö¸µ¼¼ÇÂ¼
+è¯·çœ‹æŒ‡å¯¼è®°å½•
 See the instructor notes for
 
 23
 00:01:06,660 --> 00:01:10,200
-»¹ÓĞ¹ØÓÚ¸ü¸Ä±í·½·¨µÄ¸ü¶àĞÅÏ¢  Èç¹ûÄã¶ÔÊµÏÖ·½·¨ºÜ¸ĞĞËÈ¤µÄ»°
+è¿˜æœ‰å…³äºæ›´æ”¹è¡¨æ–¹æ³•çš„æ›´å¤šä¿¡æ¯  å¦‚æœä½ å¯¹å®ç°æ–¹æ³•å¾ˆæ„Ÿå…´è¶£çš„è¯
 more information on alter table if you are interested in how this is done.

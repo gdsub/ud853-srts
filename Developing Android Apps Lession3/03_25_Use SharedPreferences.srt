@@ -1,11 +1,11 @@
-﻿1
+1
 00:00:00,210 --> 00:00:02,969
 当用户的location preference 被存储后
 Once the user's location preference has been stored. When do
 
 2
 00:00:02,969 --> 00:00:06,340
-我们什么时候该使用它呢？我们需要首选地理位置用来
+我们什么时候该使用它呢？我们需要首选地点用来
 we make use of it? We need the preferred location on
 
 3
@@ -15,7 +15,7 @@ we query the weather service. Luckily, in lesson 2, we
 
 4
 00:00:10,380 --> 00:00:14,390
-修改了天气去接受地理位置参数。
+修改了天气去接受地点参数。
 modified fetch weather task to accept a location parameter. We hard
 
 5
@@ -25,8 +25,9 @@ coded it to be the Mountain View zip code. But
 
 6
 00:00:16,550 --> 00:00:19,960
-但是现在我们需要使用存储在SharePreference中的地理位置
+但是现在我们需要使用存储在SharePreference中的地点
 now we should use the location stored in shared preferences. We
+
 7
 00:00:19,960 --> 00:00:22,570
 我们并没有明确地向你展示如何实现，所以你可能需要

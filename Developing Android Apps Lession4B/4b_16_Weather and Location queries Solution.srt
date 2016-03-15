@@ -1,57 +1,57 @@
 1
 00:00:00,340 --> 00:00:01,710
-¶÷ ÄãÒÑ¾­Íê³ÉÁË
+æ© ä½ å·²ç»å®Œæˆäº†
 Alright, you're done!
 
 2
 00:00:02,800 --> 00:00:04,540
-ÎÒÃÇ¿´Ò»ÏÂ½â¾ö·½°¸
+æˆ‘ä»¬çœ‹ä¸€ä¸‹è§£å†³æ–¹æ¡ˆ
 Let's take a look at the solution.
 
 3
 00:00:04,540 --> 00:00:07,200
-¶ÔÓÚÌìÆø(content provider)ÎÒÃÇ½ö½ö»ñµÃÒ»¸ö¿É¶ÁµÄÊı¾İ¿âºÍ
+å¯¹äºå¤©æ°”ï¼ˆæŒ‡matchåçš„Weatherç±»å‹ï¼‰ï¼Œæˆ‘ä»¬åªè¦è·å¾—ä¸€ä¸ªå¯è¯»çš„æ•°æ®åº“ï¼Œ
 For weather,
 we just get a readable database and
 
 4
 00:00:07,200 --> 00:00:11,040
-´«µİÇëÇócontent providerÀ´µÄËùÓĞ²ÎÊı
+ç„¶åå‘å…¶ä¼ é€’ContentProviderè°ƒç”¨(queryè°ƒç”¨)ä¸­çš„æ‰€æœ‰å‚æ•°
 pass all of these parameters
 from the content provider call.
 
 5
 00:00:11,040 --> 00:00:15,000
-ÌìÆøºÍÎ»ÖÃµÄÊµÏÖ·½·¨ÊÇÏàµ±ÀàËÆµÄ
+å¤©æ°”å’Œåœ°ç‚¹çš„å®ç°æ–¹æ³•æ˜¯ç›¸å½“ç±»ä¼¼çš„
 The solution for weather and
 location is pretty much the same.
 
 6
 00:00:15,000 --> 00:00:18,810
-¶ÔÓÚÃ¿Ò»¸ö ÎÒÃÇ´«µİ´Ócontent providerÀ´µÄ²ÎÊı
+å¯¹äºæ¯ä¸€ä¸ªä»ContentProviderä¼ å¾€queryçš„å‚æ•°
 For each one, we're going to pass the
 parameters that come through the content
 
 7
 00:00:18,810 --> 00:00:22,380
-µ½¿É¶ÁµÄÊı¾İ¿âÖĞµÄ²éÑ¯·½·¨
+æˆ‘ä»¬éƒ½ä¼ é€’åˆ°å¯è¯»çš„æ•°æ®åº“çš„queryæ–¹æ³•ä¸­å»
 provider into the query function
 of our readable database.
 
 8
 00:00:22,380 --> 00:00:25,860
-ÔÙ´ÎÌáĞÑ ÕâĞ©²ÎÊıÊÇ´Ócontent providerÖĞÀ´µÄ
+å†æ¬¡æé†’ è¿™äº›å‚æ•°æ˜¯ä»ContentProviderä¸­æ¥çš„
 Again, these are the parameters that
 come through the content provider, and
 
 9
 00:00:25,860 --> 00:00:29,630
-ÕâĞ©²ÎÊıµÄÎÒÃÇÒª´«µİ¸øÊı¾İ¿âµÄ
+è¿™äº›å‚æ•°æ˜¯æˆ‘ä»¬è¦ä¼ é€’ç»™æ•°æ®åº“çš„
 these are the parameters that
 we pass into the database.
 
 10
 00:00:29,630 --> 00:00:31,330
-Î»ÖÃ(µÄcontent provider)¿´ÆğÀ´ÊÇÀàËÆµÄ
+åœ°ç‚¹ï¼ˆæŒ‡matchåçš„Locationç±»å‹ï¼‰çœ‹èµ·æ¥æ˜¯ç±»ä¼¼çš„
 Location looks approximately the same.
 

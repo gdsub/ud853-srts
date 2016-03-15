@@ -1,304 +1,304 @@
 1
 00:00:00,140 --> 00:00:03,635
-ÁË½â±ê×¼µÄ¿Ø¼ş¿âÊÇºÜºÃµÄ  µ«ÊÇ×÷ÎªÒ»¸öÔø±»ÈËÖ¸Ôğ
+äº†è§£æ ‡å‡†çš„æ§ä»¶åº“æ˜¯å¾ˆå¥½çš„  ä½†æ˜¯ä½œä¸ºä¸€ä¸ªæ›¾è¢«äººæŒ‡è´£
 Knowing the standard widget library is nice, but as someone who
 
 2
 00:00:03,635 --> 00:00:08,430
-ÖØ¸´ÔìÂÖ×Ó
+é‡å¤é€ è½®å­
 was once accused as not so much recreating the wheel, as hand
 
 3
 00:00:08,430 --> 00:00:11,280
-Ï²»¶×Ô¼ºÊÖ¶¯´´½¨¶«Î÷µÄÈË  ÎÒÖªµÀÓĞµÄÊ±ºò
+å–œæ¬¢è‡ªå·±æ‰‹åŠ¨åˆ›å»ºä¸œè¥¿çš„äºº  æˆ‘çŸ¥é“æœ‰çš„æ—¶å€™
 machining my own nuts and bolts, I know there are times
 
 4
 00:00:11,280 --> 00:00:13,990
-¹¤¾ßÏäÖĞ²¢Ã»ÓĞºÏÊÊµÄ¹¤¾ßÀ´Íê³É¹¤×÷
+å·¥å…·ç®±ä¸­å¹¶æ²¡æœ‰åˆé€‚çš„å·¥å…·æ¥å®Œæˆå·¥ä½œ
 when nothing in the tool chest will quite do the job. That's
 
 5
 00:00:13,990 --> 00:00:16,470
-ÕâÊ±¾ÍĞèÒªÄã¿ªÊ¼´ÓÍ·´´½¨ÄãµÄ
+è¿™æ—¶å°±éœ€è¦ä½ å¼€å§‹ä»å¤´åˆ›å»ºä½ çš„
 when it's time to dive in and build you own custom
 
 6
 00:00:16,470 --> 00:00:19,900
-×Ô¶¨ÒåView   ÎÒÃÇ²¢²»»áÈ«Ãæ½²½âÈçºÎ´´½¨
+è‡ªå®šä¹‰View   æˆ‘ä»¬å¹¶ä¸ä¼šå…¨é¢è®²è§£å¦‚ä½•åˆ›å»º
 view from scratch. Now we're not going to be including any custom
 
 7
 00:00:19,900 --> 00:00:22,170
-×Ô¶¨ÒåView  µ«ÊÇÎÒÃÇÈÔÈ»À´¼òµ¥¿´¿´Äã¿ÉÒÔ
+è‡ªå®šä¹‰View  ä½†æ˜¯æˆ‘ä»¬ä»ç„¶æ¥ç®€å•çœ‹çœ‹ä½ å¯ä»¥
 views within Sunshine, but we can still take a look at how
 
 8
 00:00:22,170 --> 00:00:25,240
-ÔõÑù×öÕâ¼şÊÂ  ÎÒÃÇ´Ó´´½¨Ò»¸öĞÂµÄViewÀà¿ªÊ¼
+æ€æ ·åšè¿™ä»¶äº‹  æˆ‘ä»¬ä»åˆ›å»ºä¸€ä¸ªæ–°çš„Viewç±»å¼€å§‹
 you would build one. We'll start by creating a new class for
 
 9
 00:00:25,240 --> 00:00:27,250
-ÎÒÃÇ°ÑËüÃüÃûÎªMyView
+æˆ‘ä»¬æŠŠå®ƒå‘½åä¸ºMyView
 our view. Let's call it MyView. If
 
 10
 00:00:27,250 --> 00:00:29,650
-Èç¹ûÄã²»ÊÇĞŞ¸ÄÒ»¸öÏÖ³ÉµÄViewÀà  ¶øÊÇ´ÓÍ·¿ªÊ¼´´½¨
+å¦‚æœä½ ä¸æ˜¯ä¿®æ”¹ä¸€ä¸ªç°æˆçš„Viewç±»  è€Œæ˜¯ä»å¤´å¼€å§‹åˆ›å»º
 you're building something from scratch, rather than modify an
 
 11
 00:00:29,650 --> 00:00:32,159
-ĞÂµÄÀà  Õâ¸öĞÂµÄÀà¿ÉÒÔ¼Ì³ĞViewÀà
+æ–°çš„ç±»  è¿™ä¸ªæ–°çš„ç±»å¯ä»¥ç»§æ‰¿Viewç±»
 existing view, it should descend from either View
 
 12
 00:00:32,159 --> 00:00:36,760
-»òÕßSurfaceViewÀà  ViewÌá¹©»ùÓÚCanvas»­²¼µÄ
+æˆ–è€…SurfaceViewç±»  Viewæä¾›åŸºäºCanvasç”»å¸ƒçš„
 itself or from SurfaceView. View offers a light
 
 13
 00:00:36,760 --> 00:00:40,820
-ÇáÁ¿¼¶½â¾ö·½°¸  ¶øSurfaceView±»ÌØ±ğÉè¼Æ
+è½»é‡çº§è§£å†³æ–¹æ¡ˆ  è€ŒSurfaceViewè¢«ç‰¹åˆ«è®¾è®¡
 weight, canvas-based approach, while SurfaceView is designed
 
 14
 00:00:40,820 --> 00:00:44,085
-ÎªĞèÒª¿ìËÙË¢ĞÂ»òÕßÊ¹ÓÃ3DÍ¼ÏñµÄUIÔªËØÌá¹©Ö§³Ö
+ä¸ºéœ€è¦å¿«é€Ÿåˆ·æ–°æˆ–è€…ä½¿ç”¨3Då›¾åƒçš„UIå…ƒç´ æä¾›æ”¯æŒ
 specifically to support UI elements that require rapid redraws
 
 15
 00:00:44,085 --> 00:00:47,140
-ËüÊ¹ÓÃÀàËÆOpenGLµÄ¼¼Êõ
+å®ƒä½¿ç”¨ç±»ä¼¼OpenGLçš„æŠ€æœ¯
 and/or 3D graphics, using something like OpenGL.
 
 16
 00:00:47,140 --> 00:00:50,660
-Ëü×îÊÊºÏÓÃÀ´ÏÔÊ¾ÊÓÆµ»òÕßÓÎÏ·
+å®ƒæœ€é€‚åˆç”¨æ¥æ˜¾ç¤ºè§†é¢‘æˆ–è€…æ¸¸æˆ
 It's perfect for views that display video or games.
 
 17
 00:00:50,660 --> 00:00:53,550
-ÏÖÓĞµÄ¿Ø¼ş¿âÊÇÍêÈ«»ùÓÚViewÀàµÄ
+ç°æœ‰çš„æ§ä»¶åº“æ˜¯å®Œå…¨åŸºäºViewç±»çš„
 Now the existing widget library is entirely view
 
 18
 00:00:53,550 --> 00:00:56,610
-ËùÒÔÎÒÃÇÒ²Ê¹ÓÃViewÀà  Ä¬ÈÏµÄView
+æ‰€ä»¥æˆ‘ä»¬ä¹Ÿä½¿ç”¨Viewç±»  é»˜è®¤çš„View
 based. So let's take that approach. The base view
 
 19
 00:00:56,610 --> 00:01:01,300
-Àà»á»­³öÒ»¸öÃ»ÓĞ±ß½çµÄ100x100ÏñËØµÄ¿ÕÕı·½ĞÎÇøÓò
+ç±»ä¼šç”»å‡ºä¸€ä¸ªæ²¡æœ‰è¾¹ç•Œçš„100x100åƒç´ çš„ç©ºæ­£æ–¹å½¢åŒºåŸŸ
 class draws an empty borderless 100 by 100 pixel
 
 20
 00:01:01,300 --> 00:01:04,830
-ÎªÁË¸Ä±äÕâ¸öÄ¬ÈÏĞĞÎª  ÎÒÃÇ¿ÉÒÔ¸²Ğ´onMeasure()·½·¨
+ä¸ºäº†æ”¹å˜è¿™ä¸ªé»˜è®¤è¡Œä¸º  æˆ‘ä»¬å¯ä»¥è¦†å†™onMeasure()æ–¹æ³•
 box. To change that, we override the onMeasure handler,
 
 21
 00:01:04,830 --> 00:01:07,160
-ÕâÑù¿ÉÒÔÖ¸³öViewµÄ´óĞ¡
+è¿™æ ·å¯ä»¥æŒ‡å‡ºViewçš„å¤§å°
 which allows us to indicate the view size.
 
 22
 00:01:07,160 --> 00:01:10,040
-ÎÒÃÇÍ¬Ê±¸²Ğ´onDraw()·½·¨À´»­³ö
+æˆ‘ä»¬åŒæ—¶è¦†å†™onDraw()æ–¹æ³•æ¥ç”»å‡º
 We'll also override onDraw, in order to draw our
 
 23
 00:01:10,040 --> 00:01:13,180
-×Ô¶¨ÒåViewµÄÄÚÈİ  Èç¹û
+è‡ªå®šä¹‰Viewçš„å†…å®¹  å¦‚æœ
 own custom view content. Now if it turns out
 
 24
 00:01:13,180 --> 00:01:15,810
-ÄãµÄViewÓÀÔ¶¶¼ÊÇÒ»¸ö100x100ÏñËØµÄ¿ÕÕı·½ĞÎÇøÓò
+ä½ çš„Viewæ°¸è¿œéƒ½æ˜¯ä¸€ä¸ª100x100åƒç´ çš„ç©ºæ­£æ–¹å½¢åŒºåŸŸ
 that your view should always be an empty 100
 
 25
 00:01:15,810 --> 00:01:18,690
-ÄÇÃ´ÄãÊ²Ã´¶¼²»ĞèÒª×ö  ²»È»ÎÒÃÇ»¹ÊÇĞèÒª×öÒ»Ğ©
+é‚£ä¹ˆä½ ä»€ä¹ˆéƒ½ä¸éœ€è¦åš  ä¸ç„¶æˆ‘ä»¬è¿˜æ˜¯éœ€è¦åšä¸€äº›
 pixel box then you're in luck. Otherwise we need to do
 
 26
 00:01:18,690 --> 00:01:22,790
-¹¤×÷µÄ  ËùÒÔÎÒÃÇ´ÓÉèÖÃViewµÄ´óĞ¡¿ªÊ¼  onMeasure()·½·¨
+å·¥ä½œçš„  æ‰€ä»¥æˆ‘ä»¬ä»è®¾ç½®Viewçš„å¤§å°å¼€å§‹  onMeasure()æ–¹æ³•
 some work. So let's start by setting our view's size. onMeasure is
 
 27
 00:01:22,790 --> 00:01:26,190
-»áÔÚ¸¸View²¼¾Ö·ÅÖÃËüµÄ×ÓViewµÄÊ±ºò±»µ÷ÓÃ
+ä¼šåœ¨çˆ¶Viewå¸ƒå±€æ”¾ç½®å®ƒçš„å­Viewçš„æ—¶å€™è¢«è°ƒç”¨
 called when your view's parent is laying out it's children. As
 
 28
 00:01:26,190 --> 00:01:27,970
-¾ÍÈçÄãËùÖª  µ±Äã°ÑÒ»¸öViewÌí¼Óµ½Ò»¸ö²¼¾ÖÖĞµÄÊ±ºò
+å°±å¦‚ä½ æ‰€çŸ¥  å½“ä½ æŠŠä¸€ä¸ªViewæ·»åŠ åˆ°ä¸€ä¸ªå¸ƒå±€ä¸­çš„æ—¶å€™
 you know, when you add a view to a layout you can
 
 29
 00:01:27,970 --> 00:01:31,310
-Äã¿ÉÒÔÖ¸¶¨¾ßÌåµÄ¸ß¶ÈºÍ¿í¶È  µ«ÊÇ´ó¶àÊıÇé¿ö
+ä½ å¯ä»¥æŒ‡å®šå…·ä½“çš„é«˜åº¦å’Œå®½åº¦  ä½†æ˜¯å¤§å¤šæ•°æƒ…å†µ
 specify a specific height or width, but in most cases you'll
 
 30
 00:01:31,310 --> 00:01:34,860
-Äã»áÏ£ÍûËüÌîÂú¸¸²¼¾Ö»òÕß±£³Ö×ÔÉí´óĞ¡  µ±Ò»¸öViewµÄ
+ä½ ä¼šå¸Œæœ›å®ƒå¡«æ»¡çˆ¶å¸ƒå±€æˆ–è€…ä¿æŒè‡ªèº«å¤§å°  å½“ä¸€ä¸ªViewçš„
 want to either match parent or wrap the content. When a view's
 
 31
 00:01:34,860 --> 00:01:38,270
-onMeasure()·½·¨±»ËüµÄ¸¸²¼¾Öµ÷ÓÃµÄÊ±ºò  ¸¸²¼¾Ö»áÎÊËüĞèÒªÕ¼¾İ
+onMeasure()æ–¹æ³•è¢«å®ƒçš„çˆ¶å¸ƒå±€è°ƒç”¨çš„æ—¶å€™  çˆ¶å¸ƒå±€ä¼šé—®å®ƒéœ€è¦å æ®
 onMeasure is called by its parent layout, it asks, how much space
 
 32
 00:01:38,270 --> 00:01:41,360
-¶à´óµÄ¿Õ¼ä  ²¢ÇÒÍ¨¹ı´«½øÕâĞ©²ÎÊı¸æÖªËü
+å¤šå¤§çš„ç©ºé—´  å¹¶ä¸”é€šè¿‡ä¼ è¿›è¿™äº›å‚æ•°å‘ŠçŸ¥å®ƒ
 will you use? And passes in how much space is available, and
 
 33
 00:01:41,360 --> 00:01:43,110
-ÓĞ¶àÉÙ¿Õ¼äÊÇ¿ÉÒÔÊ¹ÓÃµÄ  ÒÔ¼°Ëü±»¸³ÓèÁË¸ÕºÃÕâÃ´¶à¿Õ¼ä
+æœ‰å¤šå°‘ç©ºé—´æ˜¯å¯ä»¥ä½¿ç”¨çš„  ä»¥åŠå®ƒè¢«èµ‹äºˆäº†åˆšå¥½è¿™ä¹ˆå¤šç©ºé—´
 whether the view will be given exactly that much
 
 34
 00:01:43,110 --> 00:01:46,630
-»¹ÊÇ×î¶àÕâÃ´¶à¿Õ¼ä
+è¿˜æ˜¯æœ€å¤šè¿™ä¹ˆå¤šç©ºé—´
 space, or at most that much space using these parameters.
 
 35
 00:01:46,630 --> 00:01:49,650
-Äã¿ÉÒÔÕâÑù½âÎöÕâĞ©²ÎÊı  È»ºóÄã¾Í¿ÉÒÔ»ñµÃ
+ä½ å¯ä»¥è¿™æ ·è§£æè¿™äº›å‚æ•°  ç„¶åä½ å°±å¯ä»¥è·å¾—
 You can decode those parameters like this. And that'll allow
 
 36
 00:01:49,650 --> 00:01:53,970
-¿í¸ß±ê×¼µÄ¾ßÌå´óĞ¡
+å®½é«˜æ ‡å‡†çš„å…·ä½“å¤§å°
 you to obtain the size and the mode for your
 
 37
 00:01:53,970 --> 00:01:58,780
-ºÍÄ£Ê½  Õâ¸öÀı×ÓÖĞÎÒÃÇÖ»ÑİÊ¾
+å’Œæ¨¡å¼  è¿™ä¸ªä¾‹å­ä¸­æˆ‘ä»¬åªæ¼”ç¤º
 height and width specifications. In this example we're demonstrating just
 
 38
 00:01:58,780 --> 00:02:00,820
-ÔõÃ´´¦Àí¸ß¶È²ÎÊı  µ«ÕâÒ²Í¬ÑùÊÊÓÃÓÚ¿í¶È²ÎÊı
+æ€ä¹ˆå¤„ç†é«˜åº¦å‚æ•°  ä½†è¿™ä¹ŸåŒæ ·é€‚ç”¨äºå®½åº¦å‚æ•°
 for the height parameter, but it works the same for
 
 39
 00:02:00,820 --> 00:02:04,000
-È»ºóÎÒÃÇ¾Í¿ÉÒÔÊ¹ÓÃ½âÎö³öÀ´µÄÄ£Ê½
+ç„¶åæˆ‘ä»¬å°±å¯ä»¥ä½¿ç”¨è§£æå‡ºæ¥çš„æ¨¡å¼
 width. We can then use the decoded mode parameter to
 
 40
 00:02:04,000 --> 00:02:06,940
-À´ÉèÖÃViewµÄ´óĞ¡
+æ¥è®¾ç½®Viewçš„å¤§å°
 find out what size we should set our view to.
 
 41
 00:02:06,940 --> 00:02:09,970
-Èç¹û·µ»ØµÄÄ£Ê½ÊÇEXACTLY  View»á±»·ÅÖÃ½ø
+å¦‚æœè¿”å›çš„æ¨¡å¼æ˜¯EXACTLY  Viewä¼šè¢«æ”¾ç½®è¿›
 If the returned mode is EXACTLY, the view will be placed
 
 42
 00:02:09,970 --> 00:02:12,740
-¸ÕºÃÕâÃ´´óµÄÇøÓò  Èç¹ûÄãµÃµ½ÁËEXACTLYÄ£Ê½
+åˆšå¥½è¿™ä¹ˆå¤§çš„åŒºåŸŸ  å¦‚æœä½ å¾—åˆ°äº†EXACTLYæ¨¡å¼
 into an area of exactly that size. You'll be passed that
 
 43
 00:02:12,740 --> 00:02:15,460
-ÒªÃ´¾ÍÊÇ²¼¾ÖÖ¸¶¨ÁËÒ»¸ö¾ßÌåµÄ´óĞ¡
+è¦ä¹ˆå°±æ˜¯å¸ƒå±€æŒ‡å®šäº†ä¸€ä¸ªå…·ä½“çš„å¤§å°
 value if the layout has specified a specific size or if
 
 44
 00:02:15,460 --> 00:02:19,030
-»òÕßView±¾Éí±»ÒªÇóÌîÂú¸¸²¼¾Ö  ÔÚÕâÁ½ÖÖÇé¿öÖĞ
+æˆ–è€…Viewæœ¬èº«è¢«è¦æ±‚å¡«æ»¡çˆ¶å¸ƒå±€  åœ¨è¿™ä¸¤ç§æƒ…å†µä¸­
 the view has been asked to fill the parent. In either case,
 
 45
 00:02:19,030 --> 00:02:22,370
-×îºÃÊÇÖ±½ÓÊ¹ÓÃ´«½øÀ´µÄ´óĞ¡ÊıÖµ
+æœ€å¥½æ˜¯ç›´æ¥ä½¿ç”¨ä¼ è¿›æ¥çš„å¤§å°æ•°å€¼
 it's best practice to simply return the value passed in, unless
 
 46
 00:02:22,370 --> 00:02:25,160
-³ı·ÇÕâ¸öÊıÖµĞ¡ÓÚÄãµÄViewµÄ×îĞ¡µÄ´óĞ¡  ÕâÑùµÄ»°
+é™¤éè¿™ä¸ªæ•°å€¼å°äºä½ çš„Viewçš„æœ€å°çš„å¤§å°  è¿™æ ·çš„è¯
 that value is below your views minimum size, in which case
 
 47
 00:02:25,160 --> 00:02:27,740
-Äã¿ÉÒÔÊ¹ÓÃÕâ¸ö×îĞ¡µÄ´óĞ¡  ²¢¸ù¾İĞèÒªÈÃ¸¸²¼¾Ö
+ä½ å¯ä»¥ä½¿ç”¨è¿™ä¸ªæœ€å°çš„å¤§å°  å¹¶æ ¹æ®éœ€è¦è®©çˆ¶å¸ƒå±€
 you can return the minimum value and rely on the parent
 
 48
 00:02:27,740 --> 00:02:32,910
-À´Ìá¹©²Ã¼ô»òÕß»¬¶¯µÄ¹¦ÄÜ  ÁíÍâÒ»ÖÖ¿ÉÄÜµÄÄ£Ê½ÊÇAT_MOST
+æ¥æä¾›è£å‰ªæˆ–è€…æ»‘åŠ¨çš„åŠŸèƒ½  å¦å¤–ä¸€ç§å¯èƒ½çš„æ¨¡å¼æ˜¯AT_MOST
 layout to crop or scroll as necessary. Another alternative is AT_MOST. This
 
 49
 00:02:32,910 --> 00:02:35,750
-ÕâÊÇÖ¸Èç¹ûÄãµÄView¿ÉÒÔ×Ô¼º¾ö¶¨´óĞ¡  ÄÇÃ´¾ÍÖ±½ÓÊ¹ÓÃ±»¸³ÓèµÄ
+è¿™æ˜¯æŒ‡å¦‚æœä½ çš„Viewå¯ä»¥è‡ªå·±å†³å®šå¤§å°  é‚£ä¹ˆå°±ç›´æ¥ä½¿ç”¨è¢«èµ‹äºˆçš„
 indicates that your view can define its own size, up to the
 
 50
 00:02:35,750 --> 00:02:39,300
-´óĞ¡  ÕâÍ¨³£ÊÇ±»ÓÃÓÚÉèÖÃÎª°´×ÔÉí´óĞ¡ÏÔÊ¾µÄView
+å¤§å°  è¿™é€šå¸¸æ˜¯è¢«ç”¨äºè®¾ç½®ä¸ºæŒ‰è‡ªèº«å¤§å°æ˜¾ç¤ºçš„View
 size given. This is typically the case for views set to wrap
 
 51
 00:02:39,300 --> 00:02:41,790
-ÕâĞ©ViewÓ¦¸ÃÕ¼¾İ¸ÕºÃÓÃÀ´ÏÔÊ¾×ÔÉíÄÚÈİ
+è¿™äº›Viewåº”è¯¥å æ®åˆšå¥½ç”¨æ¥æ˜¾ç¤ºè‡ªèº«å†…å®¹
 content, where the view should be as wide as it needs to
 
 52
 00:02:41,790 --> 00:02:45,100
-µÄ´óĞ¡  µ«ÊÇ²»ÄÜ³¬¹ıÕâ¸ö´óĞ¡
+çš„å¤§å°  ä½†æ˜¯ä¸èƒ½è¶…è¿‡è¿™ä¸ªå¤§å°
 be to display its content, but no wider than that. And of
 
 53
 00:02:45,100 --> 00:02:47,900
-µ±È»²»¹ÜÄãÔõÃ´ÏÔÊ¾ÕâÑùµÄView  Ëü±ØĞë»¹ÊÇÒªÊÜ´«½øÀ´µÄ´óĞ¡²ÎÊıµÄÏŞÖÆ
+å½“ç„¶ä¸ç®¡ä½ æ€ä¹ˆæ˜¾ç¤ºè¿™æ ·çš„View  å®ƒå¿…é¡»è¿˜æ˜¯è¦å—ä¼ è¿›æ¥çš„å¤§å°å‚æ•°çš„é™åˆ¶
 course all of that's provided that it still fits within the parent
 
 54
 00:02:47,900 --> 00:02:50,280
-ÒªÎ»ÓÚËüµÄ¸¸²¼¾ÖµÄÀïÃæ
+è¦ä½äºå®ƒçš„çˆ¶å¸ƒå±€çš„é‡Œé¢
 container as indicated by the size
 
 55
 00:02:50,280 --> 00:02:52,260
-ÎÒÃÇ¸Õ¸ÕÍê³ÉÁË
+æˆ‘ä»¬åˆšåˆšå®Œæˆäº†
 parameter. Now we've just finished calculating
 
 56
 00:02:52,260 --> 00:02:54,580
-¸ß¶È²ÎÊıµÄ¼ÆËã  Äã»¹ĞèÒª¶Ô¿í¶È²ÎÊı
+é«˜åº¦å‚æ•°çš„è®¡ç®—  ä½ è¿˜éœ€è¦å¯¹å®½åº¦å‚æ•°
 all of that for the height parameter and you'd need to do
 
 57
 00:02:54,580 --> 00:02:58,060
-×öÍ¬ÑùµÄ¼ÆËã  Ò»µ©ÄãÍê³ÉÁËÉÏÃæµÄ¹¤×÷
+åšåŒæ ·çš„è®¡ç®—  ä¸€æ—¦ä½ å®Œæˆäº†ä¸Šé¢çš„å·¥ä½œ
 exactly the same thing again for width. Once you've done that and
 
 58
 00:02:58,060 --> 00:03:01,150
-²¢È·¶¨ÁËÄã¿ØÖÆµÄ´óĞ¡  Äã±ØĞëµ÷ÓÃ
+å¹¶ç¡®å®šäº†ä½ æ§åˆ¶çš„å¤§å°  ä½ å¿…é¡»è°ƒç”¨
 determined the size of your control, you have to call
 
 59
 00:03:01,150 --> 00:03:05,050
-setMeasuredDimension()·½·¨  ÄãÏòÕâ¸ö·½·¨´«Èë¿í¶ÈºÍ¸ß¶ÈµÄ
+setMeasuredDimension()æ–¹æ³•  ä½ å‘è¿™ä¸ªæ–¹æ³•ä¼ å…¥å®½åº¦å’Œé«˜åº¦çš„
 the setMeasuredDimension method. Here you pass in your width and
 
 60
 00:03:05,050 --> 00:03:09,229
-ÊıÖµ  Èç¹ûÄã²»µ÷ÓÃÕâ¸ösetMeasuredDimension()·½·¨
+æ•°å€¼  å¦‚æœä½ ä¸è°ƒç”¨è¿™ä¸ªsetMeasuredDimension()æ–¹æ³•
 height values. If you don't call this setMeasuredDimension method, your
 
 61
 00:03:09,229 --> 00:03:11,050
-ÄãµÄÓ¦ÓÃ»áÔÚView·ÅÖÃÍêºóÁ¢¼´±ÀÀ£
+ä½ çš„åº”ç”¨ä¼šåœ¨Viewæ”¾ç½®å®Œåç«‹å³å´©æºƒ
 app will crash as soon as your view is laid out.

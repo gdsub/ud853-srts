@@ -1,130 +1,130 @@
 1
 00:00:00,560 --> 00:00:04,330
-¼ÈÈ»ÎÒÃÇÒÑ¾­ÔÚAndroid manifest.xmlÖĞÍ¬²½ÁËweather provider½ø³Ì
+æ—¢ç„¶æˆ‘ä»¬å·²ç»åœ¨Android manifest.xmlä¸­æ³¨å†Œäº†WeatherProvider
 Now that we've registered our weather provider in the Android manifest,
 
 2
 00:00:04,330 --> 00:00:06,820
-ÎÒÃÇ¾Í¿ÉÒÔÀ´±àĞ´ÌìÆø²å¼şÁË
+æ˜¯æ—¶å€™æ¥ç¼–å†™WeatherProviderçš„ä»£ç äº†
 it's time to begin coding our weather provider.
 
 3
 00:00:08,020 --> 00:00:12,890
-ÕâÊÇÊµÏÖÄÚÈİÌá¹©µÄ¹ı³ÌÖĞ×îÖÕÒ²ÊÇ×î¹Ø¼üµÄÒ»²½
+è¿™æ˜¯å®ç°Content Providerçš„è¿‡ç¨‹ä¸­æœ€ç»ˆä¹Ÿæ˜¯æœ€å…³é”®çš„ä¸€æ­¥
 This is the final and most involved step in implementing our content provider.
 
 4
 00:00:12,890 --> 00:00:17,018
-ÎÒÃÇ¼´½«×ÅÊÖÍê³ÉÄÚÈİÌá¹©µÄºËĞÄ¹¦ÄÜ
+æˆ‘ä»¬å³å°†ç€æ‰‹è¡¥å®Œè¿™äº›Content Providerçš„æ ¸å¿ƒå‡½æ•°
 We'll be filling out these core content provider functions.
 
 5
 00:00:17,018 --> 00:00:20,040
-³ıÁËÎÒÃÇÒÑ¾­Íê³ÉµÄonCreateº¯Êı
+é™¤äº†æˆ‘ä»¬å·²ç»å®Œæˆçš„onCreateå‡½æ•°
 Except for onCreate, which we've already done for
 
 6
 00:00:20,040 --> 00:00:24,220
-ÎÒÃÇÒ²ÒÑ¾­ÎªÊı¾İ¿âÖúÊÖÌí¼ÓÁËÊµÀı±äÁ¿
+æˆ‘ä»¬ä¹Ÿå·²ç»æ·»åŠ äº†ä¸€ä¸ªï¼ˆWeatherDbHelperçš„ï¼‰å®ä¾‹å˜é‡ä½œä¸ºæ•°æ®åº“åŠ©æ‰‹
 you, we've added an instance variable for our data base helper.
 
 7
 00:00:24,220 --> 00:00:26,460
-ÎÒÃÇÔÚonCreateÖĞ³õÊ¼»¯ÉÏÊö¹¦ÄÜ
+æˆ‘ä»¬åœ¨onCreateä¸­åˆå§‹åŒ–è¿™ä¸ªå®ä¾‹
 We initialize this in our onCreate function.
 
 8
 00:00:26,460 --> 00:00:31,050
-²¢»áÔÚ´ó²¿·ÖµÄÄÚÈİÌá¹©·½·¨ÏÂÊ¹ÓÃÊı¾İ¿âÖúÊÖ
+å¹¶ä¼šåœ¨å¤§éƒ¨åˆ†çš„ContentProvideræ–¹æ³•ä¸­ä½¿ç”¨è¿™ä¸ªæ•°æ®åº“åŠ©æ‰‹
 We will use this database helper in most of the content provider methods.
 
 9
 00:00:31,050 --> 00:00:34,980
-ÎÒÃÇÏÈÀ´¿´¿´ÄÚÈİÌá¹©·½·¨ÀïµÄgetType·½·¨
+æˆ‘ä»¬å…ˆæ¥çœ‹çœ‹ContentProvideræ–¹æ³•é‡Œçš„getTypeæ–¹æ³•
 The first of the content provider methods that we will look at is getType.
 
 10
 00:00:34,980 --> 00:00:38,960
-¶ÔÎÒÃÇµÄappÀ´ËµÊµÏÖgetTypeµÄ¹¦ÄÜ°æ±¾
+å¯¹æˆ‘ä»¬çš„appæ¥è¯´å®ç°getTypeçš„åŠŸèƒ½ç‰ˆæœ¬
 Implementing the functional version of getType isn't strictly necessary for
 
 11
 00:00:38,960 --> 00:00:40,490
-²¢·ÇÑÏ¸ñĞèÒª
+å¹¶éä¸¥æ ¼éœ€è¦
 our application.
 
 12
 00:00:40,490 --> 00:00:44,200
-µ«ÕâÊÇÒ»¸ö·Ç³£ºÃµÄ·½·¨À´»Ø¹ËÎÒÃÇ¼´½«×ÅÊÖµÄURI
+ä½†è¿™æ˜¯ä¸€ä¸ªéå¸¸å¥½çš„æ–¹æ³•æ¥å›é¡¾æˆ‘ä»¬å³å°†ç€æ‰‹çš„URI
 But it's a nice way to review what uris we're planning to handle.
 
 13
 00:00:44,200 --> 00:00:47,540
-ÎÒÃÇÒÑ¾­Íê³ÉÁË²¿·ÖgetTypeµÄ¹¦ÄÜ
+æˆ‘ä»¬å·²ç»å®Œæˆäº†éƒ¨åˆ†getTypeçš„åŠŸèƒ½
 We partially filled out the getType function for you.
 
 14
 00:00:47,540 --> 00:00:51,820
-ÎÒÃÇÊ¹ÓÃÖ®Ç°½¨Á¢µÄurimatchr¹¤¾ßÀàÀ´Æ¥Åä´«ÈëµÄuri
+æˆ‘ä»¬ä½¿ç”¨ä¹‹å‰å»ºç«‹çš„UriMatcherå·¥å…·ç±»æ¥å¤„ç†ä¼ å…¥çš„uri
 We use the urimatcher we built earlier to match the given uri
 
 15
 00:00:51,820 --> 00:00:54,690
-ÕâºÍÖ®Ç°Ëù×öµÄÊÇ²»Í¬µÄ
+ç”¨æ¥åŒ¹é…æˆ‘ä»¬ä¹‹å‰ç¼–è¯‘å¥½çš„è¡¨è¾¾å¼
 against the expressions we've compiled in.
 
 16
 00:00:54,690 --> 00:00:58,580
-Ã¿´ÎÆ¥Åä¶¼»á·µ»ØÔÚWeatherContractÖĞ¶¨ÒåµÄÀàĞÍ
+æ¯æ¬¡åŒ¹é…éƒ½ä¼šè¿”å›åœ¨WeatherContractä¸­å®šä¹‰çš„ç±»å‹
 For each match, we return the types that we've defined in the weather contract.
 
 17
 00:00:58,580 --> 00:01:02,560
-½÷¼Ç  Òª´«´ïµÄ¹Ø¼üĞÅÏ¢ÊÇcontent uriÊÇ·ñ
+è°¨è®°  è¿™æ¬¡ä¼ è¾¾çš„å…³é”®ä¿¡æ¯æ˜¯content uriæ˜¯å¦
 Remember that the key information that this conveys, is weather the content uri
 
 18
 00:01:02,560 --> 00:01:07,560
-·µ»ØÒ»¸ö°üº¬µ¥Ò»¼ÇÂ¼µÄitemÀàĞÍµÄÊı¾İ¿âcursor
+è¿”å›ä¸€ä¸ªåŒ…å«å•ä¸€è®°å½•çš„itemç±»å‹çš„æ•°æ®åº“cursor
 will be returning a database cursor containing a single record type item, or
 
 19
 00:01:07,560 --> 00:01:10,200
-»¹ÊÇ°üº¬¶à¸ö¼ÇÂ¼µÄdirectoryÀàĞÍ
+è¿˜æ˜¯åŒ…å«å¤šä¸ªè®°å½•çš„directoryç±»å‹
 multiple records type directory.
 
 20
 00:01:10,200 --> 00:01:13,420
-³ıÁËÊı¾İ¿âcursor  ÄÚÈİÌá¹©ÉÌÒ²¿ÉÒÔÓÃÀ´·µ»Ø
+é™¤äº†æ•°æ®åº“cursor  ContentProviderä¹Ÿå¯ä»¥ç”¨æ¥è¿”å›
 Content providers can also be used to return other kinds of data
 
 21
 00:01:13,420 --> 00:01:15,410
-ÆäËûÀàĞÍµÄÊı¾İ
+å…¶ä»–ç±»å‹çš„æ•°æ®
 than just database cursors.
 
 22
 00:01:15,410 --> 00:01:19,590
-±ÈÈçËµ  Èç¹ûÎÒÃÇÏëÒªÄÚÈİÌá¹©ÉÌÒÔcontent uri·µ»ØÒ»¸öJEPGÍ¼Ïñ
+æ¯”å¦‚è¯´  å¦‚æœæˆ‘ä»¬æƒ³è¦ContentProviderä»¥content uriè¿”å›ä¸€ä¸ªJEPGå›¾åƒ
 For example, if we wanted the content provider to return JPEG images for
 
 23
 00:01:19,590 --> 00:01:24,114
-ÎÒÃÇÓ¦¸ÃÓÃÕâ¸öº¯Êı·µ»Ø±ê×¼µÄmimeÀàĞÍ
+æˆ‘ä»¬åº”è¯¥ç”¨è¿™ä¸ªå‡½æ•°è¿”å›æ ‡å‡†çš„mimeç±»å‹
 a content uri, we would have this function return the standard mime type,
 
 24
 00:01:24,114 --> 00:01:26,430
-¼´image/jpeg
+å³image/jpeg
 image/jpeg.
 
 25
 00:01:26,430 --> 00:01:31,220
-½ÓÏÂÀ´ÎÒÃÇÀ´Ì¸Ì¸TestProviderÖĞtestGetType·½·¨
+æ¥ä¸‹æ¥æˆ‘ä»¬æ¥è°ˆè°ˆTestProviderä¸­testGetTypeæ–¹æ³•
 Let's un comment the testGetType test from within TestProvider.
 
 26
 00:01:31,220 --> 00:01:33,660
-ÕâÎªÎÒÃÇ½ÓÏÂÀ´µÄ¹¤×÷×öÁË×¼±¸
+è¿™ä¸ºæˆ‘ä»¬æ¥ä¸‹æ¥çš„å·¥ä½œåšäº†å‡†å¤‡
 This will get us ready for the next coding exercise.
 

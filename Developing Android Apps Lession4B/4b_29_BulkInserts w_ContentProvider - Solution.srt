@@ -1,99 +1,99 @@
 1
 00:00:00,440 --> 00:00:01,830
-ºÃÁË  ÒÑ¾­Íê³ÉÁË
+å¥½äº†  å·²ç»å®Œæˆäº†
 All right, you're done.
 
 2
 00:00:01,830 --> 00:00:03,690
-ÈÃÎÒÃÇ¿´Ò»ÏÂĞ´ºÃµÄ´úÂë
+è®©æˆ‘ä»¬çœ‹ä¸€ä¸‹å†™å¥½çš„ä»£ç 
 Let's take a look at the solution.
 
 3
 00:00:03,690 --> 00:00:06,390
-ÓÉÓÚÎÒÃÇ²»ÄÜÖ±½Ó²åÈëÒ»¸öVector¶ÔÏó
+ç”±äºæˆ‘ä»¬ä¸èƒ½ç›´æ¥æ’å…¥ä¸€ä¸ªVectorå¯¹è±¡
 While we cannot insert a vector directly,
 
 4
 00:00:06,390 --> 00:00:09,180
-ÎÒÃÇ¿ÉÒÔ°ÑVector¶ÔÏó×ª»»³ÉÊı×é
+æˆ‘ä»¬å¯ä»¥æŠŠVectorå¯¹è±¡è½¬æ¢æˆæ•°ç»„
 we can easily convert a vector to an array.
 
 5
 00:00:09,180 --> 00:00:13,520
-Íê³É×ª»»ÒÔºó  bulkInsert·½·¨¿ÉÒÔÊµÏÖ¸ßĞ§µÄÊı¾İ²åÈë
+å®Œæˆè½¬æ¢ä»¥å  bulkInsertæ–¹æ³•å¯ä»¥å®ç°é«˜æ•ˆçš„æ•°æ®æ’å…¥
 Once we've done this, the bulk insert method will insert very efficiently.
 
 6
 00:00:13,520 --> 00:00:17,300
-¿´ÕâÀï  ÎÒÃÇ·Å¿ªÁËÕâĞ©Ö®Ç°×¢ÊÍµôµÄ´úÂë
+çœ‹è¿™é‡Œ  æˆ‘ä»¬æ”¾å¼€äº†è¿™äº›ä¹‹å‰æ³¨é‡Šæ‰çš„ä»£ç 
 As you can see, we've uncommented out this next series of lines.
 
 7
 00:00:17,300 --> 00:00:20,250
-ÕâĞ©´úÂë¿ÉÒÔÈÃÎÒÃÇ²âÊÔÒ»ÏÂ
+è¿™äº›ä»£ç å¯ä»¥è®©æˆ‘ä»¬æµ‹è¯•ä¸€ä¸‹
 This allows us to test our output to make sure
 
 8
 00:00:20,250 --> 00:00:22,749
-ÊÇ·ñÏòÊı¾İ¿âÖĞ²åÈëÁËÕıÈ·µÄÊı¾İ
+æ˜¯å¦å‘æ•°æ®åº“ä¸­æ’å…¥äº†æ­£ç¡®çš„æ•°æ®
 that we've actually inserted the right thing into the database.
 
 9
 00:00:24,420 --> 00:00:25,550
-ÈÃÎÒÃÇÔËĞĞÒ»ÏÂÓ¦ÓÃ
+è®©æˆ‘ä»¬è¿è¡Œä¸€ä¸‹åº”ç”¨
 Let's actually run our app.
 
 10
 00:00:27,090 --> 00:00:29,990
-ÈçÄãËù¼û  ÎÒÃÇ½«Ö®Ç°²åÈëµ½Êı¾İ¿âÖĞµÄÊı¾İ
+å¦‚ä½ æ‰€è§  æˆ‘ä»¬å°†ä¹‹å‰æ’å…¥åˆ°æ•°æ®åº“ä¸­çš„æ•°æ®
 And as you can see, we're actually reading the data out of the database
 
 11
 00:00:29,990 --> 00:00:32,536
-È«²¿ÕıÈ·µØ¶ÁÈ¡ÁË³öÀ´
+å…¨éƒ¨æ­£ç¡®åœ°è¯»å–äº†å‡ºæ¥
 that we just inserted all correctly.
 
 12
 00:00:32,536 --> 00:00:36,750
-ÏÖÔÚÎÒÃÇµÄºóÌ¨»á¸ßĞ§µØ¸üĞÂÊı¾İ  ÎÒÃÇÈ·ÊµĞèÒª
+ç°åœ¨æˆ‘ä»¬çš„åå°ä¼šé«˜æ•ˆåœ°æ›´æ–°æ•°æ®  æˆ‘ä»¬ç¡®å®éœ€è¦
 Now our back end will update efficiently, but we really need to be
 
 13
 00:00:36,750 --> 00:00:40,100
-ÔÚÇëÇóÍøÂçÊı¾İÖ®Ç°¾Í¿ÉÒÔ²éÑ¯±¾µØµÄÊı¾İ
+åœ¨è¯·æ±‚ç½‘ç»œæ•°æ®ä¹‹å‰å°±å¯ä»¥æŸ¥è¯¢æœ¬åœ°çš„æ•°æ®
 querying things before requesting them from the internet.
 
 14
 00:00:40,100 --> 00:00:43,210
-×ÜÖ®  ÖØµãÊÇÉè¼ÆÒ»¸öÏìÓ¦Ê½µÄÓ¦ÓÃ
+æ€»ä¹‹  é‡ç‚¹æ˜¯è®¾è®¡ä¸€ä¸ªå“åº”å¼çš„åº”ç”¨
 After all, the main point is to have a responsive application.
 
 15
 00:00:43,210 --> 00:00:45,770
-Ö±µ½ÎÒÃÇÒÑ¾­´ÓÍøÂçÇëÇóµ½ÁËÊı¾İÒÔºó
+ç›´åˆ°æˆ‘ä»¬å·²ç»ä»ç½‘ç»œè¯·æ±‚åˆ°äº†æ•°æ®ä»¥å
 We're still not even updating the screen until we've
 
 16
 00:00:45,770 --> 00:00:47,650
-ÔÙ¸üĞÂÆÁÄ»
+å†æ›´æ–°å±å¹•
 pulled data down from the web.
 
 17
 00:00:47,650 --> 00:00:51,170
-Í¬Ê±Ò²Òª±ÜÃâÔÚUIÏß³Ì²éÑ¯Êı¾İ
+åŒæ—¶ä¹Ÿè¦é¿å…åœ¨UIçº¿ç¨‹æŸ¥è¯¢æ•°æ®
 We also want to avoid doing our query on the UI thread,
 
 18
 00:00:51,170 --> 00:00:55,250
-ÒòÎªÔÚUIÏß³Ì½øĞĞÖîÈç²éÑ¯Êı¾İ¿âµÄ²Ù×÷»áµ¼ÖÂAndroidÏµÍ³²»ÄÜ
+å› ä¸ºåœ¨UIçº¿ç¨‹è¿›è¡Œè¯¸å¦‚æŸ¥è¯¢æ•°æ®åº“çš„æ“ä½œä¼šå¯¼è‡´Androidç³»ç»Ÿä¸èƒ½
 because doing operations like queries on the UI thread cause Android to not be
 
 19
 00:00:55,250 --> 00:00:59,470
-×ã¹»¿ìËÙµØË¢ĞÂÆÁÄ»  Ò²¾ÍÊÇÖ¡¶¶¶¯ÏÖÏó
+è¶³å¤Ÿå¿«é€Ÿåœ°åˆ·æ–°å±å¹•  ä¹Ÿå°±æ˜¯å¸§æŠ–åŠ¨ç°è±¡
 able to draw frames fast enough, which introduces frame rate jitter.
 
 20
 00:00:59,470 --> 00:01:03,460
-ºÃÏûÏ¢ÊÇ  AndroidÌá¹©ÁËÒ»ÖÖ½Ğ×°ÔØÆ÷£¨Loader£©µÄÄ£Ê½
+å¥½æ¶ˆæ¯æ˜¯  Androidæä¾›äº†ä¸€ç§å«è£…è½½å™¨ï¼ˆLoaderï¼‰çš„æ¨¡å¼
 Fortunately, Android offers a pattern for that known as Loaders.

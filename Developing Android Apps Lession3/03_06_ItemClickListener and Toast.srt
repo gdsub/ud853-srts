@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,310 --> 00:00:04,220
 当列表项被点击时  使用Android中的Toast来显示
 When the list item is clicked, use Android's Toast mechanism to display

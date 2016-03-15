@@ -20,7 +20,7 @@ introduce you to the Android resource framework. All externalized
 
 5
 00:00:12,130 --> 00:00:15,660
-所以的Android外部资源，包括字符串布局、绘制区、动画
+所以的Android外部资源，包括字符串、布局、绘制区、动画
 Android resources, everything from strings to layouts to
 
 6
@@ -118,6 +118,7 @@ screen width which you can support with that layout.
 程序运行时，Android会检查当前设备配置，
 At runtime, Android will check the current device configuration,
 count
+
 25
 00:01:16,270 --> 00:01:20,030
 语言，屏幕尺寸，像素大小，等等，
@@ -160,7 +161,7 @@ that many of these values can change at runtime.
 
 33
 00:01:41,610 --> 00:01:44,630
-最常见的更改就是长宽的拉伸。
+最常见的更改就是设备方向的变化。
 The most common change being that of orientation. And
 
 34

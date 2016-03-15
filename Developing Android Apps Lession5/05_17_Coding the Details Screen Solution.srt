@@ -6,42 +6,42 @@ into smaller components?
 
 2
 00:00:03,420 --> 00:00:06,640
-好，你可能会认为这回事两列。
+好，你可能会认为这会是两列。
 Well, you might've thought that
 this could be two columns.
 
 3
 00:00:06,640 --> 00:00:08,970
-但是这里的元素却是很难定位的。
+但是这样有一个元素却很难定位，这里。
 But then it would be hard to
 position the elements here.
 
 4
 00:00:08,970 --> 00:00:11,960
-你可以把他们垂直居中于屏幕的高度里。
+你可以把它们垂直居中于屏幕的高度里。
 You could center them vertically
 within the height of the screen.
 
 5
 00:00:11,960 --> 00:00:14,650
-但是他不一定会和左侧的温度视图
+但是它不一定会和左侧的温度视图
 But it wouldn't necessarily line up
 with the temperature views on the left
 
 6
 00:00:14,650 --> 00:00:15,520
-对其。
+对齐。
 hand side.
 
 7
 00:00:15,520 --> 00:00:18,620
-实际上他看起来更像一个水平布局。
+实际上这看起来更像一个水平布局。
 Instead this looks more like
 a horizontal linear layout.
 
 8
 00:00:18,620 --> 00:00:21,660
-然后其他视图就可以使用一个垂直的线性布局
+然后其它视图就可以使用一个垂直的线性布局
 Then the rest of the elements could
 be laid out by using a vertical
 
@@ -52,31 +52,31 @@ linear layout.
 
 10
 00:00:22,720 --> 00:00:25,000
-这个垂直线性布局会有留个子元素。
+这个垂直线性布局会有六个子元素。
 The vertical linear layout
 would have six children.
 
 11
 00:00:25,000 --> 00:00:29,460
-第三个元素会是一个水平线性布局，他由两个子元素组成
+第三个元素会是一个水平线性布局，它由两个子元素组成
 The third element would be a horizontal
 linear layout composed of two children.
 
 12
 00:00:29,460 --> 00:00:32,990
-第一个会是另一个垂直线性布局，他有两个文本视图，
+第一个会是另一个垂直线性布局，它有两个文本视图，
 The first would be another vertical
 linear layout with these two text views
 
 13
 00:00:32,990 --> 00:00:36,450
-第二个视图会是另一个垂直线型布局，
+第二个视图会是另一个垂直线性布局，
 and the second element would be another
 vertical linear layout composed of.
 
 14
 00:00:36,450 --> 00:00:37,350
-他由这两个元素组成。
+包含这两个元素。
 These two elements.
 
 15
@@ -87,7 +87,7 @@ screen vertically scrollable
 
 16
 00:00:40,330 --> 00:00:42,250
-我们把他放到一个scrollview里。
+我们把它放到一个scrollview里。
 we put it inside a scroll view.
 
 17
@@ -115,7 +115,7 @@ the scroll view is the perfect choice.
 
 21
 00:00:52,170 --> 00:00:55,740
-我可以想你展示我们为fragment_detail.xml布局的实现。
+我可以向你展示我们为fragment_detail.xml布局的实现。
 I can show you our implementation for
 the fragment detail XML layout.
 
@@ -126,7 +126,7 @@ We hardcoded some data in the layout.
 
 23
 00:00:57,580 --> 00:01:00,250
-这样他就会在设计面板中作为预览来展示。
+这样它就会在设计面板中作为预览来展示。
 So that it would show up as
 a preview in the Design pane.
 
@@ -178,7 +178,7 @@ view with the child linear layout.
 
 32
 00:01:22,120 --> 00:01:23,590
-我们给他一点16dips的内间距，
+我们给它一点16dp的内间距，
 We give it some padding of 16 dips so
 
 33
@@ -195,12 +195,12 @@ by the horizontal linear layout.
 
 35
 00:01:30,850 --> 00:01:33,710
-我们指定布局margin top为16dip，
+我们指定布局margin top为16dp，
 We specify layout margin top of 16 dip
 
 36
 00:01:33,710 --> 00:01:36,450
-来让他离开这个文本视图的底部一些距离。
+来让它离开这个文本视图的底部一些距离。
 to give it some more space from
 the bottom of this text view.
 
@@ -212,13 +212,13 @@ we have one vertical linear layout.
 
 38
 00:01:40,070 --> 00:01:42,540
-他的宽度为0，权重为1，
+它的宽度为0，权重为1，
 Which has a width of 0 and
 a weight of 1, and
 
 39
 00:01:42,540 --> 00:01:45,570
-且另一个现行布局的宽度是0权重也是1。
+且另一个线性布局的宽度是0权重也是1。
 another linear layout with
 a width of 0 and a weight of 1.
 
@@ -248,7 +248,7 @@ as the forecast text view.
 
 44
 00:01:59,340 --> 00:02:03,260
-最后我们剩下对其他天气细节的text视图。
+最后我们还有些剩余的针对其它天气细节的文本视图。
 Lastly we have the remaining text
 views for the other weather details.
 
@@ -260,7 +260,7 @@ we update the detail fragment.
 
 46
 00:02:06,320 --> 00:02:08,460
-现在，我们同时把他放到他自己的文件里去。
+现在，我们同时把它放到它自己的文件里去。
 At this point,
 we also move it into its own file.
 
@@ -289,7 +289,7 @@ more find view by ID calls here.
 
 51
 00:02:20,940 --> 00:02:23,740
-因为他必须要在每次加载器更新的时候
+因为它必须要在每次加载器更新的时候
 Because it will have to traverse
 the view hierarchy every time that
 
@@ -323,7 +323,7 @@ variables of the class,
 
 57
 00:02:37,420 --> 00:02:40,130
-所以他们的命名都以字母m开头。
+所以它们的命名都以字母m开头。
 which is why the name
 starts with the letter m.
 
@@ -341,12 +341,12 @@ all the information that we need.
 
 60
 00:02:48,050 --> 00:02:49,860
-他在文件的顶部定义了。
+它在文件的顶部定义了。
 It's declared at the top of the file.
 
 61
 00:02:49,860 --> 00:02:52,430
-之前我们叫他FORECAST_COLUMNS，但
+之前我们叫它FORECAST_COLUMNS，但
 Before we had it called
 forecast columns, but
 
@@ -380,7 +380,7 @@ condition ID from the cursor
 
 67
 00:03:06,050 --> 00:03:09,790
-因为我们需要用它来检查该用哪副图片，
+因为我们需要用它来检查该用哪幅图片，
 because we're going to need it to
 determine which image to display but for
 
@@ -397,7 +397,7 @@ to get the date, the description and
 
 70
 00:03:15,550 --> 00:03:16,672
-和其他域。
+和其它域。
 the other fields.
 
 71

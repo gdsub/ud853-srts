@@ -1,16 +1,16 @@
 1
 00:00:00,130 --> 00:00:02,540
-我们肯定要在base layout目录
+我们肯定要先把fragment_detail
 We definitely need to define fragment detail in the
 
 2
 00:00:02,540 --> 00:00:04,930
-中定义fragment_detail，然后我们在layout-land目录
+定义在base layout目录里，然后我们再把该文件重写
 base layout folder, then we override it in the
 
 3
 00:00:04,930 --> 00:00:07,300
-中重写该文件，这样我们就可以在
+在在layout-land目录里，这样我们就可以在
 layout land folder, so that we can achieve this
 
 4
@@ -30,7 +30,7 @@ portrait would fall back to this layout so we
 
 7
 00:00:15,450 --> 00:00:18,830
-所以我们只要在layout-sw600dp目录中定义它
+所以我们还需要在layout-sw600dp目录中定义它
 should just define it in the layout sw600dp folder
 
 8

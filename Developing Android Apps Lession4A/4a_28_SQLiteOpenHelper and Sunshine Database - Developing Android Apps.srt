@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,190 --> 00:00:01,400
 这是份合约
 Now that's a contract.
@@ -15,7 +15,7 @@ but we still don't have a database.
 
 4
 00:00:08,535 --> 00:00:14,080
-为真做一个数据库  我们要去继承 Android 的SQLiteOpenHelper 
+为了真的造一个数据库  我们要去继承 Android 的SQLiteOpenHelper 
 To actually make a database, we're gong to extend Android's SQLiteOpenHelper.
 
 5
@@ -60,17 +60,17 @@ schema changes happen smoothly.
 
 13
 00:00:34,730 --> 00:00:38,825
-让我们从应用上更近的观察SQLiteOpenHelper
+让我们从应用上更近地观察SQLiteOpenHelper
 Let's take a look at SQLiteOpenHelper more closely in action.
 
 14
 00:00:38,825 --> 00:00:41,735
-我们要在WeatherDBHelper类中做些事情  此类是SQLiteOpenHelper的继承
+我们要在WeatherDBHelper类中做些事情  
 We're going to be working in the WeatherDBHelper class that you've been
 
 15
 00:00:41,735 --> 00:00:44,815
-我们要在WeatherDBHelper类中做些事情  此类是SQLiteOpenHelper的继承
+这个类继承了SQLiteOpenHelper
 given which extends SQLiteOpenHelper.
 
 16
@@ -95,7 +95,7 @@ DATABASE_VERSION and DATABASE_NAME.
 
 20
 00:00:55,682 --> 00:01:00,450
-典型的  DATABASE_VERSION 从版本1开始并且在我们
+典型的 DATABASE_VERSION 从版本1开始 并且在我们
 The DATABASE_VERSION typically starts at version 1 and must be manually
 
 21
@@ -115,22 +115,22 @@ which will be weather.db in our case.
 
 24
 00:01:11,680 --> 00:01:15,810
-注意我们使用的是版本2  因为课程的这个修订版使用了更新的数据库版本
+注意我们使用的是版本2  因为课程的这个修订版使用了
 Note that we're using version 2 since this revision of the course uses
 
 25
 00:01:15,810 --> 00:01:17,660
-注意我们使用的是版本2  因为课程的这个修订版使用了更新的数据库版本
+更新的数据库版本
 an updated database version.
 
 26
 00:01:17,660 --> 00:01:21,130
-这些值被传送到构造函数来初始化数据库帮助类
+这些值被传送到构造函数
 These values get passed into the constructor
 
 27
 00:01:21,130 --> 00:01:23,580
-这些值被传送到构造函数来初始化数据库帮助类
+来初始化数据库帮助类
 to initialize the database helper.
 
 28
@@ -140,12 +140,12 @@ Next we have the onCreate method.
 
 29
 00:01:26,220 --> 00:01:28,900
-这是我们讨论的 SQL 和我们新的合约类被一起使用的地方
+这是我们讨论的 SQL 和
 This is where the SQL we've been talking about and
 
 30
 00:01:28,900 --> 00:01:31,760
-这是我们讨论的 SQL 和我们新的合约类被一起使用的地方
+我们新的合约类被一起使用的地方
 our new contract class are used together.
 
 31
@@ -175,12 +175,12 @@ We then have the system execute this SQL by calling db dot execSQL.
 
 36
 00:01:48,960 --> 00:01:52,540
-注意我是如何利用所有天气实体常量来写sql语句的
+注意我是如何利用所有WeatherEntry常量来写
 Note how we're using all of the weather entry constants to write our
 
 37
 00:01:52,540 --> 00:01:53,890
-注意我是如何利用所有天气实体常量来写sql语句的
+sql语句的
 sequel statements.
 
 38
@@ -190,27 +190,27 @@ Also note that we use lots of not null constraints on this table.
 
 39
 00:01:57,870 --> 00:02:01,800
-这些约束有助于防止插入未填充列的记录到数据库中  防止bug
+这些约束有助于防止插入未填充列的记录
 These constraints help prevent us from inserting records without columns being
 
 40
 00:02:01,800 --> 00:02:05,770
-这些约束有助于防止插入未填充列的记录到数据库中  防止bug
+到数据库中  防止bug
 filled out into the database, and that helps to prevent bugs.
 
 41
 00:02:05,770 --> 00:02:09,070
-这是来自将要创建的位置实体表的 FOREIGN KEY 约束的实现
+这里是一个FOREIGN KEY 约束的实现
 Here is the implementation of the FOREIGN KEY constraint from the not yet
 
 42
 00:02:09,070 --> 00:02:11,038
-这是来自将要创建的位置实体表的 FOREIGN KEY 约束的实现
+它关联着那个还没被创建的Location实体表
 created location entry table.
 
 43
 00:02:11,038 --> 00:02:14,280
-这意味必须有一个天气位置的位置实体被插到库里后
+这意味必须有一个天气地点的地点实体被插到库里后
 This means that we cannot insert a weather entry into the database until
 
 44
@@ -220,12 +220,12 @@ a location entry for the weather location has been inserted.
 
 45
 00:02:17,450 --> 00:02:20,270
-同时当存在指向位置的天气实体时  我们不能删除位置
+同时，当存在指向地点的天气实体时  
 And we cannot delete locations while there exist weather
 
 46
 00:02:20,270 --> 00:02:21,680
-同时当存在指向位置的天气实体时  我们不能删除位置
+我们不能删除地点
 entries that point to them.
 
 47
@@ -370,12 +370,12 @@ Some other things to note.
 
 75
 00:03:51,055 --> 00:03:54,855
-FullTestSuite 类含有这样的代码  包含了所有的在它包里的Java测试类到
+FullTestSuite 类中的代码  可以将所有的在它包里的Java测试类都集成到
 The FullTestSuite class contains code to include all of the Java
 
 76
 00:03:54,855 --> 00:03:59,315
-一个测试工具中  JUnit将会运行这个工具
+一个测试用例中  让JUnit一起运行测试
 test classes in its package into a suite of tests the JUnit will run.
 
 77
@@ -415,12 +415,12 @@ to see if the program applies the correct output.
 
 84
 00:04:19,390 --> 00:04:22,170
-assert就是那样  声明在一部分测试运行
+assert就是一份声明，表示在一部分测试运行后
 An assert is just that, it's a declaration that
 
 85
 00:04:22,170 --> 00:04:26,600
-符合我们的预期后的输出
+输出的结果符合我们的预期
 the outcome after part of a test is run matches our expectations.
 
 86
@@ -430,12 +430,12 @@ If the assert does not match, the test will fail.
 
 87
 00:04:29,450 --> 00:04:32,211
-我们看看在TestPractice.java类中的testThatDemonstratesAssertions 
+我们看看在TestPractice.java类中的
 Let's look at our testThatDemonstratesAssertions in
 
 88
 00:04:32,211 --> 00:04:33,890
-我们看看在TestPractice.java类中的testThatDemonstratesAssertions 
+testThatDemonstratesAssertions 
 TestPractice.java.
 
 89
@@ -460,7 +460,7 @@ Other useful methods include assertEquals, assertFalse, assertNull, or
 
 93
 00:04:49,530 --> 00:04:53,660
-或者如果一个特定代码路径绝对不应被触及时  我们能调用失败
+或者如果一个特定代码路径绝对不应被触及时  我们能直接调用fail
 we can just call fail if a certain code path should never have been reached.
 
 94
@@ -485,7 +485,7 @@ we can see exactly where in the test are application failed.
 
 98
 00:05:05,560 --> 00:05:10,680
-让我们在 TestDb 类中把 testCreateDb 函数注释出来
+让我们在 TestDb 类中把 testCreateDb() 函数反注释出来
 Let's uncomment out the testCreateDb function inside of the TestDb class.
 
 99
@@ -495,22 +495,22 @@ You might have to import a few classes to get this to compile.
 
 100
 00:05:13,528 --> 00:05:18,069
-我们也把 createNorthPoleLocationValues 和 insertNorthPoleLocationValues 
+我们也把 createNorthPoleLocationValues() 和 insertNorthPoleLocationValues()
 Let's also uncomment out the createNorthPoleLocationValues and
 
 101
 00:05:18,069 --> 00:05:23,900
-从TestUtilities中注释掉
+从TestUtilities中反注释
 the insertNorthPoleLocationValues functions from within TestUtilities.
 
 102
 00:05:23,900 --> 00:05:26,690
-如果他们不能编译 这是最后修改你的位置合约的机会
+如果他们不能编译 这是最后的机会去修改
 This is the last chance to fix up your location contract if
 
 103
 00:05:26,690 --> 00:05:28,270
-如果他们不能编译 这是最后修改你的位置合约的机会
+你的地点合约
 things don't compile.
 
 104
@@ -525,7 +525,7 @@ As you can see, we get a pretty good error message back, that our database
 
 106
 00:05:35,540 --> 00:05:39,010
-我们的数据库被创建时缺少位置实体和天气实体表
+我们的数据库被创建时必须同时拥有Location实体表和Weather实体表
 was created without both the location entry and weather entry tables.
 
 107

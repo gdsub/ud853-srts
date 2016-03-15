@@ -1,39 +1,39 @@
 1
 00:00:00,650 --> 00:00:02,793
-ÔÚµÚÒ»¿ÎÖĞ  ÎÒÃÇ´´½¨ÁËÒ»¸ö
+åœ¨ç¬¬ä¸€è¯¾ä¸­  æˆ‘ä»¬åˆ›å»ºäº†ä¸€ä¸ª
 In lesson one,we built a new project
 
 2
 00:00:02,794 --> 00:00:04,180
-Ê¹ÓÃÄ£ÄâÊı¾İÕ¹Ê¾Æä»ù±¾½çÃæµÄÏîÄ¿
+ä½¿ç”¨æ¨¡æ‹Ÿæ•°æ®å±•ç¤ºå…¶åŸºæœ¬ç•Œé¢çš„é¡¹ç›®
 with a basic UI backed with mock Data.
 
 3
 00:00:04,180 --> 00:00:06,730
-ÔÚÕâ½Ú¿ÎÖĞ  ÎÒÃÇ½«»á°ÑsunshineÓ¦ÓÃ
+åœ¨è¿™èŠ‚è¯¾ä¸­  æˆ‘ä»¬å°†ä¼šæŠŠsunshineåº”ç”¨
 In this lesson, we'll hook sunshine up
 
 4
 00:00:06,730 --> 00:00:09,140
-Á¬½Óµ½ÔÆ¶Ë  ´Ó¶øÊ¹ÓÃ´ÓOpenWeatherMap API»ñÈ¡µÄ
+è¿æ¥åˆ°äº‘ç«¯  ä»è€Œä½¿ç”¨ä»OpenWeatherMap APIè·å–çš„
 with the Cloud, replacing the mock data with
 
 5
 00:00:09,140 --> 00:00:09,817
-ÕæÊµµÄÌìÆøÊı¾İÀ´È¡´úÄ£ÄâÊı¾İ
+çœŸå®çš„å¤©æ°”æ•°æ®æ¥å–ä»£æ¨¡æ‹Ÿæ•°æ®
 real weather data using the OpenWeatherMap API
 
 6
 00:00:12,420 --> 00:00:14,320
-ÎªÁË×öµ½ÉÏÃæËùÌáµ½µÄ  ÎÒÃÇ½«Ñ§Ï°AndroidµÄ
+ä¸ºäº†åšåˆ°ä¸Šé¢æ‰€æåˆ°çš„  æˆ‘ä»¬å°†å­¦ä¹ Androidçš„
 To do that, we'll learn about the Android
 
 7
 00:00:14,320 --> 00:00:16,860
-È¨ÏŞÏµÍ³  ÍøÂçI/O  ÒÔ¼°ÈçºÎ½«
+æƒé™ç³»ç»Ÿ  ç½‘ç»œI/O  ä»¥åŠå¦‚ä½•å°†
 Permission system,Network I/O, and how to move
 
 8
 00:00:16,860 --> 00:00:19,460
-ºÄÊ±ÈÎÎñ´ÓÖ÷Ïß³Ì£¨UIÏß³Ì£©ÖĞÒÆ³ö
+è€—æ—¶ä»»åŠ¡ä»ä¸»çº¿ç¨‹ï¼ˆUIçº¿ç¨‹ï¼‰ä¸­ç§»å‡º
 time consuming tasks off the main UI thread.

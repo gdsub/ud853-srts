@@ -42,7 +42,7 @@ have the right constraints.
 
 8
 00:00:21,405 --> 00:00:24,005
-通常  对于天气表的所有模型
+通常  对于Weather表的所有模型
 In general, for
 all the model of the weather table.
 
@@ -54,13 +54,13 @@ all columns must be defined as not null.
 
 10
 00:00:28,405 --> 00:00:32,078
-位置查询应该额外加上唯一性
+地点查询应该额外加上唯一性
 The location query should
 additionally be defined as unique or
 
 11
 00:00:32,078 --> 00:00:35,068
-或者坐标值为实数或者浮点数
+经纬度为实数或者浮点数
 coordinates are real, or
 floating point values.
 

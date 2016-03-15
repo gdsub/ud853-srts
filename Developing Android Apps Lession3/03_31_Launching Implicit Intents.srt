@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,560 --> 00:00:04,140
 嗨 Dan，我们完成设置了，你要检查看看吗？
 Hey Dan, we finished the settings. Do you want to check it out?

@@ -1,11 +1,11 @@
-﻿1
+1
 00:00:00,080 --> 00:00:02,940
-我们用FragmentManager来开始一个界面切换
+我们用FragmentManager来开始一个Fragment事务
 We use the FragmentManager to begin a transaction, to look that
 
 2
 00:00:02,940 --> 00:00:05,580
-我们添加这个界面切换到后台栈中去
+我们添加这个事务到后台栈中去
 we want to add this transaction to the back stack, and
 
 3
@@ -20,12 +20,12 @@ we want to replace, and the new fragment we want to
 
 5
 00:00:11,590 --> 00:00:14,700
-然后我们调用commit()来执行这个界面切换
+然后我们调用commit()来执行这个事务
 put in there. And we execute the transaction by calling commit.
 
 6
 00:00:14,700 --> 00:00:18,070
-实际上它们可以把很多个变化串在一起在同一个界面切换里执行
+实际上它们可以把很多个变化串在一起在同一个事务里执行
 They can actually chain a number of changes together within the same
 
 7
@@ -40,6 +40,6 @@ effect by first removing the contents of container A and adding fragment
 
 9
 00:00:25,770 --> 00:00:27,010
-往容器里添加Fragment B。
+往该容器里添加Fragment B。
 B to that container.
 

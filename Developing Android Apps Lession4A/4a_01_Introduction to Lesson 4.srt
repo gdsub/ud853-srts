@@ -10,7 +10,7 @@ we can move between then using intents
 
 3
 00:00:05,670 --> 00:00:09,840
-我们也学会了用显式intent调用其他应用中的intent
+我们也学会了用隐式(implicit)intent去集成其他应用中的activity
 we also know how to use implicit intends to integrate activities from other Apps
 
 4

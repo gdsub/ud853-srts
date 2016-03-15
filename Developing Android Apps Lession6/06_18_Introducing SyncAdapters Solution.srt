@@ -1,4 +1,4 @@
-﻿1
+1
 00:00:00,150 --> 00:00:02,487
 SyncManager会计划你SyncAdapter的任务
 The SyncManager does schedule your SyncAdapter

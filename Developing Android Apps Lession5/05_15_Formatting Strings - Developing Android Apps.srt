@@ -85,7 +85,7 @@ the value. In order to do this. We need to pass
 
 18
 00:00:53,240 --> 00:00:56,270
-通过context，我们可以获得之前所声明的字符串的ID
+通过context，我们可以获得之前所声明的字符串资源的ID
 a context. From the context we can get access to the
 
 19
@@ -95,7 +95,7 @@ string resource ID that we declared earlier. Then we passed in any
 
 20
 00:01:00,310 --> 00:01:03,560
-传递给字符模板。而在这个例子中
+传递给字符串模板。而在这个例子中
 additional parameters for that string template. In this case we only have
 
 21

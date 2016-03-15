@@ -45,7 +45,7 @@ apps, the OS, or users. Things like accessing the
 
 10
 00:00:36,210 --> 00:00:39,320
-获取用户的地理位置  读取或修改联系人的数据库
+获取用户的地点  读取或修改联系人的数据库
 internet, getting the user's location, or reading or modifying
 
 11
